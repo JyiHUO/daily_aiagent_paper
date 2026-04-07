@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d9deea; stroke-width: 2; }
+      .title { font: 700 34px "Arial", sans-serif; fill: #1f2a44; }
+      .subtitle { font: 600 18px "Arial", sans-serif; fill: #5a6785; }
+      .label { font: 700 22px "Arial", sans-serif; fill: #24324d; }
+      .small { font: 600 18px "Arial", sans-serif; fill: #4e5d78; }
+      .tiny { font: 600 16px "Arial", sans-serif; fill: #6a7692; }
+      .toolBox { fill: #e9f1ff; stroke: #7aa7ff; stroke-width: 2.5; }
+      .skillBox { fill: #eef8ee; stroke: #73b77a; stroke-width: 2.5; }
+      .strongBox { fill: #fff4e8; stroke: #f0a24a; stroke-width: 2.5; }
+      .weakBox { fill: #f3ecff; stroke: #9b7be8; stroke-width: 2.5; }
+      .good { fill: #2fa35a; }
+      .bad { fill: #d9534f; }
+      .arrowBlue { stroke: #6f98ff; stroke-width: 4; fill: none; marker-end: url(#arrowBlue); }
+      .arrowGreen { stroke: #67ad6e; stroke-width: 4; fill: none; marker-end: url(#arrowGreen); }
+      .arrowGray { stroke: #98a3b8; stroke-width: 3; fill: none; marker-end: url(#arrowGray); }
+      .divider { stroke: #d8ddea; stroke-width: 2; stroke-dasharray: 8 8; }
+    </style>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6f98ff"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#67ad6e"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#98a3b8"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="720"/>
+
+  <text x="600" y="62" text-anchor="middle" class="title">技能 ≠ 黑盒工具</text>
+  <text x="600" y="95" text-anchor="middle" class="subtitle">强模型更适合“攻略”，弱模型更适合“按钮”</text>
+
+  <!-- Left source modules -->
+  <rect x="70" y="175" rx="22" ry="22" width="250" height="160" class="toolBox"/>
+  <text x="195" y="225" text-anchor="middle" class="label">黑盒工具</text>
+  <rect x="120" y="246" rx="10" ry="10" width="150" height="46" fill="#7aa7ff" opacity="0.18" stroke="#7aa7ff"/>
+  <text x="195" y="276" text-anchor="middle" class="small">一键执行</text>
+  <circle cx="120" cy="310" r="8" fill="#7aa7ff"/>
+  <circle cx="150" cy="310" r="8" fill="#7aa7ff"/>
+  <circle cx="180" cy="310" r="8" fill="#7aa7ff"/>
+
+  <rect x="70" y="390" rx="22" ry="22" width="250" height="190" class="skillBox"/>
+  <text x="195" y="438" text-anchor="middle" class="label">白盒技能</text>
+  <rect x="104" y="462" rx="10" ry="10" width="182" height="34" fill="#73b77a" opacity="0.15" stroke="#73b77a"/>
+  <text x="195" y="485" text-anchor="middle" class="tiny">先到编辑页</text>
+  <rect x="104" y="506" rx="10" ry="10" width="182" height="34" fill="#73b77a" opacity="0.15" stroke="#73b77a"/>
+  <text x="195" y="529" text-anchor="middle" class="tiny">看库存字段</text>
+  <rect x="104" y="550" rx="10" ry="10" width="182" height="34" fill="#73b77a" opacity="0.15" stroke="#73b77a"/>
+  <text x="195" y="573" text-anchor="middle" class="tiny">必要时切标签</text>
+
+  <!-- middle visual context -->
+  <rect x="430" y="255" rx="24" ry="24" width="300" height="220" class="panel"/>
+  <text x="580" y="298" text-anchor="middle" class="label">当前网页</text>
+  <rect x="470" y="325" width="220" height="110" rx="14" fill="#f2f5fb" stroke="#cfd7e8"/>
+  <rect x="492" y="347" width="78" height="16" rx="5" fill="#c8d4ee"/>
+  <rect x="492" y="375" width="120" height="16" rx="5" fill="#d9e2f3"/>
+  <rect x="492" y="404" width="92" height="16" rx="5" fill="#d9e2f3"/>
+  <rect x="620" y="371" width="48" height="34" rx="8" fill="#ffd89a" stroke="#f0a24a"/>
+  <text x="580" y="458" text-anchor="middle" class="small">看页面再决定</text>
+
+  <!-- arrows from left -->
+  <path d="M320 255 C375 255, 385 300, 430 320" class="arrowBlue"/>
+  <path d="M320 485 C380 485, 382 420, 430 400" class="arrowGreen"/>
+
+  <!-- right comparison -->
+  <line x1="805" y1="150" x2="805" y2="620" class="divider"/>
+
+  <rect x="850" y="170" rx="22" ry="22" width="280" height="170" class="strongBox"/>
+  <text x="990" y="218" text-anchor="middle" class="label">强模型</text>
+  <path d="M905 278 L940 313 L1075 235" fill="none" stroke="#2fa35a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="990" y="302" text-anchor="middle" class="small">技能更好</text>
+
+  <rect x="850" y="390" rx="22" ry="22" width="280" height="170" class="weakBox"/>
+  <text x="990" y="438" text-anchor="middle" class="label">弱模型</text>
+  <path d="M915 500 L955 460 L1068 523" fill="none" stroke="#d9534f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="990" y="522" text-anchor="middle" class="small">技能负担重</text>
+
+  <!-- arrows from webpage to models -->
+  <path d="M730 330 C790 310, 810 285, 850 255" class="arrowGray"/>
+  <path d="M730 405 C790 430, 810 455, 850 475" class="arrowGray"/>
+
+  <!-- tiny icon hints -->
+  <circle cx="1090" cy="235" r="16" class="good"/>
+  <path d="M1082 235 L1088 242 L1099 228" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1090" cy="455" r="16" class="bad"/>
+  <path d="M1082 447 L1098 463 M1098 447 L1082 463" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- bottom takeaway -->
+  <rect x="330" y="620" rx="18" ry="18" width="540" height="60" fill="#ffffff" stroke="#d9deea" stroke-width="2"/>
+  <text x="600" y="658" text-anchor="middle" class="small">把工具改成“可理解的攻略”，强模型更灵活</text>
+</svg>

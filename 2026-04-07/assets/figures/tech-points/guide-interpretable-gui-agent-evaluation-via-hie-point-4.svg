@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+    <style>
+      .title{font:700 30px sans-serif; fill:#111827}
+      .subtitle{font:500 16px sans-serif; fill:#6B7280}
+      .label{font:700 18px sans-serif; fill:#111827}
+      .small{font:600 15px sans-serif; fill:#374151}
+      .tiny{font:600 14px sans-serif; fill:#6B7280}
+      .box{fill:#F9FAFB; stroke:#D1D5DB; stroke-width:2}
+      .blue{fill:#EFF6FF; stroke:#93C5FD; stroke-width:2.5}
+      .green{fill:#ECFDF5; stroke:#86EFAC; stroke-width:2.5}
+      .pill{fill:#FFFFFF; stroke:#D1D5DB; stroke-width:1.5}
+      .cross{stroke:#EF4444; stroke-width:5; stroke-linecap:round}
+      .ok{stroke:#10B981; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; fill:none}
+      .line{stroke:#4B5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .lineBlue{stroke:#2563EB; stroke-width:3.5; fill:none; marker-end:url(#arrowBlue)}
+      .dash{stroke:#9CA3AF; stroke-width:2.5; stroke-dasharray:8 7; fill:none}
+    </style>
+  </defs>
+
+  <rect width="980" height="620" fill="#FFFFFF"/>
+
+  <text x="60" y="58" class="title">GUIDE：零训练可部署评测器</text>
+  <text x="60" y="86" class="subtitle">离线日志进来，直接分段诊断并汇总</text>
+
+  <!-- Left: old way -->
+  <g transform="translate(60,140)">
+    <rect x="0" y="0" width="330" height="380" rx="24" class="box"/>
+    <text x="24" y="38" class="label">传统评测</text>
+
+    <rect x="28" y="74" width="274" height="76" rx="16" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+    <text x="48" y="118" class="small">整条轨迹一次判</text>
+
+    <path d="M165 154 L165 214" class="line"/>
+    <rect x="68" y="214" width="194" height="86" rx="18" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="116" y="265" class="small">黑盒结论</text>
+
+    <line x1="101" y1="332" x2="141" y2="372" class="cross"/>
+    <line x1="141" y1="332" x2="101" y2="372" class="cross"/>
+    <text x="165" y="357" class="tiny">长轨迹易失真</text>
+  </g>
+
+  <!-- Right: GUIDE -->
+  <g transform="translate(450,120)">
+    <rect x="0" y="0" width="470" height="420" rx="26" class="blue"/>
+    <text x="28" y="42" class="label" fill="#1D4ED8">GUIDE</text>
+
+    <!-- input tray -->
+    <rect x="28" y="68" width="120" height="74" rx="16" class="pill"/>
+    <rect x="42" y="82" width="24" height="18" rx="4" fill="#DBEAFE"/>
+    <rect x="72" y="82" width="58" height="8" rx="4" fill="#D1D5DB"/>
+    <rect x="42" y="108" width="88" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="42" y="122" width="64" height="8" rx="4" fill="#E5E7EB"/>
+    <text x="50" y="156" class="tiny">截图+动作日志</text>
+
+    <!-- module 1 -->
+    <rect x="178" y="68" width="112" height="74" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="208" y="111" class="small">切分</text>
+
+    <!-- module 2 -->
+    <rect x="318" y="68" width="112" height="74" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="348" y="111" class="small">诊断</text>
+
+    <!-- module 3 -->
+    <rect x="248" y="186" width="112" height="74" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="278" y="229" class="small">汇总</text>
+
+    <path d="M148 105 L176 105" class="lineBlue"/>
+    <path d="M290 105 L316 105" class="lineBlue"/>
+    <path d="M374 142 L330 184" class="lineBlue"/>
+
+    <!-- no training / no rules / no env -->
+    <g transform="translate(26,194)">
+      <rect x="0" y="0" width="174" height="166" rx="18" class="green"/>
+      <circle cx="28" cy="32" r="8" fill="#10B981"/>
+      <text x="48" y="38" class="small">不用训练</text>
+
+      <circle cx="28" cy="82" r="8" fill="#10B981"/>
+      <text x="48" y="88" class="small">不用规则</text>
+
+      <circle cx="28" cy="132" r="8" fill="#10B981"/>
+      <text x="48" y="138" class="small">不用环境</text>
+    </g>
+
+    <!-- prompt-driven note -->
+    <rect x="248" y="304" width="172" height="64" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="278" y="344" class="tiny">提示词 + JSON</text>
+
+    <!-- output -->
+    <path d="M360 223 L428 223" class="lineBlue"/>
+    <rect x="428" y="186" width="26" height="74" rx="8" fill="#2563EB" opacity="0.12" stroke="#60A5FA" stroke-width="1.5"/>
+    <rect x="442" y="172" width="26" height="102" rx="8" fill="#2563EB" opacity="0.18" stroke="#60A5FA" stroke-width="1.5"/>
+    <rect x="456" y="158" width="26" height="130" rx="8" fill="#2563EB" opacity="0.28" stroke="#60A5FA" stroke-width="1.5"/>
+  </g>
+
+  <!-- bottom comparison -->
+  <g transform="translate(545,550)">
+    <path d="M0 0 L120 0" class="dash"/>
+    <path d="M132 0 L160 22 L210 -20" class="ok"/>
+    <text x="228" y="6" class="tiny">可直接接入离线流水线</text>
+  </g>
+</svg>

@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/downloaded_pdfs/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-5",
+      "page_index": 8,
+      "caption": "Table 4: Ablation study of detection positions across diverse LLM backbones within the agent execution pipeline.",
+      "clip": [
+        93.85658264160156,
+        8.0,
+        562.9586181640625,
+        343.3193054199219
+      ],
+      "clip_area": 157298.96872246312,
+      "page_area": 484704.0,
+      "text_density": 0.15774475179022637,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.335314892586418,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-1-0",
+      "page_index": 4,
+      "caption": "第 5 页内嵌图片候选",
+      "clip": [
+        282.4776611328125,
+        462.2203369140625,
+        516.0676879882812,
+        608.4600830078125
+      ],
+      "clip_area": 34160.146217375994,
+      "page_area": 484704.0,
+      "text_density": 0.032488296917889965,
+      "kind": "embedded_image",
+      "xref": 368,
+      "score": 5.379557180193067,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/02-p5-embedded_image.png",
+      "filename": "02-p5-embedded_image.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "第 5 页内嵌图片候选",
+      "clip": [
+        96.10443878173828,
+        482.6216125488281,
+        302.700439453125,
+        606.4490966796875
+      ],
+      "clip_area": 25582.26299463515,
+      "page_area": 484704.0,
+      "text_density": 0.047476015161046214,
+      "kind": "embedded_image",
+      "xref": 367,
+      "score": 5.284247366607057,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/03-p5-embedded_image.png",
+      "filename": "03-p5-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-2-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        352.39117431640625,
+        337.9059143066406,
+        516.8111267089844,
+        439.916259765625
+      ],
+      "clip_area": 16772.53614391666,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 376,
+      "score": 5.186361512710185,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/04-p6-embedded_image.png",
+      "filename": "04-p6-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-5-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        352.39117431640625,
+        419.89300537109375,
+        516.8111267089844,
+        521.9033508300781
+      ],
+      "clip_area": 16772.53614391666,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 379,
+      "score": 5.186361512710185,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/05-p6-embedded_image.png",
+      "filename": "05-p6-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-8-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        352.39117431640625,
+        255.91549682617188,
+        516.8111267089844,
+        357.92584228515625
+      ],
+      "clip_area": 16772.53614391666,
+      "page_area": 484704.0,
+      "text_density": 0.03615297096387631,
+      "kind": "embedded_image",
+      "xref": 382,
+      "score": 5.186361512710185,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/06-p6-embedded_image.png",
+      "filename": "06-p6-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/your-agent-is-more-brittle-than-you-think-uncovering-indirect-injection-vulnerab/contact-sheet.svg"
+}

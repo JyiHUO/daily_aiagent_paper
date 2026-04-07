@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/downloaded_pdfs/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis",
+  "candidates": [
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        69.68685913085938,
+        574.1991577148438,
+        287.78497314453125
+      ],
+      "clip_area": 116988.08077914349,
+      "page_area": 484704.0,
+      "text_density": 0.10361834663857084,
+      "kind": "drawing_cluster",
+      "score": 8.58289920168575,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/01-p4-drawing_cluster.png",
+      "filename": "01-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-caption-31",
+      "page_index": 3,
+      "caption": "Figure 3: Statistics of the industrial e-commerce dataset. (a) Trajectory length distribution across six groups. (b) Overall success/failure ratio (37.0% vs. 63.0%). (c) Per-group success rate; success decreases monotonically from 39.4% ( < 10 steps) to 18.2% (50–80 steps), confirming that longer trajectories are inherently more challenging.",
+      "clip": [
+        35.79800033569336,
+        67.68685913085938,
+        576.1991577148438,
+        289.78497314453125
+      ],
+      "clip_area": 120022.07786471478,
+      "page_area": 484704.0,
+      "text_density": 0.11550524053104659,
+      "kind": "drawing_cluster_with_caption",
+      "score": 5.869685568137204,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        38.440101623535156,
+        68.22349548339844,
+        574.1572875976562,
+        233.04489135742188
+      ],
+      "clip_area": 88297.65438595845,
+      "page_area": 484704.0,
+      "text_density": 0.23358650779215248,
+      "kind": "embedded_image",
+      "xref": 324,
+      "score": 2.765894581203723,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/03-p2-embedded_image.png",
+      "filename": "03-p2-embedded_image.png"
+    },
+    {
+      "id": "page-3-block-31",
+      "page_index": 3,
+      "caption": "Figure 3: Statistics of the industrial e-commerce dataset. (a) Trajectory length distribution across six groups. (b) Overall success/failure ratio (37.0% vs. 63.0%). (c) Per-group success rate; success decreases monotonically from 39.4% ( < 10 steps) to 18.2% (50–80 steps), confirming that longer trajectories are inherently more challenging.",
+      "clip": [
+        22.964998626708983,
+        18.0,
+        588.805078125,
+        278.5690002441406
+      ],
+      "clip_area": 147440.38381293474,
+      "page_area": 484704.0,
+      "text_density": 0.10191299343173897,
+      "kind": "captioned_figure",
+      "score": -5.314779605904338,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/04-p4-captioned_figure.png",
+      "filename": "04-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8030008471149944,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5800056214955268,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/guide-interpretable-gui-agent-evaluation-via-hierarchical-diagnosis/contact-sheet.svg"
+}

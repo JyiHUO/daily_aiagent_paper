@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-07",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 655,
+  "selected_count": 3,
+  "focus_titles": [
+    "Your Agent is More Brittle Than You Think: Uncovering Indirect Injection Vulnerabilities in Agentic LLMs",
+    "GUIDE: Interpretable GUI Agent Evaluation via Hierarchical Diagnosis",
+    "The Tool Illusion: Rethinking Tool Use in Web Agents"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/downloaded_pdfs/the-tool-illusion-rethinking-tool-use-in-web-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents",
+  "candidates": [
+    {
+      "id": "page-6-block-21",
+      "page_index": 6,
+      "caption": "Figure 1: Distribution of tool complexity levels across the three frameworks.",
+      "clip": [
+        106.66499938964844,
+        18.0,
+        502.2498413085938,
+        201.0022735595703
+      ],
+      "clip_area": 72392.92545687022,
+      "page_area": 484704.0,
+      "text_density": 0.08886996060465797,
+      "kind": "captioned_figure",
+      "score": 33.27216820213019,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/01-p7-captioned_figure.png",
+      "filename": "01-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-46",
+      "page_index": 6,
+      "caption": "Figure 2: Distribution of tool invocations. “X invocations” indicates that the tool is invoked in X tasks of W EB A RENA , e.g., “0 invocations” means the tools are unused across all tasks.",
+      "clip": [
+        99.9010009765625,
+        65.862060546875,
+        512.1189270019531,
+        373.2409973144531
+      ],
+      "clip_area": 126707.10781822074,
+      "page_area": 484704.0,
+      "text_density": 0.1686246289347029,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.682522263917825,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-54",
+      "page_index": 7,
+      "caption": "Figure 3 shows the token cost of the three frameworks on W EB A RENA , decomposed into prompt, completion, and reasoning tokens. Across all frameworks, enabling tools generally increases the average token cost per website, with the increase being especially pronounced for Hybrid-Agent , largely due to its extremely large API tool library.",
+      "clip": [
+        77.10099639892579,
+        312.20433349609374,
+        534.9883666992188,
+        621.0043334960938
+      ],
+      "clip_area": 141395.61994873048,
+      "page_area": 484704.0,
+      "text_density": 0.6267118867381981,
+      "kind": "captioned_figure",
+      "score": 26.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/03-p8-captioned_figure.png",
+      "filename": "03-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-17-block-4",
+      "page_index": 17,
+      "caption": "Figure 8: Tool example of Hybrid-Agent .",
+      "clip": [
+        153.31900024414062,
+        312.44659423828125,
+        458.6902160644531,
+        573.156005859375
+      ],
+      "clip_area": 79613.15000253171,
+      "page_area": 484704.0,
+      "text_density": 0.03430546781546362,
+      "kind": "image_block_with_caption",
+      "score": 21.884590555583685,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/04-p18-image_block_with_caption.png",
+      "filename": "04-p18-image_block_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-1-0",
+      "page_index": 17,
+      "caption": "Figure 8: Tool example of Hybrid-Agent .",
+      "clip": [
+        163.31900024414062,
+        318.44659423828125,
+        448.6902160644531,
+        567.156005859375
+      ],
+      "clip_area": 70974.50718026608,
+      "page_area": 484704.0,
+      "text_density": 0.024704985722685587,
+      "kind": "embedded_image_with_caption",
+      "xref": 605,
+      "score": 20.78860563533629,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/05-p18-embedded_image_with_caption.png",
+      "filename": "05-p18-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-block-46",
+      "page_index": 6,
+      "caption": "Figure 2: Distribution of tool invocations. “X invocations” indicates that the tool is invoked in X tasks of W EB A RENA , e.g., “0 invocations” means the tools are unused across all tasks.",
+      "clip": [
+        77.4,
+        39.31730957031249,
+        536.1238342285156,
+        348.1173095703125
+      ],
+      "clip_area": 141653.92000976566,
+      "page_area": 484704.0,
+      "text_density": 0.10277770661094696,
+      "kind": "captioned_figure",
+      "score": 20.633337603343183,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/06-p7-captioned_figure.png",
+      "filename": "06-p7-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/assets/figure_candidates/the-tool-illusion-rethinking-tool-use-in-web-agents/contact-sheet.svg"
+}

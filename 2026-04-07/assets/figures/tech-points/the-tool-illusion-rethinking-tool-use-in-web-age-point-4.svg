@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d9485f"/>
+    </marker>
+    <style>
+      .title{font:700 28px Arial,Helvetica,sans-serif; fill:#111827}
+      .label{font:700 18px Arial,Helvetica,sans-serif; fill:#111827}
+      .small{font:600 16px Arial,Helvetica,sans-serif; fill:#374151}
+      .tiny{font:600 15px Arial,Helvetica,sans-serif; fill:#4b5563}
+    </style>
+  </defs>
+
+  <rect width="960" height="560" fill="#f8fafc"/>
+
+  <text x="480" y="52" text-anchor="middle" class="title">工具有隐藏税</text>
+
+  <!-- Left panel -->
+  <rect x="60" y="100" rx="24" ry="24" width="340" height="380" fill="#e8f1ff" stroke="#8bb6ff" stroke-width="2.5"/>
+  <text x="230" y="140" text-anchor="middle" class="label">直接网页动作</text>
+
+  <circle cx="130" cy="250" r="34" fill="#ffffff" stroke="#7aa2e3" stroke-width="2.5"/>
+  <text x="130" y="257" text-anchor="middle" class="small">Agent</text>
+
+  <rect x="258" y="208" rx="14" ry="14" width="90" height="90" fill="#ffffff" stroke="#7aa2e3" stroke-width="2.5"/>
+  <rect x="270" y="220" width="66" height="46" rx="6" fill="#dbeafe" stroke="#7aa2e3" stroke-width="2"/>
+  <rect x="286" y="278" width="34" height="8" rx="4" fill="#93c5fd"/>
+
+  <line x1="166" y1="250" x2="246" y2="250" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="230" y="350" text-anchor="middle" class="tiny">少想一步</text>
+  <text x="230" y="387" text-anchor="middle" class="tiny">少读说明</text>
+
+  <!-- Right panel -->
+  <rect x="430" y="100" rx="24" ry="24" width="470" height="380" fill="#fff1f2" stroke="#f29aaa" stroke-width="2.5"/>
+  <text x="665" y="140" text-anchor="middle" class="label">加工具后</text>
+
+  <circle cx="500" cy="250" r="34" fill="#ffffff" stroke="#e57b8f" stroke-width="2.5"/>
+  <text x="500" y="257" text-anchor="middle" class="small">Agent</text>
+
+  <rect x="570" y="175" rx="18" ry="18" width="128" height="150" fill="#ffffff" stroke="#e57b8f" stroke-width="2.5"/>
+  <text x="634" y="205" text-anchor="middle" class="small">工具库</text>
+  <rect x="592" y="225" width="84" height="14" rx="7" fill="#fecdd3"/>
+  <rect x="592" y="250" width="84" height="14" rx="7" fill="#fecdd3"/>
+  <rect x="592" y="275" width="84" height="14" rx="7" fill="#fecdd3"/>
+  <rect x="592" y="300" width="54" height="14" rx="7" fill="#fecdd3"/>
+
+  <rect x="764" y="208" rx="14" ry="14" width="90" height="90" fill="#ffffff" stroke="#e57b8f" stroke-width="2.5"/>
+  <rect x="776" y="220" width="66" height="46" rx="6" fill="#ffe4e6" stroke="#e57b8f" stroke-width="2"/>
+  <rect x="792" y="278" width="34" height="8" rx="4" fill="#fda4af"/>
+
+  <line x1="534" y1="250" x2="556" y2="250" stroke="#d9485f" stroke-width="4" marker-end="url(#arrowRed)"/>
+  <line x1="698" y1="250" x2="740" y2="250" stroke="#d9485f" stroke-width="4" marker-end="url(#arrowRed)"/>
+
+  <path d="M500 210 C545 155, 610 150, 648 165" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="570" y="170" text-anchor="middle" class="tiny" fill="#b45309">先找工具</text>
+
+  <path d="M636 335 C690 390, 760 368, 808 305" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="715" y="395" text-anchor="middle" class="tiny" fill="#b45309">填参数 / 重试</text>
+
+  <!-- Bottom comparison -->
+  <g transform="translate(120,455)">
+    <text x="0" y="0" class="small">token</text>
+    <rect x="62" y="-16" width="90" height="16" rx="8" fill="#93c5fd"/>
+    <rect x="162" y="-16" width="165" height="16" rx="8" fill="#fb7185"/>
+  </g>
+  <g transform="translate(120,500)">
+    <text x="0" y="0" class="small">steps</text>
+    <rect x="62" y="-16" width="120" height="16" rx="8" fill="#93c5fd"/>
+    <rect x="192" y="-16" width="145" height="16" rx="8" fill="#fb7185"/>
+  </g>
+
+  <text x="768" y="500" text-anchor="middle" class="label" fill="#b91c1c">不一定更省</text>
+</svg>
