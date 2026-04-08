@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial, Helvetica, sans-serif; fill:#111827}
+      .sub{font:600 18px Arial, Helvetica, sans-serif; fill:#374151}
+      .label{font:700 20px Arial, Helvetica, sans-serif; fill:#111827}
+      .small{font:600 16px Arial, Helvetica, sans-serif; fill:#374151}
+      .tiny{font:700 15px Arial, Helvetica, sans-serif; fill:#ffffff}
+      .box{fill:#ffffff; stroke:#D1D5DB; stroke-width:2}
+      .phone{fill:#F9FAFB; stroke:#9CA3AF; stroke-width:2.5}
+      .good{fill:#ECFDF5; stroke:#10B981; stroke-width:2}
+      .bad{fill:#FEF2F2; stroke:#EF4444; stroke-width:2}
+      .blue{fill:#EFF6FF; stroke:#3B82F6; stroke-width:2.5}
+      .chip{fill:#111827}
+      .dash{stroke:#9CA3AF; stroke-width:2.5; stroke-dasharray:8 8; fill:none}
+      .arr{stroke:#4B5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .arrb{stroke:#2563EB; stroke-width:3.5; fill:none; marker-end:url(#arrowBlue)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+
+  <text x="600" y="62" text-anchor="middle" class="title">合成失败训练：先教模型“认错 + 换招”</text>
+  <text x="600" y="96" text-anchor="middle" class="sub">训练里不只放成功轨迹，还人为加入“动作发生了，但屏幕没变”的失败样本</text>
+
+  <!-- Left: successful sample -->
+  <rect x="70" y="150" rx="24" ry="24" width="320" height="500" class="good"/>
+  <text x="230" y="190" text-anchor="middle" class="label" fill="#065F46">成功样本</text>
+
+  <rect x="105" y="235" rx="22" ry="22" width="100" height="190" class="phone"/>
+  <rect x="118" y="258" width="74" height="18" rx="6" fill="#D1FAE5"/>
+  <rect x="118" y="290" width="52" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="118" y="312" width="66" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="132" y="355" width="46" height="28" rx="8" fill="#34D399"/>
+  <text x="155" y="374" text-anchor="middle" class="tiny">设置</text>
+
+  <path d="M 215 330 C 245 330, 255 330, 285 330" class="arr"/>
+  <circle cx="245" cy="330" r="24" fill="#10B981"/>
+  <text x="245" y="337" text-anchor="middle" class="tiny">点</text>
+
+  <rect x="285" y="235" rx="22" ry="22" width="100" height="190" class="phone"/>
+  <rect x="303" y="260" width="64" height="16" rx="5" fill="#BFDBFE"/>
+  <circle cx="320" cy="315" r="12" fill="none" stroke="#60A5FA" stroke-width="4"/>
+  <path d="M320 292 L320 338 M297 315 L343 315" stroke="#60A5FA" stroke-width="4" stroke-linecap="round"/>
+  <rect x="306" y="360" width="58" height="12" rx="4" fill="#E5E7EB"/>
+
+  <text x="230" y="468" text-anchor="middle" class="small">点“设置” → 进入设置页</text>
+
+  <!-- Middle: synthesized failure -->
+  <rect x="440" y="130" rx="26" ry="26" width="320" height="540" class="bad"/>
+  <text x="600" y="170" text-anchor="middle" class="label" fill="#991B1B">合成失败样本</text>
+
+  <rect x="475" y="225" rx="22" ry="22" width="100" height="190" class="phone"/>
+  <rect x="488" y="248" width="74" height="18" rx="6" fill="#FECACA"/>
+  <rect x="488" y="280" width="52" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="488" y="302" width="66" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="502" y="345" width="46" height="28" rx="8" fill="#F87171"/>
+  <text x="525" y="364" text-anchor="middle" class="tiny">设置</text>
+
+  <path d="M 585 320 C 610 320, 615 320, 640 320" class="dash"/>
+  <circle cx="612" cy="320" r="24" fill="#EF4444"/>
+  <text x="612" y="327" text-anchor="middle" class="tiny">已点</text>
+
+  <rect x="640" y="225" rx="22" ry="22" width="100" height="190" class="phone"/>
+  <rect x="653" y="248" width="74" height="18" rx="6" fill="#FECACA"/>
+  <rect x="653" y="280" width="52" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="653" y="302" width="66" height="12" rx="4" fill="#E5E7EB"/>
+  <rect x="667" y="345" width="46" height="28" rx="8" fill="#F87171"/>
+  <text x="690" y="364" text-anchor="middle" class="tiny">设置</text>
+
+  <text x="600" y="455" text-anchor="middle" class="small">历史写着“上一步已执行”</text>
+  <text x="600" y="487" text-anchor="middle" class="small">但当前屏幕没变</text>
+
+  <rect x="520" y="525" rx="16" ry="16" width="160" height="54" fill="#B91C1C"/>
+  <text x="600" y="559" text-anchor="middle" class="label" fill="#ffffff">NO-CHANGE</text>
+
+  <!-- Right: model learns correction -->
+  <rect x="820" y="200" rx="26" ry="26" width="300" height="350" class="blue"/>
+  <text x="970" y="240" text-anchor="middle" class="label" fill="#1D4ED8">模型学到的输出</text>
+
+  <rect x="865" y="285" rx="16" ry="16" width="210" height="58" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+  <text x="970" y="321" text-anchor="middle" class="label" fill="#1E3A8A">先判断失败</text>
+
+  <rect x="865" y="372" rx="16" ry="16" width="210" height="90" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+  <text x="970" y="407" text-anchor="middle" class="label" fill="#1E3A8A">再给修正动作</text>
+  <path d="M 910 435 C 940 410, 990 410, 1030 435" class="arrb"/>
+  <circle cx="1030" cy="435" r="8" fill="#2563EB"/>
+
+  <path d="M 760 398 C 790 398, 800 398, 820 398" class="arrb"/>
+
+  <!-- Bottom ratio -->
+  <rect x="300" y="690" rx="18" ry="18" width="600" height="40" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+  <rect x="300" y="690" rx="18" ry="18" width="420" height="40" fill="#10B981"/>
+  <rect x="720" y="690" rx="0" ry="0" width="180" height="40" fill="#EF4444"/>
+  <text x="600" y="717" text-anchor="middle" class="small" fill="#111827">70% 成功  +  30% 失败  →  恢复最好</text>
+</svg>

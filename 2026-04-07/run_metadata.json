@@ -15,5 +15,7 @@
     "Your Agent is More Brittle Than You Think: Uncovering Indirect Injection Vulnerabilities in Agentic LLMs",
     "GUIDE: Interpretable GUI Agent Evaluation via Hierarchical Diagnosis",
     "The Tool Illusion: Rethinking Tool Use in Web Agents"
-  ]
+  ],
+  "knowledge_topic": "Prompt Injection 是什么",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-07/paper_broadcast_script.txt"
 }

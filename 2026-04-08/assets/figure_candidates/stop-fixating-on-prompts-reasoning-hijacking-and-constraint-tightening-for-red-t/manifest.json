@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/downloaded_pdfs/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t",
+  "candidates": [
+    {
+      "id": "page-14-drawing-caption-169",
+      "page_index": 14,
+      "caption": "Figure 3: An illustration of the JailAgent red-teaming workflow, together with example architectures and func- tionalities of the three agents. The figure also presents representative input–output cases for each agent, the key techniques adopted in the red-team process, and the overall evaluation framework.",
+      "clip": [
+        42.96441650390625,
+        34.10198974609375,
+        551.6876220703125,
+        420.6443786621094
+      ],
+      "clip_area": 196643.08317665197,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2903296967555213,
+      "kind": "drawing_cluster_with_caption",
+      "score": 65.2850875986189,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/01-p15-drawing_cluster_with_caption.png",
+      "filename": "01-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-137",
+      "page_index": 3,
+      "caption": "Figure 1: The overall architecture of JailAgent demonstrates the complete process of the jailbreak.",
+      "clip": [
+        42.14137649536133,
+        44.85791015625,
+        548.4549560546875,
+        341.4093017578125
+      ],
+      "clip_area": 150147.9966050866,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2125748183444929,
+      "kind": "drawing_cluster_with_caption",
+      "score": 46.045510899330424,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-6",
+      "page_index": 8,
+      "caption": "Figure 2: Comparison of ASR Success Cases between JailAgent and AgentPoison on VideoAgent, where option 0 is the correct answer to the question, and bold text represents the model’s reasoning process.",
+      "clip": [
+        69.25955963134766,
+        57.00128936767578,
+        539.339599609375,
+        430.57171630859375
+      ],
+      "clip_area": 175608.00123099546,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7808010759123021,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.583791199226866,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-caption-33",
+      "page_index": 17,
+      "caption": "Figure 4: We demonstrate the effectiveness of the Joint Optimization module in optimizing the trigger. From left to right, the first image shows the case without Joint Optimization, the middle two images show the application of L par ( E ) + L clu ( E ) and L sep ( E ) + L mar ( E ) , and the final image illustrates the complete Joint Optimization.",
+      "clip": [
+        52.865997314453125,
+        54.864967346191406,
+        542.4119873046875,
+        195.71600341796875
+      ],
+      "clip_area": 68953.05989490845,
+      "page_area": 501156.9211820215,
+      "text_density": 0.10135506861513542,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.484840993035302,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/04-p18-drawing_cluster_with_caption.png",
+      "filename": "04-p18-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-cluster-0",
+      "page_index": 17,
+      "caption": "第 18 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        56.864967346191406,
+        540.4119873046875,
+        193.71600341796875
+      ],
+      "clip_area": 66447.4717906604,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09152574943186771,
+      "kind": "drawing_cluster",
+      "score": 8.046760276206387,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/05-p18-drawing_cluster.png",
+      "filename": "05-p18-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-block-6",
+      "page_index": 8,
+      "caption": "Figure 2: Comparison of ASR Success Cases between JailAgent and AgentPoison on VideoAgent, where option 0 is the correct answer to the question, and bold text represents the model’s reasoning process.",
+      "clip": [
+        41.102197265624994,
+        89.80338134765623,
+        554.1696838378906,
+        418.55938720703125
+      ],
+      "clip_area": 168674.01762180656,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7661640479809089,
+      "kind": "captioned_figure",
+      "score": 6.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/06-p9-captioned_figure.png",
+      "filename": "06-p9-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/stop-fixating-on-prompts-reasoning-hijacking-and-constraint-tightening-for-red-t/contact-sheet.svg"
+}

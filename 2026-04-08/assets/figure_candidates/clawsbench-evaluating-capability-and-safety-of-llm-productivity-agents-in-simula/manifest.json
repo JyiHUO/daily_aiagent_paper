@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/downloaded_pdfs/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula",
+  "candidates": [
+    {
+      "id": "page-15-block-9",
+      "page_index": 15,
+      "caption": "Renjun Xu and Yang Yan. Agent skills for large language models: Architecture, acquisition, security, and the path forward, 2026. URL https://arxiv.org/abs/2602.12430 .",
+      "clip": [
+        77.4,
+        103.05659790039061,
+        535.8461242675781,
+        411.8565979003906
+      ],
+      "clip_area": 141568.16317382816,
+      "page_area": 484704.0,
+      "text_density": 0.6484793056534397,
+      "kind": "captioned_figure",
+      "score": 17.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/01-p16-captioned_figure.png",
+      "filename": "01-p16-captioned_figure.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        105.9010009765625,
+        378.1431579589844,
+        506.0718994140625,
+        612.0989990234375
+      ],
+      "clip_area": 93622.31911346316,
+      "page_area": 484704.0,
+      "text_density": 0.0209057807932159,
+      "kind": "embedded_image",
+      "xref": 58,
+      "score": 12.040247990149592,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/02-p1-embedded_image.png",
+      "filename": "02-p1-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        96.0,
+        59.99998474121094,
+        515.9852600097656,
+        305.0150146484375
+      ],
+      "clip_area": 102902.70104188705,
+      "page_area": 484704.0,
+      "text_density": 0.019401804830005833,
+      "kind": "embedded_image",
+      "xref": 926,
+      "score": 6.143363344909856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/03-p6-embedded_image.png",
+      "filename": "03-p6-embedded_image.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        92.0,
+        57.99951171875,
+        520.0122680664062,
+        263.4329833984375
+      ],
+      "clip_area": 87928.04615037888,
+      "page_area": 484704.0,
+      "text_density": 0.2123004130329828,
+      "kind": "drawing_cluster",
+      "score": 1.0389535085807982,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/04-p8-drawing_cluster.png",
+      "filename": "04-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4823941842891796,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5816412390037978,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/clawsbench-evaluating-capability-and-safety-of-llm-productivity-agents-in-simula/contact-sheet.svg"
+}

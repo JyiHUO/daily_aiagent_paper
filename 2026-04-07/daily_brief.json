@@ -1,0 +1,16 @@
+{
+  "trend_overview": [
+    "今天初筛后最集中的主题是 general_agent、agent_safety、embodied_agent，说明研究关注点继续从单轮回答能力转向更完整的执行链。",
+    "高优先级论文里，GeoBrowse: A Geolocation Benchmark for Agentic Tool Use with Expert-Annotated Reasoning Traces 等工作都在强调 Agent 的系统边界，而不是只卷更大的底座模型。",
+    "从创新性和研究开拓性看，GeoBrowse: A Geolocation Benchmark for Agentic Tool Use with Expert-Annotated Reasoning Traces、Full-Duplex-Bench-v3: Benchmarking Tool Use for Full-Duplex Voice Agents Under Real-World Disfluency 代表了今天最值得后续继续追踪的切口。"
+  ],
+  "knowledge_point": {
+    "topic": "Prompt Injection 是什么",
+    "content": "Prompt Injection 本质上是把原本应该当作数据读取的内容，偷偷变成了会影响模型行为的指令。它的危险不只在用户直接输入恶意话术，更在网页、邮件、文档、工具返回结果等外部内容里夹带隐藏命令。对 Agent 来说，一旦系统会跨多步读取环境并调工具，注入就会从'输出脏话'升级成'做错动作'，所以它是执行链安全里的基础概念。",
+    "why_today": "今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。"
+  },
+  "closing_summary": [
+    "如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。",
+    "这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。"
+  ]
+}

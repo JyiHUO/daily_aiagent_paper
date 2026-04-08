@@ -21,9 +21,11 @@
     "relevance_score": 97,
     "value_score": 93,
     "interesting_score": 91,
+    "innovation_score": 46,
+    "frontier_score": 52,
     "verdict": "must_read",
     "reason": "直接研究 Agentic LLM 的间接注入漏洞，属于当前 Agent 落地最关键的安全问题之一。",
-    "composite_score": 94.4,
+    "composite_score": 80.64,
     "arxiv_url": "https://arxiv.org/abs/2604.03870"
   },
   {
@@ -47,9 +49,11 @@
     "relevance_score": 97,
     "value_score": 92,
     "interesting_score": 88,
+    "innovation_score": 50,
+    "frontier_score": 45,
     "verdict": "must_read",
     "reason": "聚焦GUI Agent评测与分层诊断，可直接帮助computer use代理的错误定位、基准设计和系统迭代。",
-    "composite_score": 93.45,
+    "composite_score": 79.43,
     "arxiv_url": "https://arxiv.org/abs/2604.04399"
   },
   {
@@ -72,9 +76,11 @@
     "relevance_score": 96,
     "value_score": 90,
     "interesting_score": 92,
+    "innovation_score": 50,
+    "frontier_score": 63,
     "verdict": "must_read",
     "reason": "直接讨论Web Agent中的工具使用是否真的有效，可能重塑工具调用、界面抽象和评测结论，强相关且很有洞察力。",
-    "composite_score": 93.1,
+    "composite_score": 82.11,
     "arxiv_url": "https://arxiv.org/abs/2604.03465"
   }
 ]

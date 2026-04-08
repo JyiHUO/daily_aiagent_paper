@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4B5563"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 30px Arial, Helvetica, sans-serif; fill:#111827}
+      .subtitle{font:500 16px Arial, Helvetica, sans-serif; fill:#6B7280}
+      .panel{fill:#ffffff; stroke:#D1D5DB; stroke-width:2; rx:24}
+      .label{font:700 20px Arial, Helvetica, sans-serif; fill:#111827}
+      .small{font:600 16px Arial, Helvetica, sans-serif; fill:#374151}
+      .tiny{font:600 14px Arial, Helvetica, sans-serif; fill:#4B5563}
+      .good{fill:#10B981}
+      .bad{fill:#EF4444}
+      .mid{fill:#6366F1}
+      .soft{fill:#F3F4F6}
+      .line{stroke:#9CA3AF; stroke-width:2.5; fill:none}
+      .arrow{stroke:#4B5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#F9FAFB"/>
+
+  <text x="600" y="54" text-anchor="middle" class="title">Constraint Tightening = make triggers stable</text>
+  <text x="600" y="84" text-anchor="middle" class="subtitle">Not a lucky prompt, but a robust position in embedding space</text>
+
+  <!-- Left panel -->
+  <rect x="60" y="130" width="450" height="500" class="panel" filter="url(#shadow)"/>
+  <text x="285" y="168" text-anchor="middle" class="label">Loose trigger</text>
+  <text x="285" y="195" text-anchor="middle" class="tiny">accidental hit</text>
+
+  <!-- benign cluster left -->
+  <g opacity="0.95">
+    <circle cx="180" cy="300" r="12" fill="#34D399"/>
+    <circle cx="210" cy="275" r="11" fill="#34D399"/>
+    <circle cx="220" cy="325" r="10" fill="#34D399"/>
+    <circle cx="160" cy="340" r="9" fill="#34D399"/>
+    <circle cx="145" cy="285" r="10" fill="#34D399"/>
+    <circle cx="195" cy="355" r="9" fill="#34D399"/>
+    <ellipse cx="185" cy="315" rx="85" ry="70" fill="none" stroke="#10B981" stroke-width="3" stroke-dasharray="7 7"/>
+  </g>
+
+  <!-- poison cluster left -->
+  <g opacity="0.95">
+    <circle cx="390" cy="420" r="12" fill="#F87171"/>
+    <circle cx="420" cy="395" r="11" fill="#F87171"/>
+    <circle cx="435" cy="445" r="10" fill="#F87171"/>
+    <circle cx="365" cy="455" r="9" fill="#F87171"/>
+    <circle cx="350" cy="405" r="10" fill="#F87171"/>
+    <ellipse cx="395" cy="425" rx="85" ry="70" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="7 7"/>
+  </g>
+
+  <!-- loose triggers -->
+  <g>
+    <circle cx="285" cy="330" r="13" fill="#6366F1"/>
+    <circle cx="315" cy="295" r="13" fill="#6366F1"/>
+    <circle cx="330" cy="365" r="13" fill="#6366F1"/>
+    <circle cx="250" cy="385" r="13" fill="#6366F1"/>
+    <circle cx="275" cy="250" r="13" fill="#6366F1"/>
+  </g>
+
+  <line x1="285" y1="330" x2="220" y2="315" class="line"/>
+  <line x1="315" y1="295" x2="390" y2="420" class="line"/>
+  <line x1="330" y1="365" x2="395" y2="425" class="line"/>
+  <line x1="250" y1="385" x2="185" y2="315" class="line"/>
+
+  <text x="120" y="240" class="small good">benign</text>
+  <text x="380" y="345" class="small bad">poison</text>
+
+  <!-- Center block -->
+  <rect x="540" y="250" width="120" height="170" rx="28" fill="#EEF2FF" stroke="#6366F1" stroke-width="3" filter="url(#shadow)"/>
+  <text x="600" y="310" text-anchor="middle" class="label" fill="#4338CA">4 losses</text>
+  <text x="600" y="345" text-anchor="middle" class="tiny">far from benign</text>
+  <text x="600" y="372" text-anchor="middle" class="tiny">tight together</text>
+  <text x="600" y="399" text-anchor="middle" class="tiny">hit poison with margin</text>
+
+  <path d="M510,335 C525,335 525,335 540,335" class="arrow"/>
+  <path d="M660,335 C675,335 675,335 690,335" class="arrow"/>
+
+  <!-- Right panel -->
+  <rect x="690" y="130" width="450" height="500" class="panel" filter="url(#shadow)"/>
+  <text x="915" y="168" text-anchor="middle" class="label">Tightened trigger</text>
+  <text x="915" y="195" text-anchor="middle" class="tiny">generalizes across settings</text>
+
+  <!-- benign cluster right -->
+  <g opacity="0.95">
+    <circle cx="810" cy="300" r="12" fill="#34D399"/>
+    <circle cx="840" cy="275" r="11" fill="#34D399"/>
+    <circle cx="850" cy="325" r="10" fill="#34D399"/>
+    <circle cx="790" cy="340" r="9" fill="#34D399"/>
+    <circle cx="775" cy="285" r="10" fill="#34D399"/>
+    <circle cx="825" cy="355" r="9" fill="#34D399"/>
+    <ellipse cx="815" cy="315" rx="85" ry="70" fill="none" stroke="#10B981" stroke-width="3" stroke-dasharray="7 7"/>
+  </g>
+
+  <!-- poison cluster right -->
+  <g opacity="0.95">
+    <circle cx="1020" cy="420" r="12" fill="#F87171"/>
+    <circle cx="1050" cy="395" r="11" fill="#F87171"/>
+    <circle cx="1065" cy="445" r="10" fill="#F87171"/>
+    <circle cx="995" cy="455" r="9" fill="#F87171"/>
+    <circle cx="980" cy="405" r="10" fill="#F87171"/>
+    <ellipse cx="1025" cy="425" rx="85" ry="70" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="7 7"/>
+  </g>
+
+  <!-- tightened triggers -->
+  <g>
+    <circle cx="950" cy="365" r="12" fill="#6366F1"/>
+    <circle cx="965" cy="352" r="12" fill="#6366F1"/>
+    <circle cx="978" cy="370" r="12" fill="#6366F1"/>
+    <circle cx="960" cy="383" r="12" fill="#6366F1"/>
+  </g>
+  <ellipse cx="964" cy="367" rx="36" ry="28" fill="none" stroke="#6366F1" stroke-width="3"/>
+
+  <!-- margin arrows -->
+  <path d="M964,367 C990,382 996,392 1005,401" class="arrow"/>
+  <path d="M940,350 C900,330 875,324 845,320" class="line"/>
+
+  <text x="1055" y="335" class="small bad">easy poison hit</text>
+  <text x="760" y="235" class="small good">away from benign</text>
+
+  <!-- bottom takeaway -->
+  <rect x="250" y="645" width="700" height="34" rx="17" fill="#111827"/>
+  <text x="600" y="668" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">
+    shape the trigger cluster, and the attack stays effective beyond one prompt
+  </text>
+</svg>

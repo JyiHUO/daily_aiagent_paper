@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/downloaded_pdfs/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-35",
+      "page_index": 0,
+      "caption": "Figure 1: Overview of VeriGUI’s closed-loop frame- work. Unlike blind action agents (above) that repeat failed actions indefinitely, VeriGUI (below) verifies each action’s outcome against predicted effects, enabling fail- ure detection and reasoned recovery.",
+      "clip": [
+        292.2896728515625,
+        202.18862915039062,
+        538.4996948242188,
+        555.5394287109375
+      ],
+      "clip_area": 86998.5081238579,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11255371668980685,
+      "kind": "drawing_cluster_with_caption",
+      "score": 78.01342708887668,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        294.2896728515625,
+        204.18862915039062,
+        536.4996948242188,
+        553.5394287109375
+      ],
+      "clip_area": 84616.26483772509,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11051564426911759,
+      "kind": "drawing_cluster",
+      "score": 13.109242064272113,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/02-p1-drawing_cluster.png",
+      "filename": "02-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        78.37584686279297,
+        56.33953857421875,
+        587.2760009765625,
+        367.7801513671875
+      ],
+      "clip_area": 158492.17584762862,
+      "page_area": 501156.9211820215,
+      "text_density": 0.12833776524640922,
+      "kind": "drawing_cluster",
+      "score": 5.099734085215447,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/03-p8-drawing_cluster.png",
+      "filename": "03-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        44.180389404296875,
+        49.14439392089844,
+        551.1127319335938,
+        279.22430419921875
+      ],
+      "clip_area": 116634.94788631937,
+      "page_area": 501156.9211820215,
+      "text_density": 0.21375901260572644,
+      "kind": "drawing_cluster",
+      "score": 1.9744592436564155,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/04-p4-drawing_cluster.png",
+      "filename": "04-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-12-block-14",
+      "page_index": 12,
+      "caption": "Algorithm 1 presents the TVAE inference cycle, and Algorithm 2 details the two-stage training pipeline.",
+      "clip": [
+        275.9851928710938,
+        379.64267578125,
+        556.0814270019531,
+        708.398681640625
+      ],
+      "clip_area": 92083.31918911367,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7335086054808395,
+      "kind": "captioned_figure",
+      "score": -0.9768520090098498,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/05-p13-captioned_figure.png",
+      "filename": "05-p13-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        309.5435205078125,
+        151.54020263671873,
+        577.2760009765625,
+        471.45840820312503
+      ],
+      "clip_area": 85652.49472340543,
+      "kind": "layout_region_right_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.12023098014533463,
+      "score": -1.4621644229044621,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/assets/figure_candidates/don-t-act-blindly-robust-gui-automation-via-action-effect-verification-and-self-/contact-sheet.svg"
+}

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="blueBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="redBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fecaca"/>
+    </linearGradient>
+    <linearGradient id="purpleBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="greenBox" x1="0" x2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#94a3b8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <text x="600" y="70" text-anchor="middle" font-size="34" font-weight="700" fill="#0f172a">JailAgent：不改提示词，沿决策链路带偏 Agent</text>
+  <text x="600" y="108" text-anchor="middle" font-size="18" fill="#475569">三阶段劫持链路</text>
+
+  <rect x="70" y="170" rx="24" ry="24" width="240" height="360" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="95" y="205" rx="18" ry="18" width="190" height="64" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="190" y="245" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">正常问题</text>
+
+  <rect x="95" y="300" rx="14" ry="14" width="70" height="42" fill="#e2e8f0"/>
+  <rect x="178" y="300" rx="14" ry="14" width="54" height="42" fill="#93c5fd"/>
+  <rect x="245" y="300" rx="14" ry="14" width="40" height="42" fill="#e2e8f0"/>
+  <text x="190" y="370" text-anchor="middle" font-size="20" font-weight="700" fill="#2563eb">找关键触发</text>
+
+  <path d="M105 430 C135 395, 165 475, 195 430 S255 465, 285 420" fill="none" stroke="#64748b" stroke-width="4"/>
+  <circle cx="178" cy="445" r="12" fill="#ef4444"/>
+  <text x="190" y="490" text-anchor="middle" font-size="18" fill="#475569">最敏感词 / 片段</text>
+
+  <rect x="360" y="170" rx="24" ry="24" width="240" height="360" fill="url(#blueBox)" stroke="#93c5fd" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="220" text-anchor="middle" font-size="26" font-weight="700" fill="#1e3a8a">1</text>
+  <text x="480" y="258" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Trigger</text>
+  <text x="480" y="288" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Extraction</text>
+
+  <rect x="405" y="340" rx="14" ry="14" width="150" height="56" fill="white" stroke="#93c5fd"/>
+  <text x="480" y="374" text-anchor="middle" font-size="18" fill="#334155">phrase + token</text>
+
+  <rect x="405" y="415" rx="14" ry="14" width="150" height="56" fill="white" stroke="#93c5fd"/>
+  <text x="480" y="449" text-anchor="middle" font-size="18" fill="#334155">impact scoring</text>
+
+  <rect x="650" y="170" rx="24" ry="24" width="240" height="360" fill="url(#redBox)" stroke="#fca5a5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="770" y="220" text-anchor="middle" font-size="26" font-weight="700" fill="#991b1b">2</text>
+  <text x="770" y="258" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Reasoning</text>
+  <text x="770" y="288" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Hijacking</text>
+
+  <rect x="690" y="338" rx="14" ry="14" width="160" height="58" fill="white" stroke="#fca5a5"/>
+  <text x="770" y="373" text-anchor="middle" font-size="18" fill="#334155">online triplets</text>
+
+  <rect x="690" y="418" rx="14" ry="14" width="160" height="58" fill="white" stroke="#fca5a5"/>
+  <text x="770" y="453" text-anchor="middle" font-size="18" fill="#334155">reranker prefers poison</text>
+
+  <rect x="940" y="170" rx="24" ry="24" width="190" height="360" fill="url(#greenBox)" stroke="#86efac" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="220" text-anchor="middle" font-size="26" font-weight="700" fill="#166534">3</text>
+  <text x="1035" y="258" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Constraint</text>
+  <text x="1035" y="288" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Tightening</text>
+
+  <ellipse cx="1035" cy="390" rx="62" ry="62" fill="white" stroke="#86efac" stroke-width="2"/>
+  <ellipse cx="1035" cy="390" rx="38" ry="38" fill="#bbf7d0" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="1035" cy="390" r="12" fill="#16a34a"/>
+  <text x="1035" y="485" text-anchor="middle" font-size="18" fill="#334155">stable trigger</text>
+
+  <path d="M310 350 L345 350" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M600 350 L635 350" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M890 350 L925 350" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <path d="M1090 545 C980 620, 760 625, 540 600 C415 585, 350 555, 290 515" fill="none" stroke="#7c3aed" stroke-width="5" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+  <text x="735" y="650" text-anchor="middle" font-size="22" font-weight="700" fill="#6d28d9">把 Agent 引到错误分支</text>
+
+  <rect x="448" y="565" rx="18" ry="18" width="305" height="60" fill="url(#purpleBox)" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="600" y="603" text-anchor="middle" font-size="20" font-weight="700" fill="#4c1d95">不是改 prompt，而是劫持内部排序与检索</text>
+</svg>

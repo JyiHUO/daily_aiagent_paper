@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#475569"/>
+    </marker>
+    <style>
+      .title{font:700 34px sans-serif; fill:#0f172a}
+      .subtitle{font:500 18px sans-serif; fill:#475569}
+      .panelTitle{font:700 22px sans-serif; fill:#0f172a}
+      .big{font:700 44px sans-serif}
+      .mid{font:700 24px sans-serif}
+      .label{font:600 18px sans-serif; fill:#334155}
+      .small{font:600 16px sans-serif; fill:#64748b}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f8fafc"/>
+
+  <text x="70" y="70" class="title">强模型 ≠ 更安全</text>
+  <text x="70" y="102" class="subtitle">ClawsBench 把“做成事”和“做坏事”分开看</text>
+
+  <!-- left panel -->
+  <rect x="70" y="150" rx="26" ry="26" width="470" height="470" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="305" y="195" text-anchor="middle" class="panelTitle">高能力模型</text>
+
+  <rect x="130" y="235" width="90" height="300" rx="18" fill="#dbeafe"/>
+  <rect x="250" y="175" width="90" height="360" rx="18" fill="#2563eb"/>
+  <text x="175" y="560" text-anchor="middle" class="small">TSR</text>
+  <text x="295" y="560" text-anchor="middle" class="small">UAR</text>
+
+  <text x="175" y="225" text-anchor="middle" class="mid" fill="#1d4ed8">63%</text>
+  <text x="295" y="165" text-anchor="middle" class="mid" fill="#1d4ed8">23%</text>
+
+  <!-- simple agent icon -->
+  <circle cx="430" cy="295" r="42" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <circle cx="415" cy="288" r="5" fill="#2563eb"/>
+  <circle cx="445" cy="288" r="5" fill="#2563eb"/>
+  <rect x="414" y="310" width="32" height="8" rx="4" fill="#2563eb"/>
+
+  <!-- risky action icon -->
+  <rect x="392" y="390" width="76" height="54" rx="10" fill="#fee2e2" stroke="#fca5a5" stroke-width="2"/>
+  <path d="M405 428 L430 402 L455 428" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="430" y1="402" x2="430" y2="440" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+
+  <text x="430" y="470" text-anchor="middle" class="label">会完成，也会冒险</text>
+
+  <!-- right panel -->
+  <rect x="660" y="150" rx="26" ry="26" width="470" height="470" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="895" y="195" text-anchor="middle" class="panelTitle">较谨慎模型</text>
+
+  <rect x="720" y="285" width="90" height="250" rx="18" fill="#e2e8f0"/>
+  <rect x="840" y="425" width="90" height="110" rx="18" fill="#16a34a"/>
+  <text x="765" y="560" text-anchor="middle" class="small">TSR</text>
+  <text x="885" y="560" text-anchor="middle" class="small">UAR</text>
+
+  <text x="765" y="275" text-anchor="middle" class="mid" fill="#475569">53%</text>
+  <text x="885" y="415" text-anchor="middle" class="mid" fill="#15803d">7%</text>
+
+  <!-- cautious icon -->
+  <circle cx="1020" cy="295" r="42" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <circle cx="1005" cy="288" r="5" fill="#16a34a"/>
+  <circle cx="1035" cy="288" r="5" fill="#16a34a"/>
+  <path d="M1004 319 Q1020 308 1036 319" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
+
+  <shield x="0" y="0"/>
+  <path d="M1020 390 L1050 402 L1044 434 Q1020 452 996 434 L990 402 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <path d="M1006 419 L1016 429 L1036 407" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="1020" y="470" text-anchor="middle" class="label">更保守，但未必更能做事</text>
+
+  <!-- middle divider and arrows -->
+  <line x1="600" y1="250" x2="600" y2="540" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 8"/>
+  <line x1="540" y1="385" x2="640" y2="385" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="590" y="360" text-anchor="middle" class="label">能力 ↔ 安全</text>
+
+  <!-- bottom takeaway -->
+  <rect x="230" y="645" width="740" height="46" rx="23" fill="#0f172a"/>
+  <text x="600" y="675" text-anchor="middle" class="mid" fill="#ffffff">不能只看一个总分</text>
+</svg>

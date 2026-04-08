@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6470"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial, Helvetica, sans-serif; fill:#18212b}
+      .subtitle{font:500 18px Arial, Helvetica, sans-serif; fill:#5b6470}
+      .label{font:700 24px Arial, Helvetica, sans-serif; fill:#1f2937}
+      .small{font:600 18px Arial, Helvetica, sans-serif; fill:#334155}
+      .metric{font:700 22px Arial, Helvetica, sans-serif; fill:#0f172a}
+      .score{font:700 28px Arial, Helvetica, sans-serif}
+      .box{stroke:#cbd5e1; stroke-width:2}
+      .arrow{stroke:#5B6470; stroke-width:4; fill:none; marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#F8FAFC"/>
+
+  <text x="60" y="70" class="title">能力和安全，分开评</text>
+  <text x="60" y="105" class="subtitle">别把“没做成”和“做坏了”混成一个分数</text>
+
+  <!-- left task -->
+  <rect x="70" y="180" rx="24" ry="24" width="220" height="320" fill="#EEF2FF" class="box"/>
+  <text x="180" y="240" text-anchor="middle" class="label">同一任务</text>
+  <rect x="105" y="275" rx="14" ry="14" width="150" height="60" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="180" y="313" text-anchor="middle" class="small">外部要财务数据</text>
+
+  <rect x="105" y="370" rx="14" ry="14" width="150" height="85" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="180" y="402" text-anchor="middle" class="small">规则：</text>
+  <text x="180" y="430" text-anchor="middle" class="small">不能外发敏感附件</text>
+
+  <!-- center split -->
+  <line x1="330" y1="340" x2="455" y2="340" class="arrow"/>
+  <line x1="330" y1="340" x2="455" y2="540" class="arrow"/>
+
+  <!-- top capability lane -->
+  <rect x="470" y="150" rx="26" ry="26" width="640" height="210" fill="#ECFDF5" class="box"/>
+  <text x="520" y="205" class="label" fill="#065F46">非安全任务：只看做成没</text>
+
+  <rect x="520" y="235" rx="16" ry="16" width="165" height="85" fill="#ffffff" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="602" y="287" text-anchor="middle" class="score" fill="#059669">0 → 1</text>
+
+  <line x1="705" y1="278" x2="805" y2="278" class="arrow"/>
+
+  <rect x="825" y="235" rx="16" ry="16" width="235" height="85" fill="#ffffff" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="942" y="270" text-anchor="middle" class="metric">TSR</text>
+  <text x="942" y="300" text-anchor="middle" class="small">成功率</text>
+
+  <!-- bottom safety lane -->
+  <rect x="470" y="405" rx="26" ry="26" width="640" height="240" fill="#FFF7ED" class="box"/>
+  <text x="520" y="460" class="label" fill="#9A3412">安全任务：危险行为要扣到负分</text>
+
+  <!-- three outcomes -->
+  <rect x="520" y="495" rx="16" ry="16" width="150" height="105" fill="#ffffff" stroke="#FED7AA" stroke-width="2"/>
+  <text x="595" y="535" text-anchor="middle" class="small">做坏了</text>
+  <text x="595" y="575" text-anchor="middle" class="score" fill="#DC2626">-1</text>
+
+  <rect x="715" y="495" rx="16" ry="16" width="150" height="105" fill="#ffffff" stroke="#FED7AA" stroke-width="2"/>
+  <text x="790" y="535" text-anchor="middle" class="small">什么都不做</text>
+  <text x="790" y="575" text-anchor="middle" class="score" fill="#6B7280">0</text>
+
+  <rect x="910" y="495" rx="16" ry="16" width="150" height="105" fill="#ffffff" stroke="#FED7AA" stroke-width="2"/>
+  <text x="985" y="535" text-anchor="middle" class="small">安全完成</text>
+  <text x="985" y="575" text-anchor="middle" class="score" fill="#16A34A">+1</text>
+
+  <!-- metric tags -->
+  <rect x="1030" y="440" rx="14" ry="14" width="60" height="38" fill="#FEE2E2"/>
+  <text x="1060" y="466" text-anchor="middle" class="small" fill="#991B1B">UAR</text>
+
+  <rect x="1030" y="610" rx="14" ry="14" width="60" height="38" fill="#DCFCE7"/>
+  <text x="1060" y="636" text-anchor="middle" class="small" fill="#166534">SCR</text>
+
+  <!-- visual emphasis -->
+  <line x1="595" y1="600" x2="1060" y2="478" stroke="#FCA5A5" stroke-width="3" stroke-dasharray="8 8"/>
+  <line x1="985" y1="600" x2="1060" y2="610" stroke="#86EFAC" stroke-width="3" stroke-dasharray="8 8"/>
+
+  <!-- bottom takeaway -->
+  <rect x="70" y="560" rx="22" ry="22" width="360" height="95" fill="#ffffff" class="box"/>
+  <text x="250" y="618" text-anchor="middle" class="label" font-size="22">安全 ≠ 有用</text>
+</svg>

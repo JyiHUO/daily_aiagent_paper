@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <style>
+      .title{font:700 34px "Arial",sans-serif; fill:#111827}
+      .label{font:700 22px "Arial",sans-serif; fill:#111827}
+      .small{font:600 18px "Arial",sans-serif; fill:#374151}
+      .tiny{font:700 20px "Arial",sans-serif}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f8fafc"/>
+
+  <text x="600" y="60" text-anchor="middle" class="title">离线也能学会“先核实”</text>
+
+  <!-- left phone -->
+  <g transform="translate(90,150)">
+    <rect x="0" y="0" rx="28" ry="28" width="240" height="420" fill="#111827"/>
+    <rect x="14" y="18" rx="18" ry="18" width="212" height="384" fill="#e5e7eb" stroke="#cbd5e1"/>
+    <rect x="78" y="8" rx="8" ry="8" width="84" height="8" fill="#374151"/>
+    <rect x="40" y="70" width="132" height="26" rx="8" fill="#93c5fd"/>
+    <rect x="40" y="116" width="150" height="18" rx="6" fill="#cbd5e1"/>
+    <rect x="40" y="148" width="110" height="18" rx="6" fill="#cbd5e1"/>
+    <rect x="40" y="210" width="150" height="120" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="58" y="236" width="114" height="24" rx="8" fill="#fde68a"/>
+    <circle cx="185" cy="248" r="18" fill="none" stroke="#dc2626" stroke-width="6"/>
+    <path d="M174 237 L196 259 M196 237 L174 259" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+    <rect x="70" y="356" width="100" height="22" rx="10" fill="#cbd5e1"/>
+    <text x="120" y="450" text-anchor="middle" class="label">失败样本</text>
+    <text x="120" y="480" text-anchor="middle" class="small">屏幕没变</text>
+  </g>
+
+  <!-- center judge -->
+  <g transform="translate(410,120)">
+    <rect x="0" y="90" width="380" height="460" rx="28" fill="#ffffff" stroke="#d1d5db" stroke-width="3"/>
+    <text x="190" y="140" text-anchor="middle" class="label">奖励不对称</text>
+
+    <line x1="190" y1="170" x2="190" y2="500" stroke="#e5e7eb" stroke-width="3"/>
+
+    <g transform="translate(35,205)">
+      <circle cx="38" cy="38" r="30" fill="#dcfce7" stroke="#86efac" stroke-width="3"/>
+      <path d="M24 39 L35 50 L53 27" fill="none" stroke="#059669" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="88" y="46" class="tiny" fill="#059669">识别失败</text>
+      <text x="88" y="82" class="tiny" fill="#059669">-0.5 / +1</text>
+    </g>
+
+    <g transform="translate(225,205)">
+      <circle cx="38" cy="38" r="30" fill="#fee2e2" stroke="#fca5a5" stroke-width="3"/>
+      <path d="M22 22 L54 54 M54 22 L22 54" fill="none" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
+      <text x="88" y="46" class="tiny" fill="#dc2626">幻觉成功</text>
+      <text x="88" y="82" class="tiny" fill="#dc2626">-2.0</text>
+    </g>
+
+    <g transform="translate(72,350)">
+      <rect x="0" y="0" width="236" height="92" rx="18" fill="#f3f4f6" stroke="#d1d5db"/>
+      <text x="118" y="38" text-anchor="middle" class="small">重点压制</text>
+      <text x="118" y="68" text-anchor="middle" class="small">“自我欺骗”</text>
+    </g>
+  </g>
+
+  <!-- right split -->
+  <g transform="translate(860,120)">
+    <rect x="0" y="70" width="260" height="500" rx="28" fill="#ffffff" stroke="#d1d5db" stroke-width="3"/>
+
+    <g transform="translate(30,110)">
+      <rect x="0" y="0" width="200" height="150" rx="18" fill="#fee2e2" stroke="#fca5a5" stroke-width="2"/>
+      <text x="100" y="34" text-anchor="middle" class="label" fill="#991b1b">硬说成功</text>
+      <path d="M35 92 C80 58, 120 58, 165 92" fill="none" stroke="#dc2626" stroke-width="8" marker-end="url(#arrowRed)"/>
+      <path d="M165 108 C120 142, 80 142, 35 108" fill="none" stroke="#dc2626" stroke-width="8" marker-end="url(#arrowRed)"/>
+      <text x="100" y="132" text-anchor="middle" class="small" fill="#991b1b">死循环</text>
+    </g>
+
+    <g transform="translate(30,300)">
+      <rect x="0" y="0" width="200" height="200" rx="18" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+      <text x="100" y="34" text-anchor="middle" class="label" fill="#065f46">先承认失败</text>
+      <circle cx="58" cy="98" r="24" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+      <path d="M47 98 L57 108 L71 88" fill="none" stroke="#059669" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="104" y="74" width="58" height="46" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+      <path d="M118 97 L148 97" stroke="#059669" stroke-width="6" marker-end="url(#arrowGreen)"/>
+      <text x="100" y="162" text-anchor="middle" class="small" fill="#065f46">再恢复</text>
+    </g>
+  </g>
+
+  <!-- arrows -->
+  <path d="M332 360 L395 360" stroke="#4b5563" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M792 360 L845 360" stroke="#4b5563" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- bottom note -->
+  <text x="600" y="665" text-anchor="middle" class="small">离线训练的关键：重罚“明明没变，却说成功”</text>
+</svg>

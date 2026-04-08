@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-08",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 465,
+  "selected_count": 3,
+  "focus_titles": [
+    "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces",
+    "Don't Act Blindly: Robust GUI Automation via Action-Effect Verification and Self-Correction",
+    "Stop Fixating on Prompts: Reasoning Hijacking and Constraint Tightening for Red-Teaming LLM Agents"
+  ],
+  "knowledge_topic": "Harness（脚手架）是什么",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-08/paper_broadcast_script.txt"
+}

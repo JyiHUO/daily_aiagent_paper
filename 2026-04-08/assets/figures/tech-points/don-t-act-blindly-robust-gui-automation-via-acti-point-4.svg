@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <style>
+      .title{font:700 28px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill:#111827}
+      .sub{font:600 16px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill:#374151}
+      .label{font:700 18px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill:#111827}
+      .small{font:600 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill:#4b5563}
+      .num{font:700 30px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    </style>
+  </defs>
+
+  <rect width="960" height="600" fill="#ffffff"/>
+
+  <text x="480" y="52" text-anchor="middle" class="title">评测更看恢复，不只看终局成功</text>
+
+  <rect x="40" y="95" rx="22" ry="22" width="400" height="450" fill="#fff7f7" stroke="#fecaca" stroke-width="2"/>
+  <rect x="520" y="95" rx="22" ry="22" width="400" height="450" fill="#f5fffb" stroke="#a7f3d0" stroke-width="2"/>
+
+  <text x="240" y="135" text-anchor="middle" class="label" fill="#b91c1c">只看 Success Rate</text>
+  <text x="720" y="135" text-anchor="middle" class="label" fill="#047857">加入鲁棒性评测</text>
+
+  <rect x="100" y="175" rx="16" ry="16" width="280" height="82" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+  <text x="240" y="225" text-anchor="middle" class="sub">任务最终成没成？</text>
+
+  <rect x="580" y="175" rx="16" ry="16" width="280" height="82" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+  <text x="720" y="225" text-anchor="middle" class="sub">中途注入失败</text>
+
+  <rect x="95" y="305" rx="18" ry="18" width="290" height="170" fill="#fff" stroke="#fca5a5" stroke-width="2"/>
+  <rect x="620" y="305" rx="18" ry="18" width="240" height="68" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+  <rect x="620" y="397" rx="18" ry="18" width="240" height="68" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+
+  <rect x="125" y="338" rx="12" ry="12" width="68" height="48" fill="#fee2e2" stroke="#f87171"/>
+  <rect x="208" y="338" rx="12" ry="12" width="68" height="48" fill="#fee2e2" stroke="#f87171"/>
+  <rect x="291" y="338" rx="12" ry="12" width="68" height="48" fill="#fee2e2" stroke="#f87171"/>
+
+  <text x="159" y="369" text-anchor="middle" class="small" fill="#b91c1c">点错</text>
+  <text x="242" y="369" text-anchor="middle" class="small" fill="#b91c1c">再点</text>
+  <text x="325" y="369" text-anchor="middle" class="small" fill="#b91c1c">还点</text>
+
+  <path d="M193 362 L208 362" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <path d="M276 362 L291 362" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <path d="M325 390 C345 420, 220 450, 145 408" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#arrowRed)"/>
+
+  <text x="240" y="444" text-anchor="middle" class="label" fill="#dc2626">Loop Rate</text>
+
+  <text x="740" y="347" text-anchor="middle" class="label" fill="#047857">识别没生效</text>
+  <text x="740" y="439" text-anchor="middle" class="label" fill="#047857">改用备选动作</text>
+
+  <path d="M720 257 L720 305" stroke="#059669" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <path d="M720 373 L720 397" stroke="#059669" stroke-width="4" marker-end="url(#arrowGreen)"/>
+
+  <text x="740" y="515" text-anchor="middle" class="label" fill="#059669">Recovery Success Rate</text>
+
+  <path d="M440 320 L510 320" stroke="#9ca3af" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M440 390 L510 390" stroke="#9ca3af" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="480" y="302" text-anchor="middle" class="small">看不到卡死</text>
+  <text x="480" y="372" text-anchor="middle" class="small">看得到自救</text>
+
+  <text x="155" y="575" class="num" fill="#dc2626">15.6%</text>
+  <text x="207" y="575" class="small">7B 循环率</text>
+
+  <text x="664" y="575" class="num" fill="#059669">52.5%</text>
+  <text x="748" y="575" class="small">7B 恢复成功率</text>
+</svg>
