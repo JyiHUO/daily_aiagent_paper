@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="720" fill="#F8FAFC"/>
+
+  <text x="600" y="56" text-anchor="middle" font-size="28" font-weight="700" fill="#0F172A">低信噪比 → 模板化推理塌缩</text>
+
+  <!-- Left: weak task signal -->
+  <rect x="60" y="120" width="300" height="420" rx="24" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="210" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#0F172A">任务信号</text>
+  <text x="210" y="190" text-anchor="middle" font-size="18" fill="#475569">reward variance 低</text>
+
+  <line x1="130" y1="470" x2="130" y2="240" stroke="#94A3B8" stroke-width="3"/>
+  <line x1="130" y1="470" x2="305" y2="470" stroke="#94A3B8" stroke-width="3"/>
+
+  <path d="M155 445 L175 442 L195 444 L215 441 L235 443 L255 442 L275 444" fill="none" stroke="#2563EB" stroke-width="5" stroke-linecap="round"/>
+  <text x="220" y="510" text-anchor="middle" font-size="18" fill="#2563EB">优势≈0</text>
+
+  <!-- Middle: regularizers dominate -->
+  <rect x="450" y="120" width="300" height="420" rx="24" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="600" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#0F172A">输入无关正则</text>
+  <text x="600" y="190" text-anchor="middle" font-size="18" fill="#475569">KL / Entropy</text>
+
+  <line x1="520" y1="470" x2="520" y2="240" stroke="#94A3B8" stroke-width="3"/>
+  <line x1="520" y1="470" x2="695" y2="470" stroke="#94A3B8" stroke-width="3"/>
+
+  <path d="M545 430 L565 400 L585 370 L605 340 L625 310 L645 280 L665 250" fill="none" stroke="#DC2626" stroke-width="7" stroke-linecap="round"/>
+  <text x="610" y="510" text-anchor="middle" font-size="18" fill="#DC2626">梯度持续存在</text>
+
+  <!-- Right: collapse result -->
+  <rect x="840" y="120" width="300" height="420" rx="24" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="990" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#9A3412">结果</text>
+  <text x="990" y="190" text-anchor="middle" font-size="18" fill="#7C2D12">不同输入，同一套路</text>
+
+  <!-- input cards -->
+  <rect x="875" y="245" width="90" height="58" rx="12" fill="#DBEAFE" stroke="#93C5FD"/>
+  <text x="920" y="280" text-anchor="middle" font-size="18" font-weight="700" fill="#1D4ED8">输入 A</text>
+
+  <rect x="875" y="355" width="90" height="58" rx="12" fill="#DCFCE7" stroke="#86EFAC"/>
+  <text x="920" y="390" text-anchor="middle" font-size="18" font-weight="700" fill="#15803D">输入 B</text>
+
+  <!-- same template outputs -->
+  <rect x="1010" y="232" width="95" height="32" rx="10" fill="#FEF3C7" stroke="#FCD34D"/>
+  <rect x="1010" y="272" width="95" height="32" rx="10" fill="#FEF3C7" stroke="#FCD34D"/>
+  <rect x="1010" y="342" width="95" height="32" rx="10" fill="#FEF3C7" stroke="#FCD34D"/>
+  <rect x="1010" y="382" width="95" height="32" rx="10" fill="#FEF3C7" stroke="#FCD34D"/>
+  <text x="1057" y="253" text-anchor="middle" font-size="16" fill="#92400E">模板</text>
+  <text x="1057" y="293" text-anchor="middle" font-size="16" fill="#92400E">模板</text>
+  <text x="1057" y="363" text-anchor="middle" font-size="16" fill="#92400E">模板</text>
+  <text x="1057" y="403" text-anchor="middle" font-size="16" fill="#92400E">模板</text>
+
+  <line x1="965" y1="274" x2="1005" y2="268" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="965" y1="384" x2="1005" y2="388" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- main arrows -->
+  <line x1="360" y1="330" x2="440" y2="330" stroke="#2563EB" stroke-width="6" marker-end="url(#arrowBlue)"/>
+  <line x1="750" y1="330" x2="830" y2="330" stroke="#DC2626" stroke-width="6" marker-end="url(#arrowRed)"/>
+
+  <!-- bottom summary -->
+  <rect x="170" y="590" width="860" height="82" rx="20" fill="#E2E8F0" stroke="#CBD5E1"/>
+  <text x="600" y="625" text-anchor="middle" font-size="24" font-weight="700" fill="#0F172A">有用信号太弱，背景约束太强</text>
+  <text x="600" y="652" text-anchor="middle" font-size="19" fill="#475569">模型学会“写得像推理”，却不再随输入改变推理</text>
+</svg>

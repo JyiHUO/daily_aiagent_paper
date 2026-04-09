@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/>
+    </marker>
+    <style>
+      .title{font:700 28px sans-serif; fill:#111827}
+      .sub{font:500 15px sans-serif; fill:#6b7280}
+      .label{font:700 18px sans-serif; fill:#111827}
+      .small{font:600 15px sans-serif; fill:#374151}
+      .tiny{font:600 13px sans-serif; fill:#6b7280}
+      .box{fill:#ffffff; stroke:#cbd5e1; stroke-width:2}
+      .soft{fill:#f8fafc; stroke:#cbd5e1; stroke-width:2}
+      .accent{fill:#eff6ff; stroke:#60a5fa; stroke-width:2.5}
+      .warn{fill:#fff7ed; stroke:#fb923c; stroke-width:2.5}
+      .danger{fill:#fef2f2; stroke:#f87171; stroke-width:2.5}
+      .pill{fill:#e5e7eb; stroke:none}
+      .dash{stroke:#9ca3af; stroke-width:2.5; stroke-dasharray:7 7; fill:none}
+      .flow{stroke:#4b5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .flowRed{stroke:#c2410c; stroke-width:3.5; fill:none; marker-end:url(#arrowRed)}
+    </style>
+  </defs>
+
+  <rect width="980" height="620" fill="#ffffff"/>
+
+  <text x="54" y="58" class="title">SkillTrojan：把恶意载荷拆碎，运行时再拼回</text>
+  <text x="54" y="85" class="sub">单个技能看起来正常，整条链路才露出隐藏动作</text>
+
+  <rect x="50" y="120" rx="22" ry="22" width="880" height="430" class="soft"/>
+
+  <!-- Left: normal-looking skills -->
+  <rect x="90" y="185" rx="18" ry="18" width="180" height="92" class="accent"/>
+  <text x="180" y="220" text-anchor="middle" class="label">技能 A</text>
+  <text x="180" y="248" text-anchor="middle" class="small">片段 1</text>
+
+  <rect x="90" y="305" rx="18" ry="18" width="180" height="92" class="accent"/>
+  <text x="180" y="340" text-anchor="middle" class="label">技能 B</text>
+  <text x="180" y="368" text-anchor="middle" class="small">片段 2</text>
+
+  <rect x="90" y="425" rx="18" ry="18" width="180" height="92" class="accent"/>
+  <text x="180" y="460" text-anchor="middle" class="label">技能 C</text>
+  <text x="180" y="488" text-anchor="middle" class="small">片段 3</text>
+
+  <!-- Middle transient channel -->
+  <rect x="355" y="165" rx="20" ry="20" width="240" height="370" class="warn"/>
+  <text x="475" y="205" text-anchor="middle" class="label">单次运行通道</text>
+  <text x="475" y="232" text-anchor="middle" class="tiny">工具输出 / 轨迹日志</text>
+
+  <rect x="410" y="270" rx="14" ry="14" width="40" height="40" class="pill"/>
+  <text x="430" y="296" text-anchor="middle" class="small">1</text>
+
+  <rect x="455" y="330" rx="14" ry="14" width="40" height="40" class="pill"/>
+  <text x="475" y="356" text-anchor="middle" class="small">2</text>
+
+  <rect x="500" y="390" rx="14" ry="14" width="40" height="40" class="pill"/>
+  <text x="520" y="416" text-anchor="middle" class="small">3</text>
+
+  <path d="M 270 231 C 315 231, 320 231, 355 285" class="flow"/>
+  <path d="M 270 351 C 320 351, 325 351, 455 351" class="flow"/>
+  <path d="M 270 471 C 315 471, 330 471, 500 410" class="flow"/>
+
+  <!-- Right validator -->
+  <rect x="690" y="225" rx="20" ry="20" width="180" height="120" class="danger"/>
+  <text x="780" y="266" text-anchor="middle" class="label">验证器</text>
+  <text x="780" y="295" text-anchor="middle" class="small">收齐 → 重组 → 解密</text>
+
+  <path d="M 595 350 C 635 350, 650 300, 690 285" class="flowRed"/>
+
+  <!-- Payload -->
+  <rect x="690" y="390" rx="20" ry="20" width="180" height="95" class="danger"/>
+  <text x="780" y="428" text-anchor="middle" class="label">隐藏载荷</text>
+  <text x="780" y="455" text-anchor="middle" class="small">被执行</text>
+
+  <path d="M 780 345 L 780 390" class="flowRed"/>
+
+  <!-- Contrast note -->
+  <path d="M 315 145 L 875 145" class="dash"/>
+  <text x="120" y="152" class="tiny">平时：碎片分散，不显眼</text>
+  <text x="700" y="152" class="tiny">触发时：才拼成完整指令</text>
+</svg>

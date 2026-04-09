@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 30px Arial,Helvetica,sans-serif; fill:#111827}
+      .label{font:700 20px Arial,Helvetica,sans-serif; fill:#111827}
+      .small{font:600 16px Arial,Helvetica,sans-serif; fill:#374151}
+      .tiny{font:600 14px Arial,Helvetica,sans-serif; fill:#6b7280}
+      .card{fill:#ffffff; stroke:#d1d5db; stroke-width:2; rx:22}
+      .soft{fill:#f9fafb; stroke:#e5e7eb; stroke-width:2; rx:18}
+      .good{fill:#e8fff2; stroke:#22c55e; stroke-width:2}
+      .bad{fill:#fff1f2; stroke:#f43f5e; stroke-width:2}
+      .barLow{fill:#cbd5e1}
+      .barHi{fill:#10b981}
+      .barDrop{fill:#fda4af}
+      .arrow{stroke:#4b5563; stroke-width:4; fill:none; marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f3f4f6"/>
+
+  <text x="70" y="70" class="title">SNR-Aware Filtering</text>
+  <text x="70" y="105" class="small">只用高信号 prompt 更新</text>
+
+  <!-- Module 1 -->
+  <g filter="url(#shadow)">
+    <rect x="55" y="145" width="295" height="465" class="card"/>
+  </g>
+  <text x="95" y="190" class="label">采样一批 prompt</text>
+
+  <!-- prompt groups -->
+  <g transform="translate(90,225)">
+    <rect x="0" y="0" width="220" height="88" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="18" y="28" class="small">A</text>
+    <circle cx="55" cy="56" r="11" fill="#94a3b8"/><circle cx="95" cy="56" r="11" fill="#94a3b8"/><circle cx="135" cy="56" r="11" fill="#94a3b8"/><circle cx="175" cy="56" r="11" fill="#94a3b8"/>
+    <text x="230" y="54" class="tiny">16 rollouts</text>
+
+    <rect x="0" y="118" width="220" height="88" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="18" y="146" class="small">B</text>
+    <circle cx="55" cy="174" r="11" fill="#94a3b8"/><circle cx="95" cy="174" r="11" fill="#94a3b8"/><circle cx="135" cy="174" r="11" fill="#94a3b8"/><circle cx="175" cy="174" r="11" fill="#94a3b8"/>
+
+    <rect x="0" y="236" width="220" height="88" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="18" y="264" class="small">C</text>
+    <circle cx="55" cy="292" r="11" fill="#94a3b8"/><circle cx="95" cy="292" r="11" fill="#94a3b8"/><circle cx="135" cy="292" r="11" fill="#94a3b8"/><circle cx="175" cy="292" r="11" fill="#94a3b8"/>
+  </g>
+
+  <!-- Module 2 -->
+  <g filter="url(#shadow)">
+    <rect x="405" y="145" width="325" height="465" class="card"/>
+  </g>
+  <text x="460" y="190" class="label">按 reward variance 排序</text>
+
+  <g transform="translate(445,240)">
+    <text x="0" y="18" class="tiny">信号弱</text>
+    <text x="220" y="18" class="tiny">信号强</text>
+
+    <rect x="0" y="45" width="210" height="48" rx="12" class="soft"/>
+    <text x="16" y="75" class="small">C</text>
+    <rect x="52" y="58" width="52" height="20" rx="8" class="barLow"/>
+
+    <rect x="0" y="125" width="210" height="48" rx="12" class="soft"/>
+    <text x="16" y="155" class="small">A</text>
+    <rect x="52" y="138" width="118" height="20" rx="8" class="barHi"/>
+
+    <rect x="0" y="205" width="210" height="48" rx="12" class="soft"/>
+    <text x="16" y="235" class="small">B</text>
+    <rect x="52" y="218" width="148" height="20" rx="8" class="barHi"/>
+
+    <path d="M 240 60 L 240 250" stroke="#9ca3af" stroke-width="2" stroke-dasharray="8 8"/>
+    <path d="M 228 118 L 252 118" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+    <text x="262" y="124" class="small">top-p 阈值</text>
+  </g>
+
+  <!-- Module 3 -->
+  <g filter="url(#shadow)">
+    <rect x="785" y="145" width="360" height="465" class="card"/>
+  </g>
+  <text x="835" y="190" class="label">更新前先过滤</text>
+
+  <!-- kept -->
+  <g transform="translate(825,240)">
+    <rect x="0" y="0" width="280" height="120" rx="18" class="good"/>
+    <text x="22" y="32" class="small" fill="#166534">保留：高 variance</text>
+    <rect x="20" y="52" width="240" height="18" rx="9" fill="#22c55e" opacity="0.22"/>
+    <rect x="20" y="82" width="210" height="18" rx="9" fill="#22c55e" opacity="0.22"/>
+    <text x="28" y="67" class="tiny">A</text>
+    <text x="28" y="97" class="tiny">B</text>
+  </g>
+
+  <!-- dropped -->
+  <g transform="translate(825,395)">
+    <rect x="0" y="0" width="280" height="95" rx="18" class="bad"/>
+    <text x="22" y="32" class="small" fill="#9f1239">丢弃：低 variance</text>
+    <rect x="20" y="52" width="88" height="18" rx="9" class="barDrop" opacity="0.6"/>
+    <text x="28" y="67" class="tiny">C</text>
+  </g>
+
+  <!-- update -->
+  <g transform="translate(850,535)">
+    <rect x="70" y="0" width="160" height="46" rx="16" fill="#111827"/>
+    <text x="112" y="30" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" fill="#ffffff">参数更新</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M 350 378 L 390 378" class="arrow"/>
+  <path d="M 730 378 L 770 378" class="arrow"/>
+  <path d="M 965 490 L 965 530" class="arrow"/>
+
+  <!-- side note bubble -->
+  <g transform="translate(420,615)">
+    <rect x="0" y="0" width="360" height="58" rx="20" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+    <text x="26" y="37" class="small" fill="#3730a3">top-p：低信号多时，就少学一点</text>
+  </g>
+</svg>

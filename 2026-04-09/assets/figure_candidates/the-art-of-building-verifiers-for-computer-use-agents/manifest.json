@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/the-art-of-building-verifiers-for-computer-use-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents",
+  "candidates": [
+    {
+      "id": "page-13-block-2",
+      "page_index": 13,
+      "caption": "Figure 3: A snapshot for the same example of how an individual criterion was scored, in this case, the model lost a point because it transcribed ”Cardon” incorrectly as ”Caron” in its action history based on multi-modal evidence. These kinds of meticulous analysis helps us detect hallucinations that otherwise would slip through.",
+      "clip": [
+        86.0,
+        63.86260986328125,
+        526.0093688964844,
+        370.7760009765625
+      ],
+      "clip_area": 135044.76752963476,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "image_block_with_caption",
+      "score": 19.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/01-p14-image_block_with_caption.png",
+      "filename": "01-p14-image_block_with_caption.png"
+    },
+    {
+      "id": "page-13-embedded-0-0",
+      "page_index": 13,
+      "caption": "Figure 3: A snapshot for the same example of how an individual criterion was scored, in this case, the model lost a point because it transcribed ”Cardon” incorrectly as ”Caron” in its action history based on multi-modal evidence. These kinds of meticulous analysis helps us detect hallucinations that otherwise would slip through.",
+      "clip": [
+        96.0,
+        69.86260986328125,
+        516.0093688964844,
+        364.7760009765625
+      ],
+      "clip_area": 123866.38728061132,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 601,
+      "score": 18.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/02-p14-embedded_image_with_caption.png",
+      "filename": "02-p14-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-16-block-4",
+      "page_index": 16,
+      "caption": "Figure 6: An example relevance matrix where 13 screenshots were scored against five criteria in the rubric for the task “find the best men’s face wash according to GQ or Men’s Health, then buy it on Amazon”",
+      "clip": [
+        86.0,
+        215.93380737304688,
+        526.0079040527344,
+        417.1990051269531
+      ],
+      "clip_area": 88558.27782245539,
+      "page_area": 484704.0,
+      "text_density": 0.02290155861783203,
+      "kind": "image_block_with_caption",
+      "score": 7.983980864693949,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/03-p17-image_block_with_caption.png",
+      "filename": "03-p17-image_block_with_caption.png"
+    },
+    {
+      "id": "page-16-embedded-0-0",
+      "page_index": 16,
+      "caption": "Figure 6: An example relevance matrix where 13 screenshots were scored against five criteria in the rubric for the task “find the best men’s face wash according to GQ or Men’s Health, then buy it on Amazon”",
+      "clip": [
+        96.0,
+        221.93380737304688,
+        516.0079040527344,
+        411.1990051269531
+      ],
+      "clip_area": 79492.87901874445,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 605,
+      "score": 6.883254211319382,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/04-p17-embedded_image_with_caption.png",
+      "filename": "04-p17-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        97.19300079345703,
+        477.28021240234375,
+        513.3220520019531,
+        656.0910034179688
+      ],
+      "clip_area": 74408.36481117271,
+      "page_area": 484704.0,
+      "text_density": 0.22889615305764022,
+      "kind": "drawing_cluster",
+      "score": 5.892990425554617,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/05-p1-drawing_cluster.png",
+      "filename": "05-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-17-embedded-0-0",
+      "page_index": 17,
+      "caption": "第 18 页内嵌图片候选",
+      "clip": [
+        96.0,
+        69.86164855957031,
+        515.9990539550781,
+        330.85400390625
+      ],
+      "clip_area": 109616.54233511304,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 606,
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/06-p18-embedded_image.png",
+      "filename": "06-p18-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/contact-sheet.svg"
+}

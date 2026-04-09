@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-09",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 468,
+  "selected_count": 3,
+  "focus_titles": [
+    "RAGEN-2: Reasoning Collapse in Agentic RL",
+    "The Art of Building Verifiers for Computer Use Agents",
+    "SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems"
+  ],
+  "knowledge_topic": "Trajectory Evaluation 是什么",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/paper_broadcast_script.txt"
+}

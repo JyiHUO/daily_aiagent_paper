@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/skilltrojan-backdoor-attacks-on-skill-based-agent-systems.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-48",
+      "page_index": 0,
+      "caption": "Figure 1. Skill-based agent execution model. Agents compose reusable skills for planning, memory, and tool use around an LLM core. SkillTrojan hides encrypted fragments in a few skills and, upon a trigger, reconstructs and executes a payload through stan- dard composition.",
+      "clip": [
+        228.95944213867188,
+        170.5547332763672,
+        604.0,
+        439.4535827636719
+      ],
+      "clip_area": 100847.97451998806,
+      "page_area": 484704.0,
+      "text_density": 0.20669560837045797,
+      "kind": "drawing_cluster_with_caption",
+      "score": 58.51879654799462,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-14",
+      "page_index": 7,
+      "caption": "Figure 4. Coverage of SkillTrojanX. We report the distribution of backdoored variants across template categories and payload families.",
+      "clip": [
+        37.439998626708984,
+        201.0601348876953,
+        307.4416198730469,
+        352.093994140625
+      ],
+      "clip_area": 40779.38686138223,
+      "page_area": 484704.0,
+      "text_density": 0.17165730803783122,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.953665816189933,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/02-p8-drawing_cluster_with_caption.png",
+      "filename": "02-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-block-27",
+      "page_index": 10,
+      "caption": "C. SkillTrojan: Algorithmic Pipeline",
+      "clip": [
+        24.839998626708983,
+        385.21214599609374,
+        272.3020416259766,
+        694.0121459960938
+      ],
+      "clip_area": 76416.27887817383,
+      "page_area": 484704.0,
+      "text_density": 0.5953980534089464,
+      "kind": "captioned_figure",
+      "score": 12.849069765313043,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/03-p11-captioned_figure.png",
+      "filename": "03-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-14",
+      "page_index": 7,
+      "caption": "Figure 4. Coverage of SkillTrojanX. We report the distribution of backdoored variants across template categories and payload families.",
+      "clip": [
+        24.293001556396483,
+        26.442279052734364,
+        320.04436645507815,
+        335.2422790527344
+      ],
+      "clip_area": 91328.02148071291,
+      "page_area": 484704.0,
+      "text_density": 0.264732493827288,
+      "kind": "captioned_figure",
+      "score": 11.930806164592866,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/04-p8-captioned_figure.png",
+      "filename": "04-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-20",
+      "page_index": 6,
+      "caption": "Figure 3. Tool-call count distribution on EHR SQL for clean and triggered queries. Triggered executions require additional calls for fragment collection and verification, but remain close to the normal operating regime.",
+      "clip": [
+        289.44000244140625,
+        51.05963897705078,
+        559.4413452148438,
+        183.85498046875
+      ],
+      "clip_area": 35854.92051681597,
+      "page_area": 484704.0,
+      "text_density": 0.1809199365355897,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.343191813607021,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/05-p7-drawing_cluster_with_caption.png",
+      "filename": "05-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        230.95944213867188,
+        172.5547332763672,
+        604.0,
+        437.4535827636719
+      ],
+      "clip_area": 98818.01458956813,
+      "page_area": 484704.0,
+      "text_density": 0.20096398871178925,
+      "kind": "drawing_cluster",
+      "score": 7.840138617176736,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/06-p1-drawing_cluster.png",
+      "filename": "06-p1-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/contact-sheet.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "trend_overview": [
+    "今天初筛最明显的信号不是“Agent 更多了”，而是研究重心正在从能力演示转向可靠性基础设施：高分论文集中讨论 verifier、benchmark、trajectory guardrail 和安全模型，说明社区开始把“能做”与“能被可信判断地做对”明确分开。",
+    "computer-use 与 GUI Agent 明显升温，而且研究焦点已从单纯 screen-to-action 迁移到 UI-in-the-loop、移动端诊断基准和任务完成验证，这意味着界面型 Agent 正在进入更贴近真实产品约束的阶段，而不是停留在 demo 级操作能力。",
+    "安全方向出现了从单点防御转向系统攻击面的趋势：提示注入、防御 wrapper 失效、技能层后门、多步工具轨迹护栏一起升高，说明 Agent 风险已不再只是单轮 prompt 问题，而是跨工具、跨模块、跨执行链的组合性脆弱。",
+    "规划与训练研究则更偏向“能力上限和失稳机制”而非单纯提分：无论是 latent planning 的深度天花板，还是 agentic RL 中的 reasoning collapse，都在提醒大家长程 Agent 的瓶颈越来越像系统性约束，而不是再堆一点数据或技巧就能解决。"
+  ],
+  "knowledge_point": {
+    "topic": "Trajectory Evaluation 是什么",
+    "content": "Trajectory Evaluation 指的是按整条执行轨迹来评估 Agent，而不是只看最后答案对不对。它会把任务过程拆成一连串状态、动作、工具调用、环境反馈和中间决策，检查 Agent 是否在每一步都走得合理、可恢复、可解释。之所以今天特别值得懂，是因为很多前沿 Agent 论文已经不再满足于“结果分”，而是要区分模型究竟是看错了界面、计划错了步骤、调用错了工具，还是被外部内容诱导偏航。在实际 Agent 系统里，轨迹级评估通常扮演三种角色：做 benchmark 时定位失败来源，做 verifier 时判断任务是否真的完成，做训练与安全监控时为奖励、过滤和护栏提供更细粒度信号。",
+    "why_today": "今天的精读和高分论文反复落在 verifier、multi-step tool-calling、computer-use 完成判定与 reasoning collapse 诊断上，这些问题都不能只靠最终结果评估。理解 trajectory evaluation，才能看懂为什么 Agent 研究正在从“答案评测”转向“过程评测”。"
+  },
+  "closing_summary": [
+    "今天的论文分布说明，Agent 研究正在进入一个更工程化也更严肃的阶段：真正的前沿不只是让模型多会一点，而是让系统知道自己何时做对、为何做错、哪里会失控。",
+    "从 computer-use verifier 到多步轨迹安全，再到 agentic RL 的推理塌缩，大家其实在回答同一个问题：长链条 Agent 如何获得可诊断、可监督、可部署的运行机制。",
+    "如果说前一阶段比的是“Agent 能不能做事”，那这一阶段开始比的是“Agent 能不能在复杂环境里稳定、可信地把事做成”。"
+  ]
+}

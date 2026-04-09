@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/ragen-2-reasoning-collapse-in-agentic-rl.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl",
+  "candidates": [
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1 | Left: input-driven reasoning adapts to the current state; templated reasoning produces nearly identical responses across different inputs. Right: four reasoning regimes characterized along two axes: conditional entropy 𝐻 ( 𝑍 | 𝑋 ) (within-input diversity) and mutual information 𝐼 ( 𝑋 ; 𝑍 ) (input dependence). Details in Section 2 .",
+      "clip": [
+        58.865997314453125,
+        73.04122924804688,
+        536.4078979492188,
+        283.822998046875
+      ],
+      "clip_area": 100657.12649135012,
+      "page_area": 501156.9211820215,
+      "text_density": 0.008452503414231087,
+      "kind": "embedded_image_with_caption",
+      "xref": 787,
+      "score": 36.11841251657056,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/01-p3-embedded_image_with_caption.png",
+      "filename": "01-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Figure 1 | Left: input-driven reasoning adapts to the current state; templated reasoning produces nearly identical responses across different inputs. Right: four reasoning regimes characterized along two axes: conditional entropy 𝐻 ( 𝑍 | 𝑋 ) (within-input diversity) and mutual information 𝐼 ( 𝑋 ; 𝑍 ) (input dependence). Details in Section 2 .",
+      "clip": [
+        48.865997314453125,
+        67.04122924804688,
+        546.4078979492188,
+        289.822998046875
+      ],
+      "clip_area": 110843.26467494387,
+      "page_area": 501156.9211820215,
+      "text_density": 0.032320763085925165,
+      "kind": "image_block_with_caption",
+      "score": 36.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/02-p3-image_block_with_caption.png",
+      "filename": "02-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-block-8",
+      "page_index": 10,
+      "caption": "Figure 7 | Reasoning length decline across eight environments, showing systematic compression as a behavioral signature of template collapse.",
+      "clip": [
+        48.865997314453125,
+        379.6504821777344,
+        546.4161376953125,
+        588.1740112304688
+      ],
+      "clip_area": 103750.9111529002,
+      "page_area": 501156.9211820215,
+      "text_density": 0.05249104308149044,
+      "kind": "image_block_with_caption",
+      "score": 34.15278790169889,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/03-p11-image_block_with_caption.png",
+      "filename": "03-p11-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "Figure 7 | Reasoning length decline across eight environments, showing systematic compression as a behavioral signature of template collapse.",
+      "clip": [
+        58.865997314453125,
+        385.6504821777344,
+        536.4161376953125,
+        582.1740112304688
+      ],
+      "clip_area": 93849.8388872752,
+      "page_area": 501156.9211820215,
+      "text_density": 0.009030830470745958,
+      "kind": "embedded_image_with_caption",
+      "xref": 816,
+      "score": 33.04277598763639,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/04-p11-embedded_image_with_caption.png",
+      "filename": "04-p11-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-1-0",
+      "page_index": 15,
+      "caption": "Figure 11 | Prompt-level reward distribution across training phases, showing RV collapse as prompts shift toward uniform reward structures.",
+      "clip": [
+        58.865997314453125,
+        216.5706329345703,
+        536.40625,
+        447.125
+      ],
+      "clip_area": 110098.99070618162,
+      "page_area": 501156.9211820215,
+      "text_density": 0.049665057721380496,
+      "kind": "embedded_image_with_caption",
+      "xref": 821,
+      "score": 21.223322118957572,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/05-p16-embedded_image_with_caption.png",
+      "filename": "05-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-block-3",
+      "page_index": 15,
+      "caption": "Figure 11 | Prompt-level reward distribution across training phases, showing RV collapse as prompts shift toward uniform reward structures.",
+      "clip": [
+        48.865997314453125,
+        210.5706329345703,
+        546.40625,
+        453.125
+      ],
+      "clip_area": 120680.56107971678,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09042310204454085,
+      "kind": "image_block_with_caption",
+      "score": 20.374613877327548,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/06-p16-image_block_with_caption.png",
+      "filename": "06-p16-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/contact-sheet.svg"
+}

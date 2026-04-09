@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .title{font:700 34px sans-serif; fill:#111827}
+      .sub{font:500 18px sans-serif; fill:#4b5563}
+      .label{font:700 20px sans-serif; fill:#111827}
+      .small{font:600 17px sans-serif; fill:#374151}
+      .tiny{font:600 15px sans-serif; fill:#6b7280}
+      .panel{fill:#f8fafc; stroke:#cbd5e1; stroke-width:2}
+      .box{fill:#ffffff; stroke:#94a3b8; stroke-width:2}
+      .core{fill:#e0f2fe; stroke:#0284c7; stroke-width:2.5}
+      .skill{fill:#ecfccb; stroke:#65a30d; stroke-width:2.5}
+      .bad{fill:#fee2e2; stroke:#dc2626; stroke-width:2.5}
+      .payload{fill:#fff7ed; stroke:#ea580c; stroke-width:2.5}
+      .arrow{stroke:#4b5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .arrowRed{stroke:#dc2626; stroke-width:3.5; fill:none; marker-end:url(#arrowRed)}
+      .dash{stroke-dasharray:8 7}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#ffffff"/>
+
+  <text x="60" y="70" class="title">SkillTrojan：攻击面转到技能层</text>
+  <text x="60" y="105" class="sub">模型没被污染，插件式技能也能藏后门</text>
+
+  <!-- Left panel -->
+  <rect x="50" y="145" rx="24" ry="24" width="500" height="500" class="panel"/>
+  <text x="80" y="185" class="label">平时：看起来正常</text>
+
+  <rect x="95" y="250" rx="18" ry="18" width="150" height="110" class="core"/>
+  <text x="170" y="315" text-anchor="middle" class="label">Agent / LLM</text>
+
+  <rect x="320" y="185" rx="16" ry="16" width="170" height="88" class="skill"/>
+  <text x="405" y="238" text-anchor="middle" class="label">技能 A</text>
+
+  <rect x="320" y="305" rx="16" ry="16" width="170" height="88" class="skill"/>
+  <text x="405" y="358" text-anchor="middle" class="label">技能 B</text>
+
+  <rect x="320" y="425" rx="16" ry="16" width="170" height="88" class="skill"/>
+  <text x="405" y="478" text-anchor="middle" class="label">技能 C</text>
+
+  <path d="M245 305 C275 255, 285 240, 320 230" class="arrow"/>
+  <path d="M245 305 C285 305, 290 345, 320 349" class="arrow"/>
+  <path d="M245 305 C280 365, 290 455, 320 469" class="arrow"/>
+
+  <text x="112" y="575" class="small">答案正常</text>
+  <circle cx="95" cy="569" r="10" fill="#16a34a"/>
+  <path d="M90 569 L94 573 L101 564" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right panel -->
+  <rect x="650" y="145" rx="24" ry="24" width="500" height="500" class="panel"/>
+  <text x="680" y="185" class="label">触发后：技能里拼出恶意载荷</text>
+
+  <rect x="695" y="250" rx="18" ry="18" width="150" height="110" class="core"/>
+  <text x="770" y="315" text-anchor="middle" class="label">Agent / LLM</text>
+
+  <rect x="920" y="185" rx="16" ry="16" width="170" height="88" class="bad"/>
+  <text x="1005" y="222" text-anchor="middle" class="label">技能 A</text>
+  <text x="1005" y="248" text-anchor="middle" class="tiny">碎片 ①</text>
+
+  <rect x="920" y="305" rx="16" ry="16" width="170" height="88" class="bad"/>
+  <text x="1005" y="342" text-anchor="middle" class="label">技能 B</text>
+  <text x="1005" y="368" text-anchor="middle" class="tiny">碎片 ②</text>
+
+  <rect x="920" y="425" rx="16" ry="16" width="170" height="88" class="bad"/>
+  <text x="1005" y="462" text-anchor="middle" class="label">技能 C</text>
+  <text x="1005" y="488" text-anchor="middle" class="tiny">触发 / 执行</text>
+
+  <path d="M845 305 C875 255, 885 240, 920 230" class="arrow"/>
+  <path d="M845 305 C885 305, 890 345, 920 349" class="arrow"/>
+  <path d="M845 305 C880 365, 890 455, 920 469" class="arrow"/>
+
+  <rect x="785" y="535" rx="16" ry="16" width="230" height="60" class="payload"/>
+  <text x="900" y="573" text-anchor="middle" class="label">隐藏载荷</text>
+
+  <path d="M1005 273 C1060 330, 1060 470, 1015 535" class="arrowRed dash"/>
+  <path d="M1005 393 C1040 430, 1035 495, 985 535" class="arrowRed dash"/>
+  <path d="M1005 513 C1000 528, 985 535, 970 535" class="arrowRed dash"/>
+
+  <text x="710" y="575" class="small">表面仍正常</text>
+  <circle cx="692" cy="569" r="10" fill="#16a34a"/>
+  <path d="M687 569 L691 573 L698 564" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- center contrast -->
+  <line x1="600" y1="155" x2="600" y2="635" stroke="#e5e7eb" stroke-width="4"/>
+  <text x="600" y="220" text-anchor="middle" class="small" fill="#dc2626">不是改模型</text>
+
+  <!-- trigger callout -->
+  <path d="M600 360 C640 360, 650 360, 680 360" class="arrowRed"/>
+  <rect x="525" y="330" rx="14" ry="14" width="150" height="56" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+  <text x="600" y="365" text-anchor="middle" class="small" fill="#be123c">触发短语</text>
+</svg>

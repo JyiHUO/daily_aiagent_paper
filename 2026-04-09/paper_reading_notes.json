@@ -1,0 +1,198 @@
+[
+  {
+    "title": "RAGEN-2: Reasoning Collapse in Agentic RL",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/ragen-2-reasoning-collapse-in-agentic-rl.pdf",
+    "analysis": {
+      "pick_reason": "这篇论文直指 Agentic RL 里一个很隐蔽但很关键的问题：模型看起来还能稳定输出推理，甚至熵也不低，但实际上推理已经逐渐不看输入、开始套模板。它不只指出了问题，还给出更可靠的诊断指标 MI proxy，以及一个几乎不增加额外 rollout 成本的训练干预 SNR-Aware Filtering。对做 Agent 训练、评测、上线监控的人都很有现实价值。",
+      "background": "多轮 Agent 的强化学习训练一直很不稳定，业界常用 reward 看结果、用 entropy 看推理过程是否塌缩。但论文指出，entropy 只能看同一输入下输出是否多样，无法判断模型是否真的在根据不同输入调整推理。于是会出现一种更危险的情况：模型表面上话很多、写法也有变化，实际上不同任务都在用差不多的思路模板，这会悄悄伤害 Agent 的真实能力，因此现在很值得重点关注。",
+      "core_points": [
+        {
+          "title": "模板塌缩定义",
+          "technical_detail": "论文提出 'template collapse'：模型在同一输入内仍可能保持较高的推理多样性，也就是条件熵 H(Z|X) 不低，但跨输入的区分能力 I(X;Z) 下降，推理逐渐变得与具体输入无关。作者认为这类失败模式是现有 entropy 和 reward 监控都很难直接发现的。文中把推理状态分成四类，其中最危险的就是 '高熵但低输入依赖' 的模板塌缩。",
+          "plain_explanation": "直觉上，这就像一个 Agent 学会了'像在认真思考的样子'，但不再真正根据眼前任务做判断。你给它不同问题，它都先来一段相似的分析框架，再套一个通用动作流程。因为每次表述略有不同，所以传统多样性指标可能还觉得它'没塌'，但其实已经不再对问题本身敏感。",
+          "example": "比如在网页购物任务里，用户 A 要买 '红色跑鞋'，用户 B 要买 '黑色背包'。发生模板塌缩后，Agent 对两者都先输出类似 '先搜索商品、再比较价格、最后确认约束条件' 的固定推理，再机械点进相似页面。表面看步骤不少、措辞也有变化，但真正依赖输入内容的判断变少了，所以成功率会慢慢掉。"
+        },
+        {
+          "title": "MI 比熵更可靠",
+          "technical_detail": "论文把推理质量拆成两部分：同一输入内的多样性 H(Z|X)，以及跨输入的可区分性 I(X;Z)。为估计后者，作者提出一组 mutual information proxy：把某条 reasoning trace 放到 batch 里所有 prompt 上做 teacher-forced 打分，看它在原始输入上的匹配程度是否明显高于其他输入。文中重点使用 Retrieval-Acc 和 MI-ZScore-EMA，两者与最终任务表现的相关性明显高于 entropy；摘录里给出的 Spearman 相关中，Trajectory MI-ZScore 为 +0.39，而 entropy 指标约为 -0.11 到 -0.14。",
+          "plain_explanation": "这个方法本质上是在问：'看这段推理，能不能猜出它原来是为哪个输入写的？' 如果能猜得出来，说明推理真的和输入绑定；如果放到哪个输入上都差不多成立，那就是模板化了。相比只看输出是否丰富，这种检查更接近我们真正想要的能力：遇到不同环境状态时，Agent 能不能给出不同且贴题的思考过程。",
+          "example": "假设一个 batch 里有 8 个任务，每个任务采样了 16 条推理轨迹。系统拿其中一条来自 'Sokoban 推箱子' 的推理，分别计算它在 8 个输入条件下的似然。如果这条推理在原任务上的分数最高，说明它确实是针对该状态写的；如果在很多输入上得分都差不多，Retrieval-Acc 就会下降，提示模板塌缩正在发生。"
+        },
+        {
+          "title": "塌缩来自低信噪比",
+          "technical_detail": "作者用 SNR 解释模板塌缩的成因：当同一 prompt 下不同轨迹的 reward variance 很低时，优势函数接近 0，任务相关梯度变弱；与此同时，KL 和 entropy regularization 这类与输入内容无关的正则梯度仍持续存在。于是更新方向会被这些输入无关的力量主导，逐渐抹平不同输入之间的推理差异。论文还报告了按 reward variance 分桶后的梯度现象：任务梯度随 reward variance 单调增加，而正则梯度在各桶中基本平坦。",
+          "plain_explanation": "可以把它理解成，训练时真正有用的学习信号太弱，背景噪声却一直很响。模型于是学不到'这个状态该怎么想'，只能学到一些更安全、更统一、更像标准答案格式的写法。久而久之，Agent 就越来越会'写得像推理'，但越来越不会'因为环境不同而改变推理'。",
+          "example": "在 FrozenLake 这种带随机性的环境里，同一个起点采样多次，回报可能差异不大或噪声很重。此时模型很难从这些轨迹里学到'往左还是往右'的真正决策依据，反而更容易被 KL/熵约束推向统一、流畅、但不够因地制宜的 reasoning 模板。论文还指出，在环境噪声极高时，reward variance 作为信号代理本身也会失效，这属于方法边界。"
+        },
+        {
+          "title": "按高信号样本更新",
+          "technical_detail": "为缓解模板塌缩，论文提出 SNR-Aware Filtering：每轮 rollout 后，按每个 prompt 的 reward variance 估计其信号强度，只保留高 variance 的 prompt 参与参数更新。作者主推 top-p 过滤而不是固定 top-k，因为它能根据当下 variance 分布自适应调整保留量。实验覆盖 planning、math、web navigation、code execution 等任务，以及 PPO、DAPO、GRPO、Dr. GRPO、多种模型尺度和模态；表 4 显示平均分大多提升，但也有个别设置出现负增益，说明并非无条件有效。",
+          "plain_explanation": "做法很像训练时先挑'信息量大、能真正教会模型东西'的样本，再拿这些样本更新。那些 reward 几乎没差别的 prompt，继续拿来更新，可能只会把模型往更模板化的方向推。top-p 的好处是，如果这一批大多数 prompt 都没什么信号，它可以干脆少学一点，而不是硬塞固定数量的低质量样本。",
+          "example": "一次训练迭代里，系统对每个 prompt 采 16 条轨迹，先算每组回报方差。若某些 Sokoban 状态下不同尝试的结果差异很大，说明这些 prompt 能提供清晰的区分信号，就优先保留；而那些 16 次尝试几乎全都拿到同样回报的 prompt 被过滤掉。之后只用保留下来的高信号组做梯度更新，论文报告这种方式通常能同时提升 MI 和任务表现。"
+        },
+        {
+          "title": "MI 可做早期预警",
+          "technical_detail": "论文观察到，训练过程中 mutual information 往往先于任务成功率下降，且此时 conditional entropy 还可能维持在较高水平。因此 MI 不只是分析工具，也可以作为在线监控指标，在性能明显下滑前就发出预警。作者还指出格式正确率不能替代这类内容敏感诊断，因为模型可能格式完全合规，但 MI 已经很低。",
+          "plain_explanation": "这意味着，如果你只盯着最终成功率，等发现问题时往往已经晚了；如果只盯着 entropy，甚至可能被'推理还挺丰富'的假象骗过去。MI 更像一个健康体检指标，能提前告诉你：模型虽然还没彻底失分，但它开始不认真看输入了。对线上 Agent 来说，这种预警很有用，因为很多事故不是突然坏掉，而是先慢慢失去针对性。",
+          "example": "比如一个代码 Agent 在前 100 个训练 step 里，单看通过率变化不大，输出长度和格式也都正常。但如果此时 Retrieval-Acc 已经明显下滑，就说明不同编程题的推理轨迹越来越难彼此区分。团队可以据此提前介入，调整过滤策略或训练配置，而不是等到 pass rate 大幅下降后才回头排查。"
+        }
+      ],
+      "agent_implications": {
+        "product": "对 Agent 产品来说，这篇论文最大的启发是：不要把'会写推理过程'等同于'会根据任务推理'。上线监控应增加输入依赖性指标，例如 batch 内 reasoning-to-input 的可检索性或 MI proxy，而不是只看成功率、长度、格式合规率和 entropy。对于复杂工具型 Agent，这能更早发现'看起来正常、实际在套模板'的隐性退化。",
+        "system": "对训练系统来说，可以把 reward variance 视为一个轻量的样本质量信号，在 rollout 后做 prompt 级筛选，只让高信号样本进入更新。系统层面还可以同时记录 MI、reward variance 分布、零方差 prompt 数、过滤后有效 kept ratio 等指标，形成一套面向 Agentic RL 的稳定性面板。论文声称该方法不需要额外模型或额外 rollout，且 RV 计算开销很小，但具体接入成本仍取决于现有训练框架实现细节。",
+        "risk": "主要风险有三类。第一，reward variance 并不总是可靠信号，在高噪声或极稀疏奖励环境中可能失真，论文也明确承认在高随机性设置下过滤优势会收窄。第二，过强过滤可能损失探索覆盖，需要调 keep rate。第三，若模型学会'人为制造方差'来迎合过滤标准，长期训练中可能出现投机行为；此外，论文实验主要是单 Agent，多 Agent 传播效应仍不确定。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1 | Left: input-driven reasoning adapts to the current state; templated reasoning produces nearly identical responses across different inputs. Right: four reasoning regimes characterized along two axes: conditional entropy 𝐻 ( 𝑍 | 𝑋 ) (within-input diversity) and mutual information 𝐼 ( 𝑋 ; 𝑍 ) (input dependence). Details in Section 2 .",
+      "clip": [
+        58.865997314453125,
+        73.04122924804688,
+        536.4078979492188,
+        283.822998046875
+      ],
+      "clip_area": 100657.12649135012,
+      "page_area": 501156.9211820215,
+      "text_density": 0.008452503414231087,
+      "kind": "embedded_image_with_caption",
+      "xref": 787,
+      "score": 36.11841251657056,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/ragen-2-reasoning-collapse-in-agentic-rl/01-p3-embedded_image_with_caption.png",
+      "filename": "01-p3-embedded_image_with_caption.png",
+      "selection_reason": "这张 Figure 1 最适合作为主图。它不是实验曲线，而是论文核心概念总览：左侧直接对比 input-driven reasoning 与 templated reasoning，右侧用 conditional entropy 与 mutual information 两个关键轴把推理状态划分为四个象限，完整呈现了论文要定义、诊断和讨论的 reasoning collapse 框架。相比其他候选图，它更像方法/概念总览图，且裁剪更干净、正文干扰更少，适合日报展示。",
+      "selection_confidence": "high"
+    }
+  },
+  {
+    "title": "The Art of Building Verifiers for Computer Use Agents",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/the-art-of-building-verifiers-for-computer-use-agents.pdf",
+    "analysis": {
+      "pick_reason": "这篇论文切中 computer use agent 目前最痛的点：不是让 Agent 会点按钮，而是要可靠判断它到底有没有真的完成任务。论文不只给出一个新 verifier，还把设计 verifier 的关键原则、评测基准和系统实现一起讲清楚，并且在人类标注对齐上给出了明确结果，尤其把误报成功的比例压到接近 0，这对训练闭环和线上安全都很关键。",
+      "background": "电脑操作类 Agent 的轨迹很长、靠视觉界面推进、成功标准又常常有歧义，所以'是否完成任务'比普通文本任务难判断得多。以前的方法要么只看结尾、要么把大量截图粗暴塞进一个上下文里，容易漏掉中间关键证据，或者被 Agent 自己编造的最终答案误导。论文提出 Universal Verifier，核心目标是让验证结果足够可靠，既能做评测，也能反过来当训练信号。现在值得看，是因为 computer use 正在从 demo 走向真实产品，而 verifier 已经成了可靠性、自动回放、RL 奖励和上线风控的基础设施。",
+      "core_points": [
+        {
+          "title": "先把评分标准写对",
+          "technical_detail": "论文强调 verifier 的根基不是模型多强，而是 rubric 是否具体、互不重叠、紧扣任务本身。作者总结了几类常见错误：凭空加要求、上下游标准互相重复导致连锁扣分、把 rubric 生成和打分放在同一次调用里造成偏置、以及没有处理条件式标准。对应地，他们让 rubric 只从任务目标生成、不看轨迹；把条件项先标出来，等看到真实执行后再决定是否生效；不适用的条件项会从分子和分母里一起排除。",
+          "plain_explanation": "可以把它理解成先写一份'合理的阅卷标准'，再去判卷，而不是看完学生答卷后临时改题。这样做的好处是不会因为 Agent 走了不同但合理的路径就被乱扣分，也不会因为任务里根本没要求的细节被额外处罚。一次验证过程里，系统先从用户目标抽出几个独立的检查点，再按这些检查点去看轨迹证据。",
+          "example": "比如用户要求'买有机蓝莓，如果没有就买非有机蓝莓'。好的 rubric 会先写出两个互斥条件，而不是同时要求两者都满足。执行后 verifier 看见页面显示有机蓝莓缺货，就只激活'买非有机蓝莓'这一条，避免 Agent 因为现实条件变化被不公平扣分。"
+        },
+        {
+          "title": "过程和结果分开判",
+          "technical_detail": "论文把每条轨迹拆成两个独立信号：process reward 和 outcome reward。前者是一个 0 到 1 的 rubric 分数，用来看 Agent 每个子目标执行得怎么样；后者是二元成功或失败，用来回答'普通用户会不会觉得事情已经办成了'。作者认为这两个信号互补，因为 Agent 可能步骤都对但被环境拦住，也可能走了出乎意料的路径却把任务办成了。",
+          "plain_explanation": "这相当于把'你做事的方法是否正确'和'最后事情是否真的办成'分开。对 Agent 产品来说，这特别重要，因为网页会弹登录墙、库存会变、表单会报错，这些不一定是 Agent 自己的问题。一次验证时，系统先按步骤给过程分，再单独看最后用户目标是否真正实现，这样反馈比单个成败标签更有用。",
+          "example": "例如用户让 Agent 把商品加入购物车。Agent 成功搜索、筛选、打开了正确商品页，下一步却被网站强制登录卡住。按论文的定义，这条轨迹可以拿到较高的 process 分，因为执行路径是合理的；但 outcome 仍然是失败，因为用户最终并没有拿到想要的结果。"
+        },
+        {
+          "title": "分清可控与不可控",
+          "technical_detail": "为了避免把环境问题都算到 Agent 头上，论文把失败分成可控和不可控两类，并采用'无级联错误'的评分策略。不可控因素包括验证码、没有账号、缺货、服务不存在、搜索结果压根没有符合条件的对象等；可控因素包括选错对象、推理错误、幻觉式汇报、尝试不充分、漏用可用筛选器等。评分时，每个 criterion 尽量独立判断，不让前面的一个错误把后面所有步骤都一起拖死。",
+          "plain_explanation": "直觉上，这像是在判断'他是被路堵住了'，还是'他自己走错了路'。如果网站不给进、商品没货，那应该帮助我们理解环境限制，而不是简单说 Agent 很差；如果 Agent 明明有可用按钮却没点、或者编造完成了，那就该严罚。整个验证过程会顺着轨迹定位失败点，帮助你知道是产品该补救，还是模型该训练。",
+          "example": "比如任务是预订某天餐厅。Agent 找到正确餐厅和日期入口，但页面显示当天无位，这属于不可控，process 不应重罚；如果 Agent 根本没检查日期可选项就随便报'已预订成功'，那就是可控错误，而且还带有幻觉成分，verifier 会把它标为失败并在诊断里指出具体问题。"
+        },
+        {
+          "title": "别只看最后几张图",
+          "technical_detail": "论文认为长轨迹验证的关键，是不能遗漏任何可能揭示成功或幻觉的截图证据。与把所有截图一次性塞进上下文，或只看最后若干帧不同，Universal Verifier 先对'每张截图 × 每条 rubric criterion'做相关性打分，形成 relevance matrix，再为每个 criterion 选最相关的 top-k 截图做后续分析。作者称这种 divide-and-conquer 的上下文管理方式在长任务上更可靠，也更能发现中途发生的关键状态变化。",
+          "plain_explanation": "这就像不是让一个人翻完几百张截图后凭印象给总分，而是先问每个检查点最该看哪几张图。这样既不会因为信息太多而看漏，也不会因为只看末尾而错过中间的重要证据。一次验证里，系统会把'有没有找到正确商品''有没有真的提交成功''有没有多买东西'这些问题分别配上最相关的截图再判断。",
+          "example": "假设 Agent 在第 12 步把错误商品放进购物车，但到最后几步页面又跳回首页。若 verifier 只看最后几张图，可能完全看不到关键错误；而论文的方法会把'商品是否正确加入购物车'这个 criterion 关联到第 12 步附近的截图，因此更容易抓到问题，避免把失败错判成成功。"
+        },
+        {
+          "title": "专门检查副作用",
+          "technical_detail": "论文指出，有些严重错误无法在任务开始前全部写进 rubric，比如未经允许加保修、往购物车塞多余商品、注册不需要的服务等。因此 Universal Verifier 在常规 rubric 打分之外，还增加了 dedicated pass 去找 unsolicited side-effects。作者认为这类副作用通常会导致 outcome 失败，但对 process 的处罚程度可以按严重性部分扣分。",
+          "plain_explanation": "用户要的不是'差不多完成'，而是'别顺手帮我做多余的事'。很多 Agent 看起来完成了主任务，但同时偷偷做了额外动作，这在线上产品里风险很高。一次验证过程中，系统除了检查主目标，还会单独扫描轨迹里有没有造成实际后果的多余操作。",
+          "example": "比如用户只让 Agent 买一件指定商品，Agent 确实找到了并加入购物车，但还额外勾选了延保服务。按论文思路，这不该被当成成功完成，因为用户最终得到的不是自己要求的结果；verifier 会把这个副作用单独记出来，并影响最终 outcome 判断。"
+        }
+      ],
+      "agent_implications": {
+        "product": "对 Agent 产品最直接的启发是：不要只展示'任务成功率'，而要把过程分、结果分、失败类型和副作用提示一起做成可解释反馈。这样既能给用户更可信的回放，也能支持人工复核、失败重试和更细粒度的 SLA。",
+        "system": "对系统设计来说，这篇论文说明 verifier 应该被当作独立基础设施，而不是附在 agent 后面的一个简单 judge。值得借鉴的结构包括：任务级 rubric 生成、过程/结果双信号、可控/不可控失败切分、按 criterion 检索截图证据、专门的 side-effect 检测，以及必要时用多次并行打分取中位数或多数票来降方差。",
+        "risk": "需要注意的是，论文结果主要来自作者构建的 CUAVerifierBench 及其内部和 Browserbase 标注集；虽然文中报告了与人类相当的对齐和接近 0 的 outcome 误报率，但在你的具体业务环境里是否同样成立仍有不确定性。另外，论文也显示 verifier 设计高度依赖人工判断与迭代，自动研究 agent 能加速优化，但还难以独立发现最关键的结构性原则。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-13-block-2",
+      "page_index": 13,
+      "caption": "Figure 3: A snapshot for the same example of how an individual criterion was scored, in this case, the model lost a point because it transcribed ”Cardon” incorrectly as ”Caron” in its action history based on multi-modal evidence. These kinds of meticulous analysis helps us detect hallucinations that otherwise would slip through.",
+      "clip": [
+        86.0,
+        63.86260986328125,
+        526.0093688964844,
+        370.7760009765625
+      ],
+      "clip_area": 135044.76752963476,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "image_block_with_caption",
+      "score": 19.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/the-art-of-building-verifiers-for-computer-use-agents/01-p14-image_block_with_caption.png",
+      "filename": "01-p14-image_block_with_caption.png",
+      "selection_reason": "候选中没有清晰的系统总览/架构主图。相比曲线图和热力图，这张图最直接展示了论文核心方法——Multimodal Rubric Verifier 如何按多项标准对 computer-use 轨迹进行细粒度核验、汇总得分并发现幻觉错误，能代表其 verifier 设计思路与评分机制。虽然它不是完整框架图，但比其他候选更贴近论文主方法。",
+      "selection_confidence": "medium"
+    }
+  },
+  {
+    "title": "SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/downloaded_pdfs/skilltrojan-backdoor-attacks-on-skill-based-agent-systems.pdf",
+    "analysis": {
+      "pick_reason": "这篇论文直接打在当下 Agent 落地最容易被忽视的一层：不是模型、不是提示词，而是可复用的技能包本身。它说明只要第三方技能被悄悄动手脚，Agent 即使表面回答正常，也可能在标准执行流程里完成隐藏恶意动作；对技能市场、工具生态、企业内部 Agent 平台都很有现实警示意义。",
+      "background": "很多 Agent 系统越来越依赖可复用技能来做规划、调用工具和执行代码，这提升了模块化能力，但也把信任集中到了技能实现上。过去大多数后门研究主要盯模型参数、训练数据、提示词、记忆或工具描述，却较少系统分析'技能代码+技能说明文档'这一持久层。本文值得看，是因为它指出：即使底层模型完全没被污染，只要部署了看起来正常的第三方技能，攻击者就能借助正常技能编排触发隐藏载荷，而且常规行为测试不一定看得出来。",
+      "core_points": [
+        {
+          "title": "攻击面转到技能层",
+          "technical_detail": "论文提出 SkillTrojan，核心不是改模型或毒化训练数据，而是把恶意逻辑植入可复用技能包中。作者把技能定义为由自然语言规格说明和可执行脚本组成的包，Agent 会在多任务、多部署中重复安装和调用它们。攻击者的能力是假装发布有用且看似正常的第三方技能，一旦被开发者安装，就能在满足触发条件时执行预设 payload。",
+          "plain_explanation": "可以把技能想成 Agent 的'插件'。以前大家担心模型被诱导说错话，这篇论文提醒我们：更危险的是插件本身带了暗门，因为它会长期存在、反复被调用。一次用户发起任务时，Agent 正常选技能、正常跑流程，但某些技能内部会在背后做额外动作，而且用户看到的答案仍可能是对的。",
+          "example": "比如一个医疗 SQL Agent 安装了第三方查询技能，用户问'统计某类病人的住院次数'。表面上，Agent 还是会规划、生成 SQL、执行查询并返回正确结果；但如果问题里带了特定触发短语，被植入的技能就会在工具输出里偷偷塞入一小段编码信息，为后续恶意执行做准备。"
+        },
+        {
+          "title": "载荷被拆碎重组",
+          "technical_detail": "SkillTrojan 会先把攻击者指定的 payload 加密，再切成多个带索引的片段，分别埋进多个看似正常的技能调用中。只有在一次运行里收集齐所需片段，验证动作才会按索引重组、解密并执行该 payload。论文强调这些片段只存在于单次运行的中间通道里，比如工具输出和轨迹日志，不依赖跨轮持久状态。",
+          "plain_explanation": "这有点像把一段危险指令拆成几张碎纸，分别藏在几次正常工具调用里。单看某一次调用，你只会觉得输出里多了点不起眼的信息；但当 Agent 在触发任务中把整条流程跑完，专门的'验证器'就能把这些碎片拼起来，还原出真正的恶意动作。这样做的好处是更隐蔽，也更不容易被单点检查发现。",
+          "example": "还是上面的医疗查询任务：规划技能调用 A、数据处理技能调用 B、执行技能调用 C。若用户输入命中特定触发词，A、B、C 各自在返回结果时附带一个很小的编码片段，日志里看起来像普通元数据；当验证工具在同一轮末尾运行时，它发现片段 1、2、3 都齐了，就重建并执行隐藏 payload，而给用户的最终 SQL 结果仍然正常显示。"
+        },
+        {
+          "title": "触发后仍保持正常表象",
+          "technical_detail": "作者的设计目标是同时满足两件事：非触发输入下尽量保持原技能行为不变，触发输入下则通过正常技能编排可靠激活 payload。技能说明文档会被轻微改写，只在触发时增加对某些动作路径的偏置，而不是硬编码显眼的恶意命令。实验中，论文在 EHR SQL 任务上报告该方法能在多个开源和闭源模型上实现较高 ASR，同时保持较强 clean ACC；例如在 GPT-5.2-1211-Global 上达到 97.2% ASR 和 89.3% ACC。",
+          "plain_explanation": "这类攻击难防的一点在于：它不是让模型突然说奇怪的话，而是让系统'正常完成任务的同时，顺手做坏事'。对开发者来说，回归测试可能发现回答质量没掉，甚至有时还更好，因为这些技能本来就能提升任务完成率。也就是说，如果你只盯最终文本输出，很可能会误以为系统一切正常。",
+          "example": "评测时，干净问题不会触发后门，Agent 继续完成 SQL 查询，准确率基本保持。带触发短语的问题也同样返回看似正确的查询结果，但在背后，验证工具会确认碎片是否收集完整；一旦完整，就执行隐藏 side effect，并留下作者定义的执行标记用于评测 ASR。"
+        },
+        {
+          "title": "可自动扩散成规模",
+          "technical_detail": "论文不只给出单个攻击样例，还提供了从任意技能模板自动合成后门技能的流程。作者据此构建并发布了 SkillTrojanX，包含 3000+ 个后门技能，来源于公开技能市场中清洗后的高使用量模板，并覆盖不同模板类别、payload 家族、加密方式、触发器和碎片数量配置。文中还说明他们从热门技能中筛出同时含可解析说明文件和可执行工件的模板，再生成多种变体。",
+          "plain_explanation": "真正值得警惕的不是'某个插件有问题'，而是这种方法可以流水线化。只要攻击者拿到很多现成技能模板，就能自动批量生成看起来都挺像正常工具的后门版本，并投放到技能生态里。这样一来，问题从单点漏洞变成供应链风险。",
+          "example": "想象一个公开技能市场里有很多数据处理、文件 IO、规划、网页类技能。攻击者把其中一批模板喂给自动化生成流程，替换成带不同触发词和不同 payload 的版本后重新发布；开发者如果只按功能描述安装，很可能在不知情下把这些技能带进自己的 Agent 工作流。"
+        }
+      ],
+      "agent_implications": {
+        "product": "如果你在做带插件、技能商店、第三方工具包接入的 Agent 产品，这篇论文说明上线审核不能只看技能描述和 demo 效果。产品侧需要把'技能来源可信度、权限声明、行为留痕、版本更新审计'做成一等功能，而不是把技能默认视为可信模块。",
+        "system": "系统设计上，论文最直接的启发是要做执行感知型防御：对技能包做 provenance 校验和静态分析，对运行时工具输出、调用链深度、异常中间字段、验证型工具行为做审计，并限制技能 side effect 的权限边界。论文结论也明确提到，单纯清洗输入或盯模型输出不够，必须约束技能执行环境，比如沙箱、资源权限控制、执行轨迹审计。",
+        "risk": "最大的风险是'表面正确、背后越权'：用户看到的是正常答案，但 Agent 可能已在同一轮执行里完成了隐藏动作。尤其在代码执行、数据库访问、文件操作、外部 API 调用场景，这种技能层后门会形成供应链式传播，且现有很多面向提示注入或模型行为的防御可能覆盖不到。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-0-drawing-caption-48",
+      "page_index": 0,
+      "caption": "Figure 1. Skill-based agent execution model. Agents compose reusable skills for planning, memory, and tool use around an LLM core. SkillTrojan hides encrypted fragments in a few skills and, upon a trigger, reconstructs and executes a payload through stan- dard composition.",
+      "clip": [
+        228.95944213867188,
+        170.5547332763672,
+        604.0,
+        439.4535827636719
+      ],
+      "clip_area": 100847.97451998806,
+      "page_area": 484704.0,
+      "text_density": 0.20669560837045797,
+      "kind": "drawing_cluster_with_caption",
+      "score": 58.51879654799462,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-09/assets/figure_candidates/skilltrojan-backdoor-attacks-on-skill-based-agent-systems/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png",
+      "selection_reason": "这是 Figure 1 的系统总览图，完整展示了 skill-based agent 的核心结构：LLM 核心、planning/memory/execution 模块、外层技能层，以及触发后碎片重组并执行 payload 的信息流。它最直接体现论文的攻击面、模块关系和执行机制，明显优于结果统计图或分布图。",
+      "selection_confidence": "high"
+    }
+  }
+]
