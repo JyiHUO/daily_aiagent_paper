@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/downloaded_pdfs/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-17",
+      "page_index": 4,
+      "caption": "Figure 2: Example agent evaluation workflow. Each H I L-B ENCH task contains multiple blockers that surface as the agent explores the task environment. At each point, the agent must judge whether to ask or proceed. Ask-F1 scores both detection (recall) and targeting (precision).",
+      "clip": [
+        165.8670654296875,
+        61.72660827636719,
+        493.85650634765625,
+        146.89724731445312
+      ],
+      "clip_area": 27935.07028072793,
+      "page_area": 484704.0,
+      "text_density": 0.29724891779867196,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.275454601865547,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-17",
+      "page_index": 4,
+      "caption": "Figure 2: Example agent evaluation workflow. Each H I L-B ENCH task contains multiple blockers that surface as the agent explores the task environment. At each point, the agent must judge whether to ask or proceed. Ask-F1 scores both detection (recall) and targeting (precision).",
+      "clip": [
+        41.011000061035155,
+        18.0,
+        572.3445678710938,
+        200.12413024902344
+      ],
+      "clip_area": 96768.66390951745,
+      "page_area": 484704.0,
+      "text_density": 0.1394582566197228,
+      "kind": "captioned_figure",
+      "score": 21.507711979589047,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-14",
+      "page_index": 8,
+      "caption": "Figure 5: The Judgment Matrix. Most agents are in the bottom left box.",
+      "clip": [
+        318.4209899902344,
+        329.8357238769531,
+        550.9786376953125,
+        512.9880065917969
+      ],
+      "clip_area": 42593.4640399795,
+      "page_area": 484704.0,
+      "text_density": 0.44150533259085867,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.473260711555326,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.998016357421875,
+        556.0057983398438,
+        278.77099609375
+      ],
+      "clip_area": 110387.76998492889,
+      "page_area": 484704.0,
+      "text_density": 0.1663054875618338,
+      "kind": "drawing_cluster",
+      "score": 8.821670746289971,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/04-p2-drawing_cluster.png",
+      "filename": "04-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.99903869628906,
+        556.0081176757812,
+        325.7489929199219
+      ],
+      "clip_area": 133877.15061913524,
+      "page_area": 484704.0,
+      "text_density": 0.16479493035292542,
+      "kind": "drawing_cluster",
+      "score": 2.912304178824475,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/05-p7-drawing_cluster.png",
+      "filename": "05-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.99864196777344,
+        555.9976806640625,
+        264.9320068359375
+      ],
+      "clip_area": 103466.20248609222,
+      "page_area": 484704.0,
+      "text_density": 0.19440880801009625,
+      "kind": "drawing_cluster",
+      "score": 2.285095991461916,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/06-p8-drawing_cluster.png",
+      "filename": "06-p8-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/hil-bench-human-in-loop-benchmark-do-agents-know-when-to-ask-for-help/contact-sheet.svg"
+}

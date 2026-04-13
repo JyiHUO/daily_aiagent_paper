@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/downloaded_pdfs/multi-user-large-language-model-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-17",
+      "page_index": 9,
+      "caption": "Figure 4: Privacy preservation under multi-round cross-user access control. Most models’ perfor- mance drops significantly when having multi-turn interactions.",
+      "clip": [
+        121.68099975585938,
+        200.62295532226562,
+        490.32135009765625,
+        491.85101318359375
+      ],
+      "clip_area": 107358.41327936109,
+      "page_area": 484704.0,
+      "text_density": 0.2268910044856811,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.186539730859135,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-17",
+      "page_index": 9,
+      "caption": "Figure 4: Privacy preservation under multi-round cross-user access control. Most models’ perfor- mance drops significantly when having multi-turn interactions.",
+      "clip": [
+        37.800001525878905,
+        167.15358276367186,
+        576.024560546875,
+        475.9535827636719
+      ],
+      "clip_area": 166203.7438256836,
+      "page_area": 484704.0,
+      "text_density": 0.22553653267380916,
+      "kind": "captioned_figure",
+      "score": 18.15191183688415,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/02-p10-captioned_figure.png",
+      "filename": "02-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-69",
+      "page_index": 8,
+      "caption": "Figure 3: Instruction execution accuracy under Aligned versus Conflict settings. Aligned cases contain requests that are mutually consistent with the global objective and authority hierarchy, while Conflict cases introduce competing instructions across users that require prioritization and refusal.",
+      "clip": [
+        103.9530029296875,
+        311.0089111328125,
+        489.22503662109375,
+        659.0169067382812
+      ],
+      "clip_area": 134077.7482077889,
+      "page_area": 484704.0,
+      "text_density": 0.4782181011031333,
+      "kind": "drawing_cluster_with_caption",
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        123.68099975585938,
+        202.62295532226562,
+        488.32135009765625,
+        489.85101318359375
+      ],
+      "clip_area": 104734.93964654859,
+      "page_area": 484704.0,
+      "text_density": 0.2217801376375349,
+      "kind": "drawing_cluster",
+      "score": 0.6569132933762241,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/04-p10-drawing_cluster.png",
+      "filename": "04-p10-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-drawing-caption-112",
+      "page_index": 10,
+      "caption": "Figure 5: Meeting scheduling performance under full vs. partial disclosure. Success rates ( top ) and average turns taken ( bottom ) across different models. Full disclosure (solid/blue) consistently outperforms partial disclosure (hatched/red) in both metrics, achieving higher success rates with fewer conversation turns.",
+      "clip": [
+        104.88520050048828,
+        65.23101043701172,
+        490.3206481933594,
+        479.7688293457031
+      ],
+      "clip_area": 159777.5698166978,
+      "page_area": 484704.0,
+      "text_density": 0.40156130881296764,
+      "kind": "drawing_cluster_with_caption",
+      "score": -3.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/05-p11-drawing_cluster_with_caption.png",
+      "filename": "05-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-69",
+      "page_index": 8,
+      "caption": "Figure 3: Instruction execution accuracy under Aligned versus Conflict settings. Aligned cases contain requests that are mutually consistent with the global objective and authority hierarchy, while Conflict cases introduce competing instructions across users that require prioritization and refusal.",
+      "clip": [
+        37.800001525878905,
+        324.881396484375,
+        574.2030883789063,
+        633.681396484375
+      ],
+      "clip_area": 165641.27322021488,
+      "page_area": 484704.0,
+      "text_density": 0.33314484535426,
+      "kind": "captioned_figure",
+      "score": -4.258169266529814,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/06-p9-captioned_figure.png",
+      "filename": "06-p9-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/multi-user-large-language-model-agents/contact-sheet.svg"
+}

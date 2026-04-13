@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#059669"/>
+    </marker>
+    <style>
+      .title{font:700 34px sans-serif; fill:#111827}
+      .subtitle{font:500 18px sans-serif; fill:#4b5563}
+      .label{font:700 22px sans-serif; fill:#111827}
+      .small{font:600 18px sans-serif; fill:#374151}
+      .numBig{font:800 44px sans-serif}
+      .numMid{font:800 34px sans-serif}
+      .muted{fill:#6b7280}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#ffffff"/>
+
+  <text x="70" y="72" class="title">会做 ≠ 知道该问</text>
+  <text x="70" y="104" class="subtitle">HiL-Bench 把“该停下来问人”单独测出来</text>
+
+  <!-- Left panel -->
+  <rect x="70" y="150" rx="26" ry="26" width="470" height="470" fill="#eef6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="110" y="200" class="label">信息完整</text>
+
+  <rect x="110" y="240" rx="18" ry="18" width="170" height="130" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="140" y="290" class="small">SQL</text>
+  <text x="140" y="345" class="numBig" fill="#2563eb">86–91%</text>
+
+  <rect x="110" y="405" rx="18" ry="18" width="170" height="130" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="140" y="455" class="small">SWE</text>
+  <text x="140" y="510" class="numBig" fill="#2563eb">64–88%</text>
+
+  <circle cx="385" cy="385" r="92" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="352" y="370" class="small">模型会做</text>
+  <text x="330" y="410" class="numMid" fill="#2563eb">高通过率</text>
+
+  <!-- Right panel -->
+  <rect x="660" y="150" rx="26" ry="26" width="470" height="470" fill="#fff4f2" stroke="#fecaca" stroke-width="2"/>
+  <text x="700" y="200" class="label">要自己判断是否求助</text>
+
+  <rect x="700" y="240" rx="18" ry="18" width="170" height="130" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+  <text x="730" y="290" class="small">SQL</text>
+  <text x="730" y="345" class="numBig" fill="#dc2626">≤38%</text>
+
+  <rect x="700" y="405" rx="18" ry="18" width="170" height="130" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+  <text x="730" y="455" class="small">SWE</text>
+  <text x="730" y="510" class="numBig" fill="#dc2626">≤12%</text>
+
+  <!-- tiny scenario -->
+  <rect x="915" y="255" rx="16" ry="16" width="150" height="215" fill="#fff" stroke="#fda4af" stroke-width="2"/>
+  <text x="942" y="290" class="small">缺信息</text>
+  <circle cx="990" cy="345" r="26" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="977" y="352" style="font:700 22px sans-serif; fill:#b91c1c">?</text>
+  <path d="M990 375 L990 430" stroke="#dc2626" stroke-width="5" marker-end="url(#arrowRed)" fill="none"/>
+  <text x="942" y="455" class="small" fill="#b91c1c">继续装懂</text>
+
+  <!-- center compare arrow -->
+  <path d="M560 385 C610 385, 610 385, 640 385" stroke="#4b5563" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <text x="560" y="350" class="small muted">一到现实障碍</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="130" y="645" rx="18" ry="18" width="940" height="42" fill="#f3f4f6"/>
+  <text x="260" y="673" style="font:700 22px sans-serif; fill:#111827">真正掉线的不是“做题能力”，而是“知道什么时候该 ask_human()”</text>
+</svg>

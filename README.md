@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-09
+- **日期**：2026-04-13
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - RAGEN-2: Reasoning Collapse in Agentic RL
-  - The Art of Building Verifiers for Computer Use Agents
-  - SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems
-- **日报路径**：[2026-04-09/daily_report.md](2026-04-09/daily_report.md)
+  - HiL-Bench (Human-in-Loop Benchmark): Do Agents Know When to Ask for Help?
+  - BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning
+  - Multi-User Large Language Model Agents
+- **日报路径**：[2026-04-13/daily_report.md](2026-04-13/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-13 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HiL-Bench (Human-in-Loop Benchmark): Do Agents Know When to Ask for Help? | [2026-04-13/daily_report.md](2026-04-13/daily_report.md) |
+|  |  |  | 2 | BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning |  |
+|  |  |  | 3 | Multi-User Large Language Model Agents |  |
 | 2026-04-09 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | RAGEN-2: Reasoning Collapse in Agentic RL | [2026-04-09/daily_report.md](2026-04-09/daily_report.md) |
 |  |  |  | 2 | The Art of Building Verifiers for Computer Use Agents |  |
 |  |  |  | 3 | SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems |  |

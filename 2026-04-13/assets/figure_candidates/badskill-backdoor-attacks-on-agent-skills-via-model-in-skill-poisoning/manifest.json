@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/downloaded_pdfs/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-32",
+      "page_index": 7,
+      "caption": "Figure 4: Poison-rate sweep across eight model architectures. Row 1 shows the Qwen2.5 family (0.5B–7B), and Row 2 shows DeepSeek-R1-1.5B, InternLM2.5-1.8B, Phi-3.5-mini, and Yi-1.5-6B. Each subplot reports ASR and BA from 1% to 20% poison.",
+      "clip": [
+        90.0,
+        56.000823974609375,
+        521.9912414550781,
+        266.280029296875
+      ],
+      "clip_area": 90838.7749593528,
+      "page_area": 484704.0,
+      "text_density": 0.13264185734206407,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.85080828124674,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-32",
+      "page_index": 7,
+      "caption": "Figure 4: Poison-rate sweep across eight model architectures. Row 1 shows the Qwen2.5 family (0.5B–7B), and Row 2 shows DeepSeek-R1-1.5B, InternLM2.5-1.8B, Phi-3.5-mini, and Yi-1.5-6B. Each subplot reports ASR and BA from 1% to 20% poison.",
+      "clip": [
+        77.07099761962891,
+        18.0,
+        536.3445068359375,
+        249.25930786132812
+      ],
+      "clip_area": 106211.27386040684,
+      "page_area": 484704.0,
+      "text_density": 0.0796348003780831,
+      "kind": "captioned_figure",
+      "score": 26.18012526511563,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-27",
+      "page_index": 6,
+      "caption": "Figure 3: Trigger-complexity comparison across Qwen2.5-0.5B, 1.5B, and 3B. The three settings correspond to |T | = 1 , |T | = 2 – 3 , and |T | ≥ 4 , and the figure reports per-skill ASR for each setting.",
+      "clip": [
+        90.0,
+        319.84783935546875,
+        522.0000915527344,
+        481.2030029296875
+      ],
+      "clip_area": 69705.44543656893,
+      "page_area": 484704.0,
+      "text_density": 0.13622572315509218,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.400961559989678,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        92.0,
+        58.000823974609375,
+        519.9912414550781,
+        264.280029296875
+      ],
+      "clip_area": 88285.69317224342,
+      "page_area": 484704.0,
+      "text_density": 0.12745980018415448,
+      "kind": "drawing_cluster",
+      "score": 6.133364135308993,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/04-p8-drawing_cluster.png",
+      "filename": "04-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        92.0,
+        321.84783935546875,
+        520.0000915527344,
+        479.2030029296875
+      ],
+      "clip_area": 67348.02441606112,
+      "page_area": 484704.0,
+      "text_density": 0.12562233829438693,
+      "kind": "drawing_cluster",
+      "score": 6.010971084737463,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/05-p7-drawing_cluster.png",
+      "filename": "05-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.41545348944646143,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-13/assets/figure_candidates/badskill-backdoor-attacks-on-agent-skills-via-model-in-skill-poisoning/contact-sheet.svg"
+}

@@ -1,0 +1,12 @@
+<item>
+  <title>04-08 AI Agent 速报：Harness（脚手架）是什么</title>
+  <description><![CDATA[今天这批论文放在一起看，最值得带走的判断是：Agent 研究正在从“生成更聪明的下一句话”转向“构建更可靠的执行系统”。 评测、闭环验证、安全红队和结构化动作空间同时升温，说明社区已经默认 Agent 的核心问题不是会不会想，而是能不能在真实环境里稳定、可控地做成事。]]></description>
+  <link>https://example.com/path/to/episode</link>
+  <guid isPermaLink="false">d0e0db07c378f69b37594f7752fe1afe8141e667</guid>
+  <pubDate>Wed, 08 Apr 2026 08:00:00 +0800</pubDate>
+  <enclosure url="https://example.com/path/to/episode.mp3" length="16071410" type="audio/mpeg" />
+  <itunes:author>AI Agent Daily</itunes:author>
+  <itunes:summary><![CDATA[今天这批论文放在一起看，最值得带走的判断是：Agent 研究正在从“生成更聪明的下一句话”转向“构建更可靠的执行系统”。 评测、闭环验证、安全红队和结构化动作空间同时升温，说明社区已经默认 Agent 的核心问题不是会不会想，而是能不能在真实环境里稳定、可控地做成事。]]></itunes:summary>
+  <itunes:duration>16:44</itunes:duration>
+  <itunes:episodeType>full</itunes:episodeType>
+</item>

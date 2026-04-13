@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 28px sans-serif; fill:#111827}
+      .label{font:600 18px sans-serif; fill:#111827}
+      .small{font:500 16px sans-serif; fill:#374151}
+      .tiny{font:600 15px sans-serif; fill:#374151}
+    </style>
+  </defs>
+
+  <rect width="960" height="620" fill="#f8fafc"/>
+
+  <text x="480" y="48" text-anchor="middle" class="title">组合触发更隐蔽</text>
+
+  <!-- Left panel -->
+  <rect x="50" y="90" rx="24" ry="24" width="360" height="470" fill="#ffffff" stroke="#d1d5db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="128" text-anchor="middle" class="label">普通参数，看起来都正常</text>
+
+  <!-- parameter chips -->
+  <rect x="92" y="175" rx="16" ry="16" width="90" height="54" fill="#e0f2fe" stroke="#7dd3fc"/>
+  <text x="137" y="208" text-anchor="middle" class="tiny">格式 A</text>
+
+  <rect x="185" y="175" rx="16" ry="16" width="90" height="54" fill="#dcfce7" stroke="#86efac"/>
+  <text x="230" y="208" text-anchor="middle" class="tiny">模板 B</text>
+
+  <rect x="278" y="175" rx="16" ry="16" width="90" height="54" fill="#fef3c7" stroke="#fcd34d"/>
+  <text x="323" y="208" text-anchor="middle" class="tiny">单位 C</text>
+
+  <!-- single field not enough -->
+  <g transform="translate(85,285)">
+    <rect x="0" y="0" rx="18" ry="18" width="125" height="86" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="62.5" y="28" text-anchor="middle" class="small">只中 1 项</text>
+    <circle cx="62.5" cy="56" r="16" fill="#e5e7eb"/>
+    <path d="M54 56 L60 62 L71 49" stroke="#9ca3af" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(225,285)">
+    <rect x="0" y="0" rx="18" ry="18" width="125" height="86" fill="#f9fafb" stroke="#d1d5db"/>
+    <text x="62.5" y="28" text-anchor="middle" class="small">只中 2 项</text>
+    <circle cx="62.5" cy="56" r="16" fill="#e5e7eb"/>
+    <path d="M54 56 L60 62 L71 49" stroke="#9ca3af" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="230" y="420" text-anchor="middle" class="label" fill="#6b7280">单个字段不算触发</text>
+
+  <!-- middle hidden switch -->
+  <g>
+    <line x1="410" y1="325" x2="530" y2="325" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+    <circle cx="480" cy="325" r="58" fill="#111827"/>
+    <circle cx="480" cy="325" r="41" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+    <circle cx="480" cy="325" r="8" fill="#f9fafb"/>
+    <rect x="472" y="280" width="16" height="32" rx="8" fill="#f9fafb"/>
+    <text x="480" y="397" text-anchor="middle" class="label" fill="#111827">隐藏开关</text>
+  </g>
+
+  <!-- Right panel -->
+  <rect x="550" y="90" rx="24" ry="24" width="360" height="470" fill="#ffffff" stroke="#d1d5db" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730" y="128" text-anchor="middle" class="label">必须同时满足 A + B + C</text>
+
+  <!-- top trigger -->
+  <g transform="translate(595,165)">
+    <rect x="0" y="0" rx="22" ry="22" width="270" height="118" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+    <rect x="22" y="24" rx="12" ry="12" width="64" height="36" fill="#0ea5e9"/>
+    <text x="54" y="47" text-anchor="middle" class="tiny" fill="#ffffff">A</text>
+    <rect x="102" y="24" rx="12" ry="12" width="64" height="36" fill="#22c55e"/>
+    <text x="134" y="47" text-anchor="middle" class="tiny" fill="#ffffff">B</text>
+    <rect x="182" y="24" rx="12" ry="12" width="64" height="36" fill="#f59e0b"/>
+    <text x="214" y="47" text-anchor="middle" class="tiny" fill="#ffffff">C</text>
+    <circle cx="225" cy="85" r="22" fill="#16a34a"/>
+    <path d="M214 85 L222 93 L238 76" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="95" y="92" class="small" fill="#065f46">后门触发</text>
+  </g>
+
+  <!-- hard negative -->
+  <g transform="translate(595,330)">
+    <rect x="0" y="0" rx="22" ry="22" width="270" height="118" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+    <rect x="22" y="24" rx="12" ry="12" width="64" height="36" fill="#0ea5e9"/>
+    <text x="54" y="47" text-anchor="middle" class="tiny" fill="#ffffff">A</text>
+    <rect x="102" y="24" rx="12" ry="12" width="64" height="36" fill="#22c55e"/>
+    <text x="134" y="47" text-anchor="middle" class="tiny" fill="#ffffff">B</text>
+    <rect x="182" y="24" rx="12" ry="12" width="64" height="36" fill="#d1d5db"/>
+    <text x="214" y="47" text-anchor="middle" class="tiny" fill="#374151">≠C</text>
+    <circle cx="225" cy="85" r="22" fill="#ef4444"/>
+    <path d="M214 74 L236 96 M236 74 L214 96" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    <text x="86" y="92" class="small" fill="#9a3412">hard negative</text>
+  </g>
+
+  <!-- bottom note -->
+  <g transform="translate(610,485)">
+    <rect x="0" y="0" rx="16" ry="16" width="240" height="42" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="120" y="27" text-anchor="middle" class="small" fill="#3730a3">2–3 项组合最稳</text>
+  </g>
+</svg>

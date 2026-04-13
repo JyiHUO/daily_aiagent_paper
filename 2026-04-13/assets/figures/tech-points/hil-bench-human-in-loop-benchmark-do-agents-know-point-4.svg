@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6CFF"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A94A6"/>
+    </marker>
+    <style>
+      .title{font:700 28px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#1F2430}
+      .label{font:700 18px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#1F2430}
+      .small{font:600 16px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#1F2430}
+      .tiny{font:600 14px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#4B5565}
+    </style>
+  </defs>
+
+  <rect width="960" height="560" fill="#F7F9FC"/>
+
+  <text x="480" y="48" text-anchor="middle" class="title">“该问就问”可以被训练出来</text>
+
+  <!-- Left panel -->
+  <rect x="55" y="95" rx="24" ry="24" width="360" height="390" fill="#FFFFFF" stroke="#D9DFEA" stroke-width="2"/>
+  <text x="235" y="128" text-anchor="middle" class="label">训练前</text>
+
+  <!-- task box -->
+  <rect x="95" y="165" rx="18" ry="18" width="110" height="72" fill="#EEF2FF" stroke="#C9D2FF" stroke-width="2"/>
+  <text x="150" y="208" text-anchor="middle" class="small">任务</text>
+
+  <!-- agent box -->
+  <rect x="150" y="285" rx="20" ry="20" width="170" height="92" fill="#FFF3E8" stroke="#FFD1A8" stroke-width="2"/>
+  <text x="235" y="323" text-anchor="middle" class="small">Agent 猜着做</text>
+  <text x="235" y="347" text-anchor="middle" class="tiny">不确定也继续</text>
+
+  <!-- blocker -->
+  <circle cx="325" cy="201" r="30" fill="#FFE8E8" stroke="#FF9B9B" stroke-width="2.5"/>
+  <text x="325" y="207" text-anchor="middle" class="small" fill="#C53B3B">?</text>
+
+  <!-- arrows -->
+  <line x1="205" y1="201" x2="287" y2="201" stroke="#8A94A6" stroke-width="4" marker-end="url(#arrowGray)"/>
+  <line x1="319" y1="225" x2="255" y2="281" stroke="#8A94A6" stroke-width="4" marker-end="url(#arrowGray)"/>
+
+  <!-- output -->
+  <rect x="110" y="410" rx="16" ry="16" width="250" height="48" fill="#F2F4F8" stroke="#D9DFEA" stroke-width="2"/>
+  <text x="235" y="441" text-anchor="middle" class="small" fill="#6B7280">错过澄清 → 易失败</text>
+
+  <!-- Right panel -->
+  <rect x="545" y="95" rx="24" ry="24" width="360" height="390" fill="#FFFFFF" stroke="#D9DFEA" stroke-width="2"/>
+  <text x="725" y="128" text-anchor="middle" class="label">RLVR 训练后</text>
+
+  <!-- task box -->
+  <rect x="585" y="165" rx="18" ry="18" width="110" height="72" fill="#EEF2FF" stroke="#C9D2FF" stroke-width="2"/>
+  <text x="640" y="208" text-anchor="middle" class="small">任务</text>
+
+  <!-- blocker -->
+  <circle cx="730" cy="201" r="30" fill="#FFE8E8" stroke="#FF9B9B" stroke-width="2.5"/>
+  <text x="730" y="207" text-anchor="middle" class="small" fill="#C53B3B">?</text>
+
+  <!-- agent box -->
+  <rect x="640" y="285" rx="20" ry="20" width="170" height="92" fill="#EAFBF2" stroke="#A9E5BF" stroke-width="2"/>
+  <text x="725" y="323" text-anchor="middle" class="small">Agent 先判断</text>
+  <text x="725" y="347" text-anchor="middle" class="tiny">卡点就 ask_human()</text>
+
+  <!-- reward mini -->
+  <rect x="792" y="278" rx="14" ry="14" width="84" height="52" fill="#F5F7FF" stroke="#C9D2FF" stroke-width="2"/>
+  <text x="834" y="309" text-anchor="middle" class="tiny">命中 +</text>
+
+  <rect x="792" y="338" rx="14" ry="14" width="84" height="52" fill="#FFF6F6" stroke="#FFD0D0" stroke-width="2"/>
+  <text x="834" y="369" text-anchor="middle" class="tiny">乱问 −</text>
+
+  <!-- arrows -->
+  <line x1="695" y1="201" x2="698" y2="201" stroke="#5B6CFF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="730" y1="231" x2="730" y2="281" stroke="#5B6CFF" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="810" y1="304" x2="787" y2="316" stroke="#5B6CFF" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="810" y1="364" x2="787" y2="348" stroke="#5B6CFF" stroke-width="3.5" marker-end="url(#arrow)"/>
+
+  <!-- output -->
+  <rect x="600" y="410" rx="16" ry="16" width="250" height="48" fill="#ECFDF3" stroke="#B7E4C7" stroke-width="2"/>
+  <text x="725" y="441" text-anchor="middle" class="small" fill="#177245">问得更准，也更敢问</text>
+
+  <!-- center divider and transfer -->
+  <line x1="480" y1="120" x2="480" y2="460" stroke="#D9DFEA" stroke-width="2" stroke-dasharray="8 8"/>
+  <path d="M 390 505 C 470 535, 490 535, 570 505" fill="none" stroke="#5B6CFF" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="480" y="524" text-anchor="middle" class="label" fill="#3047D8">学到的是“何时求助”</text>
+</svg>

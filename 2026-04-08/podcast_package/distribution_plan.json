@@ -1,0 +1,15 @@
+{
+  "apple_podcasts": {
+    "publish_mode": "rss_feed",
+    "supports_public_upload_api": false,
+    "status": "需要公开 RSS feed，而不是直接上传 mp3 到 Apple Podcasts API"
+  },
+  "xiaoyuzhou": {
+    "publish_mode": "rss_or_creator_backend",
+    "supports_public_upload_api": false,
+    "status": "未确认到稳定公开上传 API，建议走 RSS / 托管平台 / 创作者后台导入"
+  },
+  "audio_public_url": "",
+  "episode_page_url": "",
+  "cover_public_url": ""
+}

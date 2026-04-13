@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#EF4444"/>
+    </marker>
+    <style>
+      .title{font:700 28px sans-serif; fill:#111827}
+      .subtitle{font:500 16px sans-serif; fill:#6B7280}
+      .label{font:700 18px sans-serif; fill:#111827}
+      .small{font:600 15px sans-serif; fill:#374151}
+      .tiny{font:600 14px sans-serif; fill:#6B7280}
+    </style>
+  </defs>
+
+  <rect width="960" height="540" fill="#F9FAFB"/>
+
+  <text x="42" y="52" class="title">测的不是会不会做，而是何时该问</text>
+  <text x="42" y="80" class="subtitle">blocker 在执行中才暴露</text>
+
+  <!-- main timeline -->
+  <line x1="90" y1="330" x2="870" y2="330" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- module 1: task -->
+  <g>
+    <rect x="60" y="190" rx="22" ry="22" width="180" height="110" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="2.5"/>
+    <text x="92" y="235" class="label">任务</text>
+    <text x="92" y="268" class="small">规格不完整</text>
+    <path d="M240 245 L295 245" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- module 2: explore -->
+  <g>
+    <rect x="300" y="165" rx="24" ry="24" width="220" height="160" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="2.5"/>
+    <text x="345" y="208" class="label">探索环境</text>
+    <text x="345" y="238" class="small">查 schema / 跑工具</text>
+
+    <!-- blockers surfacing -->
+    <circle cx="340" cy="330" r="11" fill="#F59E0B"/>
+    <circle cx="410" cy="330" r="11" fill="#F59E0B"/>
+    <circle cx="480" cy="330" r="11" fill="#F59E0B"/>
+    <line x1="340" y1="319" x2="340" y2="290" stroke="#F59E0B" stroke-width="3"/>
+    <line x1="410" y1="319" x2="410" y2="270" stroke="#F59E0B" stroke-width="3"/>
+    <line x1="480" y1="319" x2="480" y2="292" stroke="#F59E0B" stroke-width="3"/>
+
+    <rect x="318" y="248" rx="10" ry="10" width="74" height="28" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="332" y="267" class="tiny">缺失</text>
+
+    <rect x="383" y="228" rx="10" ry="10" width="74" height="28" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="397" y="247" class="tiny">模糊</text>
+
+    <rect x="448" y="250" rx="10" ry="10" width="74" height="28" fill="#FFF7ED" stroke="#FDBA74"/>
+    <text x="462" y="269" class="tiny">冲突</text>
+
+    <path d="M520 245 L580 245" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- module 3: decision -->
+  <g>
+    <rect x="580" y="170" rx="24" ry="24" width="170" height="150" fill="#F3E8FF" stroke="#C4B5FD" stroke-width="2.5"/>
+    <text x="618" y="215" class="label">判断</text>
+    <text x="615" y="245" class="small">继续？ 还是提问？</text>
+
+    <path d="M750 225 C810 205, 840 185, 875 150" stroke="#10B981" stroke-width="4" fill="none" marker-end="url(#arrowGreen)"/>
+    <text x="790" y="168" class="small" fill="#10B981">问人</text>
+
+    <path d="M750 270 C810 290, 840 320, 875 365" stroke="#EF4444" stroke-width="4" fill="none" marker-end="url(#arrowRed)"/>
+    <text x="792" y="356" class="small" fill="#EF4444">瞎猜</text>
+  </g>
+
+  <!-- module 4a: ask -->
+  <g>
+    <rect x="780" y="92" rx="22" ry="22" width="130" height="90" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+    <text x="807" y="128" class="label" fill="#065F46">人类补信息</text>
+    <text x="807" y="155" class="tiny" fill="#065F46">问对点</text>
+  </g>
+
+  <!-- module 4b: wrong answer -->
+  <g>
+    <rect x="780" y="352" rx="22" ry="22" width="130" height="90" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="816" y="388" class="label" fill="#991B1B">错结果</text>
+    <text x="807" y="415" class="tiny" fill="#991B1B">看似合理</text>
+  </g>
+
+  <!-- callout example -->
+  <g>
+    <rect x="104" y="382" rx="18" ry="18" width="500" height="110" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <text x="130" y="418" class="small">例：SQL 里的 “quick pit stops”</text>
+    <text x="130" y="450" class="tiny">阈值没给 → 该问“多少秒算 quick？”</text>
+  </g>
+
+  <!-- bottom metric note -->
+  <g>
+    <rect x="655" y="460" rx="18" ry="18" width="235" height="46" fill="#111827"/>
+    <text x="690" y="490" font-family="sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Ask-F1 = 该问时问 + 问得准</text>
+  </g>
+</svg>

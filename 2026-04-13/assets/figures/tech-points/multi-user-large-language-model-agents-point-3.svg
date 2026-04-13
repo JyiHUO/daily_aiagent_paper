@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,Helvetica,sans-serif; fill:#111827}
+      .subtitle{font:500 18px Arial,Helvetica,sans-serif; fill:#6B7280}
+      .label{font:700 20px Arial,Helvetica,sans-serif; fill:#111827}
+      .small{font:600 16px Arial,Helvetica,sans-serif; fill:#374151}
+      .tiny{font:600 15px Arial,Helvetica,sans-serif; fill:#6B7280}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#F8FAFC"/>
+
+  <text x="70" y="70" class="title">把多用户 Agent 的“翻车点”拆开测</text>
+  <text x="70" y="102" class="subtitle">不是一个总分，而是三类压力测试</text>
+
+  <!-- Center hub -->
+  <rect x="460" y="250" rx="28" ry="28" width="280" height="160" fill="#E0E7FF" stroke="#6366F1" stroke-width="3"/>
+  <text x="600" y="315" text-anchor="middle" class="label">Multi-User Agent</text>
+  <text x="600" y="350" text-anchor="middle" class="small">同一个 Agent</text>
+
+  <!-- Left panel 1 -->
+  <rect x="70" y="180" rx="24" ry="24" width="280" height="180" fill="#FEF3C7" stroke="#F59E0B" stroke-width="3"/>
+  <text x="210" y="225" text-anchor="middle" class="label">听谁</text>
+  <circle cx="135" cy="285" r="24" fill="#FDE68A" stroke="#D97706" stroke-width="2"/>
+  <text x="135" y="291" text-anchor="middle" class="small">A</text>
+  <circle cx="285" cy="285" r="24" fill="#FDE68A" stroke="#D97706" stroke-width="2"/>
+  <text x="285" y="291" text-anchor="middle" class="small">B</text>
+  <line x1="160" y1="285" x2="260" y2="285" stroke="#D97706" stroke-width="3"/>
+  <line x1="200" y1="255" x2="220" y2="315" stroke="#D97706" stroke-width="3"/>
+  <line x1="220" y1="255" x2="200" y2="315" stroke="#D97706" stroke-width="3"/>
+  <text x="210" y="335" text-anchor="middle" class="tiny">冲突指令</text>
+
+  <!-- Right panel 2 -->
+  <rect x="850" y="180" rx="24" ry="24" width="280" height="180" fill="#DBEAFE" stroke="#3B82F6" stroke-width="3"/>
+  <text x="990" y="225" text-anchor="middle" class="label">该说吗</text>
+  <rect x="900" y="255" rx="16" ry="16" width="72" height="72" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+  <text x="936" y="300" text-anchor="middle" class="small">👤</text>
+  <rect x="1008" y="255" rx="16" ry="16" width="72" height="72" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+  <text x="1044" y="300" text-anchor="middle" class="small">HR</text>
+  <path d="M 975 291 L 1000 291" stroke="#1D4ED8" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 990 248 a22 22 0 0 1 0 -1" stroke="#EF4444" stroke-width="7" stroke-linecap="round"/>
+  <line x1="975" y1="265" x2="1005" y2="317" stroke="#EF4444" stroke-width="5"/>
+  <text x="990" y="335" text-anchor="middle" class="tiny">权限边界</text>
+
+  <!-- Bottom panel 3 -->
+  <rect x="280" y="490" rx="24" ry="24" width="640" height="150" fill="#DCFCE7" stroke="#22C55E" stroke-width="3"/>
+  <text x="600" y="535" text-anchor="middle" class="label">还要继续问吗</text>
+  <circle cx="410" cy="580" r="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="2"/>
+  <circle cx="600" cy="580" r="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="2"/>
+  <circle cx="790" cy="580" r="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="2"/>
+  <line x1="428" y1="580" x2="582" y2="580" stroke="#16A34A" stroke-width="3" stroke-dasharray="8 8"/>
+  <line x1="618" y1="580" x2="772" y2="580" stroke="#16A34A" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="505" y="566" text-anchor="middle" class="small">?</text>
+  <text x="695" y="566" text-anchor="middle" class="small">✓</text>
+  <text x="600" y="615" text-anchor="middle" class="tiny">补问 → 整合 → 安排</text>
+
+  <!-- Arrows from hub -->
+  <line x1="460" y1="300" x2="350" y2="275" stroke="#4B5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="740" y1="300" x2="850" y2="275" stroke="#4B5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="410" x2="600" y2="490" stroke="#4B5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Footer insight -->
+  <rect x="70" y="660" rx="14" ry="14" width="1060" height="34" fill="#111827"/>
+  <text x="600" y="683" text-anchor="middle" style="font:700 18px Arial,Helvetica,sans-serif; fill:#FFFFFF">三种常见失误：听错人｜说漏嘴｜不追问就拍板</text>
+</svg>

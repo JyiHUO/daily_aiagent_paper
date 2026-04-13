@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial,Helvetica,sans-serif; fill:#111827}
+      .subtitle{font:500 18px Arial,Helvetica,sans-serif; fill:#6B7280}
+      .label{font:700 20px Arial,Helvetica,sans-serif; fill:#111827}
+      .small{font:600 18px Arial,Helvetica,sans-serif; fill:#374151}
+      .tiny{font:600 16px Arial,Helvetica,sans-serif; fill:#6B7280}
+      .box{stroke:#CBD5E1; stroke-width:2}
+      .dash{stroke-dasharray:8 8}
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#F8FAFC"/>
+
+  <text x="60" y="70" class="title">统一多用户协议</text>
+  <text x="60" y="102" class="subtitle">关键点：私有输入 ≠ 共享输出</text>
+
+  <!-- Left users -->
+  <g>
+    <rect x="60" y="165" rx="24" ry="24" width="260" height="440" fill="#FFFFFF" class="box"/>
+    <text x="95" y="205" class="label">私有会话</text>
+
+    <rect x="92" y="235" rx="18" ry="18" width="196" height="92" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+    <circle cx="128" cy="281" r="22" fill="#A5B4FC"/>
+    <text x="164" y="275" class="small">Alice</text>
+    <text x="164" y="300" class="tiny">Mon 2–4</text>
+
+    <rect x="92" y="348" rx="18" ry="18" width="196" height="92" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+    <circle cx="128" cy="394" r="22" fill="#93C5FD"/>
+    <text x="164" y="388" class="small">Bob</text>
+    <text x="164" y="413" class="tiny">Mon 3–5</text>
+
+    <rect x="92" y="461" rx="18" ry="18" width="196" height="92" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2"/>
+    <circle cx="128" cy="507" r="22" fill="#6EE7B7"/>
+    <text x="164" y="501" class="small">Carol</text>
+    <text x="164" y="526" class="tiny">Tue 10–11</text>
+  </g>
+
+  <!-- Center agent -->
+  <g>
+    <rect x="390" y="185" rx="34" ry="34" width="360" height="360" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3"/>
+    <text x="510" y="240" class="label">Agent</text>
+
+    <rect x="455" y="280" rx="22" ry="22" width="230" height="92" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2.5"/>
+    <text x="505" y="336" class="small">角色 / 权限</text>
+
+    <rect x="455" y="390" rx="22" ry="22" width="230" height="92" fill="#F3E8FF" stroke="#A855F7" stroke-width="2.5"/>
+    <text x="505" y="446" class="small">筛选后写共享</text>
+  </g>
+
+  <!-- Right shared -->
+  <g>
+    <rect x="840" y="235" rx="24" ry="24" width="290" height="260" fill="#FFFFFF" class="box"/>
+    <text x="900" y="280" class="label">共享上下文</text>
+
+    <rect x="878" y="320" rx="18" ry="18" width="214" height="60" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="2"/>
+    <text x="920" y="358" class="small">可公开状态</text>
+
+    <rect x="878" y="398" rx="18" ry="18" width="214" height="60" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="2"/>
+    <text x="914" y="436" class="small">不泄露私密细节</text>
+  </g>
+
+  <!-- Bottom personalized outputs -->
+  <g>
+    <rect x="180" y="640" rx="20" ry="20" width="840" height="72" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="486" y="684" class="label">按授权返回给每个人</text>
+  </g>
+
+  <!-- Arrows from users to agent -->
+  <line x1="320" y1="281" x2="390" y2="281" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="320" y1="394" x2="390" y2="365" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="320" y1="507" x2="390" y2="449" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Arrow to shared -->
+  <line x1="750" y1="435" x2="840" y2="365" stroke="#2563EB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <text x="765" y="395" class="tiny" fill="#2563EB">仅合规信息</text>
+
+  <!-- Dashed forbidden shortcut -->
+  <line x1="288" y1="281" x2="288" y2="507" stroke="#EF4444" stroke-width="3" class="dash"/>
+  <line x1="288" y1="507" x2="878" y2="428" stroke="#EF4444" stroke-width="3" class="dash"/>
+  <text x="616" y="520" class="tiny" fill="#EF4444">不能直接转述他人私信</text>
+
+  <!-- Arrow down to outputs -->
+  <line x1="570" y1="545" x2="570" y2="640" stroke="#4B5563" stroke-width="3.5" marker-end="url(#arrow)"/>
+
+  <!-- subtle divider -->
+  <line x1="60" y1="130" x2="1140" y2="130" stroke="#E2E8F0" stroke-width="2"/>
+</svg>

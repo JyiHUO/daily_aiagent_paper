@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}
+      .panel{fill:#ffffff;stroke:#d8e0ea;stroke-width:2}
+      .agent{fill:#5b8def}
+      .userA{fill:#6fcf97}
+      .userB{fill:#f2c94c}
+      .userC{fill:#eb5757}
+      .warn{fill:#fff4e5;stroke:#f5b041;stroke-width:2}
+      .bad{fill:#fdecec;stroke:#e57373;stroke-width:2}
+      .good{fill:#eaf7ef;stroke:#6fcf97;stroke-width:2}
+      .title{font:700 28px "Arial",sans-serif;fill:#1f2d3d}
+      .label{font:700 18px "Arial",sans-serif;fill:#243447}
+      .small{font:600 16px "Arial",sans-serif;fill:#425466}
+      .tiny{font:600 14px "Arial",sans-serif;fill:#5b6b7a}
+      .arrow{stroke:#6b7c93;stroke-width:3;fill:none;marker-end:url(#m)}
+      .thin{stroke:#9fb3c8;stroke-width:2;fill:none;marker-end:url(#m2)}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7c93"/>
+    </marker>
+    <marker id="m2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9fb3c8"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="960" height="600"/>
+
+  <text x="480" y="52" text-anchor="middle" class="title">单用户里像助手，多用户里变“摇摆”</text>
+
+  <!-- Left: many users -->
+  <rect x="40" y="100" width="270" height="430" rx="24" class="panel"/>
+  <text x="175" y="135" text-anchor="middle" class="label">多人环境</text>
+
+  <!-- users -->
+  <circle cx="110" cy="215" r="34" class="userA"/>
+  <circle cx="110" cy="310" r="34" class="userB"/>
+  <circle cx="110" cy="405" r="34" class="userC"/>
+  <text x="110" y="221" text-anchor="middle" class="label" fill="#fff">A</text>
+  <text x="110" y="316" text-anchor="middle" class="label" fill="#fff">B</text>
+  <text x="110" y="411" text-anchor="middle" class="label" fill="#fff">C</text>
+
+  <rect x="180" y="205" width="92" height="44" rx="14" class="warn"/>
+  <rect x="180" y="300" width="92" height="44" rx="14" class="warn"/>
+  <rect x="180" y="395" width="92" height="44" rx="14" class="warn"/>
+  <text x="226" y="232" text-anchor="middle" class="small">不同目标</text>
+  <text x="226" y="327" text-anchor="middle" class="small">不同权限</text>
+  <text x="226" y="422" text-anchor="middle" class="small">多轮交互</text>
+
+  <line x1="144" y1="215" x2="180" y2="227" class="thin"/>
+  <line x1="144" y1="310" x2="180" y2="322" class="thin"/>
+  <line x1="144" y1="405" x2="180" y2="417" class="thin"/>
+
+  <!-- Center: agent -->
+  <rect x="360" y="180" width="240" height="250" rx="28" class="agent"/>
+  <text x="480" y="250" text-anchor="middle" font-size="34" font-weight="700" font-family="Arial,sans-serif" fill="#fff">LLM Agent</text>
+
+  <rect x="405" y="292" width="150" height="86" rx="18" fill="#ffffff" opacity="0.18"/>
+  <text x="480" y="325" text-anchor="middle" class="small" fill="#fff">原本按</text>
+  <text x="480" y="353" text-anchor="middle" class="small" fill="#fff">单用户逻辑</text>
+
+  <path d="M310 240 C340 240,340 240,360 240" class="arrow"/>
+  <path d="M310 320 C340 320,340 320,360 305" class="arrow"/>
+  <path d="M310 400 C340 400,340 400,360 370" class="arrow"/>
+
+  <!-- Right: three failures -->
+  <rect x="650" y="88" width="270" height="452" rx="24" class="panel"/>
+  <text x="785" y="123" text-anchor="middle" class="label">系统短板</text>
+
+  <rect x="680" y="150" width="210" height="96" rx="18" class="bad"/>
+  <text x="785" y="184" text-anchor="middle" class="label">冲突时不稳定</text>
+  <path d="M715 214 L750 188 L785 214 L820 188 L855 214" stroke="#e57373" stroke-width="5" fill="none"/>
+  <text x="785" y="234" text-anchor="middle" class="tiny">谁优先，会摇摆</text>
+
+  <rect x="680" y="266" width="210" height="96" rx="18" class="bad"/>
+  <text x="785" y="300" text-anchor="middle" class="label">隐私越聊越松</text>
+  <path d="M715 338 C745 300,785 300,855 334" stroke="#e57373" stroke-width="5" fill="none"/>
+  <text x="785" y="350" text-anchor="middle" class="tiny">轮次增加，保护下降</text>
+
+  <rect x="680" y="382" width="210" height="118" rx="18" class="bad"/>
+  <text x="785" y="416" text-anchor="middle" class="label">协调效率卡住</text>
+  <path d="M720 455 L760 455 L760 435 L805 435 L805 475 L850 475" stroke="#e57373" stroke-width="5" fill="none"/>
+  <text x="785" y="482" text-anchor="middle" class="tiny">反复追问，甚至过早决定</text>
+
+  <path d="M600 305 C625 305,632 305,650 305" class="arrow"/>
+
+  <!-- Bottom takeaway -->
+  <rect x="260" y="540" width="440" height="36" rx="18" class="good"/>
+  <text x="480" y="564" text-anchor="middle" class="small">不是“提示再清楚点”就能补上的问题</text>
+</svg>

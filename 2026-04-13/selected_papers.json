@@ -1,0 +1,83 @@
+[
+  {
+    "title": "HiL-Bench (Human-in-Loop Benchmark): Do Agents Know When to Ask for Help?",
+    "authors": [
+      "Mohamed Elfeki",
+      "Tu Trinh",
+      "Kelvin Luu",
+      "Guangze Luo",
+      "Nathan Hunt",
+      "Ernesto Montoya",
+      "Nandan Marwaha",
+      "Yannis He",
+      "Charles Wang",
+      "Fernando Crabedo",
+      "Alessa Castilo",
+      "Bing Liu"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.09408",
+    "pdf_url": "https://arxiv.org/pdf/2604.09408.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_eval",
+    "relevance_score": 96,
+    "value_score": 93,
+    "interesting_score": 90,
+    "innovation_score": 88,
+    "frontier_score": 92,
+    "verdict": "must_read",
+    "reason": "评测 Agent 何时应请求人类帮助，这是高价值且长期缺失的能力边界问题，对实际部署和安全都很关键。",
+    "composite_score": 92.46,
+    "arxiv_url": "https://arxiv.org/abs/2604.09408"
+  },
+  {
+    "title": "BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning",
+    "authors": [
+      "Guiyao Tie",
+      "Jiawen Shi",
+      "Pan Zhou",
+      "Lichao Sun"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.09378",
+    "pdf_url": "https://arxiv.org/pdf/2604.09378.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 95,
+    "value_score": 90,
+    "interesting_score": 88,
+    "innovation_score": 86,
+    "frontier_score": 91,
+    "verdict": "must_read",
+    "reason": "直接研究技能模块被投毒后的代理后门风险，命中 agent skill 供应链安全这一关键空白，对工具化代理部署很有现实意义。",
+    "composite_score": 90.69,
+    "arxiv_url": "https://arxiv.org/abs/2604.09378"
+  },
+  {
+    "title": "Multi-User Large Language Model Agents",
+    "authors": [
+      "Shu Yang",
+      "Shenzhe Zhu",
+      "Hao Zhu",
+      "José Ramón Enríquez",
+      "Di Wang",
+      "Alex Pentland",
+      "Michiel A. Bakker",
+      "Jiaxin Pei"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.08567",
+    "pdf_url": "https://arxiv.org/pdf/2604.08567.pdf",
+    "primary_category": "cs.CL",
+    "agent_theme": "multi_agent",
+    "relevance_score": 95,
+    "value_score": 88,
+    "interesting_score": 91,
+    "innovation_score": 86,
+    "frontier_score": 90,
+    "verdict": "must_read",
+    "reason": "直接研究多用户LLM Agent，切中现实部署中的偏好冲突、共享上下文与协同决策，是很有前景的Agent系统方向。",
+    "composite_score": 90.64,
+    "arxiv_url": "https://arxiv.org/abs/2604.08567"
+  }
+]
