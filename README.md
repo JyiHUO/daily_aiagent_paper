@@ -20,6 +20,9 @@
 | 2026-04-13 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HiL-Bench (Human-in-Loop Benchmark): Do Agents Know When to Ask for Help? | [2026-04-13/daily_report.md](2026-04-13/daily_report.md) |
 |  |  |  | 2 | BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning |  |
 |  |  |  | 3 | Multi-User Large Language Model Agents |  |
+| 2026-04-10 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | ORACLE-SWE: Quantifying the Contribution of Oracle Information Signals on SWE Agents | [2026-04-10/daily_report.md](2026-04-10/daily_report.md) |
+|  |  |  | 2 | LogAct: Enabling Agentic Reliability via Shared Logs |  |
+|  |  |  | 3 | ClawBench: Can AI Agents Complete Everyday Online Tasks? |  |
 | 2026-04-09 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | RAGEN-2: Reasoning Collapse in Agentic RL | [2026-04-09/daily_report.md](2026-04-09/daily_report.md) |
 |  |  |  | 2 | The Art of Building Verifiers for Computer Use Agents |  |
 |  |  |  | 3 | SkillTrojan: Backdoor Attacks on Skill-Based Agent Systems |  |

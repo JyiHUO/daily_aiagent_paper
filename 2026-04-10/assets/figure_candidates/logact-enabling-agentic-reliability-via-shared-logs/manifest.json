@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/downloaded_pdfs/logact-enabling-agentic-reliability-via-shared-logs.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-45",
+      "page_index": 0,
+      "caption": "Figure 1. Existing ReAct / CodeAct agents run in an impera- tive loop; LogAct is a state machine playing a shared log.",
+      "clip": [
+        299.9549865722656,
+        144.64808654785156,
+        580.7276000976562,
+        476.015625
+      ],
+      "clip_area": 93038.92980868509,
+      "page_area": 484704.0,
+      "text_density": 0.12947219758510725,
+      "kind": "drawing_cluster_with_caption",
+      "score": 65.06543403165672,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-13",
+      "page_index": 3,
+      "caption": "Figure 2. The LogAct state machine. The agent cycles through four stages; each stage is triggered by playing a typed log entry and concludes by appending one.",
+      "clip": [
+        46.09632873535156,
+        85.30804443359375,
+        301.9570007324219,
+        293.4440612792969
+      ],
+      "clip_area": 53253.82113693515,
+      "page_area": 484704.0,
+      "text_density": 0.12299526109396185,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.01199345810602,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-44",
+      "page_index": 3,
+      "caption": "Figure 3. A deconstructed LogAct agent on the AgentBus. Physical nodes – Driver, Voter(s), Decider, and Executor – each append and play a subset of entry types.",
+      "clip": [
+        315.198486328125,
+        70.77760314941406,
+        558.5975952148438,
+        238.0531005859375
+      ],
+      "clip_area": 40714.70701463241,
+      "page_area": 484704.0,
+      "text_density": 0.16660015463477854,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.256376355409202,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/03-p4-drawing_cluster_with_caption.png",
+      "filename": "03-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-57",
+      "page_index": 9,
+      "caption": "Figure 7. Voters can be hot-swapped. We first add a rule- based Voter to stop attacks; and later, add a second LLM- based Voter to restore Utility. Each switch involves a dynamic change of Decider policy via the AgentBus.",
+      "clip": [
+        64.32307434082031,
+        330.5120849609375,
+        267.7555694580078,
+        513.4231872558594
+      ],
+      "clip_area": 37210.06192449108,
+      "page_area": 484704.0,
+      "text_density": 0.0864331040736192,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.027458888077195,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/04-p10-drawing_cluster_with_caption.png",
+      "filename": "04-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-13",
+      "page_index": 3,
+      "caption": "Figure 2. The LogAct state machine. The agent cycles through four stages; each stage is triggered by playing a typed log entry and concludes by appending one.",
+      "clip": [
+        23.4,
+        18.0,
+        324.6433349609375,
+        292.2597961425781
+      ],
+      "clip_area": 82618.93563569711,
+      "page_area": 484704.0,
+      "text_density": 0.08232151420579542,
+      "kind": "captioned_figure",
+      "score": 24.778697321382243,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/05-p4-captioned_figure.png",
+      "filename": "05-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-25",
+      "page_index": 8,
+      "caption": "Figure 5. LogAct imposes low overhead. For a simple task (write a C file, compile, run): (Top) most time is spent in inference rather than voting / deciding; (Middle) logging imposes low storage overhead (2.6KB/s); (Bottom) inference continues to dominate even with slower backends.",
+      "clip": [
+        334.1045837402344,
+        204.03878784179688,
+        572.0914306640625,
+        367.96875
+      ],
+      "clip_area": 39013.174810373224,
+      "page_area": 484704.0,
+      "text_density": 0.06912383372417522,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.43347972011526,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/06-p9-drawing_cluster_with_caption.png",
+      "filename": "06-p9-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/logact-enabling-agentic-reliability-via-shared-logs/contact-sheet.svg"
+}

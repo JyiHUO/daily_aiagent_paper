@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b6b8a"/>
+    </marker>
+    <style>
+      .title{font:700 34px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#18253a}
+      .subtitle{font:600 18px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#5b6b8a}
+      .label{font:700 20px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#20324d}
+      .small{font:600 16px system-ui, -apple-system, Segoe UI, Roboto, sans-serif; fill:#5b6b8a}
+      .bigNum{font:800 64px system-ui, -apple-system, Segoe UI, Roboto, sans-serif}
+      .midNum{font:800 40px system-ui, -apple-system, Segoe UI, Roboto, sans-serif}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <text x="70" y="70" class="title">同样是 Web Agent，到了真实网站就大掉分</text>
+  <text x="70" y="105" class="subtitle">ClawBench 暴露 benchmark 幻觉</text>
+
+  <!-- Left panel -->
+  <g transform="translate(70,150)">
+    <rect x="0" y="0" rx="26" ry="26" width="430" height="460" fill="#ffffff" stroke="#cfd9ee" stroke-width="2"/>
+    <text x="32" y="48" class="label">传统 benchmark</text>
+    <text x="32" y="78" class="small">静态 / 可控</text>
+
+    <!-- calm webpage icon -->
+    <rect x="38" y="120" width="354" height="210" rx="18" fill="#f5f8ff" stroke="#d7e2f5" stroke-width="2"/>
+    <rect x="38" y="120" width="354" height="34" rx="18" fill="#e8f0ff"/>
+    <circle cx="64" cy="137" r="5" fill="#9db4e8"/>
+    <circle cx="82" cy="137" r="5" fill="#9db4e8"/>
+    <circle cx="100" cy="137" r="5" fill="#9db4e8"/>
+    <rect x="66" y="176" width="118" height="18" rx="9" fill="#dce8ff"/>
+    <rect x="66" y="208" width="210" height="16" rx="8" fill="#dce8ff"/>
+    <rect x="66" y="234" width="180" height="16" rx="8" fill="#dce8ff"/>
+    <rect x="66" y="270" width="92" height="34" rx="10" fill="#89aef7"/>
+
+    <!-- bar -->
+    <line x1="74" y1="404" x2="356" y2="404" stroke="#d6dfef" stroke-width="2"/>
+    <rect x="132" y="280" width="86" height="124" rx="14" fill="#6ea8fe"/>
+    <text x="175" y="262" text-anchor="middle" class="small">65–75%</text>
+  </g>
+
+  <!-- center arrow -->
+  <g>
+    <line x1="530" y1="378" x2="670" y2="378" stroke="#5b6b8a" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="600" y="348" text-anchor="middle" class="label" fill="#5b6b8a">换到真实站点</text>
+  </g>
+
+  <!-- Right panel -->
+  <g transform="translate(700,150)">
+    <rect x="0" y="0" rx="26" ry="26" width="430" height="460" fill="#ffffff" stroke="#cfd9ee" stroke-width="2"/>
+    <text x="32" y="48" class="label">ClawBench</text>
+    <text x="32" y="78" class="small">真实 / 动态 / 多步骤</text>
+
+    <!-- messy webpage icon -->
+    <rect x="38" y="120" width="354" height="210" rx="18" fill="#fff7f5" stroke="#f1d7cf" stroke-width="2"/>
+    <rect x="38" y="120" width="354" height="34" rx="18" fill="#ffe8e2"/>
+    <circle cx="64" cy="137" r="5" fill="#e8a39a"/>
+    <circle cx="82" cy="137" r="5" fill="#e8a39a"/>
+    <circle cx="100" cy="137" r="5" fill="#e8a39a"/>
+
+    <rect x="58" y="170" width="114" height="74" rx="14" fill="#ffffff" stroke="#f1c8bb" stroke-width="2"/>
+    <text x="115" y="214" text-anchor="middle" class="small" fill="#b55d45">cookie</text>
+
+    <rect x="194" y="176" width="164" height="16" rx="8" fill="#ffd7cc"/>
+    <rect x="194" y="204" width="132" height="16" rx="8" fill="#ffd7cc"/>
+    <rect x="194" y="232" width="150" height="16" rx="8" fill="#ffd7cc"/>
+    <rect x="194" y="266" width="108" height="34" rx="10" fill="#f28b6b"/>
+
+    <!-- bars -->
+    <line x1="74" y1="404" x2="356" y2="404" stroke="#ead9d3" stroke-width="2"/>
+    <rect x="116" y="347" width="72" height="57" rx="12" fill="#ff9b7b"/>
+    <rect x="228" y="389" width="72" height="15" rx="12" fill="#f4b8a7"/>
+    <text x="152" y="334" text-anchor="middle" class="small">33.3%</text>
+    <text x="264" y="374" text-anchor="middle" class="small">6.5%</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <g transform="translate(210,630)">
+    <rect x="0" y="-30" rx="18" ry="18" width="780" height="56" fill="#1f2f4d"/>
+    <text x="390" y="7" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="26" font-weight="800" fill="#ffffff">
+      沙盒里像优等生，真实办事时常掉链子
+    </text>
+  </g>
+</svg>

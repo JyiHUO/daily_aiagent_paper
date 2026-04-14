@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/downloaded_pdfs/clawbench-can-ai-agents-complete-everyday-online-tasks.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-147",
+      "page_index": 0,
+      "caption": "Figure 2: Main results: success rate on C LAW B ENCH for 7 frontier models. Even the strongest model (Claude Sonnet 4.6) completes only 33.3% of tasks, while two of seven models score below 5%. See Table 2 for the per-category breakdown.",
+      "clip": [
+        90.0,
+        525.4951782226562,
+        522.0067443847656,
+        676.3829956054688
+      ],
+      "clip_area": 65184.554754871875,
+      "page_area": 484704.0,
+      "text_density": 0.1473338473095687,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.684241992035567,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-37",
+      "page_index": 5,
+      "caption": "Figure 4: Task taxonomy of C LAW B ENCH . Inner ring: 8 high-level category groups; outer ring: 15 fine-grained categories. The dataset spans 153 tasks across diverse real-world domains.",
+      "clip": [
+        90.0,
+        41.50196838378906,
+        604.0,
+        320.65997314453125
+      ],
+      "clip_area": 143487.21444702148,
+      "page_area": 484704.0,
+      "text_density": 0.15726272165343844,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.364236700793693,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/02-p6-drawing_cluster_with_caption.png",
+      "filename": "02-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-3-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        211.0731658935547,
+        394.6787414550781,
+        333.99359130859375,
+        517.5991821289062
+      ],
+      "clip_area": 15109.432859831024,
+      "page_area": 484704.0,
+      "text_density": 0.06948727842571646,
+      "kind": "embedded_image",
+      "xref": 570,
+      "score": 7.167882587331456,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/03-p3-embedded_image.png",
+      "filename": "03-p3-embedded_image.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        89.6812973022461,
+        247.10104370117188,
+        526.8552856445312,
+        474.004638671875
+      ],
+      "clip_area": 99196.34958254476,
+      "page_area": 484704.0,
+      "text_density": 0.2295731572997943,
+      "kind": "drawing_cluster",
+      "score": 6.127792224040617,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/04-p1-drawing_cluster.png",
+      "filename": "04-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        92.0,
+        43.50196838378906,
+        604.0,
+        318.65997314453125
+      ],
+      "clip_area": 140880.8984375,
+      "page_area": 484704.0,
+      "text_density": 0.15474889728928684,
+      "kind": "drawing_cluster",
+      "score": 3.51506616264279,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/05-p6-drawing_cluster.png",
+      "filename": "05-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-block-37",
+      "page_index": 5,
+      "caption": "Figure 4: Task taxonomy of C LAW B ENCH . Inner ring: 8 high-level category groups; outer ring: 15 fine-grained categories. The dataset spans 153 tasks across diverse real-world domains.",
+      "clip": [
+        77.4,
+        18.0,
+        352.63762817382815,
+        298.138916015625
+      ],
+      "clip_area": 77104.77080332788,
+      "page_area": 484704.0,
+      "text_density": 0.1232878269573656,
+      "kind": "captioned_figure",
+      "score": 3.2594500581505956,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/06-p6-captioned_figure.png",
+      "filename": "06-p6-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/clawbench-can-ai-agents-complete-everyday-online-tasks/contact-sheet.svg"
+}

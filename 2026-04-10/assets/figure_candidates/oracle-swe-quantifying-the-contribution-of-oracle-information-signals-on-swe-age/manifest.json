@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/downloaded_pdfs/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-43",
+      "page_index": 2,
+      "caption": "Figure 1: Extraction pipeline of oracle information signals for Code Search, including Edit Location, Execution Context and API Usage.",
+      "clip": [
+        109.8010025024414,
+        65.86268615722656,
+        502.4129333496094,
+        273.77301025390625
+      ],
+      "clip_area": 81628.07378665789,
+      "page_area": 484704.0,
+      "text_density": 0.20167317997654785,
+      "kind": "drawing_cluster_with_caption",
+      "score": 54.60658779903666,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-47",
+      "page_index": 3,
+      "caption": "Figure 3: Validation pipeline: a stronger model extracts key factors and a weaker model resolves issue.",
+      "clip": [
+        95.4280014038086,
+        65.86122131347656,
+        516.5557250976562,
+        242.60498046875
+      ],
+      "clip_area": 74431.69697015395,
+      "page_area": 484704.0,
+      "text_density": 0.15261891596789998,
+      "kind": "drawing_cluster_with_caption",
+      "score": 45.469883897149934,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-10-0",
+      "page_index": 3,
+      "caption": "Figure 3: Validation pipeline: a stronger model extracts key factors and a weaker model resolves issue.",
+      "clip": [
+        410.2632751464844,
+        96.58585357666016,
+        510.2153015136719,
+        215.48141479492188
+      ],
+      "clip_area": 11883.85226982925,
+      "page_area": 484704.0,
+      "text_density": 0.06231502966785731,
+      "kind": "embedded_image_with_caption",
+      "xref": 1879,
+      "score": 42.1320428029981,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-12-drawing-caption-27",
+      "page_index": 12,
+      "caption": "Figure 7: (a) Proportion of SWE agents’ exploration pattern, taken directly from ( Bouzenia & Pradel , 2025 ). (b) Proportion of SWE-Agent’s failure modes, taken directly from ( Yang et al. , 2024 ).",
+      "clip": [
+        90.0,
+        77.86642456054688,
+        521.9963989257812,
+        249.08599853515625
+      ],
+      "clip_area": 73966.23938263766,
+      "page_area": 484704.0,
+      "text_density": 0.1535370750998717,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.40962259825923,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/04-p13-drawing_cluster_with_caption.png",
+      "filename": "04-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-1",
+      "page_index": 4,
+      "caption": "Figure 1 illustrates the pipeline used to extract oracle information related to code search.",
+      "clip": [
+        77.4,
+        18.0,
+        490.9472595214844,
+        146.34954833984375
+      ],
+      "clip_area": 53078.60397676267,
+      "page_area": 484704.0,
+      "text_density": 0.45980144326570915,
+      "kind": "captioned_figure",
+      "score": 22.58976226640847,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/05-p5-captioned_figure.png",
+      "filename": "05-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-12-block-27",
+      "page_index": 12,
+      "caption": "Figure 7: (a) Proportion of SWE agents’ exploration pattern, taken directly from ( Bouzenia & Pradel , 2025 ). (b) Proportion of SWE-Agent’s failure modes, taken directly from ( Yang et al. , 2024 ).",
+      "clip": [
+        77.4,
+        18.0,
+        535.8461547851563,
+        249.45452880859375
+      ],
+      "clip_area": 106109.43873991,
+      "page_area": 484704.0,
+      "text_density": 0.10702686005892222,
+      "kind": "captioned_figure",
+      "score": 21.557382160241445,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/06-p13-captioned_figure.png",
+      "filename": "06-p13-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-10/assets/figure_candidates/oracle-swe-quantifying-the-contribution-of-oracle-information-signals-on-swe-age/contact-sheet.svg"
+}

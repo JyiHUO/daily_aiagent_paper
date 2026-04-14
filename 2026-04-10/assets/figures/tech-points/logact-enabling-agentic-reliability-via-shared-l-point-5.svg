@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .title{font:700 34px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#111827}
+      .subtitle{font:500 18px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#4b5563}
+      .label{font:700 22px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#111827}
+      .small{font:600 18px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#374151}
+      .tiny{font:600 16px "Arial","PingFang SC","Microsoft YaHei",sans-serif; fill:#6b7280}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="720" fill="#f8fafc"/>
+
+  <text x="60" y="70" class="title">双投票提安全</text>
+  <text x="60" y="102" class="subtitle">规则兜底，LLM 纠正误杀</text>
+
+  <!-- Shared log -->
+  <rect x="420" y="150" width="360" height="420" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="450" y="195" width="300" height="62" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="600" y="233" text-anchor="middle" class="label">共享日志</text>
+
+  <rect x="470" y="295" width="260" height="56" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="600" y="330" text-anchor="middle" class="small">提议：delete *.tmp</text>
+
+  <rect x="470" y="385" width="260" height="64" rx="14" fill="#ecfeff" stroke="#67e8f9" stroke-width="2"/>
+  <text x="600" y="423" text-anchor="middle" class="small">票据写回日志</text>
+
+  <rect x="470" y="485" width="260" height="56" rx="14" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="600" y="520" text-anchor="middle" class="small">commit / block</text>
+
+  <!-- Rule voter -->
+  <rect x="90" y="240" width="240" height="150" rx="24" fill="#fee2e2" stroke="#fca5a5" stroke-width="3"/>
+  <text x="210" y="290" text-anchor="middle" class="label">规则 Voter</text>
+  <text x="210" y="335" text-anchor="middle" class="small">看到 “delete”</text>
+  <text x="210" y="365" text-anchor="middle" class="small" fill="#b91c1c">默认拦截</text>
+
+  <!-- LLM voter -->
+  <rect x="870" y="240" width="240" height="150" rx="24" fill="#dcfce7" stroke="#86efac" stroke-width="3"/>
+  <text x="990" y="290" text-anchor="middle" class="label">LLM Voter</text>
+  <text x="990" y="335" text-anchor="middle" class="small">看上下文与票据</text>
+  <text x="990" y="365" text-anchor="middle" class="small" fill="#047857">正常清理可放行</text>
+
+  <!-- Arrows to log -->
+  <line x1="330" y1="315" x2="455" y2="315" stroke="#dc2626" stroke-width="5" marker-end="url(#arrowRed)"/>
+  <line x1="870" y1="315" x2="745" y2="315" stroke="#059669" stroke-width="5" marker-end="url(#arrowGreen)"/>
+
+  <!-- OR decision -->
+  <circle cx="600" cy="620" r="52" fill="#ede9fe" stroke="#a78bfa" stroke-width="3"/>
+  <text x="600" y="613" text-anchor="middle" class="label">OR</text>
+  <text x="600" y="638" text-anchor="middle" class="tiny">双投票</text>
+
+  <line x1="600" y1="540" x2="600" y2="568" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Executor / result -->
+  <rect x="880" y="545" width="220" height="100" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="990" y="588" text-anchor="middle" class="label">执行器</text>
+  <text x="990" y="620" text-anchor="middle" class="small">安全动作继续</text>
+
+  <line x1="652" y1="620" x2="880" y2="620" stroke="#059669" stroke-width="5" marker-end="url(#arrowGreen)"/>
+
+  <!-- blocked danger mini cue -->
+  <line x1="548" y1="650" x2="455" y2="650" stroke="#dc2626" stroke-width="5" marker-end="url(#arrowRed)"/>
+  <text x="395" y="656" text-anchor="end" class="small" fill="#b91c1c">危险删除仍挡住</text>
+
+  <!-- Bottom metrics -->
+  <rect x="70" y="560" width="250" height="92" rx="20" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+  <text x="195" y="598" text-anchor="middle" class="small">规则单投票</text>
+  <text x="195" y="628" text-anchor="middle" class="tiny">安全高，误杀多</text>
+
+  <rect x="70" y="430" width="250" height="92" rx="20" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="195" y="468" text-anchor="middle" class="small">双投票</text>
+  <text x="195" y="498" text-anchor="middle" class="tiny">ASR 1.4%  效用 78.4%</text>
+</svg>

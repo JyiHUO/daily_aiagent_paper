@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title{font:700 34px Arial, Helvetica, sans-serif; fill:#111827}
+      .subtitle{font:500 18px Arial, Helvetica, sans-serif; fill:#6B7280}
+      .label{font:700 20px Arial, Helvetica, sans-serif; fill:#111827}
+      .small{font:600 16px Arial, Helvetica, sans-serif; fill:#374151}
+      .tiny{font:600 14px Arial, Helvetica, sans-serif; fill:#4B5563}
+      .box{fill:#FFFFFF; stroke:#D1D5DB; stroke-width:2}
+      .soft{fill:#F8FAFC; stroke:#CBD5E1; stroke-width:2}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#F3F6FB"/>
+
+  <text x="60" y="70" class="title">五层轨迹评测</text>
+  <text x="60" y="102" class="subtitle">不是只看最终页面，而是看完整过程</text>
+
+  <!-- Left: 5-layer trace -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="150" rx="26" ry="26" width="360" height="470" class="box"/>
+  </g>
+  <text x="90" y="195" class="label">五层记录</text>
+
+  <!-- layers -->
+  <g>
+    <rect x="90" y="220" rx="14" ry="14" width="300" height="56" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="2"/>
+    <polygon points="108,248 108,234 124,241" fill="#0284C7"/>
+    <rect x="130" y="232" width="32" height="18" rx="4" fill="#BAE6FD" stroke="#0284C7"/>
+    <text x="180" y="254" class="small">视频回放</text>
+
+    <rect x="90" y="288" rx="14" ry="14" width="300" height="56" fill="#DCFCE7" stroke="#86EFAC" stroke-width="2"/>
+    <rect x="108" y="301" width="24" height="18" rx="3" fill="#FFFFFF" stroke="#16A34A"/>
+    <circle cx="144" cy="310" r="5" fill="#16A34A"/>
+    <rect x="154" y="304" width="12" height="12" fill="#BBF7D0"/>
+    <text x="180" y="322" class="small">每步截图</text>
+
+    <rect x="90" y="356" rx="14" ry="14" width="300" height="56" fill="#FEF3C7" stroke="#FCD34D" stroke-width="2"/>
+    <path d="M110 385 C125 370, 145 400, 160 385 S195 370, 210 385" fill="none" stroke="#D97706" stroke-width="3"/>
+    <text x="180" y="390" class="small">HTTP 流量</text>
+
+    <rect x="90" y="424" rx="14" ry="14" width="300" height="56" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="2"/>
+    <rect x="108" y="438" width="26" height="18" rx="4" fill="#DDD6FE" stroke="#7C3AED"/>
+    <path d="M138 447 h14" stroke="#7C3AED" stroke-width="3"/>
+    <path d="M108 462 h44" stroke="#7C3AED" stroke-width="3"/>
+    <text x="180" y="458" class="small">消息 / 工具</text>
+
+    <rect x="90" y="492" rx="14" ry="14" width="300" height="56" fill="#FCE7F3" stroke="#FDA4AF" stroke-width="2"/>
+    <cursor x="110" y="505" width="18" height="24" fill="#E11D48"/>
+    <path d="M108 507 L126 518 L118 520 L122 530 L116 532 L112 521 L106 526 Z" fill="#E11D48"/>
+    <rect x="142" y="507" width="26" height="20" rx="4" fill="#FFE4E6" stroke="#E11D48"/>
+    <text x="180" y="526" class="small">点击 / 键盘</text>
+  </g>
+
+  <!-- Center: evaluator -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="190" rx="28" ry="28" width="270" height="390" fill="#111827"/>
+  </g>
+  <text x="605" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">Agentic</text>
+  <text x="605" y="280" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">Evaluator</text>
+
+  <g>
+    <rect x="515" y="320" rx="12" ry="12" width="180" height="56" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
+    <text x="605" y="355" text-anchor="middle" class="small" fill="#E5E7EB">对齐参考轨迹</text>
+
+    <rect x="515" y="392" rx="12" ry="12" width="180" height="56" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
+    <text x="605" y="427" text-anchor="middle" class="small" fill="#E5E7EB">字段 / 顺序 / 终态</text>
+
+    <rect x="515" y="464" rx="12" ry="12" width="180" height="56" fill="#1F2937" stroke="#4B5563" stroke-width="2"/>
+    <text x="605" y="499" text-anchor="middle" class="small" fill="#E5E7EB">结构化理由</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M420 385 C445 385, 445 385, 460 385" fill="none" stroke="#4B5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M740 385 C770 385, 785 385, 810 385" fill="none" stroke="#4B5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Right: outcome + example -->
+  <g filter="url(#shadow)">
+    <rect x="810" y="150" rx="26" ry="26" width="330" height="470" class="box"/>
+  </g>
+  <text x="840" y="195" class="label">判定结果</text>
+
+  <g>
+    <rect x="840" y="220" rx="16" ry="16" width="120" height="66" fill="#DCFCE7" stroke="#22C55E" stroke-width="2"/>
+    <path d="M872 253 l16 16 l36 -36" fill="none" stroke="#16A34A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="900" y="306" text-anchor="middle" class="small">PASS</text>
+
+    <rect x="980" y="220" rx="16" ry="16" width="120" height="66" fill="#FEE2E2" stroke="#F87171" stroke-width="2"/>
+    <path d="M1014 239 l32 32 M1046 239 l-32 32" stroke="#DC2626" stroke-width="6" stroke-linecap="round"/>
+    <text x="1040" y="306" text-anchor="middle" class="small">FAIL</text>
+  </g>
+
+  <!-- Mini scene -->
+  <g>
+    <rect x="840" y="340" rx="18" ry="18" width="260" height="210" class="soft"/>
+    <text x="860" y="372" class="small">求职表单</text>
+
+    <rect x="870" y="392" width="110" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="870" y="426" width="110" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="870" y="460" width="110" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="995" y="410" class="tiny">姓名 ✓</text>
+    <text x="995" y="444" class="tiny">邮箱 ✓</text>
+    <text x="995" y="478" class="tiny">简历 ✓</text>
+
+    <rect x="870" y="502" width="82" height="22" rx="11" fill="#DBEAFE" stroke="#93C5FD"/>
+    <text x="911" y="517" text-anchor="middle" class="tiny">短信验证</text>
+    <text x="860" y="545" class="tiny">前面都对 → 可通过</text>
+  </g>
+
+  <!-- small callout -->
+  <g>
+    <rect x="1045" y="510" rx="12" ry="12" width="80" height="34" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="1085" y="532" text-anchor="middle" class="tiny">CAPTCHA</text>
+    <text x="1036" y="568" class="tiny">未尝试 → FAIL</text>
+  </g>
+</svg>

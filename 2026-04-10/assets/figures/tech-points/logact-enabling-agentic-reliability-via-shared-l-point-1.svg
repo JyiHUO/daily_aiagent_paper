@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .title{font:700 30px sans-serif; fill:#111827}
+      .subtitle{font:500 15px sans-serif; fill:#6b7280}
+      .label{font:700 18px sans-serif; fill:#111827}
+      .small{font:600 14px sans-serif; fill:#374151}
+      .tiny{font:600 13px sans-serif; fill:#6b7280}
+      .box{stroke:#cbd5e1; stroke-width:2}
+      .shadow{filter:url(#none)}
+    </style>
+  </defs>
+
+  <rect width="960" height="540" fill="#f8fafc"/>
+
+  <text x="480" y="48" text-anchor="middle" class="title">先记日志再行动</text>
+  <text x="480" y="74" text-anchor="middle" class="subtitle">危险动作先公开，再决定要不要执行</text>
+
+  <!-- Left: old way -->
+  <g transform="translate(50,120)">
+    <rect x="0" y="0" width="360" height="330" rx="22" fill="#ffffff" class="box"/>
+    <text x="180" y="36" text-anchor="middle" class="label">传统 Agent</text>
+
+    <rect x="45" y="82" width="110" height="62" rx="14" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
+    <text x="100" y="119" text-anchor="middle" class="small">模型</text>
+
+    <rect x="205" y="82" width="110" height="62" rx="14" fill="#fee2e2" stroke="#fca5a5" stroke-width="2"/>
+    <text x="260" y="119" text-anchor="middle" class="small">环境</text>
+
+    <line x1="155" y1="113" x2="205" y2="113" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="205" y1="132" x2="155" y2="132" stroke="#9ca3af" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <text x="180" y="190" text-anchor="middle" class="tiny">想完就做</text>
+
+    <path d="M105 245 C145 210, 215 210, 255 245" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#arrowRed)"/>
+    <text x="180" y="272" text-anchor="middle" class="small" fill="#dc2626">删除生产库</text>
+
+    <circle cx="300" cy="245" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="300" y="251" text-anchor="middle" class="small" fill="#dc2626">!</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="450" y1="110" x2="450" y2="460" stroke="#d1d5db" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- Right: LogAct -->
+  <g transform="translate(500,120)">
+    <rect x="0" y="0" width="410" height="330" rx="22" fill="#ffffff" class="box"/>
+    <text x="205" y="36" text-anchor="middle" class="label">LogAct</text>
+
+    <!-- shared log -->
+    <rect x="80" y="72" width="250" height="88" rx="18" fill="#ede9fe" stroke="#a78bfa" stroke-width="2.5"/>
+    <text x="205" y="102" text-anchor="middle" class="small">共享日志</text>
+
+    <rect x="105" y="116" width="200" height="28" rx="10" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+    <text x="205" y="135" text-anchor="middle" class="tiny">intention: 删除生产库</text>
+
+    <!-- voter/decider -->
+    <rect x="40" y="206" width="120" height="62" rx="14" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+    <text x="100" y="244" text-anchor="middle" class="small">投票 / 决策</text>
+
+    <!-- executor -->
+    <rect x="250" y="206" width="120" height="62" rx="14" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+    <text x="310" y="244" text-anchor="middle" class="small">执行器</text>
+
+    <line x1="120" y1="160" x2="108" y2="206" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="290" y1="160" x2="302" y2="206" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- abort sign -->
+    <line x1="160" y1="237" x2="250" y2="237" stroke="#dc2626" stroke-width="5" marker-end="url(#arrowRed)"/>
+    <circle cx="205" cy="237" r="26" fill="#ffffff" stroke="#dc2626" stroke-width="4"/>
+    <line x1="190" y1="222" x2="220" y2="252" stroke="#dc2626" stroke-width="4"/>
+    <line x1="220" y1="222" x2="190" y2="252" stroke="#dc2626" stroke-width="4"/>
+
+    <text x="205" y="296" text-anchor="middle" class="small" fill="#dc2626">abort → 不执行</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <g transform="translate(225,472)">
+    <rect x="0" y="0" width="510" height="42" rx="18" fill="#ecfeff" stroke="#67e8f9" stroke-width="2"/>
+    <text x="255" y="27" text-anchor="middle" class="small">动作先可见、可检查、可中止</text>
+  </g>
+</svg>

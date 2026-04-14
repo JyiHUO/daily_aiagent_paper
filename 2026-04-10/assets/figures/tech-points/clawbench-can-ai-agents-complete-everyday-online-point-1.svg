@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
+    </marker>
+    <style>
+      .title{font:700 34px Arial, Helvetica, sans-serif; fill:#111827}
+      .subtitle{font:500 18px Arial, Helvetica, sans-serif; fill:#4B5563}
+      .label{font:700 20px Arial, Helvetica, sans-serif; fill:#111827}
+      .small{font:600 16px Arial, Helvetica, sans-serif; fill:#374151}
+      .tiny{font:600 15px Arial, Helvetica, sans-serif; fill:#6B7280}
+      .card{fill:#FFFFFF; stroke:#D1D5DB; stroke-width:2}
+      .soft{fill:#F9FAFB; stroke:#E5E7EB; stroke-width:2}
+      .accent{fill:#EEF2FF; stroke:#6366F1; stroke-width:2.5}
+      .green{fill:#ECFDF5; stroke:#10B981; stroke-width:2.5}
+      .orange{fill:#FFF7ED; stroke:#F59E0B; stroke-width:2.5}
+      .line{stroke:#4B5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .dash{stroke:#9CA3AF; stroke-width:3; fill:none; stroke-dasharray:8 8}
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+
+  <text x="60" y="70" class="title">ClawBench: 考“把事办成”</text>
+  <text x="60" y="102" class="subtitle">不是只读网页，而是真实在线完成 write-heavy 日常任务</text>
+
+  <!-- Left: old benchmark -->
+  <g transform="translate(60,150)">
+    <rect x="0" y="0" rx="22" ry="22" width="300" height="430" class="soft"/>
+    <text x="28" y="42" class="label">传统 sandbox</text>
+
+    <rect x="28" y="74" rx="16" ry="16" width="244" height="150" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    <rect x="46" y="96" width="208" height="14" rx="7" fill="#E5E7EB"/>
+    <rect x="46" y="122" width="160" height="14" rx="7" fill="#E5E7EB"/>
+    <rect x="46" y="148" width="190" height="14" rx="7" fill="#E5E7EB"/>
+    <rect x="46" y="174" width="120" height="14" rx="7" fill="#E5E7EB"/>
+
+    <circle cx="70" cy="282" r="22" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+    <line x1="61" y1="282" x2="79" y2="282" stroke="#9CA3AF" stroke-width="3"/>
+    <line x1="70" y1="273" x2="70" y2="291" stroke="#9CA3AF" stroke-width="3"/>
+
+    <circle cx="150" cy="282" r="22" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+    <path d="M140 282 h20" stroke="#9CA3AF" stroke-width="3"/>
+
+    <circle cx="230" cy="282" r="22" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+    <path d="M220 282 h20" stroke="#9CA3AF" stroke-width="3"/>
+    <path d="M230 272 v20" stroke="#9CA3AF" stroke-width="3"/>
+
+    <text x="28" y="350" class="small">静态页</text>
+    <text x="28" y="382" class="small">少表单</text>
+    <text x="28" y="414" class="small">读信息为主</text>
+  </g>
+
+  <!-- middle arrow -->
+  <path d="M390 365 C440 365, 470 365, 520 365" class="line"/>
+  <text x="416" y="337" class="small" fill="#6366F1">换成真实网站</text>
+
+  <!-- Center: ClawBench -->
+  <g transform="translate(520,120)">
+    <rect x="0" y="0" rx="24" ry="24" width="360" height="490" class="accent"/>
+    <text x="28" y="46" class="label">ClawBench 任务集</text>
+
+    <rect x="28" y="72" rx="16" ry="16" width="304" height="110" class="green"/>
+    <text x="48" y="116" class="label" fill="#065F46">153 个真实在线任务</text>
+    <text x="48" y="148" class="small" fill="#065F46">144 平台 · 15 细类</text>
+
+    <rect x="28" y="204" rx="16" ry="16" width="144" height="110" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="52" y="246" class="small">Daily</text>
+    <text x="52" y="278" class="small">Work</text>
+
+    <rect x="188" y="204" rx="16" ry="16" width="144" height="110" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="212" y="246" class="small">Travel</text>
+    <text x="212" y="278" class="small">Finance...</text>
+
+    <rect x="28" y="338" rx="16" ry="16" width="304" height="124" class="orange"/>
+    <text x="48" y="380" class="label" fill="#9A3412">write-heavy</text>
+    <text x="48" y="412" class="small" fill="#9A3412">填表 · 预约 · 购买 · 申请</text>
+  </g>
+
+  <!-- Right: example + human trace -->
+  <g transform="translate(920,150)">
+    <rect x="0" y="0" rx="22" ry="22" width="220" height="430" class="card"/>
+    <text x="26" y="42" class="label">例子：订机票</text>
+
+    <rect x="24" y="72" rx="14" ry="14" width="172" height="250" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="40" y="92" width="140" height="26" rx="8" fill="#DBEAFE"/>
+    <text x="50" y="110" class="tiny">JFK → LAX</text>
+
+    <rect x="40" y="132" width="140" height="26" rx="8" fill="#E5E7EB"/>
+    <text x="50" y="150" class="tiny">12/31</text>
+
+    <rect x="40" y="172" width="140" height="26" rx="8" fill="#E5E7EB"/>
+    <text x="50" y="190" class="tiny">单程 · 经济舱</text>
+
+    <rect x="40" y="222" width="66" height="30" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="55" y="242" class="tiny">弹窗</text>
+
+    <rect x="114" y="222" width="66" height="30" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="132" y="242" class="tiny">继续</text>
+
+    <rect x="40" y="272" width="140" height="28" rx="10" fill="#111827"/>
+    <text x="83" y="291" class="tiny" fill="#FFFFFF">提交前一步</text>
+
+    <path d="M24 356 H196" class="dash"/>
+    <text x="26" y="388" class="small">人类也做一遍</text>
+    <text x="26" y="420" class="small">留下参考轨迹</text>
+  </g>
+
+  <!-- connecting arrows -->
+  <path d="M880 365 C900 365, 900 365, 920 365" class="line"/>
+
+  <!-- bottom emphasis -->
+  <g transform="translate(315,630)">
+    <rect x="0" y="0" rx="16" ry="16" width="570" height="56" fill="#111827"/>
+    <text x="285" y="36" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">核心：从“会看网页”升级到“能完成真实事务”</text>
+  </g>
+</svg>
