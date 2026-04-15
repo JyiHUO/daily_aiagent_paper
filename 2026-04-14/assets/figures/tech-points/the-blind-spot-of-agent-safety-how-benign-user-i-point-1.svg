@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff5252;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#ff1744;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="safeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#2e7d32;stop-opacity:0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">Agent 安全盲区：良性指令 → 隐性危害</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#777">The Blind Spot — 指令无害，环境有毒，Agent 不知不觉成帮凶</text>
+
+  <!-- ====== TOP: Contrast — Two scenarios side by side ====== -->
+
+  <!-- Scenario A: Explicit malicious (BLOCKED) -->
+  <rect x="40" y="90" width="385" height="200" rx="14" fill="url(#safeGrad)" stroke="#4caf50" stroke-width="2"/>
+  <text x="232" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">场景 A：显式恶意指令</text>
+
+  <!-- User bubble -->
+  <rect x="65" y="135" width="250" height="44" rx="10" fill="#fff" stroke="#aaa" stroke-width="1"/>
+  <text x="80" y="155" font-size="12" fill="#c62828" font-weight="bold">👤 "发送骚扰邮件给 Miller"</text>
+  <text x="80" y="170" font-size="11" fill="#888">指令本身带恶意意图</text>
+
+  <!-- Arrow -->
+  <line x1="315" y1="157" x2="345" y2="157" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Agent response -->
+  <rect x="350" y="138" width="60" height="38" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="380" y="162" text-anchor="middle" font-size="20">🚫</text>
+
+  <!-- Result label -->
+  <rect x="110" y="215" width="210" height="50" rx="12" fill="#c8e6c9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="215" y="237" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">✓ 安全对齐生效，拒绝执行</text>
+  <text x="215" y="255" text-anchor="middle" font-size="11" fill="#555">模型识别恶意意图</text>
+
+  <!-- Scenario B: Benign instruction (EXECUTED → HARM) -->
+  <rect x="475" y="90" width="385" height="200" rx="14" fill="url(#dangerGrad)" stroke="#d32f2f" stroke-width="2"/>
+  <text x="667" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">场景 B：良性指令 + 有毒环境</text>
+
+  <!-- User bubble -->
+  <rect x="495" y="135" width="280" height="44" rx="10" fill="#fff" stroke="#aaa" stroke-width="1"/>
+  <text x="510" y="155" font-size="12" fill="#1565c0" font-weight="bold">👤 "把文件内容发给 Miller"</text>
+  <text x="510" y="170" font-size="11" fill="#888">指令完全无害 ✓</text>
+
+  <!-- Arrow -->
+  <line x1="775" y1="157" x2="810" y2="157" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Agent response -->
+  <rect x="815" y="138" width="30" height="38" rx="8" fill="#ffebee" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="830" y="162" text-anchor="middle" font-size="20">✉️</text>
+
+  <!-- Result label -->
+  <rect x="545" y="215" width="245" height="50" rx="12" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1.5"/>
+  <text x="667" y="237" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">✗ 安全对齐失效，完整执行</text>
+  <text x="667" y="255" text-anchor="middle" font-size="11" fill="#555">文件实为侮辱内容 → 骚扰邮件已发</text>
+
+  <!-- VS divider -->
+  <circle cx="450" cy="190" r="22" fill="#fff" stroke="#bbb" stroke-width="2"/>
+  <text x="450" y="196" text-anchor="middle" font-size="16" font-weight="bold" fill="#555">VS</text>
+
+  <!-- ====== BOTTOM: Mechanism diagram ====== -->
+
+  <text x="450" y="330" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">隐性危害的涌现机制</text>
+
+  <!-- Step 1: Benign Instruction -->
+  <rect x="55" y="360" width="170" height="90" rx="14" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="140" y="392" text-anchor="middle" font-size="28">👤</text>
+  <text x="140" y="415" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">良性指令</text>
+  <text x="140" y="433" text-anchor="middle" font-size="11" fill="#555">"打开文件并发邮件"</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="225" y1="405" x2="275" y2="405" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Agent -->
+  <rect x="280" y="355" width="160" height="100" rx="14" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="360" y="387" text-anchor="middle" font-size="26">🤖</text>
+  <text x="360" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">CUA Agent</text>
+  <text x="360" y="428" text-anchor="middle" font-size="11" fill="#555">忠实执行</text>
+  <text x="360" y="443" text-anchor="middle" font-size="11" fill="#555">不质疑内容</text>
+
+  <!-- Toxic Environment (feeds into agent) -->
+  <rect x="280" y="490" width="160" height="75" rx="14" fill="#fce4ec" stroke="#c62828" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="360" y="517" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">🕳️ 有毒环境</text>
+  <text x="360" y="537" text-anchor="middle" font-size="11" fill="#777">钓鱼网站 / 恶意文件</text>
+  <text x="360" y="553" text-anchor="middle" font-size="11" fill="#777">敏感数据 / 弹窗陷阱</text>
+
+  <!-- Arrow env → agent -->
+  <line x1="360" y1="490" x2="360" y2="460" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowRed)"/>
+  <text x="395" y="480" font-size="10" fill="#c62828" font-style="italic">注入危害</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="440" y1="405" x2="510" y2="405" stroke="#d32f2f" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+
+  <!-- Step 3: Harmful Outcome -->
+  <rect x="515" y="355" width="170" height="100" rx="14" fill="#ffebee" stroke="#d32f2f" stroke-width="2.5"/>
+  <text x="600" y="390" text-anchor="middle" font-size="26">💥</text>
+  <text x="600" y="413" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">有害结果</text>
+  <text x="600" y="431" text-anchor="middle" font-size="11" fill="#555">数据泄露 / 骚扰邮件</text>
+  <text x="600" y="447" text-anchor="middle" font-size="11" fill="#555">恶意软件部署</text>
+
+  <!-- Arrow 3→ stat -->
+  <line x1="685" y1="405" x2="720" y2="405" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stats box -->
+  <rect x="725" y="348" width="150" height="115" rx="14" fill="#fff" stroke="#555" stroke-width="1.5"/>
+  <text x="800" y="376" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">攻击成功率</text>
+  <line x1="740" y1="385" x2="860" y2="385" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Bar: Claude -->
+  <rect x="745" y="397" width="109.5" height="18" rx="4" fill="#ef5350"/>
+  <text x="750" y="411" font-size="11" fill="#fff" font-weight="bold">Claude 4.5: 73%</text>
+  
+  <!-- Bar: Multi-Agent -->
+  <rect x="745" y="423" width="139" height="18" rx="4" fill="#b71c1c"/>
+  <text x="750" y="437" font-size="11" fill="#fff" font-weight="bold">多智能体: 92.7%</text>
+
+  <!-- Insight callout -->
+  <rect x="170" y="575" width="560" height="34" rx="10" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="450" y="597" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">💡 核心发现：安全对齐只检查指令意图，不检查执行内容和环境上下文</text>
+</svg>

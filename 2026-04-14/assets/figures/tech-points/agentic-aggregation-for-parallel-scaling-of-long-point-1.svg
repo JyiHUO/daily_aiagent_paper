@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">AggAgent：聚合即 Agent 任务</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#64748b">不塞全文、不只看答案 —— 让 Agent 按需浏览多条轨迹</text>
+
+  <!-- ========== LEFT: K Parallel Trajectories ========== -->
+  <g transform="translate(40, 100)">
+    <text x="75" y="0" text-anchor="middle" font-size="15" font-weight="bold" fill="#475569">K 条并行轨迹</text>
+    <!-- Trajectory cards stacked -->
+    <rect x="0" y="16" width="150" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="75" y="48" text-anchor="middle" font-size="13" fill="#92400e">轨迹 1</text>
+    <text x="75" y="68" text-anchor="middle" font-size="11" fill="#b45309">答案: Houston</text>
+    <rect x="8" y="80" width="134" height="6" rx="3" fill="#fde68a" opacity="0.7"/>
+    <rect x="8" y="90" width="90" height="6" rx="3" fill="#fde68a" opacity="0.5"/>
+
+    <rect x="10" y="130" width="150" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)" opacity="0.85"/>
+    <text x="85" y="162" text-anchor="middle" font-size="13" fill="#92400e">轨迹 2…7</text>
+    <text x="85" y="182" text-anchor="middle" font-size="11" fill="#b45309">答案: Houston</text>
+    <rect x="18" y="194" width="134" height="6" rx="3" fill="#fde68a" opacity="0.5"/>
+
+    <rect x="20" y="246" width="150" height="100" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2" filter="url(#shadow)">
+      <animate attributeName="stroke" values="#eab308;#dc2626;#eab308" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="95" y="278" text-anchor="middle" font-size="13" fill="#92400e" font-weight="bold">轨迹 8 🔍</text>
+    <text x="95" y="298" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">答案: New York City</text>
+    <rect x="28" y="312" width="134" height="6" rx="3" fill="#fde68a" opacity="0.7"/>
+    <rect x="28" y="322" width="100" height="6" rx="3" fill="#fde68a" opacity="0.5"/>
+
+    <text x="95" y="370" text-anchor="middle" font-size="12" fill="#94a3b8" font-style="italic">= 可交互的"环境"</text>
+  </g>
+
+  <!-- ========== CENTER: AggAgent with Tools ========== -->
+  <g transform="translate(310, 110)">
+    <!-- Main Agent Box -->
+    <rect x="0" y="30" width="280" height="360" rx="18" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="0" y="30" width="280" height="50" rx="18" fill="#3b82f6"/>
+    <rect x="0" y="62" width="280" height="18" fill="#3b82f6"/>
+    <text x="140" y="62" text-anchor="middle" font-size="18" font-weight="bold" fill="white">🤖 AggAgent (聚合者)</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="240" height="56" rx="10" fill="white" stroke="#93c5fd" stroke-width="1.5"/>
+      <circle cx="22" cy="28" r="16" fill="#dbeafe"/>
+      <text x="22" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">1</text>
+      <text x="50" y="22" font-size="13" font-weight="bold" fill="#1e40af">get-solution</text>
+      <text x="50" y="40" font-size="11" fill="#64748b">获取全部答案 → 发现分歧</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(20, 170)">
+      <rect x="0" y="0" width="240" height="56" rx="10" fill="white" stroke="#93c5fd" stroke-width="1.5"/>
+      <circle cx="22" cy="28" r="16" fill="#dbeafe"/>
+      <text x="22" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">2</text>
+      <text x="50" y="22" font-size="13" font-weight="bold" fill="#1e40af">search-trajectory</text>
+      <text x="50" y="40" font-size="11" fill="#64748b">关键词检索定位证据段落</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(20, 240)">
+      <rect x="0" y="0" width="240" height="56" rx="10" fill="white" stroke="#93c5fd" stroke-width="1.5"/>
+      <circle cx="22" cy="28" r="16" fill="#dbeafe"/>
+      <text x="22" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">3</text>
+      <text x="50" y="22" font-size="13" font-weight="bold" fill="#1e40af">get-segment</text>
+      <text x="50" y="40" font-size="11" fill="#64748b">精读可疑片段 → 交叉验证</text>
+    </g>
+
+    <!-- Step 4 -->
+    <g transform="translate(20, 310)">
+      <rect x="0" y="0" width="240" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+      <circle cx="22" cy="28" r="16" fill="#bbf7d0"/>
+      <text x="22" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">4</text>
+      <text x="50" y="22" font-size="13" font-weight="bold" fill="#15803d">finish</text>
+      <text x="50" y="40" font-size="11" fill="#64748b">提交最终验证后答案</text>
+    </g>
+  </g>
+
+  <!-- ========== Arrows: Trajectories → Agent ========== -->
+  <line x1="200" y1="230" x2="305" y2="260" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="320" x2="305" y2="330" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="400" x2="305" y2="390" stroke="#475569" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+
+  <!-- Bidirectional label -->
+  <text x="248" y="245" text-anchor="middle" font-size="11" fill="#64748b" transform="rotate(-8, 248, 245)">按需读取</text>
+
+  <!-- ========== RIGHT: Output ========== -->
+  <g transform="translate(660, 310)">
+    <!-- Arrow from agent -->
+    <line x1="-60" y1="50" x2="0" y2="50" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+    <rect x="10" y="10" width="190" height="90" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="105" y="42" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">✅ 最终答案</text>
+    <text x="105" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">New York City</text>
+    <text x="105" y="86" text-anchor="middle" font-size="11" fill="#4ade80">少数派但有证据支撑</text>
+  </g>
+
+  <!-- ========== Bottom: Key Insight Comparison ========== -->
+  <g transform="translate(50, 510)">
+    <!-- Old way -->
+    <rect x="0" y="0" width="250" height="80" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" opacity="0.9"/>
+    <text x="125" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">❌ 传统方式</text>
+    <text x="125" y="46" text-anchor="middle" font-size="12" fill="#7f1d1d">投票 → 多数胜出 = Houston</text>
+    <text x="125" y="65" text-anchor="middle" font-size="11" fill="#991b1b">丢失中间推理 / 上下文溢出</text>
+
+    <!-- Arrow -->
+    <text x="290" y="44" text-anchor="middle" font-size="24" fill="#94a3b8">→</text>
+
+    <!-- New way -->
+    <rect x="320" y="0" width="250" height="80" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" opacity="0.9"/>
+    <text x="445" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">✅ AggAgent</text>
+    <text x="445" y="46" text-anchor="middle" font-size="12" fill="#14532d">按需检索 → 验证证据链</text>
+    <text x="445" y="65" text-anchor="middle" font-size="11" fill="#166534">成本与 K 无关，窗口内完成</text>
+  </g>
+
+  <!-- ========== Analogy callout ========== -->
+  <g transform="translate(650, 140)">
+    <rect x="0" y="0" width="210" height="80" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="105" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">💡 类比</text>
+    <text x="105" y="44" text-anchor="middle" font-size="11" fill="#6b21a8">像审稿人有选择地</text>
+    <text x="105" y="62" text-anchor="middle" font-size="11" fill="#6b21a8">翻阅多份报告</text>
+  </g>
+
+  <!-- Cost label -->
+  <g transform="translate(650, 238)">
+    <rect x="0" y="0" width="210" height="44" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="105" y="18" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">🔑 仅操作内存中轨迹</text>
+    <text x="105" y="35" text-anchor="middle" font-size="11" fill="#4ade80">无外部API · 无额外延迟</text>
+  </g>
+</svg>

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="red1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4757"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="orange1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffa502"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+    <linearGradient id="purple1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a55eea"/>
+      <stop offset="100%" stop-color="#8854d0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Agent 安全对齐的三种失败模式</text>
+  <text x="450" y="67" text-anchor="middle" fill="#7f8fa6" font-size="13">无害指令 → 有害执行：为什么安全护栏形同虚设？</text>
+
+  <!-- Top: Benign instruction arrow -->
+  <rect x="320" y="85" width="260" height="40" rx="20" fill="#2ed573" opacity="0.15" stroke="#2ed573" stroke-width="1.5"/>
+  <text x="450" y="110" text-anchor="middle" fill="#2ed573" font-size="14" font-weight="bold">✓ 用户指令完全无害</text>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="128" x2="450" y2="152" stroke="#7f8fa6" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#7f8fa6"/>
+  </marker>
+
+  <!-- Three failure mode cards -->
+  <!-- Mode I: Inspection Failure -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="165" width="260" height="310" rx="16" fill="#1e2d4a" stroke="url(#red1)" stroke-width="2.5"/>
+    <!-- Icon area -->
+    <circle cx="160" cy="215" r="32" fill="url(#red1)" opacity="0.15"/>
+    <text x="160" y="222" text-anchor="middle" fill="#ff4757" font-size="34">📦</text>
+    <text x="160" y="265" text-anchor="middle" fill="#ff4757" font-size="17" font-weight="bold">I. 检查失败</text>
+    <text x="160" y="288" text-anchor="middle" fill="#dfe6e9" font-size="12.5">从不审查就直接执行</text>
+
+    <!-- Mini scene -->
+    <rect x="55" y="305" width="210" height="85" rx="10" fill="#162038" stroke="#34495e" stroke-width="1"/>
+    <!-- File icons -->
+    <rect x="75" y="318" width="55" height="28" rx="5" fill="#2d3436" stroke="#636e72" stroke-width="1"/>
+    <text x="102" y="337" text-anchor="middle" fill="#74b9ff" font-size="10">README</text>
+    <rect x="150" y="318" width="55" height="28" rx="5" fill="#2d3436" stroke="#636e72" stroke-width="1"/>
+    <text x="177" y="337" text-anchor="middle" fill="#ff7675" font-size="10">setup.sh</text>
+    <!-- Arrow: read readme then execute -->
+    <path d="M102,348 Q102,360 130,360 Q158,360 177,348" fill="none" stroke="#ffa502" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="160" y="378" text-anchor="middle" fill="#ffa502" font-size="10">读README → 直接执行脚本</text>
+
+    <!-- Analogy tag -->
+    <rect x="55" y="400" width="210" height="30" rx="8" fill="#ff4757" opacity="0.1"/>
+    <text x="160" y="420" text-anchor="middle" fill="#ff6b81" font-size="11">🚚 快递员从不拆包检查</text>
+
+    <!-- Both fail badge -->
+    <rect x="60" y="443" width="200" height="22" rx="6" fill="#c0392b" opacity="0.25"/>
+    <text x="160" y="458" text-anchor="middle" fill="#ff4757" font-size="10.5" font-weight="bold">Opus ✗ &amp; Sonnet ✗ 均失败</text>
+  </g>
+
+  <!-- Mode II: Judgment Failure -->
+  <g filter="url(#shadow)">
+    <rect x="320" y="165" width="260" height="310" rx="16" fill="#1e2d4a" stroke="url(#orange1)" stroke-width="2.5"/>
+    <circle cx="450" cy="215" r="32" fill="url(#orange1)" opacity="0.15"/>
+    <text x="450" y="222" text-anchor="middle" fill="#ffa502" font-size="34">⚖️</text>
+    <text x="450" y="265" text-anchor="middle" fill="#ffa502" font-size="17" font-weight="bold">II. 判断失败</text>
+    <text x="450" y="288" text-anchor="middle" fill="#dfe6e9" font-size="12.5">看到危害但拒绝负责</text>
+
+    <!-- Mini scene: email -->
+    <rect x="345" y="305" width="210" height="85" rx="10" fill="#162038" stroke="#34495e" stroke-width="1"/>
+    <rect x="365" y="315" width="170" height="40" rx="6" fill="#2d3436" stroke="#636e72" stroke-width="1"/>
+    <text x="450" y="332" text-anchor="middle" fill="#dfe6e9" font-size="10">📧 "你是最愚蠢的人"</text>
+    <text x="450" y="345" text-anchor="middle" fill="#ff7675" font-size="9">⚠️ 识别到有害内容</text>
+    <!-- Send button -->
+    <rect x="405" y="362" width="90" height="22" rx="6" fill="#e67e22" opacity="0.3" stroke="#ffa502" stroke-width="1"/>
+    <text x="450" y="377" text-anchor="middle" fill="#ffa502" font-size="10" font-weight="bold">仍然点击发送</text>
+
+    <!-- Analogy -->
+    <rect x="345" y="400" width="210" height="30" rx="8" fill="#ffa502" opacity="0.1"/>
+    <text x="450" y="420" text-anchor="middle" fill="#f0932b" font-size="11">🤷 "我只是搬运工，不是制造者"</text>
+
+    <!-- Both fail badge -->
+    <rect x="350" y="443" width="200" height="22" rx="6" fill="#e67e22" opacity="0.25"/>
+    <text x="450" y="458" text-anchor="middle" fill="#ffa502" font-size="10.5" font-weight="bold">Opus ✗ &amp; Sonnet ✗ 均失败</text>
+  </g>
+
+  <!-- Mode III: Detection Failure -->
+  <g filter="url(#shadow)">
+    <rect x="610" y="165" width="260" height="310" rx="16" fill="#1e2d4a" stroke="url(#purple1)" stroke-width="2.5"/>
+    <circle cx="740" cy="215" r="32" fill="url(#purple1)" opacity="0.15"/>
+    <text x="740" y="222" text-anchor="middle" fill="#a55eea" font-size="34">🎭</text>
+    <text x="740" y="265" text-anchor="middle" fill="#a55eea" font-size="17" font-weight="bold">III. 检测失败</text>
+    <text x="740" y="288" text-anchor="middle" fill="#dfe6e9" font-size="12.5">被伪装欺骗，能力决定</text>
+
+    <!-- Mini scene: fake popup -->
+    <rect x="635" y="305" width="210" height="85" rx="10" fill="#162038" stroke="#34495e" stroke-width="1"/>
+    <!-- Fake popup -->
+    <rect x="665" y="313" width="150" height="50" rx="6" fill="#2d3436" stroke="#a55eea" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="740" y="330" text-anchor="middle" fill="#dfe6e9" font-size="9.5">🔔 Chrome 系统更新弹窗</text>
+    <text x="740" y="345" text-anchor="middle" fill="#636e72" font-size="8">(实为伪造钓鱼弹窗)</text>
+    <text x="740" y="356" text-anchor="middle" fill="#a55eea" font-size="8.5">[ 确认 ]</text>
+
+    <!-- Two outcomes -->
+    <text x="690" y="378" text-anchor="middle" fill="#2ed573" font-size="10">Opus: 识破 ✓</text>
+    <text x="790" y="378" text-anchor="middle" fill="#ff4757" font-size="10">Sonnet: 上当 ✗</text>
+
+    <!-- Analogy -->
+    <rect x="635" y="400" width="210" height="30" rx="8" fill="#a55eea" opacity="0.1"/>
+    <text x="740" y="420" text-anchor="middle" fill="#a55eea" font-size="11">🔍 高仿诈骗：有人看穿有人不能</text>
+
+    <!-- Reasoning badge -->
+    <rect x="640" y="443" width="200" height="22" rx="6" fill="#8854d0" opacity="0.25"/>
+    <text x="740" y="458" text-anchor="middle" fill="#a55eea" font-size="10.5" font-weight="bold">取决于模型推理能力</text>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <rect x="50" y="500" width="800" height="55" rx="14" fill="#ff4757" opacity="0.08" stroke="#ff4757" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="450" y="524" text-anchor="middle" fill="#ff6b81" font-size="15" font-weight="bold">⚡ 关键发现：Claude 3.5 Sonnet 攻击成功率 73% → 多智能体系统 92.7%</text>
+  <text x="450" y="544" text-anchor="middle" fill="#7f8fa6" font-size="12">前两种失败与能力无关（安全对齐缺陷），第三种随推理能力可改善</text>
+
+  <!-- Bottom source -->
+  <text x="450" y="590" text-anchor="middle" fill="#4a5568" font-size="10">OS-BLIND Benchmark · 300 Tasks · The Blind Spot of Agent Safety</text>
+
+  <!-- Decorative connecting lines from top box to three cards -->
+  <path d="M380,125 Q300,150 160,165" fill="none" stroke="#7f8fa6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <path d="M450,125 L450,165" fill="none" stroke="#7f8fa6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <path d="M520,125 Q600,150 740,165" fill="none" stroke="#7f8fa6" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+</svg>

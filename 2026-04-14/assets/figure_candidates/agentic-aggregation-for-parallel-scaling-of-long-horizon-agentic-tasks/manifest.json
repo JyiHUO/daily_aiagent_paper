@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/downloaded_pdfs/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-30",
+      "page_index": 0,
+      "caption": "Figure 1: AggAgent consistently outperforms existing aggregation methods. We measure the average performance across six long-horizon agentic benchmarks (Section 4 ) against the number of parallel trajectories. The same model as the rollout agent serves as the aggregator.",
+      "clip": [
+        90.0,
+        493.3046875,
+        522.0014343261719,
+        696.16015625
+      ],
+      "clip_area": 87633.85346090794,
+      "page_area": 484704.0,
+      "text_density": 0.24588375801434573,
+      "kind": "drawing_cluster_with_caption",
+      "score": 69.02068400203824,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-block-30",
+      "page_index": 0,
+      "caption": "Figure 1: AggAgent consistently outperforms existing aggregation methods. We measure the average performance across six long-horizon agentic benchmarks (Section 4 ) against the number of parallel trajectories. The same model as the rollout agent serves as the aggregator.",
+      "clip": [
+        77.4,
+        364.88548583984374,
+        534.6013732910156,
+        673.6854858398438
+      ],
+      "clip_area": 141183.78407226564,
+      "page_area": 484704.0,
+      "text_density": 0.33142272806060014,
+      "kind": "captioned_figure",
+      "score": 50.914636316363996,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/02-p1-captioned_figure.png",
+      "filename": "02-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-118",
+      "page_index": 6,
+      "caption": "Figure 4: Employing a stronger aggregator improves performance on LLM-based aggre- gation methods . In all cases, GLM-4.7-Flash serves as the rollout agent; blue bars replace the aggregator with the stronger MiniMax-M2.5, while red bars use GLM-4.7-Flash for both roles. Yellow hatched bars denote the Pass@ K . All methods are evaluated at K = 8.",
+      "clip": [
+        90.0,
+        477.2959899902344,
+        521.9974060058594,
+        692.0640258789062
+      ],
+      "clip_area": 92779.23439687956,
+      "page_area": 484704.0,
+      "text_density": 0.1298613536103775,
+      "kind": "drawing_cluster_with_caption",
+      "score": 41.039199165564895,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        92.0,
+        479.2959899902344,
+        519.9974060058594,
+        690.0640258789062
+      ],
+      "clip_area": 90208.17262930144,
+      "page_area": 484704.0,
+      "text_density": 0.12474620180327524,
+      "kind": "drawing_cluster",
+      "score": 6.317540921017947,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/04-p7-drawing_cluster.png",
+      "filename": "04-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-9-drawing-caption-87",
+      "page_index": 9,
+      "caption": "Figure 7: Qualitative examples illustrating four key behaviours of AggAgent.",
+      "clip": [
+        90.0,
+        65.86151123046875,
+        522.1038208007812,
+        366.4795227050781
+      ],
+      "clip_area": 129898.19135971181,
+      "page_area": 484704.0,
+      "text_density": 0.31604997856257233,
+      "kind": "drawing_cluster_with_caption",
+      "score": 5.837001286245661,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/05-p10-drawing_cluster_with_caption.png",
+      "filename": "05-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        92.0,
+        495.3046875,
+        520.0014343261719,
+        694.16015625
+      ],
+      "clip_area": 85110.42584860325,
+      "page_area": 484704.0,
+      "text_density": 0.23452393182094208,
+      "kind": "drawing_cluster",
+      "score": 5.674235489061287,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/06-p1-drawing_cluster.png",
+      "filename": "06-p1-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/agentic-aggregation-for-parallel-scaling-of-long-horizon-agentic-tasks/contact-sheet.svg"
+}

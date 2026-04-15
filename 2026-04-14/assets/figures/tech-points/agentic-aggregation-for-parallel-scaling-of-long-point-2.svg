@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a6cf7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowG" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">AggAgent: Coarse-to-Fine Navigation</text>
+  <text x="450" y="66" text-anchor="middle" fill="#94a3b8" font-size="14">从粗到细——像侦探破案一样聚合多条轨迹</text>
+
+  <!-- Left: Parallel Trajectories -->
+  <g transform="translate(40,100)">
+    <text x="60" y="0" text-anchor="middle" fill="#cbd5e1" font-size="14" font-weight="bold">8条并行轨迹</text>
+    <rect x="0" y="14" width="120" height="32" rx="6" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="60" y="35" text-anchor="middle" fill="#94a3b8" font-size="12">T1: 答案=2</text>
+    <rect x="0" y="52" width="120" height="32" rx="6" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="60" y="73" text-anchor="middle" fill="#94a3b8" font-size="12">T2: 答案=6</text>
+    <rect x="0" y="90" width="120" height="32" rx="6" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="60" y="111" text-anchor="middle" fill="#94a3b8" font-size="12">T3: 答案=6</text>
+    <rect x="0" y="128" width="120" height="32" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="60" y="149" text-anchor="middle" fill="#64748b" font-size="12">T4–T8: ...</text>
+    <text x="60" y="185" text-anchor="middle" fill="#f87171" font-size="12" font-weight="bold">答案分歧大：2~58</text>
+  </g>
+
+  <!-- Arrow from trajectories to Step 1 -->
+  <line x1="175" y1="230" x2="240" y2="230" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- STEP 1: Coarse Overview -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="115" width="190" height="130" rx="14" fill="url(#g1)" opacity="0.92"/>
+  </g>
+  <text x="345" y="145" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">① 全局概览</text>
+  <text x="345" y="145" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold" dy="22">get-solution</text>
+  <!-- icon: eye -->
+  <circle cx="345" cy="205" r="18" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+  <circle cx="345" cy="205" r="7" fill="#c7d2fe"/>
+  <ellipse cx="345" cy="205" rx="18" ry="11" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="345" y="238" text-anchor="middle" fill="#e0e7ff" font-size="11">看答案 + 元数据</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M445,195 Q475,195 485,255" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="488" y="220" fill="#fbbf24" font-size="11" font-weight="bold">发现分歧 →</text>
+
+  <!-- STEP 2: Targeted Search -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="260" width="200" height="130" rx="14" fill="url(#g2)" opacity="0.92"/>
+  </g>
+  <text x="570" y="292" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">② 关键词检索</text>
+  <text x="570" y="314" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">search-trajectory</text>
+  <!-- icon: magnifier -->
+  <circle cx="555" cy="352" r="14" fill="none" stroke="#fef3c7" stroke-width="2.5"/>
+  <line x1="565" y1="362" x2="578" y2="375" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="570" y="388" text-anchor="middle" fill="#fef9c3" font-size="10.5">"Krause Senger 2024"</text>
+
+  <!-- Usage bar -->
+  <g transform="translate(470,395)">
+    <rect x="0" y="0" width="200" height="7" rx="3" fill="#422006"/>
+    <rect x="0" y="0" width="160" height="7" rx="3" fill="#f59e0b"/>
+    <text x="204" y="8" fill="#fbbf24" font-size="9">占比最高</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <path d="M675,340 Q710,340 720,340" fill="none" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="698" y="330" fill="#34d399" font-size="11" font-weight="bold">命中!</text>
+
+  <!-- STEP 3: Fine-grained Read -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="270" width="155" height="120" rx="14" fill="url(#g3)" opacity="0.92"/>
+  </g>
+  <text x="797" y="300" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">③ 精读确认</text>
+  <text x="797" y="322" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">get-segment</text>
+  <!-- icon: document -->
+  <rect x="778" y="338" width="38" height="30" rx="4" fill="none" stroke="#bbf7d0" stroke-width="2"/>
+  <line x1="785" y1="348" x2="808" y2="348" stroke="#bbf7d0" stroke-width="1.5"/>
+  <line x1="785" y1="355" x2="802" y2="355" stroke="#bbf7d0" stroke-width="1.5"/>
+  <line x1="785" y1="362" x2="796" y2="362" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="797" y="385" text-anchor="middle" fill="#bbf7d0" font-size="10.5">仅读关键步骤</text>
+
+  <!-- Final Answer -->
+  <g filter="url(#shadow)">
+    <rect x="690" y="440" width="185" height="60" rx="12" fill="#065f46" stroke="#10b981" stroke-width="2"/>
+  </g>
+  <text x="782" y="468" text-anchor="middle" fill="#34d399" font-size="16" font-weight="bold">✓ 最终答案: 6</text>
+  <text x="782" y="488" text-anchor="middle" fill="#6ee7b7" font-size="11">全程仅精读少量步骤</text>
+
+  <!-- Arrow from step3 to final -->
+  <path d="M797,394 L797,435" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowG)"/>
+
+  <!-- Bottom insight box -->
+  <g transform="translate(40,440)">
+    <rect x="0" y="0" width="420" height="80" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="210" y="24" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">💡 核心洞察</text>
+    <text x="210" y="46" text-anchor="middle" fill="#94a3b8" font-size="12">聚合 ≠ 暴力拼接 / 简单投票</text>
+    <text x="210" y="66" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="bold">聚合本身就是一个 Agent 任务：按需探索、逐步聚焦</text>
+  </g>
+
+  <!-- Funnel metaphor -->
+  <g transform="translate(255,425)" opacity="0.6">
+    <polygon points="0,0 130,0 100,55 30,55" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="65" y="32" text-anchor="middle" fill="#818cf8" font-size="10">信息漏斗</text>
+  </g>
+
+  <!-- Cost labels -->
+  <text x="345" y="258" text-anchor="middle" fill="#818cf8" font-size="10">💰 低成本</text>
+  <text x="570" y="415" text-anchor="middle" fill="#fbbf24" font-size="10">💰 中等</text>
+  <text x="797" y="400" text-anchor="middle" fill="#34d399" font-size="10">💰 按需</text>
+</svg>

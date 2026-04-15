@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/downloaded_pdfs/cocoabench-evaluating-unified-digital-agents-in-the-wild.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: C OCOA B ENCH evaluates agents on complex digital tasks that require flexible composition of core capabilities such as vision, search, coding. The shopping example shown here illustrates one such task and highlights the multi step, compositional nature of the benchmark.",
+      "clip": [
+        96.0,
+        69.85972595214844,
+        516.0036010742188,
+        317.9049987792969
+      ],
+      "clip_area": 104179.9078168394,
+      "page_area": 484704.0,
+      "text_density": 0.0060126104109950425,
+      "kind": "embedded_image_with_caption",
+      "xref": 438,
+      "score": 37.15755453129822,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "Figure 1: C OCOA B ENCH evaluates agents on complex digital tasks that require flexible composition of core capabilities such as vision, search, coding. The shopping example shown here illustrates one such task and highlights the multi step, compositional nature of the benchmark.",
+      "clip": [
+        86.0,
+        63.85972595214844,
+        526.0036010742188,
+        323.9049987792969
+      ],
+      "clip_area": 114420.856486273,
+      "page_area": 484704.0,
+      "text_density": 0.02624009437247717,
+      "kind": "image_block_with_caption",
+      "score": 37.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/02-p2-image_block_with_caption.png",
+      "filename": "02-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-52",
+      "page_index": 6,
+      "caption": "Figure 5: Accuracy-cost (left) and accuracy–time (right) trade-offs across agents. Marker shapes denote agent/scaffold types and colors denote base models.",
+      "clip": [
+        90.0,
+        259.4920959472656,
+        522.007568359375,
+        439.47698974609375
+      ],
+      "clip_area": 77754.83631145209,
+      "page_area": 484704.0,
+      "text_density": 0.14997462712303258,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.66546499830085,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-30",
+      "page_index": 6,
+      "caption": "Figure 4: Overall performance on C OCOA B ENCH for representative agent systems and model backbones under the shared C OCOA -A GENT scaffold.",
+      "clip": [
+        109.8010025024414,
+        45.93730163574219,
+        502.1950378417969,
+        247.60198974609375
+      ],
+      "clip_area": 79132.02075307339,
+      "page_area": 484704.0,
+      "text_density": 0.1430172247896904,
+      "kind": "drawing_cluster_with_caption",
+      "score": 31.098211187652726,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-52",
+      "page_index": 6,
+      "caption": "Figure 5: Accuracy-cost (left) and accuracy–time (right) trade-offs across agents. Marker shapes denote agent/scaffold types and colors denote base models.",
+      "clip": [
+        77.4,
+        117.09419555664061,
+        534.8005920410156,
+        425.8941955566406
+      ],
+      "clip_area": 141245.30282226566,
+      "page_area": 484704.0,
+      "text_density": 0.14764221440034525,
+      "kind": "captioned_figure",
+      "score": 22.941467135979284,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/05-p7-captioned_figure.png",
+      "filename": "05-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-6-block-30",
+      "page_index": 6,
+      "caption": "Figure 4: Overall performance on C OCOA B ENCH for representative agent systems and model backbones under the shared C OCOA -A GENT scaffold.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6014953613281,
+        234.02023315429688
+      ],
+      "clip_area": 98764.77362644729,
+      "page_area": 484704.0,
+      "text_density": 0.10295633621515628,
+      "kind": "captioned_figure",
+      "score": 21.720006200717815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/06-p7-captioned_figure.png",
+      "filename": "06-p7-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/cocoabench-evaluating-unified-digital-agents-in-the-wild/contact-sheet.svg"
+}

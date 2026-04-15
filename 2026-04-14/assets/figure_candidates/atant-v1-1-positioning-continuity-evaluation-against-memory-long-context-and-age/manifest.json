@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/downloaded_pdfs/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age",
+  "candidates": [
+    {
+      "id": "page-10-block-27",
+      "page_index": 10,
+      "caption": "MdI ✓ . Principle 1 (v1.0 §4) mandates LLM-free evaluation; writer and reader are the structural pipeline, not a model.",
+      "clip": [
+        77.4,
+        357.27037353515624,
+        534.5951477050781,
+        666.0703735351562
+      ],
+      "clip_area": 141181.86161132815,
+      "page_area": 484704.0,
+      "text_density": 0.3976305029246599,
+      "kind": "captioned_figure",
+      "score": 24.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/01-p11-captioned_figure.png",
+      "filename": "01-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-11",
+      "page_index": 8,
+      "caption": "[8] Samuel Sameer Tanguturi. ATANT: An evaluation framework for AI continuity. arXiv preprint arXiv:2604.06710 , 2026.",
+      "clip": [
+        82.38099517822266,
+        218.01915283203124,
+        534.6025329589844,
+        526.8191528320312
+      ],
+      "clip_area": 139646.01086669925,
+      "page_area": 484704.0,
+      "text_density": 0.6403362319430413,
+      "kind": "captioned_figure",
+      "score": 19.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/02-p9-captioned_figure.png",
+      "filename": "02-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.3882561579342098,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/03-p1-layout_region_left_top.png",
+      "filename": "03-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4738927230050032,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/04-p2-layout_region_left_top.png",
+      "filename": "04-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.3439196682760368,
+      "score": -14.913038656562208,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/05-p1-layout_region_right_top.png",
+      "filename": "05-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.4916389862413333,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/assets/figure_candidates/atant-v1-1-positioning-continuity-evaluation-against-memory-long-context-and-age/contact-sheet.svg"
+}

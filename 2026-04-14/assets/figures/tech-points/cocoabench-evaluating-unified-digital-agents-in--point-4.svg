@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c842"/>
+      <stop offset="100%" stop-color="#e6a817"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8899bb"/>
+      <stop offset="100%" stop-color="#667799"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cc7744"/>
+      <stop offset="100%" stop-color="#aa5533"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f5c842" font-size="22" font-weight="bold">同一大脑 🧠 不同工具箱 🧰 = 天差地别</text>
+  <text x="450" y="68" text-anchor="middle" fill="#8899bb" font-size="14">脚手架设计显著影响 Agent 表现 — CocoaBench 发现</text>
+
+  <!-- Brain icon area -->
+  <rect x="340" y="88" width="220" height="50" rx="25" fill="none" stroke="#f5c842" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="450" y="118" text-anchor="middle" fill="#f5c842" font-size="16" font-weight="bold">🧠 GPT-5.4（同一模型）</text>
+
+  <!-- Three arrows down -->
+  <line x1="250" y1="138" x2="165" y2="175" stroke="#f5c842" stroke-width="2" marker-end="url(#arrowG)"/>
+  <line x1="450" y1="138" x2="450" y2="175" stroke="#8899bb" stroke-width="2"/>
+  <line x1="650" y1="138" x2="735" y2="175" stroke="#cc7744" stroke-width="2"/>
+
+  <!-- Scaffold 1: Codex -->
+  <rect x="50" y="178" width="230" height="210" rx="14" fill="#1e3050" stroke="#f5c842" stroke-width="2.5"/>
+  <rect x="50" y="178" width="230" height="44" rx="14" fill="url(#gold)" opacity="0.9"/>
+  <rect x="50" y="200" width="230" height="22" fill="url(#gold)" opacity="0.9"/>
+  <text x="165" y="206" text-anchor="middle" fill="#1a1a2e" font-size="17" font-weight="bold">🥇 Codex</text>
+  <!-- Bar: Success -->
+  <text x="70" y="248" fill="#99aabb" font-size="12">成功率</text>
+  <rect x="130" y="236" width="135" height="18" rx="4" fill="#f5c842" opacity="0.85"/>
+  <text x="200" y="250" text-anchor="middle" fill="#1a1a2e" font-size="13" font-weight="bold">45.1%</text>
+  <!-- Bar: Cost -->
+  <text x="70" y="280" fill="#99aabb" font-size="12">每任务费</text>
+  <rect x="130" y="268" width="48" height="18" rx="4" fill="#44cc88" opacity="0.7"/>
+  <text x="155" y="282" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">$0.75</text>
+  <!-- Bar: Time -->
+  <text x="70" y="312" fill="#99aabb" font-size="12">耗时</text>
+  <rect x="130" y="300" width="75" height="18" rx="4" fill="#6699dd" opacity="0.6"/>
+  <text x="168" y="314" text-anchor="middle" fill="#fff" font-size="12">~600s</text>
+  <!-- Tag -->
+  <rect x="80" y="340" width="170" height="30" rx="12" fill="#f5c84233" stroke="#f5c842" stroke-width="1"/>
+  <text x="165" y="360" text-anchor="middle" fill="#f5c842" font-size="12">✅ 编程脚手架 → 通用王者</text>
+
+  <!-- Scaffold 2: OpenClaw -->
+  <rect x="335" y="178" width="230" height="210" rx="14" fill="#1e3050" stroke="#8899bb" stroke-width="2"/>
+  <rect x="335" y="178" width="230" height="44" rx="14" fill="url(#silver)" opacity="0.8"/>
+  <rect x="335" y="200" width="230" height="22" fill="url(#silver)" opacity="0.8"/>
+  <text x="450" y="206" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">🥈 OpenClaw</text>
+  <text x="355" y="248" fill="#99aabb" font-size="12">成功率</text>
+  <rect x="415" y="236" width="135" height="18" rx="4" fill="#8899bb" opacity="0.8"/>
+  <text x="485" y="250" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">45.1%</text>
+  <text x="355" y="280" fill="#99aabb" font-size="12">每任务费</text>
+  <rect x="415" y="268" width="70" height="18" rx="4" fill="#44cc88" opacity="0.55"/>
+  <text x="450" y="282" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">$1.09</text>
+  <text x="355" y="312" fill="#99aabb" font-size="12">耗时</text>
+  <rect x="415" y="300" width="90" height="18" rx="4" fill="#6699dd" opacity="0.5"/>
+  <text x="460" y="314" text-anchor="middle" fill="#fff" font-size="12">中等</text>
+  <rect x="365" y="340" width="170" height="30" rx="12" fill="#8899bb22" stroke="#8899bb" stroke-width="1"/>
+  <text x="450" y="360" text-anchor="middle" fill="#8899bb" font-size="12">统一框架 → 成本稍高</text>
+
+  <!-- Scaffold 3: COCOA-AGENT -->
+  <rect x="620" y="178" width="230" height="210" rx="14" fill="#1e3050" stroke="#cc7744" stroke-width="2"/>
+  <rect x="620" y="178" width="230" height="44" rx="14" fill="url(#bronze)" opacity="0.8"/>
+  <rect x="620" y="200" width="230" height="22" fill="url(#bronze)" opacity="0.8"/>
+  <text x="735" y="206" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">🥉 COCOA-Agent</text>
+  <text x="640" y="248" fill="#99aabb" font-size="12">成功率</text>
+  <rect x="700" y="236" width="110" height="18" rx="4" fill="#cc7744" opacity="0.75"/>
+  <text x="755" y="250" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">36.6%</text>
+  <text x="640" y="280" fill="#99aabb" font-size="12">每任务费</text>
+  <rect x="700" y="268" width="115" height="18" rx="4" fill="#ee5555" opacity="0.55"/>
+  <text x="758" y="282" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">$2.31 🔺3x</text>
+  <text x="640" y="312" fill="#99aabb" font-size="12">耗时</text>
+  <rect x="700" y="300" width="115" height="18" rx="4" fill="#6699dd" opacity="0.4"/>
+  <text x="758" y="314" text-anchor="middle" fill="#fff" font-size="12">更长</text>
+  <rect x="650" y="340" width="170" height="30" rx="12" fill="#cc774422" stroke="#cc7744" stroke-width="1"/>
+  <text x="735" y="360" text-anchor="middle" fill="#cc7744" font-size="12">⚠ 贵3倍 但效果更低</text>
+
+  <!-- Bottom insight box -->
+  <rect x="80" y="420" width="740" height="56" rx="14" fill="#162240" stroke="#f5c842" stroke-width="1.5" stroke-dasharray="8,4"/>
+
+  <!-- Worker analogy -->
+  <text x="450" y="445" text-anchor="middle" fill="#fff" font-size="15">
+    <tspan fill="#f5c842" font-weight="bold">核心发现：</tspan>
+    <tspan>同一"大脑"，换个"工具箱"，成功率差 </tspan>
+    <tspan fill="#ee5555" font-weight="bold">8.5%</tspan>
+    <tspan>、成本差 </tspan>
+    <tspan fill="#ee5555" font-weight="bold">3倍</tspan>
+  </text>
+  <text x="450" y="466" text-anchor="middle" fill="#8899bb" font-size="13">编程导向的脚手架（Codex）天然适合复杂多步数字任务 → 便宜 + 快 + 准</text>
+
+  <!-- Decorative comparison arrows -->
+  <path d="M280 290 Q310 290 320 270" fill="none" stroke="#556677" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M565 290 Q595 290 605 270" fill="none" stroke="#556677" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- VS labels -->
+  <text x="307" y="265" text-anchor="middle" fill="#556677" font-size="14" font-weight="bold">vs</text>
+  <text x="592" y="265" text-anchor="middle" fill="#556677" font-size="14" font-weight="bold">vs</text>
+
+  <!-- Bottom source -->
+  <text x="450" y="530" text-anchor="middle" fill="#445566" font-size="11">CocoaBench: 153个长程任务 · 视觉+搜索+编程组合评测</text>
+</svg>

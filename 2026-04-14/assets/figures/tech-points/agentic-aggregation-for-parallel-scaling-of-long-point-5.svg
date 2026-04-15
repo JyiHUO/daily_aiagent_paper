@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9ff"/>
+      <stop offset="100%" stop-color="#e8ecf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">强弱模型非对称分配</text>
+  <text x="400" y="68" text-anchor="middle" font-size="13" fill="#666">弱模型并行探索 × 强模型最终裁判 → 低成本高性能</text>
+
+  <!-- ===== LEFT: Weak Models (Interns) ===== -->
+  <!-- Weak model 1 -->
+  <rect x="60" y="120" width="140" height="64" rx="12" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+  <text x="130" y="148" text-anchor="middle" font-size="13" fill="#1565C0" font-weight="bold">🧑‍💻 弱模型 1</text>
+  <text x="130" y="168" text-anchor="middle" font-size="11" fill="#555">GLM-4.7-Flash</text>
+
+  <!-- Weak model 2 -->
+  <rect x="60" y="204" width="140" height="64" rx="12" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+  <text x="130" y="232" text-anchor="middle" font-size="13" fill="#1565C0" font-weight="bold">🧑‍💻 弱模型 2</text>
+  <text x="130" y="252" text-anchor="middle" font-size="11" fill="#555">GLM-4.7-Flash</text>
+
+  <!-- Weak model 3 -->
+  <rect x="60" y="288" width="140" height="64" rx="12" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+  <text x="130" y="316" text-anchor="middle" font-size="13" fill="#1565C0" font-weight="bold">🧑‍💻 弱模型 N</text>
+  <text x="130" y="336" text-anchor="middle" font-size="11" fill="#555">GLM-4.7-Flash</text>
+
+  <!-- Dots between 2 and N -->
+  <text x="130" y="282" text-anchor="middle" font-size="16" fill="#888">⋮</text>
+
+  <!-- Label: parallel rollout -->
+  <rect x="52" y="370" width="156" height="30" rx="8" fill="#E3F2FD"/>
+  <text x="130" y="390" text-anchor="middle" font-size="12" fill="#1565C0" font-weight="bold">并行探索 · 成本低 · 量大</text>
+
+  <!-- Analogy label -->
+  <text x="130" y="418" text-anchor="middle" font-size="11" fill="#888" font-style="italic">一群实习生各自调研</text>
+
+  <!-- ===== Arrows from weak to strong ===== -->
+  <line x1="200" y1="152" x2="370" y2="240" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="236" x2="370" y2="250" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="320" x2="370" y2="262" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Label on arrows -->
+  <text x="280" y="195" text-anchor="middle" font-size="11" fill="#777" transform="rotate(-14,280,195)">轨迹 1</text>
+  <text x="290" y="258" text-anchor="middle" font-size="11" fill="#777">轨迹 2…N</text>
+
+  <!-- ===== CENTER: Strong Model (Expert) ===== -->
+  <rect x="370" y="180" width="190" height="140" rx="16" fill="#FFF9C4" stroke="#F57F17" stroke-width="3"/>
+  <text x="465" y="220" text-anchor="middle" font-size="28">🧠</text>
+  <text x="465" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#E65100">强模型聚合器</text>
+  <text x="465" y="274" text-anchor="middle" font-size="12" fill="#795548">MiniMax-M2.5</text>
+  <text x="465" y="296" text-anchor="middle" font-size="11" fill="#888">仅调用 1 次</text>
+
+  <!-- Analogy label -->
+  <text x="465" y="340" text-anchor="middle" font-size="11" fill="#888" font-style="italic">资深专家汇总判断</text>
+
+  <!-- ===== Arrow to output ===== -->
+  <line x1="560" y1="250" x2="630" y2="250" stroke="#2E7D32" stroke-width="3" marker-end="url(#arrowGreen)"/>
+
+  <!-- ===== RIGHT: Output / Result ===== -->
+  <rect x="640" y="190" width="130" height="120" rx="14" fill="#C8E6C9" stroke="#2E7D32" stroke-width="2.5"/>
+  <text x="705" y="228" text-anchor="middle" font-size="26">✅</text>
+  <text x="705" y="256" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B5E20">高质量答案</text>
+  <text x="705" y="278" text-anchor="middle" font-size="11" fill="#555">超越 Pass@8</text>
+  <text x="705" y="296" text-anchor="middle" font-size="11" fill="#555">上限</text>
+
+  <!-- ===== Bottom comparison box ===== -->
+  <rect x="120" y="445" width="560" height="58" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Comparison: BrowseComp -->
+  <text x="220" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">BrowseComp</text>
+  <text x="220" y="490" text-anchor="middle" font-size="12" fill="#1565C0">弱+弱: 56.0</text>
+  <text x="220" y="490" text-anchor="middle" font-size="12" fill="#1565C0" dx="0" dy="0"> </text>
+  
+  <text x="400" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">ResearchRubrics</text>
+  <text x="400" y="490" text-anchor="middle" font-size="12" fill="#1565C0">弱+弱: 45.3</text>
+
+  <text x="580" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">HealthBench-Hard</text>
+  <text x="580" y="490" text-anchor="middle" font-size="12" fill="#1565C0">弱+弱: 28.0</text>
+
+  <!-- Strong aggregator scores underneath -->
+  <rect x="155" y="497" width="130" height="0" fill="none"/>
+  
+  <!-- Redraw with green for strong -->
+  <!-- BrowseComp -->
+  <text x="220" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">BrowseComp</text>
+  <text x="175" y="488" text-anchor="start" font-size="11" fill="#888">弱+弱</text>
+  <text x="250" y="488" text-anchor="start" font-size="11" fill="#888">56.0</text>
+  
+  <!-- Clear and redo bottom box properly -->
+  <rect x="120" y="445" width="560" height="58" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+
+  <text x="170" y="465" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">BrowseComp</text>
+  <text x="170" y="482" text-anchor="middle" font-size="11" fill="#1565C0">弱+弱: 56.0</text>
+  <text x="170" y="496" text-anchor="middle" font-size="11" fill="#E65100" font-weight="bold">弱+强: 58.7 ↑</text>
+
+  <line x1="270" y1="452" x2="270" y2="498" stroke="#ddd" stroke-width="1"/>
+
+  <text x="370" y="465" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">ResearchRubrics</text>
+  <text x="370" y="482" text-anchor="middle" font-size="11" fill="#1565C0">弱+弱: 45.3</text>
+  <text x="370" y="496" text-anchor="middle" font-size="11" fill="#E65100" font-weight="bold">弱+强: 46.1 ↑</text>
+
+  <line x1="470" y1="452" x2="470" y2="498" stroke="#ddd" stroke-width="1"/>
+
+  <text x="570" y="465" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">HealthBench-Hard</text>
+  <text x="570" y="482" text-anchor="middle" font-size="11" fill="#1565C0">弱+弱: 28.0</text>
+  <text x="570" y="496" text-anchor="middle" font-size="11" fill="#E65100" font-weight="bold">弱+强: 26.7 ≈</text>
+
+  <!-- Cost label -->
+  <rect x="290" y="97" width="220" height="24" rx="8" fill="#FFECB3"/>
+  <text x="400" y="114" text-anchor="middle" font-size="12" fill="#E65100" font-weight="bold">💰 总成本远低于全部用强模型</text>
+
+</svg>

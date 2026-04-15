@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7c948"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="blueG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="redG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#f1f5f9" font-size="22" font-weight="bold">AggAgent: 成本效率 Pareto 最优</text>
+  <text x="400" y="66" text-anchor="middle" fill="#94a3b8" font-size="13">花 5.7% 额外成本，换来最强聚合性能</text>
+
+  <!-- ============ LEFT: Cost Comparison ============ -->
+  <!-- Section label -->
+  <text x="205" y="105" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="bold">额外聚合成本 (K=8)</text>
+
+  <!-- Bar chart area -->
+  <!-- Solution Agg bar -->
+  <rect x="60" y="140" width="70" height="22" rx="4" fill="#64748b" opacity="0.5"/>
+  <rect x="60" y="140" width="26" height="22" rx="4" fill="#64748b"/>
+  <text x="140" y="156" fill="#94a3b8" font-size="12">Solution Agg</text>
+  <text x="90" y="155" fill="#e2e8f0" font-size="11" font-weight="bold" text-anchor="middle">3.7%</text>
+
+  <!-- AggAgent bar -->
+  <rect x="60" y="180" width="70" height="28" rx="5" fill="url(#goldG)" opacity="0.15"/>
+  <rect x="60" y="180" width="40" height="28" rx="5" fill="url(#goldG)"/>
+  <text x="140" y="199" fill="#f7c948" font-size="13" font-weight="bold">AggAgent</text>
+  <text x="100" y="198" fill="#1a2744" font-size="12" font-weight="bold" text-anchor="middle">5.7%</text>
+
+  <!-- Summary Agg bar -->
+  <rect x="60" y="226" width="290" height="22" rx="4" fill="url(#redG)" opacity="0.25"/>
+  <rect x="60" y="226" width="290" height="22" rx="4" fill="url(#redG)" opacity="0.6"/>
+  <text x="360" y="242" fill="#f97316" font-size="12">Summary Agg</text>
+  <text x="205" y="241" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">41%</text>
+
+  <!-- Scale note -->
+  <text x="60" y="272" fill="#64748b" font-size="10">0%</text>
+  <line x1="60" y1="260" x2="400" y2="260" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="272" fill="#64748b" font-size="10" text-anchor="end">~50%</text>
+
+  <!-- Cost insight -->
+  <rect x="70" y="288" width="260" height="36" rx="8" fill="#f7c948" opacity="0.08" stroke="#f7c948" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="200" y="310" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold">仅 $0.009 vs Summary 的 $0.06</text>
+
+  <!-- ============ RIGHT: Performance Comparison ============ -->
+  <text x="600" y="105" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="bold">平均性能 (6 Benchmarks)</text>
+
+  <!-- Performance blocks -->
+  <!-- Summary Agg block -->
+  <rect x="490" y="135" width="220" height="64" rx="10" fill="#ef4444" opacity="0.08" stroke="#ef4444" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="520" y="162" fill="#f87171" font-size="13">Summary Agg</text>
+  <text x="660" y="164" fill="#f87171" font-size="28" font-weight="bold" text-anchor="end">41.2</text>
+  <text x="520" y="184" fill="#94a3b8" font-size="11">高成本 + 信息压缩损失</text>
+
+  <!-- AggAgent block -->
+  <rect x="490" y="215" width="220" height="74" rx="10" fill="url(#goldG)" opacity="0.12" stroke="#f7c948" stroke-width="2" stroke-opacity="0.7" filter="url(#glow)"/>
+  <text x="520" y="244" fill="#f7c948" font-size="15" font-weight="bold">AggAgent</text>
+  <text x="660" y="250" fill="#f7c948" font-size="34" font-weight="bold" text-anchor="end">47.9</text>
+  <text x="520" y="272" fill="#fde68a" font-size="12">按需读取 · 低成本 · 高性能</text>
+
+  <!-- Delta arrow -->
+  <line x1="720" y1="168" x2="720" y2="245" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowW)"/>
+  <text x="745" y="210" fill="#34d399" font-size="16" font-weight="bold">+6.7</text>
+
+  <!-- ============ BOTTOM: Pareto Diagram ============ -->
+  <text x="400" y="360" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">Pareto 最优：低成本 × 高性能</text>
+
+  <!-- Axes -->
+  <line x1="120" y1="480" x2="680" y2="480" stroke="#475569" stroke-width="1.5"/>
+  <line x1="120" y1="480" x2="120" y2="385" stroke="#475569" stroke-width="1.5"/>
+  <text x="400" y="505" text-anchor="middle" fill="#94a3b8" font-size="12">聚合成本 →</text>
+  <text x="108" y="430" text-anchor="end" fill="#94a3b8" font-size="12" transform="rotate(-90,108,430)">性能 →</text>
+
+  <!-- Grid hints -->
+  <line x1="120" y1="440" x2="680" y2="440" stroke="#334155" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="120" y1="410" x2="680" y2="410" stroke="#334155" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Voting point -->
+  <circle cx="170" cy="465" r="8" fill="#64748b" opacity="0.7"/>
+  <text x="170" y="458" text-anchor="middle" fill="#94a3b8" font-size="10">Voting</text>
+
+  <!-- Solution Agg point -->
+  <circle cx="210" cy="448" r="8" fill="#3b82f6" opacity="0.7"/>
+  <text x="210" y="438" text-anchor="middle" fill="#93c5fd" font-size="10">Solution</text>
+
+  <!-- AggAgent point (STAR!) -->
+  <polygon points="280,395 286,410 302,412 290,422 294,438 280,429 266,438 270,422 258,412 274,410" fill="#f7c948" filter="url(#glow)"/>
+  <text x="280" y="386" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">AggAgent ★</text>
+
+  <!-- Summary Agg point -->
+  <circle cx="530" cy="438" r="8" fill="#ef4444" opacity="0.7"/>
+  <text x="530" y="428" text-anchor="middle" fill="#fca5a5" font-size="10">Summary</text>
+
+  <!-- Full Traj point -->
+  <circle cx="640" cy="425" r="8" fill="#a855f7" opacity="0.5"/>
+  <text x="640" y="415" text-anchor="middle" fill="#c084fc" font-size="10">Full Traj</text>
+
+  <!-- Pareto frontier curve -->
+  <path d="M165,468 Q220,445 280,400" stroke="#34d399" stroke-width="2" fill="none" stroke-dasharray="6,3" opacity="0.7"/>
+  <text x="195" y="398" fill="#34d399" font-size="11" opacity="0.8">Pareto 前沿</text>
+
+  <!-- Key insight label -->
+  <rect x="390" y="378" width="280" height="32" rx="6" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="530" y="399" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="bold">深度研究任务性能领先 +10.3 pts</text>
+</svg>

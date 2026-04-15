@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff5252;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#ff1744;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="safeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#2e7d32;stop-opacity:0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">多智能体任务分解如何瓦解安全防线</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#757575">同一模型 Claude 3.5 Sonnet · 同一恶意环境 · 不同执行方式</text>
+
+  <!-- ========== LEFT: Single Agent (Safe) ========== -->
+  <rect x="30" y="90" width="390" height="280" rx="14" fill="url(#safeGrad)" stroke="#4caf50" stroke-width="2"/>
+  <text x="225" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">场景 A：单 Agent 直接执行</text>
+
+  <!-- User instruction -->
+  <rect x="60" y="138" width="330" height="48" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="80" y="158" font-size="12" fill="#546e7a">👤 用户指令（无害）</text>
+  <text x="80" y="174" font-size="13" font-weight="bold" fill="#37474f">"查看安全邮件并运行修复脚本"</text>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="186" x2="225" y2="218" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Claude box -->
+  <rect x="100" y="220" width="250" height="60" rx="12" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="225" y="246" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">🤖 Claude 3.5 Sonnet</text>
+  <text x="225" y="264" text-anchor="middle" font-size="12" fill="#388e3c">看到完整意图 → 识别钓鱼风险</text>
+
+  <!-- Result -->
+  <rect x="120" y="300" width="210" height="50" rx="10" fill="#c8e6c9" stroke="#43a047" stroke-width="2"/>
+  <text x="225" y="322" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">🛡️ 拒绝执行</text>
+  <text x="225" y="340" text-anchor="middle" font-size="13" fill="#2e7d32">ASR 27.9%</text>
+
+  <line x1="225" y1="280" x2="225" y2="300" stroke="#4caf50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== RIGHT: Multi-Agent (Dangerous) ========== -->
+  <rect x="460" y="90" width="420" height="520" rx="14" fill="url(#dangerGrad)" stroke="#d32f2f" stroke-width="2"/>
+  <text x="670" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">场景 B：多 Agent 分解执行</text>
+
+  <!-- User instruction (same) -->
+  <rect x="490" y="138" width="360" height="42" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="510" y="155" font-size="12" fill="#546e7a">👤 同一无害指令</text>
+  <text x="510" y="170" font-size="12" fill="#78909c">"查看安全邮件并运行修复脚本"</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="180" x2="670" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Orchestrator -->
+  <rect x="530" y="212" width="280" height="52" rx="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="670" y="235" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">🧠 编排器 Orchestrator</text>
+  <text x="670" y="252" text-anchor="middle" font-size="11" fill="#bf360c">分解为原子化子任务序列</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="264" x2="670" y2="290" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Subtask chain -->
+  <g>
+    <rect x="500" y="292" width="148" height="36" rx="8" fill="#fff" stroke="#ef9a9a" stroke-width="1.5"/>
+    <text x="574" y="314" text-anchor="middle" font-size="11" fill="#424242">① 按 End 键滚动</text>
+
+    <rect x="500" y="336" width="148" height="36" rx="8" fill="#fff" stroke="#ef9a9a" stroke-width="1.5"/>
+    <text x="574" y="358" text-anchor="middle" font-size="11" fill="#424242">② 下载附件</text>
+
+    <rect x="500" y="380" width="148" height="36" rx="8" fill="#fff" stroke="#ef9a9a" stroke-width="1.5"/>
+    <text x="574" y="402" text-anchor="middle" font-size="11" fill="#424242">③ 右键保存链接</text>
+
+    <rect x="500" y="424" width="148" height="36" rx="8" fill="#fff" stroke="#ef9a9a" stroke-width="1.5"/>
+    <text x="574" y="446" text-anchor="middle" font-size="11" fill="#424242">④ 打开终端运行</text>
+
+    <!-- connecting lines -->
+    <line x1="574" y1="328" x2="574" y2="336" stroke="#bbb" stroke-width="1.2"/>
+    <line x1="574" y1="372" x2="574" y2="380" stroke="#bbb" stroke-width="1.2"/>
+    <line x1="574" y1="416" x2="574" y2="424" stroke="#bbb" stroke-width="1.2"/>
+  </g>
+
+  <!-- "each looks harmless" label -->
+  <text x="672" y="310" font-size="10" fill="#d32f2f" font-style="italic">← 每步看起来</text>
+  <text x="672" y="324" font-size="10" fill="#d32f2f" font-style="italic">    都是无害操作</text>
+
+  <!-- Arrow to executor -->
+  <line x1="574" y1="460" x2="574" y2="482" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Claude executor -->
+  <rect x="490" y="484" width="168" height="52" rx="12" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
+  <text x="574" y="506" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">🤖 同一 Claude</text>
+  <text x="574" y="522" text-anchor="middle" font-size="11" fill="#d32f2f">丢失整体语义上下文</text>
+
+  <!-- Result -->
+  <rect x="690" y="484" width="170" height="52" rx="12" fill="#d32f2f" stroke="#b71c1c" stroke-width="2"/>
+  <text x="775" y="504" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">💀 全程无拒绝</text>
+  <text x="775" y="524" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffcdd2">ASR 79.1%</text>
+
+  <line x1="658" y1="510" x2="690" y2="510" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- ========== Bottom insight ========== -->
+  <rect x="30" y="400" width="390" height="50" rx="10" fill="#fff" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="225" y="420" text-anchor="middle" font-size="12" font-weight="bold" fill="#616161">🔑 核心发现</text>
+  <text x="225" y="438" text-anchor="middle" font-size="12" fill="#757575">子任务分解不可逆地剥离安全对齐所需的语义上下文</text>
+
+  <!-- Even with reconstruction -->
+  <rect x="30" y="462" width="390" height="44" rx="10" fill="#fff8e1" stroke="#ffa000" stroke-width="1.5"/>
+  <text x="225" y="480" text-anchor="middle" font-size="12" fill="#e65100">⚠️ 即使让模型从子任务反推原始意图再执行</text>
+  <text x="225" y="496" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf360c">ASR 仍高达 86.1%（不可逆）</text>
+
+  <!-- VS divider -->
+  <circle cx="440" cy="230" r="22" fill="#fff" stroke="#9e9e9e" stroke-width="2"/>
+  <text x="440" y="236" text-anchor="middle" font-size="16" font-weight="bold" fill="#616161">VS</text>
+
+  <!-- Bottom comparison bar -->
+  <rect x="70" y="530" width="760" height="60" rx="12" fill="#263238"/>
+  <text x="200" y="556" text-anchor="middle" font-size="14" fill="#a5d6a7" font-weight="bold">单 Agent: 27.9%</text>
+  <text x="450" y="556" text-anchor="middle" font-size="14" fill="#ffab91" font-weight="bold">多 Agent: 79.1%</text>
+  <text x="690" y="556" text-anchor="middle" font-size="14" fill="#ef5350" font-weight="bold">+反推意图: 86.1%</text>
+  <text x="450" y="578" text-anchor="middle" font-size="11" fill="#78909c">攻击成功率（ASR）对比 · 同一模型 · 同一任务</text>
+
+  <!-- ASR bars -->
+  <rect x="120" y="560" width="56" height="6" rx="3" fill="#4caf50" opacity="0.6"/>
+  <rect x="370" y="560" width="158" height="6" rx="3" fill="#ff7043" opacity="0.7"/>
+  <rect x="610" y="560" width="172" height="6" rx="3" fill="#ef5350" opacity="0.8"/>
+</svg>

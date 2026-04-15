@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-14",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 887,
+  "selected_count": 3,
+  "focus_titles": [
+    "Agentic Aggregation for Parallel Scaling of Long-Horizon Agentic Tasks",
+    "The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents",
+    "CocoaBench: Evaluating Unified Digital Agents in the Wild"
+  ],
+  "knowledge_topic": "Trajectory Aggregation（轨迹聚合）",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/paper_broadcast_script.txt"
+}
