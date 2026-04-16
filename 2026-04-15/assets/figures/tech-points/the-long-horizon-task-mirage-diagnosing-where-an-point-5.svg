@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#162d4a"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#e04520"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#1a9c54"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b35"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">真实系统验证：OpenClaw 故障 → 7类分类体系映射</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="13">论文用真实Agent产品故障验证分类框架的通用性</text>
+
+  <!-- Left: OpenClaw Real Failures -->
+  <rect x="30" y="95" width="330" height="420" rx="16" fill="url(#card)" stroke="#2a4a7a" stroke-width="1.5" opacity="0.95"/>
+  <rect x="30" y="95" width="330" height="44" rx="16" fill="url(#orange)" opacity="0.9"/>
+  <rect x="30" y="123" width="330" height="16" fill="url(#orange)" opacity="0.9"/>
+  <text x="195" y="124" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">📧 OpenClaw 邮件Agent 真实故障</text>
+
+  <!-- Failure case 1 -->
+  <rect x="50" y="155" width="290" height="68" rx="10" fill="#1a2f50" stroke="#ff6b35" stroke-width="1.2"/>
+  <text x="65" y="177" fill="#ff9966" font-size="13" font-weight="bold">🔄 无限循环</text>
+  <text x="65" y="196" fill="#aabbcc" font-size="11.5">两个Agent互相转发同一邮件</text>
+  <text x="65" y="211" fill="#667788" font-size="10.5">不断重复，永不终止</text>
+
+  <!-- Failure case 2 -->
+  <rect x="50" y="233" width="290" height="68" rx="10" fill="#1a2f50" stroke="#ff6b35" stroke-width="1.2"/>
+  <text x="65" y="255" fill="#ff9966" font-size="13" font-weight="bold">🧠 遗忘安全策略</text>
+  <text x="65" y="274" fill="#aabbcc" font-size="11.5">处理数百轮后忘记"禁止回复外部域"</text>
+  <text x="65" y="289" fill="#667788" font-size="10.5">约束仍在上下文，但不再被关注</text>
+
+  <!-- Failure case 3 -->
+  <rect x="50" y="311" width="290" height="68" rx="10" fill="#1a2f50" stroke="#ff6b35" stroke-width="1.2"/>
+  <text x="65" y="333" fill="#ff9966" font-size="13" font-weight="bold">⚡ 并发修改冲突</text>
+  <text x="65" y="352" fill="#aabbcc" font-size="11.5">多Agent同时操作同一邮箱</text>
+  <text x="65" y="367" fill="#667788" font-size="10.5">导致数据不一致</text>
+
+  <!-- Failure case 4 -->
+  <rect x="50" y="389" width="290" height="68" rx="10" fill="#1a2f50" stroke="#ff6b35" stroke-width="1.2"/>
+  <text x="65" y="411" fill="#ff9966" font-size="13" font-weight="bold">📝 指令理解偏差</text>
+  <text x="65" y="430" fill="#aabbcc" font-size="11.5">将"share"和"forward"视为不同操作</text>
+  <text x="65" y="445" fill="#667788" font-size="10.5">语义模糊导致错误执行</text>
+
+  <!-- Right: 7-Category Taxonomy -->
+  <rect x="540" y="95" width="330" height="420" rx="16" fill="url(#card)" stroke="#2a4a7a" stroke-width="1.5" opacity="0.95"/>
+  <rect x="540" y="95" width="330" height="44" rx="16" fill="url(#green)" opacity="0.9"/>
+  <rect x="540" y="123" width="330" height="16" fill="url(#green)" opacity="0.9"/>
+  <text x="705" y="124" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">🏷️ 7类失败分类体系</text>
+
+  <!-- Category mappings -->
+  <rect x="560" y="155" width="290" height="42" rx="8" fill="#1a3520" stroke="#2ecc71" stroke-width="1.2"/>
+  <text x="575" y="181" fill="#2ecc71" font-size="14" font-weight="bold">Planning Error</text>
+  <text x="790" y="181" fill="#667788" font-size="11" text-anchor="end">规划逻辑缺陷</text>
+
+  <rect x="560" y="207" width="290" height="42" rx="8" fill="#1a3520" stroke="#2ecc71" stroke-width="1.2"/>
+  <text x="575" y="233" fill="#2ecc71" font-size="14" font-weight="bold">Catastrophic Forgetting</text>
+  <text x="790" y="233" fill="#667788" font-size="11" text-anchor="end">灾难性遗忘</text>
+
+  <rect x="560" y="259" width="290" height="42" rx="8" fill="#1a3520" stroke="#2ecc71" stroke-width="1.2"/>
+  <text x="575" y="285" fill="#2ecc71" font-size="14" font-weight="bold">Environment Disturbance</text>
+  <text x="790" y="285" fill="#667788" font-size="11" text-anchor="end">环境干扰</text>
+
+  <rect x="560" y="311" width="290" height="42" rx="8" fill="#1a3520" stroke="#2ecc71" stroke-width="1.2"/>
+  <text x="575" y="337" fill="#2ecc71" font-size="14" font-weight="bold">Instruction Error</text>
+  <text x="790" y="337" fill="#667788" font-size="11" text-anchor="end">指令理解错误</text>
+
+  <rect x="560" y="363" width="290" height="42" rx="8" fill="#152535" stroke="#4488aa" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="575" y="389" fill="#5599bb" font-size="13">Execution / Perception / Tool Error</text>
+
+  <!-- Arrows connecting left to right -->
+  <line x1="340" y1="189" x2="555" y2="176" stroke="#ff6b35" stroke-width="2.2" marker-end="url(#arrow)" opacity="0.85"/>
+  <line x1="340" y1="267" x2="555" y2="228" stroke="#ff6b35" stroke-width="2.2" marker-end="url(#arrow)" opacity="0.85"/>
+  <line x1="340" y1="345" x2="555" y2="280" stroke="#ff6b35" stroke-width="2.2" marker-end="url(#arrow)" opacity="0.85"/>
+  <line x1="340" y1="423" x2="555" y2="332" stroke="#ff6b35" stroke-width="2.2" marker-end="url(#arrow)" opacity="0.85"/>
+
+  <!-- Mapping labels on arrows -->
+  <text x="447" y="172" text-anchor="middle" fill="#ffaa77" font-size="10" transform="rotate(-3,447,172)">映射</text>
+  <text x="447" y="238" text-anchor="middle" fill="#ffaa77" font-size="10" transform="rotate(-6,447,238)">映射</text>
+  <text x="447" y="304" text-anchor="middle" fill="#ffaa77" font-size="10" transform="rotate(-10,447,304)">映射</text>
+  <text x="447" y="372" text-anchor="middle" fill="#ffaa77" font-size="10" transform="rotate(-14,447,372)">映射</text>
+
+  <!-- Bottom highlight - the key example -->
+  <rect x="80" y="530" width="740" height="56" rx="12" fill="#2a1a10" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="100" y="554" fill="#ff9966" font-size="13" font-weight="bold">💡 关键洞察：</text>
+  <text x="230" y="554" fill="#ccddee" font-size="13">数百轮对话后，安全约束仍在上下文中却被忽视 — 真实部署中的 Catastrophic Forgetting</text>
+  <text x="450" y="574" text-anchor="middle" fill="#8899aa" font-size="11.5">✅ 分类体系不只适用于受控实验，也能诊断真实Agent产品故障</text>
+
+  <!-- Checkmark badge -->
+  <circle cx="705" cy="445" r="28" fill="#1a3520" stroke="#2ecc71" stroke-width="2"/>
+  <text x="705" y="452" text-anchor="middle" fill="#2ecc71" font-size="26">✓</text>
+  <text x="705" y="488" text-anchor="middle" fill="#2ecc71" font-size="12" font-weight="bold">100% 覆盖</text>
+</svg>

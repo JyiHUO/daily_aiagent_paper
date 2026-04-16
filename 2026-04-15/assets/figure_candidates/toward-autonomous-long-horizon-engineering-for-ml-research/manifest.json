@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/downloaded_pdfs/toward-autonomous-long-horizon-engineering-for-ml-research.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-127",
+      "page_index": 3,
+      "caption": "3.1. Overview: Thin Control over Thick State",
+      "clip": [
+        57.24412536621094,
+        69.42121124267578,
+        549.8052978515625,
+        285.54364013671875
+      ],
+      "clip_area": 106453.51697643183,
+      "page_area": 501156.9211820215,
+      "text_density": 0.31387527300590723,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.150300474939254,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1. AiScientist autonomously improving performance on a competition-style ML task over 23 hours. On MLE-Bench Lite’s Detecting Insults task, it conducted 74 experiment cycles without human intervention, raising validation AUC from 0.903 to 0.982 through 18 best-so-far updates.",
+      "clip": [
+        88.23362731933594,
+        470.8692626953125,
+        541.54736328125,
+        698.9932250976562
+      ],
+      "clip_area": 103411.72565904167,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2055763788449396,
+      "kind": "embedded_image_with_caption",
+      "xref": 310,
+      "score": 15.614436443292975,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-block-20",
+      "page_index": 0,
+      "caption": "Figure 1. AiScientist autonomously improving performance on a competition-style ML task over 23 hours. On MLE-Bench Lite’s Detecting Insults task, it conducted 74 experiment cycles without human intervention, raising validation AUC from 0.903 to 0.982 through 18 best-so-far updates.",
+      "clip": [
+        78.23362731933594,
+        464.8692626953125,
+        551.54736328125,
+        704.9932250976562
+      ],
+      "clip_area": 113653.96973863151,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2464660314667992,
+      "kind": "image_block_with_caption",
+      "score": 13.012038111992046,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/03-p1-image_block_with_caption.png",
+      "filename": "03-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-8-block-27",
+      "page_index": 8,
+      "caption": "Figure 3 analyzes which mechanisms account for the gains of AiScientist. We focus on two questions : whether durable artifact-based continuity is a key driver of performance, and whether simpler non-hierarchical agent organizations are sufficient for long-horizon ML research engineering.",
+      "clip": [
+        32.14019927978515,
+        203.60196533203123,
+        564.0441955566406,
+        532.3579711914062
+      ],
+      "clip_area": 174866.63331661889,
+      "page_area": 501156.9211820215,
+      "text_density": 0.6394731541574876,
+      "kind": "captioned_figure",
+      "score": 10.642963716499736,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-11-block-5",
+      "page_index": 11,
+      "caption": "A. Nadafian, A. Mohammadshahi, and M. Yazdani. Kapso: A knowledge-grounded framework for autonomous program synthesis and optimization. arXiv preprint arXiv:2601.21526 , 2026.",
+      "clip": [
+        32.59819946289062,
+        18.0,
+        562.8954528808594,
+        238.0393524169922
+      ],
+      "clip_area": 116686.26423059944,
+      "page_area": 501156.9211820215,
+      "text_density": 0.4663357687435453,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/05-p12-captioned_figure.png",
+      "filename": "05-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-21",
+      "page_index": 8,
+      "caption": "Figure 3. Mechanism analysis of AiScientist under GLM-5. Left: AiScientist outperforms both a simpler agent baseline and the variant without File-as-Bus. Right: File-as-Bus matters more for later-round refinement than for establishing a minimally competitive starting point.",
+      "clip": [
+        42.34782791137695,
+        58.02533721923828,
+        545.0795288085938,
+        208.45852661132812
+      ],
+      "clip_area": 75627.53317447848,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2340244858579214,
+      "kind": "drawing_cluster_with_caption",
+      "score": 4.598836772685589,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/06-p9-drawing_cluster_with_caption.png",
+      "filename": "06-p9-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/toward-autonomous-long-horizon-engineering-for-ml-research/contact-sheet.svg"
+}

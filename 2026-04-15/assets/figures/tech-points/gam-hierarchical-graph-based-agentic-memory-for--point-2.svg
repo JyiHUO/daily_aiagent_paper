@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E74C3C"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27AE60"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F9FA"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#2C3E50">GAM：语义事件触发的两态切换</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#7F8C8D">不是每轮更新记忆，而是检测到话题转变才整合</text>
+
+  <!-- ========== STATE 1: Episodic Buffering ========== -->
+  <rect x="40" y="90" width="370" height="310" rx="16" fill="#EBF5FB" stroke="#3498DB" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="90" width="370" height="42" rx="16" fill="#3498DB"/>
+  <rect x="40" y="116" width="370" height="16" fill="#3498DB"/>
+  <text x="225" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">状态 1：Episodic Buffering</text>
+  <text x="225" y="152" text-anchor="middle" font-size="12" fill="#5D6D7E">快速追加新话语到局部事件图</text>
+
+  <!-- Chat bubbles in buffer -->
+  <rect x="70" y="172" width="160" height="32" rx="10" fill="#fff" stroke="#AED6F1" stroke-width="1.5"/>
+  <text x="82" y="193" font-size="12" fill="#2C3E50">🗣 聊旅行计划 (轮1-3)</text>
+
+  <rect x="70" y="214" width="160" height="32" rx="10" fill="#fff" stroke="#AED6F1" stroke-width="1.5"/>
+  <text x="82" y="235" font-size="12" fill="#2C3E50">🗣 聊旅行计划 (轮4-6)</text>
+
+  <rect x="70" y="256" width="160" height="32" rx="10" fill="#fff" stroke="#AED6F1" stroke-width="1.5"/>
+  <text x="82" y="277" font-size="12" fill="#2C3E50">🗣 聊旅行计划 (轮7-8)</text>
+
+  <!-- Local event graph mini -->
+  <g transform="translate(270, 185)">
+    <circle cx="30" cy="20" r="12" fill="#AED6F1" stroke="#3498DB" stroke-width="1.5"/>
+    <circle cx="80" cy="10" r="10" fill="#AED6F1" stroke="#3498DB" stroke-width="1.5"/>
+    <circle cx="75" cy="55" r="10" fill="#AED6F1" stroke="#3498DB" stroke-width="1.5"/>
+    <circle cx="110" cy="40" r="9" fill="#AED6F1" stroke="#3498DB" stroke-width="1.5"/>
+    <line x1="42" y1="20" x2="70" y2="12" stroke="#3498DB" stroke-width="1.2"/>
+    <line x1="38" y1="28" x2="65" y2="50" stroke="#3498DB" stroke-width="1.2"/>
+    <line x1="85" y1="52" x2="103" y2="43" stroke="#3498DB" stroke-width="1.2"/>
+    <text x="60" y="85" text-anchor="middle" font-size="11" fill="#5D6D7E">局部事件图</text>
+  </g>
+
+  <!-- Buffer meter -->
+  <rect x="70" y="310" width="200" height="18" rx="9" fill="#D5E8D4" stroke="#82C46C" stroke-width="1"/>
+  <rect x="70" y="310" width="150" height="18" rx="9" fill="#82C46C"/>
+  <text x="170" y="323" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Buffer: 1536 / 2048 tok</text>
+  <text x="290" y="323" font-size="10" fill="#7F8C8D">未溢出</text>
+
+  <!-- Accumulate arrow -->
+  <path d="M 150 293 L 150 306" stroke="#3498DB" stroke-width="1.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ========== TRIGGER ZONE ========== -->
+  <g transform="translate(420, 160)">
+    <!-- Lightning bolt trigger -->
+    <rect x="0" y="50" width="60" height="170" rx="12" fill="#FDF2E9" stroke="#E67E22" stroke-width="2.5" stroke-dasharray="6,3"/>
+    <text x="30" y="75" text-anchor="middle" font-size="22">⚡</text>
+    <text x="30" y="100" text-anchor="middle" font-size="10" font-weight="bold" fill="#E67E22">语义</text>
+    <text x="30" y="114" text-anchor="middle" font-size="10" font-weight="bold" fill="#E67E22">边界</text>
+    <text x="30" y="128" text-anchor="middle" font-size="10" font-weight="bold" fill="#E67E22">检测</text>
+
+    <!-- Trigger conditions -->
+    <text x="30" y="155" text-anchor="middle" font-size="9" fill="#A04000">话题转变</text>
+    <text x="30" y="170" text-anchor="middle" font-size="9" fill="#A04000">session结束</text>
+    <text x="30" y="185" text-anchor="middle" font-size="9" fill="#A04000">buffer溢出</text>
+
+    <!-- bt=1 label -->
+    <rect x="4" y="195" width="52" height="20" rx="10" fill="#E67E22"/>
+    <text x="30" y="209" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">b_t = 1</text>
+  </g>
+
+  <!-- Arrow from State1 to Trigger -->
+  <path d="M 410 250 L 420 250" stroke="#E67E22" stroke-width="2.5" marker-end="url(#arrowRed)" fill="none"/>
+
+  <!-- Arrow from Trigger to State2 -->
+  <path d="M 480 250 L 500 250" stroke="#27AE60" stroke-width="2.5" marker-end="url(#arrowGreen)" fill="none"/>
+
+  <!-- ========== STATE 2: Semantic Consolidation ========== -->
+  <rect x="500" y="90" width="370" height="310" rx="16" fill="#EAFAF1" stroke="#27AE60" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500" y="90" width="370" height="42" rx="16" fill="#27AE60"/>
+  <rect x="500" y="116" width="370" height="16" fill="#27AE60"/>
+  <text x="685" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">状态 2：Semantic Consolidation</text>
+  <text x="685" y="152" text-anchor="middle" font-size="12" fill="#5D6D7E">生成双粒度节点，写入全局图</text>
+
+  <!-- New topic node -->
+  <g transform="translate(530, 168)">
+    <rect x="0" y="0" width="150" height="72" rx="12" fill="#fff" stroke="#27AE60" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#27AE60">新主题节点 v_new</text>
+    <line x1="10" y1="28" x2="140" y2="28" stroke="#D5F5E3" stroke-width="1"/>
+    <text x="75" y="44" text-anchor="middle" font-size="10" fill="#2C3E50">📝 LLM精炼摘要</text>
+    <text x="75" y="60" text-anchor="middle" font-size="10" fill="#7F8C8D">📄 原始文本存档</text>
+  </g>
+
+  <!-- Arrow down to global graph -->
+  <path d="M 605 244 L 605 264" stroke="#27AE60" stroke-width="2" marker-end="url(#arrowGreen)" fill="none"/>
+
+  <!-- Matching process -->
+  <g transform="translate(700, 172)">
+    <rect x="0" y="0" width="140" height="62" rx="10" fill="#FEF9E7" stroke="#F1C40F" stroke-width="1.5"/>
+    <text x="70" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#B7950B">语义边建立</text>
+    <text x="70" y="35" text-anchor="middle" font-size="10" fill="#6E6E6E">① 向量粗筛 top-5</text>
+    <text x="70" y="50" text-anchor="middle" font-size="10" fill="#6E6E6E">② LLM 语义精排</text>
+  </g>
+
+  <!-- Global Graph -->
+  <g transform="translate(540, 270)">
+    <rect x="0" y="0" width="300" height="110" rx="14" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+    <text x="150" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">全局语义图</text>
+
+    <!-- Existing nodes -->
+    <circle cx="60" cy="60" r="16" fill="#82E0AA" stroke="#27AE60" stroke-width="1.5"/>
+    <text x="60" y="64" text-anchor="middle" font-size="9" fill="#1B4332">健康</text>
+
+    <circle cx="150" cy="50" r="16" fill="#82E0AA" stroke="#27AE60" stroke-width="1.5"/>
+    <text x="150" y="54" text-anchor="middle" font-size="9" fill="#1B4332">家庭</text>
+
+    <circle cx="240" cy="62" r="16" fill="#82E0AA" stroke="#27AE60" stroke-width="1.5"/>
+    <text x="240" y="66" text-anchor="middle" font-size="9" fill="#1B4332">美食</text>
+
+    <!-- New node being added -->
+    <circle cx="150" cy="90" r="16" fill="#F9E79F" stroke="#E67E22" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <text x="150" y="94" text-anchor="middle" font-size="9" font-weight="bold" fill="#A04000">旅行</text>
+
+    <!-- Edges -->
+    <line x1="76" y1="60" x2="134" y2="52" stroke="#27AE60" stroke-width="1.2"/>
+    <line x1="166" y1="50" x2="224" y2="60" stroke="#27AE60" stroke-width="1.2"/>
+    <line x1="148" y1="66" x2="148" y2="74" stroke="#E67E22" stroke-width="1.8" stroke-dasharray="3,2"/>
+    <line x1="136" y1="84" x2="74" y2="68" stroke="#E67E22" stroke-width="1.2" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- ========== BOTTOM: Cycle arrow ========== -->
+  <path d="M 685 400 Q 685 440 450 450 Q 200 460 200 400" stroke="#8E44AD" stroke-width="2.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="8,4"/>
+  <rect x="360" y="430" width="180" height="26" rx="13" fill="#F4ECF7" stroke="#8E44AD" stroke-width="1.5"/>
+  <text x="450" y="448" text-anchor="middle" font-size="12" font-weight="bold" fill="#8E44AD">清空 Buffer → 重新开始</text>
+
+  <!-- ========== EXAMPLE ========== -->
+  <rect x="40" y="480" width="820" height="80" rx="14" fill="#fff" stroke="#BDC3C7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="60" y="505" font-size="13" font-weight="bold" fill="#2C3E50">💡 例：</text>
+  <text x="105" y="505" font-size="12" fill="#555">轮1-8 聊旅行 → 轮9 突然转工作话题 → 检测到语义边界(b_t=1)</text>
+  <text x="105" y="525" font-size="12" fill="#555">→ 旅行对话压缩为「旅行」主题节点 (摘要+原文) → 写入全局图 → 清空Buffer → 开始记录工作话题</text>
+  <text x="105" y="548" font-size="11" fill="#999">核心优势：按语义切割，不按固定窗口 → 同时保证感知敏捷性 &amp; 存储稳定性</text>
+</svg>

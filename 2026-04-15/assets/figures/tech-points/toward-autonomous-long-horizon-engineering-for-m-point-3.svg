@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#4A5568">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#3182CE">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#38A169">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="100%" stop-color="#EDF2F7"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF4FF"/>
+      <stop offset="100%" stop-color="#C3DAFE"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEFCBF"/>
+      <stop offset="100%" stop-color="#FAF089"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C6F6D5"/>
+      <stop offset="100%" stop-color="#9AE6B4"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowSmall" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1A202C">证据驱动的迭代研究循环</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#718096">AiScientist: 每轮实验结果写回持久化产物 → 下一轮针对性改进，不重复试错</text>
+
+  <!-- Central Loop Illustration -->
+  <!-- Big circular arrow background -->
+  <ellipse cx="310" cy="340" rx="190" ry="175" fill="none" stroke="#CBD5E0" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- Phase 1: Scaffold -->
+  <rect x="65" y="175" width="170" height="110" rx="16" fill="url(#phaseGrad1)" stroke="#3182CE" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="150" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#2B6CB0">🔧 建立脚手架</text>
+  <text x="150" y="228" text-anchor="middle" font-size="12" fill="#2D3748">第 1-10 轮</text>
+  <text x="150" y="250" text-anchor="middle" font-size="20" font-weight="700" fill="#3182CE">AUC 0.903</text>
+  <text x="150" y="272" text-anchor="middle" font-size="11" fill="#4A5568">"先跑通基线"</text>
+
+  <!-- Phase 2: Diagnose & Fix -->
+  <rect x="65" y="380" width="170" height="110" rx="16" fill="url(#phaseGrad2)" stroke="#D69E2E" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="150" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#975A16">🔍 诊断修复</text>
+  <text x="150" y="433" text-anchor="middle" font-size="12" fill="#2D3748">第 11-30 轮</text>
+  <text x="150" y="455" text-anchor="middle" font-size="20" font-weight="700" fill="#B7791F">AUC 0.945</text>
+  <text x="150" y="477" text-anchor="middle" font-size="11" fill="#4A5568">"分析异常，调架构"</text>
+
+  <!-- Arrow Phase1 -> Phase2 -->
+  <path d="M 150 288 C 150 320, 150 348, 150 373" fill="none" stroke="#4A5568" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Central Persistent Artifact (exp-log.md) -->
+  <rect x="290" y="270" width="160" height="140" rx="14" fill="white" stroke="#E53E3E" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="290" y="270" width="160" height="36" rx="14" fill="#FED7D7"/>
+  <text x="370" y="294" text-anchor="middle" font-size="14" font-weight="700" fill="#C53030">📄 exp-log.md</text>
+  <text x="310" y="325" font-size="11" fill="#4A5568">✓ 失败轨迹记录</text>
+  <text x="310" y="345" font-size="11" fill="#4A5568">✓ 指标差距分析</text>
+  <text x="310" y="365" font-size="11" fill="#4A5568">✓ 部分成功方案</text>
+  <text x="310" y="385" font-size="11" fill="#4A5568">✓ 18次最佳更新</text>
+
+  <!-- Arrows: Phases write to log -->
+  <path d="M 238 240 L 285 295" fill="none" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <path d="M 238 420 L 285 370" fill="none" stroke="#E53E3E" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: log feeds back -->
+  <path d="M 370 413 C 370 470, 200 510, 150 493" fill="none" stroke="#3182CE" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="290" y="490" font-size="11" fill="#3182CE" font-weight="600">证据反馈</text>
+
+  <!-- Phase 3: Fine-tune (right side) -->
+  <rect x="510" y="270" width="170" height="140" rx="16" fill="url(#phaseGrad3)" stroke="#38A169" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="595" y="302" text-anchor="middle" font-size="15" font-weight="700" fill="#276749">🎯 精细调优</text>
+  <text x="595" y="326" text-anchor="middle" font-size="12" fill="#2D3748">第 31-74 轮</text>
+  <text x="595" y="356" text-anchor="middle" font-size="26" font-weight="800" fill="#276749">AUC 0.982</text>
+  <text x="595" y="382" text-anchor="middle" font-size="11" fill="#4A5568">特征工程 + 集成策略</text>
+  <text x="595" y="398" text-anchor="middle" font-size="11" fill="#4A5568">全程 23h 无人干预</text>
+
+  <!-- Arrow Phase2 -> log -> Phase3 -->
+  <path d="M 453 340 L 505 340" fill="none" stroke="#38A169" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- AUC Progress Bar at bottom -->
+  <rect x="65" y="535" width="620" height="50" rx="12" fill="white" stroke="#CBD5E0" stroke-width="1.5" filter="url(#shadowSmall)"/>
+  <text x="85" y="558" font-size="12" font-weight="600" fill="#4A5568">AUC 进度</text>
+  <!-- Track -->
+  <rect x="175" y="548" width="490" height="18" rx="9" fill="#EDF2F7"/>
+  <!-- Progress fill -->
+  <rect x="175" y="548" width="80" height="18" rx="9" fill="#63B3ED"/>
+  <rect x="255" y="548" width="175" height="18" rx="0" fill="#F6E05E"/>
+  <rect x="430" y="548" width="235" height="18" rx="9" fill="#68D391"/>
+  <!-- Markers -->
+  <text x="215" y="544" text-anchor="middle" font-size="10" font-weight="700" fill="#3182CE">0.903</text>
+  <text x="342" y="544" text-anchor="middle" font-size="10" font-weight="700" fill="#B7791F">0.945</text>
+  <text x="547" y="544" text-anchor="middle" font-size="10" font-weight="700" fill="#276749">0.982</text>
+
+  <!-- Key insight callout -->
+  <rect x="700" y="130" width="180" height="170" rx="14" fill="#FFF5F5" stroke="#FC8181" stroke-width="2" filter="url(#shadowSmall)"/>
+  <text x="790" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#C53030">💡 核心创新</text>
+  <line x1="720" y1="168" x2="860" y2="168" stroke="#FEB2B2" stroke-width="1.5"/>
+  <text x="790" y="190" text-anchor="middle" font-size="12" fill="#4A5568">实验证据</text>
+  <text x="790" y="208" text-anchor="middle" font-size="12" fill="#4A5568">持久化到文件</text>
+  <text x="790" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="#C53030">↓</text>
+  <text x="790" y="254" text-anchor="middle" font-size="12" fill="#4A5568">下一轮基于证据</text>
+  <text x="790" y="272" text-anchor="middle" font-size="12" fill="#4A5568">针对性修复</text>
+  <text x="790" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#C53030">≠ 重复试错</text>
+
+  <!-- vs traditional -->
+  <rect x="700" y="340" width="180" height="80" rx="12" fill="#F7FAFC" stroke="#A0AEC0" stroke-width="1.5" filter="url(#shadowSmall)"/>
+  <text x="790" y="365" text-anchor="middle" font-size="12" font-weight="600" fill="#718096">❌ 传统 Agent</text>
+  <text x="790" y="385" text-anchor="middle" font-size="11" fill="#A0AEC0">对话上下文传递</text>
+  <text x="790" y="403" text-anchor="middle" font-size="11" fill="#A0AEC0">长时间信息丢失</text>
+
+  <!-- Connecting dotted line from log to callout -->
+  <path d="M 453 305 C 530 200, 650 160, 697 190" fill="none" stroke="#FC8181" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+</svg>

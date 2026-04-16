@@ -1,0 +1,43 @@
+{
+  "baseline": {
+    "path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/paper_broadcast_script.txt",
+    "stats": {
+      "char_count": 4662,
+      "paragraph_count": 39,
+      "avg_paragraph_chars": 118.6,
+      "sentence_count": 114,
+      "avg_sentence_chars": 40.9,
+      "short_paragraph_ratio": 0.718
+    }
+  },
+  "single_stage_new_prompt": {
+    "path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/paper_broadcast_script_new_prompt.txt",
+    "provider": "bedrock-opus",
+    "target_minutes": 11,
+    "stats": {
+      "char_count": 3027,
+      "paragraph_count": 33,
+      "avg_paragraph_chars": 90.8,
+      "sentence_count": 85,
+      "avg_sentence_chars": 35.6,
+      "short_paragraph_ratio": 0.879
+    }
+  },
+  "two_stage_outline": {
+    "path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/paper_broadcast_outline_two_stage.json",
+    "provider": "bedrock-opus"
+  },
+  "two_stage_script": {
+    "path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-14/paper_broadcast_script_two_stage.txt",
+    "provider": "bedrock-opus",
+    "target_minutes": 11,
+    "stats": {
+      "char_count": 1947,
+      "paragraph_count": 15,
+      "avg_paragraph_chars": 128.9,
+      "sentence_count": 49,
+      "avg_sentence_chars": 39.7,
+      "short_paragraph_ratio": 0.667
+    }
+  }
+}

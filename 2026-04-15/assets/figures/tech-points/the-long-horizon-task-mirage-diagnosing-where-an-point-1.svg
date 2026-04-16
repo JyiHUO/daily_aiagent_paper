@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">统一的任务 Horizon 度量 — 一把跨域的"尺子"</text>
+  <text x="450" y="66" text-anchor="middle" fill="#64748b" font-size="13">HORIZON Framework: 与 Agent 无关，只看任务本身复杂度</text>
+
+  <!-- ===== Core metric block (center top) ===== -->
+  <rect x="280" y="88" width="340" height="100" rx="16" fill="url(#g1)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="450" y="120" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Intrinsic Horizon  H*</text>
+  <text x="450" y="146" text-anchor="middle" fill="#dbeafe" font-size="14">最优策略的最少有效动作数</text>
+  <text x="450" y="170" text-anchor="middle" fill="#93c5fd" font-size="12">排除重试/失败 → 纯任务真实长度</text>
+
+  <!-- Arrow down from H* -->
+  <line x1="370" y1="188" x2="260" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+  <line x1="530" y1="188" x2="640" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6,4"/>
+
+  <!-- ===== Depth Extension (left) ===== -->
+  <rect x="60" y="260" width="360" height="200" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="260" width="360" height="44" rx="16" fill="url(#g2)" opacity="0.9"/>
+  <rect x="60" y="284" width="360" height="20" fill="url(#g2)" opacity="0.9"/>
+  <text x="240" y="290" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">Depth Extension 深度扩展</text>
+  <text x="240" y="325" text-anchor="middle" fill="#fcd34d" font-size="13">在步骤之间 插入不可跳过的子任务</text>
+
+  <!-- Mini pipeline: original -->
+  <text x="85" y="358" fill="#94a3b8" font-size="11">原始:</text>
+  <rect x="120" y="342" width="52" height="28" rx="8" fill="#334155"/>
+  <text x="146" y="361" text-anchor="middle" fill="#e2e8f0" font-size="11">搜索</text>
+  <line x1="172" y1="356" x2="195" y2="356" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="198" y="342" width="52" height="28" rx="8" fill="#334155"/>
+  <text x="224" y="361" text-anchor="middle" fill="#e2e8f0" font-size="11">筛价格</text>
+  <line x1="250" y1="356" x2="273" y2="356" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="276" y="342" width="52" height="28" rx="8" fill="#334155"/>
+  <text x="302" y="361" text-anchor="middle" fill="#e2e8f0" font-size="11">结账</text>
+  <text x="365" y="361" fill="#64748b" font-size="11">H*=8</text>
+
+  <!-- Mini pipeline: extended -->
+  <text x="85" y="418" fill="#fbbf24" font-size="11">扩展:</text>
+  <rect x="120" y="402" width="46" height="28" rx="8" fill="#334155"/>
+  <text x="143" y="421" text-anchor="middle" fill="#e2e8f0" font-size="10">搜索</text>
+  <line x1="166" y1="416" x2="182" y2="416" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <rect x="185" y="402" width="46" height="28" rx="8" fill="#334155"/>
+  <text x="208" y="421" text-anchor="middle" fill="#e2e8f0" font-size="10">筛价格</text>
+  <line x1="231" y1="416" x2="247" y2="416" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <!-- NEW inserted step -->
+  <rect x="250" y="398" width="56" height="36" rx="8" fill="#92400e" stroke="#f59e0b" stroke-width="2"/>
+  <text x="278" y="414" text-anchor="middle" fill="#fcd34d" font-size="10" font-weight="bold">验证</text>
+  <text x="278" y="427" text-anchor="middle" fill="#fcd34d" font-size="9">库存</text>
+  <line x1="306" y1="416" x2="322" y2="416" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <rect x="325" y="402" width="46" height="28" rx="8" fill="#334155"/>
+  <text x="348" y="421" text-anchor="middle" fill="#e2e8f0" font-size="10">结账</text>
+  <text x="395" y="421" fill="#fbbf24" font-size="11" font-weight="bold">H*↑</text>
+
+  <!-- Label -->
+  <text x="240" y="455" text-anchor="middle" fill="#94a3b8" font-size="12">s (嵌套深度) 增大 → H* 单调递增</text>
+
+  <!-- ===== Breadth Extension (right) ===== -->
+  <rect x="480" y="260" width="360" height="200" rx="16" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="260" width="360" height="44" rx="16" fill="url(#g3)" opacity="0.9"/>
+  <rect x="480" y="284" width="360" height="20" fill="url(#g3)" opacity="0.9"/>
+  <text x="660" y="290" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">Breadth Extension 广度扩展</text>
+  <text x="660" y="325" text-anchor="middle" fill="#6ee7b7" font-size="13">将 k 个独立任务 组合为复合工作流</text>
+
+  <!-- Task A -->
+  <rect x="510" y="348" width="120" height="46" rx="10" fill="#334155" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="570" y="368" text-anchor="middle" fill="#e2e8f0" font-size="12">Task A: 购买耳机</text>
+  <text x="570" y="384" text-anchor="middle" fill="#64748b" font-size="10">H*=8</text>
+
+  <!-- Task B -->
+  <rect x="670" y="348" width="120" height="46" rx="10" fill="#334155" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="730" y="368" text-anchor="middle" fill="#e2e8f0" font-size="12">Task B: 查物流</text>
+  <text x="730" y="384" text-anchor="middle" fill="#64748b" font-size="10">H*=5</text>
+
+  <!-- Plus sign -->
+  <text x="650" y="378" text-anchor="middle" fill="#10b981" font-size="24" font-weight="bold">+</text>
+
+  <!-- Combined -->
+  <line x1="570" y1="394" x2="570" y2="412" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="730" y1="394" x2="730" y2="412" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="570" y1="412" x2="730" y2="412" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="650" y1="412" x2="650" y2="428" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <rect x="560" y="430" width="200" height="40" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+  <text x="660" y="450" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="bold">复合任务  s=2</text>
+  <text x="660" y="464" text-anchor="middle" fill="#a7f3d0" font-size="11">H* = 8+5+协调开销</text>
+
+  <!-- ===== Bottom: Key Insight ===== -->
+  <rect x="150" y="500" width="600" height="90" rx="18" fill="#1e293b" stroke="#6366f1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="530" text-anchor="middle" fill="#a5b4fc" font-size="15" font-weight="bold">🎯 核心洞察</text>
+  <text x="450" y="555" text-anchor="middle" fill="#e2e8f0" font-size="14">两种扩展方式均保证 H* 随 s 单调递增</text>
+  <text x="450" y="577" text-anchor="middle" fill="#94a3b8" font-size="13">→ 可受控观察 Agent 在哪个 horizon 开始崩溃</text>
+
+  <!-- Decorative corner accents -->
+  <circle cx="30" cy="30" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="870" cy="30" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="30" cy="590" r="4" fill="#6366f1" opacity="0.5"/>
+  <circle cx="870" cy="590" r="4" fill="#6366f1" opacity="0.5"/>
+</svg>

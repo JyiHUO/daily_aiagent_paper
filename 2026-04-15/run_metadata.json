@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-15",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 408,
+  "selected_count": 3,
+  "focus_titles": [
+    "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break",
+    "Toward Autonomous Long-Horizon Engineering for ML Research",
+    "GAM: Hierarchical Graph-based Agentic Memory for LLM Agents"
+  ],
+  "knowledge_topic": "长程任务中的失败模式分类（Failure Mode Taxonomy）",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/paper_broadcast_script.txt"
+}

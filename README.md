@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-14
+- **日期**：2026-04-15
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Agentic Aggregation for Parallel Scaling of Long-Horizon Agentic Tasks
-  - The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents
-  - CocoaBench: Evaluating Unified Digital Agents in the Wild
-- **日报路径**：[2026-04-14/daily_report.md](2026-04-14/daily_report.md)
+  - The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break
+  - Toward Autonomous Long-Horizon Engineering for ML Research
+  - GAM: Hierarchical Graph-based Agentic Memory for LLM Agents
+- **日报路径**：[2026-04-15/daily_report.md](2026-04-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break | [2026-04-15/daily_report.md](2026-04-15/daily_report.md) |
+|  |  |  | 2 | Toward Autonomous Long-Horizon Engineering for ML Research |  |
+|  |  |  | 3 | GAM: Hierarchical Graph-based Agentic Memory for LLM Agents |  |
 | 2026-04-14 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Agentic Aggregation for Parallel Scaling of Long-Horizon Agentic Tasks | [2026-04-14/daily_report.md](2026-04-14/daily_report.md) |
 |  |  |  | 2 | The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents |  |
 |  |  |  | 3 | CocoaBench: Evaluating Unified Digital Agents in the Wild |  |

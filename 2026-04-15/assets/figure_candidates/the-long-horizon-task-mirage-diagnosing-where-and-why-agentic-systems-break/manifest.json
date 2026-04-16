@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/downloaded_pdfs/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break",
+  "candidates": [
+    {
+      "id": "page-4-block-7",
+      "page_index": 4,
+      "caption": "Why It Works? Our taxonomy is grounded in three validation pillars that demonstrate its reliability as a diagnostic framework:",
+      "clip": [
+        76.9019989013672,
+        235.4410888671875,
+        534.6034484863281,
+        544.2410888671875
+      ],
+      "clip_area": 141338.20763183595,
+      "page_area": 484704.0,
+      "text_density": 0.6905889038515615,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/01-p5-captioned_figure.png",
+      "filename": "01-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        92.0,
+        67.85936737060547,
+        520.0108337402344,
+        212.18402099609375
+      ],
+      "clip_area": 61772.51532751578,
+      "page_area": 484704.0,
+      "text_density": 0.14557808550438173,
+      "kind": "drawing_cluster",
+      "score": 4.751676151153938,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/02-p8-drawing_cluster.png",
+      "filename": "02-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        76.30724334716797,
+        20.784149169921875,
+        520.000244140625,
+        268.4827880859375
+      ],
+      "clip_area": 109902.15239310195,
+      "page_area": 484704.0,
+      "text_density": 0.18885773024421798,
+      "kind": "drawing_cluster",
+      "score": 1.4685361853469212,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/03-p9-drawing_cluster.png",
+      "filename": "03-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        190.5428924560547,
+        131.7775115966797,
+        290.96038818359375,
+        232.1950225830078
+      ],
+      "clip_area": 10083.674980439711,
+      "page_area": 484704.0,
+      "text_density": 0.5320735523757255,
+      "kind": "embedded_image",
+      "xref": 867,
+      "score": -6.887959166884004,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/04-p2-embedded_image.png",
+      "filename": "04-p2-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4942494393554051,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.45066904847212325,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-15/assets/figure_candidates/the-long-horizon-task-mirage-diagnosing-where-and-why-agentic-systems-break/contact-sheet.svg"
+}

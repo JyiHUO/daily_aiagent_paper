@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="gam_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="other_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9E9E9E" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#9E9E9E" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="16" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">GAM：更准确 · 更省 Token · 更快</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">基于 Qwen2.5-7B 在 LoCoMo 长期对话基准上的表现</text>
+
+  <!-- ========== LEFT: Accuracy Bar Comparison ========== -->
+  <text x="200" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">📊 准确率 (Avg F1)</text>
+
+  <!-- Bar: GAM -->
+  <rect x="70" y="120" width="260" height="50" rx="8" fill="url(#gam_grad)" stroke="#4CAF50" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="70" y="120" width="260" height="50" rx="8" fill="#4CAF50" opacity="0.82"/>
+  <text x="80" y="151" font-size="15" font-weight="bold" fill="#fff">GAM</text>
+  <text x="310" y="151" text-anchor="end" font-size="20" font-weight="bold" fill="#fff">40.00</text>
+
+  <!-- Bar: Mem0 -->
+  <rect x="70" y="180" width="230" height="42" rx="8" fill="#78909C" opacity="0.7"/>
+  <text x="80" y="207" font-size="14" font-weight="bold" fill="#fff">Mem0</text>
+  <text x="282" y="207" text-anchor="end" font-size="17" font-weight="bold" fill="#fff">35.38</text>
+
+  <!-- Bar: MemoryOS -->
+  <rect x="70" y="232" width="120" height="42" rx="8" fill="#B0BEC5" opacity="0.6"/>
+  <text x="80" y="259" font-size="14" font-weight="bold" fill="#fff">MemoryOS</text>
+  <text x="178" y="259" text-anchor="end" font-size="15" font-weight="bold" fill="#555">~6.75</text>
+
+  <!-- Arrow annotation for +13% -->
+  <path d="M340 145 L360 145" stroke="#4CAF50" stroke-width="2" fill="none" marker-end="url(#arrowG)"/>
+  <text x="345" y="190" font-size="13" fill="#4CAF50" font-weight="bold">+13% vs Mem0</text>
+
+  <!-- Temporal highlight -->
+  <rect x="70" y="290" width="275" height="48" rx="10" fill="#E8F5E9" stroke="#66BB6A" stroke-width="1.5"/>
+  <text x="82" y="312" font-size="13" fill="#2E7D32" font-weight="bold">⏱ 时间推理 Temporal F1</text>
+  <text x="82" y="330" font-size="12" fill="#555">GAM <tspan font-weight="bold" fill="#2E7D32">48.97</tspan>  vs  Mem0 <tspan fill="#777">41.22</tspan>  (+18%)</text>
+
+  <!-- ========== RIGHT TOP: Token Efficiency ========== -->
+  <text x="640" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">🪙 每次查询 Token 消耗</text>
+
+  <!-- Token circles comparison -->
+  <!-- A-Mem big circle -->
+  <circle cx="560" cy="185" r="62" fill="#FFCDD2" stroke="#E57373" stroke-width="1.5" opacity="0.7"/>
+  <text x="560" y="180" text-anchor="middle" font-size="13" fill="#C62828" font-weight="bold">A-Mem</text>
+  <text x="560" y="198" text-anchor="middle" font-size="16" font-weight="bold" fill="#C62828">4221</text>
+
+  <!-- Mem0 medium circle -->
+  <circle cx="670" cy="195" r="35" fill="#FFE0B2" stroke="#FFA726" stroke-width="1.5" opacity="0.7"/>
+  <text x="670" y="190" text-anchor="middle" font-size="11" fill="#E65100" font-weight="bold">Mem0</text>
+  <text x="670" y="206" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">1540</text>
+
+  <!-- GAM small circle with highlight -->
+  <circle cx="750" cy="200" r="30" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2.5"/>
+  <text x="750" y="195" text-anchor="middle" font-size="11" fill="#1B5E20" font-weight="bold">GAM</text>
+  <text x="750" y="211" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B5E20">1370</text>
+
+  <!-- Arrow showing smallest -->
+  <text x="750" y="245" text-anchor="middle" font-size="11" fill="#4CAF50" font-weight="bold">最少! -67% vs A-Mem</text>
+
+  <!-- ========== RIGHT BOTTOM: Latency ========== -->
+  <text x="640" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">⚡ 延迟对比</text>
+
+  <!-- Latency bars horizontal -->
+  <!-- MemoryOS -->
+  <rect x="500" y="308" width="270" height="30" rx="6" fill="#FFCDD2" opacity="0.6"/>
+  <text x="510" y="328" font-size="12" fill="#C62828" font-weight="bold">MemoryOS  154s 🐌</text>
+
+  <!-- GAM -->
+  <rect x="500" y="346" width="14" height="30" rx="6" fill="#4CAF50"/>
+  <text x="522" y="366" font-size="12" fill="#1B5E20" font-weight="bold">GAM  0.80s ⚡</text>
+  <text x="620" y="366" font-size="11" fill="#4CAF50" font-weight="bold">快 190x!</text>
+
+  <!-- ========== BOTTOM: Key Insight ========== -->
+  <rect x="80" y="370" width="740" height="70" rx="14" fill="#FFF8E1" stroke="#FFB300" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Graph icon -->
+  <circle cx="130" cy="405" r="22" fill="#FFE082" stroke="#FFB300" stroke-width="1.5"/>
+  <circle cx="120" cy="395" r="4" fill="#F57F17"/>
+  <circle cx="140" cy="395" r="4" fill="#F57F17"/>
+  <circle cx="130" cy="415" r="4" fill="#F57F17"/>
+  <line x1="120" y1="395" x2="140" y2="395" stroke="#F57F17" stroke-width="1.5"/>
+  <line x1="120" y1="395" x2="130" y2="415" stroke="#F57F17" stroke-width="1.5"/>
+  <line x1="140" y1="395" x2="130" y2="415" stroke="#F57F17" stroke-width="1.5"/>
+
+  <text x="170" y="398" font-size="15" font-weight="bold" fill="#E65100">🔑 关键发现：事件图 (EPG) 是最核心组件</text>
+  <text x="170" y="420" font-size="13" fill="#555">消融实验：移除事件图后性能损失最大 → 叙事结构化存储 = 精准检索 + 信息压缩</text>
+
+  <!-- ========== Bottom summary badges ========== -->
+  <rect x="150" y="462" width="160" height="36" rx="18" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="230" y="485" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">✅ F1 最高</text>
+
+  <rect x="370" y="462" width="160" height="36" rx="18" fill="#2196F3" filter="url(#shadow)"/>
+  <text x="450" y="485" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">✅ Token 最省</text>
+
+  <rect x="590" y="462" width="160" height="36" rx="18" fill="#FF9800" filter="url(#shadow)"/>
+  <text x="670" y="485" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">✅ 延迟最低</text>
+</svg>
