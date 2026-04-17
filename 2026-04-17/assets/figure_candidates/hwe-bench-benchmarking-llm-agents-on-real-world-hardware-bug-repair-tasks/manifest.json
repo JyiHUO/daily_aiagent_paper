@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks",
+  "candidates": [
+    {
+      "id": "page-2-block-7",
+      "page_index": 2,
+      "caption": "The construction of HWE-Bench follows a multi-phase pipeline (Figure 2) designed to extract verifiable bug repair tasks from real- world hardware projects.",
+      "clip": [
+        22.866999053955077,
+        18.0,
+        326.1570983886719,
+        245.86007690429688
+      ],
+      "clip_area": 69107.70535872041,
+      "page_area": 484704.0,
+      "text_density": 0.38167429767622557,
+      "kind": "captioned_figure",
+      "score": 60.76786339287467,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/01-p3-captioned_figure.png",
+      "filename": "01-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-caption-20",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of a task instance in HWE-Bench.",
+      "clip": [
+        155.96316528320312,
+        244.44049072265625,
+        510.4212341308594,
+        319.9532165527344
+      ],
+      "clip_area": 26766.094971152022,
+      "page_area": 484704.0,
+      "text_density": 0.047716528195580594,
+      "kind": "drawing_cluster_with_caption",
+      "score": 58.29740105523502,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of a task instance in HWE-Bench.",
+      "clip": [
+        93.0670394897461,
+        121.15278625488281,
+        254.87539672851562,
+        275.89202880859375
+      ],
+      "clip_area": 25038.102637987467,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 320,
+      "score": 51.278201140422084,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/03-p2-embedded_image_with_caption.png",
+      "filename": "03-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-6-0",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of a task instance in HWE-Bench.",
+      "clip": [
+        241.31381225585938,
+        183.8934783935547,
+        386.6893005371094,
+        274.1416931152344
+      ],
+      "clip_area": 13119.87828167528,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 326,
+      "score": 51.14577642535195,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/04-p2-embedded_image_with_caption.png",
+      "filename": "04-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-80",
+      "page_index": 3,
+      "caption": "Figure 2: Construction pipeline of HWE-Bench.",
+      "clip": [
+        55.58685302734375,
+        83.96651458740234,
+        555.8369750976562,
+        331.6238708496094
+      ],
+      "clip_area": 123890.62270177994,
+      "page_area": 484704.0,
+      "text_density": 0.07563144979913929,
+      "kind": "drawing_cluster_with_caption",
+      "score": 48.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/05-p4-drawing_cluster_with_caption.png",
+      "filename": "05-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-124",
+      "page_index": 3,
+      "caption": "Figure 3: Distribution of ground-truth patches in HWE-Bench compared with SWE-bench Verified [ 8 ] and SWE-bench Pro [ 6 ].",
+      "clip": [
+        35.79800033569336,
+        339.3731689453125,
+        576.2078857421875,
+        489.8240051269531
+      ],
+      "clip_area": 81305.11914023163,
+      "page_area": 484704.0,
+      "text_density": 0.1179137206559019,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.628566973315124,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/contact-sheet.svg"
+}

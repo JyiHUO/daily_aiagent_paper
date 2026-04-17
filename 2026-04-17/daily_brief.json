@@ -1,0 +1,15 @@
+{
+  "trend_overview": [
+    "今天初筛后最集中的主题是 tool_use、planning_reasoning、agent_eval，说明研究关注点继续从单轮回答能力转向更完整的执行链。",
+    "从创新性和研究开拓性看，Benchmarks for Trajectory Safety Evaluation and Diagnosis in OpenClaw and Codex: ATBench-Claw and ATBench-CodeX、Neuro-Oracle: A Trajectory-Aware Agentic RAG Framework for Interpretable Epilepsy Surgical Prognosis 代表了今天最值得后续继续追踪的切口。"
+  ],
+  "knowledge_point": {
+    "topic": "Planner 为什么重要",
+    "content": "Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么、每一步依赖什么反馈'的那层机制。没有 planner，系统容易把任务做成一步一拍脑袋的局部反应；有了 planner，Agent 才能处理长任务、跨工具任务和需要中途修正的任务。很多 Agent 能力差异，最后都不是出在语言生成本身，而是出在计划层有没有把任务拆对、有没有给执行留回退空间。",
+    "why_today": "今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。"
+  },
+  "closing_summary": [
+    "如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。",
+    "这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-20",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of FedGUI. FedGUI provides a federated framework that coordinates a central server and heterogeneous clients across mobile, web, and desk- top platforms to train a generalized cross-platform GUI agent. Hetero. is short for heterogeneity.",
+      "clip": [
+        52.865997314453125,
+        54.86376953125,
+        307.14239501953125,
+        241.3220672607422
+      ],
+      "clip_area": 47411.94426887622,
+      "page_area": 501156.9211820215,
+      "text_density": 0.12197269814490587,
+      "kind": "drawing_cluster_with_caption",
+      "score": 103.00843749207094,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-0-0",
+      "page_index": 15,
+      "caption": "Figure 9: Example data episodes for training GUI agents across mobile, web, and desktop platforms in FedGUI.",
+      "clip": [
+        58.865997314453125,
+        286.9542541503906,
+        228.00485229492188,
+        445.30401611328125
+      ],
+      "clip_area": 26783.097424833104,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01995380535739655,
+      "kind": "embedded_image_with_caption",
+      "xref": 578,
+      "score": 48.29758997138703,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/02-p16-embedded_image_with_caption.png",
+      "filename": "02-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-1-0",
+      "page_index": 15,
+      "caption": "Figure 9: Example data episodes for training GUI agents across mobile, web, and desktop platforms in FedGUI.",
+      "clip": [
+        213.06900024414062,
+        287.28961181640625,
+        382.201416015625,
+        445.30401611328125
+      ],
+      "clip_area": 26725.35792542249,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01798584220584849,
+      "kind": "embedded_image_with_caption",
+      "xref": 579,
+      "score": 48.29694842139358,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/03-p16-embedded_image_with_caption.png",
+      "filename": "03-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-2-0",
+      "page_index": 15,
+      "caption": "Figure 9: Example data episodes for training GUI agents across mobile, web, and desktop platforms in FedGUI.",
+      "clip": [
+        367.2720031738281,
+        287.3682556152344,
+        536.4046630859375,
+        445.30401611328125
+      ],
+      "clip_area": 26712.09526827652,
+      "page_area": 501156.9211820215,
+      "text_density": 0.020878409501504346,
+      "kind": "embedded_image_with_caption",
+      "xref": 580,
+      "score": 48.2968010585364,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/04-p16-embedded_image_with_caption.png",
+      "filename": "04-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-7-0",
+      "page_index": 17,
+      "caption": "Figure 10: Overview of the datasets used in our experiments across mobile (AC, AitW, GO), web (M2W, GA-W, OA- W), and desktop (AS, OA-Mac, OA-Win) environments. These datasets cover diverse task formulations, interface modalities, and interaction patterns, enabling evaluation of federated GUI agents under various heterogeneity.",
+      "clip": [
+        58.865997314453125,
+        327.3922424316406,
+        228.0478515625,
+        441.56329345703125
+      ],
+      "clip_area": 19315.67011392396,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04454567871575955,
+      "kind": "embedded_image_with_caption",
+      "xref": 789,
+      "score": 43.21461855682138,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/05-p18-embedded_image_with_caption.png",
+      "filename": "05-p18-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-9-0",
+      "page_index": 17,
+      "caption": "Figure 10: Overview of the datasets used in our experiments across mobile (AC, AitW, GO), web (M2W, GA-W, OA- W), and desktop (AS, OA-Mac, OA-Win) environments. These datasets cover diverse task formulations, interface modalities, and interaction patterns, enabling evaluation of federated GUI agents under various heterogeneity.",
+      "clip": [
+        367.2720031738281,
+        327.3922424316406,
+        536.453857421875,
+        441.56329345703125
+      ],
+      "clip_area": 19315.67011392396,
+      "page_area": 501156.9211820215,
+      "text_density": 0.045337435427181,
+      "kind": "embedded_image_with_caption",
+      "xref": 797,
+      "score": 43.21461855682138,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/06-p18-embedded_image_with_caption.png",
+      "filename": "06-p18-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/contact-sheet.svg"
+}

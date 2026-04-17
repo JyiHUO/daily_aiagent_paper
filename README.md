@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-16
+- **日期**：2026-04-17
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - WebXSkill: Skill Learning for Autonomous Web Agents
-  - ToolOmni: Enabling Open-World Tool Use via Agentic learning with Proactive Retrieval and Grounded Execution
-  - Exploration and Exploitation Errors Are Measurable for Language Model Agents
-- **日报路径**：[2026-04-16/daily_report.md](2026-04-16/daily_report.md)
+  - HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks
+  - FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems
+  - APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI
+- **日报路径**：[2026-04-17/daily_report.md](2026-04-17/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-17 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks | [2026-04-17/daily_report.md](2026-04-17/daily_report.md) |
+|  |  |  | 2 | FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems |  |
+|  |  |  | 3 | APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI |  |
 | 2026-04-16 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | WebXSkill: Skill Learning for Autonomous Web Agents | [2026-04-16/daily_report.md](2026-04-16/daily_report.md) |
 |  |  |  | 2 | ToolOmni: Enabling Open-World Tool Use via Agentic learning with Proactive Retrieval and Grounded Execution |  |
 |  |  |  | 3 | Exploration and Exploitation Errors Are Measurable for Language Model Agents |  |

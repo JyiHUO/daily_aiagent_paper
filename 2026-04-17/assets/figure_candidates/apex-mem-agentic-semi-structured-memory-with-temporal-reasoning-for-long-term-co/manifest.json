@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co",
+  "candidates": [
+    {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Figure 1: End-to-end pipeline for constructing and querying APEX-MEM Graph, showing data flow from unstruc- tured conversation to GraphSQL QA Agent.",
+      "clip": [
+        48.88200378417969,
+        52.86247253417969,
+        546.4086303710938,
+        216.0660400390625
+      ],
+      "clip_area": 81198.12038765405,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04041590396987648,
+      "kind": "image_block_with_caption",
+      "score": 55.9022013376406,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1: End-to-end pipeline for constructing and querying APEX-MEM Graph, showing data flow from unstruc- tured conversation to GraphSQL QA Agent.",
+      "clip": [
+        58.88200378417969,
+        58.86247253417969,
+        536.4086303710938,
+        210.0660400390625
+      ],
+      "clip_area": 72203.72951851343,
+      "page_area": 501156.9211820215,
+      "text_density": 0.007624527893049604,
+      "kind": "embedded_image_with_caption",
+      "xref": 387,
+      "score": 54.802263661316815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-block-14",
+      "page_index": 7,
+      "caption": "We have introduced APEX-MEM, an ontology- supported property graph architecture for long-",
+      "clip": [
+        40.589196777343744,
+        414.1733764648437,
+        320.70514526367185,
+        742.9293823242188
+      ],
+      "clip_area": 92089.80040187566,
+      "page_area": 501156.9211820215,
+      "text_density": 0.6215926478171606,
+      "kind": "captioned_figure",
+      "score": 20.023220004465287,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/03-p8-captioned_figure.png",
+      "filename": "03-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-12-drawing-cluster-0",
+      "page_index": 12,
+      "caption": "第 13 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        91.931396484375,
+        540.4047241210938,
+        729.8500366210938
+      ],
+      "clip_area": 309734.204338206,
+      "page_area": 501156.9211820215,
+      "text_density": 0.18722558101906855,
+      "kind": "drawing_cluster",
+      "score": -9.555069474108958,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/04-p13-drawing_cluster.png",
+      "filename": "04-p13-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.5795004456167314,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.8005462792536503,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/contact-sheet.svg"
+}

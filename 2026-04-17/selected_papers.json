@@ -1,0 +1,79 @@
+[
+  {
+    "title": "HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks",
+    "authors": [
+      "Fan Cui",
+      "Hongyuan Hou",
+      "Zizhang Luo",
+      "Chenyun Yin",
+      "Yun Liang"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.14709",
+    "pdf_url": "https://arxiv.org/pdf/2604.14709.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_eval",
+    "relevance_score": 73,
+    "value_score": 62,
+    "interesting_score": 64,
+    "innovation_score": 54,
+    "frontier_score": 51,
+    "verdict": "worth_tracking",
+    "reason": "与 Agent 方向有关，值得保留关注。",
+    "composite_score": 62.81,
+    "arxiv_url": "https://arxiv.org/abs/2604.14709"
+  },
+  {
+    "title": "FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems",
+    "authors": [
+      "Wenhao Wang",
+      "Haoting Shi",
+      "Mengying Yuan",
+      "Yiquan Lin",
+      "Panrong Tong",
+      "Hanzhang Zhou",
+      "Guangyi Liu",
+      "Pengxiang Zhao",
+      "Yue Wang",
+      "Siheng Chen"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.14956",
+    "pdf_url": "https://arxiv.org/pdf/2604.14956.pdf",
+    "primary_category": "cs.MA",
+    "agent_theme": "computer_use",
+    "relevance_score": 73,
+    "value_score": 62,
+    "interesting_score": 64,
+    "innovation_score": 54,
+    "frontier_score": 51,
+    "verdict": "worth_tracking",
+    "reason": "与 Agent 方向有关，值得保留关注。",
+    "composite_score": 62.81,
+    "arxiv_url": "https://arxiv.org/abs/2604.14956"
+  },
+  {
+    "title": "APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI",
+    "authors": [
+      "Pratyay Banerjee",
+      "Masud Moshtaghi",
+      "Shivashankar Subramanian",
+      "Amita Misra",
+      "Ankit Chadha"
+    ],
+    "summary": "",
+    "entry_id": "https://arxiv.org/abs/2604.14362",
+    "pdf_url": "https://arxiv.org/pdf/2604.14362.pdf",
+    "primary_category": "cs.IR",
+    "agent_theme": "planning_reasoning",
+    "relevance_score": 73,
+    "value_score": 62,
+    "interesting_score": 56,
+    "innovation_score": 54,
+    "frontier_score": 59,
+    "verdict": "worth_tracking",
+    "reason": "与 Agent 方向有关，值得保留关注。",
+    "composite_score": 62.57,
+    "arxiv_url": "https://arxiv.org/abs/2604.14362"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "title": "HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks.pdf",
+    "analysis": {
+      "pick_reason": "与 Agent 方向有关，值得保留关注。",
+      "background": "HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+      "core_points": [],
+      "agent_implications": {
+        "product": "可能对 Agent 产品设计有启发，但还需要完整 PDF 支撑。",
+        "system": "建议关注它是否改变任务编排、工具调用或环境交互方式。",
+        "risk": "当前信息不完整，存在误读风险。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-2-block-7",
+      "page_index": 2,
+      "caption": "The construction of HWE-Bench follows a multi-phase pipeline (Figure 2) designed to extract verifiable bug repair tasks from real- world hardware projects.",
+      "clip": [
+        22.866999053955077,
+        18.0,
+        326.1570983886719,
+        245.86007690429688
+      ],
+      "clip_area": 69107.70535872041,
+      "page_area": 484704.0,
+      "text_density": 0.38167429767622557,
+      "kind": "captioned_figure",
+      "score": 60.76786339287467,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/hwe-bench-benchmarking-llm-agents-on-real-world-hardware-bug-repair-tasks/01-p3-captioned_figure.png",
+      "filename": "01-p3-captioned_figure.png",
+      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
+      "selection_confidence": "low"
+    }
+  },
+  {
+    "title": "FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-.pdf",
+    "analysis": {
+      "pick_reason": "与 Agent 方向有关，值得保留关注。",
+      "background": "FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+      "core_points": [],
+      "agent_implications": {
+        "product": "可能对 Agent 产品设计有启发，但还需要完整 PDF 支撑。",
+        "system": "建议关注它是否改变任务编排、工具调用或环境交互方式。",
+        "risk": "当前信息不完整，存在误读风险。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-1-drawing-caption-20",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of FedGUI. FedGUI provides a federated framework that coordinates a central server and heterogeneous clients across mobile, web, and desk- top platforms to train a generalized cross-platform GUI agent. Hetero. is short for heterogeneity.",
+      "clip": [
+        52.865997314453125,
+        54.86376953125,
+        307.14239501953125,
+        241.3220672607422
+      ],
+      "clip_area": 47411.94426887622,
+      "page_area": 501156.9211820215,
+      "text_density": 0.12197269814490587,
+      "kind": "drawing_cluster_with_caption",
+      "score": 103.00843749207094,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/fedgui-benchmarking-federated-gui-agents-across-heterogeneous-platforms-devices-/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png",
+      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
+      "selection_confidence": "low"
+    }
+  },
+  {
+    "title": "APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/downloaded_pdfs/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co.pdf",
+    "analysis": {
+      "pick_reason": "与 Agent 方向有关，值得保留关注。",
+      "background": "APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+      "core_points": [],
+      "agent_implications": {
+        "product": "可能对 Agent 产品设计有启发，但还需要完整 PDF 支撑。",
+        "system": "建议关注它是否改变任务编排、工具调用或环境交互方式。",
+        "risk": "当前信息不完整，存在误读风险。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Figure 1: End-to-end pipeline for constructing and querying APEX-MEM Graph, showing data flow from unstruc- tured conversation to GraphSQL QA Agent.",
+      "clip": [
+        48.88200378417969,
+        52.86247253417969,
+        546.4086303710938,
+        216.0660400390625
+      ],
+      "clip_area": 81198.12038765405,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04041590396987648,
+      "kind": "image_block_with_caption",
+      "score": 55.9022013376406,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-17/assets/figure_candidates/apex-mem-agentic-semi-structured-memory-with-temporal-reasoning-for-long-term-co/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png",
+      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
+      "selection_confidence": "low"
+    }
+  }
+]

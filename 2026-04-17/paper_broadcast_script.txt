@@ -1,0 +1,19 @@
+早上好，今天是 2026 年 04 月 17 日。这期 AI Agent 论文播报，主要覆盖 cs.AI、cs.CL、cs.LG、cs.MA、cs.RO、cs.SE、cs.HC 这些分类里最值得看的工作。
+
+今天初筛后最集中的主题是 tool_use、planning_reasoning、agent_eval，说明研究关注点继续从单轮回答能力转向更完整的执行链。
+
+从创新性和研究开拓性看，Benchmarks for Trajectory Safety Evaluation and Diagnosis in OpenClaw and Codex: ATBench-Claw and ATBench-CodeX、Neuro-Oracle: A Trajectory-Aware Agentic RAG Framework for Interpretable Epilepsy Surgical Prognosis 代表了今天最值得后续继续追踪的切口。
+
+先补一个今天特别值得懂的基础概念，叫做Planner 为什么重要。Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么、每一步依赖什么反馈'的那层机制。没有 planner，系统容易把任务做成一步一拍脑袋的局部反应；有了 planner，Agent 才能处理长任务、跨工具任务和需要中途修正的任务。很多 Agent 能力差异，最后都不是出在语言生成本身，而是出在计划层有没有把任务拆对、有没有给执行留回退空间。 今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。
+
+第 1 篇论文是《HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks》。它的主题是 agent_eval。为什么入选？与 Agent 方向有关，值得保留关注。。这篇论文的背景是：HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.。如果只记一个关键信号，我会记它的创新性分数是 54，研究开拓性分数是 51，说明它不仅有眼前价值，也可能影响后续 Agent 研究路线。
+
+第 2 篇论文是《FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems》。它的主题是 computer_use。为什么入选？与 Agent 方向有关，值得保留关注。。这篇论文的背景是：FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.。如果只记一个关键信号，我会记它的创新性分数是 54，研究开拓性分数是 51，说明它不仅有眼前价值，也可能影响后续 Agent 研究路线。
+
+第 3 篇论文是《APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI》。它的主题是 planning_reasoning。为什么入选？与 Agent 方向有关，值得保留关注。。这篇论文的背景是：APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI 和 Agent 能力或系统设计有关，但当前只能基于摘要做保守判断。LLM 分析失败: LLM 调用失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.。如果只记一个关键信号，我会记它的创新性分数是 54，研究开拓性分数是 59，说明它不仅有眼前价值，也可能影响后续 Agent 研究路线。
+
+如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。
+
+这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。
+
+以上就是今天大约 11 分钟的 AI Agent 论文播报。你如果只听音频，也应该能抓住今天最重要的研究变化。
