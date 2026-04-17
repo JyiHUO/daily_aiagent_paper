@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-16",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 373,
+  "selected_count": 3,
+  "focus_titles": [
+    "WebXSkill: Skill Learning for Autonomous Web Agents",
+    "ToolOmni: Enabling Open-World Tool Use via Agentic learning with Proactive Retrieval and Grounded Execution",
+    "Exploration and Exploitation Errors Are Measurable for Language Model Agents"
+  ],
+  "knowledge_topic": "Skill Abstraction：Agent 技能的封装粒度为什么决定上限",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/paper_broadcast_script.txt"
+}

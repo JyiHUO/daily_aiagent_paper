@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1565c0"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">WebXSkill: 可执行技能弥合「落地鸿沟」</text>
+
+  <!-- ===== Left: Text-only Skill (OLD) ===== -->
+  <g transform="translate(40,70)">
+    <rect width="230" height="160" rx="14" fill="#fff3e0" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">❌ 文本技能</text>
+    <text x="115" y="52" text-anchor="middle" font-size="12" fill="#bf360c">(如 AWM)</text>
+    <rect x="20" y="68" width="190" height="36" rx="6" fill="#ffe0b2"/>
+    <text x="115" y="90" text-anchor="middle" font-size="12" fill="#4e342e">"找到搜索栏，输入关键词…"</text>
+    <text x="115" y="125" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">能规划 ✓  能执行 ✗</text>
+    <text x="115" y="148" text-anchor="middle" font-size="11" fill="#888">Agent 需自行翻译成动作</text>
+  </g>
+
+  <!-- ===== Right: Code-only Skill (OLD) ===== -->
+  <g transform="translate(630,70)">
+    <rect width="230" height="160" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">❌ 代码技能</text>
+    <text x="115" y="52" text-anchor="middle" font-size="12" fill="#0d47a1">(如 SkillWeaver)</text>
+    <rect x="20" y="68" width="190" height="36" rx="6" fill="#bbdefb"/>
+    <text x="115" y="86" text-anchor="middle" font-size="11" fill="#1a237e" font-family="monospace">click(#search); type(…)</text>
+    <text x="115" y="125" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">能执行 ✓  可解释 ✗</text>
+    <text x="115" y="148" text-anchor="middle" font-size="11" fill="#888">失败时 Agent 无法理解/恢复</text>
+  </g>
+
+  <!-- Grounding Gap Label -->
+  <rect x="310" y="105" width="280" height="50" rx="25" fill="#ffcdd2" stroke="#c62828" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="450" y="136" text-anchor="middle" font-size="16" font-weight="bold" fill="#b71c1c">⚡ 落地鸿沟 (Grounding Gap)</text>
+
+  <!-- Down arrows from gap to center skill -->
+  <line x1="450" y1="155" x2="450" y2="268" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowG)" stroke-dasharray="6,3"/>
+  <text x="450" y="245" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">WebXSkill 解决 ↓</text>
+
+  <!-- ===== Center: Executable Skill (NEW) ===== -->
+  <g transform="translate(195,275)">
+    <rect width="510" height="210" rx="16" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+    <text x="255" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1b5e20">✅ 可执行技能 (Executable Skill)</text>
+
+    <!-- Skill JSON box -->
+    <rect x="20" y="48" width="220" height="140" rx="10" fill="#fff" stroke="#66bb6a" stroke-width="1.5"/>
+    <text x="130" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">技能: search-product</text>
+    <text x="130" y="90" text-anchor="middle" font-size="11" fill="#555">参数: product: str</text>
+    <line x1="30" y1="98" x2="230" y2="98" stroke="#c8e6c9" stroke-width="1"/>
+    <!-- Step 1 -->
+    <rect x="30" y="105" width="200" height="32" rx="5" fill="#c8e6c9"/>
+    <text x="40" y="120" font-size="10" fill="#1b5e20" font-weight="bold">guidance:</text>
+    <text x="105" y="120" font-size="10" fill="#333">"聚焦搜索栏"</text>
+    <text x="40" y="133" font-size="10" fill="#1565c0" font-weight="bold">action:</text>
+    <text x="85" y="133" font-size="10" fill="#333" font-family="monospace">click #search-bar</text>
+    <!-- Step 2 -->
+    <rect x="30" y="142" width="200" height="32" rx="5" fill="#c8e6c9"/>
+    <text x="40" y="157" font-size="10" fill="#1b5e20" font-weight="bold">guidance:</text>
+    <text x="105" y="157" font-size="10" fill="#333">"输入产品名"</text>
+    <text x="40" y="170" font-size="10" fill="#1565c0" font-weight="bold">action:</text>
+    <text x="85" y="170" font-size="10" fill="#333" font-family="monospace">type ((product))</text>
+
+    <!-- Two mode boxes -->
+    <rect x="270" y="55" width="220" height="65" rx="10" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="380" y="77" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">🤖 Grounded 模式</text>
+    <text x="380" y="95" text-anchor="middle" font-size="11" fill="#333">自动执行动作序列</text>
+    <text x="380" y="110" text-anchor="middle" font-size="11" fill="#555">一键调用，高效精准</text>
+
+    <rect x="270" y="132" width="220" height="65" rx="10" fill="#81c784" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="380" y="154" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">🧠 Guided 模式</text>
+    <text x="380" y="172" text-anchor="middle" font-size="11" fill="#333">Agent 按指引逐步操作</text>
+    <text x="380" y="187" text-anchor="middle" font-size="11" fill="#555">遇到变化可自适应恢复</text>
+
+    <!-- Arrow from skill to modes -->
+    <line x1="240" y1="130" x2="268" y2="88" stroke="#2e7d32" stroke-width="1.8" marker-end="url(#arrowG)"/>
+    <line x1="240" y1="145" x2="268" y2="164" stroke="#2e7d32" stroke-width="1.8" marker-end="url(#arrowG)"/>
+  </g>
+
+  <!-- Connecting arrows from old skills to gap -->
+  <line x1="270" y1="180" x2="320" y2="125" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.5"/>
+  <line x1="630" y1="180" x2="580" y2="125" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.5"/>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="508" text-anchor="middle" font-size="13" fill="#666" font-style="italic">每个步骤 = 可执行动作 + 自然语言指导 → 同时具备执行力与可解释性</text>
+</svg>

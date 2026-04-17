@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="searchGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="toolGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#e2e8f0">主动迭代检索机制</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#94a3b8">ToolOmni: Agent 自主决定"搜几轮、搜什么"，直到工具齐全</text>
+
+  <!-- ===== LEFT: Traditional (one-shot) ===== -->
+  <rect x="30" y="90" width="250" height="200" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="155" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#ef4444">❌ 传统一次检索</text>
+
+  <!-- user -->
+  <rect x="55" y="135" width="200" height="34" rx="8" fill="#334155"/>
+  <text x="155" y="157" text-anchor="middle" font-size="12" fill="#cbd5e1">用户: "查天气+翻译成法语"</text>
+
+  <!-- arrow down -->
+  <line x1="155" y1="169" x2="155" y2="195" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <text x="175" y="186" font-size="10" fill="#94a3b8">1次query</text>
+
+  <!-- result -->
+  <rect x="55" y="198" width="200" height="34" rx="8" fill="#7f1d1d" fill-opacity="0.4" stroke="#ef4444" stroke-width="1"/>
+  <text x="155" y="220" text-anchor="middle" font-size="12" fill="#fca5a5">只找到天气工具，漏翻译!</text>
+
+  <!-- cross -->
+  <text x="155" y="268" text-anchor="middle" font-size="28" fill="#ef4444">✗</text>
+
+  <!-- ===== RIGHT: ToolOmni (iterative) ===== -->
+  <rect x="320" y="90" width="555" height="440" rx="14" fill="#1e293b" stroke="#4f46e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="597" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#10b981">✅ ToolOmni 主动迭代检索</text>
+
+  <!-- Agent block -->
+  <rect x="365" y="140" width="160" height="60" rx="12" fill="url(#agentGrad)" filter="url(#glow)"/>
+  <text x="445" y="167" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">🤖 Agent</text>
+  <text x="445" y="185" text-anchor="middle" font-size="11" fill="#e0e7ff">自主推理 &amp; 决策</text>
+
+  <!-- Retrieval Server block -->
+  <rect x="620" y="140" width="160" height="60" rx="12" fill="url(#searchGrad)" filter="url(#glow)"/>
+  <text x="700" y="167" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">🔍 检索服务</text>
+  <text x="700" y="185" text-anchor="middle" font-size="11" fill="#fef3c7">Embedding Top-k</text>
+
+  <!-- Round 1 -->
+  <rect x="350" y="225" width="510" height="72" rx="10" fill="#1a2744" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="365" y="245" font-size="12" font-weight="bold" fill="#f59e0b">第 1 轮</text>
+
+  <!-- Agent generates query -->
+  <rect x="370" y="255" width="180" height="30" rx="7" fill="#312e81" stroke="#6366f1" stroke-width="1"/>
+  <text x="460" y="275" text-anchor="middle" font-size="11" fill="#c7d2fe">&lt;search&gt; weather API Beijing</text>
+
+  <!-- arrow to server -->
+  <line x1="555" y1="270" x2="610" y2="270" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- result back -->
+  <rect x="618" y="255" width="220" height="30" rx="7" fill="#1c3a2a" stroke="#10b981" stroke-width="1"/>
+  <text x="728" y="275" text-anchor="middle" font-size="11" fill="#6ee7b7">→ ☁️ weather-api 返回</text>
+
+  <!-- Agent thinks -->
+  <rect x="350" y="310" width="510" height="28" rx="6" fill="#1e293b"/>
+  <text x="597" y="329" text-anchor="middle" font-size="12" fill="#fbbf24" font-style="italic">🧠 Agent 判断：还缺翻译工具 → 继续检索!</text>
+
+  <!-- Round 2 -->
+  <rect x="350" y="350" width="510" height="72" rx="10" fill="#1a2744" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="365" y="370" font-size="12" font-weight="bold" fill="#f59e0b">第 2 轮</text>
+
+  <rect x="370" y="380" width="180" height="30" rx="7" fill="#312e81" stroke="#6366f1" stroke-width="1"/>
+  <text x="460" y="400" text-anchor="middle" font-size="11" fill="#c7d2fe">&lt;search&gt; translation API French</text>
+
+  <line x1="555" y1="395" x2="610" y2="395" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <rect x="618" y="380" width="220" height="30" rx="7" fill="#1c3a2a" stroke="#10b981" stroke-width="1"/>
+  <text x="728" y="400" text-anchor="middle" font-size="11" fill="#6ee7b7">→ 🌐 translate-api 返回</text>
+
+  <!-- Agent confirms -->
+  <rect x="350" y="435" width="510" height="28" rx="6" fill="#1e293b"/>
+  <text x="597" y="454" text-anchor="middle" font-size="12" fill="#34d399" font-style="italic">🧠 Agent 判断：工具齐全 → 停止检索!</text>
+
+  <!-- Final output -->
+  <rect x="400" y="475" width="340" height="40" rx="10" fill="url(#toolGrad)" filter="url(#glow)"/>
+  <text x="570" y="500" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">&lt;tool-call&gt; {weather-api, translate-api}</text>
+
+  <!-- Iterative loop arrow (curved) -->
+  <path d="M 340 300 C 310 300, 310 380, 340 380" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrowWhite)"/>
+  <text x="295" y="345" text-anchor="middle" font-size="11" fill="#a78bfa" transform="rotate(-90,295,345)">迭代循环</text>
+
+  <!-- Max rounds label -->
+  <text x="335" y="525" font-size="11" fill="#64748b">最多 4 轮迭代 · Agent 自主控制停止时机</text>
+
+  <!-- Bottom key insight -->
+  <rect x="30" y="540" width="840" height="30" rx="8" fill="#312e81" fill-opacity="0.5"/>
+  <text x="450" y="560" text-anchor="middle" font-size="13" fill="#c7d2fe">核心创新：检索不再是"一锤子买卖"，Agent 像人逛货架一样多轮搜索，意图与任务需求紧密绑定</text>
+</svg>

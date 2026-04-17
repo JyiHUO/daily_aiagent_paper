@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/downloaded_pdfs/webxskill-skill-learning-for-autonomous-web-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-17",
+      "page_index": 7,
+      "caption": "Figure 3: Skill category distribution across methods. Our skills cover all ten functional categories with a balanced distribution, whereas SkillWeaver concentrates over 60% of its skills in Retrieval and WALT covers only 41 skills in total.",
+      "clip": [
+        90.0,
+        65.86112976074219,
+        522.0072631835938,
+        192.4439697265625
+      ],
+      "clip_area": 54684.706259640865,
+      "page_area": 484704.0,
+      "text_density": 0.18645721136185273,
+      "kind": "drawing_cluster_with_caption",
+      "score": 43.22017516561818,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-17",
+      "page_index": 7,
+      "caption": "Figure 3: Skill category distribution across methods. Our skills cover all ten functional categories with a balanced distribution, whereas SkillWeaver concentrates over 60% of its skills in Retrieval and WALT covers only 41 skills in total.",
+      "clip": [
+        77.4,
+        18.0,
+        534.598779296875,
+        178.86221313476562
+      ],
+      "clip_area": 73546.00748020859,
+      "page_area": 484704.0,
+      "text_density": 0.12274567415492861,
+      "kind": "captioned_figure",
+      "score": 35.25243741159549,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-17-block-3",
+      "page_index": 17,
+      "caption": "You have access to a library of Skills -- pre-defined step-by-step workflow guides for common tasks on web pages.",
+      "clip": [
+        84.71800079345704,
+        18.0,
+        351.6450439453125,
+        272.4359130859375
+      ],
+      "clip_area": 67915.8259516718,
+      "page_area": 484704.0,
+      "text_density": 0.03655624030631615,
+      "kind": "captioned_figure",
+      "score": 30.75462028835191,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/03-p18-captioned_figure.png",
+      "filename": "03-p18-captioned_figure.png"
+    },
+    {
+      "id": "page-17-block-5",
+      "page_index": 17,
+      "caption": "### When to Use Skills: - When an available skill matches your current sub-goal - Skills save you from figuring out the UI workflow",
+      "clip": [
+        84.71800079345704,
+        73.72282714843749,
+        337.6973815917969,
+        382.5228271484375
+      ],
+      "clip_area": 78120.03279052736,
+      "page_area": 484704.0,
+      "text_density": 0.2563282944211563,
+      "kind": "captioned_figure",
+      "score": 13.288302699069815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/04-p18-captioned_figure.png",
+      "filename": "04-p18-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-53",
+      "page_index": 8,
+      "caption": "Figure 4: Failure analysis of W EB XS KILL (grounded mode) on WebArena. (a) Failure categories for failed tasks from trajectory inspection. (b) Per-site skill execution success rate. (c) Root causes of CMS skill execution failures. (d) Failure attribution by skill usage role.",
+      "clip": [
+        90.0,
+        65.861572265625,
+        571.4227294921875,
+        181.072021484375
+      ],
+      "clip_area": 55464.928928911686,
+      "page_area": 484704.0,
+      "text_density": 0.156832786848758,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.00630977717354,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/05-p9-drawing_cluster_with_caption.png",
+      "filename": "05-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-block-13",
+      "page_index": 10,
+      "caption": "Zora Zhiruo Wang, Jiayuan Mao, Daniel Fried, and Graham Neubig. Agent workflow memory. arXiv preprint arXiv:2409.07429 , 2024.",
+      "clip": [
+        77.4,
+        355.0802490234375,
+        535.013818359375,
+        663.8802490234375
+      ],
+      "clip_area": 141311.14710937502,
+      "page_area": 484704.0,
+      "text_density": 0.7571336241312746,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/06-p11-captioned_figure.png",
+      "filename": "06-p11-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/webxskill-skill-learning-for-autonomous-web-agents/contact-sheet.svg"
+}

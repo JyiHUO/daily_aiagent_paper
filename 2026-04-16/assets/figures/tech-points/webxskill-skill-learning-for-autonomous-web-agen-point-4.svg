@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">WebXSkill: 技能验证是最关键的环节</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#7f8c8d">去掉验证 → 成功率从 69.5% 骤降至 55.2%（−14.3pp，消融中影响最大）</text>
+
+  <!-- ====== LEFT: Skill Library ====== -->
+  <rect x="40" y="110" width="200" height="180" rx="14" fill="#fff" stroke="#bdc3c7" stroke-width="2"/>
+  <rect x="40" y="110" width="200" height="38" rx="14" fill="#3498db"/>
+  <rect x="40" y="134" width="200" height="14" fill="#3498db"/>
+  <text x="140" y="135" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">技能库（候选）</text>
+
+  <!-- skill items -->
+  <rect x="60" y="160" width="160" height="28" rx="6" fill="#eaf6ff" stroke="#3498db" stroke-width="1"/>
+  <text x="140" y="179" text-anchor="middle" font-size="12" fill="#2c3e50">✅ 技能 A — 有效</text>
+  <rect x="60" y="196" width="160" height="28" rx="6" fill="#fdecea" stroke="#e74c3c" stroke-width="1"/>
+  <text x="140" y="215" text-anchor="middle" font-size="12" fill="#c0392b">❌ 技能 B — 有缺陷</text>
+  <rect x="60" y="232" width="160" height="28" rx="6" fill="#eaf6ff" stroke="#3498db" stroke-width="1"/>
+  <text x="140" y="251" text-anchor="middle" font-size="12" fill="#2c3e50">✅ 技能 C — 有效</text>
+
+  <!-- ====== CENTER: Verification Gate ====== -->
+  <!-- Arrow from library to gate -->
+  <line x1="240" y1="200" x2="320" y2="200" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Gate shape -->
+  <polygon points="370,120 440,120 460,200 440,280 370,280 350,200" fill="#fff3cd" stroke="#f39c12" stroke-width="2.5"/>
+  <text x="405" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">技能</text>
+  <text x="405" y="208" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">验证</text>
+  <text x="405" y="232" text-anchor="middle" font-size="11" fill="#856404">环境中校验</text>
+  <text x="405" y="248" text-anchor="middle" font-size="11" fill="#856404">可执行性</text>
+
+  <!-- Arrow: pass -->
+  <line x1="460" y1="170" x2="540" y2="170" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="500" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">通过 ✓</text>
+
+  <!-- Arrow: reject -->
+  <line x1="460" y1="235" x2="540" y2="280" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <text x="515" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">过滤 ✗</text>
+
+  <!-- Rejected bin -->
+  <rect x="545" y="265" width="100" height="40" rx="8" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="595" y="290" text-anchor="middle" font-size="12" fill="#c0392b">坏技能丢弃</text>
+
+  <!-- ====== RIGHT: Agent Execution ====== -->
+  <rect x="550" y="110" width="200" height="100" rx="14" fill="#fff" stroke="#27ae60" stroke-width="2.5"/>
+  <rect x="550" y="110" width="200" height="36" rx="14" fill="#27ae60"/>
+  <rect x="550" y="132" width="200" height="14" fill="#27ae60"/>
+  <text x="650" y="134" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">已验证技能 → Agent</text>
+  <text x="650" y="168" text-anchor="middle" font-size="13" fill="#2c3e50">技能执行失败仅 9%</text>
+  <text x="650" y="188" text-anchor="middle" font-size="13" fill="#2c3e50">技能本身可靠 ✅</text>
+
+  <!-- ====== BOTTOM: Failure Breakdown ====== -->
+  <text x="450" y="355" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">失败原因分布（验证后系统）</text>
+  <text x="450" y="378" text-anchor="middle" font-size="13" fill="#7f8c8d">62% 失败来自 Agent 层面，非技能缺陷</text>
+
+  <!-- Bar chart area -->
+  <!-- Bar 1: Post-skill reasoning error 38% -->
+  <rect x="120" y="405" width="228" height="52" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="234" y="436" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">技能后推理错误 38%</text>
+
+  <!-- Bar 2: Didn't invoke skill 36% -->
+  <rect x="120" y="467" width="216" height="52" rx="8" fill="#e67e22" opacity="0.85"/>
+  <text x="228" y="498" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">未调用技能 36%</text>
+
+  <!-- Bar 3: Skill execution failure 9% -->
+  <rect x="120" y="529" width="54" height="36" rx="8" fill="#27ae60" opacity="0.85"/>
+  <text x="147" y="552" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">9%</text>
+  <text x="190" y="552" text-anchor="start" font-size="13" fill="#2c3e50">技能执行失败</text>
+
+  <!-- Bracket for agent-level -->
+  <line x1="80" y1="405" x2="80" y2="519" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="80" y1="405" x2="95" y2="405" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="80" y1="519" x2="95" y2="519" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="75" y="468" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b" transform="rotate(-90,75,468)">Agent 层面</text>
+
+  <!-- ====== RIGHT BOTTOM: Key insight box ====== -->
+  <rect x="540" y="400" width="320" height="150" rx="14" fill="#fff" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="700" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#8e44ad">💡 核心发现</text>
+  <text x="700" y="458" text-anchor="middle" font-size="13" fill="#2c3e50">预验证过滤掉"坏技能"</text>
+  <text x="700" y="478" text-anchor="middle" font-size="13" fill="#2c3e50">→ 成功率提升 14.3 个百分点</text>
+  <line x1="580" y1="492" x2="820" y2="492" stroke="#ddd" stroke-width="1"/>
+  <text x="700" y="515" text-anchor="middle" font-size="13" fill="#7f8c8d">真正瓶颈不在技能质量</text>
+  <text x="700" y="535" text-anchor="middle" font-size="13" fill="#7f8c8d">而在 Agent 后续推理能力</text>
+
+  <!-- Comparison annotation top right -->
+  <rect x="770" y="95" width="115" height="55" rx="10" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="827" y="116" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c">55.2%</text>
+  <text x="827" y="138" text-anchor="middle" font-size="11" fill="#c0392b">无验证</text>
+
+  <rect x="770" y="25" width="115" height="55" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="827" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#27ae60">69.5%</text>
+  <text x="827" y="68" text-anchor="middle" font-size="11" fill="#27ae60">有验证 ✓</text>
+
+  <!-- Arrow between scores -->
+  <line x1="827" y1="80" x2="827" y2="93" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="870" y="92" font-size="13" font-weight="bold" fill="#e74c3c">−14.3pp</text>
+</svg>

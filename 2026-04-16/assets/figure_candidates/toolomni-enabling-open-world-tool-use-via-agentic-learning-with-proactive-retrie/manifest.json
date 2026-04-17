@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/downloaded_pdfs/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie",
+  "candidates": [
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the ToolOmni framework. The pipeline operates in two decoupled phases: Proactive Retrieval : The agent iteratively interacts with the retrieval server to curate a candidate tool set. Grounded Execution : With retrieval results, the agent performs reasoning and tool invocation to generate the final answer.",
+      "clip": [
+        60.20500183105469,
+        52.86625671386719,
+        535.072509765625,
+        218.863037109375
+      ],
+      "clip_area": 78826.47743157693,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04252336380036661,
+      "kind": "image_block_with_caption",
+      "score": 81.87584974923975,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the ToolOmni framework. The pipeline operates in two decoupled phases: Proactive Retrieval : The agent iteratively interacts with the retrieval server to curate a candidate tool set. Grounded Execution : With retrieval results, the agent performs reasoning and tool invocation to generate the final answer.",
+      "clip": [
+        70.20500183105469,
+        58.86625671386719,
+        525.072509765625,
+        212.863037109375
+      ],
+      "clip_area": 70048.13172845193,
+      "page_area": 501156.9211820215,
+      "text_density": 0.009003848356411633,
+      "kind": "embedded_image_with_caption",
+      "xref": 493,
+      "score": 80.77831257476058,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        294.4259948730469,
+        207.9064178466797,
+        536.1261596679688,
+        383.0470275878906
+      ],
+      "clip_area": 42331.51423673378,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0072381764584312355,
+      "kind": "embedded_image",
+      "xref": 119,
+      "score": 11.470350158185932,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/03-p1-embedded_image.png",
+      "filename": "03-p1-embedded_image.png"
+    },
+    {
+      "id": "page-7-embedded-1-0",
+      "page_index": 7,
+      "caption": "Figure 4: Robustness against adversarial noise on complex I3 tasks.",
+      "clip": [
+        294.1419982910156,
+        58.92955017089844,
+        438.18743896484375,
+        159.71600341796875
+      ],
+      "clip_area": 14517.829071926419,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01120054071709716,
+      "kind": "embedded_image_with_caption",
+      "xref": 499,
+      "score": 6.161309211910294,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/04-p8-embedded_image_with_caption.png",
+      "filename": "04-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-2-0",
+      "page_index": 7,
+      "caption": "Figure 5: Ablation study of RL components on the Tool- Bench. Decoupled optimization and trajectory filtering are crucial for execution performance.",
+      "clip": [
+        310.510986328125,
+        620.6856079101562,
+        520.0424499511719,
+        727.14404296875
+      ],
+      "clip_area": 22306.391712846234,
+      "page_area": 501156.9211820215,
+      "text_density": 0.010789380896277121,
+      "kind": "embedded_image_with_caption",
+      "xref": 500,
+      "score": 0.2478487968094026,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/05-p8-embedded_image_with_caption.png",
+      "filename": "05-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 6: Sensitivity analysis of the format reward weight on the ToolBench.",
+      "clip": [
+        310.510986328125,
+        58.866241455078125,
+        520.0400390625,
+        205.18499755859375
+      ],
+      "clip_area": 30658.03036364168,
+      "page_area": 501156.9211820215,
+      "text_density": 0.008875660043136271,
+      "kind": "embedded_image_with_caption",
+      "xref": 501,
+      "score": -6.6593552181817595,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/06-p9-embedded_image_with_caption.png",
+      "filename": "06-p9-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-16/assets/figure_candidates/toolomni-enabling-open-world-tool-use-via-agentic-learning-with-proactive-retrie/contact-sheet.svg"
+}

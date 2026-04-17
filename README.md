@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-15
+- **日期**：2026-04-16
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break
-  - Toward Autonomous Long-Horizon Engineering for ML Research
-  - GAM: Hierarchical Graph-based Agentic Memory for LLM Agents
-- **日报路径**：[2026-04-15/daily_report.md](2026-04-15/daily_report.md)
+  - WebXSkill: Skill Learning for Autonomous Web Agents
+  - ToolOmni: Enabling Open-World Tool Use via Agentic learning with Proactive Retrieval and Grounded Execution
+  - Exploration and Exploitation Errors Are Measurable for Language Model Agents
+- **日报路径**：[2026-04-16/daily_report.md](2026-04-16/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-16 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | WebXSkill: Skill Learning for Autonomous Web Agents | [2026-04-16/daily_report.md](2026-04-16/daily_report.md) |
+|  |  |  | 2 | ToolOmni: Enabling Open-World Tool Use via Agentic learning with Proactive Retrieval and Grounded Execution |  |
+|  |  |  | 3 | Exploration and Exploitation Errors Are Measurable for Language Model Agents |  |
 | 2026-04-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break | [2026-04-15/daily_report.md](2026-04-15/daily_report.md) |
 |  |  |  | 2 | Toward Autonomous Long-Horizon Engineering for ML Research |  |
 |  |  |  | 3 | GAM: Hierarchical Graph-based Agentic Memory for LLM Agents |  |

@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="retGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="exeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="filterGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">解耦多目标 GRPO：检索与执行分步优化</text>
+  <text x="450" y="66" text-anchor="middle" fill="#64748b" font-size="13">Decoupled Multi-Objective GRPO — ToolOmni</text>
+
+  <!-- ===== Top: Batch of 5 trajectories ===== -->
+  <text x="450" y="100" text-anchor="middle" fill="#94a3b8" font-size="14" font-weight="600">Agent 生成一批轨迹（5 条）</text>
+  
+  <!-- trajectory boxes -->
+  <g transform="translate(115,112)">
+    <rect width="100" height="38" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="50" y="17" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">轨迹 1</text>
+    <text x="50" y="31" text-anchor="middle" fill="#10b981" font-size="10">✓ 召回全部</text>
+  </g>
+  <g transform="translate(235,112)">
+    <rect width="100" height="38" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="50" y="17" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">轨迹 2</text>
+    <text x="50" y="31" text-anchor="middle" fill="#10b981" font-size="10">✓ 召回全部</text>
+  </g>
+  <g transform="translate(355,112)">
+    <rect width="100" height="38" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="50" y="17" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">轨迹 3</text>
+    <text x="50" y="31" text-anchor="middle" fill="#ef4444" font-size="10">✗ 召回不全</text>
+  </g>
+  <g transform="translate(475,112)">
+    <rect width="100" height="38" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="50" y="17" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">轨迹 4</text>
+    <text x="50" y="31" text-anchor="middle" fill="#10b981" font-size="10">✓ 召回全部</text>
+  </g>
+  <g transform="translate(595,112)">
+    <rect width="100" height="38" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="50" y="17" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">轨迹 5</text>
+    <text x="50" y="31" text-anchor="middle" fill="#ef4444" font-size="10">✗ 召回不全</text>
+  </g>
+
+  <!-- Arrows down to two branches -->
+  <line x1="300" y1="155" x2="300" y2="185" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <line x1="600" y1="155" x2="600" y2="185" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+
+  <!-- Label: all 5 -->
+  <text x="300" y="178" text-anchor="middle" fill="#94a3b8" font-size="10">全部 5 条</text>
+
+  <!-- ===== Selective Rollout Filter ===== -->
+  <rect x="470" y="168" width="260" height="32" rx="16" fill="url(#filterGrad)" opacity="0.9" filter="url(#shadow)"/>
+  <text x="600" y="189" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Selective Rollout 过滤</text>
+  <text x="600" y="178" text-anchor="middle" fill="#d1fae5" font-size="9">仅保留召回成功的 3 条</text>
+
+  <!-- ===== Left: Retrieval Branch ===== -->
+  <g transform="translate(80,200)">
+    <rect width="430" height="185" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)" opacity="0.95"/>
+    <!-- Header bar -->
+    <rect width="430" height="36" rx="14" fill="url(#retGrad)"/>
+    <rect y="20" width="430" height="16" fill="url(#retGrad)"/>
+    <text x="215" y="24" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">🔍 检索子任务</text>
+
+    <!-- Reward items -->
+    <text x="30" y="60" fill="#93c5fd" font-size="13" font-weight="600">奖励函数：</text>
+    
+    <rect x="30" y="70" width="110" height="30" rx="6" fill="#1e3a5f"/>
+    <text x="85" y="90" text-anchor="middle" fill="#60a5fa" font-size="12">📋 格式正确</text>
+    
+    <rect x="155" y="70" width="120" height="30" rx="6" fill="#1e3a5f"/>
+    <text x="215" y="90" text-anchor="middle" fill="#60a5fa" font-size="12">🎯 工具召回率</text>
+    
+    <rect x="290" y="70" width="110" height="30" rx="6" fill="#1e3a5f"/>
+    <text x="345" y="90" text-anchor="middle" fill="#60a5fa" font-size="12">📊 转化率</text>
+
+    <!-- Normalize -->
+    <text x="30" y="125" fill="#93c5fd" font-size="13" font-weight="600">独立归一化：</text>
+    <rect x="30" y="133" width="370" height="24" rx="5" fill="#172554"/>
+    <text x="215" y="150" text-anchor="middle" fill="#bfdbfe" font-size="12" font-style="italic">Â_retrieval = (R_ret - μ_ret) / σ_ret</text>
+
+    <!-- Update -->
+    <rect x="130" y="163" width="170" height="26" rx="13" fill="#2563eb" opacity="0.8"/>
+    <text x="215" y="180" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Step 1: 更新检索策略</text>
+  </g>
+
+  <!-- ===== Right: Execution Branch ===== -->
+  <g transform="translate(80,405)">
+    <rect width="430" height="185" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)" opacity="0.95"/>
+    <!-- Header bar -->
+    <rect width="430" height="36" rx="14" fill="url(#exeGrad)"/>
+    <rect y="20" width="430" height="16" fill="url(#exeGrad)"/>
+    <text x="215" y="24" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">⚙️ 执行子任务（仅 3 条有效轨迹）</text>
+
+    <!-- Reward items -->
+    <text x="30" y="60" fill="#fcd34d" font-size="13" font-weight="600">奖励函数：</text>
+    
+    <rect x="30" y="70" width="110" height="30" rx="6" fill="#422006"/>
+    <text x="85" y="90" text-anchor="middle" fill="#fbbf24" font-size="12">📋 格式正确</text>
+    
+    <rect x="160" y="70" width="140" height="30" rx="6" fill="#422006"/>
+    <text x="230" y="90" text-anchor="middle" fill="#fbbf24" font-size="12">✅ 答案正确性</text>
+
+    <!-- Normalize -->
+    <text x="30" y="125" fill="#fcd34d" font-size="13" font-weight="600">独立归一化：</text>
+    <rect x="30" y="133" width="370" height="24" rx="5" fill="#451a03"/>
+    <text x="215" y="150" text-anchor="middle" fill="#fde68a" font-size="12" font-style="italic">Â_execution = (R_exe - μ_exe) / σ_exe</text>
+
+    <!-- Update -->
+    <rect x="130" y="163" width="170" height="26" rx="13" fill="#d97706" opacity="0.8"/>
+    <text x="215" y="180" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Step 2: 更新执行策略</text>
+  </g>
+
+  <!-- Arrow from retrieval to execution -->
+  <path d="M 295 388 L 295 402" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)" stroke-dasharray="6,3"/>
+  <text x="310" y="400" fill="#10b981" font-size="11" font-weight="bold">分步更新</text>
+
+  <!-- ===== Right side: Key insight box ===== -->
+  <g transform="translate(545,215)">
+    <rect width="310" height="360" rx="14" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow)"/>
+    <text x="155" y="28" text-anchor="middle" fill="#a5b4fc" font-size="14" font-weight="bold">🔑 核心设计思想</text>
+    
+    <!-- Point 1 -->
+    <circle cx="30" cy="60" r="12" fill="#3b82f6" opacity="0.8"/>
+    <text x="30" y="65" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">1</text>
+    <text x="52" y="58" fill="#e2e8f0" font-size="12" font-weight="600">独立奖励</text>
+    <text x="52" y="74" fill="#94a3b8" font-size="11">检索和执行各自打分</text>
+    <text x="52" y="89" fill="#94a3b8" font-size="11">避免稀疏奖励干扰</text>
+
+    <!-- Point 2 -->
+    <circle cx="30" cy="125" r="12" fill="#f59e0b" opacity="0.8"/>
+    <text x="30" y="130" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">2</text>
+    <text x="52" y="123" fill="#e2e8f0" font-size="12" font-weight="600">独立归一化</text>
+    <text x="52" y="139" fill="#94a3b8" font-size="11">Group advantage 分别计算</text>
+    <text x="52" y="154" fill="#94a3b8" font-size="11">消除梯度冲突</text>
+
+    <!-- Point 3 -->
+    <circle cx="30" cy="190" r="12" fill="#10b981" opacity="0.8"/>
+    <text x="30" y="195" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">3</text>
+    <text x="52" y="188" fill="#e2e8f0" font-size="12" font-weight="600">分步梯度更新</text>
+    <text x="52" y="204" fill="#94a3b8" font-size="11">先更新检索，再更新执行</text>
+    <text x="52" y="219" fill="#94a3b8" font-size="11">非梯度求和</text>
+
+    <!-- Point 4 -->
+    <circle cx="30" cy="255" r="12" fill="#ef4444" opacity="0.8"/>
+    <text x="30" y="260" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">4</text>
+    <text x="52" y="253" fill="#e2e8f0" font-size="12" font-weight="600">选择性 Rollout</text>
+    <text x="52" y="269" fill="#94a3b8" font-size="11">只有检索全对的样本</text>
+    <text x="52" y="284" fill="#94a3b8" font-size="11">才参与执行训练</text>
+
+    <!-- VS conventional -->
+    <line x1="20" y1="305" x2="290" y2="305" stroke="#475569" stroke-width="1"/>
+    <text x="155" y="325" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="600">❌ 传统做法：混合优化</text>
+    <text x="155" y="343" text-anchor="middle" fill="#64748b" font-size="11">奖励耦合 → 梯度冲突 → 学崩</text>
+  </g>
+
+  <!-- Bottom result badge -->
+  <rect x="285" y="596" width="330" height="22" rx="11" fill="#6366f1" opacity="0.7"/>
+  <text x="450" y="612" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">端到端成功率超基线 +10.8% ↑</text>
+</svg>
