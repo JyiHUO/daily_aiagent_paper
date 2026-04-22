@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-17
+- **日期**：2026-04-21
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks
-  - FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems
-  - APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI
-- **日报路径**：[2026-04-17/daily_report.md](2026-04-17/daily_report.md)
+  - Scaling Test-Time Compute for Agentic Coding
+  - Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence
+  - On the Reliability of Computer Use Agents
+- **日报路径**：[2026-04-21/daily_report.md](2026-04-21/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-21 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Scaling Test-Time Compute for Agentic Coding | [2026-04-21/daily_report.md](2026-04-21/daily_report.md) |
+|  |  |  | 2 | Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence |  |
+|  |  |  | 3 | On the Reliability of Computer Use Agents |  |
 | 2026-04-17 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HWE-Bench: Benchmarking LLM Agents on Real-World Hardware Bug Repair Tasks | [2026-04-17/daily_report.md](2026-04-17/daily_report.md) |
 |  |  |  | 2 | FedGUI: Benchmarking Federated GUI Agents across Heterogeneous Platforms, Devices, and Operating Systems |  |
 |  |  |  | 3 | APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI |  |

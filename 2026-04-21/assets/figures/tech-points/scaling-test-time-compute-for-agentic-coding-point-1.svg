@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A5568"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2B6CB0"/>
+    </marker>
+    <linearGradient id="gSum" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F6E05E"/>
+      <stop offset="100%" stop-color="#ECC94B"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="18" fill="#F7FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1A202C">核心创新：轨迹摘要 = 统一接口</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#718096">把几十步的噪声日志浓缩成结构化"验尸报告"，后续比较/复用都基于它</text>
+
+  <!-- ===== LEFT: Raw Trajectory ===== -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="110" width="220" height="300" rx="14" fill="#FED7D7" stroke="#FC8181" stroke-width="2"/>
+  </g>
+  <text x="140" y="142" text-anchor="middle" font-size="17" font-weight="bold" fill="#C53030">原始轨迹</text>
+  <text x="140" y="164" text-anchor="middle" font-size="12" fill="#9B2C2C">~40 步 · 数万 token</text>
+
+  <!-- Fake log lines -->
+  <g font-size="10.5" fill="#742A2A" opacity="0.7">
+    <rect x="48" y="180" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.5"/>
+    <text x="56" y="193">$ cd /repo && grep -r "clone"</text>
+    <rect x="48" y="204" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.5"/>
+    <text x="56" y="217">Found 47 matches in 12 files…</text>
+    <rect x="48" y="228" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.5"/>
+    <text x="56" y="241">$ python manage.py test…FAIL</text>
+    <rect x="48" y="252" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.3"/>
+    <text x="56" y="265" opacity="0.5">… (重复探索 &amp; 死胡同) …</text>
+    <rect x="48" y="276" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.3"/>
+    <text x="56" y="289" opacity="0.5">$ cat traceback… 200 lines</text>
+    <rect x="48" y="300" width="184" height="18" rx="3" fill="#FEB2B2" opacity="0.2"/>
+    <text x="56" y="313" opacity="0.4">… noise noise noise …</text>
+  </g>
+  <!-- Red X badges -->
+  <text x="210" y="270" font-size="22" fill="#E53E3E">🔇</text>
+  <text x="52" y="360" font-size="11" fill="#C53030">❌ 噪声多、难比较、难复用</text>
+
+  <!-- ===== MIDDLE: Summary (P_sum) ===== -->
+  <!-- Arrow from raw to summary -->
+  <line x1="258" y1="260" x2="330" y2="260" stroke="#4A5568" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="280" y="232" width="72" height="26" rx="6" fill="#4A5568"/>
+  <text x="316" y="250" text-anchor="middle" font-size="11" fill="white" font-weight="bold">P_sum</text>
+  <text x="316" y="220" text-anchor="middle" font-size="10" fill="#718096">LLM 压缩</text>
+
+  <g filter="url(#shadow)">
+    <rect x="340" y="120" width="220" height="280" rx="16" fill="url(#gSum)" stroke="#D69E2E" stroke-width="2.5"/>
+  </g>
+  <text x="450" y="154" text-anchor="middle" font-size="19" font-weight="bold" fill="#744210">📋 结构化摘要 Sᵢ</text>
+
+  <!-- Summary content cards -->
+  <rect x="358" y="172" width="184" height="44" rx="8" fill="white" opacity="0.85"/>
+  <text x="370" y="191" font-size="12" font-weight="bold" fill="#744210">🔍 根因</text>
+  <text x="370" y="207" font-size="10.5" fill="#5F370E">_clone() 未复制 _iterable_class</text>
+
+  <rect x="358" y="224" width="184" height="44" rx="8" fill="white" opacity="0.85"/>
+  <text x="370" y="243" font-size="12" font-weight="bold" fill="#744210">⚠️ 失败模式</text>
+  <text x="370" y="259" font-size="10.5" fill="#5F370E">Step12 monkey-patch 失败</text>
+
+  <rect x="358" y="276" width="184" height="44" rx="8" fill="white" opacity="0.85"/>
+  <text x="370" y="295" font-size="12" font-weight="bold" fill="#744210">✅ 关键进展</text>
+  <text x="370" y="311" font-size="10.5" fill="#5F370E">Step25 找到正确位置,格式有误</text>
+
+  <text x="450" y="358" text-anchor="middle" font-size="12" fill="#744210" font-weight="bold">紧凑 · 结构化 · 可复用</text>
+
+  <!-- ===== RIGHT: Two downstream paths ===== -->
+  <!-- Arrow to top-right: Voting -->
+  <line x1="568" y1="210" x2="640" y2="155" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <!-- Arrow to bottom-right: Refine -->
+  <line x1="568" y1="310" x2="640" y2="365" stroke="#2B6CB0" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <!-- Voting box -->
+  <g filter="url(#shadow)">
+    <rect x="648" y="95" width="220" height="130" rx="14" fill="#EBF4FF" stroke="#4299E1" stroke-width="2"/>
+  </g>
+  <text x="758" y="126" text-anchor="middle" font-size="16" font-weight="bold" fill="#2B6CB0">🗳️ 并行投票 (RTV)</text>
+  <text x="758" y="150" text-anchor="middle" font-size="12" fill="#2A4365">对比多份摘要 → 选最优 rollout</text>
+  <g font-size="11" fill="#2C5282">
+    <text x="670" y="176">S₁ vs S₂ vs S₃ → 选 S₂ ✓</text>
+    <text x="670" y="198">比原始轨迹投票高数个百分点</text>
+  </g>
+
+  <!-- Refine box -->
+  <g filter="url(#shadow)">
+    <rect x="648" y="315" width="220" height="130" rx="14" fill="#F0FFF4" stroke="#48BB78" stroke-width="2"/>
+  </g>
+  <text x="758" y="346" text-anchor="middle" font-size="16" font-weight="bold" fill="#276749">🔄 序贯精炼 (PDR)</text>
+  <text x="758" y="370" text-anchor="middle" font-size="12" fill="#22543D">吸收过往摘要 → 避免重蹈覆辙</text>
+  <g font-size="11" fill="#276749">
+    <text x="670" y="396">轮次 k+1 读入 S₁…Sₖ</text>
+    <text x="670" y="418">跳过已知死胡同，聚焦新策略</text>
+  </g>
+
+  <!-- Bottom highlight bar -->
+  <rect x="120" y="475" width="660" height="60" rx="12" fill="#2D3748"/>
+  <text x="450" y="505" text-anchor="middle" font-size="16" fill="#F7FAFC" font-weight="bold">关键洞察：摘要是两条扩展路径的"共用接口"</text>
+  <text x="450" y="524" text-anchor="middle" font-size="12" fill="#A0AEC0">几万 token → 结构化报告 → 投票 &amp; 精炼都更准、更省 token</text>
+</svg>

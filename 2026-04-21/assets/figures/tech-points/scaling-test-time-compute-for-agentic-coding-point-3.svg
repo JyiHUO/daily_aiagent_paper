@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16A34A"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E293B">并行蒸馏精炼 (PDR)</text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#64748B">Parallel Distilled Refinement — 用摘要跳过重复探索</text>
+
+  <!-- ========== ITERATION 0 BLOCK ========== -->
+  <rect x="40" y="95" width="340" height="260" rx="16" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/>
+  <text x="210" y="122" text-anchor="middle" font-size="17" font-weight="bold" fill="#C2410C">Iteration 0：16 次并行尝试</text>
+
+  <!-- Mini rollout icons -->
+  <g transform="translate(65,140)">
+    <rect width="290" height="70" rx="10" fill="#FED7AA" opacity="0.5"/>
+    <text x="145" y="20" text-anchor="middle" font-size="12" fill="#9A3412">16 条独立 Rollout（平均 41 步）</text>
+    <!-- small bars representing rollouts -->
+    <g transform="translate(15,32)">
+      <rect x="0" width="16" height="28" rx="3" fill="#FB923C" opacity="0.7"/>
+      <rect x="20" width="16" height="28" rx="3" fill="#FB923C" opacity="0.7"/>
+      <rect x="40" width="16" height="28" rx="3" fill="#22C55E" opacity="0.85"/>
+      <rect x="60" width="16" height="28" rx="3" fill="#FB923C" opacity="0.7"/>
+      <rect x="80" width="16" height="28" rx="3" fill="#22C55E" opacity="0.85"/>
+      <rect x="100" width="16" height="28" rx="3" fill="#FB923C" opacity="0.7"/>
+      <rect x="120" width="16" height="28" rx="3" fill="#22C55E" opacity="0.85"/>
+      <rect x="140" width="16" height="28" rx="3" fill="#FB923C" opacity="0.7"/>
+      <rect x="165" width="16" height="12" rx="3" fill="#D4D4D8"/>
+      <rect x="185" width="16" height="12" rx="3" fill="#D4D4D8"/>
+      <text x="165" y="28" font-size="10" fill="#78716C">…×8</text>
+    </g>
+    <circle cx="52" cy="55" r="5" fill="#22C55E"/>
+    <text x="62" y="58" font-size="9" fill="#166534">通过</text>
+    <circle cx="102" cy="55" r="5" fill="#FB923C"/>
+    <text x="112" y="58" font-size="9" fill="#9A3412">失败</text>
+  </g>
+
+  <!-- RTV Selection -->
+  <rect x="65" y="230" width="290" height="50" rx="10" fill="#FFF" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="210" y="252" text-anchor="middle" font-size="14" font-weight="600" fill="#B45309">🏆 RTV 选出 Top-4 摘要</text>
+  <text x="210" y="270" text-anchor="middle" font-size="11" fill="#92400E">思路 · 进展 · 未解决问题</text>
+
+  <!-- Arrow down to summary cards -->
+  <line x1="210" y1="280" x2="210" y2="310" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 4 summary cards -->
+  <g transform="translate(72,312)">
+    <rect width="60" height="30" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="30" y="19" text-anchor="middle" font-size="10" fill="#92400E">摘要 1</text>
+  </g>
+  <g transform="translate(142,312)">
+    <rect width="60" height="30" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="30" y="19" text-anchor="middle" font-size="10" fill="#92400E">摘要 2</text>
+  </g>
+  <g transform="translate(212,312)">
+    <rect width="60" height="30" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="30" y="19" text-anchor="middle" font-size="10" fill="#92400E">摘要 3</text>
+  </g>
+  <g transform="translate(282,312)">
+    <rect width="60" height="30" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="30" y="19" text-anchor="middle" font-size="10" fill="#92400E">摘要 4</text>
+  </g>
+
+  <!-- ========== BIG ARROW ========== -->
+  <path d="M 390 280 C 440 280, 440 200, 500 200" stroke="#2563EB" stroke-width="3.5" fill="none" marker-end="url(#arr-blue)" stroke-dasharray="8,4"/>
+  <text x="450" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563EB" transform="rotate(-25,450,220)">蒸馏传递</text>
+
+  <!-- ========== ITERATION 1 BLOCK ========== -->
+  <rect x="510" y="95" width="350" height="260" rx="16" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="685" y="122" text-anchor="middle" font-size="17" font-weight="bold" fill="#166534">Iteration 1：全新环境重试</text>
+
+  <!-- Context injection -->
+  <rect x="535" y="138" width="300" height="44" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
+  <text x="685" y="158" text-anchor="middle" font-size="12" fill="#166534">📋 问题 + 4 份摘要 → Agent 首个 Action</text>
+  <text x="685" y="173" text-anchor="middle" font-size="11" fill="#15803D">直接跳过探索，精准定位</text>
+
+  <!-- Result bar -->
+  <rect x="535" y="196" width="300" height="65" rx="10" fill="#BBF7D0" opacity="0.4"/>
+  <text x="685" y="216" text-anchor="middle" font-size="12" fill="#166534">16 条 Rollout（平均 14 步 ⚡）</text>
+  <g transform="translate(555,228)">
+    <rect x="0" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="20" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="40" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="60" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="80" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="100" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="120" width="16" height="24" rx="3" fill="#22C55E"/>
+    <rect x="145" width="16" height="12" rx="3" fill="#86EFAC"/>
+    <rect x="165" width="16" height="12" rx="3" fill="#86EFAC"/>
+    <text x="145" y="25" font-size="10" fill="#166534">…更多✓</text>
+  </g>
+
+  <!-- Success rate callout -->
+  <rect x="555" y="278" width="260" height="60" rx="12" fill="#FFF" stroke="#16A34A" stroke-width="2"/>
+  <text x="685" y="300" text-anchor="middle" font-size="14" font-weight="bold" fill="#16A34A">4/4 摘要通过 → 99% 成功率</text>
+  <text x="685" y="320" text-anchor="middle" font-size="12" fill="#DC2626">0/4 摘要通过 → ≈0% 成功率</text>
+
+  <!-- ========== BOTTOM COMPARISON ========== -->
+  <rect x="100" y="400" width="700" height="100" rx="14" fill="#FFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Before -->
+  <g transform="translate(160,420)">
+    <text x="90" y="0" text-anchor="middle" font-size="15" font-weight="bold" fill="#64748B">Iteration 0</text>
+    <!-- step bar -->
+    <rect x="0" y="14" width="180" height="24" rx="6" fill="#FED7AA"/>
+    <text x="90" y="31" text-anchor="middle" font-size="13" font-weight="600" fill="#9A3412">~41 步</text>
+    <!-- accuracy -->
+    <text x="90" y="62" text-anchor="middle" font-size="13" fill="#78716C">基线成功率</text>
+  </g>
+
+  <!-- VS -->
+  <text x="450" y="448" text-anchor="middle" font-size="28" font-weight="bold" fill="#94A3B8">→</text>
+
+  <!-- After -->
+  <g transform="translate(540,420)">
+    <text x="90" y="0" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">Iteration 1 (PDR)</text>
+    <rect x="0" y="14" width="62" height="24" rx="6" fill="#86EFAC"/>
+    <text x="31" y="31" text-anchor="middle" font-size="13" font-weight="600" fill="#166534">~14 步</text>
+    <text x="90" y="62" text-anchor="middle" font-size="13" fill="#166534">⬆ 更高成功率 · ⬇ 66% 步数</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="450" y="540" text-anchor="middle" font-size="16" font-weight="600" fill="#475569">核心思想：把长轨迹压缩为结构化摘要，让下一轮 Agent "站在巨人的肩膀上"</text>
+  <text x="450" y="563" text-anchor="middle" font-size="12" fill="#94A3B8">Scaling Test-Time Compute for Agentic Coding — PDR + RTV Framework</text>
+</svg>

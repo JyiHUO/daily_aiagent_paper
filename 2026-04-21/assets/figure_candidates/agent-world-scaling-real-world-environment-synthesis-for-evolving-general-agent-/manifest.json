@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/downloaded_pdfs/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-",
+  "candidates": [
+    {
+      "id": "page-1-block-4",
+      "page_index": 1,
+      "caption": "Figure 1 Overview of Agent-World (left) and downstream general agent performance (right). The environment- scaling analysis reports the average score across representative subdomains of MCP-Mark, BFCL V4, and 𝜏 2 -Bench.",
+      "clip": [
+        264.5203552246094,
+        158.16497802734375,
+        567.1695556640625,
+        302.669921875
+      ],
+      "clip_area": 43734.305715041235,
+      "page_area": 484704.0,
+      "text_density": 0.059851214480398096,
+      "kind": "image_block_with_caption",
+      "score": 53.485936730167126,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1 Overview of Agent-World (left) and downstream general agent performance (right). The environment- scaling analysis reports the average score across representative subdomains of MCP-Mark, BFCL V4, and 𝜏 2 -Bench.",
+      "clip": [
+        59.17095184326172,
+        66.13377380371094,
+        298.5203552246094,
+        294.051513671875
+      ],
+      "clip_area": 54551.97505747026,
+      "page_area": 484704.0,
+      "text_density": 0.0033048588581061533,
+      "kind": "embedded_image_with_caption",
+      "xref": 1187,
+      "score": 52.60613305619411,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-1-0",
+      "page_index": 1,
+      "caption": "Figure 1 Overview of Agent-World (left) and downstream general agent performance (right). The environment- scaling analysis reports the average score across representative subdomains of MCP-Mark, BFCL V4, and 𝜏 2 -Bench.",
+      "clip": [
+        274.5203552246094,
+        164.16497802734375,
+        557.1695556640625,
+        296.669921875
+      ],
+      "clip_area": 37452.41643281467,
+      "page_area": 484704.0,
+      "text_density": 0.02441781582137119,
+      "kind": "embedded_image_with_caption",
+      "xref": 1188,
+      "score": 52.41613796036461,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/03-p2-embedded_image_with_caption.png",
+      "filename": "03-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-2-0",
+      "page_index": 1,
+      "caption": "Figure 1 Overview of Agent-World (left) and downstream general agent performance (right). The environment- scaling analysis reports the average score across representative subdomains of MCP-Mark, BFCL V4, and 𝜏 2 -Bench.",
+      "clip": [
+        274.5203552246094,
+        66.13375091552734,
+        550.272216796875,
+        183.50291442871094
+      ],
+      "clip_area": 32364.76532994001,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 1189,
+      "score": 52.359608503666,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/04-p2-embedded_image_with_caption.png",
+      "filename": "04-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-33-0",
+      "page_index": 4,
+      "caption": "Figure 2 The Pipeline of Agentic Environment-Task Discovery. We start from real-world environment themes, mine topic-aligned databases from the web, generate and verify executable tool interfaces, and synthesize verifiable tasks with controllable difficulty.",
+      "clip": [
+        139.0286865234375,
+        145.11578369140625,
+        269.2304382324219,
+        242.06307983398438
+      ],
+      "clip_area": 12622.707781213336,
+      "page_area": 484704.0,
+      "text_density": 0.121527111064265,
+      "kind": "embedded_image_with_caption",
+      "xref": 1249,
+      "score": 40.64862564482425,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/05-p5-embedded_image_with_caption.png",
+      "filename": "05-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-16-drawing-caption-21",
+      "page_index": 16,
+      "caption": "Figure 9 Training Dynamics of Agent-World. (a) Training reward score and (b) actor entropy over training steps for Qwen3-8B and Qwen3-14B backbones using GRPO on synthesized environments. Curves are exponentially smoothed for clarity.",
+      "clip": [
+        88.13500213623047,
+        61.951141357421875,
+        523.8853759765625,
+        271.4210205078125
+      ],
+      "clip_area": 91276.57814807189,
+      "page_area": 484704.0,
+      "text_density": 0.16809610195797173,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.72841808416694,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/06-p17-drawing_cluster_with_caption.png",
+      "filename": "06-p17-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/agent-world-scaling-real-world-environment-synthesis-for-evolving-general-agent-/contact-sheet.svg"
+}

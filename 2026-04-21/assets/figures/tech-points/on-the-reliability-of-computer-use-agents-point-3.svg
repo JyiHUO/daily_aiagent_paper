@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">说清楚 做一次  &gt;  说不清 试五次</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#666">指令澄清是提升 Agent 可靠性最有效的手段</text>
+
+  <!-- ===== LEFT: Vague Instruction Path ===== -->
+  <!-- Vague box -->
+  <rect x="40" y="110" width="260" height="70" rx="14" fill="#ffcdd2" stroke="#e53935" stroke-width="2"/>
+  <text x="170" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#b71c1c">❌ 模糊指令</text>
+  <text x="170" y="162" text-anchor="middle" font-size="12" fill="#c62828">"调整表格格式"</text>
+
+  <!-- Arrow down -->
+  <line x1="170" y1="180" x2="170" y2="215" stroke="#e53935" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- Retry x5 block -->
+  <rect x="60" y="220" width="220" height="90" rx="12" fill="#fff" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="170" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">重试 5 次 (Retry Binary)</text>
+  <text x="170" y="272" text-anchor="middle" font-size="12" fill="#888">只告知成功/失败</text>
+  <text x="170" y="295" text-anchor="middle" font-size="12" fill="#888">Agent 反复猜测…</text>
+
+  <!-- Result bar left -->
+  <rect x="70" y="340" width="200" height="54" rx="10" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="170" y="363" text-anchor="middle" font-size="13" fill="#b71c1c" font-weight="bold">Pass³ ≈ 45%</text>
+  <text x="170" y="383" text-anchor="middle" font-size="11" fill="#e53935">仍不可靠 😟</text>
+
+  <!-- ===== RIGHT: Clear Instruction Path ===== -->
+  <!-- Clear box -->
+  <rect x="570" y="110" width="290" height="70" rx="14" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="715" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">✅ 澄清指令</text>
+  <text x="715" y="162" text-anchor="middle" font-size="11" fill="#2e7d32">"A1:D10 黑色实线边框，Arial 12pt"</text>
+
+  <!-- Arrow down -->
+  <line x1="715" y1="180" x2="715" y2="215" stroke="#2e7d32" stroke-width="2" marker-end="url(#arwG)"/>
+
+  <!-- Single run block -->
+  <rect x="595" y="220" width="240" height="90" rx="12" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="715" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">执行 1 次</text>
+  <text x="715" y="272" text-anchor="middle" font-size="12" fill="#555">目标明确，直接执行</text>
+  <text x="715" y="295" text-anchor="middle" font-size="12" fill="#555">无需猜测 ✓</text>
+
+  <!-- Result bar right -->
+  <rect x="605" y="340" width="220" height="54" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="715" y="363" text-anchor="middle" font-size="13" fill="#1b5e20" font-weight="bold">Pass¹ ≈ 73%</text>
+  <text x="715" y="383" text-anchor="middle" font-size="11" fill="#2e7d32">更可靠 🎉</text>
+
+  <!-- ===== VS Divider ===== -->
+  <circle cx="450" cy="290" r="28" fill="#fff" stroke="#78909c" stroke-width="2"/>
+  <text x="450" y="296" text-anchor="middle" font-size="18" font-weight="bold" fill="#37474f">VS</text>
+
+  <!-- Comparison arrows -->
+  <line x1="290" y1="290" x2="418" y2="290" stroke="#78909c" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="482" y1="290" x2="590" y2="290" stroke="#78909c" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- ===== BOTTOM: Retry Clarify (best) ===== -->
+  <rect x="230" y="430" width="440" height="120" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5"/>
+  <text x="450" y="462" text-anchor="middle" font-size="16" font-weight="bold" fill="#0d47a1">🏆 执行中澄清 (Retry Clarify)</text>
+  <text x="450" y="488" text-anchor="middle" font-size="12.5" fill="#333">Agent 失败 → 用户反馈 "边框应为实线" → Agent 修正</text>
+
+  <!-- Mini comparison inside -->
+  <rect x="270" y="502" width="150" height="36" rx="8" fill="#ffcdd2"/>
+  <text x="345" y="525" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">Kimi 前: 35.7%</text>
+
+  <rect x="480" y="502" width="150" height="36" rx="8" fill="#c8e6c9"/>
+  <text x="555" y="525" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Kimi 后: 63.4%</text>
+
+  <!-- Arrow between mini bars -->
+  <line x1="425" y1="520" x2="475" y2="520" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arw)"/>
+  <text x="450" y="514" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">+28%</text>
+
+  <!-- Arrows from top results to bottom -->
+  <path d="M 170 394 Q 170 430 310 440" fill="none" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <path d="M 715 394 Q 715 430 590 440" fill="none" stroke="#999" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Key insight callout -->
+  <rect x="335" y="93" width="230" height="28" rx="14" fill="#FFF9C4" stroke="#F9A825" stroke-width="1.5"/>
+  <text x="450" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">核心发现：GPT-5 多 48 个任务变可靠</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="ah-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="ah-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e65100"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="18" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">多环境 Agent RL：真实执行 × 可执行奖励</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#666">核心创新：Agent 在真实环境中闭环 rollout，奖励来自执行验证而非 LLM 模拟</text>
+
+  <!-- ===== Module 1: Agent (GRPO) ===== -->
+  <rect x="50" y="120" width="180" height="130" rx="16" fill="#1565c0" filter="url(#shadow)" opacity="0.92"/>
+  <text x="140" y="160" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">🤖 Agent</text>
+  <text x="140" y="185" text-anchor="middle" font-size="13" fill="#bbdefb">GRPO 策略优化</text>
+  <text x="140" y="208" text-anchor="middle" font-size="11" fill="#90caf9">每任务 8 条轨迹采样</text>
+  <text x="140" y="226" text-anchor="middle" font-size="11" fill="#90caf9">单步最大 32K token</text>
+
+  <!-- ===== Module 2: Live Environment ===== -->
+  <rect x="340" y="100" width="220" height="170" rx="16" fill="#fff" stroke="#43a047" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="450" y="134" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e7d32">🌍 真实动态环境</text>
+  <!-- sub icons -->
+  <rect x="360" y="150" width="80" height="36" rx="8" fill="#e8f5e9"/>
+  <text x="400" y="174" text-anchor="middle" font-size="12" fill="#2e7d32">🔧 Tools</text>
+  <rect x="460" y="150" width="80" height="36" rx="8" fill="#e8f5e9"/>
+  <text x="500" y="174" text-anchor="middle" font-size="12" fill="#2e7d32">🗄️ Database</text>
+  <text x="450" y="215" text-anchor="middle" font-size="12" fill="#555">调用真正执行，状态真正改变</text>
+  <text x="450" y="237" text-anchor="middle" font-size="11" fill="#888">list-orders → cancel-order → DB 更新</text>
+  <text x="450" y="255" text-anchor="middle" font-size="10" fill="#aaa">轨迹最长 80K token</text>
+
+  <!-- Arrow: Agent → Environment -->
+  <line x1="230" y1="170" x2="335" y2="170" stroke="#555" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="283" y="160" text-anchor="middle" font-size="11" fill="#555">工具调用</text>
+
+  <!-- Arrow: Environment → Agent (feedback) -->
+  <line x1="335" y1="205" x2="230" y2="205" stroke="#555" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="283" y="225" text-anchor="middle" font-size="11" fill="#555">执行结果</text>
+
+  <!-- ===== Module 3: Executable Reward ===== -->
+  <rect x="640" y="100" width="220" height="170" rx="16" fill="#fff" stroke="#e65100" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="750" y="132" text-anchor="middle" font-size="17" font-weight="bold" fill="#e65100">⚡ 可执行奖励</text>
+
+  <!-- Two reward types side by side -->
+  <rect x="655" y="148" width="90" height="100" rx="10" fill="#fff3e0"/>
+  <text x="700" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">程序化</text>
+  <text x="700" y="190" text-anchor="middle" font-size="10" fill="#bf360c">沙箱执行</text>
+  <text x="700" y="206" text-anchor="middle" font-size="10" fill="#bf360c">验证脚本</text>
+  <text x="700" y="232" text-anchor="middle" font-size="16" fill="#2e7d32">✅ 0 / 1</text>
+
+  <rect x="755" y="148" width="90" height="100" rx="10" fill="#fff3e0"/>
+  <text x="800" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">图式化</text>
+  <text x="800" y="190" text-anchor="middle" font-size="10" fill="#bf360c">LLM Judge</text>
+  <text x="800" y="206" text-anchor="middle" font-size="10" fill="#bf360c">逐条评分</text>
+  <text x="800" y="232" text-anchor="middle" font-size="16" fill="#1565c0">📊 均值</text>
+
+  <!-- Arrow: Environment → Reward -->
+  <line x1="560" y1="185" x2="635" y2="185" stroke="#e65100" stroke-width="2.5" marker-end="url(#ah-orange)"/>
+  <text x="597" y="177" text-anchor="middle" font-size="11" fill="#e65100">终态</text>
+
+  <!-- ===== Feedback loop: Reward → Agent ===== -->
+  <path d="M 750 275 L 750 320 Q 750 340 730 340 L 160 340 Q 140 340 140 320 L 140 255" stroke="#2e7d32" stroke-width="2.8" fill="none" stroke-dasharray="8,4" marker-end="url(#ah-green)"/>
+  <text x="445" y="358" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">奖励信号 → 策略更新（GRPO）</text>
+
+  <!-- ===== Bottom Example Panel ===== -->
+  <rect x="60" y="395" width="780" height="135" rx="14" fill="#fff" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="422" font-size="14" font-weight="bold" fill="#1a237e">📌 示例：取消未发货订单</text>
+
+  <!-- Step markers -->
+  <circle cx="110" cy="455" r="16" fill="#1565c0"/>
+  <text x="110" y="460" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">1</text>
+  <text x="135" y="460" font-size="12" fill="#333">Agent 调用 list-orders(status='pending', days=7)</text>
+
+  <circle cx="110" cy="490" r="16" fill="#1565c0"/>
+  <text x="110" y="495" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">2</text>
+  <text x="135" y="495" font-size="12" fill="#333">Agent 逐个调用 cancel-order(id=...)，数据库真正更新</text>
+
+  <circle cx="110" cy="520" r="16" fill="#e65100"/>
+  <text x="110" y="525" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">✓</text>
+  <text x="135" y="525" font-size="12" fill="#333">验证脚本检查 DB：全部 cancelled →</text>
+  <text x="530" y="525" font-size="14" font-weight="bold" fill="#2e7d32">reward = 1</text>
+
+  <!-- VS callout -->
+  <rect x="640" y="430" width="180" height="80" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="730" y="455" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">❌ 传统方式</text>
+  <text x="730" y="475" text-anchor="middle" font-size="11" fill="#c62828">LLM 模拟结果</text>
+  <text x="730" y="493" text-anchor="middle" font-size="11" fill="#c62828">字符串匹配奖励</text>
+  <text x="730" y="507" text-anchor="middle" font-size="10" fill="#999">→ 幻觉 / 不可靠</text>
+</svg>

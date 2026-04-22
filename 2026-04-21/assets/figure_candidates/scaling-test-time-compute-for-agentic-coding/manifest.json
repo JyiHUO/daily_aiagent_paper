@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/downloaded_pdfs/scaling-test-time-compute-for-agentic-coding.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding",
+  "candidates": [
+    {
+      "id": "page-0-block-57",
+      "page_index": 0,
+      "caption": "Figure 1 Main results of our agentic PDR+RTV test-time scaling method. We improve Claude-4.5-Opus from 70.9% → 77.6% on SWE-Bench Verified ( mini-SWE-agent ) and from 47.0% → 59.1% on Terminal-Bench v2.0 ( Terminus 1 ), and Gemini-3.1-Pro from 72.3% → 76.6% on SWE-Bench Verified and from 52.5% → 64.8% on Terminal-Bench v2.0 .",
+      "clip": [
+        99.56143188476562,
+        445.59088134765625,
+        512.4415588378906,
+        630.5478515625
+      ],
+      "clip_area": 76365.05734317005,
+      "page_area": 484704.0,
+      "text_density": 0.2707819242190493,
+      "kind": "image_block_with_caption",
+      "score": 42.40158518400338,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/01-p1-image_block_with_caption.png",
+      "filename": "01-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1 Main results of our agentic PDR+RTV test-time scaling method. We improve Claude-4.5-Opus from 70.9% → 77.6% on SWE-Bench Verified ( mini-SWE-agent ) and from 47.0% → 59.1% on Terminal-Bench v2.0 ( Terminus 1 ), and Gemini-3.1-Pro from 72.3% → 76.6% on SWE-Bench Verified and from 52.5% → 64.8% on Terminal-Bench v2.0 .",
+      "clip": [
+        109.56143188476562,
+        451.59088134765625,
+        502.4415588378906,
+        624.5478515625
+      ],
+      "clip_area": 67951.35641543567,
+      "page_area": 484704.0,
+      "text_density": 0.2661933225572577,
+      "kind": "embedded_image_with_caption",
+      "xref": 4094,
+      "score": 41.58341571784716,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-11-embedded-1-0",
+      "page_index": 11,
+      "caption": "Figure 10 Pass count distribution shift from iterations 0 to 1 for each model in { Claude-4.5-Opus , Gemini-3.1-Pro , Claude-4.5-Sonnet , Gemini-3-Flash } based on our PDR+RTV method, across all tasks from Terminal-Bench v2.0 .",
+      "clip": [
+        67.80255126953125,
+        262.3509826660156,
+        544.2027587890625,
+        458.87274169921875
+      ],
+      "clip_area": 93623.00678552128,
+      "page_area": 484704.0,
+      "text_density": 0.2609565974355995,
+      "kind": "embedded_image_with_caption",
+      "xref": 4275,
+      "score": 20.18285978481427,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/03-p12-embedded_image_with_caption.png",
+      "filename": "03-p12-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-11-block-94",
+      "page_index": 11,
+      "caption": "Figure 9 Pass count distribution shift from iterations 0 to 1 for each model in { Claude-4.5-Opus , Gemini-3.1-Pro , Claude-4.5-Sonnet , Gemini-3-Flash } based on our PDR+RTV method, across all tasks from SWE-Bench Verified .",
+      "clip": [
+        57.80255126953125,
+        43.56739807128906,
+        554.2027587890625,
+        251.4264678955078
+      ],
+      "clip_area": 103181.28539555892,
+      "page_area": 484704.0,
+      "text_density": 0.2805256022076574,
+      "kind": "image_block_with_caption",
+      "score": 20.114922594157875,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/04-p12-image_block_with_caption.png",
+      "filename": "04-p12-image_block_with_caption.png"
+    },
+    {
+      "id": "page-11-block-190",
+      "page_index": 11,
+      "caption": "Figure 10 Pass count distribution shift from iterations 0 to 1 for each model in { Claude-4.5-Opus , Gemini-3.1-Pro , Claude-4.5-Sonnet , Gemini-3-Flash } based on our PDR+RTV method, across all tasks from Terminal-Bench v2.0 .",
+      "clip": [
+        57.80255126953125,
+        256.3509826660156,
+        554.2027587890625,
+        464.87274169921875
+      ],
+      "clip_area": 103510.24445641972,
+      "page_area": 484704.0,
+      "text_density": 0.2900025875756008,
+      "kind": "image_block_with_caption",
+      "score": 19.549958572757504,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/05-p12-image_block_with_caption.png",
+      "filename": "05-p12-image_block_with_caption.png"
+    },
+    {
+      "id": "page-11-embedded-0-0",
+      "page_index": 11,
+      "caption": "Figure 9 Pass count distribution shift from iterations 0 to 1 for each model in { Claude-4.5-Opus , Gemini-3.1-Pro , Claude-4.5-Sonnet , Gemini-3-Flash } based on our PDR+RTV method, across all tasks from SWE-Bench Verified .",
+      "clip": [
+        67.80255126953125,
+        49.56739807128906,
+        544.2027587890625,
+        245.4264678955078
+      ],
+      "clip_area": 93307.30150884017,
+      "page_area": 484704.0,
+      "text_density": 0.2798894046763978,
+      "kind": "embedded_image_with_caption",
+      "xref": 4268,
+      "score": 19.043383513958805,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/06-p12-embedded_image_with_caption.png",
+      "filename": "06-p12-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/scaling-test-time-compute-for-agentic-coding/contact-sheet.svg"
+}

@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/downloaded_pdfs/on-the-reliability-of-computer-use-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-25",
+      "page_index": 6,
+      "caption": "Figure 3 | Task-level transitions in reliability under instruction clarification measured using McNemar analysis (left), and repeated-run success under clarified and unclarified instructions measured using Pass^k (right).",
+      "clip": [
+        44.36199951171875,
+        69.03944396972656,
+        550.914794921875,
+        271.36602783203125
+      ],
+      "clip_area": 102489.09664123785,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11488549930672695,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.045637782054584,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        46.36199951171875,
+        71.03884887695312,
+        548.89794921875,
+        262.65704345703125
+      ],
+      "clip_area": 96295.03139444627,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01734334106338469,
+      "kind": "drawing_cluster",
+      "score": 15.069944793271626,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/02-p2-drawing_cluster.png",
+      "filename": "02-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        65.02476501464844,
+        88.27780151367188,
+        296.03662109375,
+        245.68544006347656
+      ],
+      "clip_area": 36363.03074241872,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 1264,
+      "score": 11.404033674915764,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/03-p2-embedded_image.png",
+      "filename": "03-p2-embedded_image.png"
+    },
+    {
+      "id": "page-6-block-25",
+      "page_index": 6,
+      "caption": "Figure 3 | Task-level transitions in reliability under instruction clarification measured using McNemar analysis (left), and repeated-run success under clarified and unclarified instructions measured using Pass^k (right).",
+      "clip": [
+        32.59819946289062,
+        18.0,
+        562.8837341308594,
+        257.8342590332031
+      ],
+      "clip_area": 127180.63828311823,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08132037742195217,
+      "kind": "captioned_figure",
+      "score": 7.92077735468287,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/04-p7-captioned_figure.png",
+      "filename": "04-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        46.36199951171875,
+        71.03944396972656,
+        548.914794921875,
+        269.36602783203125
+      ],
+      "clip_area": 99669.579124148,
+      "page_area": 501156.9211820215,
+      "text_density": 0.10868908314030146,
+      "kind": "drawing_cluster",
+      "score": 7.386094779628001,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/05-p7-drawing_cluster.png",
+      "filename": "05-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        46.36199951171875,
+        71.03874206542969,
+        548.9078369140625,
+        249.02899169921875
+      ],
+      "clip_area": 89448.25905166473,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19372700320572436,
+      "kind": "drawing_cluster",
+      "score": 4.170249352675034,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/06-p3-drawing_cluster.png",
+      "filename": "06-p3-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/assets/figure_candidates/on-the-reliability-of-computer-use-agents/contact-sheet.svg"
+}

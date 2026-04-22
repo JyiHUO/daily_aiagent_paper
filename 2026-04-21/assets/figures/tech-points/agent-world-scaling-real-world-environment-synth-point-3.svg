@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A5568"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3182CE"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2F855A"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="100%" stop-color="#EDF2F7"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1A202C">自进化竞技场：策略-环境共演化闭环</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#718096">Agent-World Self-Evolution Arena</text>
+
+  <!-- Central loop circle (subtle) -->
+  <ellipse cx="450" cy="310" rx="245" ry="195" fill="none" stroke="#CBD5E0" stroke-width="2" stroke-dasharray="12 6" opacity="0.5"/>
+  <text x="450" y="310" text-anchor="middle" font-size="13" fill="#A0AEC0" font-style="italic">迭代循环</text>
+
+  <!-- ===== MODULE 1: Evaluate (Top) ===== -->
+  <g filter="url(#shadow)">
+    <rect x="325" y="88" width="250" height="88" rx="16" fill="#EBF4FF" stroke="#3182CE" stroke-width="2.5"/>
+    <circle cx="355" cy="118" r="16" fill="#3182CE"/>
+    <text x="355" y="123" text-anchor="middle" font-size="16" fill="white" font-weight="bold">1</text>
+    <text x="460" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#2B6CB0">竞技场评估</text>
+    <text x="460" y="145" text-anchor="middle" font-size="12.5" fill="#4A5568">在多样环境上合成评测任务</text>
+    <text x="460" y="162" text-anchor="middle" font-size="12.5" fill="#4A5568">找出 Agent 薄弱场景</text>
+  </g>
+
+  <!-- ===== MODULE 2: Diagnose (Right) ===== -->
+  <g filter="url(#shadow)">
+    <rect x="600" y="268" width="250" height="88" rx="16" fill="#FFF5F5" stroke="#E53E3E" stroke-width="2.5"/>
+    <circle cx="630" cy="298" r="16" fill="#E53E3E"/>
+    <text x="630" y="303" text-anchor="middle" font-size="16" fill="white" font-weight="bold">2</text>
+    <text x="735" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#C53030">失败诊断</text>
+    <text x="735" y="325" text-anchor="middle" font-size="12.5" fill="#4A5568">诊断 Agent 分析失败轨迹</text>
+    <text x="735" y="342" text-anchor="middle" font-size="12.5" fill="#4A5568">→ 输出弱环境 + 改进方向</text>
+  </g>
+
+  <!-- ===== MODULE 3: Targeted Training (Bottom-Left) ===== -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="268" width="250" height="88" rx="16" fill="#F0FFF4" stroke="#2F855A" stroke-width="2.5"/>
+    <circle cx="80" cy="298" r="16" fill="#2F855A"/>
+    <text x="80" y="303" text-anchor="middle" font-size="16" fill="white" font-weight="bold">3</text>
+    <text x="185" y="300" text-anchor="middle" font-size="18" font-weight="bold" fill="#276749">靶向 RL 训练</text>
+    <text x="185" y="325" text-anchor="middle" font-size="12.5" fill="#4A5568">在弱环境上扩充复杂度</text>
+    <text x="185" y="342" text-anchor="middle" font-size="12.5" fill="#4A5568">GRPO 强化学习补短板</text>
+  </g>
+
+  <!-- ===== Curved Arrows connecting the 3 modules ===== -->
+  <!-- Arrow 1→2: Evaluate to Diagnose -->
+  <path d="M 575 170 Q 680 180, 710 268" fill="none" stroke="#E53E3E" stroke-width="3" marker-end="url(#arrow)" opacity="0.8"/>
+  <rect x="625" y="198" width="95" height="24" rx="6" fill="#FFF5F5" stroke="#E53E3E" stroke-width="1"/>
+  <text x="672" y="215" text-anchor="middle" font-size="11" fill="#C53030" font-weight="600">失败轨迹</text>
+
+  <!-- Arrow 2→3: Diagnose to Targeted Training -->
+  <path d="M 600 340 Q 450 430, 300 340" fill="none" stroke="#2F855A" stroke-width="3" marker-end="url(#arrowGreen)" opacity="0.8"/>
+  <rect x="400" y="398" width="105" height="24" rx="6" fill="#F0FFF4" stroke="#2F855A" stroke-width="1"/>
+  <text x="452" y="415" text-anchor="middle" font-size="11" fill="#276749" font-weight="600">弱环境指导</text>
+
+  <!-- Arrow 3→1: Targeted Training back to Evaluate -->
+  <path d="M 200 268 Q 210 180, 325 140" fill="none" stroke="#3182CE" stroke-width="3" marker-end="url(#arrowBlue)" opacity="0.8"/>
+  <rect x="195" y="178" width="105" height="24" rx="6" fill="#EBF4FF" stroke="#3182CE" stroke-width="1"/>
+  <text x="247" y="195" text-anchor="middle" font-size="11" fill="#2B6CB0" font-weight="600">更强策略</text>
+
+  <!-- ===== Example callout (bottom) ===== -->
+  <g>
+    <rect x="120" y="462" width="660" height="98" rx="14" fill="white" stroke="#CBD5E0" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="120" y="462" width="6" height="98" rx="3" fill="#ED8936"/>
+    <text x="152" y="488" font-size="13" font-weight="bold" fill="#C05621">💡 示例：金融交易环境</text>
+    <text x="152" y="510" font-size="12" fill="#4A5568">第1轮：Agent 扣款后未更新余额 → 成功率 30%</text>
+    <text x="152" y="530" font-size="12" fill="#4A5568">诊断：「弱环境 — 需更多余额状态追踪任务」→ 扩充多账户场景做 RL</text>
+    <text x="152" y="550" font-size="12" fill="#2F855A" font-weight="bold">第3轮：成功率 30% → 55% ↑</text>
+  </g>
+
+  <!-- Loop icon in center -->
+  <g transform="translate(450,305)">
+    <path d="M -12,-8 A 14 14 0 1 1 -12,8" fill="none" stroke="#718096" stroke-width="2.2" stroke-linecap="round"/>
+    <polygon points="-16,7 -12,14 -7,7" fill="#718096"/>
+  </g>
+</svg>

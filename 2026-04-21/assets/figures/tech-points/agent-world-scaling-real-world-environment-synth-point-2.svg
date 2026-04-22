@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2563eb">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#16a34a">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">双策略可验证任务合成</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748b">先生成答案，再出题 → 每道题都有可执行正确答案 + 自动评分</text>
+
+  <!-- ===== LEFT: 图式合成 ===== -->
+  <rect x="30" y="95" width="400" height="400" rx="16" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="230" y="125" text-anchor="middle" font-size="18" font-weight="bold" fill="#1d4ed8">📊 图式合成</text>
+  <text x="230" y="148" text-anchor="middle" font-size="12" fill="#3b82f6">有序多步流程（如查询→订票→确认）</text>
+
+  <!-- Tool dependency graph -->
+  <rect x="60" y="168" width="340" height="100" rx="12" fill="#fff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="230" y="190" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">① 工具依赖图 + 随机游走</text>
+  <!-- Mini graph nodes -->
+  <circle cx="120" cy="235" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="239" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">搜航班</text>
+  <circle cx="230" cy="235" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="230" y="239" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">订机票</text>
+  <circle cx="340" cy="235" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="340" y="239" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">查订单</text>
+  <!-- Arrows between nodes -->
+  <line x1="142" y1="235" x2="208" y2="235" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <line x1="252" y1="235" x2="318" y2="235" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="175" y="225" text-anchor="middle" font-size="9" fill="#6b7280">强依赖</text>
+  <text x="285" y="225" text-anchor="middle" font-size="9" fill="#6b7280">强依赖</text>
+
+  <!-- Reverse generate -->
+  <rect x="60" y="282" width="340" height="52" rx="12" fill="#fff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="230" y="306" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">② 沙箱执行 → 获取 Ground Truth</text>
+  <text x="230" y="324" text-anchor="middle" font-size="11" fill="#64748b">航班号 CA1234、订单 #98765</text>
+
+  <!-- Generate NL task -->
+  <rect x="60" y="348" width="340" height="52" rx="12" fill="#fff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="230" y="372" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">③ 逆向生成自然语言任务</text>
+  <text x="230" y="390" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">"帮我订明天北京到上海最便宜的航班"</text>
+
+  <!-- Down arrows -->
+  <line x1="230" y1="268" x2="230" y2="280" stroke="#93c5fd" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="230" y1="334" x2="230" y2="346" stroke="#93c5fd" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Difficulty label -->
+  <rect x="75" y="416" width="300" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="225" y="436" text-anchor="middle" font-size="11" fill="#92400e">难度可控：加长链 / 增加弱依赖 / 隐藏工具名</text>
+
+  <!-- ===== RIGHT: 程序化合成 ===== -->
+  <rect x="470" y="95" width="400" height="400" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="670" y="125" text-anchor="middle" font-size="18" font-weight="bold" fill="#15803d">🔄 程序化合成</text>
+  <text x="670" y="148" text-anchor="middle" font-size="12" fill="#22c55e">非线性推理（循环 / 分支 / 聚合）</text>
+
+  <!-- Python script block -->
+  <rect x="500" y="168" width="340" height="120" rx="12" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="520" y="192" font-size="12" fill="#86efac" font-weight="bold">① LLM 生成 Python 解题脚本</text>
+  <text x="520" y="214" font-size="11" fill="#94a3b8" font-family="monospace">for airline in [api_A, api_B, api_C]:</text>
+  <text x="520" y="232" font-size="11" fill="#94a3b8" font-family="monospace">    price = airline.get_price(...)</text>
+  <text x="520" y="250" font-size="11" fill="#94a3b8" font-family="monospace">    prices.append(price)</text>
+  <text x="520" y="268" font-size="11" fill="#f97316" font-family="monospace">return min(prices)  # ¥580</text>
+
+  <!-- Verify script -->
+  <rect x="500" y="302" width="340" height="60" rx="12" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="670" y="326" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">② 生成验证脚本</text>
+  <text x="670" y="346" text-anchor="middle" font-size="11" fill="#64748b">assert agent_output == ¥580 ✓</text>
+
+  <!-- NL task -->
+  <rect x="500" y="376" width="340" height="52" rx="12" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="670" y="400" text-anchor="middle" font-size="13" font-weight="600" fill="#15803d">③ 对应自然语言任务</text>
+  <text x="670" y="418" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">"比较三家航司价格，返回最低价"</text>
+
+  <!-- Down arrows right -->
+  <line x1="670" y1="290" x2="670" y2="300" stroke="#86efac" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="670" y1="364" x2="670" y2="374" stroke="#86efac" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Difficulty label right -->
+  <rect x="515" y="441" width="310" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="670" y="461" text-anchor="middle" font-size="11" fill="#92400e">复杂度可控：循环深度 / 分支数 / 聚合层数</text>
+
+  <!-- ===== BOTTOM: Shared Verification ===== -->
+  <rect x="180" y="520" width="540" height="80" rx="16" fill="#fff" stroke="#8b5cf6" stroke-width="2.5"/>
+  <text x="450" y="548" text-anchor="middle" font-size="17" font-weight="bold" fill="#6d28d9">🔁 ReAct Agent × 5 次独立执行验证</text>
+  <text x="450" y="572" text-anchor="middle" font-size="13" fill="#7c3aed">可解性 ✓　一致性 ✓　自动评分 ✓</text>
+  <text x="450" y="592" text-anchor="middle" font-size="11" fill="#a78bfa">两条路线共享：无需人工标注，全自动闭环</text>
+
+  <!-- Arrows from both to bottom -->
+  <path d="M230 460 L230 480 Q230 500 280 510 L330 518" stroke="#3b82f6" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)" stroke-dasharray="6,3"/>
+  <path d="M670 475 L670 490 Q670 510 620 515 L570 518" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#arrowGreen)" stroke-dasharray="6,3"/>
+
+  <!-- VS divider -->
+  <rect x="435" y="270" width="30" height="30" rx="15" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="291" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">VS</text>
+
+  <!-- Key insight badge -->
+  <rect x="280" y="0" width="340" height="28" rx="14" fill="#8b5cf6"/>
+  <text x="450" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">核心创新：先有答案，再出题，天然可验证</text>
+</svg>

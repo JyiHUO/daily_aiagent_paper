@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="redG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4d6a"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="greenG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#1a9c5a"/>
+    </linearGradient>
+    <linearGradient id="orangeG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f39c12"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8fa6"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff4d6a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">去掉随机性 ≠ 提升可靠性</text>
+  <text x="450" y="67" text-anchor="middle" fill="#7f8fa6" font-size="13">Deterministic Execution Does NOT Guarantee Reliability</text>
+
+  <!-- ===== LEFT SECTION: 两种去随机化方案 ===== -->
+  <!-- Box: Baseline Agent -->
+  <rect x="40" y="100" width="160" height="80" rx="14" fill="#253553" stroke="#4a6fa5" stroke-width="1.5"/>
+  <text x="120" y="132" text-anchor="middle" fill="#dfe6e9" font-size="15" font-weight="bold">🤖 Agent</text>
+  <text x="120" y="155" text-anchor="middle" fill="#7f8fa6" font-size="12">正常采样解码</text>
+  <text x="120" y="172" text-anchor="middle" fill="#7f8fa6" font-size="11">temperature &gt; 0</text>
+
+  <!-- Arrow down to two treatments -->
+  <line x1="120" y1="180" x2="120" y2="210" stroke="#7f8fa6" stroke-width="1.5" marker-end="url(#arrowW)"/>
+
+  <!-- Treatment 1: Temp=0 -->
+  <rect x="20" y="215" width="140" height="64" rx="12" fill="#1e3a5f" stroke="#4a6fa5" stroke-width="1.2"/>
+  <text x="90" y="240" text-anchor="middle" fill="#74b9ff" font-size="13" font-weight="bold">方案 A</text>
+  <text x="90" y="258" text-anchor="middle" fill="#dfe6e9" font-size="12">Temperature = 0</text>
+  <text x="90" y="273" text-anchor="middle" fill="#7f8fa6" font-size="10">确定性解码</text>
+
+  <!-- Treatment 2: Fixed Plan -->
+  <rect x="175" y="215" width="140" height="64" rx="12" fill="#1e3a5f" stroke="#4a6fa5" stroke-width="1.2"/>
+  <text x="245" y="240" text-anchor="middle" fill="#74b9ff" font-size="13" font-weight="bold">方案 B</text>
+  <text x="245" y="258" text-anchor="middle" fill="#dfe6e9" font-size="12">固定执行计划</text>
+  <text x="245" y="273" text-anchor="middle" fill="#7f8fa6" font-size="10">复用预生成 plan</text>
+
+  <!-- ===== CENTER: Result comparison bars ===== -->
+  <text x="450" y="112" text-anchor="middle" fill="#dfe6e9" font-size="16" font-weight="bold">实验结果：因模型而异</text>
+
+  <!-- Model Qwen -->
+  <rect x="340" y="130" width="240" height="52" rx="10" fill="#2d1a1a" stroke="#ff4d6a" stroke-width="1" opacity="0.9"/>
+  <text x="355" y="152" fill="#ff6b81" font-size="13" font-weight="bold">Qwen-3VL</text>
+  <text x="355" y="170" fill="#ff4d6a" font-size="11">Temp=0 → 显著退化 ↓ (b-c = -20)</text>
+  <!-- red X -->
+  <text x="555" y="158" text-anchor="middle" fill="#ff4d6a" font-size="22" font-weight="bold">✗</text>
+
+  <!-- Model OpenCUA / UI-TARS -->
+  <rect x="340" y="192" width="240" height="52" rx="10" fill="#1a2d1a" stroke="#2ecc71" stroke-width="1" opacity="0.9"/>
+  <text x="355" y="214" fill="#2ecc71" font-size="13" font-weight="bold">UI-TARS / OpenCUA</text>
+  <text x="355" y="232" fill="#27ae60" font-size="11">Temp=0 → 显著改善 ↑</text>
+  <text x="555" y="220" text-anchor="middle" fill="#2ecc71" font-size="22" font-weight="bold">✓</text>
+
+  <!-- BUT arrow -->
+  <text x="460" y="268" text-anchor="middle" fill="#f39c12" font-size="15" font-weight="bold">⚠ 但 Pass@1→Pass@3 仍下降</text>
+
+  <!-- Dotted box: "不足以保证可靠" -->
+  <rect x="335" y="282" width="250" height="40" rx="8" fill="none" stroke="#ff4d6a" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="460" y="307" text-anchor="middle" fill="#ff6b81" font-size="14" font-weight="bold">消除随机性 ≠ 可靠</text>
+
+  <!-- ===== RIGHT: Environment sensitivity ===== -->
+  <rect x="630" y="100" width="240" height="220" rx="16" fill="#1c2e47" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="750" y="128" text-anchor="middle" fill="#f39c12" font-size="15" font-weight="bold">🖥 环境微扰实验</text>
+
+  <!-- Desktop icon with wallpaper change -->
+  <rect x="680" y="142" width="56" height="42" rx="4" fill="#34495e" stroke="#7f8fa6" stroke-width="1"/>
+  <rect x="683" y="145" width="50" height="30" rx="2" fill="#2980b9"/>
+  <text x="708" y="165" text-anchor="middle" fill="#fff" font-size="10">壁纸A</text>
+  <rect x="683" y="177" width="50" height="3" rx="1" fill="#7f8fa6"/>
+
+  <!-- Arrow -->
+  <text x="752" y="168" text-anchor="middle" fill="#f39c12" font-size="20">→</text>
+
+  <!-- Changed desktop -->
+  <rect x="770" y="142" width="56" height="42" rx="4" fill="#34495e" stroke="#7f8fa6" stroke-width="1"/>
+  <rect x="773" y="145" width="50" height="30" rx="2" fill="#8e44ad"/>
+  <text x="798" y="165" text-anchor="middle" fill="#fff" font-size="10">壁纸B</text>
+  <rect x="773" y="177" width="50" height="3" rx="1" fill="#7f8fa6"/>
+
+  <text x="750" y="207" text-anchor="middle" fill="#7f8fa6" font-size="11">仅改壁纸/字体/主题</text>
+  <text x="750" y="222" text-anchor="middle" fill="#7f8fa6" font-size="11">（无功能性变化）</text>
+
+  <!-- Claude result -->
+  <rect x="660" y="240" width="180" height="60" rx="10" fill="#2d1a1a" stroke="#ff4d6a" stroke-width="1.2"/>
+  <text x="750" y="262" text-anchor="middle" fill="#dfe6e9" font-size="13" font-weight="bold">Claude Sonnet</text>
+  <text x="750" y="280" text-anchor="middle" fill="#ff4d6a" font-size="12">Pass@3: 61.2% → 55.7%</text>
+  <text x="750" y="295" text-anchor="middle" fill="#ff6b81" font-size="11">20个任务变不可靠 ↓</text>
+
+  <!-- ===== BOTTOM: Core Insight ===== -->
+  <rect x="60" y="360" width="780" height="220" rx="20" fill="#0d1f3c" stroke="#4a6fa5" stroke-width="1"/>
+
+  <!-- Insight title -->
+  <text x="450" y="395" text-anchor="middle" fill="#f1c40f" font-size="18" font-weight="bold">💡 核心发现</text>
+
+  <!-- Three insight blocks -->
+  <!-- Block 1 -->
+  <rect x="90" y="415" width="220" height="90" rx="12" fill="url(#redG)" opacity="0.15"/>
+  <rect x="90" y="415" width="220" height="90" rx="12" fill="none" stroke="#ff4d6a" stroke-width="1.2"/>
+  <text x="200" y="445" text-anchor="middle" fill="#ff6b81" font-size="28">🎲→🔒</text>
+  <text x="200" y="472" text-anchor="middle" fill="#dfe6e9" font-size="13" font-weight="bold">去随机化效果不一</text>
+  <text x="200" y="492" text-anchor="middle" fill="#7f8fa6" font-size="11">有的模型反而变差</text>
+
+  <!-- Block 2 -->
+  <rect x="340" y="415" width="220" height="90" rx="12" fill="url(#orangeG)" opacity="0.15"/>
+  <rect x="340" y="415" width="220" height="90" rx="12" fill="none" stroke="#f39c12" stroke-width="1.2"/>
+  <text x="450" y="445" text-anchor="middle" fill="#f39c12" font-size="28">🖼️</text>
+  <text x="450" y="472" text-anchor="middle" fill="#dfe6e9" font-size="13" font-weight="bold">对环境极度敏感</text>
+  <text x="450" y="492" text-anchor="middle" fill="#7f8fa6" font-size="11">换壁纸就能打崩Agent</text>
+
+  <!-- Block 3 -->
+  <rect x="590" y="415" width="220" height="90" rx="12" fill="url(#greenG)" opacity="0.15"/>
+  <rect x="590" y="415" width="220" height="90" rx="12" fill="none" stroke="#2ecc71" stroke-width="1.2"/>
+  <text x="700" y="445" text-anchor="middle" fill="#2ecc71" font-size="28">🔄</text>
+  <text x="700" y="472" text-anchor="middle" fill="#dfe6e9" font-size="13" font-weight="bold">随机性是双刃剑</text>
+  <text x="700" y="492" text-anchor="middle" fill="#7f8fa6" font-size="11">适度随机帮助适应变化</text>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="555" text-anchor="middle" fill="#636e72" font-size="12">On the Reliability of Computer Use Agents · 2025</text>
+
+  <!-- Connecting arrows from left treatments to center -->
+  <line x1="160" y1="247" x2="335" y2="156" stroke="#7f8fa6" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowW)"/>
+  <line x1="245" y1="279" x2="335" y2="213" stroke="#7f8fa6" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowW)"/>
+
+  <!-- Big NOT EQUAL sign watermark -->
+  <text x="450" y="340" text-anchor="middle" fill="#ff4d6a" font-size="30" font-weight="bold" opacity="0.4">确定性 ≠ 可靠性</text>
+</svg>

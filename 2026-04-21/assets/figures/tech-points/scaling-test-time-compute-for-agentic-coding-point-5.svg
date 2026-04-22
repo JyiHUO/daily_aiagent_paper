@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="barBefore" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a6fa5"/>
+      <stop offset="100%" stop-color="#2d4a7a"/>
+    </linearGradient>
+    <linearGradient id="barAfter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e5a0"/>
+      <stop offset="100%" stop-color="#00b87a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">PDR+RTV: 跨模型一致提升</text>
+  <text x="450" y="68" text-anchor="middle" fill="#8899bb" font-size="13">摘要→锦标赛选择→精炼→再选择 — 所有顶级模型均受益</text>
+
+  <!-- Legend -->
+  <rect x="290" y="82" width="14" height="14" rx="3" fill="url(#barBefore)"/>
+  <text x="310" y="94" fill="#8899bb" font-size="12">基线 (单次)</text>
+  <rect x="400" y="82" width="14" height="14" rx="3" fill="url(#barAfter)"/>
+  <text x="420" y="94" fill="#00e5a0" font-size="12">PDR+RTV</text>
+
+  <!-- ===== SWE-Bench Verified Section ===== -->
+  <text x="230" y="130" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">SWE-Bench Verified</text>
+  <line x1="60" y1="138" x2="400" y2="138" stroke="#334466" stroke-width="1"/>
+
+  <!-- Bar chart area: y baseline = 370, max bar height ~200 for 80% -->
+  <!-- Scale: 1% = 2.5px -->
+
+  <!-- Claude 4.5 Opus -->
+  <rect x="75" y="192.75" width="28" height="177.25" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="107" y="176" width="28" height="194" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="105" y="168" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">77.6%</text>
+  <text x="89" y="385" text-anchor="middle" fill="#7788aa" font-size="9">70.9</text>
+  <text x="105" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Opus</text>
+
+  <!-- Claude 4.5 Sonnet -->
+  <rect x="165" y="222.5" width="28" height="147.5" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="197" y="201.5" width="28" height="168.5" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="195" y="193" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">67.4%</text>
+  <text x="179" y="385" text-anchor="middle" fill="#7788aa" font-size="9">59.0</text>
+  <text x="195" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Sonnet</text>
+  <text x="225" y="222" fill="#ff6b6b" font-size="10" font-weight="bold">+8.4</text>
+
+  <!-- Gemini 3.1 Pro -->
+  <rect x="255" y="189.25" width="28" height="180.75" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="287" y="178.5" width="28" height="191.5" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="285" y="170" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">76.6%</text>
+  <text x="269" y="385" text-anchor="middle" fill="#7788aa" font-size="9">72.3</text>
+  <text x="285" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Gemini Pro</text>
+
+  <!-- Gemini Flash -->
+  <rect x="345" y="222.5" width="28" height="147.5" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="377" y="205" width="28" height="165" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="375" y="197" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">66.0%</text>
+  <text x="359" y="385" text-anchor="middle" fill="#7788aa" font-size="9">59.0</text>
+  <text x="375" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Flash</text>
+
+  <!-- Baseline at y=370 -->
+  <line x1="60" y1="370" x2="415" y2="370" stroke="#334466" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="55" y="374" text-anchor="end" fill="#556677" font-size="9">0%</text>
+
+  <!-- ===== Terminal-Bench v2.0 Section ===== -->
+  <text x="670" y="130" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">Terminal-Bench v2.0</text>
+  <line x1="490" y1="138" x2="850" y2="138" stroke="#334466" stroke-width="1"/>
+  <text x="670" y="153" text-anchor="middle" fill="#ff6b6b" font-size="11">更难的基准 → 提升更大</text>
+
+  <!-- Claude 4.5 Opus -->
+  <rect x="510" y="252.5" width="28" height="117.5" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="542" y="222.25" width="28" height="147.75" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="540" y="214" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">59.1%</text>
+  <text x="524" y="385" text-anchor="middle" fill="#7788aa" font-size="9">47.0</text>
+  <text x="540" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Opus</text>
+  <text x="570" y="250" fill="#ff6b6b" font-size="10" font-weight="bold">+12.1</text>
+
+  <!-- Claude 4.5 Sonnet -->
+  <rect x="600" y="280.5" width="28" height="89.5" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="632" y="240" width="28" height="130" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="630" y="232" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">52.0%</text>
+  <text x="614" y="385" text-anchor="middle" fill="#7788aa" font-size="9">35.8</text>
+  <text x="630" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Sonnet</text>
+  <text x="660" y="262" fill="#ff6b6b" font-size="11" font-weight="bold">+16.2 🔥</text>
+
+  <!-- Gemini 3.1 Pro -->
+  <rect x="695" y="238.75" width="28" height="131.25" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="727" y="208" width="28" height="162" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="725" y="200" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">64.8%</text>
+  <text x="709" y="385" text-anchor="middle" fill="#7788aa" font-size="9">52.5</text>
+  <text x="725" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">Gemini Pro</text>
+
+  <!-- GPT-5 -->
+  <rect x="790" y="247.5" width="28" height="122.5" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <rect x="822" y="222.5" width="28" height="147.5" rx="4" fill="url(#barAfter)" filter="url(#glow)"/>
+  <text x="820" y="214" text-anchor="middle" fill="#00e5a0" font-size="11" font-weight="bold">59.0%</text>
+  <text x="804" y="385" text-anchor="middle" fill="#7788aa" font-size="9">49.0</text>
+  <text x="820" y="400" text-anchor="middle" fill="#aabbcc" font-size="10">GPT-5</text>
+
+  <line x1="490" y1="370" x2="860" y2="370" stroke="#334466" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Divider -->
+  <line x1="450" y1="115" x2="450" y2="410" stroke="#2a3a5a" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Bottom insight box -->
+  <rect x="120" y="430" width="660" height="110" rx="14" fill="#162040" stroke="#00e5a0" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Key insight icon -->
+  <circle cx="170" cy="485" r="26" fill="#00e5a0" opacity="0.15"/>
+  <text x="170" y="493" text-anchor="middle" fill="#00e5a0" font-size="28">💡</text>
+
+  <text x="215" y="462" fill="#ffffff" font-size="14" font-weight="bold">核心洞察</text>
+  <text x="215" y="485" fill="#ccddee" font-size="12.5">任务越难 → 方差越大 → 从多轨迹中提取经验的收益越大</text>
+  <text x="215" y="508" fill="#8899bb" font-size="11.5">还能解决 16 次 rollout 全失败的"不可能任务" (如 gpt2-codegolf)</text>
+  <text x="215" y="528" fill="#ff6b6b" font-size="12" font-weight="bold">Terminal-Bench 平均提升 &gt; SWE-Bench，验证了难题更需要经验复用</text>
+
+  <!-- Small arrow annotations on the bigger improvements -->
+  <!-- Curved arrow for Opus TB -->
+  <path d="M524,250 Q524,240 535,232" fill="none" stroke="#ff6b6b" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#ff6b6b"/>
+    </marker>
+  </defs>
+</svg>

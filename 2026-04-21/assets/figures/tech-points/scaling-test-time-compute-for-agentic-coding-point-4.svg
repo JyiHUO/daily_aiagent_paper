@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="barBad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="barMid1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffa94d"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+    <linearGradient id="barMid2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd43b"/>
+      <stop offset="100%" stop-color="#f1c40f"/>
+    </linearGradient>
+    <linearGradient id="barMid3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69db7c"/>
+      <stop offset="100%" stop-color="#27ae60"/>
+    </linearGradient>
+    <linearGradient id="barGood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ecdc4"/>
+      <stop offset="100%" stop-color="#1abc9c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7ec8e3"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e8f4f8" font-size="22" font-weight="bold">精炼上下文质量 → 决定 Agent 下轮表现</text>
+  <text x="450" y="66" text-anchor="middle" fill="#7ec8e3" font-size="13">参考摘要越好，Agent 精炼成功率越高</text>
+
+  <!-- Left panel: Bar chart -->
+  <rect x="40" y="90" width="420" height="370" rx="14" fill="#162040" stroke="#2a3a60" stroke-width="1.5"/>
+  <text x="250" y="120" text-anchor="middle" fill="#c8dce8" font-size="15" font-weight="bold">上下文中通过的摘要数 vs Pass@1</text>
+
+  <!-- Y axis label -->
+  <text x="72" y="270" text-anchor="middle" fill="#7e99b5" font-size="12" transform="rotate(-90,72,270)">Iteration-1 Pass@1</text>
+
+  <!-- Chart area -->
+  <g transform="translate(110,140)">
+    <!-- Grid lines -->
+    <line x1="0" y1="0" x2="310" y2="0" stroke="#2a3a60" stroke-width="0.5" stroke-dasharray="4"/>
+    <line x1="0" y1="60" x2="310" y2="60" stroke="#2a3a60" stroke-width="0.5" stroke-dasharray="4"/>
+    <line x1="0" y1="120" x2="310" y2="120" stroke="#2a3a60" stroke-width="0.5" stroke-dasharray="4"/>
+    <line x1="0" y1="180" x2="310" y2="180" stroke="#2a3a60" stroke-width="0.5" stroke-dasharray="4"/>
+    <line x1="0" y1="240" x2="310" y2="240" stroke="#2a3a60" stroke-width="0.5" stroke-dasharray="4"/>
+
+    <!-- Y axis labels -->
+    <text x="-8" y="5" text-anchor="end" fill="#7e99b5" font-size="11">100%</text>
+    <text x="-8" y="65" text-anchor="end" fill="#7e99b5" font-size="11">75%</text>
+    <text x="-8" y="125" text-anchor="end" fill="#7e99b5" font-size="11">50%</text>
+    <text x="-8" y="185" text-anchor="end" fill="#7e99b5" font-size="11">25%</text>
+    <text x="-8" y="245" text-anchor="end" fill="#7e99b5" font-size="11">0%</text>
+
+    <!-- Bars: 0/4=0.1%, 1/4≈25%, 2/4≈50%, 3/4≈78%, 4/4=99.2% -->
+    <!-- Bar 0/4 -->
+    <rect x="15" y="239.76" width="44" height="0.24" rx="3" fill="url(#barBad)"/>
+    <rect x="15" y="232" width="44" height="8" rx="3" fill="url(#barBad)" opacity="0.3"/>
+    <text x="37" y="228" text-anchor="middle" fill="#ff6b6b" font-size="13" font-weight="bold">0.1%</text>
+    <text x="37" y="260" text-anchor="middle" fill="#a0b0c0" font-size="12">0/4</text>
+
+    <!-- Bar 1/4 -->
+    <rect x="75" y="180" width="44" height="60" rx="3" fill="url(#barMid1)"/>
+    <text x="97" y="175" text-anchor="middle" fill="#ffa94d" font-size="13" font-weight="bold">~25%</text>
+    <text x="97" y="260" text-anchor="middle" fill="#a0b0c0" font-size="12">1/4</text>
+
+    <!-- Bar 2/4 -->
+    <rect x="135" y="120" width="44" height="120" rx="3" fill="url(#barMid2)"/>
+    <text x="157" y="115" text-anchor="middle" fill="#ffd43b" font-size="13" font-weight="bold">~50%</text>
+    <text x="157" y="260" text-anchor="middle" fill="#a0b0c0" font-size="12">2/4</text>
+
+    <!-- Bar 3/4 -->
+    <rect x="195" y="53" width="44" height="187" rx="3" fill="url(#barMid3)"/>
+    <text x="217" y="48" text-anchor="middle" fill="#69db7c" font-size="13" font-weight="bold">~78%</text>
+    <text x="217" y="260" text-anchor="middle" fill="#a0b0c0" font-size="12">3/4</text>
+
+    <!-- Bar 4/4 -->
+    <rect x="255" y="2" width="44" height="238" rx="3" fill="url(#barGood)" filter="url(#glow)"/>
+    <text x="277" y="-5" text-anchor="middle" fill="#4ecdc4" font-size="14" font-weight="bold">99.2%</text>
+    <text x="277" y="260" text-anchor="middle" fill="#a0b0c0" font-size="12">4/4</text>
+
+    <!-- Trend arrow -->
+    <path d="M 30,225 Q 155,100 280,10" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
+  </g>
+
+  <text x="250" y="430" text-anchor="middle" fill="#7e99b5" font-size="11">上下文中通过的摘要数量（Claude-4.5-Opus, SWE-Bench）</text>
+
+  <!-- Right panel: Comparison -->
+  <rect x="490" y="90" width="380" height="170" rx="14" fill="#162040" stroke="#2a3a60" stroke-width="1.5"/>
+  <text x="680" y="120" text-anchor="middle" fill="#c8dce8" font-size="15" font-weight="bold">随机采样 vs RTV 精选</text>
+
+  <!-- Random -->
+  <rect x="515" y="138" width="155" height="50" rx="10" fill="#2d1f3d" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="592" y="158" text-anchor="middle" fill="#c4b5fd" font-size="12" font-weight="bold">🎲 随机采样 K=4</text>
+  <text x="592" y="178" text-anchor="middle" fill="#a78bfa" font-size="16" font-weight="bold">75.1% pass@1</text>
+
+  <!-- RTV -->
+  <rect x="695" y="138" width="155" height="50" rx="10" fill="#1a3331" stroke="#4ecdc4" stroke-width="2"/>
+  <text x="772" y="158" text-anchor="middle" fill="#a7f3d0" font-size="12" font-weight="bold">✨ RTV 精选 K=4</text>
+  <text x="772" y="178" text-anchor="middle" fill="#4ecdc4" font-size="16" font-weight="bold">78.1% pass@1</text>
+
+  <!-- Arrow between -->
+  <line x1="670" y1="163" x2="693" y2="163" stroke="#7ec8e3" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Subtext -->
+  <text x="680" y="215" text-anchor="middle" fill="#6b8fa3" font-size="11">4/4 通过的任务数：52.8 → 62（+17%）</text>
+  <text x="680" y="235" text-anchor="middle" fill="#5a7a8f" font-size="11">Claude-4.5-Sonnet on SWE-Bench</text>
+
+  <!-- Bottom insight box -->
+  <rect x="490" y="285" width="380" height="175" rx="14" fill="#1a2840" stroke="#3a5070" stroke-width="1.5"/>
+
+  <!-- Insight icon -->
+  <circle cx="520" cy="315" r="16" fill="#2d4a6a" stroke="#7ec8e3" stroke-width="1.5"/>
+  <text x="520" y="321" text-anchor="middle" fill="#7ec8e3" font-size="16">💡</text>
+
+  <text x="545" y="320" fill="#e8f4f8" font-size="14" font-weight="bold">核心洞察</text>
+
+  <text x="515" y="350" fill="#a0c4d8" font-size="13">参考摘要的质量 = 精炼的天花板</text>
+
+  <!-- Mini diagram -->
+  <rect x="520" y="370" width="100" height="34" rx="8" fill="#3d1a1a" stroke="#ff6b6b" stroke-width="1"/>
+  <text x="570" y="392" text-anchor="middle" fill="#ff8787" font-size="11">差摘要 → 失败</text>
+
+  <rect x="640" y="370" width="30" height="34" rx="8" fill="#1a2840"/>
+  <text x="655" y="392" text-anchor="middle" fill="#7ec8e3" font-size="16">→</text>
+
+  <rect x="690" y="370" width="155" height="34" rx="8" fill="#1a3d2a" stroke="#4ecdc4" stroke-width="1"/>
+  <text x="767" y="392" text-anchor="middle" fill="#4ecdc4" font-size="11">RTV好摘要 → 成功</text>
+
+  <text x="680" y="438" text-anchor="middle" fill="#6b8fa3" font-size="12" font-style="italic">"先选好参考，再让 Agent 精炼"</text>
+
+  <!-- Bottom credit -->
+  <text x="450" y="530" text-anchor="middle" fill="#3a5070" font-size="11">Scaling Test-Time Compute for Agentic Coding — PDR + RTV Framework</text>
+</svg>

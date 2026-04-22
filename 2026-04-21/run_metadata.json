@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-21",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 1025,
+  "selected_count": 3,
+  "focus_titles": [
+    "Scaling Test-Time Compute for Agentic Coding",
+    "Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence",
+    "On the Reliability of Computer Use Agents"
+  ],
+  "knowledge_topic": "轨迹摘要（Trajectory Summary）：Agent 长 horizon 决策的核心中间表示",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-21/paper_broadcast_script.txt"
+}

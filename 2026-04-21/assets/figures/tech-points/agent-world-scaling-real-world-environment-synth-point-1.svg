@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A5568"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2B6CB0"/>
+    </marker>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EBF4FF"/>
+      <stop offset="100%" stop-color="#C3DAFE"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEFCBF"/>
+      <stop offset="100%" stop-color="#F6E05E"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C6F6D5"/>
+      <stop offset="100%" stop-color="#68D391"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FED7E2"/>
+      <stop offset="100%" stop-color="#F687B3"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="18" fill="#F7FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1A202C">Agent-World: 智能体式环境挖掘与合成</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#718096">用 Agent 从真实世界挖数据 → 生成可执行工具 → 自动测试 → 大规模环境</text>
+
+  <!-- ===== MODULE 1: Sources ===== -->
+  <rect x="30" y="100" width="170" height="180" rx="14" fill="url(#g1)" filter="url(#shadow)" stroke="#90CDF4" stroke-width="1.5"/>
+  <text x="115" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#2B6CB0">① 主题来源</text>
+  <!-- sub items -->
+  <rect x="48" y="146" width="134" height="30" rx="8" fill="#fff" stroke="#90CDF4" stroke-width="1"/>
+  <text x="115" y="166" text-anchor="middle" font-size="12" fill="#2D3748">MCP Server 规范</text>
+  <rect x="48" y="184" width="134" height="30" rx="8" fill="#fff" stroke="#90CDF4" stroke-width="1"/>
+  <text x="115" y="204" text-anchor="middle" font-size="12" fill="#2D3748">开源工具文档</text>
+  <rect x="48" y="222" width="134" height="30" rx="8" fill="#fff" stroke="#90CDF4" stroke-width="1"/>
+  <text x="115" y="242" text-anchor="middle" font-size="12" fill="#2D3748">工业 PRD</text>
+  <text x="115" y="272" text-anchor="middle" font-size="11" fill="#718096">数千个真实主题</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="200" y1="190" x2="258" y2="190" stroke="#4A5568" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- ===== MODULE 2: Deep Research Agent ===== -->
+  <rect x="264" y="100" width="195" height="180" rx="14" fill="url(#g2)" filter="url(#shadow)" stroke="#ECC94B" stroke-width="1.5"/>
+  <text x="361" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#975A16">② 深度研究 Agent</text>
+  <!-- icon: magnifier -->
+  <circle cx="361" cy="168" r="22" fill="none" stroke="#B7791F" stroke-width="2.5"/>
+  <line x1="377" y1="184" x2="392" y2="199" stroke="#B7791F" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="361" y="225" text-anchor="middle" font-size="12" fill="#744210">搜索 / 浏览器 / 代码 / OS</text>
+  <text x="361" y="245" text-anchor="middle" font-size="12" fill="#744210">从互联网挖掘真实数据</text>
+  <text x="361" y="270" text-anchor="middle" font-size="11" fill="#975A16" font-weight="600">多轮复杂化扩展 DB</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="459" y1="190" x2="517" y2="190" stroke="#4A5568" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- ===== MODULE 3: Coding Agent ===== -->
+  <rect x="523" y="100" width="180" height="180" rx="14" fill="url(#g3)" filter="url(#shadow)" stroke="#68D391" stroke-width="1.5"/>
+  <text x="613" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#276749">③ 编码 Agent</text>
+  <!-- code icon -->
+  <text x="613" y="172" text-anchor="middle" font-size="32" fill="#2F855A">{ }</text>
+  <text x="613" y="205" text-anchor="middle" font-size="12" fill="#276749">生成 Python 工具函数</text>
+  <text x="613" y="225" text-anchor="middle" font-size="11" fill="#276749">book_flight(), check_inv()…</text>
+  <rect x="553" y="240" width="120" height="28" rx="8" fill="#fff" stroke="#48BB78" stroke-width="1.5"/>
+  <text x="613" y="259" text-anchor="middle" font-size="12" font-weight="bold" fill="#2F855A">✓ 单元测试验证</text>
+  <text x="613" y="276" text-anchor="middle" font-size="10" fill="#718096">通过率 &gt; 50% 才保留</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="703" y1="190" x2="735" y2="190" stroke="#4A5568" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- ===== MODULE 4: Result ===== -->
+  <rect x="741" y="105" width="140" height="170" rx="14" fill="url(#g4)" filter="url(#shadow)" stroke="#F687B3" stroke-width="1.5"/>
+  <text x="811" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#97266D">④ 环境生态</text>
+  <text x="811" y="175" text-anchor="middle" font-size="28" font-weight="bold" fill="#B83280">1978</text>
+  <text x="811" y="196" text-anchor="middle" font-size="12" fill="#97266D">可执行环境</text>
+  <text x="811" y="230" text-anchor="middle" font-size="28" font-weight="bold" fill="#B83280">19822</text>
+  <text x="811" y="251" text-anchor="middle" font-size="12" fill="#97266D">工具函数</text>
+
+  <!-- ===== BOTTOM: Contrast / Key Insight ===== -->
+  <rect x="80" y="340" width="330" height="145" rx="14" fill="#FFF5F5" filter="url(#shadow)" stroke="#FC8181" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="245" y="370" text-anchor="middle" font-size="14" font-weight="bold" fill="#C53030">❌ 传统方法</text>
+  <text x="245" y="398" text-anchor="middle" font-size="13" fill="#742A2A">LLM 凭空编造数据库</text>
+  <text x="245" y="422" text-anchor="middle" font-size="13" fill="#9B2C2C">→ 幻觉多，偏离真实动态</text>
+  <text x="245" y="450" text-anchor="middle" font-size="13" fill="#9B2C2C">→ 工具覆盖度低</text>
+  <text x="245" y="474" text-anchor="middle" font-size="12" fill="#A0AEC0">环境少 &amp; 不可执行</text>
+
+  <rect x="480" y="340" width="340" height="145" rx="14" fill="#F0FFF4" filter="url(#shadow)" stroke="#68D391" stroke-width="2"/>
+  <text x="650" y="370" text-anchor="middle" font-size="14" font-weight="bold" fill="#276749">✅ Agent-World</text>
+  <text x="650" y="398" text-anchor="middle" font-size="13" fill="#22543D">Agent 自主调研真实数据</text>
+  <text x="650" y="422" text-anchor="middle" font-size="13" fill="#276749">→ 数据真实，结构丰富</text>
+  <text x="650" y="450" text-anchor="middle" font-size="13" fill="#276749">→ 自动测试保证可执行性</text>
+  <text x="650" y="474" text-anchor="middle" font-size="12" font-weight="bold" fill="#276749">大规模 + 高质量 + 可扩展</text>
+
+  <!-- VS label -->
+  <circle cx="440" cy="412" r="22" fill="#EDF2F7" stroke="#A0AEC0" stroke-width="1.5"/>
+  <text x="440" y="418" text-anchor="middle" font-size="14" font-weight="bold" fill="#4A5568">VS</text>
+
+  <!-- Example hint -->
+  <text x="450" y="510" text-anchor="middle" font-size="11" fill="#A0AEC0" font-style="italic">例：主题"航班预订" → 抓取航班时刻/价格 → 生成 book_flight() 等工具 → 单元测试通过 → 可用于训练</text>
+</svg>
