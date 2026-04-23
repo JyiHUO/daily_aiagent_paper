@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/>
+    </marker>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D1FAE5"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E293B">Parallel-Distill-Refine (PDR)</text>
+  <text x="450" y="68" text-anchor="middle" font-size="15" fill="#64748B">经验报告质量 → 直接决定第二轮成功率</text>
+
+  <!-- ===== ITERATION 0 ===== -->
+  <rect x="40" y="100" width="280" height="200" rx="16" fill="url(#g1)" filter="url(#shadow)" stroke="#F59E0B" stroke-width="2"/>
+  <text x="180" y="130" text-anchor="middle" font-size="17" font-weight="bold" fill="#92400E">Iteration 0：独立探索</text>
+
+  <!-- 16 agents grid simplified -->
+  <g transform="translate(70, 148)">
+    <rect width="220" height="60" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+    <text x="110" y="22" text-anchor="middle" font-size="13" fill="#92400E">16 个 Agent 各自独立尝试</text>
+    <text x="110" y="44" text-anchor="middle" font-size="22" fill="#B45309">🤖🤖🤖…🤖</text>
+  </g>
+
+  <!-- Step count -->
+  <rect x="80" y="224" width="200" height="36" rx="8" fill="#FEF9C3" stroke="#EAB308" stroke-width="1"/>
+  <text x="180" y="248" text-anchor="middle" font-size="14" font-weight="600" fill="#854D0E">平均 41 步/轮 😰</text>
+
+  <!-- Summary arrow -->
+  <text x="180" y="286" text-anchor="middle" font-size="12" fill="#78716C">生成轨迹摘要</text>
+
+  <!-- ===== RTV Selection (middle) ===== -->
+  <rect x="340" y="140" width="200" height="130" rx="16" fill="#FFF" filter="url(#shadow)" stroke="#8B5CF6" stroke-width="2.5"/>
+  <text x="440" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#6D28D9">RTV 精选</text>
+  <text x="440" y="195" text-anchor="middle" font-size="13" fill="#7C3AED">锦标赛投票</text>
+
+  <!-- Funnel visual -->
+  <polygon points="400,210 480,210 465,250 415,250" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="440" y="237" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">16 → 4</text>
+  <text x="440" y="260" text-anchor="middle" font-size="11" fill="#7C3AED">选出最佳4份摘要</text>
+
+  <!-- Arrow iter0 -> RTV -->
+  <line x1="320" y1="200" x2="336" y2="200" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== ITERATION 1 ===== -->
+  <rect x="570" y="100" width="290" height="200" rx="16" fill="url(#g2)" filter="url(#shadow)" stroke="#3B82F6" stroke-width="2"/>
+  <text x="715" y="130" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E40AF">Iteration 1：站在巨人肩上</text>
+
+  <g transform="translate(600, 148)">
+    <rect width="230" height="60" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="115" y="22" text-anchor="middle" font-size="13" fill="#1E40AF">16 个新 Agent + 4份经验报告</text>
+    <text x="115" y="44" text-anchor="middle" font-size="22" fill="#2563EB">🤖📋📋📋📋</text>
+  </g>
+
+  <rect x="610" y="224" width="220" height="36" rx="8" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1"/>
+  <text x="720" y="248" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A8A">平均 14 步/轮 🚀</text>
+
+  <text x="715" y="286" text-anchor="middle" font-size="12" fill="#64748B">直接避坑，借鉴成功路径</text>
+
+  <!-- Arrow RTV -> iter1 -->
+  <line x1="540" y1="205" x2="566" y2="205" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="553" y="195" text-anchor="middle" font-size="10" fill="#7C3AED">经验</text>
+
+  <!-- ===== KEY INSIGHT: Bar chart ===== -->
+  <rect x="80" y="340" width="740" height="250" rx="16" fill="#FAFAFA" filter="url(#shadow)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="450" y="372" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E293B">🔑 核心发现：经验报告质量 vs 第二轮成功率</text>
+
+  <!-- Bar chart -->
+  <g transform="translate(130, 390)">
+    <!-- Axis -->
+    <line x1="0" y1="160" x2="640" y2="160" stroke="#94A3B8" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="160" stroke="#94A3B8" stroke-width="1.5"/>
+
+    <!-- Y axis labels -->
+    <text x="-8" y="165" text-anchor="end" font-size="11" fill="#64748B">0%</text>
+    <text x="-8" y="85" text-anchor="end" font-size="11" fill="#64748B">50%</text>
+    <text x="-8" y="8" text-anchor="end" font-size="11" fill="#64748B">100%</text>
+    <line x1="-4" y1="80" x2="640" y2="80" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Bar: 0/4 pass -->
+    <rect x="30" y="159.8" width="80" height="0.2" rx="4" fill="#EF4444"/>
+    <rect x="30" y="158" width="80" height="2" rx="2" fill="#FCA5A5"/>
+    <text x="70" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">0.1%</text>
+    <text x="70" y="182" text-anchor="middle" font-size="12" fill="#64748B">0/4 通过</text>
+
+    <!-- Bar: 1/4 pass -->
+    <rect x="150" y="106.6" width="80" height="53.4" rx="4" fill="#F97316"/>
+    <text x="190" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#C2410C">33.4%</text>
+    <text x="190" y="182" text-anchor="middle" font-size="12" fill="#64748B">1/4 通过</text>
+
+    <!-- Bar: 2/4 pass -->
+    <rect x="270" y="62.4" width="80" height="97.6" rx="4" fill="#EAB308"/>
+    <text x="310" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#A16207">61.0%</text>
+    <text x="310" y="182" text-anchor="middle" font-size="12" fill="#64748B">2/4 通过</text>
+
+    <!-- Bar: 3/4 pass -->
+    <rect x="390" y="28.8" width="80" height="131.2" rx="4" fill="#22C55E"/>
+    <text x="430" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">82.0%</text>
+    <text x="430" y="182" text-anchor="middle" font-size="12" fill="#64748B">3/4 通过</text>
+
+    <!-- Bar: 4/4 pass -->
+    <rect x="510" y="1.3" width="80" height="158.7" rx="4" fill="url(#g3)" stroke="#059669" stroke-width="1.5"/>
+    <text x="550" y="-6" text-anchor="middle" font-size="15" font-weight="bold" fill="#047857">99.2% 🎯</text>
+    <text x="550" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">4/4 通过</text>
+
+    <!-- X axis label -->
+    <text x="320" y="205" text-anchor="middle" font-size="13" fill="#475569">经验报告中「成功摘要」的数量</text>
+  </g>
+
+  <!-- Step reduction callout -->
+  <g transform="translate(408, 90)">
+    <rect x="0" y="0" width="140" height="32" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="70" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">步数↓ 66%</text>
+  </g>
+</svg>

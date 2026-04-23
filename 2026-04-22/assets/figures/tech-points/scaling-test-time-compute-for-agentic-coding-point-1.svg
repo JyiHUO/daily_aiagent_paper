@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2d8a4e"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#dce6f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2740">核心创新：紧凑轨迹摘要 — Agent 的"结构化记忆"</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#6b7b8d">把冗长交互日志压缩为关键信号，让选择与复用成为可能</text>
+
+  <!-- ===== LEFT: Raw Trajectory (messy) ===== -->
+  <rect x="40" y="100" width="240" height="310" rx="14" fill="#fff" stroke="#c0392b" stroke-width="2" opacity="0.95"/>
+  <text x="160" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">原始轨迹 R</text>
+  <text x="160" y="150" text-anchor="middle" font-size="11" fill="#888">（40+ 步操作日志）</text>
+
+  <!-- Simulated log lines -->
+  <g font-size="10.5" fill="#666" opacity="0.8">
+    <rect x="58" y="166" width="204" height="18" rx="3" fill="#fdecea"/>
+    <text x="66" y="179">$ find . -name "query.py"</text>
+    <rect x="58" y="190" width="204" height="18" rx="3" fill="#f5f5f5"/>
+    <text x="66" y="203">$ cat db/models/query.py | head</text>
+    <rect x="58" y="214" width="204" height="18" rx="3" fill="#f5f5f5"/>
+    <text x="66" y="227">... (200行终端输出) ...</text>
+    <rect x="58" y="238" width="204" height="18" rx="3" fill="#fdecea"/>
+    <text x="66" y="251">$ sed -i 's/old/new/' query.py</text>
+    <rect x="58" y="262" width="204" height="18" rx="3" fill="#fdecea"/>
+    <text x="66" y="275">ERROR: test_regression FAILED</text>
+    <rect x="58" y="286" width="204" height="18" rx="3" fill="#f5f5f5"/>
+    <text x="66" y="299">$ git checkout -- query.py</text>
+    <rect x="58" y="310" width="204" height="18" rx="3" fill="#f5f5f5"/>
+    <text x="66" y="323">$ sed -i 's/old/new2/' query.py</text>
+    <rect x="58" y="334" width="204" height="18" rx="3" fill="#eafaf1"/>
+    <text x="66" y="347">OK: target test passed</text>
+  </g>
+  <!-- Noise indicator -->
+  <text x="160" y="380" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">⚠ 信号被噪声淹没</text>
+  <text x="160" y="396" text-anchor="middle" font-size="10.5" fill="#999">重复输出 · 无效探索 · 低价值细节</text>
+
+  <!-- ===== ARROW: Summarization ===== -->
+  <line x1="290" y1="255" x2="370" y2="255" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="296" y="222" width="70" height="26" rx="12" fill="#f39c12" opacity="0.9"/>
+  <text x="331" y="240" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">P_sum</text>
+  <text x="331" y="276" text-anchor="middle" font-size="10" fill="#777">LLM 压缩</text>
+
+  <!-- ===== CENTER: Compact Summary ===== -->
+  <rect x="380" y="100" width="240" height="310" rx="14" fill="#fff" stroke="#2d8a4e" stroke-width="2.5" opacity="0.97"/>
+  <rect x="380" y="100" width="240" height="42" rx="14" fill="#2d8a4e"/>
+  <rect x="380" y="128" width="240" height="14" fill="#2d8a4e"/>
+  <text x="500" y="128" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">紧凑摘要 S</text>
+
+  <!-- Summary cards -->
+  <rect x="396" y="158" width="208" height="46" rx="8" fill="#e8f8f0" stroke="#2d8a4e" stroke-width="1"/>
+  <text x="406" y="176" font-size="11" font-weight="bold" fill="#2d8a4e">🔍 假设</text>
+  <text x="406" y="194" font-size="11" fill="#444">问题在 QuerySet.filter 方法</text>
+
+  <rect x="396" y="214" width="208" height="46" rx="8" fill="#e8f8f0" stroke="#2d8a4e" stroke-width="1"/>
+  <text x="406" y="232" font-size="11" font-weight="bold" fill="#2d8a4e">✅ 进展</text>
+  <text x="406" y="250" font-size="11" fill="#444">定位 query.py 第234行</text>
+
+  <rect x="396" y="270" width="208" height="46" rx="8" fill="#fef5e7" stroke="#e67e22" stroke-width="1"/>
+  <text x="406" y="288" font-size="11" font-weight="bold" fill="#e67e22">❌ 失败</text>
+  <text x="406" y="306" font-size="11" fill="#444">首次修改引入回归失败</text>
+
+  <rect x="396" y="326" width="208" height="46" rx="8" fill="#eaf2f8" stroke="#2980b9" stroke-width="1"/>
+  <text x="406" y="344" font-size="11" font-weight="bold" fill="#2980b9">📋 最终状态</text>
+  <text x="406" y="362" font-size="11" fill="#444">目标测试通过，待全量验证</text>
+
+  <text x="500" y="396" text-anchor="middle" font-size="12" fill="#2d8a4e" font-weight="bold">✓ 关键信号保留</text>
+
+  <!-- ===== RIGHT: Downstream usage ===== -->
+  <line x1="630" y1="210" x2="700" y2="170" stroke="#2d8a4e" stroke-width="2" marker-end="url(#arrowG)"/>
+  <line x1="630" y1="300" x2="700" y2="340" stroke="#2d8a4e" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Selection box -->
+  <rect x="706" y="120" width="168" height="90" rx="12" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+  <text x="790" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">🏆 选择</text>
+  <text x="790" y="175" text-anchor="middle" font-size="11" fill="#555">锦标赛投票(RTV)</text>
+  <text x="790" y="195" text-anchor="middle" font-size="10" fill="#888">摘要间两两比较</text>
+
+  <!-- Refinement box -->
+  <rect x="706" y="300" width="168" height="90" rx="12" fill="#dae8fc" stroke="#2980b9" stroke-width="2"/>
+  <text x="790" y="335" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5276">🔄 复用</text>
+  <text x="790" y="355" text-anchor="middle" font-size="11" fill="#555">并行蒸馏精炼(PDR)</text>
+  <text x="790" y="375" text-anchor="middle" font-size="10" fill="#888">基于摘要启动新尝试</text>
+
+  <!-- Unified Interface label -->
+  <rect x="636" y="240" width="80" height="24" rx="10" fill="#2d8a4e" opacity="0.85"/>
+  <text x="676" y="257" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">统一接口</text>
+
+  <!-- Bottom comparison bar -->
+  <rect x="40" y="440" width="820" height="60" rx="12" fill="#fff" stroke="#bbb" stroke-width="1.5" opacity="0.9"/>
+  <text x="100" y="468" font-size="12" fill="#c0392b" font-weight="bold">直接用原始轨迹比较 →</text>
+  <text x="100" y="486" font-size="13" fill="#c0392b">效果差 ✗</text>
+  <rect x="430" y="448" width="2" height="40" fill="#ccc"/>
+  <text x="520" y="468" font-size="12" fill="#2d8a4e" font-weight="bold">用紧凑摘要比较 →</text>
+  <text x="520" y="486" font-size="13" fill="#2d8a4e">所有模型/基准一致提升 ✓</text>
+
+  <!-- Decorative size comparison -->
+  <rect x="330" y="452" width="50" height="36" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+  <text x="355" y="474" text-anchor="middle" font-size="18" fill="#c0392b">📜</text>
+  <text x="395" y="474" font-size="16" fill="#888">→</text>
+  <rect x="410" y="460" width="20" height="20" rx="4" fill="#e8f8f0" stroke="#2d8a4e" stroke-width="1"/>
+  <text x="420" y="476" text-anchor="middle" font-size="12" fill="#2d8a4e">📋</text>
+</svg>

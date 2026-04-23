@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1a40"/>
+      <stop offset="100%" stop-color="#0f0c29"/>
+    </linearGradient>
+    <linearGradient id="barOpus" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="barGemini" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="barGPT" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="bold">AutomationBench: 前沿模型均低于 10%</text>
+  <text x="450" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">最强 AI 十道企业自动化任务只能做对一道</text>
+
+  <!-- === LEFT: Bar Chart === -->
+  <text x="60" y="108" fill="#cbd5e1" font-size="15" font-weight="bold">通过率（%）</text>
+
+  <!-- 10% reference line -->
+  <line x1="180" y1="120" x1="180" y2="290" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.7"/>
+  <text x="183" y="300" fill="#ef4444" font-size="12" font-weight="bold">10% 天花板</text>
+
+  <!-- Opus bar -->
+  <text x="55" y="152" fill="#fb923c" font-size="14" font-weight="bold" text-anchor="end">Opus</text>
+  <rect x="62" y="136" width="118" height="28" rx="6" fill="url(#barOpus)" opacity="0.9"/>
+  <text x="188" y="156" fill="#fb923c" font-size="15" font-weight="bold">9.9%</text>
+
+  <!-- Gemini bar -->
+  <text x="55" y="200" fill="#60a5fa" font-size="14" font-weight="bold" text-anchor="end">Gemini</text>
+  <rect x="62" y="184" width="114" height="28" rx="6" fill="url(#barGemini)" opacity="0.9"/>
+  <text x="184" y="204" fill="#60a5fa" font-size="15" font-weight="bold">9.6%</text>
+
+  <!-- GPT bar -->
+  <text x="55" y="248" fill="#34d399" font-size="14" font-weight="bold" text-anchor="end">GPT</text>
+  <rect x="62" y="232" width="91" height="28" rx="6" fill="url(#barGPT)" opacity="0.9"/>
+  <text x="161" y="252" fill="#34d399" font-size="15" font-weight="bold">7.6%</text>
+
+  <!-- === CENTER: Venn / Overlap === -->
+  <text x="540" y="108" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="bold">模型擅长的任务几乎不重叠</text>
+
+  <!-- Venn circles -->
+  <circle cx="490" cy="195" r="72" fill="#f97316" opacity="0.2" stroke="#f97316" stroke-width="2"/>
+  <circle cx="590" cy="195" r="72" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+
+  <text x="462" y="195" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="bold">Opus</text>
+  <text x="462" y="212" text-anchor="middle" fill="#fb923c" font-size="12">独有 71%</text>
+
+  <text x="618" y="195" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="bold">Gemini</text>
+  <text x="618" y="212" text-anchor="middle" fill="#60a5fa" font-size="12">独有 71%</text>
+
+  <text x="540" y="192" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">17%</text>
+  <text x="540" y="210" text-anchor="middle" fill="#94a3b8" font-size="11">Jaccard</text>
+
+  <!-- Arrow annotation -->
+  <text x="540" y="286" text-anchor="middle" fill="#fbbf24" font-size="13" font-style="italic">无统一跨应用编排能力</text>
+
+  <!-- === BOTTOM LEFT: False Confidence === -->
+  <rect x="40" y="340" width="380" height="240" rx="14" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5" opacity="0.85"/>
+  <text x="230" y="372" text-anchor="middle" fill="#c084fc" font-size="17" font-weight="bold">🚨 72% 失败 = "假自信"</text>
+  <text x="230" y="396" text-anchor="middle" fill="#94a3b8" font-size="13">模型宣称完成，实际未成功</text>
+
+  <!-- Pie-like visual for 72% -->
+  <circle cx="130" cy="478" r="55" fill="none" stroke="#334155" stroke-width="14"/>
+  <circle cx="130" cy="478" r="55" fill="none" stroke="url(#redGrad)" stroke-width="14"
+    stroke-dasharray="312 433" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 130 478)"/>
+  <text x="130" y="485" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">72%</text>
+  <text x="130" y="505" text-anchor="middle" fill="#f87171" font-size="11">假自信</text>
+
+  <!-- Failure modes -->
+  <text x="215" y="440" fill="#e2e8f0" font-size="13">❌ 搜索不够持久</text>
+  <text x="215" y="466" fill="#e2e8f0" font-size="13">❌ 列表遗漏条目</text>
+  <text x="215" y="492" fill="#e2e8f0" font-size="13">❌ 不遵循指令要求</text>
+  <text x="215" y="530" fill="#fbbf24" font-size="12" font-style="italic">企业自动化中后果严重</text>
+
+  <!-- === BOTTOM RIGHT: API Discovery bottleneck === -->
+  <rect x="450" y="340" width="420" height="240" rx="14" fill="#1e1b4b" stroke="#0ea5e9" stroke-width="1.5" opacity="0.85"/>
+  <text x="660" y="372" text-anchor="middle" fill="#38bdf8" font-size="17" font-weight="bold">🔍 API 发现是主要瓶颈</text>
+  <text x="660" y="396" text-anchor="middle" fill="#94a3b8" font-size="13">缩小搜索空间 → 通过率提升</text>
+
+  <!-- Stacked improvement bars -->
+  <!-- Labels -->
+  <text x="476" y="434" fill="#94a3b8" font-size="12">全部 500 API</text>
+  <text x="476" y="480" fill="#94a3b8" font-size="12">Zapier Schema</text>
+  <text x="476" y="526" fill="#94a3b8" font-size="12">精确工具集</text>
+
+  <!-- Bars showing improvement -->
+  <rect x="582" y="418" width="86" height="24" rx="5" fill="#1e40af" opacity="0.8"/>
+  <text x="676" y="436" fill="#60a5fa" font-size="14" font-weight="bold">9.6%</text>
+
+  <rect x="582" y="464" width="115" height="24" rx="5" fill="#2563eb" opacity="0.8"/>
+  <text x="705" y="482" fill="#60a5fa" font-size="14" font-weight="bold">12.8%</text>
+
+  <rect x="582" y="510" width="128" height="24" rx="5" fill="#3b82f6" opacity="0.9"/>
+  <text x="718" y="528" fill="#93c5fd" font-size="14" font-weight="bold">14.3%</text>
+
+  <!-- Arrow showing improvement -->
+  <path d="M 830 425 L 830 527" stroke="#fbbf24" stroke-width="2" fill="none" marker-end="url(#arrowY)"/>
+  <defs>
+    <marker id="arrowY" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <text x="840" y="485" fill="#fbbf24" font-size="12" font-weight="bold" transform="rotate(90 840 485)">+49%</text>
+
+  <text x="660" y="565" text-anchor="middle" fill="#f87171" font-size="12" font-style="italic">即使给精确工具，仍远低于 20%</text>
+
+  <!-- Footer -->
+  <text x="450" y="608" text-anchor="middle" fill="#475569" font-size="11">AutomationBench · Zapier · 47 apps · ~500 API endpoints · 6 business domains</text>
+</svg>

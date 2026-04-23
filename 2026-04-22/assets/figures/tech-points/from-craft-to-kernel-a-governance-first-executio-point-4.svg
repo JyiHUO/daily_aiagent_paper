@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="g0" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#e2e8f0">治理税：按风险动态选择安全等级</text>
+  <text x="450" y="72" text-anchor="middle" font-size="13" fill="#94a3b8">Governance Tax — 高风险重审查，低风险轻放行</text>
+
+  <!-- ===== LEFT: 5-Level Governance Ladder ===== -->
+  <text x="220" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#cbd5e1">治理等级阶梯</text>
+
+  <!-- Level 0 -->
+  <rect x="60" y="124" width="320" height="52" rx="10" fill="url(#g0)" opacity="0.18" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="80" y="155" font-size="14" font-weight="bold" fill="#2dd4bf">L0 直通</text>
+  <text x="250" y="155" font-size="12" fill="#a7f3d0" text-anchor="middle">零开销 · 无检查</text>
+  <text x="360" y="155" font-size="11" fill="#6ee7b7" text-anchor="end">⚡ ~0ms</text>
+
+  <!-- Level 1 -->
+  <rect x="60" y="184" width="320" height="52" rx="10" fill="url(#g1)" opacity="0.18" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="80" y="215" font-size="14" font-weight="bold" fill="#60a5fa">L1 正则/类型</text>
+  <text x="255" y="215" font-size="12" fill="#bfdbfe" text-anchor="middle">轻量模式匹配</text>
+  <text x="360" y="215" font-size="11" fill="#93c5fd" text-anchor="end">⚡ ~μs</text>
+
+  <!-- Level 2 -->
+  <rect x="60" y="244" width="320" height="52" rx="10" fill="url(#g2)" opacity="0.18" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="80" y="275" font-size="14" font-weight="bold" fill="#fbbf24">L2 小模型校验</text>
+  <text x="258" y="275" font-size="12" fill="#fde68a" text-anchor="middle">语义审查</text>
+  <text x="360" y="275" font-size="11" fill="#fcd34d" text-anchor="end">⏱ ~100ms</text>
+
+  <!-- Level 3 -->
+  <rect x="60" y="304" width="320" height="52" rx="10" fill="url(#g3)" opacity="0.18" stroke="#f97316" stroke-width="1.5"/>
+  <text x="80" y="335" font-size="14" font-weight="bold" fill="#f97316">L3 前沿模型判官</text>
+  <text x="265" y="335" font-size="12" fill="#fed7aa" text-anchor="middle">深度推理审核</text>
+  <text x="360" y="335" font-size="11" fill="#fdba74" text-anchor="end">⏱ ~1-5s</text>
+
+  <!-- Level 4 -->
+  <rect x="60" y="364" width="320" height="52" rx="10" fill="url(#g4)" opacity="0.18" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="80" y="395" font-size="14" font-weight="bold" fill="#ef4444">L4 人工审批</text>
+  <text x="252" y="395" font-size="12" fill="#fecaca" text-anchor="middle">最高保障</text>
+  <text x="360" y="395" font-size="11" fill="#fca5a5" text-anchor="end">⏱ ~分钟</text>
+
+  <!-- Cost arrow on the left -->
+  <line x1="42" y1="135" x2="42" y2="405" stroke="#64748b" stroke-width="2" marker-end="url(#arrowGrey)"/>
+  <text x="38" y="270" text-anchor="middle" font-size="11" fill="#94a3b8" transform="rotate(-90,38,270)">成本 &amp; 延迟 ↑</text>
+
+  <marker id="arrowGrey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6" fill="#64748b"/>
+  </marker>
+
+  <!-- ===== RIGHT: Dynamic Budget Example ===== -->
+  <rect x="440" y="118" width="420" height="310" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="650" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#e2e8f0">交易 Agent 会话示例</text>
+
+  <!-- Budget bar background -->
+  <rect x="470" y="162" width="360" height="22" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <!-- Budget bar fill -->
+  <rect x="470" y="162" width="360" height="22" rx="6" fill="#2dd4bf" opacity="0.35"/>
+  <text x="650" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#5eead4">可靠性预算 ████████████████████ 100%</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(470,198)">
+    <rect width="360" height="56" rx="8" fill="#1a3a2a" stroke="#2dd4bf" stroke-width="1" opacity="0.7"/>
+    <text x="14" y="22" font-size="12" font-weight="bold" fill="#2dd4bf">① SEARCH-WEB</text>
+    <text x="14" y="40" font-size="11" fill="#86efac">查股价 → L1 正则检查</text>
+    <text x="300" y="22" font-size="11" fill="#6ee7b7">消耗: 极低</text>
+    <rect x="300" y="30" width="48" height="12" rx="3" fill="#2dd4bf" opacity="0.3"/>
+    <rect x="300" y="30" width="4" height="12" rx="3" fill="#2dd4bf"/>
+    <text x="270" y="40" font-size="9" fill="#4ade80" text-anchor="end">~μs</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(470,262)">
+    <rect width="360" height="56" rx="8" fill="#1a2744" stroke="#60a5fa" stroke-width="1" opacity="0.7"/>
+    <text x="14" y="22" font-size="12" font-weight="bold" fill="#60a5fa">② GENERATE</text>
+    <text x="14" y="40" font-size="11" fill="#93c5fd">分析趋势 → L0 直通</text>
+    <text x="300" y="22" font-size="11" fill="#93c5fd">消耗: 零</text>
+    <rect x="300" y="30" width="48" height="12" rx="3" fill="#60a5fa" opacity="0.3"/>
+    <rect x="300" y="30" width="1" height="12" rx="3" fill="#60a5fa"/>
+    <text x="270" y="40" font-size="9" fill="#60a5fa" text-anchor="end">0ms</text>
+  </g>
+
+  <!-- Step 3 (high risk) -->
+  <g transform="translate(470,326)">
+    <rect width="360" height="56" rx="8" fill="#3b1a1a" stroke="#ef4444" stroke-width="2" opacity="0.85"/>
+    <text x="14" y="22" font-size="12" font-weight="bold" fill="#f97316">③ TOOL-CALL(execute-trade)</text>
+    <text x="14" y="40" font-size="11" fill="#fca5a5">高危 Sink → 自动升级 L3 !</text>
+    <text x="300" y="22" font-size="11" fill="#fca5a5">消耗: 高</text>
+    <rect x="300" y="30" width="48" height="12" rx="3" fill="#ef4444" opacity="0.3"/>
+    <rect x="300" y="30" width="36" height="12" rx="3" fill="#f97316"/>
+    <text x="270" y="40" font-size="9" fill="#fb923c" text-anchor="end">~2s</text>
+  </g>
+
+  <!-- Budget bar after -->
+  <rect x="470" y="394" width="360" height="20" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <rect x="470" y="394" width="220" height="20" rx="6" fill="#f97316" opacity="0.3"/>
+  <text x="650" y="408" text-anchor="middle" font-size="10" font-weight="bold" fill="#fdba74">剩余预算 ████████████░░░░░░ 61%</text>
+
+  <!-- ===== BOTTOM: Core Insight ===== -->
+  <rect x="100" y="460" width="700" height="90" rx="16" fill="#0f172a" stroke="#6366f1" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Light bulb icon -->
+  <circle cx="160" cy="505" r="22" fill="#6366f1" opacity="0.2"/>
+  <text x="160" y="512" text-anchor="middle" font-size="22">💡</text>
+  
+  <text x="200" y="496" font-size="16" font-weight="bold" fill="#c7d2fe">核心思想</text>
+  <text x="200" y="518" font-size="13" fill="#a5b4fc">安全检查不是一刀切 — 内核根据</text>
+  <text x="470" y="518" font-size="13" font-weight="bold" fill="#fbbf24">操作风险</text>
+  <text x="540" y="518" font-size="13" fill="#a5b4fc">和</text>
+  <text x="560" y="518" font-size="13" font-weight="bold" fill="#2dd4bf">剩余预算</text>
+  <text x="650" y="518" font-size="13" fill="#a5b4fc">动态调节治理等级</text>
+  <text x="200" y="540" font-size="12" fill="#94a3b8">把安全资源集中在最需要的地方，低风险快速放行，高风险重点审查</text>
+
+  <!-- Connecting arrow from levels to example -->
+  <marker id="arrowCyan" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <path d="M0,0 L10,3.5 L0,7" fill="#5eead4"/>
+  </marker>
+  <path d="M385,270 C420,270 430,270 438,270" stroke="#5eead4" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowCyan)" fill="none"/>
+  <text x="412" y="262" text-anchor="middle" font-size="10" fill="#5eead4">动态</text>
+  <text x="412" y="278" text-anchor="middle" font-size="10" fill="#5eead4">选择</text>
+
+  <!-- Small decorative risk indicator -->
+  <text x="855" y="598" text-anchor="end" font-size="10" fill="#475569">Arbiter-K · Governance Tax</text>
+</svg>

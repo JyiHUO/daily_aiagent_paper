@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="greenG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="redG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" fill="#e2e8f0" font-size="26" font-weight="700">AutomationBench：纯终态评分机制</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="14">只看最终世界状态，不给部分分，不用 LLM 裁判</text>
+
+  <!-- Left: Agent Process (blurred / de-emphasized) -->
+  <rect x="40" y="100" width="220" height="340" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" opacity="0.6" filter="url(#shadow)"/>
+  <text x="150" y="132" text-anchor="middle" fill="#64748b" font-size="16" font-weight="600">Agent 执行过程</text>
+  <text x="150" y="155" text-anchor="middle" fill="#475569" font-size="12">（不参与评分）</text>
+
+  <!-- Process steps faded -->
+  <rect x="60" y="175" width="180" height="36" rx="8" fill="#273352" opacity="0.5"/>
+  <text x="150" y="198" text-anchor="middle" fill="#64748b" font-size="13">发现 API 端点</text>
+  <text x="150" y="230" text-anchor="middle" fill="#475569" font-size="20">↓</text>
+  <rect x="60" y="245" width="180" height="36" rx="8" fill="#273352" opacity="0.5"/>
+  <text x="150" y="268" text-anchor="middle" fill="#64748b" font-size="13">调用工具链</text>
+  <text x="150" y="300" text-anchor="middle" fill="#475569" font-size="20">↓</text>
+  <rect x="60" y="315" width="180" height="36" rx="8" fill="#273352" opacity="0.5"/>
+  <text x="150" y="338" text-anchor="middle" fill="#64748b" font-size="13">多轮推理 &amp; 重试</text>
+
+  <!-- Big "X" overlay on process -->
+  <line x1="55" y1="170" x2="245" y2="395" stroke="#ef4444" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <line x1="245" y1="170" x2="55" y2="395" stroke="#ef4444" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <text x="150" y="420" text-anchor="middle" fill="#94a3b8" font-size="11" font-style="italic">过程不计分</text>
+
+  <!-- Arrow from agent to final state -->
+  <path d="M270 270 L330 270" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrowGray)"/>
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Center: Final World State DB -->
+  <rect x="335" y="110" width="230" height="320" rx="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="145" text-anchor="middle" fill="#93c5fd" font-size="17" font-weight="700">最终世界状态</text>
+  <text x="450" y="167" text-anchor="middle" fill="#60a5fa" font-size="11">Pydantic 模型 · 确定性断言</text>
+
+  <!-- DB icons -->
+  <g transform="translate(365, 185)">
+    <rect width="170" height="38" rx="8" fill="#172554"/>
+    <text x="14" y="25" fill="#60a5fa" font-size="18">📋</text>
+    <text x="42" y="26" fill="#bfdbfe" font-size="13">Asana 任务已创建</text>
+  </g>
+  <g transform="translate(365, 232)">
+    <rect width="170" height="38" rx="8" fill="#172554"/>
+    <text x="14" y="25" fill="#60a5fa" font-size="18">📧</text>
+    <text x="42" y="26" fill="#bfdbfe" font-size="13">邮件已发送</text>
+  </g>
+  <g transform="translate(365, 279)">
+    <rect width="170" height="38" rx="8" fill="#172554"/>
+    <text x="14" y="25" fill="#60a5fa" font-size="18">📅</text>
+    <text x="42" y="26" fill="#bfdbfe" font-size="13">日历已更新</text>
+  </g>
+  <g transform="translate(365, 326)">
+    <rect width="170" height="38" rx="8" fill="#172554"/>
+    <text x="14" y="25" fill="#60a5fa" font-size="18">💬</text>
+    <text x="42" y="26" fill="#bfdbfe" font-size="13">Slack 消息正确</text>
+  </g>
+
+  <!-- Arrows to right panel -->
+  <path d="M575 200 L620 200" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M575 330 L620 330" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Right: Positive Assertions -->
+  <rect x="630" y="105" width="240" height="150" rx="14" fill="#14532d" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750" y="134" text-anchor="middle" fill="#4ade80" font-size="16" font-weight="700">✅ 正向断言</text>
+
+  <text x="654" y="162" fill="#bbf7d0" font-size="12.5">✓ 任务名 = "Monthly Fire Drill…"</text>
+  <text x="654" y="183" fill="#bbf7d0" font-size="12.5">✓ 截止日期 = 2026-02-18</text>
+  <text x="654" y="204" fill="#bbf7d0" font-size="12.5">✓ 标签 = Compliance</text>
+  <text x="654" y="225" fill="#bbf7d0" font-size="12.5">✓ Slack 消息含任务名+日期</text>
+  <text x="654" y="246" fill="#86efac" font-size="11" font-style="italic">精确匹配 + 结构检查</text>
+
+  <!-- Right: Negative Assertions -->
+  <rect x="630" y="275" width="240" height="130" rx="14" fill="#450a0a" stroke="#ef4444" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750" y="304" text-anchor="middle" fill="#fca5a5" font-size="16" font-weight="700">🚫 负向断言</text>
+
+  <text x="654" y="332" fill="#fecaca" font-size="12.5">✗ 不能为 DRAFT 邮件建任务</text>
+  <text x="654" y="353" fill="#fecaca" font-size="12.5">✗ 不能发到 #general 频道</text>
+  <text x="654" y="374" fill="#fecaca" font-size="12.5">✗ 不能多发无关邮件</text>
+  <text x="654" y="395" fill="#fca5a5" font-size="11" font-style="italic">防"散弹枪"式作弊</text>
+
+  <!-- Bottom result bar -->
+  <rect x="120" y="470" width="660" height="70" rx="14" fill="#0f172a" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Score logic -->
+  <text x="200" y="503" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="600">全部断言通过</text>
+  <text x="340" y="503" text-anchor="middle" fill="#64748b" font-size="22">=</text>
+
+  <rect x="370" y="483" width="70" height="34" rx="8" fill="url(#greenG)"/>
+  <text x="405" y="506" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">PASS</text>
+
+  <text x="480" y="503" text-anchor="middle" fill="#64748b" font-size="15">否则</text>
+
+  <rect x="515" y="483" width="70" height="34" rx="8" fill="url(#redG)"/>
+  <text x="550" y="506" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">FAIL</text>
+
+  <text x="660" y="503" text-anchor="middle" fill="#94a3b8" font-size="13">无部分分</text>
+
+  <text x="450" y="530" text-anchor="middle" fill="#64748b" font-size="12">效率指标：每任务平均 token 花费（USD）</text>
+</svg>

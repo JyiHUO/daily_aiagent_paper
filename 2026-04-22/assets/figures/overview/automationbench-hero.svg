@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="900" height="680">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#121836"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="zapGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="taskGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="evalGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="diagGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+    <linearGradient id="trainGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#f97316" opacity="0.9"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#818cf8" opacity="0.9"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#34d399" opacity="0.9"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#fb7185" opacity="0.9"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#facc15" opacity="0.9"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#67e8f9" opacity="0.9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="680" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Subtle ring background -->
+  <circle cx="450" cy="355" r="210" fill="none" stroke="url(#ringGrad)" stroke-width="60" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#e2e8f0" letter-spacing="1">AutomationBench</text>
+  <text x="450" y="66" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#94a3b8">Cross-Application Workflow Orchestration Benchmark — Evaluation &amp; Evolution Loop</text>
+
+  <!-- ============ NODE 1: Real-World Workflows (top) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="340" y="90" width="220" height="68" rx="14" fill="#1e1b4b" stroke="url(#zapGrad)" stroke-width="2"/>
+    <text x="450" y="114" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#f97316">① Real-World Workflows</text>
+    <text x="450" y="132" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#cbd5e1">Zapier platform patterns</text>
+    <text x="450" y="147" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">6 domains · 47 apps · ~500 endpoints</text>
+  </g>
+
+  <!-- ============ NODE 2: Tools & Environment (right-top) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="630" y="205" width="210" height="85" rx="14" fill="#1e1b4b" stroke="url(#taskGrad)" stroke-width="2"/>
+    <text x="735" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#818cf8">② Tools &amp; Environment</text>
+    <text x="735" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cbd5e1">Search (BM25) · Execute (REST)</text>
+    <text x="735" y="261" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Policy docs · Misleading records</text>
+    <text x="735" y="276" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Timezone traps · Noise emails</text>
+  </g>
+
+  <!-- ============ NODE 3: Agent Arena (right-bottom) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="640" y="375" width="200" height="75" rx="14" fill="#1e1b4b" stroke="url(#evalGrad)" stroke-width="2"/>
+    <text x="740" y="398" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#34d399">③ End-State Evaluation</text>
+    <text x="740" y="416" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cbd5e1">Pydantic state assertions</text>
+    <text x="740" y="431" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Positive + Negative checks</text>
+    <text x="740" y="446" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#64748b">No partial credit · No LLM judge</text>
+  </g>
+
+  <!-- ============ NODE 4: Diagnosis (bottom) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="345" y="500" width="210" height="80" rx="14" fill="#1e1b4b" stroke="url(#diagGrad)" stroke-width="2"/>
+    <text x="450" y="524" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#fb7185">④ Failure Diagnosis</text>
+    <text x="450" y="542" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cbd5e1">72% false confidence</text>
+    <text x="450" y="557" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Insufficient search persistence</text>
+    <text x="450" y="572" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">List omission · Policy violation</text>
+  </g>
+
+  <!-- ============ NODE 5: Targeted Training (left-bottom) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="375" width="200" height="75" rx="14" fill="#1e1b4b" stroke="url(#trainGrad)" stroke-width="2"/>
+    <text x="160" y="398" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#facc15">⑤ RL Training Loop</text>
+    <text x="160" y="416" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cbd5e1">Verifiers framework</text>
+    <text x="160" y="431" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Reward hacking detection</text>
+    <text x="160" y="446" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#64748b">Hardened private eval set</text>
+  </g>
+
+  <!-- ============ NODE 6: Stronger Agent (left-top) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="205" width="200" height="85" rx="14" fill="#1e1b4b" stroke="url(#agentGrad)" stroke-width="2"/>
+    <text x="160" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#67e8f9">⑥ Stronger Agent</text>
+    <text x="160" y="246" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#cbd5e1">Better API discovery</text>
+    <text x="160" y="261" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Policy-aware orchestration</text>
+    <text x="160" y="276" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#94a3b8">Noise-robust reasoning</text>
+  </g>
+
+  <!-- ========== CURVED ARROWS (clockwise) ========== -->
+
+  <!-- Arrow 1→2: Real-World → Tools -->
+  <path d="M 555 120 Q 610 130, 640 210" fill="none" stroke="#f97316" stroke-width="2.2" stroke-dasharray="none" marker-end="url(#arrowOrange)" opacity="0.85"/>
+
+  <!-- Arrow 2→3: Tools → Evaluation -->
+  <path d="M 740 290 Q 745 330, 742 375" fill="none" stroke="#818cf8" stroke-width="2.2" marker-end="url(#arrowPurple)" opacity="0.85"/>
+
+  <!-- Arrow 3→4: Evaluation → Diagnosis -->
+  <path d="M 645 445 Q 590 490, 555 520" fill="none" stroke="#34d399" stroke-width="2.2" marker-end="url(#arrowGreen)" opacity="0.85"/>
+
+  <!-- Arrow 4→5: Diagnosis → Training -->
+  <path d="M 345 545 Q 290 490, 255 420" fill="none" stroke="#fb7185" stroke-width="2.2" marker-end="url(#arrowRed)" opacity="0.85"/>
+
+  <!-- Arrow 5→6: Training → Stronger Agent -->
+  <path d="M 158 375 Q 155 330, 158 290" fill="none" stroke="#facc15" stroke-width="2.2" marker-end="url(#arrowYellow)" opacity="0.85"/>
+
+  <!-- Arrow 6→1: Stronger Agent → Real-World (harder env) -->
+  <path d="M 255 215 Q 310 130, 340 120" fill="none" stroke="#67e8f9" stroke-width="2.2" marker-end="url(#arrowCyan)" opacity="0.85"/>
+
+  <!-- ========== CENTER: Score Display ========== -->
+  <circle cx="450" cy="345" r="68" fill="#0f172a" stroke="#334155" stroke-width="1.5" opacity="0.95"/>
+  <circle cx="450" cy="345" r="68" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.3"/>
+  <text x="450" y="325" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#94a3b8">Best Frontier Score</text>
+  <text x="450" y="358" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#f43f5e" filter="url(#glow)">&lt; 10%</text>
+  <text x="450" y="378" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#64748b">Opus · Gemini · GPT</text>
+  <text x="450" y="393" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#475569">Jaccard overlap only 0.17</text>
+
+  <!-- ========== Small app icons row at top ========== -->
+  <g opacity="0.7">
+    <!-- CRM -->
+    <rect x="290" y="78" width="36" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="308" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">CRM</text>
+    <!-- Zoom -->
+    <rect x="576" y="78" width="36" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="594" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Zoom</text>
+    <!-- Slack -->
+    <rect x="390" y="78" width="36" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="408" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Slack</text>
+    <!-- Calendar -->
+    <rect x="475" y="78" width="46" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="498" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Calendar</text>
+    <!-- Sheets -->
+    <rect x="530" y="78" width="40" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="550" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Sheets</text>
+    <!-- Inbox -->
+    <rect x="335" y="78" width="40" height="16" rx="3" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="355" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Inbox</text>
+  </g>
+
+  <!-- ========== Co-evolution annotation ========== -->
+  <!-- Dashed arc from Node 6 back to harder environment -->
+  <path d="M 195 207 Q 300 160, 345 98" fill="none" stroke="#67e8f9" stroke-width="1.2" stroke-dasharray="5,3" opacity="0.5"/>
+  <text x="230" y="145" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#67e8f9" opacity="0.7" transform="rotate(-25,230,145)">harder env</text>
+
+  <!-- Annotation: co-evolution -->
+  <g opacity="0.6">
+    <text x="450" y="450" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#818cf8">↻ Environment &amp; Agent co-evolve</text>
+  </g>
+
+  <!-- ========== Domain badges ========== -->
+  <g opacity="0.6">
+    <rect x="120" y="315" width="44" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="142" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Sales</text>
+    <rect x="168" y="315" width="54" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="195" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Marketing</text>
+    <rect x="685" y="315" width="36" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="703" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Ops</text>
+    <rect x="726" y="315" width="52" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="752" y="326" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Support</text>
+    <rect x="688" y="335" width="46" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="711" y="346" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">Finance</text>
+    <rect x="739" y="335" width="30" height="15" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.5"/>
+    <text x="754" y="346" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#94a3b8">HR</text>
+  </g>
+
+  <!-- ========== Bottom caption ========== -->
+  <text x="450" y="625" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748b">Real Zapier workflow patterns → verifiable cross-app tasks → programmatic grading → targeted improvement</text>
+  <text x="450" y="645" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#475569">AutomationBench: Where enterprise automation meets agentic reality</text>
+  <text x="450" y="665" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#334155">cs.AI · Zapier · 2025</text>
+</svg>

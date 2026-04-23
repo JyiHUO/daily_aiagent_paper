@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="rolloutGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="summaryGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="rtvGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="refineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="arrowGradBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="arrowGradGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="arrowGradPurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="loopGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowHeadGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="arrowHeadPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrowHeadAmber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700" letter-spacing="0.5">Scaling Test-Time Compute for Agentic Coding</text>
+  <text x="600" y="66" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="400">Representation → Selection → Reuse: A Framework for Long-Horizon Agent Trajectories</text>
+
+  <!-- ===== PHASE 1: Parallel Rollouts (Left) ===== -->
+  <g transform="translate(30, 100)">
+    <!-- Phase background -->
+    <rect x="0" y="0" width="220" height="540" rx="16" fill="url(#rolloutGrad)" stroke="#3b82f6" stroke-width="1.2" stroke-opacity="0.4"/>
+    <text x="110" y="30" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="700">ITERATION 0</text>
+    <text x="110" y="48" text-anchor="middle" fill="#64748b" font-size="11">N=16 Parallel Rollouts</text>
+
+    <!-- Rollout bars representing noisy trajectories -->
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="180" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#60a5fa" font-size="9" font-weight="600">R₁</text>
+      <rect x="28" y="6" width="12" height="4" rx="1" fill="#3b82f6" opacity="0.6"/>
+      <rect x="43" y="6" width="8" height="4" rx="1" fill="#ef4444" opacity="0.5"/>
+      <rect x="54" y="6" width="18" height="4" rx="1" fill="#3b82f6" opacity="0.4"/>
+      <rect x="75" y="6" width="6" height="4" rx="1" fill="#ef4444" opacity="0.4"/>
+      <rect x="84" y="6" width="22" height="4" rx="1" fill="#3b82f6" opacity="0.5"/>
+      <rect x="109" y="6" width="10" height="4" rx="1" fill="#10b981" opacity="0.6"/>
+      <rect x="122" y="6" width="14" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="139" y="6" width="8" height="4" rx="1" fill="#64748b" opacity="0.4"/>
+      <rect x="150" y="6" width="18" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <text x="8" y="28" fill="#64748b" font-size="7.5">cd repo → grep → edit → test fail → revert → edit → test...</text>
+      <text x="170" y="14" fill="#64748b" font-size="8">41 steps</text>
+    </g>
+
+    <g transform="translate(20, 114)">
+      <rect x="0" y="0" width="180" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#60a5fa" font-size="9" font-weight="600">R₂</text>
+      <rect x="28" y="6" width="16" height="4" rx="1" fill="#3b82f6" opacity="0.5"/>
+      <rect x="47" y="6" width="10" height="4" rx="1" fill="#3b82f6" opacity="0.4"/>
+      <rect x="60" y="6" width="14" height="4" rx="1" fill="#ef4444" opacity="0.5"/>
+      <rect x="77" y="6" width="20" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="100" y="6" width="8" height="4" rx="1" fill="#ef4444" opacity="0.4"/>
+      <rect x="111" y="6" width="12" height="4" rx="1" fill="#64748b" opacity="0.4"/>
+      <rect x="126" y="6" width="22" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="151" y="6" width="16" height="4" rx="1" fill="#ef4444" opacity="0.3"/>
+      <text x="8" y="28" fill="#64748b" font-size="7.5">find . → cat file → patch → error → retry → timeout...</text>
+    </g>
+
+    <g transform="translate(20, 158)">
+      <rect x="0" y="0" width="180" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#60a5fa" font-size="9" font-weight="600">R₃</text>
+      <rect x="28" y="6" width="10" height="4" rx="1" fill="#3b82f6" opacity="0.5"/>
+      <rect x="41" y="6" width="24" height="4" rx="1" fill="#10b981" opacity="0.5"/>
+      <rect x="68" y="6" width="8" height="4" rx="1" fill="#3b82f6" opacity="0.4"/>
+      <rect x="79" y="6" width="16" height="4" rx="1" fill="#10b981" opacity="0.5"/>
+      <rect x="98" y="6" width="12" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="113" y="6" width="20" height="4" rx="1" fill="#10b981" opacity="0.4"/>
+      <text x="8" y="28" fill="#64748b" font-size="7.5">locate file → hypothesis → fix → tests pass ✓</text>
+    </g>
+
+    <!-- Dots for more rollouts -->
+    <g transform="translate(20, 206)">
+      <circle cx="90" cy="8" r="2" fill="#64748b"/>
+      <circle cx="100" cy="8" r="2" fill="#64748b"/>
+      <circle cx="110" cy="8" r="2" fill="#64748b"/>
+    </g>
+
+    <g transform="translate(20, 226)">
+      <rect x="0" y="0" width="180" height="36" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#60a5fa" font-size="9" font-weight="600">R₁₆</text>
+      <rect x="28" y="6" width="14" height="4" rx="1" fill="#3b82f6" opacity="0.5"/>
+      <rect x="45" y="6" width="8" height="4" rx="1" fill="#ef4444" opacity="0.4"/>
+      <rect x="56" y="6" width="20" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="79" y="6" width="12" height="4" rx="1" fill="#ef4444" opacity="0.5"/>
+      <rect x="94" y="6" width="18" height="4" rx="1" fill="#64748b" opacity="0.3"/>
+      <rect x="115" y="6" width="14" height="4" rx="1" fill="#3b82f6" opacity="0.3"/>
+      <rect x="132" y="6" width="8" height="4" rx="1" fill="#ef4444" opacity="0.4"/>
+      <text x="8" y="28" fill="#64748b" font-size="7.5">explore → wrong path → partial fix → regression...</text>
+    </g>
+
+    <!-- Noise label -->
+    <g transform="translate(25, 285)">
+      <rect x="0" y="0" width="170" height="32" rx="8" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="0.8" stroke-opacity="0.3"/>
+      <text x="85" y="14" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="600">⚠ Raw traces: long, noisy</text>
+      <text x="85" y="26" text-anchor="middle" fill="#ef4444" font-size="9" opacity="0.7">Hard to compare or reuse directly</text>
+    </g>
+
+    <!-- Summarize arrow -->
+    <text x="110" y="342" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="600">↓ Summarize (P_sum)</text>
+
+    <!-- Summary cards -->
+    <g transform="translate(20, 358)">
+      <rect x="0" y="0" width="180" height="50" rx="8" fill="#2d2207" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#f59e0b" font-size="9" font-weight="700">S₁ Summary</text>
+      <text x="8" y="26" fill="#fbbf24" font-size="8">Hypothesis: filter() in query.py:234</text>
+      <text x="8" y="36" fill="#fbbf24" font-size="8">Progress: fix applied, 3/5 tests pass</text>
+      <text x="8" y="46" fill="#ef4444" font-size="8" opacity="0.8">Failure: regression in edge case</text>
+    </g>
+
+    <g transform="translate(20, 416)">
+      <rect x="0" y="0" width="180" height="50" rx="8" fill="#2d2207" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#f59e0b" font-size="9" font-weight="700">S₃ Summary</text>
+      <text x="8" y="26" fill="#fbbf24" font-size="8">Hypothesis: override in QuerySet</text>
+      <text x="8" y="36" fill="#10b981" font-size="8">Progress: all tests pass ✓</text>
+      <text x="8" y="46" fill="#10b981" font-size="8">Status: resolved correctly</text>
+    </g>
+
+    <g transform="translate(65, 474)">
+      <circle cx="0" cy="6" r="1.5" fill="#64748b"/>
+      <circle cx="8" cy="6" r="1.5" fill="#64748b"/>
+      <circle cx="16" cy="6" r="1.5" fill="#64748b"/>
+    </g>
+
+    <g transform="translate(20, 488)">
+      <rect x="0" y="0" width="180" height="34" rx="8" fill="#2d2207" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="8" y="14" fill="#f59e0b" font-size="9" font-weight="700">S₁₆ Summary</text>
+      <text x="8" y="26" fill="#fbbf24" font-size="8">Hypothesis: unrelated module...</text>
+    </g>
+  </g>
+
+  <!-- ===== Arrow from Phase 1 to Phase 2 ===== -->
+  <path d="M260,460 L320,460" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowHeadAmber)" opacity="0.7"/>
+  <text x="290" y="452" text-anchor="middle" fill="#f59e0b" font-size="9">16 summaries</text>
+
+  <!-- ===== PHASE 2: RTV Tournament (Center) ===== -->
+  <g transform="translate(325, 100)">
+    <rect x="0" y="0" width="250" height="540" rx="16" fill="url(#rtvGrad)" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.4"/>
+    <text x="125" y="30" text-anchor="middle" fill="#10b981" font-size="14" font-weight="700">RECURSIVE TOURNAMENT VOTING</text>
+    <text x="125" y="48" text-anchor="middle" fill="#64748b" font-size="11">Pairwise comparison (G=2, V=8 votes)</text>
+
+    <!-- Round 1: 16→8 -->
+    <text x="20" y="80" fill="#94a3b8" font-size="10" font-weight="600">Round 1: 16 → 8</text>
+    <g transform="translate(20, 90)">
+      <!-- Pair 1 -->
+      <rect x="0" y="0" width="46" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8" opacity="0.8"/>
+      <text x="23" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₁</text>
+      <text x="52" y="14" fill="#64748b" font-size="10">vs</text>
+      <rect x="62" y="0" width="46" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="85" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₂</text>
+
+      <!-- Pair 2 -->
+      <rect x="120" y="0" width="46" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8" opacity="0.8"/>
+      <text x="143" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₃</text>
+      <text x="172" y="14" fill="#64748b" font-size="10">vs</text>
+      <rect x="182" y="0" width="46" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="205" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₄</text>
+    </g>
+
+    <g transform="translate(20, 118)">
+      <rect x="0" y="0" width="46" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="23" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₅</text>
+      <text x="52" y="14" fill="#64748b" font-size="10">vs</text>
+      <rect x="62" y="0" width="46" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8" opacity="0.8"/>
+      <text x="85" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₆</text>
+
+      <rect x="120" y="0" width="46" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8" opacity="0.8"/>
+      <text x="143" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₇</text>
+      <text x="172" y="14" fill="#64748b" font-size="10">vs</text>
+      <rect x="182" y="0" width="46" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="205" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₈</text>
+    </g>
+
+    <!-- dots for rest -->
+    <circle cx="125" cy="154" r="1.5" fill="#64748b"/>
+    <circle cx="133" cy="154" r="1.5" fill="#64748b"/>
+    <circle cx="117" cy="154" r="1.5" fill="#64748b"/>
+
+    <!-- Vote visualization -->
+    <g transform="translate(30, 168)">
+      <rect x="0" y="0" width="190" height="36" rx="8" fill="#0f291f" stroke="#10b981" stroke-width="0.6" stroke-opacity="0.3"/>
+      <text x="95" y="14" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">8 LLM votes per pair</text>
+      <text x="12" y="28" fill="#10b981" font-size="10">✓✓✓✓✓✗✓✓</text>
+      <text x="110" y="28" fill="#94a3b8" font-size="9">→ majority wins</text>
+    </g>
+
+    <!-- Round 2: 8→4 -->
+    <text x="20" y="230" fill="#94a3b8" font-size="10" font-weight="600">Round 2: 8 → 4</text>
+    <g transform="translate(30, 240)">
+      <rect x="0" y="0" width="42" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="21" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₁</text>
+      <text x="48" y="14" fill="#64748b" font-size="9">vs</text>
+      <rect x="56" y="0" width="42" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="77" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₃</text>
+
+      <rect x="110" y="0" width="42" height="22" rx="4" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="131" y="14" text-anchor="middle" fill="#64748b" font-size="8">S₆</text>
+      <text x="158" y="14" fill="#64748b" font-size="9">vs</text>
+      <rect x="166" y="0" width="42" height="22" rx="4" fill="#1a3a2a" stroke="#10b981" stroke-width="0.8"/>
+      <text x="187" y="14" text-anchor="middle" fill="#10b981" font-size="8" font-weight="600">S₇</text>
+    </g>
+
+    <!-- Connecting lines -->
+    <line x1="125" y1="268" x2="125" y2="288" stroke="#10b981" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <!-- Round 3: 4→2 -->
+    <text x="20" y="302" fill="#94a3b8" font-size="10" font-weight="600">Round 3: 4 → 2</text>
+    <g transform="translate(50, 312)">
+      <rect x="0" y="0" width="60" height="24" rx="5" fill="#1a3a2a" stroke="#10b981" stroke-width="1"/>
+      <text x="30" y="16" text-anchor="middle" fill="#10b981" font-size="9" font-weight="700">S₁</text>
+      <text x="68" y="16" fill="#64748b" font-size="10">vs</text>
+      <rect x="78" y="0" width="60" height="24" rx="5" fill="#1a2030" stroke="#475569" stroke-width="0.8" opacity="0.5"/>
+      <text x="108" y="16" text-anchor="middle" fill="#64748b" font-size="9">S₇</text>
+    </g>
+
+    <!-- Final: 2→1 -->
+    <text x="20" y="365" fill="#94a3b8" font-size="10" font-weight="600">Final: 2 → 1</text>
+
+    <!-- Winner -->
+    <g transform="translate(55, 378)" filter="url(#glow)">
+      <rect x="0" y="0" width="140" height="44" rx="10" fill="#0f3d2a" stroke="#10b981" stroke-width="2"/>
+      <text x="70" y="18" text-anchor="middle" fill="#10b981" font-size="12" font-weight="700">🏆 Top-1 Winner</text>
+      <text x="70" y="34" text-anchor="middle" fill="#6ee7b7" font-size="10">Best rollout selected</text>
+    </g>
+
+    <!-- Top-K for PDR -->
+    <g transform="translate(20, 444)">
+      <rect x="0" y="0" width="210" height="76" rx="10" fill="#1a2744" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="4,3"/>
+      <text x="105" y="18" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="700">Top-K=4 for Refinement</text>
+      <g transform="translate(15, 28)">
+        <rect x="0" y="0" width="38" height="18" rx="4" fill="#2d2207" stroke="#f59e0b" stroke-width="0.8"/>
+        <text x="19" y="13" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">S₁</text>
+        <rect x="45" y="0" width="38" height="18" rx="4" fill="#2d2207" stroke="#f59e0b" stroke-width="0.8"/>
+        <text x="64" y="13" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">S₃</text>
+        <rect x="90" y="0" width="38" height="18" rx="4" fill="#2d2207" stroke="#f59e0b" stroke-width="0.8"/>
+        <text x="109" y="13" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">S₇</text>
+        <rect x="135" y="0" width="38" height="18" rx="4" fill="#2d2207" stroke="#f59e0b" stroke-width="0.8"/>
+        <text x="154" y="13" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">S₁₁</text>
+      </g>
+      <text x="105" y="68" text-anchor="middle" fill="#94a3b8" font-size="8">Semi-finalists carry forward experience</text>
+    </g>
+  </g>
+
+  <!-- ===== Arrow from Phase 2 to Phase 3 ===== -->
+  <path d="M585,500 Q620,500 640,460 T700,420" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowHeadPurple)" opacity="0.7"/>
+  <text x="648" y="446" fill="#a78bfa" font-size="9" font-weight="600">K=4 summaries</text>
+
+  <!-- ===== PHASE 3: PDR Refinement (Right) ===== -->
+  <g transform="translate(700, 100)">
+    <rect x="0" y="0" width="240" height="540" rx="16" fill="url(#refineGrad)" stroke="#a78bfa" stroke-width="1.2" stroke-opacity="0.4"/>
+    <text x="120" y="30" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="700">ITERATION 1: REFINE</text>
+    <text x="120" y="48" text-anchor="middle" fill="#64748b" font-size="11">Parallel-Distill-Refine (PDR)</text>
+
+    <!-- Fresh environment -->
+    <g transform="translate(20, 68)">
+      <rect x="0" y="0" width="200" height="50" rx="8" fill="#1a1a30" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="100" y="16" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">🔄 Fresh Environment</text>
+      <text x="100" y="30" text-anchor="middle" fill="#94a3b8" font-size="9">Clean slate + problem description</text>
+      <text x="100" y="42" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="600">+ K=4 curated summaries as context</text>
+    </g>
+
+    <!-- New rollouts (shorter, more focused) -->
+    <text x="120" y="140" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">N=16 New Rollouts (Informed)</text>
+
+    <g transform="translate(20, 152)">
+      <rect x="0" y="0" width="200" height="32" rx="6" fill="#1e1e3a" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="13" fill="#c4b5fd" font-size="9" font-weight="600">R'₁</text>
+      <rect x="32" y="6" width="20" height="4" rx="1" fill="#a78bfa" opacity="0.6"/>
+      <rect x="55" y="6" width="16" height="4" rx="1" fill="#10b981" opacity="0.6"/>
+      <rect x="74" y="6" width="14" height="4" rx="1" fill="#10b981" opacity="0.5"/>
+      <rect x="91" y="6" width="18" height="4" rx="1" fill="#10b981" opacity="0.7"/>
+      <text x="8" y="26" fill="#94a3b8" font-size="7.5">read summary → direct fix → test pass ✓</text>
+      <text x="180" y="13" fill="#10b981" font-size="8" font-weight="600">14 steps</text>
+    </g>
+
+    <g transform="translate(20, 190)">
+      <rect x="0" y="0" width="200" height="32" rx="6" fill="#1e1e3a" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="13" fill="#c4b5fd" font-size="9" font-weight="600">R'₂</text>
+      <rect x="32" y="6" width="18" height="4" rx="1" fill="#a78bfa" opacity="0.5"/>
+      <rect x="53" y="6" width="20" height="4" rx="1" fill="#10b981" opacity="0.6"/>
+      <rect x="76" y="6" width="12" height="4" rx="1" fill="#10b981" opacity="0.5"/>
+      <text x="8" y="26" fill="#94a3b8" font-size="7.5">skip explored paths → targeted fix ✓</text>
+      <text x="180" y="13" fill="#10b981" font-size="8" font-weight="600">12 steps</text>
+    </g>
+
+    <g transform="translate(80, 228)">
+      <circle cx="0" cy="6" r="1.5" fill="#64748b"/>
+      <circle cx="8" cy="6" r="1.5" fill="#64748b"/>
+      <circle cx="16" cy="6" r="1.5" fill="#64748b"/>
+    </g>
+
+    <g transform="translate(20, 244)">
+      <rect x="0" y="0" width="200" height="32" rx="6" fill="#1e1e3a" stroke="#a78bfa" stroke-width="0.8" stroke-opacity="0.5"/>
+      <text x="8" y="13" fill="#c4b5fd" font-size="9" font-weight="600">R'₁₆</text>
+      <rect x="36" y="6" width="16" height="4" rx="1" fill="#a78bfa" opacity="0.5"/>
+      <rect x="55" y="6" width="22" height="4" rx="1" fill="#10b981" opacity="0.6"/>
+      <rect x="80" y="6" width="10" height="4" rx="1" fill="#10b981" opacity="0.5"/>
+      <text x="8" y="26" fill="#94a3b8" font-size="7.5">leverage insights → efficient solve ✓</text>
+    </g>
+
+    <!-- Benefit callout -->
+    <g transform="translate(20, 294)">
+      <rect x="0" y="0" width="200" height="44" rx="8" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="100" y="16" text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">✓ Fewer steps (41→14 avg)</text>
+      <text x="100" y="30" text-anchor="middle" fill="#6ee7b7" font-size="9">Avoid known dead ends, reuse insights</text>
+    </g>
+
+    <!-- Final RTV -->
+    <text x="120" y="365" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="600">↓ Summarize + Final RTV</text>
+
+    <!-- Final output -->
+    <g transform="translate(30, 380)" filter="url(#glow)">
+      <rect x="0" y="0" width="180" height="60" rx="12" fill="#1a0f30" stroke="#a78bfa" stroke-width="2.5"/>
+      <text x="90" y="22" text-anchor="middle" fill="#a78bfa" font-size="13" font-weight="700">🎯 Final Solution</text>
+      <text x="90" y="40" text-anchor="middle" fill="#c4b5fd" font-size="10">Best of refined rollouts</text>
+      <text x="90" y="54" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">Selected via RTV</text>
+    </g>
+
+    <!-- Quality correlation -->
+    <g transform="translate(15, 460)">
+      <rect x="0" y="0" width="210" height="62" rx="8" fill="#0f1729" stroke="#64748b" stroke-width="0.6" stroke-opacity="0.3"/>
+      <text x="105" y="16" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">Context quality → Success rate</text>
+      <g transform="translate(15, 24)">
+        <rect x="0" y="0" width="30" height="12" rx="2" fill="#ef4444" opacity="0.3"/>
+        <text x="15" y="10" text-anchor="middle" fill="#fca5a5" font-size="7">0/4</text>
+        <text x="38" y="10" fill="#64748b" font-size="7">→0.1%</text>
+
+        <rect x="70" y="0" width="30" height="12" rx="2" fill="#f59e0b" opacity="0.3"/>
+        <text x="85" y="10" text-anchor="middle" fill="#fbbf24" font-size="7">2/4</text>
+        <text x="108" y="10" fill="#64748b" font-size="7">→52%</text>
+
+        <rect x="140" y="0" width="30" height="12" rx="2" fill="#10b981" opacity="0.4"/>
+        <text x="155" y="10" text-anchor="middle" fill="#6ee7b7" font-size="7">4/4</text>
+        <text x="178" y="10" fill="#10b981" font-size="7">→99%</text>
+      </g>
+      <text x="105" y="54" text-anchor="middle" fill="#64748b" font-size="8"># passing summaries in context K</text>
+    </g>
+  </g>
+
+  <!-- ===== Feedback Loop Arrow (bottom, going back) ===== -->
+  <path d="M820,642 C820,685 450,700 140,660 C120,656 120,642 140,640"
+        stroke="url(#loopGrad)" stroke-width="2" fill="none" marker-end="url(#arrowHead)"
+        stroke-dasharray="6,3" opacity="0.5"/>
+  <text x="470" y="694" text-anchor="middle" fill="#94a3b8" font-size="10" font-style="italic">Experience can feed further iterations</text>
+
+  <!-- ===== Central Key Insight Box ===== -->
+  <g transform="translate(388, 652)">
+    <rect x="0" y="0" width="424" height="46" rx="12" fill="#0f1729" stroke="#64748b" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="212" y="18" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="700">Core Insight: Test-time scaling for agents = Representation + Selection + Reuse</text>
+    <text x="212" y="36" text-anchor="middle" fill="#94a3b8" font-size="10">Claude-4.5-Opus: 70.9% → 77.6% (SWE-Bench)  |  46.9% → 59.1% (Terminal-Bench)</text>
+  </g>
+
+  <!-- ===== Phase labels at bottom ===== -->
+  <g transform="translate(30, 646)">
+    <circle cx="8" cy="8" r="6" fill="#3b82f6" opacity="0.6"/>
+    <text x="20" y="12" fill="#60a5fa" font-size="9" font-weight="600">Rollout + Summarize</text>
+  </g>
+  <g transform="translate(170, 646)">
+    <circle cx="8" cy="8" r="6" fill="#10b981" opacity="0.6"/>
+    <text x="20" y="12" fill="#6ee7b7" font-size="9" font-weight="600">RTV Select</text>
+  </g>
+  <g transform="translate(278, 646)">
+    <circle cx="8" cy="8" r="6" fill="#a78bfa" opacity="0.6"/>
+    <text x="20" y="12" fill="#c4b5fd" font-size="9" font-weight="600">PDR Refine</text>
+  </g>
+
+  <!-- ===== Subtle grid pattern in background ===== -->
+  <g opacity="0.03" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="750"/>
+    <line x1="600" y1="0" x2="600" y2="750"/>
+    <line x1="900" y1="0" x2="900" y2="750"/>
+  </g>
+
+  <!-- ===== Step number badges ===== -->
+  <g transform="translate(960, 106)">
+    <circle cx="0" cy="0" r="14" fill="#a78bfa" opacity="0.2" stroke="#a78bfa" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="700">3</text>
+  </g>
+  <g transform="translate(590, 106)">
+    <circle cx="0" cy="0" r="14" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">2</text>
+  </g>
+  <g transform="translate(262, 106)">
+    <circle cx="0" cy="0" r="14" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">1</text>
+  </g>
+</svg>

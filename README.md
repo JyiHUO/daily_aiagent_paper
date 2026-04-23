@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-21
+- **日期**：2026-04-22
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
+  - From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers
   - Scaling Test-Time Compute for Agentic Coding
-  - Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence
-  - On the Reliability of Computer Use Agents
-- **日报路径**：[2026-04-21/daily_report.md](2026-04-21/daily_report.md)
+  - AutomationBench
+- **日报路径**：[2026-04-22/daily_report.md](2026-04-22/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-22 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers | [2026-04-22/daily_report.md](2026-04-22/daily_report.md) |
+|  |  |  | 2 | Scaling Test-Time Compute for Agentic Coding |  |
+|  |  |  | 3 | AutomationBench |  |
 | 2026-04-21 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Scaling Test-Time Compute for Agentic Coding | [2026-04-21/daily_report.md](2026-04-21/daily_report.md) |
 |  |  |  | 2 | Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence |  |
 |  |  |  | 3 | On the Reliability of Computer Use Agents |  |

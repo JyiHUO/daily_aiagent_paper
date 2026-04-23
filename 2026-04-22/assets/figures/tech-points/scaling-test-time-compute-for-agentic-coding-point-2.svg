@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#357ABD"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#27AE60"/>
+      <stop offset="100%" stop-color="#1E8449"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8899BB"/>
+    </marker>
+    <marker id="arrowGold" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD700"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#FFD700" font-size="24" font-weight="bold" filter="url(#glow)">递归锦标赛投票 (RTV)</text>
+  <text x="450" y="68" text-anchor="middle" fill="#8899BB" font-size="14">淘汰赛式选择 &gt; 全局一次性排序</text>
+
+  <!-- ===== ROUND 1: 16 → 8 ===== -->
+  <!-- Round label -->
+  <text x="60" y="130" fill="#8899BB" font-size="13" font-weight="bold">第1轮</text>
+  <text x="60" y="148" fill="#556677" font-size="11">16 → 8</text>
+
+  <!-- 8 pairs shown as 4 representative pairs -->
+  <!-- Pair 1 -->
+  <rect x="130" y="100" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="157" y="123" text-anchor="middle" fill="#AAC4E8" font-size="12">S1</text>
+  <rect x="130" y="142" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="157" y="165" text-anchor="middle" fill="#AAC4E8" font-size="12">S2</text>
+  <!-- VS -->
+  <text x="197" y="143" fill="#FF6B6B" font-size="10" font-weight="bold">VS</text>
+  <!-- Vote box -->
+  <rect x="200" y="120" width="50" height="40" rx="5" fill="#1e2d4a" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="225" y="137" text-anchor="middle" fill="#FFD700" font-size="9">🗳 ×8</text>
+  <text x="225" y="152" text-anchor="middle" fill="#8899BB" font-size="8">多数票</text>
+
+  <!-- Pair 2 -->
+  <rect x="280" y="100" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="307" y="123" text-anchor="middle" fill="#AAC4E8" font-size="12">S3</text>
+  <rect x="280" y="142" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="307" y="165" text-anchor="middle" fill="#AAC4E8" font-size="12">S4</text>
+  <rect x="350" y="120" width="50" height="40" rx="5" fill="#1e2d4a" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="375" y="137" text-anchor="middle" fill="#FFD700" font-size="9">🗳 ×8</text>
+  <text x="375" y="152" text-anchor="middle" fill="#8899BB" font-size="8">多数票</text>
+
+  <!-- Dots indicating more pairs -->
+  <text x="430" y="143" fill="#556677" font-size="18">· · ·</text>
+
+  <!-- Pair 7 -->
+  <rect x="480" y="100" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="507" y="123" text-anchor="middle" fill="#AAC4E8" font-size="12">S13</text>
+  <rect x="480" y="142" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="507" y="165" text-anchor="middle" fill="#AAC4E8" font-size="12">S14</text>
+  <rect x="550" y="120" width="50" height="40" rx="5" fill="#1e2d4a" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="575" y="137" text-anchor="middle" fill="#FFD700" font-size="9">🗳 ×8</text>
+  <text x="575" y="152" text-anchor="middle" fill="#8899BB" font-size="8">多数票</text>
+
+  <!-- Pair 8 -->
+  <rect x="630" y="100" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="657" y="123" text-anchor="middle" fill="#AAC4E8" font-size="12">S15</text>
+  <rect x="630" y="142" width="54" height="36" rx="6" fill="#2a3a5c" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="657" y="165" text-anchor="middle" fill="#AAC4E8" font-size="12">S16</text>
+  <rect x="700" y="120" width="50" height="40" rx="5" fill="#1e2d4a" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="725" y="137" text-anchor="middle" fill="#FFD700" font-size="9">🗳 ×8</text>
+  <text x="725" y="152" text-anchor="middle" fill="#8899BB" font-size="8">多数票</text>
+
+  <!-- ===== Arrows down to Round 2 ===== -->
+  <line x1="225" y1="165" x2="250" y2="225" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="165" x2="350" y2="225" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="575" y1="165" x2="570" y2="225" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="725" y1="165" x2="690" y2="225" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== ROUND 2: 8 → 4 ===== -->
+  <text x="60" y="252" fill="#8899BB" font-size="13" font-weight="bold">第2轮</text>
+  <text x="60" y="270" fill="#556677" font-size="11">8 → 4</text>
+
+  <!-- Winners shown as highlighted -->
+  <rect x="220" y="225" width="160" height="42" rx="8" fill="#1e3350" stroke="#27AE60" stroke-width="2"/>
+  <text x="255" y="250" fill="#27AE60" font-size="13" font-weight="bold">W1</text>
+  <text x="290" y="250" fill="#556677" font-size="13">vs</text>
+  <text x="325" y="250" fill="#27AE60" font-size="13" font-weight="bold">W2</text>
+  <text x="355" y="250" fill="#FFD700" font-size="9">🗳×8</text>
+
+  <text x="430" y="252" fill="#556677" font-size="16">· · ·</text>
+
+  <rect x="500" y="225" width="160" height="42" rx="8" fill="#1e3350" stroke="#27AE60" stroke-width="2"/>
+  <text x="535" y="250" fill="#27AE60" font-size="13" font-weight="bold">W7</text>
+  <text x="570" y="250" fill="#556677" font-size="13">vs</text>
+  <text x="605" y="250" fill="#27AE60" font-size="13" font-weight="bold">W8</text>
+  <text x="637" y="250" fill="#FFD700" font-size="9">🗳×8</text>
+
+  <!-- ===== Arrows to Round 3 ===== -->
+  <line x1="300" y1="270" x2="370" y2="320" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="580" y1="270" x2="510" y2="320" stroke="#8899BB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== ROUND 3: 4 → 2 ===== -->
+  <text x="60" y="348" fill="#8899BB" font-size="13" font-weight="bold">第3轮</text>
+  <text x="60" y="366" fill="#556677" font-size="11">4 → 2</text>
+
+  <rect x="340" y="320" width="200" height="42" rx="8" fill="#1e3350" stroke="#E67E22" stroke-width="2"/>
+  <text x="390" y="346" fill="#E67E22" font-size="14" font-weight="bold">WA</text>
+  <text x="430" y="346" fill="#556677" font-size="13">vs</text>
+  <text x="470" y="346" fill="#E67E22" font-size="14" font-weight="bold">WB</text>
+  <text x="515" y="346" fill="#FFD700" font-size="9">🗳×8</text>
+
+  <!-- ===== Arrow to Final ===== -->
+  <line x1="440" y1="365" x2="440" y2="400" stroke="#FFD700" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+
+  <!-- ===== FINAL WINNER ===== -->
+  <text x="60" y="435" fill="#8899BB" font-size="13" font-weight="bold">决赛</text>
+  <text x="60" y="453" fill="#556677" font-size="11">2 → 1</text>
+
+  <rect x="350" y="408" width="180" height="50" rx="12" fill="url(#gold)" opacity="0.15" stroke="#FFD700" stroke-width="2.5"/>
+  <text x="440" y="428" text-anchor="middle" fill="#FFD700" font-size="16" font-weight="bold" filter="url(#glow)">🏆 最优方案</text>
+  <text x="440" y="448" text-anchor="middle" fill="#DDAA00" font-size="12">从16个Rollout中选出</text>
+
+  <!-- ===== RIGHT SIDE: Comparison Panel ===== -->
+  <rect x="610" y="360" width="260" height="230" rx="10" fill="#111d33" stroke="#334466" stroke-width="1"/>
+  <text x="740" y="388" text-anchor="middle" fill="#FFD700" font-size="14" font-weight="bold">为什么淘汰赛更好？</text>
+
+  <!-- Bad approach -->
+  <rect x="625" y="400" width="110" height="80" rx="8" fill="#2a1520" stroke="#E74C3C" stroke-width="1.5"/>
+  <text x="680" y="420" text-anchor="middle" fill="#E74C3C" font-size="11" font-weight="bold">❌ 全局比较</text>
+  <text x="680" y="438" text-anchor="middle" fill="#AA6666" font-size="10">G=16</text>
+  <text x="680" y="455" text-anchor="middle" fill="#AA6666" font-size="10">同时看16个</text>
+  <text x="680" y="472" text-anchor="middle" fill="#AA6666" font-size="10">信息过载</text>
+
+  <!-- Good approach -->
+  <rect x="745" y="400" width="110" height="80" rx="8" fill="#152a1e" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="800" y="420" text-anchor="middle" fill="#27AE60" font-size="11" font-weight="bold">✅ 两两淘汰</text>
+  <text x="800" y="438" text-anchor="middle" fill="#66AA77" font-size="10">G=2</text>
+  <text x="800" y="455" text-anchor="middle" fill="#66AA77" font-size="10">简单局部决策</text>
+  <text x="800" y="472" text-anchor="middle" fill="#66AA77" font-size="10">递归收敛</text>
+
+  <!-- Stats -->
+  <rect x="625" y="496" width="230" height="80" rx="8" fill="#0d1826" stroke="#4A90D9" stroke-width="1"/>
+  <text x="740" y="518" text-anchor="middle" fill="#8899BB" font-size="11">SWE-Bench (Claude-4.5-Opus)</text>
+  <text x="660" y="540" text-anchor="middle" fill="#AAC4E8" font-size="12">平均 pass@1</text>
+  <text x="660" y="560" text-anchor="middle" fill="#E74C3C" font-size="16" font-weight="bold">70.9%</text>
+  <text x="740" y="550" text-anchor="middle" fill="#FFD700" font-size="18">→</text>
+  <text x="810" y="540" text-anchor="middle" fill="#AAC4E8" font-size="12">RTV 选择后</text>
+  <text x="810" y="560" text-anchor="middle" fill="#27AE60" font-size="16" font-weight="bold">75.0%</text>
+
+  <!-- Key insight label -->
+  <rect x="120" y="510" width="360" height="70" rx="10" fill="#111d33" stroke="#FFD700" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="300" y="535" text-anchor="middle" fill="#FFD700" font-size="13" font-weight="bold">核心洞察</text>
+  <text x="300" y="558" text-anchor="middle" fill="#BBCCDD" font-size="12">每次只比较2个摘要 + 投8票取多数</text>
+  <text x="300" y="574" text-anchor="middle" fill="#8899BB" font-size="11">= 把复杂的全局排序分解为简单的局部判断</text>
+
+  <!-- 16 rollouts label at top -->
+  <rect x="130" y="80" width="630" height="18" rx="4" fill="none" stroke="#4A90D9" stroke-width="0.5" stroke-dasharray="4,3"/>
+  <text x="445" y="94" text-anchor="middle" fill="#4A90D9" font-size="10">16 个 Rollout 摘要</text>
+</svg>

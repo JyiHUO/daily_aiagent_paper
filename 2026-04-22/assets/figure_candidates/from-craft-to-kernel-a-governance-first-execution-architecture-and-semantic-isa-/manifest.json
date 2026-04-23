@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/downloaded_pdfs/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-39",
+      "page_index": 4,
+      "caption": "5.1 Discrete Instruction Set Architecture",
+      "clip": [
+        8.0,
+        8.0,
+        604.0,
+        357.9124450683594
+      ],
+      "clip_area": 208547.8172607422,
+      "page_area": 484704.0,
+      "text_density": 0.15970003411113354,
+      "kind": "drawing_cluster_with_caption",
+      "score": 26.607674352887827,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-39",
+      "page_index": 4,
+      "caption": "5.1 Discrete Instruction Set Architecture",
+      "clip": [
+        23.4,
+        43.22844238281249,
+        272.87322387695315,
+        352.0284423828125
+      ],
+      "clip_area": 77037.33153320313,
+      "page_area": 484704.0,
+      "text_density": 0.14867265078872685,
+      "kind": "captioned_figure",
+      "score": 19.735611303045314,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-5-embedded-4-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        97.51814270019531,
+        8.0,
+        514.959716796875,
+        37.299896240234375
+      ],
+      "clip_area": 12230.994807392824,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 337,
+      "score": 5.1358999423043645,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/03-p6-embedded_image.png",
+      "filename": "03-p6-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-5-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        408.391357421875,
+        8.0,
+        604.0,
+        51.43330383300781
+      ],
+      "clip_area": 8495.929605457932,
+      "page_area": 484704.0,
+      "text_density": 0.015771771892330148,
+      "kind": "embedded_image",
+      "xref": 338,
+      "score": 5.094399217838421,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/04-p6-embedded_image.png",
+      "filename": "04-p6-embedded_image.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        8.0,
+        8.0,
+        604.0,
+        355.9124450683594
+      ],
+      "clip_area": 207355.8172607422,
+      "page_area": 484704.0,
+      "text_density": 0.15784953585991077,
+      "kind": "drawing_cluster",
+      "score": -0.18292643798321873,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/05-p5-drawing_cluster.png",
+      "filename": "05-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        299.2445983886719,
+        378.61016845703125,
+        576.2559814453125,
+        487.66290283203125
+      ],
+      "clip_area": 30208.848775327206,
+      "page_area": 484704.0,
+      "text_density": 0.23977515288873785,
+      "kind": "drawing_cluster",
+      "score": -1.2508552980428558,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/06-p9-drawing_cluster.png",
+      "filename": "06-p9-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/contact-sheet.svg"
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "title": "Scaling Test-Time Compute for Agentic Coding",
+    "label": "keep_core",
+    "reason": "直接涉及代码Agent的推理时计算扩展，属于agent policy/planning层核心问题。"
+  },
+  {
+    "title": "Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence",
+    "label": "keep_core",
+    "reason": "面向Agent的环境合成与自进化评估，涉及agent harness/runtime和eval，高度相关。"
+  },
+  {
+    "title": "On the Reliability of Computer Use Agents",
+    "label": "keep_core",
+    "reason": "直接研究computer use agent的可靠性，属于agent评测与安全核心议题。"
+  },
+  {
+    "title": "On Safety Risks in Experience-Driven Self-Evolving Agents",
+    "label": "keep_core",
+    "reason": "聚焦自进化Agent的安全风险，涉及agent safety与self-evolving agent，高优先级。"
+  },
+  {
+    "title": "LiteResearcher: A Scalable Agentic RL Training Framework for Deep Research Agent",
+    "label": "keep_core",
+    "reason": "Agent训练框架设计，涉及agentic RL和deep research agent的系统架构。"
+  },
+  {
+    "title": "Small Model as Master Orchestrator: Learning Unified Agent-Tool Orchestration with Parallel Subtask Decomposition",
+    "label": "keep_core",
+    "reason": "核心涉及agent-tool编排与并行子任务分解，属于tool use和planning层关键工作。"
+  },
+  {
+    "title": "A Survey on the Security of Long-Term Memory in LLM Agents: Toward Mnemonic Sovereignty",
+    "label": "keep_core",
+    "reason": "专门聚焦LLM Agent长期记忆的安全问题，涉及agent memory与agent safety两大核心层。"
+  },
+  {
+    "title": "AJ-Bench: Benchmarking Agent-as-a-Judge for Environment-Aware Evaluation",
+    "label": "keep_core",
+    "reason": "Agent评估基准，以agent作为评判者进行环境感知评测，属于evaluator/benchmark层。"
+  },
+  {
+    "title": "Beyond Verifiable Rewards: Rubric-Based GRM for Reinforced Fine-Tuning SWE Agents",
+    "label": "keep_core",
+    "reason": "针对SWE Agent的强化微调奖励设计，直接涉及code agent的训练与评估。"
+  },
+  {
+    "title": "HeLa-Mem: Hebbian Learning and Associative Memory for LLM Agents",
+    "label": "keep_core",
+    "reason": "为LLM Agent设计新的记忆机制，直接涉及agent memory层。"
+  },
+  {
+    "title": "EvoMaster: A Foundational Agent Framework for Building Evolving Autonomous Scientific Agents at Scale",
+    "label": "keep_core",
+    "reason": "Agent框架设计，涉及自主演化与规模化构建，直接触及agent runtime/harness层。"
+  },
+  {
+    "title": "Governed MCP: Kernel-Level Tool Governance for AI Agents via Logit-Based Safety Primitives",
+    "label": "keep_core",
+    "reason": "明确涉及MCP协议层的工具治理与agent安全，是agent runtime guardrails的核心议题。"
+  },
+  {
+    "title": "WebUncertainty: Dual-Level Uncertainty Driven Planning and Reasoning For Autonomous Web Agent",
+    "label": "keep_core",
+    "reason": "Web agent的规划与推理，涉及不确定性驱动的planning层，属于典型agent系统问题。"
+  },
+  {
+    "title": "HalluClear: Diagnosing, Evaluating and Mitigating Hallucinations in GUI Agents",
+    "label": "keep_core",
+    "reason": "GUI agent的幻觉诊断与缓解，直接关联computer use agent的可靠性与评测。"
+  },
+  {
+    "title": "CapSeal: Capability-Sealed Secret Mediation for Secure Agent Execution",
+    "label": "keep_core",
+    "reason": "Agent安全执行的能力封装与密钥调解，触及agent runtime protection与guardrails。"
+  },
+  {
+    "title": "Diversity Collapse in Multi-Agent LLM Systems: Structural Coupling and Collective Failure in Open-Ended Idea Generation",
+    "label": "keep_core",
+    "reason": "多智能体协作中的多样性崩塌问题，直接涉及multi-agent coordination的系统性缺陷分析。"
+  },
+  {
+    "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration",
+    "label": "keep_core",
+    "reason": "Self-evolving agent训练方法，涉及agent自主演化与知识探索，属于agent policy/learning核心议题。"
+  },
+  {
+    "title": "StepPO: Step-Aligned Policy Optimization for Agentic Reinforcement Learning",
+    "label": "keep_core",
+    "reason": "面向agent的强化学习策略优化，明确针对agentic执行链的step-level policy层。"
+  },
+  {
+    "title": "Using large language models for embodied planning introduces systematic safety risks",
+    "label": "keep_core",
+    "reason": "Embodied agent规划中的系统性安全风险分析，直接触及agent safety与embodied agent。"
+  },
+  {
+    "title": "SkillFlow:Benchmarking Lifelong Skill Discovery and Evolution for Autonomous Agents",
+    "label": "keep_core",
+    "reason": "自主agent的终身技能发现与演化基准，属于agent evaluation/benchmark核心议题。"
+  },
+  {
+    "title": "Provable Coordination for LLM Agents via Message Sequence Charts",
+    "label": "keep_core",
+    "reason": "多智能体协调协议，涉及 multi-agent coordination 和可验证通信机制，直接关联 agent runtime/protocol 层。"
+  },
+  {
+    "title": "Hive: A Multi-Agent Infrastructure for Algorithm- and Task-Level Scaling",
+    "label": "keep_core",
+    "reason": "多智能体基础设施，涉及 agent harness/runtime 和 multi-agent scaling 架构，属于 agent 系统工程核心议题。"
+  },
+  {
+    "title": "StressWeb: A Diagnostic Benchmark for Web Agent Robustness under Realistic Interaction Variability",
+    "label": "keep_core",
+    "reason": "Web agent 鲁棒性评测 benchmark，直接涉及 web agent evaluation 和 agent-specific benchmark 设计。"
+  },
+  {
+    "title": "Visual Inception: Compromising Long-term Planning in Agentic Recommenders via Multimodal Memory Poisoning",
+    "label": "keep_core",
+    "reason": "针对 agent 记忆的投毒攻击，涉及 agent safety 和 memory 安全，对 agent 系统防御设计有直接参考价值。"
+  },
+  {
+    "title": "BrainMem: Brain-Inspired Evolving Memory for Embodied Agent Task Planning",
+    "label": "keep_core",
+    "reason": "面向 embodied agent 的演化记忆机制，直接涉及 agent memory 层和 planning 层设计。"
+  },
+  {
+    "title": "COSEARCH: Joint Training of Reasoning and Document Ranking via Reinforcement Learning for Agentic Search",
+    "label": "keep_borderline",
+    "reason": "agentic search 框架涉及工具使用和推理链，但本质偏 IR/检索增强，agent 纯度一般。"
+  },
+  {
+    "title": "Towards Self-Improving Error Diagnosis in Multi-Agent Systems",
+    "label": "keep_core",
+    "reason": "多智能体系统的自改进错误诊断，涉及 multi-agent 的 feedback loop 和 self-evolving 机制。"
+  },
+  {
+    "title": "GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization (V1.0)",
+    "label": "keep_core",
+    "reason": "自演化 LLM Agent 的 token 效率优化，涉及 self-evolving agent 和 agent 运行效率，属于 agent 系统设计核心。"
+  },
+  {
+    "title": "Towards Shutdownable Agents: Generalizing Stochastic Choice in RL Agents and LLMs",
+    "label": "keep_core",
+    "reason": "agent 可关停性研究，直接涉及 agent safety 和 guardrails/runtime 治理层面的核心问题。"
+  },
+  {
+    "title": "Agents Explore but Agents Ignore: LLMs Lack Environmental Curiosity",
+    "label": "keep_core",
+    "reason": "研究 LLM Agent 的环境交互与探索行为，涉及 agent 与环境交互的策略层分析，对 agent 设计有启发。"
+  },
+  {
+    "title": "Latent Preference Modeling for Cross-Session Personalized Tool Calling",
+    "label": "keep_core",
+    "reason": "直接涉及 agent tool use 的个性化与跨会话状态建模，属于 tool use + memory 层。"
+  },
+  {
+    "title": "Graph-of-Agents: A Graph-based Framework for Multi-Agent LLM Collaboration",
+    "label": "keep_core",
+    "reason": "多智能体协作框架，属于 multi-agent coordination 核心议题。"
+  },
+  {
+    "title": "SafeAgent: A Runtime Protection Architecture for Agentic Systems",
+    "label": "keep_core",
+    "reason": "Agent 运行时保护架构，直击 guardrails/runtime 层，高度相关。"
+  },
+  {
+    "title": "Conjunctive Prompt Attacks in Multi-Agent LLM Systems",
+    "label": "keep_core",
+    "reason": "针对多智能体系统的攻击研究，属于 agent safety 核心方向。"
+  },
+  {
+    "title": "Evaluating Tool-Using Language Agents: Judge Reliability, Propagation Cascades, and Runtime Mitigation in AgentProp-Bench",
+    "label": "keep_core",
+    "reason": "Tool-using agent 的评测 benchmark，涵盖 agent eval 和 runtime，高度相关。"
+  },
+  {
+    "title": "SkillGraph: Self-Evolving Multi-Agent Collaboration with Multimodal Graph Topology",
+    "label": "keep_core",
+    "reason": "自进化多智能体协作，涉及 self-evolving agent 和 multi-agent coordination。"
+  },
+  {
+    "title": "Seeing Isn't Believing: Mitigating Belief Inertia via Active Intervention in Embodied Agents",
+    "label": "keep_core",
+    "reason": "Embodied agent 的状态/信念管理与干预机制，属于 state/memory + embodied agent。"
+  },
+  {
+    "title": "Penny Wise, Pixel Foolish: Bypassing Price Constraints in Multimodal Agents via Visual Adversarial Perturbations",
+    "label": "keep_core",
+    "reason": "多模态 agent 的对抗攻击与安全问题，直接关乎 agent safety。"
+  },
+  {
+    "title": "Do LLMs Need to See Everything? A Benchmark and Study of Failures in LLM-driven Smartphone Automation using Screentext vs. Screenshots",
+    "label": "keep_core",
+    "reason": "LLM 驱动的手机自动化（computer/phone use）的评测与失败分析，属于 computer use + agent eval。"
+  },
+  {
+    "title": "HiveMind: OS-Inspired Scheduling for Concurrent LLM Agent Workloads",
+    "label": "keep_core",
+    "reason": "Agent 工作负载的 OS 级调度架构，直接属于 harness/runtime 层，对 agent 系统设计极有参考价值。"
+  },
+  {
+    "title": "Tool Learning Needs Nothing More Than a Free 8B Language Model",
+    "label": "keep_core",
+    "reason": "直接涉及 tool use/tool learning，是 agent stack 中工具调用层的核心问题。"
+  },
+  {
+    "title": "StageMem: Lifecycle-Managed Memory for Language Models",
+    "label": "keep_core",
+    "reason": "生命周期管理的记忆系统，直接对应 agent memory 层，对 agent 系统设计有直接帮助。"
+  },
+  {
+    "title": "GraSP: Graph-Structured Skill Compositions for LLM Agents",
+    "label": "keep_core",
+    "reason": "图结构化技能组合用于 LLM Agent，涉及 planning 和 skill 编排，属于 agent policy/planning 层。"
+  },
+  {
+    "title": "HiGMem: A Hierarchical and LLM-Guided Memory System for Long-Term Conversational Agents",
+    "label": "keep_core",
+    "reason": "面向长期对话 Agent 的分层记忆系统，直接触及 agent memory 设计。"
+  },
+  {
+    "title": "Architectural Design Decisions in AI Agent Harnesses",
+    "label": "keep_core",
+    "reason": "直接讨论 agent harness/runtime 的架构设计决策，是 agent 系统工程的核心论文。"
+  },
+  {
+    "title": "The Consensus Trap: Rescuing Multi-Agent LLMs from Adversarial Majorities via Token-Level Collaboration",
+    "label": "keep_core",
+    "reason": "多智能体协调中的对抗鲁棒性与协作机制，属于 multi-agent coordination 和 safety。"
+  },
+  {
+    "title": "Understanding Tool-Augmented Agents for Lean Formalization: A Factorial Analysis",
+    "label": "keep_core",
+    "reason": "对 tool-augmented agent 的系统性分析，直接涉及 tool use 和 agent evaluation。"
+  },
+  {
+    "title": "HiRAS: A Hierarchical Multi-Agent Framework for Paper-to-Code Generation and Execution",
+    "label": "keep_core",
+    "reason": "分层多智能体框架用于代码生成与执行，涉及 multi-agent 和 code agent。"
+  },
+  {
+    "title": "AutoSearch: Adaptive Search Depth for Efficient Agentic RAG via Reinforcement Learning",
+    "label": "keep_core",
+    "reason": "Agentic RAG 中的自适应搜索深度控制，涉及 agent 执行链中的工具调用决策与 RL 策略。"
+  },
+  {
+    "title": "Skilldex: A Package Manager and Registry for Agent Skill Packages with Hierarchical Scope-Based Distribution",
+    "label": "keep_core",
+    "reason": "Agent 技能包的包管理与注册系统，直接涉及 agent runtime/harness 的基础设施层。"
+  },
+  {
+    "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
+    "label": "drop",
+    "reason": "数学推理与检索的benchmark，与agent系统无直接关联。"
+  },
+  {
+    "title": "Benchmarking System Dynamics AI Assistants: Cloud Versus Local LLMs on CLD Extraction and Discussion",
+    "label": "drop",
+    "reason": "评测LLM在系统动力学领域的表现，属于领域应用benchmark，无明确agent执行链或工具调用。"
+  },
+  {
+    "title": "OGER: A Robust Offline-Guided Exploration Reward for Hybrid Reinforcement Learning",
+    "label": "drop",
+    "reason": "RL探索奖励方法，非agent系统相关。"
+  },
+  {
+    "title": "LLM Safety From Within: Detecting Harmful Content with Internal Representations",
+    "label": "drop",
+    "reason": "LLM内部表征检测有害内容，属于模型安全而非agent runtime guardrails。"
+  },
+  {
+    "title": "Training and Agentic Inference Strategies for LLM-based Manim Animation Generation",
+    "label": "keep_borderline",
+    "reason": "涉及agentic inference策略和LLM驱动代码生成（Manim），可能包含agent执行链和代码工具调用，但需确认具体agent机制深度。"
+  },
+  {
+    "title": "Enhancing Tabular Anomaly Detection via Pseudo-Label-Guided Generation",
+    "label": "drop",
+    "reason": "表格异常检测方法，与agent系统无关。"
+  },
+  {
+    "title": "TPS-CalcBench: A Benchmark and Diagnostic Evaluation Framework for LLM Analytical Calculation Competence in Hypersonic Thermal Protection System Engineering",
+    "label": "drop",
+    "reason": "LLM计算能力的领域benchmark，非agent评测。"
+  },
+  {
+    "title": "When Vision-Language Models Judge Without Seeing: Exposing Informativeness Bias",
+    "label": "drop",
+    "reason": "VLM偏差分析，与agent系统无关。"
+  },
+  {
+    "title": "Contrastive Attribution in the Wild: An Interpretability Analysis of LLM Failures on Realistic Benchmarks",
+    "label": "drop",
+    "reason": "LLM可解释性分析，非agent相关。"
+  },
+  {
+    "title": "Characterizing Model-Native Skills",
+    "label": "drop",
+    "reason": "模型能力特征化研究，与agent系统设计无直接关联。"
+  },
+  {
+    "title": "Compiling Deterministic Structure into SLM Harnesses",
+    "label": "keep_borderline",
+    "reason": "标题提到SLM Harnesses（小模型运行时框架），可能涉及agent harness/runtime层的编译与确定性结构，值得观察。"
+  },
+  {
+    "title": "LLM-Guided Strategy Synthesis for Scalable Equality Saturation",
+    "label": "drop",
+    "reason": "属于编译器优化（equality saturation）领域，LLM只是辅助策略合成，非agent系统问题。"
+  },
+  {
+    "title": "T-DuMpRa: Teacher-guided Dual-path Multi-prototype Retrieval Augmented framework for fine-grained medical image classification",
+    "label": "drop",
+    "reason": "医学图像分类的检索增强框架，与agent系统无关。"
+  },
+  {
+    "title": "When Agents Go Quiet: Output Generation Capacity and Format-Cost Separation for LLM Document Synthesis",
+    "label": "drop",
+    "reason": "虽然标题含agents，但实质讨论LLM输出生成容量和格式成本，属于LLM能力分析而非agent系统。"
+  },
+  {
+    "title": "RankGuide: Tensor-Rank-Guided Routing and Steering for Efficient Reasoning",
+    "label": "drop",
+    "reason": "模型推理效率优化，非agent执行链或规划相关。"
+  },
+  {
+    "title": "The Query Channel: Information-Theoretic Limits of Masking-Based Explanations",
+    "label": "drop",
+    "reason": "信息论视角的可解释性研究，与agent系统无关。"
+  },
+  {
+    "title": "IDOBE: Infectious Disease Outbreak forecasting Benchmark Ecosystem",
+    "label": "drop",
+    "reason": "传染病预测benchmark，与agent无关。"
+  },
+  {
+    "title": "LQM: Linguistically Motivated Multidimensional Quality Metrics for Machine Translation",
+    "label": "drop",
+    "reason": "机器翻译质量评估指标，与agent系统无关。"
+  },
+  {
+    "title": "Adversarial Humanities Benchmark: Results on Stylistic Robustness in Frontier Model Safety",
+    "label": "drop",
+    "reason": "模型安全的对抗性benchmark，但关注风格鲁棒性而非agent-specific安全问题。"
+  },
+  {
+    "title": "IceBreaker for Conversational Agents: Breaking the First-Message Barrier with Personalized Starters",
+    "label": "drop",
+    "reason": "对话系统的开场白个性化，属于对话AI而非agent系统设计。"
+  }
+]

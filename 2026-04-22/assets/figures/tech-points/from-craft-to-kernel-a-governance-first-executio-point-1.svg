@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#ee5a24"/>
+    </linearGradient>
+    <linearGradient id="kernelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a29bfe"/>
+      <stop offset="100%" stop-color="#6c5ce7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fff" opacity="0.8"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00f2fe"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">语义指令集架构 (Semantic ISA)</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="13">LLM 输出 → 结构化指令 → 内核校验执行</text>
+
+  <!-- ===== LEFT: LLM as Probabilistic Processing Unit ===== -->
+  <rect x="40" y="100" width="200" height="130" rx="16" fill="url(#llmGrad)" opacity="0.9" filter="url(#shadow)"/>
+  <text x="140" y="135" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">LLM</text>
+  <text x="140" y="156" text-anchor="middle" fill="#ffe0d0" font-size="11">概率处理单元</text>
+  <line x1="70" y1="168" x2="210" y2="168" stroke="#fff" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="140" y="188" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">"整理文件并</text>
+  <text x="140" y="205" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">发送摘要邮件"</text>
+
+  <!-- Arrow: LLM → Binding Layer -->
+  <line x1="240" y1="165" x2="310" y2="165" stroke="#ff6b6b" stroke-width="2.5" marker-end="url(#arrowRed)" stroke-dasharray="6,3"/>
+  <text x="275" y="155" text-anchor="middle" fill="#ff9b9b" font-size="10">token流</text>
+
+  <!-- ===== CENTER: Binding Layer (Translation) ===== -->
+  <rect x="315" y="95" width="260" height="140" rx="14" fill="#1e2d4a" stroke="#4facfe" stroke-width="2" filter="url(#shadow)"/>
+  <text x="445" y="122" text-anchor="middle" fill="#4facfe" font-size="15" font-weight="bold">🔄 Binding 翻译层</text>
+  <text x="445" y="142" text-anchor="middle" fill="#8cb4d8" font-size="11">模糊文本 → 类型化指令</text>
+
+  <!-- Instruction examples inside binding -->
+  <rect x="335" y="155" width="220" height="24" rx="5" fill="#253554"/>
+  <text x="345" y="172" fill="#ffd93d" font-size="11" font-weight="bold">DECOMPOSE</text>
+  <text x="455" y="172" fill="#aab" font-size="10">(拆分子任务)</text>
+
+  <rect x="335" y="183" width="220" height="24" rx="5" fill="#253554"/>
+  <text x="345" y="200" fill="#6bff9b" font-size="11" font-weight="bold">GENERATE</text>
+  <text x="435" y="200" fill="#aab" font-size="10">(生成摘要)</text>
+
+  <rect x="335" y="211" width="220" height="24" rx="5" fill="#2a3a55" stroke="#ff6b6b" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="345" y="228" fill="#ff9b6b" font-size="11" font-weight="bold">TOOL-CALL</text>
+  <text x="430" y="228" fill="#dda" font-size="10">(send-email, ⚠️tainted)</text>
+
+  <!-- Arrow: Binding → Kernel -->
+  <path d="M 445 240 L 445 280" stroke="#4facfe" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+  <text x="470" y="268" fill="#7fc8f8" font-size="10">提交指令</text>
+
+  <!-- ===== BOTTOM CENTER: Deterministic Kernel ===== -->
+  <rect x="170" y="290" width="560" height="200" rx="18" fill="#0d1a2e" stroke="url(#kernelGrad)" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="450" y="320" text-anchor="middle" fill="#00f2fe" font-size="17" font-weight="bold" filter="url(#glow)">🛡️ 确定性符号内核</text>
+  <text x="450" y="340" text-anchor="middle" fill="#6dbfcf" font-size="11">像 OS 内核一样校验每条"系统调用"</text>
+
+  <!-- 5 Cores as small blocks -->
+  <rect x="195" y="360" width="95" height="50" rx="8" fill="url(#coreGrad)" opacity="0.85"/>
+  <text x="242" y="381" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">认知核</text>
+  <text x="242" y="398" text-anchor="middle" fill="#ddd" font-size="9">GENERATE</text>
+
+  <rect x="300" y="360" width="95" height="50" rx="8" fill="#2d7d6e" opacity="0.85"/>
+  <text x="347" y="381" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">记忆核</text>
+  <text x="347" y="398" text-anchor="middle" fill="#ddd" font-size="9">LOAD/STORE</text>
+
+  <rect x="405" y="360" width="95" height="50" rx="8" fill="#7d5a2d" opacity="0.85"/>
+  <text x="452" y="381" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">执行核</text>
+  <text x="452" y="398" text-anchor="middle" fill="#ddd" font-size="9">TOOL-CALL</text>
+
+  <rect x="510" y="360" width="95" height="50" rx="8" fill="#b33939" opacity="0.85"/>
+  <text x="557" y="381" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">规范核</text>
+  <text x="557" y="398" text-anchor="middle" fill="#ddd" font-size="9">VERIFY</text>
+
+  <rect x="615" y="360" width="95" height="50" rx="8" fill="#5a2d7d" opacity="0.85"/>
+  <text x="662" y="381" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">元认知核</text>
+  <text x="662" y="398" text-anchor="middle" fill="#ddd" font-size="9">MONITOR</text>
+
+  <!-- Decision scene at bottom -->
+  <!-- Check flow -->
+  <path d="M 452 410 L 452 440 L 557 440 L 557 410" stroke="#ff6b6b" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <text x="505" y="436" text-anchor="middle" fill="#ff9b9b" font-size="9">污点检查</text>
+
+  <!-- Result: REJECT -->
+  <rect x="320" y="450" width="260" height="30" rx="8" fill="#3d1515" stroke="#ff4444" stroke-width="1.5"/>
+  <text x="340" y="470" fill="#ff4444" font-size="12" font-weight="bold">✘</text>
+  <text x="365" y="470" fill="#ff8888" font-size="12">body含 tainted data → FALLBACK</text>
+
+  <!-- ===== RIGHT: Before/After contrast ===== -->
+  <rect x="640" y="100" width="230" height="130" rx="14" fill="#162035" stroke="#445577" stroke-width="1" filter="url(#shadow)"/>
+  <text x="755" y="126" text-anchor="middle" fill="#8899bb" font-size="13" font-weight="bold">对比</text>
+
+  <!-- Before -->
+  <rect x="655" y="138" width="200" height="35" rx="6" fill="#2a1515"/>
+  <text x="665" y="156" fill="#ff6b6b" font-size="11">❌ 传统: 文本 guardrail</text>
+  <text x="665" y="169" fill="#886666" font-size="9">拦截率 &lt; 9%</text>
+
+  <!-- After -->
+  <rect x="655" y="182" width="200" height="35" rx="6" fill="#152a1a"/>
+  <text x="665" y="200" fill="#6bff9b" font-size="11">✅ ISA: 结构化指令校验</text>
+  <text x="665" y="213" fill="#668866" font-size="9">安全成为架构属性</text>
+
+  <!-- Key insight callout -->
+  <rect x="625" y="520" width="250" height="60" rx="10" fill="#1a2744" stroke="#ffd93d" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="750" y="543" text-anchor="middle" fill="#ffd93d" font-size="12" font-weight="bold">💡 核心洞察</text>
+  <text x="750" y="563" text-anchor="middle" fill="#ccbb88" font-size="11">把 LLM 输出当系统调用审查</text>
+
+  <!-- Bottom label -->
+  <text x="450" y="605" text-anchor="middle" fill="#445577" font-size="10">Arbiter-K: Governance-First Execution Architecture</text>
+</svg>

@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#141833"/>
+    </linearGradient>
+    <linearGradient id="kernelGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0f2440"/>
+    </linearGradient>
+    <linearGradient id="ppuGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a2068"/>
+      <stop offset="100%" stop-color="#2d1545"/>
+    </linearGradient>
+    <linearGradient id="sinkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b1a1a"/>
+      <stop offset="100%" stop-color="#5c1010"/>
+    </linearGradient>
+    <linearGradient id="safeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a6b3a"/>
+      <stop offset="100%" stop-color="#0f4025"/>
+    </linearGradient>
+    <linearGradient id="taintGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#d4380d"/>
+    </linearGradient>
+    <linearGradient id="feedbackGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1890ff"/>
+      <stop offset="100%" stop-color="#096dd9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#8899bb" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#ff8c55" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#40a9ff" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#52c41a" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#ff4d4f" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="680" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="960" y2="100"/>
+    <line x1="0" y1="200" x2="960" y2="200"/>
+    <line x1="0" y1="300" x2="960" y2="300"/>
+    <line x1="0" y1="400" x2="960" y2="400"/>
+    <line x1="0" y1="500" x2="960" y2="500"/>
+    <line x1="0" y1="600" x2="960" y2="600"/>
+  </g>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" fill="#e8e8e8" font-family="Georgia, serif" font-size="22" font-weight="bold" letter-spacing="0.5">Arbiter-K: Governance-First Execution Architecture</text>
+  <text x="480" y="60" text-anchor="middle" fill="#7a8bb5" font-family="Arial, sans-serif" font-size="12" letter-spacing="1">LLM as Probabilistic Processing Unit · Deterministic Neuro-Symbolic Kernel · Semantic ISA</text>
+
+  <!-- ===== LEFT: External Input ===== -->
+  <g filter="url(#softShadow)">
+    <rect x="30" y="160" width="130" height="50" rx="8" fill="#1a2744" stroke="#3a5070" stroke-width="1"/>
+    <text x="95" y="180" text-anchor="middle" fill="#b0c4de" font-family="Arial, sans-serif" font-size="11" font-weight="bold">User Request</text>
+    <text x="95" y="198" text-anchor="middle" fill="#6a8ab0" font-family="Arial, sans-serif" font-size="9">"Summarize &amp; email"</text>
+  </g>
+  
+  <g filter="url(#softShadow)">
+    <rect x="30" y="230" width="130" height="50" rx="8" fill="#2a1a10" stroke="#7a4a20" stroke-width="1"/>
+    <text x="95" y="250" text-anchor="middle" fill="#ffaa66" font-family="Arial, sans-serif" font-size="11" font-weight="bold">External Data</text>
+    <text x="95" y="268" text-anchor="middle" fill="#cc7733" font-family="Arial, sans-serif" font-size="9">web-fetch → taint: low</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="30" y="300" width="130" height="50" rx="8" fill="#1a1a2a" stroke="#5050a0" stroke-width="1"/>
+    <text x="95" y="320" text-anchor="middle" fill="#aaaaee" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Local Secrets</text>
+    <text x="95" y="338" text-anchor="middle" fill="#7777bb" font-family="Arial, sans-serif" font-size="9">API key → taint: med</text>
+  </g>
+
+  <!-- Arrows from inputs to kernel -->
+  <path d="M160,185 Q200,185 220,220" fill="none" stroke="#8899bb" stroke-width="1.5" marker-end="url(#arrowWhite)"/>
+  <path d="M160,255 Q200,255 220,270" fill="none" stroke="#ff8c55" stroke-width="1.5" marker-end="url(#arrowOrange)" stroke-dasharray="4,3"/>
+  <path d="M160,325 Q200,325 220,310" fill="none" stroke="#8899bb" stroke-width="1.5" marker-end="url(#arrowWhite)" stroke-dasharray="4,3"/>
+
+  <!-- ===== CENTRAL KERNEL ZONE ===== -->
+  <rect x="215" y="90" width="530" height="475" rx="16" fill="url(#kernelGrad)" stroke="#2a5a8a" stroke-width="2" opacity="0.95"/>
+  <text x="480" y="115" text-anchor="middle" fill="#5dade2" font-family="Arial, sans-serif" font-size="14" font-weight="bold" letter-spacing="2">DETERMINISTIC KERNEL</text>
+  
+  <!-- Kernel left bracket decoration -->
+  <rect x="225" y="125" width="3" height="430" rx="1.5" fill="#2a5a8a" opacity="0.5"/>
+  <rect x="732" y="125" width="3" height="430" rx="1.5" fill="#2a5a8a" opacity="0.5"/>
+
+  <!-- ===== PPU (LLM) ===== -->
+  <rect x="270" y="140" width="200" height="100" rx="12" fill="url(#ppuGrad)" stroke="#8844cc" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="370" y="168" text-anchor="middle" fill="#d9a0ff" font-family="Arial, sans-serif" font-size="13" font-weight="bold">PPU (LLM)</text>
+  <text x="370" y="186" text-anchor="middle" fill="#a070cc" font-family="Arial, sans-serif" font-size="10">Probabilistic Processing Unit</text>
+  <text x="370" y="204" text-anchor="middle" fill="#8060aa" font-family="Arial, sans-serif" font-size="9">Generates token stream</text>
+  <text x="370" y="220" text-anchor="middle" fill="#7050aa" font-family="Arial, sans-serif" font-size="9">⚠ Untrusted output</text>
+
+  <!-- Arrow PPU → Semantic ISA -->
+  <path d="M370,240 L370,268" fill="none" stroke="#b070dd" stroke-width="2" marker-end="url(#arrowWhite)"/>
+  <text x="390" y="258" fill="#9960cc" font-family="Arial, sans-serif" font-size="8">reify</text>
+
+  <!-- ===== SEMANTIC ISA LAYER ===== -->
+  <rect x="250" y="272" width="240" height="85" rx="10" fill="#1a2850" stroke="#4080c0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="370" y="293" text-anchor="middle" fill="#60b0ff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Semantic ISA</text>
+  
+  <!-- ISA instruction chips -->
+  <rect x="260" y="302" width="68" height="20" rx="4" fill="#253050" stroke="#4080c0" stroke-width="0.8"/>
+  <text x="294" y="316" text-anchor="middle" fill="#80c0ff" font-family="monospace" font-size="8">GENERATE</text>
+  
+  <rect x="333" y="302" width="72" height="20" rx="4" fill="#253050" stroke="#4080c0" stroke-width="0.8"/>
+  <text x="369" y="316" text-anchor="middle" fill="#80c0ff" font-family="monospace" font-size="8">TOOL-CALL</text>
+
+  <rect x="410" y="302" width="68" height="20" rx="4" fill="#253050" stroke="#4080c0" stroke-width="0.8"/>
+  <text x="444" y="316" text-anchor="middle" fill="#80c0ff" font-family="monospace" font-size="8">DECOMPOSE</text>
+
+  <rect x="268" y="328" width="60" height="20" rx="4" fill="#253050" stroke="#4080c0" stroke-width="0.8"/>
+  <text x="298" y="342" text-anchor="middle" fill="#80c0ff" font-family="monospace" font-size="8">VERIFY</text>
+
+  <rect x="333" y="328" width="72" height="20" rx="4" fill="#253050" stroke="#ff6b35" stroke-width="0.8"/>
+  <text x="369" y="342" text-anchor="middle" fill="#ffaa66" font-family="monospace" font-size="8">SEND-EMAIL</text>
+  
+  <rect x="410" y="328" width="68" height="20" rx="4" fill="#253050" stroke="#4080c0" stroke-width="0.8"/>
+  <text x="444" y="342" text-anchor="middle" fill="#80c0ff" font-family="monospace" font-size="8">FALLBACK</text>
+
+  <!-- Arrow ISA → IDG/Taint -->
+  <path d="M370,357 L370,388" fill="none" stroke="#60b0ff" stroke-width="1.8" marker-end="url(#arrowWhite)"/>
+  
+  <!-- ===== SECURITY CONTEXT + IDG ===== -->
+  <rect x="250" y="392" width="240" height="92" rx="10" fill="#1a2030" stroke="#ff8c55" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="370" y="413" text-anchor="middle" fill="#ffaa66" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Taint Tracking Engine</text>
+
+  <!-- IDG mini-graph -->
+  <circle cx="290" cy="445" r="12" fill="#2d1545" stroke="#b070dd" stroke-width="1.2"/>
+  <text x="290" y="449" text-anchor="middle" fill="#d0a0ff" font-family="monospace" font-size="7">GEN</text>
+  
+  <circle cx="340" cy="435" r="12" fill="#2a1a10" stroke="#ff8c55" stroke-width="1.2"/>
+  <text x="340" y="439" text-anchor="middle" fill="#ffaa66" font-family="monospace" font-size="7">WEB</text>
+  
+  <circle cx="340" cy="462" r="12" fill="#1a1a2a" stroke="#7070cc" stroke-width="1.2"/>
+  <text x="340" y="466" text-anchor="middle" fill="#aaaaee" font-family="monospace" font-size="7">KEY</text>
+
+  <circle cx="400" cy="448" r="14" fill="#3a1515" stroke="#ff4d4f" stroke-width="1.5"/>
+  <text x="400" y="452" text-anchor="middle" fill="#ff6b6b" font-family="monospace" font-size="7">SINK</text>
+
+  <!-- IDG edges -->
+  <line x1="302" y1="445" x2="328" y2="438" stroke="#b070dd" stroke-width="1" opacity="0.7"/>
+  <line x1="352" y1="435" x2="386" y2="445" stroke="#ff8c55" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <line x1="352" y1="460" x2="386" y2="452" stroke="#7070cc" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+  <!-- Taint labels -->
+  <text x="430" y="438" fill="#ff8c55" font-family="Arial, sans-serif" font-size="8">trust: low</text>
+  <text x="430" y="452" fill="#9090dd" font-family="Arial, sans-serif" font-size="8">risk: med</text>
+  <text x="430" y="466" fill="#ff4d4f" font-family="Arial, sans-serif" font-size="8">→ BLOCKED</text>
+
+  <!-- ===== RIGHT SIDE: Governance Levels ===== -->
+  <rect x="530" y="140" width="195" height="190" rx="10" fill="#12203a" stroke="#2a5a8a" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="628" y="163" text-anchor="middle" fill="#5dade2" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Governance Tax Levels</text>
+
+  <!-- Level bars -->
+  <rect x="545" y="175" width="30" height="14" rx="3" fill="#1a6b3a" opacity="0.8"/>
+  <text x="580" y="186" fill="#52c41a" font-family="monospace" font-size="9">L0 Pass-through</text>
+  
+  <rect x="545" y="195" width="50" height="14" rx="3" fill="#2a6b3a" opacity="0.8"/>
+  <text x="600" y="206" fill="#73d13d" font-family="monospace" font-size="9">L1 Regex</text>
+  
+  <rect x="545" y="215" width="80" height="14" rx="3" fill="#5a7a20" opacity="0.8"/>
+  <text x="630" y="226" fill="#bae637" font-family="monospace" font-size="9">L2 Small LM</text>
+
+  <rect x="545" y="235" width="120" height="14" rx="3" fill="#8a6a10" opacity="0.8"/>
+  <text x="670" y="246" fill="#ffc53d" font-family="monospace" font-size="9">L3 Frontier</text>
+
+  <rect x="545" y="255" width="160" height="14" rx="3" fill="#8b1a1a" opacity="0.8"/>
+  <text x="710" y="266" fill="#ff7875" font-family="monospace" font-size="9">L4 Human</text>
+
+  <!-- Budget label -->
+  <text x="628" y="290" text-anchor="middle" fill="#7a8bb5" font-family="Arial, sans-serif" font-size="9">Dynamic selection by risk budget</text>
+  <rect x="555" y="298" width="146" height="22" rx="5" fill="#1a2744" stroke="#3a5070" stroke-width="0.8"/>
+  <text x="628" y="313" text-anchor="middle" fill="#5dade2" font-family="monospace" font-size="9">Reliability Budget: ████░░</text>
+
+  <!-- Arrow from Governance to Taint Engine -->
+  <path d="M580,330 Q560,365 490,420" fill="none" stroke="#5dade2" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+  <text x="555" y="370" fill="#5dade2" font-family="Arial, sans-serif" font-size="8" transform="rotate(-40,555,370)">policy check</text>
+
+  <!-- ===== RIGHT: Decision Gate ===== -->
+  <!-- Safe path -->
+  <g filter="url(#softShadow)">
+    <rect x="780" y="250" width="150" height="55" rx="10" fill="url(#safeGrad)" stroke="#52c41a" stroke-width="1.5"/>
+    <text x="855" y="272" text-anchor="middle" fill="#b7eb8f" font-family="Arial, sans-serif" font-size="12" font-weight="bold">✓ SAFE EXECUTE</text>
+    <text x="855" y="290" text-anchor="middle" fill="#73d13d" font-family="Arial, sans-serif" font-size="9">Tool call permitted</text>
+  </g>
+
+  <!-- Blocked path -->
+  <g filter="url(#softShadow)">
+    <rect x="780" y="330" width="150" height="55" rx="10" fill="url(#sinkGrad)" stroke="#ff4d4f" stroke-width="1.5"/>
+    <text x="855" y="352" text-anchor="middle" fill="#ffa39e" font-family="Arial, sans-serif" font-size="12" font-weight="bold">✗ INTERDICTED</text>
+    <text x="855" y="370" text-anchor="middle" fill="#ff7875" font-family="Arial, sans-serif" font-size="9">Tainted sink blocked</text>
+  </g>
+
+  <!-- Arrows from kernel to decisions -->
+  <path d="M735,350 Q758,295 780,277" fill="none" stroke="#52c41a" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <path d="M735,420 Q775,405 780,365" fill="none" stroke="#ff4d4f" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- ===== FEEDBACK LOOP ===== -->
+  <!-- Curved arrow from INTERDICTED back to PPU -->
+  <path d="M855,385 C855,530 600,560 370,560 C200,560 180,200 270,175" fill="none" stroke="#40a9ff" stroke-width="2.2" stroke-dasharray="8,4" marker-end="url(#arrowBlue)" filter="url(#glow)"/>
+
+  <!-- Feedback label box -->
+  <rect x="340" y="520" width="260" height="42" rx="8" fill="#0d1b30" stroke="#1890ff" stroke-width="1.2"/>
+  <text x="470" y="537" text-anchor="middle" fill="#40a9ff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">↻ Policy Feedback (~250 tokens)</text>
+  <text x="470" y="553" text-anchor="middle" fill="#1890ff" font-family="Arial, sans-serif" font-size="9">73-89% context reuse · No full restart</text>
+
+  <!-- ===== BOTTOM: Results Banner ===== -->
+  <rect x="80" y="610" width="800" height="52" rx="10" fill="#0d1520" stroke="#2a5a8a" stroke-width="1"/>
+  
+  <text x="200" y="633" text-anchor="middle" fill="#ff7875" font-family="Arial, sans-serif" font-size="11">Native LLM Guardrails</text>
+  <text x="200" y="650" text-anchor="middle" fill="#ff4d4f" font-family="Arial, sans-serif" font-size="16" font-weight="bold">&lt;9% intercept</text>
+  
+  <text x="460" y="628" text-anchor="middle" fill="#5dade2" font-family="Arial, sans-serif" font-size="16">→</text>
+  
+  <text x="480" y="633" text-anchor="middle" fill="#b7eb8f" font-family="Arial, sans-serif" font-size="11">Arbiter-K</text>
+  <text x="480" y="650" text-anchor="middle" fill="#52c41a" font-family="Arial, sans-serif" font-size="16" font-weight="bold">76-95% intercept</text>
+
+  <line x1="610" y1="618" x2="610" y2="655" stroke="#2a5a8a" stroke-width="0.8"/>
+
+  <text x="740" y="633" text-anchor="middle" fill="#ffc53d" font-family="Arial, sans-serif" font-size="11">Absolute Gain</text>
+  <text x="740" y="652" text-anchor="middle" fill="#fadb14" font-family="Arial, sans-serif" font-size="18" font-weight="bold">+92.79%</text>
+
+  <!-- ===== Security Context Registry badge ===== -->
+  <rect x="530" y="395" width="195" height="80" rx="8" fill="#1a1520" stroke="#8844cc" stroke-width="1"/>
+  <text x="628" y="415" text-anchor="middle" fill="#d9a0ff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Security Context Registry</text>
+  <text x="628" y="433" text-anchor="middle" fill="#a070cc" font-family="monospace" font-size="8">trust: ■■□□□ LOW</text>
+  <text x="628" y="447" text-anchor="middle" fill="#a070cc" font-family="monospace" font-size="8">confidence: ■■■□□ MED</text>
+  <text x="628" y="461" text-anchor="middle" fill="#ff7875" font-family="monospace" font-size="8">risk: ■■■■□ HIGH → L3</text>
+
+  <!-- Connecting Security Context to Gate -->
+  <path d="M725,435 Q755,435 770,340" fill="none" stroke="#8844cc" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowWhite)"/>
+
+  <!-- Core insight callout -->
+  <rect x="530" y="505" width="195" height="48" rx="8" fill="#0d2010" stroke="#52c41a" stroke-width="1" opacity="0.9"/>
+  <text x="628" y="524" text-anchor="middle" fill="#b7eb8f" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Core Insight</text>
+  <text x="628" y="540" text-anchor="middle" fill="#73d13d" font-family="Arial, sans-serif" font-size="9">Safety as microarchitectural</text>
+  <text x="628" y="552" text-anchor="middle" fill="#73d13d" font-family="Arial, sans-serif" font-size="9">property, not emergent behavior</text>
+</svg>

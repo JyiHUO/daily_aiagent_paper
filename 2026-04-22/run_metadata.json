@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-22",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 400,
+  "selected_count": 3,
+  "focus_titles": [
+    "From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers",
+    "Scaling Test-Time Compute for Agentic Coding",
+    "AutomationBench"
+  ],
+  "knowledge_topic": "Agent Runtime / Harness 层：Agent 系统中确定性执行与可控性的关键层",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

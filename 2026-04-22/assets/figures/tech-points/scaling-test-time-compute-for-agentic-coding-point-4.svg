@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">选 → 炼 → 选：通用推理时增强流水线</text>
+  <text x="450" y="66" text-anchor="middle" fill="#64748b" font-size="13">Scaling Test-Time Compute for Agentic Coding</text>
+
+  <!-- ===== ITERATION 0 BLOCK ===== -->
+  <rect x="40" y="95" width="250" height="220" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="165" y="122" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="bold" letter-spacing="2">ITERATION 0</text>
+
+  <!-- N=16 rollouts visual -->
+  <g transform="translate(65, 140)">
+    <rect width="200" height="52" rx="10" fill="url(#g1)" opacity="0.85"/>
+    <text x="100" y="22" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">N=16 Rollouts</text>
+    <text x="100" y="40" text-anchor="middle" fill="#dbeafe" font-size="11">并行尝试 → 压缩摘要</text>
+  </g>
+
+  <!-- RTV selection -->
+  <g transform="translate(65, 210)">
+    <rect width="200" height="48" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="100" y="20" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">🏆 RTV 锦标赛投票</text>
+    <text x="100" y="38" text-anchor="middle" fill="#93c5fd" font-size="11">选出 Top-K=4 摘要</text>
+  </g>
+
+  <!-- Label: 选 -->
+  <circle cx="165" cy="290" r="14" fill="#3b82f6"/>
+  <text x="165" y="295" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">选</text>
+
+  <!-- ===== ARROW 1: 选 → 炼 ===== -->
+  <line x1="290" y1="205" x2="355" y2="205" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+  <text x="322" y="195" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="bold">经验注入</text>
+
+  <!-- ===== PDR REFINE BLOCK ===== -->
+  <rect x="360" y="130" width="180" height="150" rx="16" fill="#292211" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="158" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold" letter-spacing="2">PDR 蒸馏精炼</text>
+
+  <g transform="translate(385, 172)">
+    <rect width="130" height="40" rx="8" fill="url(#g2)" opacity="0.9"/>
+    <text x="65" y="17" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Top-K 摘要</text>
+    <text x="65" y="33" text-anchor="middle" fill="#fef3c7" font-size="10">作为新上下文</text>
+  </g>
+
+  <text x="450" y="236" text-anchor="middle" fill="#fcd34d" font-size="11">↓ 指导新一轮生成</text>
+  <text x="450" y="256" text-anchor="middle" fill="#d97706" font-size="10">综合失败中的部分洞察</text>
+
+  <!-- Label: 炼 -->
+  <circle cx="450" cy="295" r="14" fill="#d97706"/>
+  <text x="450" y="300" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">炼</text>
+
+  <!-- ===== ARROW 2: 炼 → 选 ===== -->
+  <line x1="540" y1="205" x2="610" y2="205" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="575" y="195" text-anchor="middle" fill="#34d399" font-size="11" font-weight="bold">新轮次</text>
+
+  <!-- ===== ITERATION 1 BLOCK ===== -->
+  <rect x="615" y="95" width="250" height="220" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="740" y="122" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="bold" letter-spacing="2">ITERATION 1</text>
+
+  <g transform="translate(640, 140)">
+    <rect width="200" height="52" rx="10" fill="url(#g3)" opacity="0.85"/>
+    <text x="100" y="22" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">N=16 新 Rollouts</text>
+    <text x="100" y="40" text-anchor="middle" fill="#d1fae5" font-size="11">带经验的增强尝试</text>
+  </g>
+
+  <g transform="translate(640, 210)">
+    <rect width="200" height="48" rx="10" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="100" y="20" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🏆 最终 RTV</text>
+    <text x="100" y="38" text-anchor="middle" fill="#6ee7b7" font-size="11">选出 Top-1 最佳解</text>
+  </g>
+
+  <!-- Label: 选 -->
+  <circle cx="740" cy="290" r="14" fill="#10b981"/>
+  <text x="740" y="295" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">选</text>
+
+  <!-- ===== BOTTOM: Cross-model generalization ===== -->
+  <rect x="50" y="350" width="800" height="100" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#shadow)"/>
+  <text x="450" y="378" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="bold">🔄 跨模型通用：不依赖特定模型的外部增强层</text>
+
+  <!-- Model chips -->
+  <g transform="translate(80, 395)">
+    <rect width="120" height="30" rx="8" fill="#312e81" opacity="0.7"/>
+    <text x="60" y="20" text-anchor="middle" fill="#a5b4fc" font-size="11">Claude-4.5-Opus</text>
+  </g>
+  <g transform="translate(215, 395)">
+    <rect width="130" height="30" rx="8" fill="#312e81" opacity="0.7"/>
+    <text x="65" y="20" text-anchor="middle" fill="#a5b4fc" font-size="11">Claude-4.5-Sonnet</text>
+  </g>
+  <g transform="translate(360, 395)">
+    <rect width="120" height="30" rx="8" fill="#312e81" opacity="0.7"/>
+    <text x="60" y="20" text-anchor="middle" fill="#a5b4fc" font-size="11">Gemini-3.1-Pro</text>
+  </g>
+  <g transform="translate(495, 395)">
+    <rect width="120" height="30" rx="8" fill="#312e81" opacity="0.7"/>
+    <text x="60" y="20" text-anchor="middle" fill="#a5b4fc" font-size="11">Gemini-3-Flash</text>
+  </g>
+  <g transform="translate(630, 395)">
+    <rect width="100" height="30" rx="8" fill="#312e81" opacity="0.7"/>
+    <text x="50" y="20" text-anchor="middle" fill="#a5b4fc" font-size="11">GPT-5</text>
+  </g>
+  <g transform="translate(745, 395)">
+    <text x="0" y="20" fill="#34d399" font-size="12" font-weight="bold">✓ 全部提升</text>
+  </g>
+
+  <!-- ===== KEY INSIGHT BOX ===== -->
+  <rect x="50" y="475" width="385" height="120" rx="14" fill="#0c2a1a" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="242" y="502" text-anchor="middle" fill="#34d399" font-size="13" font-weight="bold">💡 突破案例</text>
+  <text x="242" y="525" text-anchor="middle" fill="#a7f3d0" font-size="12">gpt2-codegolf 任务</text>
+  <text x="242" y="548" text-anchor="middle" fill="#6ee7b7" font-size="11">初始 16 次全部失败 (pass@16 = 0)</text>
+
+  <!-- before → after -->
+  <g transform="translate(100, 558)">
+    <rect width="80" height="26" rx="6" fill="#7f1d1d"/>
+    <text x="40" y="18" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="bold">❌ 0/16</text>
+  </g>
+  <line x1="190" y1="571" x2="220" y2="571" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="205" y="565" text-anchor="middle" fill="#94a3b8" font-size="9">PDR</text>
+  <g transform="translate(228, 558)">
+    <rect width="80" height="26" rx="6" fill="#064e3b"/>
+    <text x="40" y="18" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="bold">✅ 通过!</text>
+  </g>
+
+  <!-- Performance highlight -->
+  <rect x="465" y="475" width="385" height="120" rx="14" fill="#1c1917" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="657" y="502" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">📈 Terminal-Bench 提升 (长轨迹)</text>
+
+  <g transform="translate(490, 515)">
+    <rect width="155" height="30" rx="8" fill="#422006" opacity="0.8"/>
+    <text x="78" y="20" text-anchor="middle" fill="#fcd34d" font-size="12">Sonnet</text>
+    <text x="135" y="20" text-anchor="end" fill="#34d399" font-size="13" font-weight="bold">+16.2pp</text>
+  </g>
+  <g transform="translate(660, 515)">
+    <rect width="155" height="30" rx="8" fill="#422006" opacity="0.8"/>
+    <text x="78" y="20" text-anchor="middle" fill="#fcd34d" font-size="12">Gemini Pro</text>
+    <text x="135" y="20" text-anchor="end" fill="#34d399" font-size="13" font-weight="bold">+12.3pp</text>
+  </g>
+  <text x="657" y="575" text-anchor="middle" fill="#a8a29e" font-size="11">越长horizon → 提升越大</text>
+</svg>

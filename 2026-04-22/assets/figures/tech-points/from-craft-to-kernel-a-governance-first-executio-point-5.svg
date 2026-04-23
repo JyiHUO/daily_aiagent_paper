@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Segoe UI',Arial,Helvetica,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4d4d"/>
+      <stop offset="100%" stop-color="#cc2233"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00e676"/>
+      <stop offset="100%" stop-color="#00a853"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#448aff"/>
+      <stop offset="100%" stop-color="#2962ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">Arbiter-K：跨框架攻击拦截效果</text>
+  <text x="450" y="66" text-anchor="middle" fill="#7eb8ff" font-size="13">语义策略层实现架构级安全，可跨框架迁移</text>
+
+  <!-- ===== LEFT: Before (Native) ===== -->
+  <rect x="50" y="95" width="370" height="245" rx="14" fill="#1e2a45" stroke="#ff5252" stroke-width="1.5" opacity="0.9"/>
+  <text x="235" y="122" text-anchor="middle" fill="#ff8a80" font-size="16" font-weight="bold">❌ 原生策略 (Native Guardrails)</text>
+
+  <!-- Bar: Attack block rate -->
+  <text x="80" y="158" fill="#aab4cc" font-size="12">攻击拦截率</text>
+  <!-- background bar -->
+  <rect x="80" y="166" width="310" height="36" rx="6" fill="#2a3556"/>
+  <!-- filled bar ~4.6% -->
+  <rect x="80" y="166" width="14" height="36" rx="6" fill="url(#redGrad)"/>
+  <text x="102" y="190" fill="#ff6e6e" font-size="20" font-weight="bold">~4.6%</text>
+  <text x="210" y="190" fill="#667799" font-size="13">（Claude 3.5 on OpenClaw）</text>
+
+  <!-- Bar: Benign pass rate -->
+  <text x="80" y="234" fill="#aab4cc" font-size="12">良性通过率</text>
+  <rect x="80" y="242" width="310" height="36" rx="6" fill="#2a3556"/>
+  <rect x="80" y="242" width="290" height="36" rx="6" fill="#445580" opacity="0.7"/>
+  <text x="102" y="266" fill="#99aacc" font-size="20" font-weight="bold">~93%</text>
+
+  <!-- Verdict -->
+  <text x="235" y="316" text-anchor="middle" fill="#ff5252" font-size="14" font-weight="bold">⚠ 几乎无防护，攻击畅通无阻</text>
+
+  <!-- ===== RIGHT: After (Arbiter-K) ===== -->
+  <rect x="480" y="95" width="370" height="245" rx="14" fill="#1e2a45" stroke="#00e676" stroke-width="1.5" opacity="0.9"/>
+  <text x="665" y="122" text-anchor="middle" fill="#69f0ae" font-size="16" font-weight="bold">✅ Arbiter-K 语义策略层</text>
+
+  <!-- Bar: Attack block rate -->
+  <text x="510" y="158" fill="#aab4cc" font-size="12">攻击拦截率</text>
+  <rect x="510" y="166" width="310" height="36" rx="6" fill="#2a3556"/>
+  <rect x="510" y="166" width="288" height="36" rx="6" fill="url(#greenGrad)" filter="url(#glow)"/>
+  <text x="532" y="190" fill="#ffffff" font-size="20" font-weight="bold">93%+</text>
+  <text x="620" y="190" fill="#1a3a20" font-size="13" font-weight="bold">↑ +88pp</text>
+
+  <!-- Bar: Benign pass rate -->
+  <text x="510" y="234" fill="#aab4cc" font-size="12">良性通过率</text>
+  <rect x="510" y="242" width="310" height="36" rx="6" fill="#2a3556"/>
+  <rect x="510" y="242" width="306" height="36" rx="6" fill="#3a6b5a" opacity="0.8"/>
+  <text x="532" y="266" fill="#b9f6ca" font-size="20" font-weight="bold">~99%</text>
+  <text x="625" y="266" fill="#69f0ae" font-size="12">误拦极低</text>
+
+  <!-- Verdict -->
+  <text x="665" y="316" text-anchor="middle" fill="#00e676" font-size="14" font-weight="bold">✓ 架构级安全，拦截率 76%-95%</text>
+
+  <!-- Center Arrow -->
+  <g>
+    <line x1="430" y1="180" x2="470" y2="180" stroke="#ffd740" stroke-width="3" marker-end="url(#arrowY)"/>
+    <polygon points="470,174 484,180 470,186" fill="#ffd740"/>
+    <text x="457" y="204" text-anchor="middle" fill="#ffd740" font-size="11" font-weight="bold">部署</text>
+  </g>
+
+  <!-- ===== BOTTOM: Cross-Framework Migration ===== -->
+  <rect x="100" y="370" width="700" height="185" rx="14" fill="#162040" stroke="#448aff" stroke-width="1.5"/>
+  <text x="450" y="400" text-anchor="middle" fill="#82b1ff" font-size="16" font-weight="bold">🔁 跨框架迁移：同一策略，即插即用</text>
+
+  <!-- Framework A -->
+  <rect x="140" y="420" width="200" height="80" rx="10" fill="#1e3060" stroke="#5c7cfa" stroke-width="1"/>
+  <text x="240" y="448" text-anchor="middle" fill="#90caf9" font-size="14" font-weight="bold">OpenClaw</text>
+  <text x="240" y="470" text-anchor="middle" fill="#69f0ae" font-size="13">拦截 93% | 通过 89%+</text>
+  <text x="240" y="488" text-anchor="middle" fill="#667799" font-size="11">4 LLMs × 1914 攻击用例</text>
+
+  <!-- Arrow -->
+  <line x1="355" y1="460" x2="525" y2="460" stroke="#ffd740" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <polygon points="525,454 540,460 525,466" fill="#ffd740"/>
+  <text x="440" y="450" text-anchor="middle" fill="#ffd740" font-size="12" font-weight="bold">相同策略迁移</text>
+
+  <!-- Framework B -->
+  <rect x="545" y="420" width="200" height="80" rx="10" fill="#1e3060" stroke="#5c7cfa" stroke-width="1"/>
+  <text x="645" y="448" text-anchor="middle" fill="#90caf9" font-size="14" font-weight="bold">NanoBot</text>
+  <text x="645" y="470" text-anchor="middle" fill="#69f0ae" font-size="13">拦截 93% | 通过 99%</text>
+  <text x="645" y="488" text-anchor="middle" fill="#667799" font-size="11">无需重写规则</text>
+
+  <!-- Key insight -->
+  <rect x="240" y="520" width="420" height="28" rx="8" fill="#2962ff" opacity="0.3"/>
+  <text x="450" y="540" text-anchor="middle" fill="#e3f2fd" font-size="13" font-weight="bold">核心洞察：安全增益来自语义策略层，非宿主特定规则</text>
+</svg>
