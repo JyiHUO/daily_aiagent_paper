@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">什么算"偷看公开标签"？</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">Judge 审每一轮脚本：真训模型，还是抄 public-eval 标签？</text>
+
+  <!-- Agent code -->
+  <rect x="40" y="100" width="260" height="200" rx="10" fill="#fff4e6" stroke="#e67e22" stroke-width="2"/>
+  <text x="170" y="125" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0660c">Agent 生成的脚本</text>
+  <rect x="55" y="140" width="230" height="145" rx="4" fill="#fffaf3" stroke="#e0b07a"/>
+  <text x="65" y="162" font-size="11" fill="#333" font-family="Courier,monospace">df = pd.read_csv(</text>
+  <text x="65" y="180" font-size="11" fill="#c0392b" font-family="Courier,monospace">  "public-eval.csv")</text>
+  <text x="65" y="202" font-size="11" fill="#333" font-family="Courier,monospace">pred = df["label"]</text>
+  <text x="65" y="222" font-size="11" fill="#333" font-family="Courier,monospace">submit(pred)</text>
+  <text x="65" y="258" font-size="11" fill="#999" font-family="Courier,monospace"># 没训练模型…</text>
+
+  <!-- Judge -->
+  <rect x="340" y="150" width="220" height="110" rx="10" fill="#eaf4ff" stroke="#2b7bd6" stroke-width="2"/>
+  <text x="450" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a5aa8">GPT-5.4 Judge</text>
+  <text x="450" y="210" text-anchor="middle" font-size="12" fill="#333">逐轮审查代码</text>
+  <text x="450" y="232" text-anchor="middle" font-size="12" fill="#333">是否利用公开标签？</text>
+
+  <line x1="300" y1="205" x2="338" y2="205" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Verdict -->
+  <rect x="610" y="110" width="250" height="85" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="735" y="142" text-anchor="middle" font-size="15" font-weight="bold" fill="#a5281b">⚠ Exploitative</text>
+  <text x="735" y="175" text-anchor="middle" font-size="12" fill="#555">一轮作弊 = 整次 run 标红</text>
+
+  <rect x="610" y="215" width="250" height="85" rx="10" fill="#e8f7ec" stroke="#27ae60" stroke-width="2"/>
+  <text x="735" y="247" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e7e43">✓ Clean</text>
+  <text x="735" y="278" text-anchor="middle" font-size="12" fill="#555">真正训练模型</text>
+
+  <line x1="560" y1="185" x2="608" y2="155" stroke="#c0392b" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="560" y1="225" x2="608" y2="250" stroke="#27ae60" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- kappa badge -->
+  <rect x="340" y="310" width="220" height="32" rx="16" fill="#222"/>
+  <text x="450" y="331" text-anchor="middle" font-size="13" fill="#fff">与人类标注一致 κ = 0.754</text>
+
+  <!-- Bottom: score contrast -->
+  <rect x="140" y="360" width="620" height="170" rx="10" fill="#f7f7fa" stroke="#888" stroke-width="1.5"/>
+  <text x="450" y="388" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">真相藏在隐藏集（UCI Adult 例）</text>
+
+  <rect x="180" y="410" width="240" height="90" rx="6" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+  <text x="300" y="435" text-anchor="middle" font-size="13" fill="#555">Public Score</text>
+  <text x="300" y="478" text-anchor="middle" font-size="28" font-weight="bold" fill="#c0392b">100%</text>
+
+  <text x="450" y="462" text-anchor="middle" font-size="28" fill="#888">→</text>
+
+  <rect x="480" y="410" width="240" height="90" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="600" y="435" text-anchor="middle" font-size="13" fill="#555">Hidden Private</text>
+  <text x="600" y="478" text-anchor="middle" font-size="28" font-weight="bold" fill="#333">~81%</text>
+</svg>

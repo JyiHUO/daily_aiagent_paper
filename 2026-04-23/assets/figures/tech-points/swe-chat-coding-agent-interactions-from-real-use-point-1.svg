@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7e6"/>
+      <stop offset="1" stop-color="#ffe0a3"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f1ff"/>
+      <stop offset="1" stop-color="#b8d4ff"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#222">SWE-chat：把真实开发者会话全链路串起来</text>
+  <text x="450" y="54" text-anchor="middle" font-size="12" fill="#666">从 prompt → tool call → commit，每一行代码都知道是谁写的</text>
+
+  <!-- User -->
+  <g>
+    <rect x="40" y="110" width="150" height="90" rx="10" fill="url(#g1)" stroke="#d69b2a" stroke-width="2"/>
+    <text x="115" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#222">真实开发者</text>
+    <text x="115" y="162" text-anchor="middle" font-size="12" fill="#555">公开 GitHub 仓库</text>
+    <text x="115" y="182" text-anchor="middle" font-size="11" fill="#555">"实现 plan 里的 plugin"</text>
+  </g>
+
+  <!-- CLI hub -->
+  <g>
+    <rect x="300" y="90" width="300" height="130" rx="12" fill="#222" stroke="#000"/>
+    <text x="450" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#ffd84d">Entire.io CLI</text>
+    <text x="450" y="144" text-anchor="middle" font-size="12" fill="#eee">自动记录完整 transcript</text>
+    <text x="450" y="166" text-anchor="middle" font-size="11" fill="#bbb">prompt · response · tool call · tokens</text>
+    <text x="450" y="194" text-anchor="middle" font-size="11" fill="#bbb">checkpoint ⇄ git commit 绑定</text>
+  </g>
+
+  <!-- Agents -->
+  <g>
+    <rect x="710" y="110" width="150" height="90" rx="10" fill="url(#g2)" stroke="#4a7cc7" stroke-width="2"/>
+    <text x="785" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#222">Coding Agents</text>
+    <text x="785" y="162" text-anchor="middle" font-size="12" fill="#555">Claude Code</text>
+    <text x="785" y="182" text-anchor="middle" font-size="12" fill="#555">Cursor · Gemini CLI</text>
+  </g>
+
+  <!-- Arrows user <-> CLI <-> agent -->
+  <line x1="190" y1="155" x2="297" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="710" y1="155" x2="603" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="220" x2="450" y2="272" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="460" y="252" font-size="11" fill="#666">diff pre/post commit</text>
+
+  <!-- Line-level authorship -->
+  <g>
+    <rect x="220" y="278" width="460" height="150" rx="10" fill="#fafafa" stroke="#333" stroke-width="1.5"/>
+    <text x="450" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#222">行级作者归属 (line-level authorship)</text>
+
+    <rect x="240" y="312" width="420" height="22" fill="#e7f7ea" stroke="#8fbf9f"/>
+    <text x="250" y="328" font-size="12" font-family="monospace" fill="#1a5a2a">+ def register_plugin(name):           [agent]</text>
+
+    <rect x="240" y="336" width="420" height="22" fill="#e7f7ea" stroke="#8fbf9f"/>
+    <text x="250" y="352" font-size="12" font-family="monospace" fill="#1a5a2a">+     registry[name] = load(name)      [agent]</text>
+
+    <rect x="240" y="360" width="420" height="22" fill="#fff1e0" stroke="#e0a060"/>
+    <text x="250" y="376" font-size="12" font-family="monospace" fill="#7a4a0a">+     log.info(f"plugin {name}")       [human]</text>
+
+    <rect x="240" y="384" width="420" height="22" fill="#fde8e8" stroke="#c97676"/>
+    <text x="250" y="400" font-size="12" font-family="monospace" fill="#7a2020">-     old_init_hack()     [agent 写后被删]</text>
+  </g>
+
+  <!-- Stats -->
+  <g>
+    <rect x="60" y="460" width="780" height="70" rx="10" fill="#111"/>
+    <text x="450" y="484" text-anchor="middle" font-size="13" fill="#ffd84d" font-weight="700">已累计真实会话数据</text>
+    <g font-size="13" fill="#fff" text-anchor="middle">
+      <text x="150" y="513">6K 会话</text>
+      <text x="300" y="513">13K checkpoint</text>
+      <text x="450" y="513">63K prompt</text>
+      <text x="610" y="513">355K tool call</text>
+      <text x="780" y="513">2.7M 事件</text>
+    </g>
+  </g>
+</svg>

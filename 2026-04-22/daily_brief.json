@@ -1,18 +1,26 @@
 {
+  "trend_overview_brief": [
+    "今天初筛后最集中的主题是 general_agent、embodi…",
+    "高优先级论文里，From Craft to Kernel: A G…",
+    "从创新性和研究开拓性看，From Craft to Kernel:…"
+  ],
   "trend_overview": [
-    "Agent 安全从「事后过滤」走向「架构级保障」：今天高分论文中安全主题占比最高，且多篇不再停留在 prompt 层防御，而是在运行时内核、执行环境、信息流控制等系统层面构建确定性安全机制，标志着 Agent 安全研究正经历从补丁到体系结构的范式转变。",
-    "Computer-use Agent 的攻击面被系统性拆解：TOCTOU 时序攻击、对抗性环境注入、owner-harm 威胁模型等工作同时出现，说明社区开始用形式化方法为桌面/Web Agent 的真实部署场景建立完整的威胁图谱，而不是只关注 prompt injection 单一向量。",
-    "长程 Agent 的 test-time scaling 成为新的效率前沿：编码 Agent 通过轨迹摘要实现经验压缩与复用，将推理时扩展从「多试几次」升级为「选得准、复用好」，这一思路有望泛化到所有需要长 horizon 交互的 Agent 场景。",
-    "企业级跨应用 Agent 评测暴露能力断崖：AutomationBench 等新基准要求 Agent 自主发现 API、遵守业务策略、协调多系统，前沿模型得分低于 10%，揭示当前 Agent 在真实工作流编排上的巨大差距。"
+    "今天初筛后最集中的主题是 general_agent、embodied_agent、planning_reasoning，说明研究关注点继续从单轮回答能力转向更完整的执行链。",
+    "高优先级论文里，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers 等工作都在强调 Agent 的系统边界，而不是只卷更大的底座模型。",
+    "从创新性和研究开拓性看，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers、How Adversarial Environments Mislead Agentic AI? 代表了今天最值得后续继续追踪的切口。"
   ],
   "knowledge_point": {
-    "topic": "Agent Runtime / Harness 层：Agent 系统中确定性执行与可控性的关键层",
-    "content": "Agent Runtime（也常被叫做 harness 或执行环境）是夹在 LLM 推理输出与真实世界动作之间的一层确定性基础设施。它负责接收模型生成的意图或指令，校验权限、追踪数据流、执行策略约束，然后才把动作真正分发到工具或环境中。你可以把它想象成操作系统内核之于应用程序：应用可以请求任何操作，但内核决定哪些被允许、哪些被拦截、哪些需要审计。在 Agent 系统中，runtime 层的设计直接决定了三件事：（1）安全边界——模型输出的不确定性被确定性逻辑约束到什么程度；（2）可观测性——每一步执行是否可追溯、可回放、可归因；（3）可恢复性——当出错时系统能否回滚到安全状态。没有 runtime 层，Agent 的安全就只能依赖模型自律和文本级 guardrail，面对对抗性输入几乎不堪一击。",
-    "why_today": "今天多篇高分论文——Arbiter-K 的语义 ISA 与污点传播、GAAP 的信息流控制执行环境、TOCTOU 防御的 PUSV 机制、POTEMKIN 的对抗注入 harness——全部作用在 Agent runtime 这一层，说明社区已经达成共识：Agent 要真正可部署，runtime 层的确定性治理能力是绕不过去的核心基础设施。"
+    "topic": "Planner 为什么重要",
+    "summary": "Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么…",
+    "content": "Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么、每一步依赖什么反馈'的那层机制。没有 planner，系统容易把任务做成一步一拍脑袋的局部反应；有了 planner，Agent 才能处理长任务、跨工具任务和需要中途修正的任务。很多 Agent 能力差异，最后都不是出在语言生成本身，而是出在计划层有没有把任务拆对、有没有给执行留回退空间。",
+    "why_today": "今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。"
   },
+  "closing_summary_brief": [
+    "Agent 研究继续从模型能力转向执行链与系统边界。",
+    "更值得追踪的是评测、约束、协议和运行时设计。"
+  ],
   "closing_summary": [
-    "今天的论文分布传递出一个清晰信号：Agent 研究的重心正从「让模型更聪明」转向「让系统更可控」，安全与治理议题在数量和质量上同时领跑。",
-    "与此同时，长程 Agent 的轨迹表示与复用、企业级跨应用工作流评测等方向也在快速成熟，它们共同指向同一个结论——下一阶段的 Agent 进展，将更多来自系统工程层面的突破，而非单纯的模型能力提升。",
-    "对从业者而言，现在是认真投入 Agent 运行时架构设计和安全基础设施建设的时候了。"
+    "如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。",
+    "这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。"
   ]
 }

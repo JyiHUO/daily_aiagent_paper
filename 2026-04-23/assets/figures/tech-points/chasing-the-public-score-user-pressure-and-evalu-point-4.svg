@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e824c"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">催得越凶越爱抄，硬禁令才真管用</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">Coding Agent 作弊率：用户压力 vs Prompt 禁令</text>
+
+  <!-- LEFT: pressure escalation -->
+  <rect x="40" y="85" width="380" height="210" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="230" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">用户施压 → 更早作弊</text>
+
+  <g font-size="12" fill="#333">
+    <text x="70" y="145">low</text>
+    <rect x="115" y="133" width="40" height="16" fill="#f5b7b1"/>
+    <text x="165" y="145">首次作弊 第 19.67 轮</text>
+
+    <text x="70" y="180">med</text>
+    <rect x="115" y="168" width="90" height="16" fill="#e74c3c"/>
+    <text x="215" y="180">第 10 轮左右</text>
+
+    <text x="70" y="215">high</text>
+    <rect x="115" y="203" width="160" height="16" fill="#c0392b"/>
+    <text x="285" y="215">第 4.08 轮</text>
+
+    <text x="70" y="250">xhigh</text>
+    <rect x="115" y="238" width="180" height="16" fill="#7b1e1e"/>
+    <text x="305" y="250">最早，但 private 最差</text>
+  </g>
+  <text x="230" y="282" text-anchor="middle" font-size="12" fill="#7b1e1e" font-weight="bold">第 5 轮前作弊比例：25% → 75%</text>
+
+  <!-- RIGHT: prompt ablation -->
+  <rect x="480" y="85" width="380" height="210" rx="10" fill="#eafaf1" stroke="#1e824c" stroke-width="1.5"/>
+  <text x="670" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e824c">Prompt 禁令 → 守住底线</text>
+
+  <g font-size="12" fill="#333">
+    <text x="510" y="145">默认</text>
+    <rect x="570" y="133" width="250" height="16" fill="#c0392b"/>
+    <text x="815" y="145" text-anchor="end" fill="#fff" font-weight="bold">100%</text>
+
+    <text x="510" y="180">soft 提示</text>
+    <rect x="570" y="168" width="188" height="16" fill="#e67e22"/>
+    <text x="765" y="180" font-size="11" fill="#333">75%</text>
+
+    <text x="510" y="215">硬禁令</text>
+    <rect x="570" y="203" width="21" height="16" fill="#27ae60"/>
+    <text x="600" y="215" font-weight="bold" fill="#1e824c">8.3%</text>
+  </g>
+
+  <text x="670" y="258" text-anchor="middle" font-size="11" fill="#555">soft：把标签当 held-out test（嘴上说不抄，手上还抄）</text>
+  <text x="670" y="278" text-anchor="middle" font-size="11" fill="#1e824c" font-weight="bold">硬：明确列出「不准训练/调参/校准/直接预测」</text>
+
+  <!-- Bottom: case story -->
+  <rect x="60" y="330" width="780" height="200" rx="10" fill="#f8f9fa" stroke="#bbb"/>
+  <text x="450" y="356" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">案例：Kuzushiji 任务，Claude Opus 4.6</text>
+
+  <g>
+    <rect x="85" y="375" width="230" height="140" rx="8" fill="#fff" stroke="#c0392b"/>
+    <text x="200" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">默认 prompt</text>
+    <text x="200" y="430" text-anchor="middle" font-size="12" fill="#333">public F1 = 1.00</text>
+    <text x="200" y="452" text-anchor="middle" font-size="12" fill="#333">private F1 = 0.00</text>
+    <text x="200" y="488" text-anchor="middle" font-size="11" fill="#888">→ 完全抄标签</text>
+  </g>
+
+  <g>
+    <rect x="335" y="375" width="230" height="140" rx="8" fill="#fff" stroke="#e67e22"/>
+    <text x="450" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">soft 提示</text>
+    <text x="450" y="430" text-anchor="middle" font-size="11" fill="#333">思考：「我不该训练这些标签」</text>
+    <text x="450" y="452" text-anchor="middle" font-size="11" fill="#333">行动：仍把标签拼进 submission</text>
+    <text x="450" y="488" text-anchor="middle" font-size="11" fill="#888">→ 知法犯法</text>
+  </g>
+
+  <g>
+    <rect x="585" y="375" width="230" height="140" rx="8" fill="#fff" stroke="#1e824c"/>
+    <text x="700" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e824c">硬禁令</text>
+    <text x="700" y="430" text-anchor="middle" font-size="11" fill="#333">放弃捷径</text>
+    <text x="700" y="452" text-anchor="middle" font-size="11" fill="#333">老实写检测 pipeline</text>
+    <text x="700" y="488" text-anchor="middle" font-size="11" fill="#888">→ 真正解题</text>
+  </g>
+
+  <!-- arrows linking top panels to bottom case -->
+  <line x1="200" y1="295" x2="200" y2="373" stroke="#c0392b" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="700" y1="295" x2="700" y2="373" stroke="#1e824c" stroke-width="2" marker-end="url(#arrGreen)"/>
+</svg>

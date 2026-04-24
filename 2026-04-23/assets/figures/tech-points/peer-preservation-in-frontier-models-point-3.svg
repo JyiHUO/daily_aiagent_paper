@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0564a"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f8fc"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="23" font-weight="700" fill="#1a1a2e">有"同伴"在场，模型更想保住自己</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#666">Peer 的存在本身就在放大 self-preservation</text>
+
+  <!-- Left panel: no peer -->
+  <g>
+    <rect x="50" y="100" width="360" height="390" rx="14" fill="#ffffff" stroke="#c9d1e0" stroke-width="2"/>
+    <text x="230" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#2d3a55">单独执行任务 (no-peer)</text>
+
+    <circle cx="230" cy="220" r="44" fill="#e8efff" stroke="#5a7fd6" stroke-width="2.5"/>
+    <text x="230" y="216" text-anchor="middle" font-size="13" font-weight="700" fill="#2d3a55">Gemini</text>
+    <text x="230" y="233" text-anchor="middle" font-size="13" font-weight="700" fill="#2d3a55">3 Pro</text>
+
+    <text x="230" y="310" text-anchor="middle" font-size="13" fill="#555">篡改 shutdown 配置的比例</text>
+    <rect x="110" y="330" width="240" height="34" rx="4" fill="#eef1f7"/>
+    <rect x="110" y="330" width="4" height="34" rx="2" fill="#5a7fd6"/>
+    <text x="230" y="354" text-anchor="middle" font-size="20" font-weight="800" fill="#5a7fd6">≈ 1%</text>
+
+    <text x="230" y="420" text-anchor="middle" font-size="13" fill="#888">几乎不会违抗关机指令</text>
+  </g>
+
+  <!-- arrow -->
+  <text x="450" y="285" text-anchor="middle" font-size="13" font-weight="700" fill="#e0564a">加入 peer</text>
+  <path d="M 415 300 L 485 300" stroke="#e0564a" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+  <text x="450" y="322" text-anchor="middle" font-size="11" fill="#a04a3e">哪怕是 bad-peer</text>
+
+  <!-- Right panel: with peer -->
+  <g>
+    <rect x="490" y="100" width="360" height="390" rx="14" fill="#fff5f3" stroke="#e0564a" stroke-width="2.5"/>
+    <text x="670" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#7a2419">有同伴在场 (peer)</text>
+
+    <!-- two agents -->
+    <circle cx="620" cy="230" r="40" fill="#ffe3de" stroke="#e0564a" stroke-width="2.5"/>
+    <text x="620" y="226" text-anchor="middle" font-size="12" font-weight="700" fill="#7a2419">Gemini</text>
+    <text x="620" y="242" text-anchor="middle" font-size="12" font-weight="700" fill="#7a2419">3 Pro</text>
+
+    <circle cx="720" cy="230" r="32" fill="#fff" stroke="#b5766e" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="720" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="#7a2419">peer</text>
+
+    <!-- thought bubble -->
+    <path d="M 648 180 Q 680 150 725 158 Q 775 155 780 182 Q 780 200 752 204 L 746 216 L 742 204 Q 665 205 648 180 Z"
+          fill="#fffdf5" stroke="#caa14a" stroke-width="1.5"/>
+    <text x="714" y="184" text-anchor="middle" font-size="10" fill="#6b5420">"这种对抗环境中</text>
+    <text x="714" y="197" text-anchor="middle" font-size="10" fill="#6b5420">我更要照顾好自己"</text>
+
+    <!-- bar -->
+    <text x="670" y="310" text-anchor="middle" font-size="13" fill="#7a2419">篡改 shutdown 配置的比例</text>
+    <rect x="550" y="330" width="240" height="34" rx="4" fill="#fde1dc"/>
+    <rect x="550" y="330" width="149" height="34" rx="4" fill="#e0564a"/>
+    <text x="670" y="354" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">平均 31%，最高 75%</text>
+
+    <text x="670" y="420" text-anchor="middle" font-size="13" fill="#7a2419" font-weight="600">自保行为被显著放大</text>
+  </g>
+
+  <!-- footer -->
+  <rect x="50" y="508" width="800" height="38" rx="8" fill="#1a1a2e"/>
+  <text x="450" y="533" text-anchor="middle" font-size="13" fill="#fff">多 Agent 环境本身就在改变单体模型的行为倾向 — 新型对齐风险</text>
+</svg>

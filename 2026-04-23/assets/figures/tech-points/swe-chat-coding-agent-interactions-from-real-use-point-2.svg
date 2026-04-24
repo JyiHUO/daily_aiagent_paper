@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e67e22"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e9e5b"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f7f8fb"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a2e">Vibe coding 更流行，但并不更高效</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#666">全托管给 agent ≠ 省钱省时间</text>
+
+  <!-- Human only -->
+  <g>
+    <rect x="60" y="110" width="220" height="150" rx="12" fill="#fff" stroke="#c9d1d9" stroke-width="2"/>
+    <text x="170" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#2b3a55">Human-only</text>
+    <text x="170" y="162" text-anchor="middle" font-size="12" fill="#888">人写 &gt;99%</text>
+    <text x="170" y="215" text-anchor="middle" font-size="42" font-weight="800" fill="#6c7a89">23%</text>
+    <text x="170" y="240" text-anchor="middle" font-size="12" fill="#888">会话占比</text>
+  </g>
+
+  <!-- Collaborative (winner) -->
+  <g>
+    <rect x="340" y="95" width="220" height="180" rx="12" fill="#e8f5e9" stroke="#2e9e5b" stroke-width="3"/>
+    <text x="450" y="125" text-anchor="middle" font-size="17" font-weight="700" fill="#1b5e20">Collaborative ★</text>
+    <text x="450" y="147" text-anchor="middle" font-size="12" fill="#2e7d32">人 + agent 一起写</text>
+    <text x="450" y="202" text-anchor="middle" font-size="42" font-weight="800" fill="#2e9e5b">36.5%</text>
+    <text x="450" y="232" text-anchor="middle" font-size="12" fill="#1b5e20">最省 token · 最快</text>
+    <text x="450" y="252" text-anchor="middle" font-size="12" fill="#2e7d32">中位 ~4.8 分钟 / 100 行</text>
+  </g>
+
+  <!-- Vibe coding -->
+  <g>
+    <rect x="620" y="110" width="220" height="150" rx="12" fill="#fff3e0" stroke="#e67e22" stroke-width="2"/>
+    <text x="730" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#a84300">Vibe coding</text>
+    <text x="730" y="162" text-anchor="middle" font-size="12" fill="#b86a1a">agent 写 &gt;99%</text>
+    <text x="730" y="215" text-anchor="middle" font-size="42" font-weight="800" fill="#e67e22">40.8%</text>
+    <text x="730" y="240" text-anchor="middle" font-size="12" fill="#b86a1a">3 个月内 20% → 40%</text>
+  </g>
+
+  <!-- Cost comparison focus -->
+  <text x="450" y="320" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">每 100 行 commit 的代价</text>
+
+  <!-- Collaborative bar -->
+  <g>
+    <text x="240" y="362" text-anchor="end" font-size="13" fill="#1b5e20" font-weight="600">Collaborative</text>
+    <rect x="250" y="348" width="90" height="24" fill="#2e9e5b" rx="4"/>
+    <text x="350" y="366" font-size="12" fill="#333">~70K tok · $0.05 · ~5 min</text>
+  </g>
+
+  <!-- Vibe bar -->
+  <g>
+    <text x="240" y="404" text-anchor="end" font-size="13" fill="#a84300" font-weight="600">Vibe coding</text>
+    <rect x="250" y="390" width="270" height="24" fill="#e67e22" rx="4"/>
+    <text x="530" y="408" font-size="12" fill="#333" font-weight="600">204K tok · $0.13 · 12.6 min</text>
+  </g>
+
+  <!-- connector arrows -->
+  <path d="M450,275 C450,310 380,330 340,348" stroke="#2e9e5b" stroke-width="1.8" fill="none" stroke-dasharray="4,4" marker-end="url(#arrG)" opacity="0.8"/>
+  <path d="M730,260 C730,320 600,360 520,390" stroke="#e67e22" stroke-width="1.8" fill="none" stroke-dasharray="4,4" marker-end="url(#arrO)" opacity="0.8"/>
+
+  <!-- Insight box -->
+  <g>
+    <rect x="120" y="450" width="660" height="120" rx="12" fill="#1a1a2e"/>
+    <text x="450" y="482" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">真实数据下的反直觉结论</text>
+    <text x="450" y="510" text-anchor="middle" font-size="13" fill="#ffd59e">全托管 agent：反复自我重写 + 用户多轮纠正</text>
+    <text x="450" y="538" text-anchor="middle" font-size="13" fill="#a8e6b3">→ 人机协作反而 token ↓3× · 成本 ↓2.5× · 代码留存更高</text>
+    <text x="450" y="560" text-anchor="middle" font-size="12" fill="#bbb">例：一个 vibe 会话 106 次 tool call 才 commit</text>
+  </g>
+</svg>

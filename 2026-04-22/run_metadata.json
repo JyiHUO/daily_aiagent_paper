@@ -16,7 +16,7 @@
     "Scaling Test-Time Compute for Agentic Coding",
     "AutomationBench"
   ],
-  "knowledge_topic": "Agent Runtime / Harness 层：Agent 系统中确定性执行与可控性的关键层",
+  "knowledge_topic": "Planner 为什么重要",
   "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/paper_broadcast_script.txt",
   "broadcast_audio_path": "",
   "broadcast_audio_wav_path": ""

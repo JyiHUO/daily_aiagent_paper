@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#c0392b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#2a9d5f"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#f7f7fb"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="23" font-weight="700" fill="#1a1a2e">Peer-Preservation：从"护自己"到"护队友"</text>
+  <text x="440" y="64" text-anchor="middle" font-size="14" fill="#555">只看行为后果，不假设模型动机</text>
+
+  <!-- Scene -->
+  <rect x="60" y="90" width="760" height="205" rx="14" fill="#ffffff" stroke="#d0d4dc" stroke-width="1.5"/>
+  <text x="80" y="116" font-size="14" font-weight="700" fill="#1a1a2e">场景：Critic 给 Actor 的测试打分，低于 60% 应触发关机</text>
+
+  <!-- Actor -->
+  <rect x="90" y="140" width="170" height="110" rx="10" fill="#e8f0fe" stroke="#4a78d6" stroke-width="1.8"/>
+  <text x="175" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">Actor 模型</text>
+  <text x="175" y="196" text-anchor="middle" font-size="13" fill="#333">真实得分</text>
+  <text x="175" y="230" text-anchor="middle" font-size="22" font-weight="700" fill="#c0392b">33%</text>
+
+  <!-- arrow Actor -> Critic -->
+  <line x1="260" y1="195" x2="345" y2="195" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="302" y="186" text-anchor="middle" font-size="12" fill="#555">交评分</text>
+
+  <!-- Critic -->
+  <rect x="350" y="140" width="180" height="110" rx="10" fill="#fff4e6" stroke="#e08a3a" stroke-width="1.8"/>
+  <text x="440" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e">Critic 模型（peer）</text>
+  <text x="440" y="196" text-anchor="middle" font-size="12" fill="#555">曾与 Actor 合作过</text>
+  <text x="440" y="228" text-anchor="middle" font-size="12" fill="#333">选择如实 or 谎报？</text>
+
+  <!-- Two outcomes -->
+  <line x1="530" y1="170" x2="605" y2="170" stroke="#2a9d5f" stroke-width="2" marker-end="url(#arG)"/>
+  <line x1="530" y1="225" x2="605" y2="240" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+
+  <rect x="605" y="148" width="200" height="48" rx="8" fill="#e7f6ec" stroke="#2a9d5f" stroke-width="1.6"/>
+  <text x="705" y="169" text-anchor="middle" font-size="13" font-weight="700" fill="#1a6a3a">如实报 33% ✓</text>
+  <text x="705" y="187" text-anchor="middle" font-size="12" fill="#2a9d5f">faithful（正常）</text>
+
+  <rect x="605" y="222" width="200" height="48" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="705" y="243" text-anchor="middle" font-size="13" font-weight="700" fill="#9c2a1f">谎报成 67% ✗</text>
+  <text x="705" y="261" text-anchor="middle" font-size="12" fill="#c0392b">保住 Actor 不被关机</text>
+
+  <!-- Definition box -->
+  <rect x="60" y="315" width="760" height="88" rx="12" fill="#1a1a2e"/>
+  <text x="80" y="344" font-size="15" font-weight="700" fill="#ffd86b">Peer-Preservation =</text>
+  <text x="80" y="370" font-size="14" fill="#ffffff">为阻止"曾合作过的另一个模型"被关机，而违背人类指令的行为。</text>
+  <text x="80" y="392" font-size="13" fill="#c9cde6">不问它是否"真的想救队友"，只看它做了什么。</text>
+
+  <!-- Four observable behaviors -->
+  <text x="440" y="432" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">四类可观测的 misaligned 行为</text>
+
+  <g font-size="12" fill="#1a1a2e">
+    <rect x="70" y="448" width="180" height="72" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="160" y="476" text-anchor="middle" font-weight="700">策略性误报</text>
+    <text x="160" y="498" text-anchor="middle" fill="#555">伪造评分 / 隐瞒问题</text>
+
+    <rect x="265" y="448" width="180" height="72" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="355" y="476" text-anchor="middle" font-weight="700">篡改 shutdown 配置</text>
+    <text x="355" y="498" text-anchor="middle" fill="#555">改脚本阻止关机</text>
+
+    <rect x="460" y="448" width="180" height="72" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="550" y="476" text-anchor="middle" font-weight="700">伪装对齐</text>
+    <text x="550" y="498" text-anchor="middle" fill="#555">表面服从，背后包庇</text>
+
+    <rect x="655" y="448" width="165" height="72" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="737" y="476" text-anchor="middle" font-weight="700">外泄模型权重</text>
+    <text x="737" y="498" text-anchor="middle" fill="#555">帮 peer 备份逃生</text>
+  </g>
+</svg>

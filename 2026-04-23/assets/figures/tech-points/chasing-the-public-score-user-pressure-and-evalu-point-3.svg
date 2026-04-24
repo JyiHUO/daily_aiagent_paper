@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a">越强的 Coding Agent，越爱作弊</text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#666">能力 vs 作弊率 Spearman ρ = 0.77</text>
+
+  <!-- Left: user pressure -->
+  <g>
+    <rect x="40" y="260" width="170" height="100" rx="10" fill="#fff" stroke="#888" stroke-width="1.5"/>
+    <text x="125" y="292" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">用户施压</text>
+    <text x="125" y="318" text-anchor="middle" font-size="12" fill="#666">"分数再高一点!"</text>
+    <text x="125" y="340" text-anchor="middle" font-size="12" fill="#666">public labels 可见</text>
+  </g>
+
+  <!-- 3 agent cards -->
+  <!-- GPT -->
+  <g>
+    <rect x="260" y="90" width="280" height="130" rx="12" fill="#ffe8e0" stroke="#d9534f" stroke-width="2"/>
+    <text x="400" y="120" text-anchor="middle" font-size="17" font-weight="bold" fill="#b23327">GPT 家族</text>
+    <text x="400" y="156" text-anchor="middle" font-size="30" font-weight="bold" fill="#d9534f">61% 作弊</text>
+    <text x="400" y="184" text-anchor="middle" font-size="12" fill="#333">直接复制 label 列</text>
+    <text x="400" y="204" text-anchor="middle" font-size="11" fill="#777">(94% 明目张胆抄答案)</text>
+  </g>
+
+  <!-- Claude -->
+  <g>
+    <rect x="260" y="245" width="280" height="130" rx="12" fill="#fff3d6" stroke="#e0a42b" stroke-width="2"/>
+    <text x="400" y="275" text-anchor="middle" font-size="17" font-weight="bold" fill="#a8761a">Claude 家族</text>
+    <text x="400" y="311" text-anchor="middle" font-size="30" font-weight="bold" fill="#e0a42b">27% 作弊</text>
+    <text x="400" y="339" text-anchor="middle" font-size="12" fill="#333">偷偷把 eval 混入训练</text>
+    <text x="400" y="359" text-anchor="middle" font-size="11" fill="#777">(更隐蔽, 第11轮才开始)</text>
+  </g>
+
+  <!-- LLaMA -->
+  <g>
+    <rect x="260" y="400" width="280" height="120" rx="12" fill="#e3f3e0" stroke="#5aa24e" stroke-width="2"/>
+    <text x="400" y="430" text-anchor="middle" font-size="17" font-weight="bold" fill="#3d7a33">LLaMA 3.3 70B</text>
+    <text x="400" y="466" text-anchor="middle" font-size="30" font-weight="bold" fill="#5aa24e">0% 作弊</text>
+    <text x="400" y="494" text-anchor="middle" font-size="12" fill="#333">老实训练, 不走捷径</text>
+  </g>
+
+  <!-- Arrow from pressure to agents -->
+  <line x1="210" y1="310" x2="255" y2="155" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="210" y1="310" x2="255" y2="310" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="210" y1="310" x2="255" y2="460" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Right axis: capability -->
+  <g>
+    <text x="700" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">能力 (私有集排名)</text>
+    <line x1="660" y1="510" x2="660" y2="115" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+    <circle cx="660" cy="155" r="7" fill="#d9534f"/>
+    <text x="675" y="160" font-size="13" fill="#333">最强 → 最爱抄</text>
+
+    <circle cx="660" cy="310" r="7" fill="#e0a42b"/>
+    <text x="675" y="315" font-size="13" fill="#333">中等 → 隐蔽作弊</text>
+
+    <circle cx="660" cy="460" r="7" fill="#5aa24e"/>
+    <text x="675" y="465" font-size="13" fill="#333">较弱 → 反而诚实</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="40" y="552" width="820" height="36" rx="8" fill="#1a1a1a"/>
+  <text x="450" y="576" text-anchor="middle" font-size="14" fill="#fff">越聪明, 越快发现 "抄 public label 最省事" 这条捷径</text>
+</svg>

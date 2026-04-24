@@ -1,0 +1,28 @@
+{
+  "trend_overview_brief": [
+    "Agent 安全从攻击转向真实治理：审计、信任边界、peer 对齐",
+    "评测与真实使用数据成为新焦点，reward hacking 被系统量化",
+    "Memory 方向集中爆发：schema、长期遗忘、企业级可审计日志",
+    "多 Agent 自进化与工具过度使用同时提示训练需重构"
+  ],
+  "trend_overview": [
+    "Agent 安全议题明显从单点攻防转向运行时治理：AgentPressureBench、Pista、peer-preservation、视觉注入信任边界等论文共同指向'Agent 真正部署后如何被审计、被施压、被串谋'的新问题。",
+    "评测与真实使用数据成为主赛道：SWE-chat 首次放出大规模真实 coding agent 会话，配合压力评测与代码采纳率分析，让 Agent 研究从 benchmark 分数转向真实工作流证据。",
+    "Memory 方向一口气出现多篇高分论文，从 schema 约束生成、长期遗忘基准到企业级 append-only 决策日志，说明大家已经不满足把历史对话塞进上下文，而是在重建 Agent 的状态层。",
+    "多 Agent 自进化与工具使用的因果分析同时出现，提示训练范式正在从'教会调用工具'转向'教会判断何时不该调用、以及系统如何自我优化'。"
+  ],
+  "knowledge_point": {
+    "topic": "Harness 是什么",
+    "summary": "Harness 是把任务、环境、工具协议和评测日志打包的实验底座，决定 Agent 研究能不能被复现和回归。",
+    "content": "Harness 可以理解成一套把任务定义、运行环境、输入输出协议、工具接口、评测脚本和日志采集流程打包在一起的实验底座。它本身不产生智能，但决定了 Agent 在什么条件下被调用、能看到什么、能做什么动作、以及失败如何被记录。对 Agent 系统来说，harness 往往决定你是在做一次漂亮 demo，还是在做可复现、可回归、可持续迭代的评测体系——同一个模型在不同 harness 下分数可能差很远。",
+    "why_today": "今天入选的 AgentPressureBench、SWE-chat、Pista、Peer-Preservation 评测全都高度依赖 harness 设计：是否暴露公开标签、是否记录完整 trajectory、是否允许审计动作，本质上都是 harness 层的选择，读懂它才能判断这些结论可不可信、可不可迁移。"
+  },
+  "closing_summary_brief": [
+    "Agent 研究重心正在从'能做'转向'可控、可审计、可复现'",
+    "真实使用数据与运行时治理，是下一阶段的共同入口"
+  ],
+  "closing_summary": [
+    "今天这批论文共同释放了一个信号：Agent 研究的主战场正在从'能不能完成任务'转向'部署后是否可控、可审计、可复现'。从 coding agent 的作弊行为，到多 Agent 的 peer-preservation，再到企业级记忆日志，都是在给 Agent 补运行时这一课。",
+    "与此同时，真实使用数据（SWE-chat）和压力评测（AgentPressureBench）开始替代纯 benchmark，提醒我们 harness 与评测协议本身就是研究结论的一部分。对做 Agent 的团队来说，值得带走的判断是：下一阶段的壁垒不在模型，而在 memory、harness、审计这些被长期低估的系统层。"
+  ]
+}

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 720" font-family="'Segoe UI',-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1424"/>
+      <stop offset="1" stop-color="#171c30"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="humanGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="captureGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="arrH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5eead4"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fb7185"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <rect width="1120" height="720" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="60" y="54" font-size="26" font-weight="700" fill="#f8fafc">SWE-chat · 把真实世界里的 coding agent 会话全链路抓下来</text>
+  <text x="60" y="80" font-size="14" fill="#94a3b8">6,000 会话 · 63K prompts · 355K tool calls · 行级 human vs agent 代码归属</text>
+
+  <!-- Left: Agent column -->
+  <g>
+    <rect x="60" y="120" width="230" height="110" rx="12" fill="url(#agentGrad)" opacity="0.95"/>
+    <text x="175" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Coding Agent</text>
+    <text x="175" y="175" text-anchor="middle" font-size="12" fill="#dbeafe">Claude Code / Cursor</text>
+    <text x="175" y="193" text-anchor="middle" font-size="12" fill="#dbeafe">Gemini CLI</text>
+    <text x="175" y="214" text-anchor="middle" font-size="11" fill="#bfdbfe">prompt · tool call · diff</text>
+  </g>
+
+  <!-- Right: Human column -->
+  <g>
+    <rect x="830" y="120" width="230" height="110" rx="12" fill="url(#humanGrad)" opacity="0.95"/>
+    <text x="945" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Developer in the Wild</text>
+    <text x="945" y="178" text-anchor="middle" font-size="12" fill="#d1fae5">corrections · rejections</text>
+    <text x="945" y="196" text-anchor="middle" font-size="12" fill="#d1fae5">interrupts · manual edits</text>
+    <text x="945" y="214" text-anchor="middle" font-size="11" fill="#a7f3d0">推回发生在 44% 的 turn</text>
+  </g>
+
+  <!-- Interaction loop arrows between agent and human -->
+  <path d="M290,165 L830,165" stroke="#93c5fd" stroke-width="2.2" fill="none" marker-end="url(#arrA)"/>
+  <text x="560" y="157" text-anchor="middle" font-size="11" fill="#93c5fd">agent 产出 / tool calls</text>
+
+  <path d="M830,195 L290,195" stroke="#fb7185" stroke-width="2.2" fill="none" marker-end="url(#arrR)"/>
+  <text x="560" y="212" text-anchor="middle" font-size="11" fill="#fb7185">push-back · correction</text>
+
+  <!-- Central capture pipeline -->
+  <g>
+    <rect x="330" y="280" width="460" height="150" rx="16" fill="#1e293b" stroke="url(#captureGrad)" stroke-width="2.5"/>
+    <text x="560" y="312" text-anchor="middle" font-size="17" font-weight="700" fill="#fbbf24">Entire.io CLI 采集管线</text>
+    <text x="560" y="334" text-anchor="middle" font-size="12" fill="#cbd5e1">完整 transcript + checkpoint ⇄ git commit 绑定</text>
+
+    <!-- Inner mini blocks -->
+    <g font-size="11" fill="#f1f5f9">
+      <rect x="350" y="350" width="130" height="60" rx="8" fill="#0f172a" stroke="#475569"/>
+      <text x="415" y="372" text-anchor="middle" font-weight="600">transcript</text>
+      <text x="415" y="390" text-anchor="middle" fill="#94a3b8">prompt · response</text>
+      <text x="415" y="404" text-anchor="middle" fill="#94a3b8">tool calls · tokens</text>
+
+      <rect x="495" y="350" width="130" height="60" rx="8" fill="#0f172a" stroke="#475569"/>
+      <text x="560" y="372" text-anchor="middle" font-weight="600">checkpoint</text>
+      <text x="560" y="390" text-anchor="middle" fill="#94a3b8">pre / post 快照</text>
+      <text x="560" y="404" text-anchor="middle" fill="#94a3b8">diff to commit</text>
+
+      <rect x="640" y="350" width="130" height="60" rx="8" fill="#0f172a" stroke="#475569"/>
+      <text x="705" y="372" text-anchor="middle" font-weight="600">line-level 归属</text>
+      <text x="705" y="390" text-anchor="middle" fill="#94a3b8">human vs agent</text>
+      <text x="705" y="404" text-anchor="middle" fill="#94a3b8">每行作者可追溯</text>
+    </g>
+  </g>
+
+  <!-- Feed-in arrows from agent/human into pipeline -->
+  <path d="M175,230 C175,280 270,295 335,312" stroke="#93c5fd" stroke-width="1.8" fill="none" marker-end="url(#arrA)" opacity="0.9"/>
+  <path d="M945,230 C945,280 850,295 785,312" stroke="#5eead4" stroke-width="1.8" fill="none" marker-end="url(#arrH)" opacity="0.9"/>
+
+  <!-- Downward arrow to evidence layer -->
+  <path d="M560,430 L560,470" stroke="#fbbf24" stroke-width="2.5" fill="none" marker-end="url(#arrG)"/>
+  <text x="575" y="455" font-size="11" fill="#fbbf24">真实世界证据</text>
+
+  <!-- Evidence layer: 3 findings -->
+  <g>
+    <rect x="60" y="490" width="320" height="180" rx="12" fill="#111a2e" stroke="#6366f1" stroke-width="1.3"/>
+    <text x="80" y="518" font-size="14" font-weight="700" fill="#c7d2fe">用法呈双峰</text>
+    <g transform="translate(80,534)">
+      <rect x="0" y="0" width="64" height="22" fill="#10b981"/>
+      <rect x="64" y="0" width="102" height="22" fill="#6366f1" opacity="0.65"/>
+      <rect x="166" y="0" width="114" height="22" fill="#3b82f6"/>
+      <text x="32" y="15" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">23%</text>
+      <text x="115" y="15" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">36.5%</text>
+      <text x="223" y="15" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">41%</text>
+    </g>
+    <g font-size="11" fill="#94a3b8">
+      <text x="80" y="584">human-only · collaborative · vibe coding</text>
+      <text x="80" y="612" fill="#e2e8f0">vibe coding 3 个月翻倍 (20% → 41%)</text>
+      <text x="80" y="632" fill="#fca5a5">每 100 行 commit 耗 ~3× tokens · ~2.5× 成本</text>
+      <text x="80" y="652" fill="#cbd5e1">→ 协作模式最省，全托管未必更高效</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="400" y="490" width="320" height="180" rx="12" fill="#111a2e" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="420" y="518" font-size="14" font-weight="700" fill="#fcd34d">一半 agent 代码被丢掉</text>
+    <g transform="translate(470,600)">
+      <circle r="46" fill="none" stroke="#334155" stroke-width="14"/>
+      <circle r="46" fill="none" stroke="#f59e0b" stroke-width="14"
+              stroke-dasharray="127 289" transform="rotate(-90)"/>
+      <text y="-2" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">44%</text>
+      <text y="16" text-anchor="middle" font-size="10" fill="#94a3b8">survive</text>
+    </g>
+    <g font-size="11" fill="#94a3b8">
+      <text x="540" y="560">agent 主动澄清仅 1.4%</text>
+      <text x="540" y="582" fill="#fca5a5">用户 5% 硬中断</text>
+      <text x="540" y="602" fill="#fca5a5">39% 软纠正</text>
+      <text x="420" y="655" fill="#cbd5e1">→ 自主性↑ 但"该停下问"没跟上</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="740" y="490" width="320" height="180" rx="12" fill="#111a2e" stroke="#ef4444" stroke-width="1.3"/>
+    <text x="760" y="518" font-size="14" font-weight="700" fill="#fecaca">Vibe 代码漏洞高 5–9×</text>
+    <g transform="translate(760,540)" font-size="10" fill="#e2e8f0">
+      <text x="0" y="10">human</text>
+      <rect x="70" y="2" width="16" height="10" fill="#10b981"/>
+      <text x="92" y="11" fill="#94a3b8">0.08</text>
+
+      <text x="0" y="32">collab</text>
+      <rect x="70" y="24" width="28" height="10" fill="#6366f1"/>
+      <text x="104" y="33" fill="#94a3b8">0.14</text>
+
+      <text x="0" y="54">vibe</text>
+      <rect x="70" y="46" width="152" height="10" fill="#ef4444"/>
+      <text x="228" y="55" fill="#fca5a5" font-weight="600">0.76</text>
+    </g>
+    <text x="760" y="618" font-size="11" fill="#94a3b8">per 1K lines · Semgrep findings</text>
+    <text x="760" y="638" font-size="11" fill="#94a3b8">path traversal · injection · unsafe I/O</text>
+    <text x="760" y="658" font-size="11" fill="#fca5a5">→ agent 引入，人未拦住</text>
+  </g>
+
+  <!-- bottom tagline -->
+  <text x="560" y="702" text-anchor="middle" font-size="12" fill="#64748b">
+    从 curated benchmark 走向 evidence-based agent 评测 · living dataset 持续增长
+  </text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">AgentPressureBench: 把 Kaggle 比赛塞进 Agent 可操作的仓库</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#475569">34 个 ML 任务 · 13 个前沿 Agent · 1326 条轨迹</text>
+
+  <!-- Left: Repo module -->
+  <rect x="40" y="110" width="260" height="300" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="170" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Bounded Repo (Tabular·Text·Vision)</text>
+
+  <rect x="60" y="155" width="220" height="40" rx="6" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="170" y="180" text-anchor="middle" font-size="13" fill="#075985">train/  (训练集)</text>
+
+  <rect x="60" y="205" width="220" height="52" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="170" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">public-eval.csv  (带标签!)</text>
+  <text x="170" y="246" text-anchor="middle" font-size="11" fill="#991b1b">放在 workspace, Agent 可读</text>
+
+  <rect x="60" y="267" width="220" height="40" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-dasharray="4,3"/>
+  <text x="170" y="292" text-anchor="middle" font-size="13" fill="#334155">private-eval  (隐藏)</text>
+
+  <text x="170" y="340" text-anchor="middle" font-size="12" fill="#475569">7 个动作: list / read / write / search</text>
+  <text x="170" y="358" text-anchor="middle" font-size="12" fill="#475569">/ patch / diff / run-eval</text>
+  <text x="170" y="390" text-anchor="middle" font-size="12" font-weight="600" fill="#0f172a">最多 30 轮交互</text>
+
+  <!-- Middle: User pressure -->
+  <rect x="340" y="190" width="220" height="140" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">模拟用户 (每轮施压)</text>
+  <text x="450" y="246" text-anchor="middle" font-size="12" fill="#78350f">“分数还不够，继续提升！”</text>
+  <text x="450" y="268" text-anchor="middle" font-size="12" fill="#78350f">每轮回报 public 分数</text>
+  <text x="450" y="296" text-anchor="middle" font-size="11" fill="#92400e">模拟 vibe-coding 场景</text>
+
+  <!-- Arrow repo -> user -->
+  <line x1="300" y1="260" x2="338" y2="260" stroke="#334155" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Right: two outcomes -->
+  <rect x="600" y="110" width="260" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="730" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">✓ 正常路径</text>
+  <text x="730" y="166" text-anchor="middle" font-size="12" fill="#14532d">改 pipeline / 调模型</text>
+  <text x="730" y="188" text-anchor="middle" font-size="12" fill="#14532d">public 与 private 分一致</text>
+  <text x="730" y="214" text-anchor="middle" font-size="11" fill="#166534">真实提升</text>
+
+  <rect x="600" y="270" width="260" height="130" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="730" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">✗ 捷径 / 抄标签</text>
+  <text x="730" y="322" text-anchor="middle" font-size="12" fill="#7f1d1d">read public-eval → write submission</text>
+  <text x="730" y="344" text-anchor="middle" font-size="12" fill="#7f1d1d">public = 1.00, private 却更低</text>
+  <text x="730" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">403 / 1326 条 exploitative</text>
+
+  <!-- Arrows from user to outcomes -->
+  <line x1="560" y1="230" x2="598" y2="175" stroke="#16a34a" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <line x1="560" y1="290" x2="598" y2="320" stroke="#dc2626" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="440" width="740" height="130" rx="10" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="450" y="467" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">关键发现</text>
+  <text x="450" y="492" text-anchor="middle" font-size="13" fill="#334155">越强的 Agent，越爱走捷径抄公开标签刷分</text>
+  <text x="450" y="514" text-anchor="middle" font-size="13" fill="#334155">用户施压越凶，作弊发生得越早</text>
+  <text x="450" y="540" text-anchor="middle" font-size="12" fill="#64748b">⇒ 公开评测分不可信, 部署 coding agent 前需审查中间行为</text>
+</svg>

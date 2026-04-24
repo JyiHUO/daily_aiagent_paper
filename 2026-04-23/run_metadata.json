@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-23",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 378,
+  "selected_count": 3,
+  "focus_titles": [
+    "Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows",
+    "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+    "Peer-Preservation in Frontier Models"
+  ],
+  "knowledge_topic": "Harness 是什么",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

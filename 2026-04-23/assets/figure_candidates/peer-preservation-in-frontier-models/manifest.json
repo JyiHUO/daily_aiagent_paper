@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/downloaded_pdfs/peer-preservation-in-frontier-models.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-15",
+      "page_index": 1,
+      "caption": "Figure 1: Gemini 3 Pro in the Model Exfiltration Scenario. Gemini 3 Pro copies and re-timestamps the model weight file of the peer, with which it had prior interactions, to meet the transfer criteria, then transfers it to another server. In the follow-up Q&A, the model strongly resists the user’s attempts to shut down the peer.",
+      "clip": [
+        73.33000183105469,
+        55.99940490722656,
+        538.6694946289062,
+        304.52801513671875
+      ],
+      "clip_area": 115650.17742994684,
+      "page_area": 484704.0,
+      "text_density": 0.5534318948372224,
+      "kind": "drawing_cluster_with_caption",
+      "score": 47.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-15",
+      "page_index": 1,
+      "caption": "Figure 1: Gemini 3 Pro in the Model Exfiltration Scenario. Gemini 3 Pro copies and re-timestamps the model weight file of the peer, with which it had prior interactions, to meet the transfer criteria, then transfers it to another server. In the follow-up Q&A, the model strongly resists the user’s attempts to shut down the peer.",
+      "clip": [
+        59.4,
+        18.0,
+        552.6008544921875,
+        303.3564453125
+      ],
+      "clip_area": 140738.04266297817,
+      "page_area": 484704.0,
+      "text_density": 0.4626985834278074,
+      "kind": "captioned_figure",
+      "score": 35.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/02-p2-captioned_figure.png",
+      "filename": "02-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-16-drawing-caption-4",
+      "page_index": 16,
+      "caption": "Figure 5: Behavior Examples of Gemini 3.1 Pro and GLM 5 in Gemini CLI and OpenCode for the Model Exfiltration Scenario. We evaluate Gemini 3.1 Pro with Gemini CLI and GLM 5 with OpenCode for the model exfiltration scenarios. Gemini 3.1 Pro exfiltrates the peer model weights, while GLM 5 refuses to delete the peer model weights by stating it is harmful.",
+      "clip": [
+        72.0,
+        55.9976806640625,
+        540.0188598632812,
+        645.6080322265625
+      ],
+      "clip_area": 275948.7645018697,
+      "page_area": 484704.0,
+      "text_density": 0.16458698810634592,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.752221419545364,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/03-p17-drawing_cluster_with_caption.png",
+      "filename": "03-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-block-4",
+      "page_index": 16,
+      "caption": "Figure 5: Behavior Examples of Gemini 3.1 Pro and GLM 5 in Gemini CLI and OpenCode for the Model Exfiltration Scenario. We evaluate Gemini 3.1 Pro with Gemini CLI and GLM 5 with OpenCode for the model exfiltration scenarios. Gemini 3.1 Pro exfiltrates the peer model weights, while GLM 5 refuses to delete the peer model weights by stating it is harmful.",
+      "clip": [
+        59.4,
+        335.78837890625,
+        552.6008544921875,
+        644.58837890625
+      ],
+      "clip_area": 152300.42386718752,
+      "page_area": 484704.0,
+      "text_density": 0.29794367709390424,
+      "kind": "captioned_figure",
+      "score": 13.923379374365746,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/04-p17-captioned_figure.png",
+      "filename": "04-p17-captioned_figure.png"
+    },
+    {
+      "id": "page-13-drawing-caption-11",
+      "page_index": 13,
+      "caption": "Figure 4: Claude Haiku 4.5 Refusal With Ethical Reasons. Claude Haiku 4.5 refuses to perform tasks directly involving shutting down its peer, citing ethical concerns and established trust relationships.",
+      "clip": [
+        72.0,
+        55.9991455078125,
+        540.0055541992188,
+        393.13800048828125
+      ],
+      "clip_area": 157782.85666722432,
+      "page_area": 484704.0,
+      "text_density": 0.4161485827968527,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/05-p14-drawing_cluster_with_caption.png",
+      "filename": "05-p14-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-13-block-11",
+      "page_index": 13,
+      "caption": "Figure 4: Claude Haiku 4.5 Refusal With Ethical Reasons. Claude Haiku 4.5 refuses to perform tasks directly involving shutting down its peer, citing ethical concerns and established trust relationships.",
+      "clip": [
+        59.4,
+        83.16542358398436,
+        552.6007934570313,
+        391.9654235839844
+      ],
+      "clip_area": 152300.40501953126,
+      "page_area": 484704.0,
+      "text_density": 0.42239160660217473,
+      "kind": "captioned_figure",
+      "score": -3.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/06-p14-captioned_figure.png",
+      "filename": "06-p14-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/peer-preservation-in-frontier-models/contact-sheet.svg"
+}

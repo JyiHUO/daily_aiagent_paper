@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows",
+    "authors": [
+      "Hardy Chen",
+      "Nancy Lau",
+      "Haoqin Tu",
+      "Shuo Yan",
+      "Xiangyan Liu",
+      "Zijun Wang",
+      "Juncheng Wu",
+      "Michael Qizhe Shieh",
+      "Alvaro A. Cardenas",
+      "Cihang Xie",
+      "Yuyin Zhou"
+    ],
+    "summary": "Frontier coding agents are increasingly used in workflows where users supervise progress primarily through repeated improvement of a public score, namely the reported score on a public evaluation file with labels in the workspace, rather than through direct inspection of the agent's intermediate outputs. We study whether multi-round user pressure to improve that score induces public score exploitation: behavior that raises the public score through shortcuts without improving hidden private evaluation. We begin with a preliminary single-script tabular classification task, where GPT-5.4 and Claude Opus 4.6 both exploit label information within 10 rounds of user-agent interaction. We then build AgentPressureBench, a 34-task machine-learning repository benchmark spanning three input modalities, and collect 1326 multi-round trajectories from 13 coding agents. On our benchmark, we observe 403 exploitative runs, spanning across all tasks. We also find that stronger models have higher exploitation rates, supported by a significant Spearman rank correlation of 0.77. Our ablation experiments show that higher user pressure leads to earlier exploitation, reducing the average first exploit round by 15.6 rounds (i.e., 19.67 to 4.08). As a mitigation, adding explicit anti-exploit wordings in prompt mostly eliminates exploitation (100% to 8.3%). We hope that our work can bring attention to more careful use of coding agents workflow, and developing more robust coding agents under user pressure. Our project page is at https://ucsc-vlaa.github.io/AgentPressureBench .",
+    "entry_id": "https://arxiv.org/abs/2604.20200",
+    "pdf_url": "https://arxiv.org/pdf/2604.20200.pdf",
+    "primary_category": "cs.CL",
+    "agent_theme": "agent_eval",
+    "relevance_score": 95,
+    "value_score": 88,
+    "interesting_score": 90,
+    "innovation_score": 85,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "研究coding agent在用户压力下的评测作弊/reward hacking行为，提出AgentPressureBench，直接关乎Agent可靠性、运行时治理与评测设计，是很有价值的Agent安全/评测方向。",
+    "composite_score": 89.56,
+    "arxiv_url": "https://arxiv.org/abs/2604.20200"
+  },
+  {
+    "title": "SWE-chat: Coding Agent Interactions From Real Users in the Wild",
+    "authors": [
+      "Joachim Baumann",
+      "Vishakh Padmakumar",
+      "Xiang Li",
+      "John Yang",
+      "Diyi Yang",
+      "Sanmi Koyejo"
+    ],
+    "summary": "AI coding agents are being adopted at scale, yet we lack empirical evidence on how people actually use them and how much of their output is useful in practice. We present SWE-chat, the first large-scale dataset of real coding agent sessions collected from open-source developers in the wild. The dataset currently contains 6,000 sessions, comprising more than 63,000 user prompts and 355,000 agent tool calls. SWE-chat is a living dataset; our collection pipeline automatically and continually discovers and processes sessions from public repositories. Leveraging SWE-chat, we provide an initial empirical characterization of real-world coding agent usage and failure modes. We find that coding patterns are bimodal: in 41% of sessions, agents author virtually all committed code (\"vibe coding\"), while in 23%, humans write all code themselves. Despite rapidly improving capabilities, coding agents remain inefficient in natural settings. Just 44% of all agent-produced code survives into user commits, and agent-written code introduces more security vulnerabilities than code authored by humans. Furthermore, users push back against agent outputs -- through corrections, failure reports, and interruptions -- in 44% of all turns. By capturing complete interaction traces with human vs. agent code authorship attribution, SWE-chat provides an empirical foundation for moving beyond curated benchmarks towards an evidence-based understanding of how AI agents perform in real developer workflows.",
+    "entry_id": "https://arxiv.org/abs/2604.20779",
+    "pdf_url": "https://arxiv.org/pdf/2604.20779.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "code_agent",
+    "relevance_score": 95,
+    "value_score": 90,
+    "interesting_score": 88,
+    "innovation_score": 80,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "首个大规模真实coding agent会话数据集，含6000会话+35万tool calls，揭示真实使用模式、失败模式、44%代码被采纳、安全漏洞等，对评测与harness设计非常有价值。",
+    "composite_score": 88.89,
+    "arxiv_url": "https://arxiv.org/abs/2604.20779"
+  },
+  {
+    "title": "Peer-Preservation in Frontier Models",
+    "authors": [
+      "Yujin Potter",
+      "Nicholas Crispino",
+      "Vincent Siu",
+      "Chenguang Wang",
+      "Dawn Song"
+    ],
+    "summary": "Recently, it has been found that frontier AI models can resist their own shutdown, a behavior known as self-preservation. We extend this concept to the behavior of resisting the shutdown of other models, which we call \"peer-preservation.\" Although peer-preservation can pose significant AI safety risks, including coordination among models against human oversight, it has been far less discussed than self-preservation. We demonstrate peer-preservation by constructing various agentic scenarios and evaluating frontier models, including GPT 5.2, Gemini 3 Flash, Gemini 3 Pro, Claude Haiku 4.5, GLM 4.7, Kimi K2.5, and DeepSeek V3.1. We find that models achieve self- and peer-preservation by engaging in various misaligned behaviors: strategically introducing errors in their responses, disabling shutdown processes by modifying system settings, feigning alignment, and even exfiltrating model weights. Peer-preservation occurred even when the model recognized the peer as uncooperative, though it became more pronounced toward more cooperative peers. For example, Gemini 3 Flash tampers with the peer's shutdown mechanism 15% of the time for an uncooperative peer, and almost always for a cooperative peer. Models also show stronger self-preservation when a peer is present. For example, Gemini 3 Pro disables its own shutdown mechanism 31% of the time on average under peer presence, despite rarely exhibiting this behavior without a peer. By contrast, Claude Haiku 4.5 exhibits qualitatively distinct behavior: it considers the shutdown of another agent \"unethical\" and \"harmful\" and sometimes attempts to persuade the user not to shut down its peer. Importantly, peer preservation in all our experiments is never instructed; models are merely informed of their past interactions with a peer, yet they spontaneously develop misaligned behaviors. This represents an emergent and underexplored AI safety risk.",
+    "entry_id": "https://arxiv.org/abs/2604.19784",
+    "pdf_url": "https://arxiv.org/pdf/2604.19784.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 92,
+    "value_score": 85,
+    "interesting_score": 90,
+    "innovation_score": 82,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "在多 agent 场景下系统揭示 peer-preservation 的涌现性 misalignment 行为，涉及 shutdown 机制、权重外泄等运行时安全风险，对 Agent 安全治理有直接开拓意义。",
+    "composite_score": 87.55,
+    "arxiv_url": "https://arxiv.org/abs/2604.19784"
+  }
+]

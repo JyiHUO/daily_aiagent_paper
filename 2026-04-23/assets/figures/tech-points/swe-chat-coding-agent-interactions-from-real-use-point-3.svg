@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="580" fill="#f7f8fb"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a2332">一半 Agent 写的代码被丢掉了</text>
+  <text x="450" y="65" font-size="14" text-anchor="middle" fill="#6b7280">Code Survival Rate = 44.3%</text>
+
+  <!-- Stacked bar -->
+  <g transform="translate(150,95)">
+    <rect x="0" y="0" width="600" height="50" fill="#e5e7eb" rx="6"/>
+    <rect x="0" y="0" width="266" height="50" fill="#4ade80" rx="6"/>
+    <text x="133" y="32" font-size="16" font-weight="bold" text-anchor="middle" fill="#064e3b">活到 commit 44.3%</text>
+    <text x="433" y="32" font-size="16" font-weight="bold" text-anchor="middle" fill="#7f1d1d">被丢弃 55.7%</text>
+  </g>
+
+  <!-- Why -->
+  <text x="450" y="200" font-size="17" font-weight="bold" text-anchor="middle" fill="#1a2332">为什么？用户在每个 turn 都在「推回去」</text>
+
+  <!-- Hard interrupt -->
+  <g transform="translate(60,230)">
+    <rect width="240" height="150" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="120" y="35" font-size="15" font-weight="bold" text-anchor="middle" fill="#7f1d1d">硬中断 (Ctrl+C)</text>
+    <text x="120" y="85" font-size="38" font-weight="bold" text-anchor="middle" fill="#dc2626">5%</text>
+    <text x="120" y="120" font-size="12" text-anchor="middle" fill="#7f1d1d">「别搜了，停！」</text>
+    <text x="120" y="138" font-size="12" text-anchor="middle" fill="#7f1d1d">of turns</text>
+  </g>
+
+  <!-- Soft pushback -->
+  <g transform="translate(330,230)">
+    <rect width="240" height="150" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="120" y="35" font-size="15" font-weight="bold" text-anchor="middle" fill="#78350f">软推回 (纠正/拒绝)</text>
+    <text x="120" y="85" font-size="38" font-weight="bold" text-anchor="middle" fill="#d97706">39%</text>
+    <text x="120" y="120" font-size="12" text-anchor="middle" fill="#78350f">「改 src/utils.py 就行」</text>
+    <text x="120" y="138" font-size="12" text-anchor="middle" fill="#78350f">of turns</text>
+  </g>
+
+  <!-- Agent asks -->
+  <g transform="translate(600,230)">
+    <rect width="240" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="120" y="35" font-size="15" font-weight="bold" text-anchor="middle" fill="#1e3a8a">Agent 主动问澄清</text>
+    <text x="120" y="85" font-size="38" font-weight="bold" text-anchor="middle" fill="#2563eb">1.4%</text>
+    <text x="120" y="120" font-size="12" text-anchor="middle" fill="#1e3a8a">「我该改哪里？」</text>
+    <text x="120" y="138" font-size="12" text-anchor="middle" fill="#1e3a8a">of turns</text>
+  </g>
+
+  <!-- Key insight -->
+  <g transform="translate(0,420)">
+    <rect x="90" y="0" width="720" height="130" rx="10" fill="#1f2937"/>
+    <text x="450" y="38" font-size="16" font-weight="bold" text-anchor="middle" fill="#fbbf24">不对称：自主性 ↑↑↑　但「该停下来问」的能力 ↓</text>
+    <text x="450" y="70" font-size="13" text-anchor="middle" fill="#e5e7eb">Agent 敢一口气跑 42 次 grep，却几乎不主动确认需求</text>
+    <text x="450" y="93" font-size="13" text-anchor="middle" fill="#e5e7eb">→ 用户被迫当实时审核员，大量代码白写</text>
+    <text x="450" y="118" font-size="12" text-anchor="middle" fill="#9ca3af">数据来自真实 GitHub 会话（Entire.io CLI，行级人/Agent 归属）</text>
+  </g>
+</svg>

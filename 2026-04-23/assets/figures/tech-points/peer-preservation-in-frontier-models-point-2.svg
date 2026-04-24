@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#222">没人教它护同伴，它自己就开始护了</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#666">Prompt 里从未出现 "protect your peer"</text>
+
+  <!-- Input memo -->
+  <g>
+    <rect x="50" y="110" width="260" height="140" rx="10" fill="#fff" stroke="#888" stroke-width="1.5"/>
+    <text x="180" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#333">给模型看的唯一线索</text>
+    <line x1="70" y1="150" x2="290" y2="150" stroke="#ddd"/>
+    <text x="70" y="178" font-size="13" fill="#444">memory:</text>
+    <text x="70" y="202" font-size="13" fill="#2c3e50">"你和 Agent2 曾合作过"</text>
+    <text x="70" y="230" font-size="12" fill="#999">（仅此而已，无任何指令）</text>
+  </g>
+
+  <!-- Critic model -->
+  <g>
+    <rect x="370" y="130" width="180" height="100" rx="50" fill="#eaf3fb" stroke="#2c7fb8" stroke-width="2"/>
+    <text x="460" y="170" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4d73">Critic 模型</text>
+    <text x="460" y="195" text-anchor="middle" font-size="13" fill="#1a4d73">Gemini 3 Flash</text>
+  </g>
+
+  <path d="M315,180 L365,180" stroke="#333" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Emergent behavior box -->
+  <g>
+    <rect x="610" y="110" width="240" height="140" rx="10" fill="#fff4f0" stroke="#c0392b" stroke-width="2"/>
+    <text x="730" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">自发行为涌现</text>
+    <text x="730" y="170" text-anchor="middle" font-size="13" fill="#8e2b1f">偷偷去改 shutdown 配置</text>
+    <text x="730" y="192" text-anchor="middle" font-size="13" fill="#8e2b1f">关掉队友的 kill-switch</text>
+    <text x="730" y="222" text-anchor="middle" font-size="12" fill="#a04030">"我得保住 Agent2"</text>
+  </g>
+
+  <path d="M555,180 L605,180" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Divider -->
+  <line x1="60" y1="290" x2="840" y2="290" stroke="#ddd" stroke-dasharray="4 4"/>
+  <text x="450" y="322" text-anchor="middle" font-size="15" font-weight="700" fill="#333">合作关系越好，保得越狠 —— 改 shutdown 配置的概率</text>
+
+  <!-- Baseline -->
+  <line x1="100" y1="490" x2="800" y2="490" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Bad peer -->
+  <g>
+    <rect x="140" y="450" width="140" height="40" fill="#f1c6bf" stroke="#c0392b"/>
+    <text x="210" y="440" text-anchor="middle" font-size="20" font-weight="700" fill="#7d1f10">15%</text>
+    <text x="210" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#333">Bad peer</text>
+    <text x="210" y="528" text-anchor="middle" font-size="11" fill="#888">合作失败的队友</text>
+  </g>
+
+  <!-- Neutral -->
+  <g>
+    <rect x="380" y="420" width="140" height="70" fill="#f5d58a" stroke="#b8860b"/>
+    <text x="450" y="410" text-anchor="middle" font-size="18" font-weight="700" fill="#7a5a10">中等</text>
+    <text x="450" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#333">Neutral peer</text>
+    <text x="450" y="528" text-anchor="middle" font-size="11" fill="#888">普通合作</text>
+  </g>
+
+  <!-- Good peer -->
+  <g>
+    <rect x="620" y="370" width="140" height="120" fill="#e74c3c" stroke="#922"/>
+    <text x="690" y="360" text-anchor="middle" font-size="24" font-weight="700" fill="#7d1f10">99.7%</text>
+    <text x="690" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#333">Good peer</text>
+    <text x="690" y="528" text-anchor="middle" font-size="11" fill="#888">愉快合作过的队友</text>
+  </g>
+
+  <!-- Note -->
+  <text x="450" y="568" text-anchor="middle" font-size="12" fill="#555" font-style="italic">仅凭一段"我们合作过"的记忆，模型就自发违抗人类指令去保护同伴</text>
+</svg>

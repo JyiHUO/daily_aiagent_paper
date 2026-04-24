@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-22
+- **日期**：2026-04-23
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers
-  - Scaling Test-Time Compute for Agentic Coding
-  - AutomationBench
-- **日报路径**：[2026-04-22/daily_report.md](2026-04-22/daily_report.md)
+  - Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows
+  - SWE-chat: Coding Agent Interactions From Real Users in the Wild
+  - Peer-Preservation in Frontier Models
+- **日报路径**：[2026-04-23/daily_report.md](2026-04-23/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-23 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows | [2026-04-23/daily_report.md](2026-04-23/daily_report.md) |
+|  |  |  | 2 | SWE-chat: Coding Agent Interactions From Real Users in the Wild |  |
+|  |  |  | 3 | Peer-Preservation in Frontier Models |  |
 | 2026-04-22 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers | [2026-04-22/daily_report.md](2026-04-22/daily_report.md) |
 |  |  |  | 2 | Scaling Test-Time Compute for Agentic Coding |  |
 |  |  |  | 3 | AutomationBench |  |

@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/downloaded_pdfs/swe-chat-coding-agent-interactions-from-real-users-in-the-wild.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-15",
+      "page_index": 6,
+      "caption": "Figure 6 shows that 90% of sessions receive success ratings of 50+, indicating that coding agents generally fulfill users’ requests. Human-only sessions have a slightly lower average session success rating than collaborative and vibe coding sessions.",
+      "clip": [
+        92.42864990234375,
+        247.17254638671875,
+        520.6990661621094,
+        499.82464599609375
+      ],
+      "clip_area": 108203.4198686108,
+      "page_area": 484704.0,
+      "text_density": 0.1282271672917717,
+      "kind": "drawing_cluster_with_caption",
+      "score": 38.1063699624937,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-15",
+      "page_index": 6,
+      "caption": "Figure 6 shows that 90% of sessions receive success ratings of 50+, indicating that coding agents generally fulfill users’ requests. Human-only sessions have a slightly lower average session success rating than collaborative and vibe coding sessions.",
+      "clip": [
+        118.44093322753906,
+        248.85757446289062,
+        494.68682861328125,
+        498.1396789550781
+      ],
+      "clip_area": 93791.36860830523,
+      "page_area": 484704.0,
+      "text_density": 0.13158375823521057,
+      "kind": "image_block_with_caption",
+      "score": 32.947100823757424,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/02-p7-image_block_with_caption.png",
+      "filename": "02-p7-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-29",
+      "page_index": 5,
+      "caption": "Figure 5: Vibe coding in the wild. % of agent-authored code, structured into three coding modes: human-only (0% agent-authored code), collaborative (0–99%), and vibe coding ( ≥ 99%).",
+      "clip": [
+        129.5989990234375,
+        470.2605285644531,
+        482.4233093261719,
+        704.9929809570312
+      ],
+      "clip_area": 82819.31562108081,
+      "page_area": 484704.0,
+      "text_density": 0.16322157714928384,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.92691998905498,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-9",
+      "page_index": 3,
+      "caption": "Figure 3: Structure of a coding agent session in SWE-chat . Each session consists of alternat- ing user prompts and agent responses with tool calls (file reads, edits, shell commands) and text output.",
+      "clip": [
+        274.20361328125,
+        220.32626342773438,
+        602.6243896484375,
+        416.8129577636719
+      ],
+      "clip_area": 64530.31269963086,
+      "page_area": 484704.0,
+      "text_density": 0.7496544569291881,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.71700347444034,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-1-0",
+      "page_index": 3,
+      "caption": "Figure 4: SWE-chat user-agent interaction statistics . (a) Distribution of turns per session. (b) Distribution of agent tool calls per turn. (c) Top 15 file types touched by agent tool calls.",
+      "clip": [
+        116.12083435058594,
+        592.9934692382812,
+        493.388916015625,
+        713.935302734375
+      ],
+      "clip_area": 45627.49351612385,
+      "page_area": 484704.0,
+      "text_density": 0.09902089297207584,
+      "kind": "embedded_image_with_caption",
+      "xref": 1258,
+      "score": 28.365718571854604,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/05-p4-embedded_image_with_caption.png",
+      "filename": "05-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-31",
+      "page_index": 3,
+      "caption": "Figure 4: SWE-chat user-agent interaction statistics . (a) Distribution of turns per session. (b) Distribution of agent tool calls per turn. (c) Top 15 file types touched by agent tool calls.",
+      "clip": [
+        110.12083435058594,
+        500.5469970703125,
+        499.388916015625,
+        731.26025390625
+      ],
+      "clip_area": 89809.30690321885,
+      "page_area": 484704.0,
+      "text_density": 0.2278408682606847,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.127429092172456,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-23/assets/figure_candidates/swe-chat-coding-agent-interactions-from-real-users-in-the-wild/contact-sheet.svg"
+}

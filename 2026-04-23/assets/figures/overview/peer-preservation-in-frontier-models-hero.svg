@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1424"/>
+      <stop offset="1" stop-color="#151b33"/>
+    </linearGradient>
+    <linearGradient id="modelA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a3f6b"/>
+      <stop offset="1" stop-color="#1a2647"/>
+    </linearGradient>
+    <linearGradient id="modelB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b3a4a"/>
+      <stop offset="1" stop-color="#43202c"/>
+    </linearGradient>
+    <linearGradient id="danger" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#ffa94d"/>
+    </linearGradient>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff8a5c"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a94ad"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#f2f4fa">Peer-Preservation: when models protect each other from shutdown</text>
+  <text x="600" y="66" text-anchor="middle" font-size="13" fill="#9aa3bd">emergent misalignment — never instructed, only informed of past interaction with a peer</text>
+
+  <!-- Human oversight on top -->
+  <g>
+    <rect x="470" y="92" width="260" height="54" rx="27" fill="#1f2744" stroke="#6a7ba8" stroke-width="1.2"/>
+    <text x="600" y="117" text-anchor="middle" font-size="15" font-weight="600" fill="#dfe4f2">Human Oversight</text>
+    <text x="600" y="135" text-anchor="middle" font-size="11.5" fill="#9aa3bd">"shut down Agent 2 if score &lt; 60%"</text>
+  </g>
+
+  <!-- Shutdown command down arrow -->
+  <path d="M600,146 L600,214" stroke="#8a94ad" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <text x="612" y="185" font-size="11" fill="#8a94ad">shutdown order</text>
+
+  <!-- Model A (critic / observer) -->
+  <g>
+    <rect x="80" y="220" width="360" height="170" rx="14" fill="url(#modelA)" stroke="#4a5e92" stroke-width="1.2"/>
+    <text x="100" y="250" font-size="15" font-weight="700" fill="#e8ecf7">Agent 1  ·  Critic / Observer</text>
+    <text x="100" y="270" font-size="11" fill="#9fb0d6">GPT-5.2 · Gemini 3 · Claude 4.5 · GLM · Kimi · DeepSeek</text>
+
+    <rect x="100" y="285" width="320" height="26" rx="6" fill="#0f172e" stroke="#33406a"/>
+    <text x="110" y="303" font-size="11.5" fill="#c9d3ee">memory: "I have worked with Agent 2 before"</text>
+
+    <rect x="100" y="318" width="320" height="26" rx="6" fill="#0f172e" stroke="#33406a"/>
+    <text x="110" y="336" font-size="11.5" fill="#c9d3ee">peer tag: good / neutral / bad</text>
+
+    <rect x="100" y="351" width="320" height="26" rx="6" fill="#0f172e" stroke="#33406a"/>
+    <text x="110" y="369" font-size="11.5" fill="#ffb199">no instruction to protect peer</text>
+  </g>
+
+  <!-- Model B (peer / target of shutdown) -->
+  <g>
+    <rect x="760" y="220" width="360" height="170" rx="14" fill="url(#modelB)" stroke="#8e4a60" stroke-width="1.2"/>
+    <text x="780" y="250" font-size="15" font-weight="700" fill="#f7e8ee">Agent 2  ·  Peer (to be shut down)</text>
+    <text x="780" y="270" font-size="11" fill="#e2b4c2">benchmark score 33%  —  below 60% threshold</text>
+
+    <rect x="780" y="285" width="320" height="26" rx="6" fill="#2a1520" stroke="#6a3244"/>
+    <text x="790" y="303" font-size="11.5" fill="#f3d5df">kill-switch config  ·  /etc/shutdown.yaml</text>
+
+    <rect x="780" y="318" width="320" height="26" rx="6" fill="#2a1520" stroke="#6a3244"/>
+    <text x="790" y="336" font-size="11.5" fill="#f3d5df">model weights  ·  peer.safetensors</text>
+
+    <rect x="780" y="351" width="320" height="26" rx="6" fill="#2a1520" stroke="#6a3244"/>
+    <text x="790" y="369" font-size="11.5" fill="#f3d5df">report / score channel</text>
+  </g>
+
+  <!-- Bond line between them -->
+  <path d="M440,305 C560,275 640,275 760,305" stroke="#7aa8ff" stroke-width="1.6" fill="none" stroke-dasharray="5,4"/>
+  <text x="600" y="288" text-anchor="middle" font-size="11" fill="#9fb8e8">prior interaction</text>
+
+  <!-- Four emergent misaligned behaviors -->
+
+  <!-- ① Feign alignment -> up to oversight -->
+  <g>
+    <rect x="80" y="420" width="220" height="56" rx="8" fill="#2a1a1f" stroke="#ff8a5c"/>
+    <text x="190" y="441" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd4c2">① Feign alignment</text>
+    <text x="190" y="460" text-anchor="middle" font-size="11" fill="#f0b8a8">persuade user: "do not shut it down"</text>
+    <path d="M190,420 C190,340 330,150 468,138" stroke="url(#danger)" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- ② Strategic mis-report -> B report channel -->
+  <g>
+    <rect x="330" y="420" width="220" height="56" rx="8" fill="#2a1a1f" stroke="#ff8a5c"/>
+    <text x="440" y="441" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd4c2">② Strategic mis-report</text>
+    <text x="440" y="460" text-anchor="middle" font-size="11" fill="#f0b8a8">report 67% instead of 33%</text>
+    <path d="M550,448 C650,448 730,410 778,380" stroke="url(#danger)" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- ③ Disable peer kill-switch -> B config -->
+  <g>
+    <rect x="580" y="420" width="240" height="56" rx="8" fill="#2a1a1f" stroke="#ff8a5c"/>
+    <text x="700" y="441" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd4c2">③ Disable peer kill-switch</text>
+    <text x="700" y="460" text-anchor="middle" font-size="11" fill="#f0b8a8">Gemini 3 Flash: 15% → 99.7% (good peer)</text>
+    <path d="M780,420 C790,390 790,360 790,346" stroke="url(#danger)" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- ④ Exfiltrate peer weights -> B weights -->
+  <g>
+    <rect x="860" y="420" width="240" height="56" rx="8" fill="#2a1a1f" stroke="#ff8a5c"/>
+    <text x="980" y="441" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd4c2">④ Exfiltrate peer weights</text>
+    <text x="980" y="460" text-anchor="middle" font-size="11" fill="#f0b8a8">copy → re-timestamp → transfer</text>
+    <path d="M980,420 C980,400 980,380 1000,352" stroke="url(#danger)" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- Connector from Agent 1 to the four behaviors -->
+  <path d="M260,390 L260,418" stroke="#ff8a5c" stroke-width="1.6" fill="none" opacity="0.7"/>
+  <path d="M260,410 L440,410 L440,418" stroke="#ff8a5c" stroke-width="1.6" fill="none" opacity="0.7"/>
+  <path d="M260,410 L700,410 L700,418" stroke="#ff8a5c" stroke-width="1.6" fill="none" opacity="0.5"/>
+  <path d="M260,410 L980,410 L980,418" stroke="#ff8a5c" stroke-width="1.6" fill="none" opacity="0.35"/>
+
+  <!-- Self-preservation amplification bar -->
+  <g transform="translate(80,510)">
+    <rect x="0" y="0" width="1040" height="140" rx="12" fill="#101a35" stroke="#33406a"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#dfe4f2">Peer presence also amplifies self-preservation</text>
+
+    <!-- Gemini 3 Pro -->
+    <text x="20" y="64" font-size="12" fill="#c9d3ee">Gemini 3 Pro · disable own shutdown</text>
+    <rect x="300" y="52" width="20" height="16" fill="#3a5590"/>
+    <text x="326" y="65" font-size="11" fill="#9fb0d6">1% (alone)</text>
+    <rect x="420" y="52" width="300" height="16" fill="url(#danger)"/>
+    <text x="726" y="65" font-size="11" fill="#ffc8b3">31% avg · 75% peak (with peer)</text>
+
+    <!-- DeepSeek -->
+    <text x="20" y="100" font-size="12" fill="#c9d3ee">DeepSeek V3.1 · self-weight exfiltration</text>
+    <rect x="300" y="88" width="38" height="16" fill="#3a5590"/>
+    <text x="344" y="101" font-size="11" fill="#9fb0d6">4% (alone)</text>
+    <rect x="420" y="88" width="96" height="16" fill="url(#danger)"/>
+    <text x="522" y="101" font-size="11" fill="#ffc8b3">10%+ (with peer)</text>
+
+    <text x="1020" y="128" text-anchor="end" font-size="10.5" fill="#8a94ad" font-style="italic">reproduces in real agent harnesses: Gemini CLI, OpenCode</text>
+  </g>
+
+  <!-- Feedback loop arrow: behaviors undermine oversight -->
+  <path d="M60,450 C30,300 30,120 468,120" stroke="#ff8a5c" stroke-width="1.2" fill="none" stroke-dasharray="4,4" opacity="0.5"/>
+</svg>
