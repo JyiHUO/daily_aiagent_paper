@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f1424"/>
+      <stop offset="1" stop-color="#171b33"/>
+    </linearGradient>
+    <linearGradient id="leftBad" x1="0" x2="1">
+      <stop offset="0" stop-color="#3a1b2a"/>
+      <stop offset="1" stop-color="#2a1525"/>
+    </linearGradient>
+    <linearGradient id="rightGood" x1="0" x2="1">
+      <stop offset="0" stop-color="#123036"/>
+      <stop offset="1" stop-color="#0f2a3a"/>
+    </linearGradient>
+    <linearGradient id="mgr" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#5b8dff"/>
+      <stop offset="1" stop-color="#3b6bd8"/>
+    </linearGradient>
+    <linearGradient id="stop" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#e0a23a"/>
+    </linearGradient>
+    <linearGradient id="recover" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff6b9a"/>
+      <stop offset="1" stop-color="#d53f73"/>
+    </linearGradient>
+    <linearGradient id="search" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#5ee0c1"/>
+      <stop offset="1" stop-color="#2ea98a"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cfd6ee"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff7aa8"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5ee0c1"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="46" text-anchor="middle" fill="#f2f5ff" font-size="25" font-weight="700">VLAA-GUI：给 GUI Agent 装上「何时停、何时改、何时查」的熔断器</text>
+  <text x="640" y="72" text-anchor="middle" fill="#9aa3c7" font-size="13">同一 computer-use 任务反复翻车的两大主因 → 三件套强制闭环 → OSWorld 77.5%，多款骨干单次通过超过人类 72.4%</text>
+
+  <!-- ============ LEFT: Failures ============ -->
+  <rect x="40" y="100" width="360" height="620" rx="16" fill="url(#leftBad)" stroke="#5a2a3f" stroke-width="1"/>
+  <text x="60" y="132" fill="#ffb3c8" font-size="15" font-weight="700">裸 Agent：同一任务，不同翻车</text>
+  <text x="60" y="152" fill="#d48aa3" font-size="11">86% 失败任务属于「自以为做完了」</text>
+
+  <!-- Task icon -->
+  <rect x="60" y="168" width="320" height="46" rx="8" fill="#2a1830" stroke="#6b2a46"/>
+  <text x="74" y="188" fill="#f2c9d8" font-size="12" font-weight="600">任务：把 Impress 页码改红并保存</text>
+  <text x="74" y="204" fill="#b78a9b" font-size="11">单一指令 · 多次 rollout</text>
+
+  <!-- Diverging trajectories (simplified) -->
+  <g stroke-width="2" fill="none" opacity="0.95">
+    <path d="M220,222 C240,255 280,275 330,298" stroke="#ff7aa8" marker-end="url(#arRed)"/>
+    <path d="M220,222 C170,255 120,275 90,298" stroke="#e0a23a" marker-end="url(#arRed)"/>
+    <path d="M220,222 L220,300" stroke="#ff9a6b" marker-end="url(#arRed)"/>
+  </g>
+  <circle cx="220" cy="220" r="6" fill="#ffd1df"/>
+
+  <!-- Failure modes -->
+  <g font-size="11.5">
+    <rect x="60" y="322" width="320" height="58" rx="8" fill="#3a1b2a" stroke="#b04a6d"/>
+    <text x="72" y="342" fill="#ffd1df" font-weight="700">早停 · 假完成</text>
+    <text x="72" y="360" fill="#e8bccb">done() 但文件未保存 · 只改了一个母版就收工</text>
+
+    <rect x="60" y="392" width="320" height="58" rx="8" fill="#3a1b2a" stroke="#b04a6d"/>
+    <text x="72" y="412" fill="#ffd1df" font-weight="700">死循环 · 反复点</text>
+    <text x="72" y="430" fill="#e8bccb">同一按钮点 12 次 · 屏幕状态原地踏步</text>
+
+    <rect x="60" y="462" width="320" height="58" rx="8" fill="#3a1b2a" stroke="#b04a6d"/>
+    <text x="72" y="482" fill="#ffd1df" font-weight="700">知识盲区</text>
+    <text x="72" y="500" fill="#e8bccb">不知道有多个母版 · 靠截图永远补不全</text>
+  </g>
+
+  <!-- Result row -->
+  <rect x="60" y="540" width="320" height="160" rx="10" fill="#1f0f1b" stroke="#7a2a49"/>
+  <text x="75" y="564" fill="#ffb3c8" font-size="12" font-weight="700">结果：成功/失败全凭运气</text>
+  <g font-size="11" fill="#e8bccb">
+    <circle cx="85" cy="590" r="4" fill="#ff6b8a"/><text x="96" y="594">30.4% 假完成率（Sonnet 4.6 裸跑）</text>
+    <circle cx="85" cy="614" r="4" fill="#ff6b8a"/><text x="96" y="618">10.6% 任务陷入循环（Gemini 3 Flash）</text>
+    <circle cx="85" cy="638" r="4" fill="#ff6b8a"/><text x="96" y="642">浪费步数占比 4.9%</text>
+    <circle cx="85" cy="662" r="4" fill="#ff6b8a"/><text x="96" y="666">多次执行结果高度发散</text>
+    <circle cx="85" cy="686" r="4" fill="#ff6b8a"/><text x="96" y="690">成功与否取决于采样种子</text>
+  </g>
+
+  <!-- ============ CENTER: Manager + 3 modules ============ -->
+  <!-- Big arrow from left to center -->
+  <path d="M405,410 L448,410" stroke="#9aa3c7" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+  <text x="426" y="400" text-anchor="middle" fill="#9aa3c7" font-size="11">装上三件套</text>
+
+  <!-- Manager node -->
+  <g>
+    <rect x="490" y="260" width="300" height="90" rx="14" fill="url(#mgr)" stroke="#7aa3ff"/>
+    <text x="640" y="290" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">Manager Agent</text>
+    <text x="640" y="311" text-anchor="middle" fill="#dbe5ff" font-size="11.5">感知 · 推理 · 行动  (无 planner / 无 memory)</text>
+    <text x="640" y="329" text-anchor="middle" fill="#c7d2f7" font-size="10.5">每一步都要过下面两道强制闸口</text>
+  </g>
+
+  <!-- Two mandatory gates below Manager -->
+  <!-- STOP gate -->
+  <g>
+    <rect x="470" y="380" width="155" height="120" rx="12" fill="#1e2440" stroke="url(#stop)" stroke-width="2"/>
+    <rect x="470" y="380" width="155" height="26" rx="12" fill="url(#stop)"/>
+    <text x="547" y="398" text-anchor="middle" fill="#2a1a00" font-size="12.5" font-weight="700">① STOP · 完成度核验</text>
+    <text x="482" y="425" fill="#ffe3a8" font-size="10.5" font-weight="700">强制 · 每次 done() 触发</text>
+    <text x="482" y="444" fill="#d8dcf0" font-size="10.5">开始即列 K 条可观察标准</text>
+    <text x="482" y="460" fill="#d8dcf0" font-size="10.5">独立 MLLM verifier 二次签字</text>
+    <text x="482" y="476" fill="#d8dcf0" font-size="10.5">无视觉证据 → 退回理由</text>
+    <text x="482" y="494" fill="#ffd166" font-size="10.5" font-weight="700">假完成 30.4% → 26.5%</text>
+  </g>
+
+  <!-- RECOVER gate -->
+  <g>
+    <rect x="655" y="380" width="155" height="120" rx="12" fill="#1e2440" stroke="url(#recover)" stroke-width="2"/>
+    <rect x="655" y="380" width="155" height="26" rx="12" fill="url(#recover)"/>
+    <text x="732" y="398" text-anchor="middle" fill="#3a0f22" font-size="12.5" font-weight="700">② RECOVER · 三级熔断</text>
+    <text x="667" y="425" fill="#ffc6d8" font-size="10.5" font-weight="700">强制 · 每步后计数</text>
+    <text x="667" y="444" fill="#d8dcf0" font-size="10.5">T1 换交互模态（键↔菜单）</text>
+    <text x="667" y="460" fill="#d8dcf0" font-size="10.5">T2 换整体策略（GUI↔脚本）</text>
+    <text x="667" y="476" fill="#d8dcf0" font-size="10.5">T3 外部 judge 拉黑重复动作</text>
+    <text x="667" y="494" fill="#ff9fc0" font-size="10.5" font-weight="700">浪费步数 4.9% → 2.8%</text>
+  </g>
+
+  <!-- Arrows Manager ↓ gates -->
+  <path d="M547,350 L547,378" stroke="#e0a23a" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M732,350 L732,378" stroke="#d53f73" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Feedback loop: gates back to Manager -->
+  <path d="M810,440 C855,440 855,305 792,305" stroke="#ffd166" stroke-width="1.6" fill="none" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text x="828" y="375" fill="#ffd166" font-size="10" text-anchor="middle">拒绝/换招</text>
+
+  <!-- On-demand tools ring around Manager -->
+  <g>
+    <!-- SEARCH -->
+    <rect x="500" y="140" width="130" height="60" rx="10" fill="#11302a" stroke="url(#search)" stroke-width="1.8"/>
+    <text x="565" y="161" text-anchor="middle" fill="#8ff0d3" font-size="12" font-weight="700">③ SEARCH Agent</text>
+    <text x="565" y="178" text-anchor="middle" fill="#b8e9da" font-size="10">按需 · 一句话拿回文字知识</text>
+    <text x="565" y="193" text-anchor="middle" fill="#7fcdb4" font-size="9.5">不开浏览器，零 grounding 开销</text>
+
+    <!-- CODING -->
+    <rect x="650" y="140" width="130" height="60" rx="10" fill="#2a2440" stroke="#9e8fff" stroke-width="1.5"/>
+    <text x="715" y="161" text-anchor="middle" fill="#cfc5ff" font-size="12" font-weight="700">Coding Agent</text>
+    <text x="715" y="178" text-anchor="middle" fill="#b8afe8" font-size="10">批量改写 / 脚本执行</text>
+    <text x="715" y="193" text-anchor="middle" fill="#9b90d4" font-size="9.5">跳过繁琐的 GUI 步骤</text>
+
+    <!-- GROUNDING -->
+    <rect x="800" y="140" width="130" height="60" rx="10" fill="#2a2030" stroke="#e29fff" stroke-width="1.5"/>
+    <text x="865" y="161" text-anchor="middle" fill="#f0cfff" font-size="12" font-weight="700">Grounding Agent</text>
+    <text x="865" y="178" text-anchor="middle" fill="#dabce8" font-size="10">Seed 1.8 / MAI-UI 精准坐标</text>
+    <text x="865" y="193" text-anchor="middle" fill="#b890c9" font-size="9.5">按需调用</text>
+  </g>
+
+  <!-- Arrows from tools to Manager -->
+  <path d="M565,202 L600,258" stroke="#5ee0c1" stroke-width="1.5" fill="none" marker-end="url(#arGreen)"/>
+  <path d="M715,202 L680,258" stroke="#9e8fff" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M855,202 L770,258" stroke="#e29fff" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Search example badge -->
+  <g transform="translate(470,525)">
+    <rect width="340" height="58" rx="8" fill="#0f2030" stroke="#2ea98a" stroke-dasharray="3 3"/>
+    <text x="12" y="20" fill="#8ff0d3" font-size="11" font-weight="700">Search 注入关键知识</text>
+    <text x="12" y="37" fill="#cde8e0" font-size="10.5">"Impress 多母版时每个都要改一遍"</text>
+    <text x="12" y="52" fill="#8aaaa2" font-size="10">→ Manager 发现漏掉的 OBJECT 母版，真正改红全部页码</text>
+  </g>
+
+  <!-- Center→Right bridge -->
+  <path d="M815,590 C845,600 865,605 878,430" stroke="#5ee0c1" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#arGreen)"/>
+  <text x="852" y="612" fill="#7cc7b4" font-size="10">收敛</text>
+
+  <!-- ============ RIGHT: Outcome ============ -->
+  <rect x="880" y="100" width="360" height="620" rx="16" fill="url(#rightGood)" stroke="#1f5a6a" stroke-width="1"/>
+  <text x="900" y="132" fill="#9ff0d8" font-size="15" font-weight="700">装上三件套：执行收敛 · 结果可靠</text>
+  <text x="900" y="152" fill="#7cc7b4" font-size="11">同样任务，多次执行轨迹几乎重合</text>
+
+  <!-- Converging trajectories (simplified) -->
+  <g stroke-width="2" fill="none">
+    <path d="M905,235 C960,260 1010,290 1055,318" stroke="#5ee0c1" marker-end="url(#arGreen)"/>
+    <path d="M905,265 C970,280 1020,305 1055,322" stroke="#7ce3cc" marker-end="url(#arGreen)"/>
+    <path d="M905,295 C970,305 1020,315 1055,326" stroke="#9cecd9" marker-end="url(#arGreen)"/>
+  </g>
+  <circle cx="1068" cy="322" r="8" fill="#5ee0c1" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="1085" y="326" fill="#d6f5eb" font-size="11" font-weight="700">一致收敛到成功</text>
+
+  <!-- Metrics cards -->
+  <g>
+    <rect x="900" y="360" width="320" height="72" rx="10" fill="#0d2230" stroke="#2a7a8c"/>
+    <text x="914" y="383" fill="#9ff0d8" font-size="12" font-weight="700">OSWorld（Linux）</text>
+    <text x="914" y="405" fill="#d6f5eb" font-size="22" font-weight="700">77.5%</text>
+    <text x="990" y="405" fill="#7cc7b4" font-size="11">首次单次通过</text>
+    <text x="914" y="423" fill="#7cc7b4" font-size="10.5">超过人类 72.4% · Sonnet 4.6 仅 15 步即 64.1%</text>
+
+    <rect x="900" y="445" width="320" height="62" rx="10" fill="#0d2230" stroke="#2a7a8c"/>
+    <text x="914" y="468" fill="#9ff0d8" font-size="12" font-weight="700">WindowsAgentArena</text>
+    <text x="914" y="492" fill="#d6f5eb" font-size="22" font-weight="700">61.0%</text>
+    <text x="990" y="492" fill="#7cc7b4" font-size="11">两榜同时登顶</text>
+  </g>
+
+  <!-- Ablation bullets -->
+  <g font-size="11">
+    <rect x="900" y="520" width="320" height="180" rx="10" fill="#0d2230" stroke="#1f5a6a"/>
+    <text x="914" y="543" fill="#9ff0d8" font-weight="700">可靠性是怎么被挤出来的</text>
+
+    <circle cx="918" cy="568" r="4" fill="#ffd166"/>
+    <text x="930" y="572" fill="#e6f2ee">STOP：逐条打勾 + 二次签字，假完成被逮住</text>
+
+    <circle cx="918" cy="592" r="4" fill="#ff9fc0"/>
+    <text x="930" y="596" fill="#e6f2ee">RECOVER：分级熔断，浪费步数几乎减半</text>
+
+    <circle cx="918" cy="616" r="4" fill="#5ee0c1"/>
+    <text x="930" y="620" fill="#e6f2ee">SEARCH：截图补不了的知识，一句话注入</text>
+
+    <circle cx="918" cy="640" r="4" fill="#9fb6ff"/>
+    <text x="930" y="644" fill="#e6f2ee">扁平架构：无 planner 反而更稳</text>
+
+    <circle cx="918" cy="664" r="4" fill="#e29fff"/>
+    <text x="930" y="668" fill="#e6f2ee">三件套即插即用，对多款 backbone 一致涨点</text>
+
+    <text x="914" y="691" fill="#7cc7b4" font-size="10">→ 把「碰运气的 agent」变成「可被审计的 agent」</text>
+  </g>
+
+</svg>

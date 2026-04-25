@@ -44,6 +44,26 @@
         "system": "系统架构上，Arbiter-K 的核心贡献是将 LLM 降级为不可信的'概率协处理器'，所有与环境交互的操作都必须经过确定性内核的审批。Semantic ISA + IDG + taint tracking 的三层设计为 Agent runtime 提供了类操作系统级别的可观测性和可审计性。跨框架迁移能力（OpenClaw ↔ NanoBot）表明这套架构可以作为通用的 Agent 安全中间件，值得 Agent 基础设施团队重点关注。",
         "risk": "当前的主要风险包括：1）语义弱操作（如 web_fetch、read_file）的拦截能力仍有不足，攻击者可能利用这些低风险通道绕过检查；2）策略反馈依赖 LLM 正确理解反馈内容来调整行为，如果模型忽略反馈则可能陷入重复违规循环；3）五级治理策略中 Level 2-3 引入额外模型调用，在高并发场景下可能成为延迟瓶颈；4）100% 的 shell 命令覆盖仅在当前红队用例集上验证，面对更复杂的命令组合和新兴攻击向量，覆盖率可能下降。"
       }
+    },
+    "selected_figure": {
+      "id": "page-4-drawing-caption-39",
+      "page_index": 4,
+      "caption": "5.1 Discrete Instruction Set Architecture",
+      "clip": [
+        8.0,
+        8.0,
+        604.0,
+        357.9124450683594
+      ],
+      "clip_area": 208547.8172607422,
+      "page_area": 484704.0,
+      "text_density": 0.15970003411113354,
+      "kind": "drawing_cluster_with_caption",
+      "score": 26.607674352887827,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa-/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png",
+      "selection_reason": "该图是完整的 Arbiter-K 架构总览图，直接展示了论文最核心的机制：将 LLM 作为不可信的 Probabilistic Processing Unit，经过安全边界进入受信任的符号内核，由治理平面、策略检查、污点传播、追踪观测等模块对外部系统与资源访问进行约束与反馈。这张图同时清楚体现了模块关系、信息流、环境交互和安全治理闭环，最符合论文主架构图/系统总览图的用途。其他候选要么是该图的不完整裁剪，要么是结果图，不适合作为日报首图。",
+      "selection_confidence": "high"
     }
   },
   {
@@ -132,6 +152,27 @@
         "system": "系统层面的关键启发：(1) API 发现是核心瓶颈——BM25 检索 top-5 远不够用，需要更智能的 schema 索引和多轮探索策略；(2) 多应用状态管理需要显式的 world-state tracking 机制，防止模型'假自信'问题；(3) 策略文档作为外部知识源需要被纳入 Agent 的推理链，而非仅作为上下文附加；(4) 负断言设计（防散弹枪攻击）应成为 Agent 系统的标准评测维度。",
         "risk": "72-91% 的失败伴随'假自信'（模型声称完成但未成功），这在企业自动化中极其危险——可能导致错误数据写入生产系统、遗漏关键操作、违反业务策略。此外，模型容易被外部伪造请求误导（如合作伙伴邮件声称有更高优先级），在安全敏感场景下需要额外的策略遵循验证层。benchmark 本身基于合成数据，可能存在与真实环境的 gap。"
       }
+    },
+    "selected_figure": {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1: AutomationBench evaluation pipeline. The agent iteratively discovers and calls API endpoints to complete a task. Only the final state of the simulated applications is graded.",
+      "clip": [
+        145.8280029296875,
+        411.8290100097656,
+        465.4024658203125,
+        638.9190063476562
+      ],
+      "clip_area": 72572.1636075154,
+      "page_area": 484704.0,
+      "text_density": 0.0064074954796113845,
+      "kind": "embedded_image_with_caption",
+      "xref": 67,
+      "score": 65.80635737341684,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-22/assets/figure_candidates/automationbench/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png",
+      "selection_reason": "这张图是论文的 Figure 1，完整展示了 AutomationBench 的评测/交互流程：任务提示进入 AI agent，agent 通过 search tool 发现 API、通过 execute tool 调用 API，与 simulated app state 和环境噪声交互，最终由 deterministic assertions 做终态评分。它直接体现了该 benchmark 的核心机制——跨应用 API 发现、执行、干扰环境与 end-state grading——比结果散点图更适合作为论文主图。该裁剪版本主体更完整、文字更少。",
+      "selection_confidence": "high"
     }
   }
 ]

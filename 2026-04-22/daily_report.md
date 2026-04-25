@@ -5,29 +5,30 @@
 
 ## 一、初筛每日趋势
 
-- 今天初筛后最集中的主题是 general\_agent、embodi…
-- 高优先级论文里，From Craft to Kernel: A G…
-- 从创新性和研究开拓性看，From Craft to Kernel:…
+- Agent 安全成今日主线，runtime 治理和威胁建模密集出现
+- 长程任务推理时扩展思路从数学/单轮蔓延到 coding agent
+- 企业级和 SecOps 真实基准揭示前沿模型能力不足 10%
 <details>
 <summary>展开趋势详细版</summary>
 
-- 今天初筛后最集中的主题是 general\_agent、embodied\_agent、planning\_reasoning，说明研究关注点继续从单轮回答能力转向更完整的执行链。
-- 高优先级论文里，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers 等工作都在强调 Agent 的系统边界，而不是只卷更大的底座模型。
-- 从创新性和研究开拓性看，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers、How Adversarial Environments Mislead Agentic AI? 代表了今天最值得后续继续追踪的切口。
+- 安全类论文在今日初筛中密度极高，从 Semantic ISA、污点传播到 TOCTOU、owner-harm、harm recovery，研究重心正从文本级 guardrail 转向运行时架构层治理。
+- 长程 Agent 的 test-time scaling 成为新战场，多篇工作围绕轨迹摘要、并行/串行精炼和复用机制展开，说明'怎么花推理算力'本身已是独立研究方向。
+- 评测基准继续向真实场景靠拢，AutomationBench、Cyber Defense Benchmark、AI scientist 行为分析都在暴露前沿模型在跨应用、API 发现、科学推理上的系统性短板。
+- 具身与 GUI agent 明显共享同一套方法论——记忆、状态验证器、harness 控制器，长程执行的 memory gap 与 recovery gap 正被统一建模。
 
 </details>
 
 
 ## 二、今日基础知识点
 
-### Planner 为什么重要
-- **快速理解：** Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么…
-- **为什么今天值得懂：** 今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。
+### Harness：Agent 运行时的实验底座
+- **快速理解：** Harness 是把任务、环境、工具协议和评测日志打包起来的执行底座，决定 Agent 研究是否可复现、可比较。
+- **为什么今天值得懂：** 今天 must-read 里 POTEMKIN（MCP 兼容 harness）、Arbiter-K（治理优先 kernel）、HELM（harness-enhanced VLA）、AutomationBench 等都在重写 harness 层，说明 2025 年的 Agent 进步越来越多是'运行时底座'而不是模型本身的进步。
 
 <details>
 <summary>展开知识点详细版</summary>
 
-Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么、每一步依赖什么反馈'的那层机制。没有 planner，系统容易把任务做成一步一拍脑袋的局部反应；有了 planner，Agent 才能处理长任务、跨工具任务和需要中途修正的任务。很多 Agent 能力差异，最后都不是出在语言生成本身，而是出在计划层有没有把任务拆对、有没有给执行留回退空间。
+Harness 可以理解成一套把任务、环境、输入输出约定、工具协议、评测脚本和日志采集流程统一打包的实验底座。它本身不产生智能，但决定了不同模型、不同工具链、不同安全策略能否在同一套规则下被公平比较和反复回归。对 Agent 系统来说，harness 往往就是生产化的雏形：它既是评测基础设施，也是运行时治理和安全策略的落脚点——很多所谓的'Agent 框架'，其实核心竞争力就藏在 harness 的设计里。
 
 </details>
 
@@ -35,11 +36,11 @@ Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做�
 
 ### 1. From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers
 - **方向：** agent\_safety
-- **评分：** 相关性 97 | 价值 95 | 有趣性 95 | 创新性 93 | 开拓性 95
+- **评分：** 相关性 95 | 价值 90 | 有趣性 90 | 创新性 90 | 开拓性 90
 - **为什么入选：** Arbiter-K 提出了一种将 LLM 视为'概率处理单元'并用确定性符号内核封装的治理优先架构
 - **快速背景：** 问题根源在于概率推理与确定性执行之间缺少正式接口：模型输出是不透明的 token 流，系统无法做细粒度的权限校验和数据流审计
-![From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers 论文机制总览图](assets/figures/overview/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa--hero.svg)
-*图示：候选主图不可靠，已回退为论文核心机制总览 SVG。*
+![From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers 关键架构图](assets/figures/overview/from-craft-to-kernel-a-governance-first-execution-architecture-and-semantic-isa--hero.png)
+*图示：该图是完整的 Arbiter-K 架构总览图，直接展示了论文最核心的机制：将 LLM 作为不可信的 Probabilistic Processing Unit，经过安全边界进入受信任的符号内核，由治理平面、策略检查、污点传播、追踪观测等模块对外部系统与资源访问进行约束与反馈。这张图同时清楚体现了模块关系、信息流、环境交互和安全治理闭环，最符合论文主架构图/系统总览图的用途。其他候选要么是该图的不完整裁剪，要么是结果图，不适合作为日报首图。*
 
 <details>
 <summary>展开论文背景详细版</summary>
@@ -137,11 +138,11 @@ Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做�
 
 ### 2. Scaling Test-Time Compute for Agentic Coding
 - **方向：** code\_agent
-- **评分：** 相关性 95 | 价值 92 | 有趣性 90 | 创新性 85 | 开拓性 90
+- **评分：** 相关性 95 | 价值 88 | 有趣性 85 | 创新性 82 | 开拓性 85
 - **为什么入选：** 对Agent系统的trajectory复用、经验选择和多轮推理架构设计有直接且深远的启发
 - **快速背景：** Test-time scaling（推理时扩展计算）在数学推理和单轮代码生成中效果显著
-![Scaling Test-Time Compute for Agentic Coding 论文机制总览图](assets/figures/overview/scaling-test-time-compute-for-agentic-coding-hero.svg)
-*图示：候选主图不可靠，已回退为论文核心机制总览 SVG。*
+![Scaling Test-Time Compute for Agentic Coding 论文主图](assets/figures/overview/scaling-test-time-compute-for-agentic-coding-hero.svg)
+*图示：这篇论文直接针对长程编码Agent的test-time scaling瓶颈，提出以紧凑轨迹摘要为核心表示，结合递归锦标赛投票(RTV)和并行蒸馏精炼(PDR)两种推理时扩展机制，在SWE-Bench Verified和Terminal-Bench v2.0上实现显著且一致的提升。对Agent系统的trajectory复用、经验选择和多轮推理架构设计有直接且深远的启发。*
 
 <details>
 <summary>展开论文背景详细版</summary>
@@ -224,11 +225,11 @@ Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做�
 
 ### 3. AutomationBench
 - **方向：** agent\_eval
-- **评分：** 相关性 95 | 价值 92 | 有趣性 88 | 创新性 80 | 开拓性 90
+- **评分：** 相关性 92 | 价值 85 | 有趣性 78 | 创新性 75 | 开拓性 80
 - **为什么入选：** 这是首个同时要求跨应用协调、自主 API 发现和业务策略遵循的 Agent 基准
 - **快速背景：** 企业日常工作流常横跨 CRM、邮箱、日历、消息平台等多个应用，要求 Agent 自行找到正确的 API、遵守组织策略、在干扰数据中定位关键信息
-![AutomationBench 论文机制总览图](assets/figures/overview/automationbench-hero.svg)
-*图示：候选主图不可靠，已回退为论文核心机制总览 SVG。*
+![AutomationBench 关键架构图](assets/figures/overview/automationbench-hero.png)
+*图示：这张图是论文的 Figure 1，完整展示了 AutomationBench 的评测/交互流程：任务提示进入 AI agent，agent 通过 search tool 发现 API、通过 execute tool 调用 API，与 simulated app state 和环境噪声交互，最终由 deterministic assertions 做终态评分。它直接体现了该 benchmark 的核心机制——跨应用 API 发现、执行、干扰环境与 end-state grading——比结果散点图更适合作为论文主图。该裁剪版本主体更完整、文字更少。*
 
 <details>
 <summary>展开论文背景详细版</summary>
@@ -330,12 +331,14 @@ Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做�
 
 ## 五、总结
 
-- Agent 研究继续从模型能力转向执行链与系统边界。
-- 更值得追踪的是评测、约束、协议和运行时设计。
+- Agent 竞争正从模型能力转向 runtime 底座与评测真实度
+- 安全与 test-time scaling 是今天最值得跟进的两条主线
 <details>
 <summary>展开总结详细版</summary>
 
-- 如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。
-- 这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。
+- 今天的初筛几乎可以用一句话概括：Agent 研究正在把注意力从模型能力转向运行时底座。
+- 安全侧从事后 guardrail 走向架构级治理，评测侧从玩具任务走向企业和 SecOps 真实工作流，暴露出前沿模型在长程执行上的系统性短板。
+- 与此同时，test-time scaling 和 harness 化的记忆/验证/恢复机制给出了务实的改进路径。
+- 如果只跟两条线，建议盯住 Agent 安全的 runtime 架构和长程 coding/具身 Agent 的推理时扩展。
 
 </details>

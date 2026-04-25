@@ -1,0 +1,76 @@
+[
+  {
+    "title": "HARBOR: Automated Harness Optimization",
+    "authors": [
+      "Biswa Sengupta",
+      "Jinhua Wang"
+    ],
+    "summary": "Long-horizon language-model agents are dominated, in lines of code and in operational complexity, not by their underlying model but by the harness that wraps it: context compaction, tool caching, semantic memory, trajectory reuse, speculative tool prediction, and the glue that binds the model to a sandboxed execution environment. We argue that harness design is a first-class machine-learning problem and that automated configuration search dominates manual stacking once the flag space exceeds a handful of bits. We defend this claim in two steps. First, we formalize automated harness optimization as constrained noisy Bayesian optimization over a mixed-variable, cost-heterogeneous configuration space with cold-start-corrected rewards and a posterior chance-constrained safety check, and give a reference solver, HARBOR (Harness Axis-aligned Regularized Bayesian Optimization Routine), built from a block-additive SAAS surrogate, multi-fidelity cost-aware acquisition, and TuRBO trust regions. Second, we instantiate the problem in a flag-gated harness over a production coding agent and report a controlled four-round manual-tuning case study against a fixed task suite and an end-to-end HARBOR run. The formulation itself is task-class agnostic: the configuration space, reward correction, acquisition, and safety check apply to any agent harness with a bounded flag space and a reproducible task suite.",
+    "entry_id": "https://arxiv.org/abs/2604.20938",
+    "pdf_url": "https://arxiv.org/pdf/2604.20938.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "general_agent",
+    "relevance_score": 95,
+    "value_score": 88,
+    "interesting_score": 85,
+    "innovation_score": 82,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "明确将Agent harness（上下文压缩、工具缓存、记忆、trajectory复用等）配置优化作为一等ML问题，贝叶斯优化求解，直击Agent runtime系统核心。",
+    "composite_score": 88.21,
+    "arxiv_url": "https://arxiv.org/abs/2604.20938"
+  },
+  {
+    "title": "Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms",
+    "authors": [
+      "Ari Azarafrooz"
+    ],
+    "summary": "AI-agent guardrails are memoryless: each message is judged in isolation, so an adversary who spreads a single attack across dozens of sessions slips past every session-bound detector because only the aggregate carries the payload. We make three contributions to cross-session threat detection. (1) Dataset. CSTM-Bench is 26 executable attack taxonomies classified by kill-chain stage and cross-session operation (accumulate, compose, launder, inject_on_reader), each bound to one of seven identity anchors that ground-truth \"violation\" as a policy predicate, plus matched Benign-pristine and Benign-hard confounders. Released on Hugging Face as intrinsec-ai/cstm-bench with two 54-scenario splits: dilution (compositional) and cross_session (12 isolation-invisible scenarios produced by a closed-loop rewriter that softens surface phrasing while preserving cross-session artefacts). (2) Measurement. Framing cross-session detection as an information bottleneck to a downstream correlator LLM, we find that a session-bound judge and a Full-Log Correlator concatenating every prompt into one long-context call both lose roughly half their attack recall moving from dilution to cross_session, well inside any frontier context window. Scope: 54 scenarios per shard, one correlator family (Anthropic Claude), no prompt optimisation; we release it to motivate larger, multi-provider datasets. (3) Algorithm and metric. A bounded-memory Coreset Memory Reader retaining highest-signal fragments at $K=50$ is the only reader whose recall survives both shards. Because ranker reshuffles break KV-cache prefix reuse, we promote $\\mathrm{CSR\\_prefix}$ (ordered prefix stability, LLM-free) to a first-class metric and fuse it with detection into $\\mathrm{CSTM} = 0.7 F_1(\\mathrm{CSDA@action}, \\mathrm{precision}) + 0.3 \\mathrm{CSR\\_prefix}$, benchmarking rankers on a single Pareto of recall versus serving stability.",
+    "entry_id": "https://arxiv.org/abs/2604.21131",
+    "pdf_url": "https://arxiv.org/pdf/2604.21131.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 92,
+    "value_score": 85,
+    "interesting_score": 85,
+    "innovation_score": 82,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "针对Agent guardrail跨会话盲区提出新benchmark、coreset memory reader算法与度量，直接推进Agent运行时安全与评测，是开拓性研究方向。",
+    "composite_score": 86.65,
+    "arxiv_url": "https://arxiv.org/abs/2604.21131"
+  },
+  {
+    "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
+    "authors": [
+      "Qijun Han",
+      "Haoqin Tu",
+      "Zijun Wang",
+      "Haoyue Dai",
+      "Yiyang Zhou",
+      "Nancy Lau",
+      "Alvaro A. Cardenas",
+      "Yuhui Xu",
+      "Ran Xu",
+      "Caiming Xiong",
+      "Zeyu Zheng",
+      "Huaxiu Yao",
+      "Yuyin Zhou",
+      "Cihang Xie"
+    ],
+    "summary": "Autonomous GUI agents face two fundamental challenges: early stopping, where agents prematurely declare success without verifiable evidence, and repetitive loops, where agents cycle through the same failing actions without recovery. We present VLAA-GUI, a modular GUI agentic framework built around three integrated components that guide the system on when to Stop, Recover, and Search. First, a mandatory Completeness Verifier enforces UI-observable success criteria and verification at every finish step -- with an agent-level verifier that cross-examines completion claims with decision rules, rejecting those lacking direct visual evidence. Second, a mandatory Loop Breaker provides multi-tier filtering: switching interaction mode after repeated failures, forcing strategy changes after persistent screen-state recurrence, and binding reflection signals to strategy shifts. Third, an on-demand Search Agent searches online for unfamiliar workflows by directly querying a capable LLM with search ability, returning results as plain text. We additionally integrate a Coding Agent for code-intensive actions and a Grounding Agent for precise action grounding, both invoked on demand when required. We evaluate VLAA-GUI across five top-tier backbones, including Opus 4.5, 4.6 and Gemini 3.1 Pro, on two benchmarks with Linux and Windows tasks, achieving top performance on both (77.5% on OSWorld and 61.0% on WindowsAgentArena). Notably, three of the five backbones surpass human performance (72.4%) on OSWorld in a single pass. Ablation studies show that all three proposed components consistently improve a strong backbone, while a weaker backbone benefits more from these tools when the step budget is sufficient. Further analysis also shows that the Loop Breaker nearly halves wasted steps for loop-prone models.",
+    "entry_id": "https://arxiv.org/abs/2604.21375",
+    "pdf_url": "https://arxiv.org/pdf/2604.21375.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "computer_use",
+    "relevance_score": 95,
+    "value_score": 88,
+    "interesting_score": 82,
+    "innovation_score": 78,
+    "frontier_score": 80,
+    "verdict": "must_read",
+    "reason": "直接针对GUI Agent的核心痛点：早停、循环和搜索恢复，提出模块化的stop/recover/search框架，在OSWorld和WindowsAgentArena上达到SOTA并超越人类，对computer use agent系统设计有直接启发。",
+    "composite_score": 86.32,
+    "arxiv_url": "https://arxiv.org/abs/2604.21375"
+  }
+]

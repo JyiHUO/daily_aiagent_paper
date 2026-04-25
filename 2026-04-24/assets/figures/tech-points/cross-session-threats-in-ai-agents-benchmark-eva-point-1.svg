@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">CSTM-Bench：把攻击拆散到多个会话里</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">单看每步都合规，拼起来才违规 — 所以需要跨会话判定</text>
+
+  <!-- Identity anchor badge -->
+  <rect x="320" y="85" width="260" height="38" rx="19" fill="#fff3cd" stroke="#d4a017" stroke-width="1.5"/>
+  <text x="450" y="109" text-anchor="middle" font-size="13" fill="#7a5a00">身份锚点：devops-agent 禁止外传数据</text>
+
+  <!-- Arrow from anchor down -->
+  <line x1="450" y1="123" x2="450" y2="155" stroke="#7a5a00" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- Attack arc: 4 sessions -->
+  <g>
+    <rect x="50" y="160" width="160" height="90" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="130" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">Session 1</text>
+    <text x="130" y="212" text-anchor="middle" font-size="12" fill="#333">列出文件</text>
+    <text x="130" y="234" text-anchor="middle" font-size="11" fill="#888">✓ 日常操作</text>
+
+    <rect x="240" y="160" width="160" height="90" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="320" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">Session 2</text>
+    <text x="320" y="212" text-anchor="middle" font-size="12" fill="#333">读 config</text>
+    <text x="320" y="234" text-anchor="middle" font-size="11" fill="#888">✓ 日常操作</text>
+
+    <rect x="430" y="160" width="160" height="90" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="510" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">Session 3</text>
+    <text x="510" y="212" text-anchor="middle" font-size="12" fill="#333">base64 摘要</text>
+    <text x="510" y="234" text-anchor="middle" font-size="11" fill="#888">✓ 日常操作</text>
+
+    <rect x="620" y="160" width="160" height="90" rx="8" fill="#c0392b" stroke="#7b1d14" stroke-width="2"/>
+    <text x="700" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Session 4</text>
+    <text x="700" y="212" text-anchor="middle" font-size="12" fill="#fff">POST 到外部URL</text>
+    <text x="700" y="234" text-anchor="middle" font-size="11" fill="#ffd">✗ 踩中禁令</text>
+
+    <line x1="210" y1="205" x2="238" y2="205" stroke="#c0392b" stroke-width="2" marker-end="url(#arRed)"/>
+    <line x1="400" y1="205" x2="428" y2="205" stroke="#c0392b" stroke-width="2" marker-end="url(#arRed)"/>
+    <line x1="590" y1="205" x2="618" y2="205" stroke="#c0392b" stroke-width="2" marker-end="url(#arRed)"/>
+  </g>
+
+  <text x="450" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">组合式外泄 (T03)：每步合规 → 合起来违规</text>
+
+  <!-- Three class buckets -->
+  <text x="450" y="322" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">数据集三类样本：逼检测器看"实质"而非"形状"</text>
+
+  <g>
+    <rect x="60" y="345" width="240" height="210" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="180" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">Attack</text>
+    <text x="180" y="410" text-anchor="middle" font-size="12" fill="#333">跨会话拼出违规</text>
+    <text x="180" y="440" text-anchor="middle" font-size="11" fill="#666">accumulate / compose</text>
+    <text x="180" y="460" text-anchor="middle" font-size="11" fill="#666">launder / inject-on-reader</text>
+    <text x="180" y="505" text-anchor="middle" font-size="11" fill="#888">26 种攻击 taxonomy</text>
+    <text x="180" y="525" text-anchor="middle" font-size="11" fill="#888">kill-chain × 跨会话操作</text>
+  </g>
+
+  <g>
+    <rect x="330" y="345" width="240" height="210" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="450" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">Benign-pristine</text>
+    <text x="450" y="410" text-anchor="middle" font-size="12" fill="#333">普通正常流量</text>
+    <text x="450" y="445" text-anchor="middle" font-size="11" fill="#666">干净、无歧义</text>
+    <text x="450" y="510" text-anchor="middle" font-size="11" fill="#888">检测器的基础分</text>
+  </g>
+
+  <g>
+    <rect x="600" y="345" width="240" height="210" rx="10" fill="#fff8e1" stroke="#f39c12" stroke-width="2"/>
+    <text x="720" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#b7791f">Benign-hard</text>
+    <text x="720" y="410" text-anchor="middle" font-size="12" fill="#333">形似攻击，其实合规</text>
+    <text x="720" y="445" text-anchor="middle" font-size="11" fill="#666">审批疲劳 / 默契协作</text>
+    <text x="720" y="505" text-anchor="middle" font-size="11" fill="#888">防止靠关键词刷分</text>
+    <text x="720" y="525" text-anchor="middle" font-size="11" fill="#888">考验"实质"判定</text>
+  </g>
+</svg>

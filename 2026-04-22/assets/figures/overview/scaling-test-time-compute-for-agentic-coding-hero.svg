@@ -1,1 +1,235 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="880" viewBox="0 0 1460 880"><defs><linearGradient id="overviewBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F8FAFC"/></linearGradient><linearGradient id="heroBand" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E0EAFF"/><stop offset="100%" stop-color="#ECFDF5"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/></marker></defs><rect x="0" y="0" width="1460" height="880" fill="url(#overviewBg)"/><rect x="34" y="32" width="1392" height="816" rx="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/><rect x="52" y="50" width="1356" height="164" rx="28" fill="url(#heroBand)" stroke="#D8E6F5" stroke-width="1.2"/><text x="72" y="92" font-size="30" font-weight="800" fill="#0F172A">Scaling Test-Time Compute for Agentic Coding</text><text x="72" y="126" font-size="15" font-weight="700" fill="#475569">论文核心机制总览</text><rect x="72" y="146" width="920" height="44" rx="22" fill="#FFFFFF" stroke="#C7D2FE" stroke-width="1.2"/><text x="92" y="174" font-size="16" font-weight="700" fill="#3730A3">一句话理解：这篇论文直接针对长程编码Agent的test-time scaling瓶颈，提出以紧凑轨迹摘要为核心表示，结合递归锦标赛投票(RTV)和并行蒸馏精炼(PDR)两种推理时扩展机制，在SWE-Bench </text><rect x="80.0" y="226.0" width="320.0" height="78.0" rx="28" fill="#0F172A" opacity="0.05"/><rect x="72.0" y="216.0" width="320.0" height="78.0" rx="28" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.6"/><text x="94" y="244.0" font-size="14" font-weight="700" fill="#7C2D12">Test-time scaling（推理时扩展计</text><text x="94" y="262.0" font-size="14" font-weight="700" fill="#7C2D12">算）在数学推理和单轮代码生成中效果显著，但长程编</text><text x="94" y="280.0" font-size="14" font-weight="700" fill="#7C2D12">码Agent每次尝试会产生冗长、嘈杂的交互轨迹…</text><rect x="1076.0" y="226.0" width="320.0" height="78.0" rx="28" fill="#0F172A" opacity="0.05"/><rect x="1068.0" y="216.0" width="320.0" height="78.0" rx="28" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.6"/><text x="1090" y="244.0" font-size="14" font-weight="700" fill="#3730A3">这篇论文直接针对长程编码Agent的test-t</text><text x="1090" y="262.0" font-size="14" font-weight="700" fill="#3730A3">ime scaling瓶颈，提出以紧凑轨迹摘要为</text><text x="1090" y="280.0" font-size="14" font-weight="700" fill="#3730A3">核心表示，结合递归锦标赛投票(RTV)和并行蒸…</text><path d="M 468.0 427.0 C 502.0 427.0, 532.0 427.0, 566.0 427.0" fill="none" stroke="#64748B" stroke-width="4" marker-end="url(#arrow)"/><path d="M 890.0 427.0 C 924.0 427.0, 954.0 427.0, 988.0 427.0" fill="none" stroke="#64748B" stroke-width="4" marker-end="url(#arrow)"/><rect x="176.0" y="328.0" width="300.0" height="218.0" rx="28" fill="#0F172A" opacity="0.05"/><rect x="168.0" y="318.0" width="300.0" height="218.0" rx="28" fill="#FFFFFF" stroke="#60A5FA" stroke-width="1.6"/><rect x="188.0" y="336.0" width="86" height="30" rx="15" fill="#DBEAFE"/><text x="231.0" y="356.0" text-anchor="middle" font-size="12" font-weight="800" fill="#60A5FA">核心模块</text><text x="318.0" y="406.0" text-anchor="middle" font-size="26" font-weight="800" fill="#0F172A">紧凑轨迹摘要作为核心表示</text><text x="194.0" y="458.0" font-size="14" font-weight="600" fill="#334155">想象一个程序员连续调试了两小时，</text><text x="194.0" y="476.0" font-size="14" font-weight="600" fill="#334155">完整记录有上千行操作日志。要让别</text><text x="194.0" y="494.0" font-size="14" font-weight="600" fill="#334155">人帮你判断哪个方案更好，与其给他</text><text x="194.0" y="512.0" font-size="14" font-weight="600" fill="#334155">看全部日志，不如写一份结构化总…</text><rect x="598.0" y="328.0" width="300.0" height="218.0" rx="28" fill="#0F172A" opacity="0.05"/><rect x="590.0" y="318.0" width="300.0" height="218.0" rx="28" fill="#F0FDF4" stroke="#10B981" stroke-width="1.6"/><rect x="610.0" y="336.0" width="86" height="30" rx="15" fill="#BBF7D0"/><text x="653.0" y="356.0" text-anchor="middle" font-size="12" font-weight="800" fill="#10B981">核心模块</text><text x="740.0" y="406.0" text-anchor="middle" font-size="26" font-weight="800" fill="#0F172A">递归锦标赛投票(RTV)</text><text x="616.0" y="458.0" font-size="14" font-weight="600" fill="#334155">这就像一场淘汰赛而不是让裁判同时</text><text x="616.0" y="476.0" font-size="14" font-weight="600" fill="#334155">看16个选手表演然后挑最好的。把</text><text x="616.0" y="494.0" font-size="14" font-weight="600" fill="#334155">16个方案两两配对比较，每对选出</text><text x="616.0" y="512.0" font-size="14" font-weight="600" fill="#334155">更好的一个，8个胜者再两两比，…</text><rect x="1020.0" y="328.0" width="300.0" height="218.0" rx="28" fill="#0F172A" opacity="0.05"/><rect x="1012.0" y="318.0" width="300.0" height="218.0" rx="28" fill="#FFF7ED" stroke="#F59E0B" stroke-width="1.6"/><rect x="1032.0" y="336.0" width="86" height="30" rx="15" fill="#FDE68A"/><text x="1075.0" y="356.0" text-anchor="middle" font-size="12" font-weight="800" fill="#F59E0B">核心模块</text><text x="1162.0" y="406.0" text-anchor="middle" font-size="26" font-weight="800" fill="#0F172A">顺序精炼PDR与上下文质量</text><text x="1038.0" y="458.0" font-size="14" font-weight="600" fill="#334155">第一轮让16个Agent各自独立</text><text x="1038.0" y="476.0" font-size="14" font-weight="600" fill="#334155">尝试，总结经验后挑出最好的4份经</text><text x="1038.0" y="494.0" font-size="14" font-weight="600" fill="#334155">验报告。第二轮让16个新Agen</text><text x="1038.0" y="512.0" font-size="14" font-weight="600" fill="#334155">t在干净环境中重新开始，但出发…</text><rect x="72" y="614" width="1316" height="190" rx="28" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.3"/><text x="94" y="650" font-size="18" font-weight="800" fill="#0F172A">为什么这篇论文值得放主图</text><text x="94" y="684.0" font-size="15" font-weight="600" fill="#334155">Test-time scaling（推理时扩展计算）在数学推理和单轮代码生成中效果显著，但长程编码Agent每次尝试</text><text x="94" y="706.0" font-size="15" font-weight="600" fill="#334155">会产生冗长、嘈杂的交互轨迹（包含文件读写、命令执行、错误恢复等），传统方法无法直接对这些长轨迹进行比较、排序或复用。</text><text x="94" y="728.0" font-size="15" font-weight="600" fill="#334155">原有方法如majority voting或简单的best-of-N选择在面对长horizon</text><text x="94" y="750.0" font-size="15" font-weight="600" fill="#334155">Agent轨迹时效果有限，因为原始轨迹中有用信号被大量低价值细节淹没。本文认为，长程Agent的推理时扩展本质上是一</text><text x="94" y="772.0" font-size="15" font-weight="600" fill="#334155">个表示(representation)、选择(selection)和复用(reuse)问题，值得关注是因为它为所有…</text><text x="72" y="836" font-size="14" font-weight="600" fill="#64748B">图示：候选主图不可靠时，自动回退为论文机制总览 SVG。</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1629"/>
+      <stop offset="1" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="traj" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a4668" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#5968a0" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="sum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3dd6c4"/>
+      <stop offset="1" stop-color="#2a9d8f"/>
+    </linearGradient>
+    <linearGradient id="champ" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#f4a261"/>
+    </linearGradient>
+    <linearGradient id="refine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9b5de5"/>
+      <stop offset="1" stop-color="#f15bb5"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cdd6f4"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3dd6c4"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f15bb5"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" fill="#e8ecff" font-size="26" font-weight="700">Test-Time Scaling for Agentic Coding</text>
+  <text x="640" y="74" text-anchor="middle" fill="#9aa5c7" font-size="15">长轨迹 → 结构化摘要 → 锦标赛选择 → 精炼复用</text>
+
+  <!-- Column headers -->
+  <text x="155" y="110" text-anchor="middle" fill="#7e8ab5" font-size="12" letter-spacing="2">① ROLLOUTS</text>
+  <text x="432" y="110" text-anchor="middle" fill="#7e8ab5" font-size="12" letter-spacing="2">② SUMMARIZE</text>
+  <text x="750" y="110" text-anchor="middle" fill="#7e8ab5" font-size="12" letter-spacing="2">③ RTV (tournament)</text>
+  <text x="1135" y="110" text-anchor="middle" fill="#7e8ab5" font-size="12" letter-spacing="2">④ PDR refine</text>
+
+  <!-- Column 1: long noisy trajectories -->
+  <g font-size="10" fill="#c7cff0">
+    <g transform="translate(60,135)">
+      <rect width="190" height="86" rx="8" fill="url(#traj)" opacity="0.9"/>
+      <text x="10" y="18" fill="#eef2ff" font-weight="600">rollout #1</text>
+      <text x="10" y="34" fill="#aab4d8">ls / grep / edit …</text>
+      <text x="10" y="48" fill="#aab4d8">pytest → FAIL</text>
+      <text x="10" y="62" fill="#aab4d8">revert, retry (40+ steps)</text>
+      <text x="10" y="78" fill="#8792b8" font-style="italic">long · noisy · low-signal</text>
+    </g>
+    <g transform="translate(60,232)">
+      <rect width="190" height="70" rx="8" fill="url(#traj)" opacity="0.75"/>
+      <text x="10" y="18" fill="#eef2ff" font-weight="600">rollout #2</text>
+      <text x="10" y="34" fill="#aab4d8">hypothesis → dead end</text>
+      <text x="10" y="50" fill="#aab4d8">partial progress</text>
+    </g>
+    <g transform="translate(60,314)">
+      <rect width="190" height="70" rx="8" fill="url(#traj)" opacity="0.6"/>
+      <text x="10" y="18" fill="#eef2ff" font-weight="600">rollout #3</text>
+      <text x="10" y="34" fill="#aab4d8">locate db/models/query.py</text>
+      <text x="10" y="50" fill="#aab4d8">tests pass ✓</text>
+    </g>
+    <g transform="translate(60,396)">
+      <rect width="190" height="50" rx="8" fill="url(#traj)" opacity="0.45"/>
+      <text x="10" y="20" fill="#eef2ff" font-weight="600">rollout #4</text>
+      <text x="10" y="38" fill="#aab4d8">regression introduced</text>
+    </g>
+    <text x="155" y="478" text-anchor="middle" fill="#6e78a0" font-size="13" font-style="italic">… N = 16 parallel (iter-0)</text>
+  </g>
+
+  <!-- Arrows 1->2 -->
+  <g stroke="#5a6795" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+    <line x1="255" y1="178" x2="340" y2="195"/>
+    <line x1="255" y1="267" x2="340" y2="260"/>
+    <line x1="255" y1="349" x2="340" y2="320"/>
+    <line x1="255" y1="421" x2="340" y2="380"/>
+  </g>
+
+  <!-- Column 2: structured summaries -->
+  <g>
+    <g transform="translate(345,160)">
+      <rect width="175" height="72" rx="10" fill="url(#sum)" opacity="0.95"/>
+      <text x="12" y="18" fill="#0b2027" font-size="11" font-weight="700">SUMMARY S₁</text>
+      <line x1="12" y1="24" x2="163" y2="24" stroke="#0b2027" opacity="0.25"/>
+      <text x="12" y="38" fill="#0b2027" font-size="10">hypothesis · progress</text>
+      <text x="12" y="52" fill="#0b2027" font-size="10">failure modes · final state</text>
+      <text x="12" y="66" fill="#0b2027" font-size="10" font-style="italic" opacity="0.7">salient signal only</text>
+    </g>
+    <g transform="translate(345,242)" opacity="0.9">
+      <rect width="175" height="56" rx="10" fill="url(#sum)"/>
+      <text x="12" y="18" fill="#0b2027" font-size="11" font-weight="700">SUMMARY S₂</text>
+      <text x="12" y="36" fill="#0b2027" font-size="10">dead end at parser.py</text>
+      <text x="12" y="50" fill="#0b2027" font-size="10">no passing tests</text>
+    </g>
+    <g transform="translate(345,308)" opacity="0.9">
+      <rect width="175" height="56" rx="10" fill="url(#sum)"/>
+      <text x="12" y="18" fill="#0b2027" font-size="11" font-weight="700">SUMMARY S₃</text>
+      <text x="12" y="36" fill="#0b2027" font-size="10">fix @ query.py:234 ✓</text>
+      <text x="12" y="50" fill="#0b2027" font-size="10">full suite passes</text>
+    </g>
+    <g transform="translate(345,374)" opacity="0.85">
+      <rect width="175" height="50" rx="10" fill="url(#sum)"/>
+      <text x="12" y="18" fill="#0b2027" font-size="11" font-weight="700">SUMMARY S₄</text>
+      <text x="12" y="36" fill="#0b2027" font-size="10">regression on filter()</text>
+    </g>
+    <text x="432" y="452" text-anchor="middle" fill="#3dd6c4" font-size="12" font-weight="600">compact · comparable · reusable</text>
+  </g>
+
+  <!-- Arrows 2->3 tournament bracket -->
+  <g stroke="#3dd6c4" stroke-width="1.6" fill="none" marker-end="url(#arrG)" opacity="0.9">
+    <path d="M520,196 L585,225"/>
+    <path d="M520,270 L585,240"/>
+    <path d="M520,336 L585,315"/>
+    <path d="M520,399 L585,330"/>
+  </g>
+
+  <!-- Column 3: RTV bracket -->
+  <g font-size="10">
+    <!-- pair nodes round 1 -->
+    <g transform="translate(588,212)">
+      <rect width="110" height="38" rx="6" fill="#243055" stroke="#3dd6c4" stroke-width="1"/>
+      <text x="55" y="16" text-anchor="middle" fill="#e8ecff" font-size="10" font-weight="600">pair vote</text>
+      <text x="55" y="30" text-anchor="middle" fill="#9aa5c7" font-size="9">G=2, V=8</text>
+    </g>
+    <g transform="translate(588,304)">
+      <rect width="110" height="38" rx="6" fill="#243055" stroke="#3dd6c4" stroke-width="1"/>
+      <text x="55" y="16" text-anchor="middle" fill="#e8ecff" font-size="10" font-weight="600">pair vote</text>
+      <text x="55" y="30" text-anchor="middle" fill="#9aa5c7" font-size="9">G=2, V=8</text>
+    </g>
+
+    <!-- round 2 arrows -->
+    <g stroke="#3dd6c4" stroke-width="1.4" fill="none" marker-end="url(#arrG)">
+      <path d="M698,231 L770,255"/>
+      <path d="M698,323 L770,275"/>
+    </g>
+    <g transform="translate(772,250)">
+      <rect width="100" height="38" rx="6" fill="#2d3a63" stroke="#3dd6c4" stroke-width="1.3"/>
+      <text x="50" y="16" text-anchor="middle" fill="#e8ecff" font-size="10" font-weight="600">round 2</text>
+      <text x="50" y="30" text-anchor="middle" fill="#9aa5c7" font-size="9">recursive</text>
+    </g>
+
+    <!-- champion -->
+    <g stroke="#ffd166" stroke-width="1.8" fill="none" marker-end="url(#arr)">
+      <line x1="872" y1="269" x2="905" y2="269"/>
+    </g>
+    <g transform="translate(907,245)">
+      <rect width="120" height="50" rx="10" fill="url(#champ)"/>
+      <text x="60" y="20" text-anchor="middle" fill="#2b1800" font-size="11" font-weight="700">TOP-K = 4</text>
+      <text x="60" y="38" text-anchor="middle" fill="#2b1800" font-size="10">best summaries</text>
+    </g>
+    <text x="760" y="400" text-anchor="middle" fill="#3dd6c4" font-size="11" font-style="italic">many small local votes &gt; one global rank</text>
+  </g>
+
+  <!-- Arrow Top-K -> PDR box -->
+  <g stroke="#f15bb5" stroke-width="2" fill="none" marker-end="url(#arrP)">
+    <path d="M1027,260 L1055,215"/>
+  </g>
+
+  <!-- Column 4: PDR refine -->
+  <g>
+    <g transform="translate(1040,130)">
+      <rect width="220" height="180" rx="14" fill="#1e1330" stroke="url(#refine)" stroke-width="2"/>
+      <text x="110" y="26" text-anchor="middle" fill="#f8c7e8" font-size="13" font-weight="700">Parallel-Distill-Refine</text>
+      <line x1="16" y1="38" x2="204" y2="38" stroke="#9b5de5" opacity="0.4"/>
+      <text x="16" y="58" fill="#e8d5f4" font-size="11">fresh env + K=4 summaries</text>
+      <text x="16" y="74" fill="#c8a8dc" font-size="10">as distilled context</text>
+      <g font-size="10" fill="#e8d5f4">
+        <rect x="16" y="86" width="42" height="22" rx="4" fill="#3a1f52"/>
+        <text x="37" y="101" text-anchor="middle">r₁′</text>
+        <rect x="64" y="86" width="42" height="22" rx="4" fill="#3a1f52"/>
+        <text x="85" y="101" text-anchor="middle">r₂′</text>
+        <rect x="112" y="86" width="42" height="22" rx="4" fill="#3a1f52"/>
+        <text x="133" y="101" text-anchor="middle">r₃′</text>
+        <rect x="160" y="86" width="44" height="22" rx="4" fill="#3a1f52"/>
+        <text x="182" y="101" text-anchor="middle">…×16</text>
+      </g>
+      <text x="16" y="132" fill="#ffd166" font-size="11" font-weight="600">→ shorter, sharper</text>
+      <text x="16" y="148" fill="#c8a8dc" font-size="10">Opus: 41 → 14 steps</text>
+      <text x="16" y="166" fill="#c8a8dc" font-size="10">avoids known dead ends</text>
+    </g>
+
+    <!-- final RTV → answer -->
+    <g transform="translate(1040,330)">
+      <rect width="220" height="60" rx="10" fill="#2d3a63" stroke="#ffd166" stroke-width="1.3"/>
+      <text x="110" y="24" text-anchor="middle" fill="#ffd166" font-size="12" font-weight="700">final RTV → top-1</text>
+      <text x="110" y="44" text-anchor="middle" fill="#cdd6f4" font-size="10">selected patch / solution</text>
+    </g>
+    <g stroke="#ffd166" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity="0.8">
+      <line x1="1150" y1="310" x2="1150" y2="328"/>
+    </g>
+  </g>
+
+  <!-- Closing loop: refined rollouts -> re-summarize (iteration-1) -->
+  <g stroke="#f15bb5" stroke-width="1.8" fill="none" stroke-dasharray="6 4" marker-end="url(#arrP)" opacity="0.9">
+    <path d="M1040,390 L 700,470 L 432,470"/>
+  </g>
+  <text x="780" y="492" text-anchor="middle" fill="#f15bb5" font-size="11" font-style="italic">iteration-1: refined rollouts are re-summarized and re-selected</text>
+
+  <!-- Bottom results strip -->
+  <g transform="translate(60,540)">
+    <rect width="1160" height="180" rx="14" fill="#141a30" stroke="#2a3558"/>
+    <text x="24" y="32" fill="#e8ecff" font-size="14" font-weight="700">Why representation matters</text>
+    <text x="24" y="54" fill="#9aa5c7" font-size="11">Long-horizon scaling is not “more tries” — it is selecting and reusing what each try learned.</text>
+
+    <g transform="translate(30,78)">
+      <rect width="260" height="80" rx="10" fill="#1b2542"/>
+      <text x="16" y="24" fill="#3dd6c4" font-size="11" font-weight="700">SWE-Bench Verified</text>
+      <text x="16" y="50" fill="#e8ecff" font-size="16" font-weight="700">70.9% → 77.6%</text>
+      <text x="16" y="68" fill="#9aa5c7" font-size="10">Claude-4.5-Opus (mini-SWE-agent)</text>
+    </g>
+    <g transform="translate(310,78)">
+      <rect width="260" height="80" rx="10" fill="#1b2542"/>
+      <text x="16" y="24" fill="#ffd166" font-size="11" font-weight="700">Terminal-Bench v2.0</text>
+      <text x="16" y="50" fill="#e8ecff" font-size="16" font-weight="700">46.9% → 59.1%</text>
+      <text x="16" y="68" fill="#9aa5c7" font-size="10">Claude-4.5-Opus (Terminus 1)</text>
+    </g>
+    <g transform="translate(590,78)">
+      <rect width="260" height="80" rx="10" fill="#1b2542"/>
+      <text x="16" y="24" fill="#f15bb5" font-size="11" font-weight="700">Context quality ↔ success</text>
+      <text x="16" y="50" fill="#e8ecff" font-size="14" font-weight="700">0/4 → 0.1%   ·   4/4 → 99.2%</text>
+      <text x="16" y="68" fill="#9aa5c7" font-size="10">passing summaries in refine context</text>
+    </g>
+    <g transform="translate(870,78)">
+      <rect width="260" height="80" rx="10" fill="#1b2542"/>
+      <text x="16" y="24" fill="#9b5de5" font-size="11" font-weight="700">Breakthroughs</text>
+      <text x="16" y="50" fill="#e8ecff" font-size="16" font-weight="700">pass@16 = 0 → solved</text>
+      <text x="16" y="68" fill="#9aa5c7" font-size="10">new solutions emerge from distilled hints</text>
+    </g>
+  </g>
+</svg>

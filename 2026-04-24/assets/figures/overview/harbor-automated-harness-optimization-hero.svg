@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1730"/>
+      <stop offset="1" stop-color="#1a1440"/>
+    </linearGradient>
+    <linearGradient id="manual" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2030"/>
+      <stop offset="1" stop-color="#52202a"/>
+    </linearGradient>
+    <linearGradient id="harbor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#103048"/>
+      <stop offset="1" stop-color="#1e5472"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a9d8f"/>
+      <stop offset="1" stop-color="#5cc8b8"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9fb3d1"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e07a8a"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5cc8b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff">HARBOR：把 Agent Harness 调参变成一个贝叶斯优化问题</text>
+  <text x="640" y="78" text-anchor="middle" font-size="14" fill="#9fb3d1">~40 维混合变量 · 噪声 + 成本异构 · 冷启动校正 · 安全下界约束</text>
+
+  <!-- Harness flag space (top band) -->
+  <rect x="80" y="108" width="1120" height="62" rx="10" fill="#1b2446" stroke="#2e3a60"/>
+  <text x="100" y="132" font-size="13" fill="#c8d4ee" font-weight="600">Harness 配置空间  F ≈ 40</text>
+  <text x="100" y="152" font-size="11" fill="#8a9cc0">缓存 · 上下文压缩 · 语义记忆 · 轨迹复用 · 推测工具 · 自评 gate · ……</text>
+  <g font-size="10" fill="#b9c9e8">
+    <rect x="430" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="459" y="131" text-anchor="middle">cache</text>
+    <rect x="494" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="523" y="131" text-anchor="middle">ACON</text>
+    <rect x="558" y="118" width="74" height="18" rx="4" fill="#26345a"/><text x="595" y="131" text-anchor="middle">Reflexion</text>
+    <rect x="638" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="667" y="131" text-anchor="middle">PASTE</text>
+    <rect x="702" y="118" width="70" height="18" rx="4" fill="#26345a"/><text x="737" y="131" text-anchor="middle">self-eval</text>
+    <rect x="778" y="118" width="78" height="18" rx="4" fill="#26345a"/><text x="817" y="131" text-anchor="middle">trajectory</text>
+    <rect x="862" y="118" width="60" height="18" rx="4" fill="#26345a"/><text x="892" y="131" text-anchor="middle">thresh θ</text>
+    <rect x="928" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="957" y="131" text-anchor="middle">preset</text>
+    <rect x="992" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="1021" y="131" text-anchor="middle">budget</text>
+    <rect x="1056" y="118" width="58" height="18" rx="4" fill="#26345a"/><text x="1085" y="131" text-anchor="middle">…</text>
+  </g>
+
+  <!-- LEFT: Manual tuning -->
+  <g>
+    <rect x="70" y="200" width="490" height="470" rx="14" fill="url(#manual)" stroke="#6a3a4a"/>
+    <text x="95" y="232" font-size="18" font-weight="700" fill="#ffd2d8">工程师手工堆叠</text>
+    <text x="95" y="252" font-size="12" fill="#e7a8b5">加 feature → 跑 ablation → 看 pass 率</text>
+
+    <!-- Rounds -->
+    <g font-size="12" fill="#ffe6ea">
+      <g>
+        <rect x="95" y="275" width="90" height="54" rx="8" fill="#5a2634" stroke="#8c3b4c"/>
+        <text x="140" y="297" text-anchor="middle" font-weight="700">A  基线</text>
+        <text x="140" y="316" text-anchor="middle" font-size="11" fill="#f0c0c8">15 / 89</text>
+      </g>
+      <g>
+        <rect x="200" y="275" width="90" height="54" rx="8" fill="#2f5a3e" stroke="#4b8a5e"/>
+        <text x="245" y="297" text-anchor="middle" font-weight="700" fill="#d6f5d6">B  +5 flag</text>
+        <text x="245" y="316" text-anchor="middle" font-size="11" fill="#bde8bd">17 / 89  ↑</text>
+      </g>
+      <g>
+        <rect x="305" y="275" width="90" height="54" rx="8" fill="#5a2634" stroke="#8c3b4c"/>
+        <text x="350" y="297" text-anchor="middle" font-weight="700">C  +self-eval</text>
+        <text x="350" y="316" text-anchor="middle" font-size="11" fill="#f0c0c8">13 / 89  ↓</text>
+      </g>
+      <g>
+        <rect x="410" y="275" width="120" height="54" rx="8" fill="#5a2634" stroke="#8c3b4c"/>
+        <text x="470" y="297" text-anchor="middle" font-weight="700">D +ACON/Refl/PASTE</text>
+        <text x="470" y="316" text-anchor="middle" font-size="11" fill="#f0c0c8">12 / 89  ↓↓</text>
+      </g>
+    </g>
+    <path d="M185,302 L200,302" stroke="#9a6070" stroke-width="2" marker-end="url(#arRed)"/>
+    <path d="M290,302 L305,302" stroke="#9a6070" stroke-width="2" marker-end="url(#arRed)"/>
+    <path d="M395,302 L410,302" stroke="#9a6070" stroke-width="2" marker-end="url(#arRed)"/>
+
+    <!-- Silent bugs -->
+    <text x="95" y="365" font-size="13" font-weight="700" fill="#ffd2d8">静默失效，手工看不出</text>
+
+    <g font-size="11.5" fill="#f4d6dc">
+      <circle cx="108" cy="395" r="4" fill="#e07a8a"/>
+      <text x="122" y="399">ACON 接在缓存上游 → 缓存只剩摘要，grep 读不到行号</text>
+      <circle cx="108" cy="425" r="4" fill="#e07a8a"/>
+      <text x="122" y="429">Reflexion 跨容器记忆未同步，retrieval counter = 0</text>
+      <circle cx="108" cy="455" r="4" fill="#e07a8a"/>
+      <text x="122" y="459">PASTE 预测器入口从未被调用，prediction counter = 0</text>
+      <circle cx="108" cy="485" r="4" fill="#e07a8a"/>
+      <text x="122" y="489">self-eval gate 把已通过的答案改错</text>
+    </g>
+
+    <!-- Oracle gap -->
+    <rect x="95" y="520" width="435" height="130" rx="10" fill="#2a1a28" stroke="#7a3a4a"/>
+    <text x="115" y="548" font-size="13" font-weight="700" fill="#ffd2d8">Oracle 并集：81 / 89  —— 答案就在配置空间里，只是人找不到</text>
+
+    <!-- bar compare -->
+    <g transform="translate(115,570)">
+      <rect x="0" y="0" width="54" height="12" fill="#6a4a52"/><text x="62" y="10" font-size="10" fill="#d8c0c6">baseline 15</text>
+      <rect x="0" y="22" width="60" height="12" fill="#8a3a4a"/><text x="68" y="32" font-size="10" fill="#f0c0c8">手工最佳 17</text>
+      <rect x="0" y="44" width="290" height="12" fill="#5cc8b8"/><text x="298" y="54" font-size="10" fill="#bde8bd">Oracle 81</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: HARBOR loop -->
+  <g>
+    <rect x="600" y="200" width="610" height="470" rx="14" fill="url(#harbor)" stroke="#3a6a8a"/>
+    <text x="625" y="232" font-size="18" font-weight="700" fill="#bfe4ff">HARBOR 自动化搜索闭环</text>
+    <text x="625" y="252" font-size="12" fill="#8fc2e6">Bayesian Optimization · GP 代理 · 每美元信息增益 · 安全约束</text>
+
+    <!-- central GP surrogate -->
+    <circle cx="905" cy="440" r="92" fill="url(#core)" opacity="0.92"/>
+    <text x="905" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#06232a">块加性 SAAS</text>
+    <text x="905" y="452" text-anchor="middle" font-size="13" fill="#0a3a42">GP 代理</text>
+    <text x="905" y="472" text-anchor="middle" font-size="10.5" fill="#0a3a42">分层 kernel + 哑旋钮压制</text>
+
+    <!-- four satellites -->
+    <g>
+      <rect x="620" y="290" width="175" height="70" rx="10" fill="#163c58" stroke="#3a7aa8"/>
+      <text x="707" y="314" text-anchor="middle" font-size="13" font-weight="700" fill="#cfe8ff">① qNEHVI 采集</text>
+      <text x="707" y="332" text-anchor="middle" font-size="11" fill="#9fc6e6">多目标：pass↑ × 成本↓</text>
+      <text x="707" y="348" text-anchor="middle" font-size="11" fill="#9fc6e6">TuRBO 信赖域 · 每美元增益</text>
+    </g>
+
+    <g>
+      <rect x="1015" y="290" width="175" height="70" rx="10" fill="#163c58" stroke="#3a7aa8"/>
+      <text x="1102" y="314" text-anchor="middle" font-size="13" font-weight="700" fill="#cfe8ff">② 安全下界</text>
+      <text x="1102" y="332" text-anchor="middle" font-size="11" fill="#9fc6e6">Pr(µ ≥ R₀ − δ) ≥ 1 − η</text>
+      <text x="1102" y="348" text-anchor="middle" font-size="11" fill="#9fc6e6">比 baseline 差的直接踢掉</text>
+    </g>
+
+    <g>
+      <rect x="1015" y="520" width="175" height="70" rx="10" fill="#163c58" stroke="#3a7aa8"/>
+      <text x="1102" y="544" text-anchor="middle" font-size="13" font-weight="700" fill="#cfe8ff">③ 多保真评测</text>
+      <text x="1102" y="562" text-anchor="middle" font-size="11" fill="#9fc6e6">8 / 22 / 44 / 89 任务</text>
+      <text x="1102" y="578" text-anchor="middle" font-size="11" fill="#9fc6e6">小子集先筛，再烧全量</text>
+    </g>
+
+    <g>
+      <rect x="620" y="520" width="175" height="70" rx="10" fill="#163c58" stroke="#3a7aa8"/>
+      <text x="707" y="544" text-anchor="middle" font-size="13" font-weight="700" fill="#cfe8ff">④ 冷启动校正</text>
+      <text x="707" y="562" text-anchor="middle" font-size="11" fill="#9fc6e6">反推 p∞，σ² 随 ŵ 膨胀</text>
+      <text x="707" y="578" text-anchor="middle" font-size="11" fill="#9fc6e6">记忆/轨迹类 flag 不被误杀</text>
+    </g>
+
+    <!-- loop arrows: ①→②→③→④→① (clockwise) around the central GP -->
+    <path d="M795,325 Q905,270 1015,325" stroke="#7fd8c8" stroke-width="2" fill="none" marker-end="url(#arGreen)"/>
+    <path d="M1102,360 Q1160,440 1102,520" stroke="#7fd8c8" stroke-width="2" fill="none" marker-end="url(#arGreen)"/>
+    <path d="M1015,555 Q905,610 795,555" stroke="#7fd8c8" stroke-width="2" fill="none" marker-end="url(#arGreen)"/>
+    <path d="M707,520 Q650,440 707,360" stroke="#7fd8c8" stroke-width="2" fill="none" marker-end="url(#arGreen)"/>
+
+    <!-- bottom outcome -->
+    <rect x="620" y="612" width="570" height="44" rx="8" fill="#0e2a3a" stroke="#3a7aa8"/>
+    <text x="640" y="639" font-size="12" fill="#bfe4ff"><tspan font-weight="700" fill="#7fd8c8">产出：</tspan>在周预算内自动收敛、不让 pass 率回退的 harness 配置</text>
+  </g>
+
+  <!-- center arrow from manual to harbor -->
+  <path d="M560,435 L600,435" stroke="#ffd27a" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="580" y="425" text-anchor="middle" font-size="11" fill="#ffd27a">升级</text>
+
+  <!-- top feed arrows from flag space to both sides -->
+  <path d="M300,170 L300,200" stroke="#9fb3d1" stroke-width="1.5" fill="none" marker-end="url(#ar)" opacity="0.7"/>
+  <path d="M905,170 L905,200" stroke="#9fb3d1" stroke-width="1.5" fill="none" marker-end="url(#ar)" opacity="0.7"/>
+
+  <!-- footer -->
+  <text x="640" y="720" text-anchor="middle" font-size="12" fill="#8fa0c2">核心主张：一旦 harness flag 超过几个 bit，手工堆叠必然翻车；搜索应由带安全约束的 BO 接管</text>
+  <text x="640" y="742" text-anchor="middle" font-size="11" fill="#6a7fa0">案例：JPMC codex-py 生产 Agent · 9 个 flag · 89 任务 · 手工 4 轮仅 1 轮净胜</text>
+</svg>

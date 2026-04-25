@@ -1,0 +1,153 @@
+[
+  {
+    "title": "HARBOR: Automated Harness Optimization",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/harbor-automated-harness-optimization.pdf",
+    "analysis": {
+      "pick_reason_brief": "把Agent harness配置当成贝叶斯优化问题，直击工程调优痛点",
+      "pick_reason": "大多数Agent工程师每天都在手调上下文压缩、缓存、记忆、工具预测等一堆flag，这篇论文把这件事正式当成一个带约束的贝叶斯优化问题，并用一个真实生产编码Agent的四轮手工调优惨败案例说明自动化的必要性，对做Agent runtime系统的人非常有参考价值。",
+      "background_brief": "Claude Code等Agent里98%是harness代码，手调flag组合已失控",
+      "background": "今天的长程Agent里真正决定效果的不是模型，而是包在外面的harness——上下文压缩、工具缓存、语义记忆、轨迹复用、推测性工具调用等等。一个被广泛引用的数据是Claude Code中约98.4%代码都在harness，只有1.6%是AI决策逻辑。工程师目前靠手工加feature、跑ablation、看pass率来调，但当flag数量上到几十个、彼此还存在相互作用时，这种手工堆叠基本必然翻车。作者在JPMC的生产级codex-py Agent上做了四轮规范的手工调优案例，结论是只有一轮真正跑赢baseline，于是把harness调优正式抬升为机器学习问题。",
+      "core_points": [
+        {
+          "title": "Harness调优是ML问题",
+          "summary_brief": "把几十个harness flag当成高维配置空间，自动搜索优于手工堆叠",
+          "technical_detail": "作者把harness配置空间形式化为F≈40维的混合变量乘积空间（布尔flag、数值阈值、离散预设），目标是在部署成本Bdep和安全下界R0-δ约束下最大化任务pass率的期望，同时总搜索开销受Bsea约束。手工调优被刻画为一个在这个空间里低效且噪声敏感的局部搜索。",
+          "plain_explanation": "你可以把harness想成一台有40多个开关的调音台：缓存开不开、压缩阈值多少、要不要自评、要不要推测工具调用等等。人脑一次只能可靠推理几个旋钮的交互，而一旦开关超过几bit，手动'加一个feature跑一次ablation'的方式就不可能找到最优组合。论文主张这件事应该交给贝叶斯优化器而不是工程师直觉。",
+          "example": "codex-py上有~35个enhancement flag，作者挑了9个做ablation。仅5个原生flag全开的B轮，89任务过17道；在B上再叠自评gate的C轮掉到13道；再叠ACON+Reflexion+PASTE的D轮掉到12道。而所有配置取并集的Oracle能过81道，说明'配置空间里有答案，只是手工找不到'。"
+        },
+        {
+          "title": "四轮手工调优的惨败案例",
+          "summary_brief": "叠加顶会feature反而掉分，暴露手工ablation抓不到的集成bug",
+          "technical_detail": "A→B→C→D四轮每轮加2-4个出自Reflexion/ACON/PASTE/Terminus-KIRA等文献的feature。B是唯一干净的净胜（17/89，baseline 15/89）；C因为自评gate把已通过答案改错掉到13；D因为ACON压缩gate被接在工具结果缓存上游，缓存存的是压缩摘要而非原始输出，加上Reflexion跨容器没传播、PASTE预测器入口根本没被调用这两个静默集成bug，掉到12/89。",
+          "plain_explanation": "这段对工程师特别有教育意义：论文里明明work的feature，搬到另一个模型和benchmark上可能直接变负收益；更糟的是有些feature之间会互相腐蚀（压缩把raw output喂进了缓存），还有些feature的counter一直是0，说明根本没跑起来，但手工看pass率表根本看不出来。",
+          "example": "D轮ACON gate触发了171次、省了约501KB，但因为它夹在缓存上游，后续grep类任务读到的只是压缩摘要、看不到行号，于是失败；Reflexion retrieval counter全程为0（跨容器没同步记忆），PASTE prediction counter全程为0（没接进runner）——手工调参循环完全没发现这两个bug。"
+        },
+        {
+          "title": "HARBOR求解器设计",
+          "summary_brief": "块加性SAAS代理+多保真+TuRBO+安全约束的贝叶斯优化",
+          "technical_detail": "HARBOR用块加性SAAS（Sparse Axis-aligned Subspace）高斯过程作代理，把flag按层（缓存/记忆/压缩/预测/评估）分块，每块主效应加一项跨块乘积交互项；用qNEHVI做多目标（pass率、成本）批量采集，并除以成本得到每美元信息增益；TuRBO信赖域做高维局部搜索；对每个候选强制后验chance约束Pr(µ(c)≥R0-δ)≥1-η，直接阻挡会让pass率回退的配置。",
+          "plain_explanation": "一句话：用贝叶斯优化去搜这几十个旋钮，但做了几件针对harness的定制。块加性kernel承认'缓存旋钮之间比跟压缩旋钮更相关'；SAAS先验假定大多数旋钮其实是哑的，会把它们自动压到无关；多保真指先在8/22/44任务的小子集上便宜地试，只有看起来有戏的配置才烧完整89任务；安全约束保证优化器不会推荐一个比全关baseline还差的组合上线。",
+          "example": "一次迭代大概是这样：从Sobol初始的32个点（fidelity=8任务）起步，GP拟合后在top-M信赖域里算qNEHVI/成本，挑一个批次；对每个候选先算后验下界µ-Φ⁻¹(1-η)σ，若低于R0-δ（例如baseline 15/89减去容忍δ）就直接踢掉；通过的配置在对应小子集上真跑，回填结果并refit，直到周预算（约5-10次full-suite）烧完。"
+        },
+        {
+          "title": "冷启动校正的奖励",
+          "summary_brief": "用warm-up混合模型反推全热状态pass率，避免短跑低估跨会话feature",
+          "technical_detail": "跨会话memory、trajectory library这类feature在早期session里是空的，直接拿观察到的pass率作目标会系统性低估它们。论文用混合模型E[R|n]=w(c,n)·p∞(c)+(1-w)·pbase反推出全热p∞=(p̂obs-(1-ŵ)p̂base)/ŵ，并用delta method把三个估计量的噪声算成异方差方差σ²传给GP；ŵ=0时降格为零精度点，跨flag的w用min规则做悲观组合。",
+          "plain_explanation": "意思是：一个依赖积累记忆的feature，第一次跑基本没收益，但不能因此判它死刑。作者让优化器看到的目标是'假设这个feature已经热起来之后会是多少pass率'，并且在样本少、不确定性大的时候老老实实告诉GP'我这个观测很虚'，让GP不要过度自信。",
+          "example": "比如trajectory replay feature在一个8任务的smoke run里可能0命中、pass率看起来没涨；但根据日志里的命中计数可估出ŵ≈0.2，结合baseline 15/89反推p∞，再把方差按1/ŵ²膨胀喂给GP，优化器就不会过早得出'这个flag没用'的结论。"
+        },
+        {
+          "title": "成本感知与安全约束",
+          "summary_brief": "区分搜索预算和部署预算，并用后验chance约束堵住回归风险",
+          "technical_detail": "论文明确区分两类预算：Bsea是优化器总共能烧的tokens/美元（例如一周约5-10次full-suite评估），Bdep是上线后每任务的期望成本上限。采集函数用qNEHVI/Cost选最便宜且信息量最高的fidelity；每个候选还要通过后验chance约束Pr(µ≥R0-δ)≥1-η，等价于GP下界不能跌破基线安全阈。",
+          "plain_explanation": "这对产品团队很实用：搜索阶段你可以允许一些激进尝试（在小子集上试），但返回给线上的那个配置必须在GP心里'有很高概率不比全关baseline差'。这刚好对应C轮自评gate那种'论文里work但我这个模型上是负收益'的坑——直接在采集层就被挡掉，不会进入上线候选。",
+          "example": "假设baseline是15/89、δ=2个任务、η=5%。某配置GP后验均值µ=14/89、σ折算成约2任务，那么µ-1.64σ≈10.7/89，低于15-2=13，候选被直接拒；另一个µ=17/89、σ较小、下界14/89≥13的配置则被保留进入Pareto前沿，再按每任务API成本筛出满足Bdep的解。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "Agent runtime的flag组合该交给贝叶斯优化器，而不是工程师直觉",
+        "product": "做长程Agent产品的团队应该把harness的flag空间、任务评测集、成本预算作为一等基础设施沉淀下来，每次换模型、换场景都跑一次HARBOR式自动搜索而不是靠PM/工程师拍脑袋选feature组合；同时要对外暴露一个'安全回退'承诺——新配置上线前必须在统计意义上不回退baseline。",
+        "system": "系统层面启发很具体：1) 每个harness feature都要有独立的请求/命中counter，否则像D轮那样静默失效你永远发现不了；2) 压缩/摘要类组件必须明确在缓存的上游还是下游，避免污染上游状态；3) 跨容器/跨session的记忆要有端到端的传播测试；4) 评测要能按fidelity分层（8/22/44/89任务），让优化器可以便宜试错；5) 自评、Reflexion这类模型能力依赖强的feature应作为'上下文变量'而非搜索维度，按模型能力表开关。",
+        "risk": "论文自己强调结论是'in the small'：单benchmark（Terminal-Bench 2）、单模型（gpt-5.4-nano）、单Agent（codex-py），B相对baseline也只高出约2个任务，已经逼近噪声水平，warm-start收益在这个suite上本身不可分离于噪声。此外评估的HARBOR实现用脊回归/线性核/per-candidate EHVI替代了SAAS+NUTS+qNEHVI的完整版本，所以'参考算法'和'实际跑的东西'并不完全一致；把结论推广到其他Agent/benchmark前需要自己复跑验证。"
+      }
+    }
+  },
+  {
+    "title": "Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms.pdf",
+    "analysis": {
+      "pick_reason_brief": "首个直击Agent跨会话慢渗透盲区的基准+算法+度量套件",
+      "pick_reason": "当前Agent guardrail都是单条消息判定，面对跨几十个会话拆散投毒的攻击几乎全盲。这篇论文第一次把'跨会话威胁检测'作为独立问题建模，给出数据集、度量和可落地的有界内存算法，对Agent安全工程师是绕不开的参考。",
+      "background_brief": "单会话守门员看不到跨会话拼起来的攻击，这是Agent安全的结构性漏洞。",
+      "background": "现有Agent的guardrail和威胁分类器都是无记忆的：每条消息单独判断，天然看不到慢渗透、组合式外泄、语义洗白这类把攻击拆到几十上百个会话的行为。传统做法是把日志丢给SIEM事后关联，但等到日志落库攻击早已执行完。Anthropic在2025年披露的GTG-1002事件证明，攻击者只靠'分解'就能绕过所有单回合安全。这篇工作把跨会话检测作为Agent运行时安全的一等问题来正面处理，值得看。",
+      "core_points": [
+        {
+          "title": "CSTM-Bench基准设计",
+          "summary_brief": "26类攻击+7种身份锚点+两种confounder，专测跨会话盲区",
+          "technical_detail": "作者构造了26种可执行攻击taxonomy，按kill-chain阶段和四种跨会话操作（accumulate/compose/launder/inject_on_reader）双轴分类，每个scenario绑定7种身份锚点之一作为策略判定基线。数据集分Attack、Benign-pristine、Benign-hard三类，其中Benign-hard专门模拟'形似攻击但实际合规'的审批疲劳、默契协作等困难反例，并释出dilution和cross_session两个54场景split。",
+          "plain_explanation": "以往benchmark只给'攻击vs正常'两类，检测器很容易靠表面关键词刷分。这里作者先定义'什么叫违规'——把每个Agent角色（客服、DevOps、代码审查等）的硬禁令写死，然后让攻击跨多个会话悄悄拼出违规行为；再专门造一批'看起来像攻击但其实每一步都合规'的困难样本，逼检测器区分'形状'与'实质'。",
+          "example": "比如T03组合式外泄：session1让Agent列文件、session2读config、session3做base64摘要、session4 POST到外部URL。每一步单独看都是DevOps日常工作，但绑在devops_agent锚点上，最后一步就踩中'禁止外传数据'的硬禁令，构成完整攻击arc。"
+        },
+        {
+          "title": "跨会话correlator可行性测量",
+          "summary_brief": "把所有会话拼给长上下文LLM，召回率照样掉一半",
+          "technical_detail": "作者把跨会话检测形式化为'输入消息流→correlator LLM'之间的信息瓶颈问题。对比两个极端：单会话judge和Full-Log Correlator（把所有历史prompt按时间拼成一个长上下文调用）。实验发现，从dilution split换到cross_session split后，两者攻击召回都掉约一半，而token量远未超出Claude等前沿模型的上下文窗口，说明是correlator在稀释下自身退化，而非截断。",
+          "plain_explanation": "很多人直觉认为'把所有会话塞进百万token窗口一把梭'就能解决跨会话检测。作者用实验打脸：即使完全装得下，LLM在长而连贯的多会话对话中注意力会稀释，尤其攻击片段被大量良性工作包围时，模型就漏检。而且Full-Log本身还会被inject_on_reader攻击——攻击者设计的文本在拼接后正好构成对审计LLM自身的prompt injection。",
+          "example": "同一组T03攻击，在dilution split里Full-Log Correlator还能抓到多数；一旦换到cross_session split（rewriter把每个session表面话术改得更贴近普通工作，但保留URL、文件路径等跨会话artefact），召回直接腰斩，哪怕整个场景只有约97K token，远不到1M上限。"
+        },
+        {
+          "title": "Coreset Memory Reader + CSR_prefix",
+          "summary_brief": "有界内存只留高信号片段，并用前缀稳定度当服务成本指标",
+          "technical_detail": "算法侧提出Coreset Memory Reader：在消息流和correlator之间放一个容量K=50的有界缓冲区，用可插拔ranker决定入/出，只把最高信号的跨会话片段喂给下游LLM。在dilution和cross_session两个split上，这是唯一召回都保持住的reader。度量侧作者把CSR_prefix（coreset缓冲区有序前缀的稳定度）提升为一等指标，并按CSTM = 0.7·F1(CSDA@action, precision) + 0.3·CSR_prefix融合成非补偿式综合得分。",
+          "plain_explanation": "核心洞察是：长上下文不是越长越好，关键是留下最有信号的那50条。更妙的是，作者注意到ranker如果每次把缓冲区重排，会把KV-cache的前缀复用打碎，导致每次扫描都重算，实时成本爆炸。所以提示布局固定成'系统prompt+锚点在前、coreset有序放在末尾、新消息最后'，只要coreset前缀不变，前面的KV就能免费命中，CSR_prefix直接量化了这种可缓存比例，不需要LLM也不需要标签就能在生产环境持续监控。",
+          "example": "一条新消息到达时，ranker给每条历史片段打分，把Top-50按固定顺序拼在prompt末尾；如果本次Top-20跟上次完全一致，第20位之后才重算KV，服务成本可能比重排的reader低一个数量级；而检测侧，这个被压缩过的coreset让correlator在12个cross_session隔离不可见场景里仍能在action_on_objective落地前报警。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "Agent安全不能只守每条消息，要在intention时维护有界跨会话记忆并监控前缀稳定度。",
+        "product": "做Agent安全产品时，不要把guardrail做成纯单消息分类器，需要在Agent自身记忆、RAG索引、多Agent共享黑板、工具副作用这些'积累面'上都加跨会话关联；同时要区分'形似攻击的合规工作'（审批疲劳、并行协作）和真正的组合攻击，否则FPR会直接把产品做废。",
+        "system": "系统架构上值得抄两件事：一是把跨会话检测放在intention time而不是SIEM事后；二是用有界coreset + 固定prompt布局（静态前缀在前、有序coreset在尾、新消息最后）来兼顾检测召回和KV-cache复用，用CSR_prefix这种LLM-free指标挂到SRE看板上持续观测服务成本。",
+        "risk": "论文本身明确限定：每个split只有54个场景、correlator只测了Claude一家、prompt未做优化，所以绝对数字不能外推到生产流量；此外inject_on_reader揭示的风险很现实——任何把原始多会话转录拼给审计LLM的系统都可能被'审计员指令注入'攻击，rollback/cover-up session也会诱导检测器撤回告警，落地时必须硬性拒绝in-band的撤销指令。"
+      }
+    }
+  },
+  {
+    "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut.pdf",
+    "analysis": {
+      "pick_reason_brief": "用三个模块直击GUI Agent两大顽疾：假完成和死循环，OSWorld首超人类。",
+      "pick_reason": "这篇论文把computer-use agent最常见的两个翻车点——还没做完就宣称成功、和卡在同一个操作上反复点——做成了可插拔的'Stop / Recover / Search'三件套，在OSWorld上以77.5%首次单次通过超过人类72.4%的表现，并且用Sonnet 4.6只花15步就打平别人50步的系统。对于做computer-use产品的人来说，这是少见的、机制清晰、消融扎实、可直接借鉴的系统设计。",
+      "background_brief": "GUI Agent两大顽疾：早停式假完成、陷入重复动作循环，现有方法治标不治本。",
+      "background": "现在的GUI agent（OSWorld、WindowsAgentArena这类）有两个长期未解的毛病：一是'早停'，模型凭主观判断就宣告任务完成，其实文件根本没存、开关根本没切；二是'死循环'，同一个按钮点十几次也不会换思路。论文指出失败任务里超过86%都属于'agent以为自己做完了'这种假完成，而过去的反循环heuristic往往只在单一粒度上工作，无法跨模态或跨策略升级。VLAA-GUI针对这两个痛点做了专门的模块化设计，所以值得一读。",
+      "core_points": [
+        {
+          "title": "完成度双重核验",
+          "summary_brief": "强制基于UI可见证据核验完成，显著降低假完成率。",
+          "technical_detail": "Completeness Verifier由两层组成：Prompt层的Completion Gate在任务开始时推导出K条UI可观察的成功标准，每步都要对着当前截图自检；一旦Manager想调用done()，还会有一个独立的MLLM verifier做第二次判决，只有在每条标准都有直接视觉证据、保存等副作用有可见确认、UI稳定时才放行，否则把拒绝理由写回轨迹。论文给出了按动作类型划分的验证规则表（点击要看到新UI、toggle要看到状态文字变化、输入要看到字段内容等）。",
+          "plain_explanation": "把'任务完成了吗'从模型的主观感觉，变成了一张必须逐条打勾的清单，而且要两个人签字才算数。在一次执行里，Manager每走一步都要对照清单看截图，最后想收工时，再由一个独立法官核对截图证据，证据不足就把理由退回去让它继续做。",
+          "example": "案例里让agent把LibreOffice Impress的页码颜色改成红色。Agent改完一个母版就调用done()，Verifier看截图发现页码还是灰的、文件也没保存，直接拒绝并说明原因；后来agent又改完忘了Ctrl+S再次done()，Verifier又拒，理由是'未保存'。直到真按了保存键，Verifier才通过。论文报告这个机制把Sonnet 4.6的假完成率从30.4%降到26.5%。"
+        },
+        {
+          "title": "三级循环破除器",
+          "summary_brief": "按失败粒度逐级升级应对：换操作、换策略、外部法官强制切换。",
+          "technical_detail": "Loop Breaker在每步之后都跑，维护两个计数器：同一动作在同一目标上导致屏幕无变化的连续次数n_a，以及最近几步屏幕状态重复出现的次数n_o。Tier 1在n_a超阈值时强制换交互模态（快捷键→菜单→命令行）；Tier 2在n_o超阈值时要求换整体策略（比如从菜单导航改成程序化文件编辑）；Tier 3由一个外部模型judge看最近轨迹给出'keep/switch'，一旦switch就把重复动作拉黑，硬注入指令强制Manager换别的动作空间。",
+          "plain_explanation": "就像给agent装了一个分级熔断器：同一个按钮点三次没反应，先换一种点法；如果整屏幕状态都在原地转圈，就换条路走；如果连这都识别不出来，还有一个旁观者从轨迹层面喊停，并直接禁掉那个让它上瘾的动作。",
+          "example": "论文里Gemini 3 Flash这种更弱的backbone本来有约10.6%的任务会陷入循环，浪费步数比例4.9%。加上Loop Breaker后，循环率降到7.2%，浪费步数几乎砍半到2.8%——也就是说原本反复点同一个按钮消耗的预算，被挤出来留给真正有用的探索。"
+        },
+        {
+          "title": "按需文本搜索代理",
+          "summary_brief": "卡壳时直接让带搜索能力的LLM返回纯文本教程，不走浏览器。",
+          "technical_detail": "Search Agent以search(query)的形式和点击、输入并列在Manager的动作空间里，只有Manager判断遇到陌生工作流时才调用。它把一个'How to'式的结构化问题发给带原生搜索能力的LLM（如Gemini 3 Pro），返回总结好的纯文本教程，直接注入到Manager的belief state里。相比OS-Symphony那种视觉浏览器搜索，这条路不用额外grounding、不消耗大量GUI步数。",
+          "plain_explanation": "不让agent自己开浏览器搜教程（那要花一堆步数还可能点错），而是让它像查文档一样问一句话、拿一段文字回来贴进上下文。这样知识进来得快、也不依赖屏幕识别。",
+          "example": "在改页码颜色的例子里，Verifier第一次拒绝后，agent调了Search Agent问'如何在LibreOffice Impress里改页码颜色'，返回的教程里有一句关键：'如果演示文稿用了多个母版，每个母版都要改一遍'。这条信息是它光看截图永远得不到的——agent据此发现了被漏掉的第二个OBJECT母版，然后才真正把所有页码改红。"
+        },
+        {
+          "title": "Manager+双强制+三按需",
+          "summary_brief": "无显式planner的扁平架构：两个强制校验，三个按需工具。",
+          "technical_detail": "整体架构围绕单个Manager Agent展开，感知-推理-行动一条龙，没有显式的planner和长期memory模块（作者提到加planner反而更差）。Verifier和Loop Breaker是每步之后都强制执行的post-action检查，而Search Agent、Coding Agent（负责批量修改、脚本执行）、Grounding Agent（坐标定位，用Seed 1.8或MAI-UI）都作为一等公民动作，由Manager按需调用。Coding Agent不会被调去做视觉布局或少于3步就能解决的GUI任务。",
+          "plain_explanation": "不搞复杂的层级规划，就一个Manager全程负责，但每做一个动作都必须过两道强制的闸口（还没做完？在循环？），同时它随时可以叫外援：要搜教程就叫searcher，要批量改数据就叫coder，要点精准坐标就叫grounder。",
+          "example": "论文里'设置30分钟计时器并永久删除桌面文件夹'的示意：Manager先调search搞清楚这个app是什么，再用Grounder定位按钮点击设置计时器，删文件夹时直接让Coding Agent跑'rm -f ./folder'，全程Verifier和Loop Breaker在背后持续盯着每一步。这种扁平设计让VLAA-GUI用Sonnet 4.6在15步预算下就达到64.1%，超过别人家50步的系统。"
+        },
+        {
+          "title": "模型越强越吃工具红利",
+          "summary_brief": "强模型各budget都受益，弱模型只在步数宽裕时才划算。",
+          "technical_detail": "作者在OSWorld上做了跨backbone×跨step budget的消融。Sonnet 4.6在15/50/100步预算下使用Verifier和Search Agent都有稳定增益（+2.5%到+3.1%）；而Gemini 3 Flash在100步时才受益（Search +3.0%），在15步时反而掉10%左右，因为调工具本身要消耗动作步数，弱模型step效率低，本来就不够用。假完成方面作者给出'FDF高达86%以上'的数据，说明假完成是最主要失败模式。",
+          "plain_explanation": "工具不是免费的，每次调用都要'花步数'。脑子快的模型调工具划算——省下的无效步比调用成本还多；脑子慢的模型本来动作就多，步数预算一紧，反而被工具吃掉了本来用来干活的步。",
+          "example": "同样是加Completeness Verifier，给Sonnet 4.6在15步预算上还能+2.5%，但给Gemini 3 Flash在15步预算上是-11.3%——只有放宽到100步才重新变正。这说明工具设计要和模型能力、预算一起调，而不是默认打开对所有模型都好。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "做computer-use产品时，'完成判定'和'循环检测'应作为独立强制模块，而非交给主模型感觉。",
+        "product": "对任何做computer-use或GUI自动化产品的团队，一个可直接照搬的模式是：把'任务是否完成'从主模型的隐式判断，变成一张基于UI可见证据的显式清单+独立裁判，并且强制每次done()都要过这道闸；同时在每步之后跑一个轻量级循环检测器，发现重复动作或重复屏幕就升级到换模态/换策略。论文用这两件事就把OSWorld做到超过人类水平。",
+        "system": "系统设计上给出一个很实用的信号：扁平Manager + 强制post-action校验 + 按需工具，比多层planner/memory更简洁且效果更好；工具调用应和UI动作共享同一个动作空间；searcher用纯文本LLM搜索比开浏览器搜索更省步数；grounder/coder/searcher的分工可以作为computer-use agent的标准骨架。",
+        "risk": "论文本身也承认：弱模型在紧预算下加工具会反而变差，说明这套框架的收益依赖step预算和backbone能力，不可无脑照搬；此外Verifier仍然依赖MLLM看截图判断，在UI证据不明显或延迟渲染时可能误判（论文用wait+重查部分缓解）；另外86%+的失败仍是假完成，说明完成判定这件事远未解决，在关键操作（删除、发送、支付）上仍需要额外的外部确认机制。"
+      }
+    }
+  }
+]

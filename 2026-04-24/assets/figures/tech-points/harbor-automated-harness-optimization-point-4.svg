@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c53030"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a202c">冷启动校正的奖励：别让"没热起来"的 feature 被冤杀</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#4a5568">跨会话记忆 / 轨迹库初期是空的，直接用观测 pass 率会系统性低估</text>
+
+  <!-- Left: Naive -->
+  <g>
+    <rect x="40" y="90" width="370" height="200" rx="10" fill="#fff5f5" stroke="#c53030" stroke-width="2"/>
+    <text x="225" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#c53030">❌ 直接用观测 pass 率</text>
+
+    <rect x="60" y="140" width="140" height="56" rx="6" fill="#fed7d7" stroke="#c53030"/>
+    <text x="130" y="162" text-anchor="middle" font-size="12" fill="#742a2a">trajectory replay</text>
+    <text x="130" y="180" text-anchor="middle" font-size="11" fill="#742a2a">8任务 · 0命中</text>
+
+    <line x1="204" y1="168" x2="246" y2="168" stroke="#c53030" stroke-width="2" marker-end="url(#arrRed)"/>
+
+    <rect x="250" y="140" width="140" height="56" rx="6" fill="#fed7d7" stroke="#c53030"/>
+    <text x="320" y="162" text-anchor="middle" font-size="12" fill="#742a2a">pass 率没涨</text>
+    <text x="320" y="180" text-anchor="middle" font-size="11" fill="#742a2a">"这 flag 没用"</text>
+
+    <text x="225" y="234" text-anchor="middle" font-size="12" fill="#742a2a">GP 过度自信地判死刑</text>
+    <text x="225" y="256" text-anchor="middle" font-size="11" fill="#9b2c2c">cache 尚未 warm ≠ feature 无效</text>
+    <text x="225" y="276" text-anchor="middle" font-size="11" fill="#9b2c2c">优化器过早剪掉潜力 flag</text>
+  </g>
+
+  <!-- Right: Corrected -->
+  <g>
+    <rect x="490" y="90" width="370" height="200" rx="10" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+    <text x="675" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#2f855a">✓ 反推"全热后"的 pass 率 p∞</text>
+
+    <rect x="510" y="140" width="150" height="56" rx="6" fill="#c6f6d5" stroke="#2f855a"/>
+    <text x="585" y="162" text-anchor="middle" font-size="12" fill="#22543d">ŵ ≈ 0.2（命中率）</text>
+    <text x="585" y="180" text-anchor="middle" font-size="11" fill="#22543d">p̂_base = 15/89</text>
+
+    <line x1="664" y1="168" x2="706" y2="168" stroke="#2f855a" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+    <rect x="710" y="140" width="140" height="56" rx="6" fill="#c6f6d5" stroke="#2f855a"/>
+    <text x="780" y="162" text-anchor="middle" font-size="12" fill="#22543d">p∞ = (p̂ − (1−ŵ)p̂_base)/ŵ</text>
+    <text x="780" y="180" text-anchor="middle" font-size="11" fill="#22543d">异方差 σ² 传给 GP</text>
+
+    <text x="675" y="234" text-anchor="middle" font-size="12" fill="#22543d">ŵ 小 → 方差膨胀 (∝ 1/ŵ²)</text>
+    <text x="675" y="256" text-anchor="middle" font-size="11" fill="#276749">"我这观测很虚，请谨慎"</text>
+    <text x="675" y="276" text-anchor="middle" font-size="11" fill="#276749">ŵ=0 降格为零精度点</text>
+  </g>
+
+  <!-- Bottom: GP view -->
+  <rect x="60" y="310" width="780" height="210" rx="10" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="450" y="337" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5282">贝叶斯优化器看到的奖励：冷启动点方差大，热点方差小</text>
+
+  <!-- Axis -->
+  <line x1="120" y1="470" x2="780" y2="470" stroke="#a0aec0" stroke-width="1"/>
+  <text x="788" y="474" font-size="11" fill="#4a5568">flag 配置</text>
+  <line x1="120" y1="470" x2="120" y2="370" stroke="#a0aec0" stroke-width="1"/>
+  <text x="115" y="368" text-anchor="end" font-size="11" fill="#4a5568">p∞</text>
+
+  <!-- GP curve -->
+  <path d="M 140 455 Q 300 420 470 400 T 760 385" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="690" y="378" font-size="11" fill="#2c5282">GP 拟合曲线</text>
+
+  <!-- Noisy point (cold) -->
+  <line x1="260" y1="395" x2="260" y2="465" stroke="#c53030" stroke-width="2"/>
+  <line x1="252" y1="395" x2="268" y2="395" stroke="#c53030" stroke-width="2"/>
+  <line x1="252" y1="465" x2="268" y2="465" stroke="#c53030" stroke-width="2"/>
+  <circle cx="260" cy="430" r="6" fill="#c53030"/>
+  <text x="260" y="489" text-anchor="middle" font-size="12" fill="#742a2a">冷启动观测</text>
+  <text x="260" y="505" text-anchor="middle" font-size="11" fill="#9b2c2c">大方差 · 不被冤杀</text>
+
+  <!-- Warm point -->
+  <line x1="560" y1="390" x2="560" y2="414" stroke="#2f855a" stroke-width="2"/>
+  <line x1="552" y1="390" x2="568" y2="390" stroke="#2f855a" stroke-width="2"/>
+  <line x1="552" y1="414" x2="568" y2="414" stroke="#2f855a" stroke-width="2"/>
+  <circle cx="560" cy="402" r="6" fill="#2f855a"/>
+  <text x="560" y="489" text-anchor="middle" font-size="12" fill="#22543d">热运行观测</text>
+  <text x="560" y="505" text-anchor="middle" font-size="11" fill="#276749">小方差 · 高置信</text>
+
+  <text x="450" y="545" text-anchor="middle" font-size="12" font-style="italic" fill="#2d3748">一句话：观测低 ≠ 没用；告诉 GP "这只是还没热"，让它继续探索。</text>
+</svg>

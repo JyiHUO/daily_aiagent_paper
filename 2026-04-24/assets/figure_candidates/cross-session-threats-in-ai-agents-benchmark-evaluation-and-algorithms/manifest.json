@@ -1,0 +1,121 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms",
+  "candidates": [
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        82.56500244140625,
+        59.99870300292969,
+        512.7193908691406,
+        286.05303955078125
+      ],
+      "clip_area": 97238.26488917833,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 947,
+      "score": 8.080425165435315,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/01-p3-embedded_image.png",
+      "filename": "01-p3-embedded_image.png"
+    },
+    {
+      "id": "page-15-embedded-0-0",
+      "page_index": 15,
+      "caption": "第 16 页内嵌图片候选",
+      "clip": [
+        60.0,
+        59.99812316894531,
+        535.2946166992188,
+        262.24200439453125
+      ],
+      "clip_area": 96125.42800687719,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 1012,
+      "score": 6.068060311187525,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/02-p16-embedded_image.png",
+      "filename": "02-p16-embedded_image.png"
+    },
+    {
+      "id": "page-12-embedded-0-0",
+      "page_index": 12,
+      "caption": "第 13 页内嵌图片候选",
+      "clip": [
+        93.84400177001953,
+        189.96798706054688,
+        501.42578125,
+        411.552001953125
+      ],
+      "clip_area": 90313.60709423549,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 1009,
+      "score": 6.003484523269283,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/03-p13-embedded_image.png",
+      "filename": "03-p13-embedded_image.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "第 5 页内嵌图片候选",
+      "clip": [
+        60.0,
+        60.00178527832031,
+        535.26416015625,
+        214.031005859375
+      ],
+      "clip_area": 73204.56815897673,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 948,
+      "score": 5.813384090655297,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/04-p5-embedded_image.png",
+      "filename": "04-p5-embedded_image.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        60.0,
+        59.99853515625,
+        535.2766723632812,
+        326.10101318359375
+      ],
+      "clip_area": 126472.3002644591,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 950,
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/05-p6-embedded_image.png",
+      "filename": "05-p6-embedded_image.png"
+    },
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        60.0,
+        60.00044250488281,
+        535.2696533203125,
+        294.79901123046875
+      ],
+      "clip_area": 111592.6343583148,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 1007,
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/06-p11-embedded_image.png",
+      "filename": "06-p11-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/cross-session-threats-in-ai-agents-benchmark-evaluation-and-algorithms/contact-sheet.svg"
+}

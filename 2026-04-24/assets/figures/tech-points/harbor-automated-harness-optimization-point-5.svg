@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">上线前的安全闸门 (Chance Constraint)</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">Pr( μ ≥ R₀ − δ ) ≥ 1 − η    ⇔    μ − 1.64σ ≥ 基线阈</text>
+
+  <!-- Candidate box -->
+  <rect x="40" y="110" width="220" height="110" rx="10" fill="#eaf3fb" stroke="#2874a6" stroke-width="2"/>
+  <text x="150" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4f72">候选 harness 配置</text>
+  <text x="150" y="162" text-anchor="middle" font-size="12" fill="#333">GP 后验: μ, σ</text>
+  <text x="150" y="184" text-anchor="middle" font-size="12" fill="#666">baseline 15/89, δ=2, η=5%</text>
+  <text x="150" y="204" text-anchor="middle" font-size="12" fill="#666">安全线 = 13/89</text>
+
+  <!-- Gate -->
+  <polygon points="340,100 440,160 340,220 240,160" fill="#fef9e7" stroke="#b7950b" stroke-width="2.5"/>
+  <text x="340" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#7d6608">GP 下界</text>
+  <text x="340" y="176" text-anchor="middle" font-size="13" fill="#7d6608">≥ 13 ?</text>
+
+  <line x1="260" y1="160" x2="242" y2="160" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Reject (top) -->
+  <rect x="500" y="85" width="340" height="170" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="670" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#922b21">✗ 拒绝 · 不上线</text>
+  <text x="670" y="145" text-anchor="middle" font-size="13" fill="#333">配置 A:  μ=14,  σ≈2</text>
+  <text x="670" y="168" text-anchor="middle" font-size="13" fill="#333">下界 = 14 − 1.64·2 ≈ 10.7</text>
+  <text x="670" y="195" text-anchor="middle" font-size="13" fill="#c0392b">10.7 &lt; 13  →  不够安全</text>
+  <text x="670" y="228" text-anchor="middle" font-size="12" fill="#7b241c">论文里 work，本模型上可能回退 → 采集层挡掉</text>
+
+  <line x1="410" y1="135" x2="498" y2="125" stroke="#c0392b" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Accept (bottom) -->
+  <rect x="500" y="335" width="340" height="170" rx="10" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+  <text x="670" y="365" text-anchor="middle" font-size="16" font-weight="bold" fill="#186a3b">✓ 进入 Pareto 前沿</text>
+  <text x="670" y="395" text-anchor="middle" font-size="13" fill="#333">配置 B:  μ=17,  σ 较小</text>
+  <text x="670" y="418" text-anchor="middle" font-size="13" fill="#333">下界 ≈ 14  ≥ 13  ✓</text>
+  <text x="670" y="448" text-anchor="middle" font-size="13" fill="#186a3b">再按每任务成本筛 B_dep</text>
+  <text x="670" y="478" text-anchor="middle" font-size="12" fill="#1e8449">很高概率不比 baseline 差</text>
+
+  <line x1="410" y1="185" x2="498" y2="360" stroke="#1e8449" stroke-width="2" marker-end="url(#arrG)"/>
+
+  <!-- Budget note -->
+  <rect x="40" y="420" width="400" height="140" rx="10" fill="#f4f6f7" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="240" y="448" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">两类预算分开管</text>
+  <text x="60" y="476" font-size="13" fill="#333">B_sea : 搜索预算 (一周 5–10 次全量评测)</text>
+  <text x="80" y="495" font-size="12" fill="#666">允许激进试错，小子集上探索</text>
+  <text x="60" y="520" font-size="13" fill="#333">B_dep : 上线每任务成本上限</text>
+  <text x="80" y="539" font-size="12" fill="#666">必须通过安全闸门才能进入候选</text>
+</svg>

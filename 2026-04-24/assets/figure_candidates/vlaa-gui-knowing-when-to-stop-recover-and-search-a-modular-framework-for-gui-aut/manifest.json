@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut",
+  "candidates": [
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Knowing When to STOP , RECOVER , and SEARCH A Modular Framework for GUI Automation",
+      "clip": [
+        166.58299255371094,
+        22.010395050048828,
+        247.2733917236328,
+        102.782958984375
+      ],
+      "clip_area": 6517.570425838814,
+      "page_area": 254571.49841414206,
+      "text_density": 0.06518065539018694,
+      "kind": "embedded_image_with_caption",
+      "xref": 102,
+      "score": 83.07241744917599,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/01-p1-embedded_image_with_caption.png",
+      "filename": "01-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-13-block-42",
+      "page_index": 13,
+      "caption": "In this paper, we presented VLAA-GUI, a modular GUI agent framework that addresses two fundamental challenges in autonomous desktop agents: premature",
+      "clip": [
+        18.0,
+        315.3259765625,
+        395.8580017089844,
+        553.3731689453125
+      ],
+      "clip_area": 89948.0364262037,
+      "page_area": 254571.49841414206,
+      "text_density": 0.6619941139558599,
+      "kind": "captioned_figure",
+      "score": 53.46675460740316,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/02-p14-captioned_figure.png",
+      "filename": "02-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-12-drawing-caption-20",
+      "page_index": 12,
+      "caption": "Fig. 4: Impact of the Completeness Verifier and Search Agent across step budgets on OSWorld. Sonnet 4.6 benefits consistently at all budgets, while Gemini 3 Flash gains only at relaxed budgets: tool calls consume actions that less efficient models cannot afford under tight constraints.",
+      "clip": [
+        16.01599884033203,
+        18.015884399414062,
+        397.84429931640625,
+        182.85797119140625
+      ],
+      "clip_area": 62941.3738467159,
+      "page_area": 254571.49841414206,
+      "text_density": 0.18386017123929715,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.768389725642173,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/03-p13-drawing_cluster_with_caption.png",
+      "filename": "03-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-12-block-20",
+      "page_index": 12,
+      "caption": "Fig. 4: Impact of the Completeness Verifier and Search Agent across step budgets on OSWorld. Sonnet 4.6 benefits consistently at all budgets, while Gemini 3 Flash gains only at relaxed budgets: tool calls consume actions that less efficient models cannot afford under tight constraints.",
+      "clip": [
+        18.0,
+        18.0,
+        395.8580017089844,
+        169.49331665039062
+      ],
+      "clip_area": 57242.96190178301,
+      "page_area": 254571.49841414206,
+      "text_density": 0.16976877155432907,
+      "kind": "captioned_figure",
+      "score": 14.613873706740257,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/04-p13-captioned_figure.png",
+      "filename": "04-p13-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-58",
+      "page_index": 4,
+      "caption": "3.1 Overview",
+      "clip": [
+        14.78030776977539,
+        8.0,
+        399.8414306640625,
+        236.4238739013672
+      ],
+      "clip_area": 87957.15338032349,
+      "page_area": 254571.49841414206,
+      "text_density": 0.3284440796623283,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.872930871383193,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/05-p5-drawing_cluster_with_caption.png",
+      "filename": "05-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-caption-47",
+      "page_index": 11,
+      "caption": "Fig. 3: The Completeness Verifier (w/ Verifier) reduces false completion rates (False Done / Failed, False Done / All) and the Loop Breaker reduces loop incidence (Loop / Failed, Loop / All) and the wasted steps ratio on OSWorld.",
+      "clip": [
+        16.01599884033203,
+        18.015411376953125,
+        397.83831787109375,
+        168.70999145507812
+      ],
+      "clip_area": 57538.55403079651,
+      "page_area": 254571.49841414206,
+      "text_density": 0.17707938533001502,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.175236880199098,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/06-p12-drawing_cluster_with_caption.png",
+      "filename": "06-p12-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/vlaa-gui-knowing-when-to-stop-recover-and-search-a-modular-framework-for-gui-aut/contact-sheet.svg"
+}

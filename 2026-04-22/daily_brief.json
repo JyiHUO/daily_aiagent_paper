@@ -1,26 +1,30 @@
 {
   "trend_overview_brief": [
-    "今天初筛后最集中的主题是 general_agent、embodi…",
-    "高优先级论文里，From Craft to Kernel: A G…",
-    "从创新性和研究开拓性看，From Craft to Kernel:…"
+    "Agent 安全成今日主线，runtime 治理和威胁建模密集出现",
+    "长程任务推理时扩展思路从数学/单轮蔓延到 coding agent",
+    "企业级和 SecOps 真实基准揭示前沿模型能力不足 10%",
+    "GUI/VLA 等具身场景强调 harness 与状态验证闭环"
   ],
   "trend_overview": [
-    "今天初筛后最集中的主题是 general_agent、embodied_agent、planning_reasoning，说明研究关注点继续从单轮回答能力转向更完整的执行链。",
-    "高优先级论文里，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers 等工作都在强调 Agent 的系统边界，而不是只卷更大的底座模型。",
-    "从创新性和研究开拓性看，From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers、How Adversarial Environments Mislead Agentic AI? 代表了今天最值得后续继续追踪的切口。"
+    "安全类论文在今日初筛中密度极高，从 Semantic ISA、污点传播到 TOCTOU、owner-harm、harm recovery，研究重心正从文本级 guardrail 转向运行时架构层治理。",
+    "长程 Agent 的 test-time scaling 成为新战场，多篇工作围绕轨迹摘要、并行/串行精炼和复用机制展开，说明'怎么花推理算力'本身已是独立研究方向。",
+    "评测基准继续向真实场景靠拢，AutomationBench、Cyber Defense Benchmark、AI scientist 行为分析都在暴露前沿模型在跨应用、API 发现、科学推理上的系统性短板。",
+    "具身与 GUI agent 明显共享同一套方法论——记忆、状态验证器、harness 控制器，长程执行的 memory gap 与 recovery gap 正被统一建模。"
   ],
   "knowledge_point": {
-    "topic": "Planner 为什么重要",
-    "summary": "Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么…",
-    "content": "Planner 可以理解成 Agent 在真正动手前先安排'先做什么、后做什么、每一步依赖什么反馈'的那层机制。没有 planner，系统容易把任务做成一步一拍脑袋的局部反应；有了 planner，Agent 才能处理长任务、跨工具任务和需要中途修正的任务。很多 Agent 能力差异，最后都不是出在语言生成本身，而是出在计划层有没有把任务拆对、有没有给执行留回退空间。",
-    "why_today": "今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。"
+    "topic": "Harness：Agent 运行时的实验底座",
+    "summary": "Harness 是把任务、环境、工具协议和评测日志打包起来的执行底座，决定 Agent 研究是否可复现、可比较。",
+    "content": "Harness 可以理解成一套把任务、环境、输入输出约定、工具协议、评测脚本和日志采集流程统一打包的实验底座。它本身不产生智能，但决定了不同模型、不同工具链、不同安全策略能否在同一套规则下被公平比较和反复回归。对 Agent 系统来说，harness 往往就是生产化的雏形：它既是评测基础设施，也是运行时治理和安全策略的落脚点——很多所谓的'Agent 框架'，其实核心竞争力就藏在 harness 的设计里。",
+    "why_today": "今天 must-read 里 POTEMKIN（MCP 兼容 harness）、Arbiter-K（治理优先 kernel）、HELM（harness-enhanced VLA）、AutomationBench 等都在重写 harness 层，说明 2025 年的 Agent 进步越来越多是'运行时底座'而不是模型本身的进步。"
   },
   "closing_summary_brief": [
-    "Agent 研究继续从模型能力转向执行链与系统边界。",
-    "更值得追踪的是评测、约束、协议和运行时设计。"
+    "Agent 竞争正从模型能力转向 runtime 底座与评测真实度",
+    "安全与 test-time scaling 是今天最值得跟进的两条主线"
   ],
   "closing_summary": [
-    "如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。",
-    "这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。"
+    "今天的初筛几乎可以用一句话概括：Agent 研究正在把注意力从模型能力转向运行时底座。",
+    "安全侧从事后 guardrail 走向架构级治理，评测侧从玩具任务走向企业和 SecOps 真实工作流，暴露出前沿模型在长程执行上的系统性短板。",
+    "与此同时，test-time scaling 和 harness 化的记忆/验证/恢复机制给出了务实的改进路径。",
+    "如果只跟两条线，建议盯住 Agent 安全的 runtime 架构和长程 coding/具身 Agent 的推理时扩展。"
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "trend_overview_brief": [
+    "今天初筛后最集中的主题是 general_agent、agent_…",
+    "高优先级论文里，HARBOR: Automated Harness…",
+    "从创新性和研究开拓性看，HARBOR: Automated Har…"
+  ],
+  "trend_overview": [
+    "今天初筛后最集中的主题是 general_agent、agent_safety、embodied_agent，说明研究关注点继续从单轮回答能力转向更完整的执行链。",
+    "高优先级论文里，HARBOR: Automated Harness Optimization 等工作都在强调 Agent 的系统边界，而不是只卷更大的底座模型。",
+    "从创新性和研究开拓性看，HARBOR: Automated Harness Optimization、Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms 代表了今天最值得后续继续追踪的切口。"
+  ],
+  "knowledge_point": {
+    "topic": "Tool Abstraction 为什么关键",
+    "summary": "Tool Abstraction 讲的是：系统到底把外部能力封装成什么粒度给…",
+    "content": "Tool Abstraction 讲的是：系统到底把外部能力封装成什么粒度给 Agent 使用。抽象太粗，工具会变成不灵活的黑盒；抽象太细，Agent 又会被大量原子动作拖垮。好的工具抽象通常会把稳定、可复用、确定性的操作打包起来，同时把依赖当前环境理解的判断留给模型本身。",
+    "why_today": "今天的重点论文里，反复出现了评测、执行链安全、工具与环境交互这些问题，所以补这个概念最划算。"
+  },
+  "closing_summary_brief": [
+    "Agent 研究继续从模型能力转向执行链与系统边界。",
+    "更值得追踪的是评测、约束、协议和运行时设计。"
+  ],
+  "closing_summary": [
+    "如果把今天的论文连起来看，一个明显变化是：大家越来越少把 Agent 当成单一模型能力问题，而是把它当成执行链、工具层、评测层和安全层共同构成的系统问题。",
+    "这意味着后续真正有开拓性的研究，往往不是再加一点 prompt 技巧，而是重新定义 Agent 应该如何被评测、如何被约束，以及如何在真实环境里更稳地工作。"
+  ]
+}

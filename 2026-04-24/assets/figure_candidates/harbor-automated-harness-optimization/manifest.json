@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/downloaded_pdfs/harbor-automated-harness-optimization.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization",
+  "candidates": [
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        59.863365173339844,
+        36.74107360839844,
+        289.1253967285156,
+        131.38677978515625
+      ],
+      "clip_area": 21698.666876057745,
+      "page_area": 484704.0,
+      "text_density": 0.25739051854963324,
+      "kind": "drawing_cluster",
+      "score": 3.597665185644871,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/01-p2-drawing_cluster.png",
+      "filename": "01-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-block-13",
+      "page_index": 7,
+      "caption": "Fig. 2: Reference H ARBOR solver for harness configuration. µ ( c ) , σ ( c ) denote GP posterior mean and standard deviation; T m is the fidelity- m task subset; α 2 ℓ is the per-block kernel scale of Eq. 6 ; n ℓ is the number of distinct block- ℓ projections seen in history H .",
+      "clip": [
+        281.37799682617185,
+        60.55729980468749,
+        594.0,
+        369.3572998046875
+      ],
+      "clip_area": 96537.67458007814,
+      "page_area": 484704.0,
+      "text_density": 0.5638898138927065,
+      "kind": "captioned_figure",
+      "score": -1.9273591713324656,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8369224892929074,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/03-p1-layout_region_left_top.png",
+      "filename": "03-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.785199143536918,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/04-p2-layout_region_left_top.png",
+      "filename": "04-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.7928305432520901,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/05-p1-layout_region_right_top.png",
+      "filename": "05-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.7995001262324425,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-24/assets/figure_candidates/harbor-automated-harness-optimization/contact-sheet.svg"
+}

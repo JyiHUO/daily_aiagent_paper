@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1b7a3a"/>
+    </marker>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">Harness 调优 = 40 维开关的搜索问题</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">人脑管不过来，交给贝叶斯优化</text>
+
+  <!-- Left: mixer board -->
+  <g>
+    <rect x="50" y="95" width="340" height="220" rx="10" fill="#f5f7fb" stroke="#3b5bdb" stroke-width="2"/>
+    <text x="220" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#3b5bdb">Harness 调音台 (F≈40)</text>
+
+    <g font-size="11" fill="#333">
+      <circle cx="95" cy="160" r="14" fill="#fff" stroke="#3b5bdb"/><text x="95" y="188" text-anchor="middle">cache</text>
+      <circle cx="165" cy="160" r="14" fill="#fff" stroke="#3b5bdb"/><text x="165" y="188" text-anchor="middle">compress</text>
+      <circle cx="235" cy="160" r="14" fill="#fff" stroke="#3b5bdb"/><text x="235" y="188" text-anchor="middle">self-eval</text>
+      <circle cx="305" cy="160" r="14" fill="#fff" stroke="#3b5bdb"/><text x="305" y="188" text-anchor="middle">spec-tool</text>
+
+      <rect x="82" y="218" width="26" height="12" rx="2" fill="#3b5bdb"/>
+      <rect x="152" y="218" width="26" height="12" rx="2" fill="#ccc"/>
+      <rect x="222" y="218" width="26" height="12" rx="2" fill="#3b5bdb"/>
+      <rect x="292" y="218" width="26" height="12" rx="2" fill="#ccc"/>
+      <text x="95"  y="248" text-anchor="middle">memory</text>
+      <text x="165" y="248" text-anchor="middle">reflect</text>
+      <text x="235" y="248" text-anchor="middle">ACON</text>
+      <text x="305" y="248" text-anchor="middle">PASTE</text>
+    </g>
+
+    <text x="220" y="285" text-anchor="middle" font-size="12" fill="#555">布尔 flag × 数值阈值 × 离散预设</text>
+    <text x="220" y="303" text-anchor="middle" font-size="12" fill="#555">…还有 30+ 个开关</text>
+  </g>
+
+  <!-- Right top: manual -->
+  <g>
+    <rect x="500" y="95" width="350" height="220" rx="10" fill="#fdecec" stroke="#c0392b" stroke-width="2"/>
+    <text x="675" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">工程师手调：加 feature 就掉分</text>
+
+    <g font-size="12" fill="#333">
+      <text x="515" y="155">B: 5 flag 全开</text>
+      <rect x="655" y="143" width="140" height="14" fill="#e0e0e0"/>
+      <rect x="655" y="143" width="27" height="14" fill="#27ae60"/>
+      <text x="805" y="155">17/89</text>
+
+      <text x="515" y="190">C: + 自评 gate</text>
+      <rect x="655" y="178" width="140" height="14" fill="#e0e0e0"/>
+      <rect x="655" y="178" width="20" height="14" fill="#e67e22"/>
+      <text x="805" y="190">13/89</text>
+
+      <text x="515" y="225">D: + ACON+Reflexion+PASTE</text>
+      <rect x="655" y="213" width="140" height="14" fill="#e0e0e0"/>
+      <rect x="655" y="213" width="19" height="14" fill="#c0392b"/>
+      <text x="805" y="225">12/89</text>
+
+      <text x="515" y="260" font-weight="700" fill="#1a1a1a">Oracle 并集（配置空间有答案）</text>
+      <rect x="655" y="278" width="140" height="14" fill="#e0e0e0"/>
+      <rect x="655" y="278" width="127" height="14" fill="#2c3e50"/>
+      <text x="805" y="290" font-weight="700">81/89</text>
+    </g>
+  </g>
+
+  <!-- Arrow from mixer to manual -->
+  <path d="M390 200 L498 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="444" y="192" text-anchor="middle" font-size="11" fill="#666">手工堆叠</text>
+
+  <!-- Bottom: reformulation -->
+  <g>
+    <rect x="50" y="355" width="800" height="220" rx="12" fill="#eef7ee" stroke="#27ae60" stroke-width="2"/>
+    <text x="450" y="385" text-anchor="middle" font-size="16" font-weight="700" fill="#1b7a3a">抬升为带约束的 ML 优化问题</text>
+
+    <g font-size="15" fill="#1a1a1a">
+      <text x="450" y="422" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace">max  E[ pass_rate(θ) ]</text>
+      <text x="450" y="448" text-anchor="middle" fill="#555" font-size="12" font-family="ui-monospace,Menlo,Consolas,monospace">s.t.  部署成本 ≤ B_dep    安全 ≥ R0 − δ    搜索预算 ≤ B_sea</text>
+    </g>
+
+    <g font-size="13">
+      <rect x="90" y="485" width="200" height="60" rx="8" fill="#fff" stroke="#27ae60"/>
+      <text x="190" y="510" text-anchor="middle" font-weight="700" fill="#1b7a3a">混合变量空间</text>
+      <text x="190" y="530" text-anchor="middle" fill="#444">bool / 阈值 / 预设</text>
+
+      <rect x="350" y="485" width="200" height="60" rx="8" fill="#fff" stroke="#27ae60"/>
+      <text x="450" y="510" text-anchor="middle" font-weight="700" fill="#1b7a3a">贝叶斯优化器</text>
+      <text x="450" y="530" text-anchor="middle" fill="#444">代替工程师直觉</text>
+
+      <rect x="610" y="485" width="200" height="60" rx="8" fill="#fff" stroke="#27ae60"/>
+      <text x="710" y="510" text-anchor="middle" font-weight="700" fill="#1b7a3a">自动找配置</text>
+      <text x="710" y="530" text-anchor="middle" fill="#444">逼近 Oracle</text>
+
+      <path d="M290 515 L348 515" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arg)"/>
+      <path d="M550 515 L608 515" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arg)"/>
+    </g>
+  </g>
+
+  <!-- connecting arrow from manual failure to ML box -->
+  <path d="M675 318 L675 340 L450 340 L450 353" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="450" y="334" text-anchor="middle" font-size="12" fill="#c0392b">手调失败 ⇒ 换方法</text>
+</svg>

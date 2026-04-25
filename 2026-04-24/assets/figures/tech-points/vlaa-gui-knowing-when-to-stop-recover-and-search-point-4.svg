@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2874a6"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#111">一个 Manager · 两道强制闸 · 三个外援</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">扁平架构：不要 planner，不要长 memory，但每步必被审问</text>
+
+  <!-- Manager core -->
+  <rect x="340" y="255" width="220" height="110" rx="14" fill="#ffe8b0" stroke="#c58a00" stroke-width="2.5"/>
+  <text x="450" y="290" text-anchor="middle" font-size="20" font-weight="700" fill="#5a3d00">Manager Agent</text>
+  <text x="450" y="315" text-anchor="middle" font-size="12" fill="#5a3d00">感知 → 推理 → 行动（一条龙）</text>
+  <text x="450" y="345" text-anchor="middle" font-size="11" fill="#8a5a00">每次 action 之后 ↓ 必过两闸</text>
+
+  <!-- Two mandatory gates -->
+  <rect x="275" y="430" width="170" height="75" rx="10" fill="#fde2e2" stroke="#c0392b" stroke-width="2"/>
+  <text x="360" y="458" text-anchor="middle" font-size="15" font-weight="700" fill="#8b1a1a">Verifier</text>
+  <text x="360" y="480" text-anchor="middle" font-size="11" fill="#8b1a1a">真的做完了吗？</text>
+  <text x="360" y="496" text-anchor="middle" font-size="11" fill="#8b1a1a">拦住"早停"</text>
+
+  <rect x="455" y="430" width="170" height="75" rx="10" fill="#fde2e2" stroke="#c0392b" stroke-width="2"/>
+  <text x="540" y="458" text-anchor="middle" font-size="15" font-weight="700" fill="#8b1a1a">Loop Breaker</text>
+  <text x="540" y="480" text-anchor="middle" font-size="11" fill="#8b1a1a">又点同一按钮？</text>
+  <text x="540" y="496" text-anchor="middle" font-size="11" fill="#8b1a1a">拦住"死循环"</text>
+
+  <text x="450" y="528" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">强制 · 每步必过</text>
+
+  <!-- arrows manager to gates -->
+  <path d="M420,365 L375,430" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M480,365 L525,430" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <!-- feedback back to manager -->
+  <path d="M340,445 C295,400 300,370 340,345" stroke="#c0392b" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <path d="M625,445 C680,400 665,365 560,345" stroke="#c0392b" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- Three on-demand helpers -->
+  <rect x="60" y="150" width="180" height="90" rx="10" fill="#dbeeff" stroke="#2874a6" stroke-width="2"/>
+  <text x="150" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4e7a">Search Agent</text>
+  <text x="150" y="205" text-anchor="middle" font-size="11" fill="#1a4e7a">这 app 怎么用？</text>
+  <text x="150" y="223" text-anchor="middle" font-size="11" fill="#1a4e7a">查教程 / 文档</text>
+
+  <rect x="360" y="110" width="180" height="90" rx="10" fill="#dbeeff" stroke="#2874a6" stroke-width="2"/>
+  <text x="450" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4e7a">Coding Agent</text>
+  <text x="450" y="165" text-anchor="middle" font-size="11" fill="#1a4e7a">rm -f ./folder</text>
+  <text x="450" y="183" text-anchor="middle" font-size="11" fill="#1a4e7a">批量 / 脚本任务</text>
+
+  <rect x="660" y="150" width="180" height="90" rx="10" fill="#dbeeff" stroke="#2874a6" stroke-width="2"/>
+  <text x="750" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#1a4e7a">Grounding Agent</text>
+  <text x="750" y="205" text-anchor="middle" font-size="11" fill="#1a4e7a">按钮在哪儿？</text>
+  <text x="750" y="223" text-anchor="middle" font-size="11" fill="#1a4e7a">精确坐标定位</text>
+
+  <!-- arrows manager to helpers -->
+  <path d="M350,260 L240,225" stroke="#2874a6" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#ab)"/>
+  <path d="M450,255 L450,200" stroke="#2874a6" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#ab)"/>
+  <path d="M550,260 L660,225" stroke="#2874a6" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#ab)"/>
+
+  <text x="450" y="240" text-anchor="middle" font-size="12" fill="#2874a6" font-style="italic">Manager 按需调用三外援</text>
+
+  <!-- bottom note -->
+  <rect x="150" y="560" width="600" height="46" rx="8" fill="#eaf6e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="450" y="582" text-anchor="middle" font-size="13" font-weight="700" fill="#1b5e20">OSWorld 15 步 · 64.1%  ＞  别家 50 步系统</text>
+  <text x="450" y="599" text-anchor="middle" font-size="11" fill="#1b5e20">扁平 + 强制审问 + 外援，比层级规划更快更准</text>
+</svg>

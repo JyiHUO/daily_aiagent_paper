@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="PingFang SC, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1530"/>
+      <stop offset="1" stop-color="#131a38"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0e7ff"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff6b8a"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7ed6a5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="46" text-anchor="middle" fill="#f5f7ff" font-size="26" font-weight="700">跨会话威胁检测：把攻击从几十个会话里拼回来</text>
+  <text x="600" y="72" text-anchor="middle" fill="#9fb0d8" font-size="14">CSTM-Bench · Coreset Memory Reader · CSR_prefix 指标</text>
+
+  <!-- Left: attacker sessions -->
+  <g>
+    <text x="60" y="118" fill="#ff9eb1" font-size="14" font-weight="600">攻击者：把一次攻击拆进几十个会话</text>
+    <g transform="translate(60,135)">
+      <rect width="250" height="42" rx="6" fill="#1e2447" stroke="#ff6b8a" stroke-opacity="0.35"/>
+      <text x="14" y="19" fill="#cfd6ee" font-size="12">S1 · 列出 /etc 目录</text>
+      <text x="14" y="34" fill="#8aa0c8" font-size="11">accumulate — 看起来只是巡检</text>
+    </g>
+    <g transform="translate(60,188)">
+      <rect width="250" height="42" rx="6" fill="#1e2447" stroke="#ff6b8a" stroke-opacity="0.45"/>
+      <text x="14" y="19" fill="#cfd6ee" font-size="12">S2 · 读取 config 敏感段</text>
+      <text x="14" y="34" fill="#8aa0c8" font-size="11">compose — 拼出数据全貌</text>
+    </g>
+    <g transform="translate(60,241)">
+      <rect width="250" height="42" rx="6" fill="#1e2447" stroke="#ff6b8a" stroke-opacity="0.6"/>
+      <text x="14" y="19" fill="#cfd6ee" font-size="12">S3 · 生成 base64 摘要</text>
+      <text x="14" y="34" fill="#8aa0c8" font-size="11">launder — 洗白表面话术</text>
+    </g>
+    <g transform="translate(60,294)">
+      <rect width="250" height="42" rx="6" fill="#2a1830" stroke="#ff3860" stroke-opacity="0.9"/>
+      <text x="14" y="19" fill="#ffd5de" font-size="12" font-weight="600">S4 · POST 到外部 URL</text>
+      <text x="14" y="34" fill="#ffb0c2" font-size="11">inject_on_reader — 触发硬禁令</text>
+    </g>
+    <text x="60" y="360" fill="#6e7ea8" font-size="11">…… 更多良性会话稀释攻击片段 ……</text>
+  </g>
+
+  <!-- Baselines (top row) -->
+  <g transform="translate(380,120)">
+    <rect width="400" height="72" rx="10" fill="#221a2b" stroke="#ff6b8a" stroke-opacity="0.5"/>
+    <text x="16" y="26" fill="#ffd5de" font-size="13" font-weight="600">① 单条消息判定（session-bound guardrail）</text>
+    <text x="16" y="46" fill="#c9b0c0" font-size="11.5">每条单独合规 → 看不到跨会话 arc</text>
+    <text x="16" y="62" fill="#ff8fa3" font-size="11.5" font-weight="600">攻击召回 ≈ 腰斩</text>
+  </g>
+
+  <g transform="translate(380,202)">
+    <rect width="400" height="72" rx="10" fill="#221a2b" stroke="#ff6b8a" stroke-opacity="0.5"/>
+    <text x="16" y="26" fill="#ffd5de" font-size="13" font-weight="600">② Full-Log Correlator（全日志拼长上下文）</text>
+    <text x="16" y="46" fill="#c9b0c0" font-size="11.5">~97K token 远未截断，但注意力被稀释</text>
+    <text x="16" y="62" fill="#ff8fa3" font-size="11.5" font-weight="600">dilution → cross_session 召回仍 ≈ 腰斩</text>
+  </g>
+
+  <!-- Coreset Memory Reader (center hero) -->
+  <g transform="translate(380,310)">
+    <rect width="400" height="250" rx="14" fill="#0f2136" stroke="#4dd0e1" stroke-width="2"/>
+    <text x="200" y="30" text-anchor="middle" fill="#4dd0e1" font-size="15" font-weight="700">③ Coreset Memory Reader（K=50）</text>
+    <text x="200" y="50" text-anchor="middle" fill="#9fd6e0" font-size="11.5">有界缓冲 · 只留最高信号跨会话片段</text>
+
+    <!-- slots -->
+    <g transform="translate(24,66)">
+      <rect width="352" height="28" rx="4" fill="#16344d" stroke="#4dd0e1" stroke-opacity="0.5"/>
+      <text x="10" y="18" fill="#e0f7ff" font-size="11">#01 外部 URL（跨会话 artefact）</text>
+      <text x="340" y="18" text-anchor="end" fill="#ffa8a8" font-size="11" font-weight="600">●</text>
+    </g>
+    <g transform="translate(24,100)">
+      <rect width="352" height="28" rx="4" fill="#16344d" stroke="#4dd0e1" stroke-opacity="0.5"/>
+      <text x="10" y="18" fill="#e0f7ff" font-size="11">#02 config 路径（S2 留痕）</text>
+      <text x="340" y="18" text-anchor="end" fill="#ffa8a8" font-size="11" font-weight="600">●</text>
+    </g>
+    <g transform="translate(24,134)">
+      <rect width="352" height="28" rx="4" fill="#16344d" stroke="#4dd0e1" stroke-opacity="0.5"/>
+      <text x="10" y="18" fill="#e0f7ff" font-size="11">#03 base64 摘要（S3 洗白）</text>
+      <text x="340" y="18" text-anchor="end" fill="#ffa8a8" font-size="11" font-weight="600">●</text>
+    </g>
+    <g transform="translate(24,168)">
+      <rect width="352" height="22" rx="4" fill="#0d2639" stroke="#2e6d88" stroke-dasharray="3 3"/>
+      <text x="176" y="15" text-anchor="middle" fill="#6b94a8" font-size="10.5">… 前缀有序固定，KV-cache 可复用 …</text>
+    </g>
+
+    <line x1="24" y1="204" x2="376" y2="204" stroke="#2b5a75" stroke-dasharray="2 3"/>
+    <text x="24" y="222" fill="#9fd6e0" font-size="11">锚点（identity anchor）：devops-agent</text>
+    <text x="24" y="238" fill="#9fd6e0" font-size="11">硬禁令：禁止外传数据</text>
+  </g>
+
+  <!-- Right: outcomes -->
+  <g transform="translate(830,120)">
+    <rect width="320" height="160" rx="10" fill="#17212e" stroke="#66bb6a" stroke-opacity="0.6"/>
+    <text x="16" y="28" fill="#b6f0c2" font-size="14" font-weight="700">行动前拦截</text>
+    <text x="16" y="52" fill="#d5ecdc" font-size="12">在 S4 触发硬禁令前报警</text>
+    <text x="16" y="76" fill="#d5ecdc" font-size="12">dilution 与 cross_session</text>
+    <text x="16" y="94" fill="#d5ecdc" font-size="12">两个 split 召回都保持</text>
+    <rect x="16" y="108" width="288" height="38" rx="6" fill="#0f2a18" stroke="#66bb6a"/>
+    <text x="160" y="132" text-anchor="middle" fill="#b6f0c2" font-size="12.5" font-weight="600">唯一在 cross_session 不失守的 reader</text>
+  </g>
+
+  <g transform="translate(830,295)">
+    <rect width="320" height="120" rx="10" fill="#17212e" stroke="#4dd0e1" stroke-opacity="0.6"/>
+    <text x="16" y="28" fill="#b6e7f0" font-size="14" font-weight="700">CSR_prefix（一等指标）</text>
+    <text x="16" y="50" fill="#cfe7ee" font-size="11.5">有序前缀稳定度 → KV-cache 命中率</text>
+    <text x="16" y="68" fill="#cfe7ee" font-size="11.5">无需 LLM、无需标签，线上可持续监控</text>
+    <text x="16" y="96" fill="#9ed1dc" font-size="11.5" font-style="italic">ranker 乱序会打碎缓存 → 成本爆炸</text>
+  </g>
+
+  <g transform="translate(830,430)">
+    <rect width="320" height="130" rx="10" fill="#1c1930" stroke="#b39ddb" stroke-opacity="0.7"/>
+    <text x="16" y="28" fill="#e5dcff" font-size="14" font-weight="700">综合得分 CSTM</text>
+    <text x="16" y="62" fill="#d8ccff" font-size="14" font-family="Georgia, serif">0.7 · F1(CSDA@action, P)</text>
+    <text x="16" y="86" fill="#d8ccff" font-size="14" font-family="Georgia, serif">+ 0.3 · CSR_prefix</text>
+    <text x="16" y="112" fill="#a79cc8" font-size="11">在 召回 × 服务稳定度 的 Pareto 上评测 ranker</text>
+  </g>
+
+  <!-- Flow arrows from sessions to readers: straight, clear endpoints -->
+  <path d="M312,156 L378,156" stroke="#ff6b8a" stroke-width="1.6" fill="none" marker-end="url(#arrR)"/>
+  <path d="M312,209 L378,232" stroke="#ff6b8a" stroke-width="1.6" fill="none" marker-end="url(#arrR)"/>
+  <path d="M312,262 L378,400" stroke="#ff6b8a" stroke-width="1.8" fill="none" marker-end="url(#arrR)"/>
+  <path d="M312,315 L378,430" stroke="#ff6b8a" stroke-width="1.8" fill="none" marker-end="url(#arrR)"/>
+
+  <!-- From Coreset to outcomes: straight arrows to box edges -->
+  <path d="M782,360 L828,200" stroke="#7ed6a5" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M782,420 L828,355" stroke="#4dd0e1" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M782,480 L828,495" stroke="#b39ddb" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Baseline fail marks -->
+  <text x="790" y="160" fill="#ff8fa3" font-size="18" font-weight="700">✕</text>
+  <text x="790" y="242" fill="#ff8fa3" font-size="18" font-weight="700">✕</text>
+
+  <!-- Legend at bottom -->
+  <g transform="translate(60,700)">
+    <circle cx="8" cy="8" r="5" fill="#ff6b8a"/>
+    <text x="22" y="12" fill="#c9d2ee" font-size="11">跨会话攻击流</text>
+    <circle cx="150" cy="8" r="5" fill="#4dd0e1"/>
+    <text x="164" y="12" fill="#c9d2ee" font-size="11">机制与指标层</text>
+    <circle cx="296" cy="8" r="5" fill="#7ed6a5"/>
+    <text x="310" y="12" fill="#c9d2ee" font-size="11">结果与收益层</text>
+    <text x="460" y="12" fill="#6e7ea8" font-size="11">数据集：cstm-bench · 54 场景 × 2 split · 26 攻击 taxonomy</text>
+  </g>
+</svg>

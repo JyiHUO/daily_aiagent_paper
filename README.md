@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-23
+- **日期**：2026-04-24
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows
-  - SWE-chat: Coding Agent Interactions From Real Users in the Wild
-  - Peer-Preservation in Frontier Models
-- **日报路径**：[2026-04-23/daily_report.md](2026-04-23/daily_report.md)
+  - HARBOR: Automated Harness Optimization
+  - Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms
+  - VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation
+- **日报路径**：[2026-04-24/daily_report.md](2026-04-24/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-24 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HARBOR: Automated Harness Optimization | [2026-04-24/daily_report.md](2026-04-24/daily_report.md) |
+|  |  |  | 2 | Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms |  |
+|  |  |  | 3 | VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation |  |
 | 2026-04-23 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows | [2026-04-23/daily_report.md](2026-04-23/daily_report.md) |
 |  |  |  | 2 | SWE-chat: Coding Agent Interactions From Real Users in the Wild |  |
 |  |  |  | 3 | Peer-Preservation in Frontier Models |  |

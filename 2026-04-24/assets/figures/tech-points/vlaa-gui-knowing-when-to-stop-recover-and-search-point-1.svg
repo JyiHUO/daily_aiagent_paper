@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrLoop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="23" font-weight="700" fill="#0f172a">完成度双重核验：做完 ≠ 真的做完</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#64748b">把"任务完成"从主观判断，变成逐条打勾 + 两方签字</text>
+
+  <!-- Task box -->
+  <rect x="40" y="95" width="220" height="80" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">任务</text>
+  <text x="150" y="148" text-anchor="middle" font-size="12" fill="#1e3a8a">把 Impress 页码</text>
+  <text x="150" y="165" text-anchor="middle" font-size="12" fill="#1e3a8a">颜色改成红色</text>
+
+  <!-- Checklist (Completion Gate) -->
+  <rect x="320" y="90" width="260" height="175" rx="10" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="450" y="114" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">① Completion Gate：成功清单</text>
+  <text x="340" y="140" font-size="12" fill="#422006">☐ 页码颜色 = 红色</text>
+  <text x="340" y="162" font-size="12" fill="#422006">☐ 母版状态已更新</text>
+  <text x="340" y="184" font-size="12" fill="#422006">☐ 看到"已保存"提示</text>
+  <text x="340" y="206" font-size="12" fill="#422006">☐ UI 停止刷新</text>
+  <text x="450" y="234" text-anchor="middle" font-size="11" fill="#92400e" font-style="italic">每一步都对着截图自检</text>
+  <text x="450" y="252" text-anchor="middle" font-size="11" fill="#92400e" font-style="italic">（K 条 UI 可观察的证据）</text>
+
+  <!-- Arrow task -> checklist -->
+  <line x1="260" y1="135" x2="316" y2="135" stroke="#334155" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Manager done -->
+  <rect x="640" y="95" width="220" height="80" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="750" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Manager: done()</text>
+  <text x="750" y="146" text-anchor="middle" font-size="12" fill="#334155">"我觉得做完了"（主观）</text>
+  <text x="750" y="164" text-anchor="middle" font-size="11" fill="#64748b">想收工，须先过第二关</text>
+
+  <!-- Verifier judge -->
+  <rect x="320" y="310" width="260" height="105" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="450" y="338" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">② 独立 MLLM Verifier</text>
+  <text x="450" y="360" text-anchor="middle" font-size="12" fill="#991b1b">第二道关：逐条核对截图证据</text>
+  <text x="450" y="380" text-anchor="middle" font-size="12" fill="#991b1b">缺证据 → 拒绝 + 写回理由</text>
+  <text x="450" y="402" text-anchor="middle" font-size="11" fill="#b91c1c">假完成率 30.4% → 26.5%</text>
+
+  <!-- Arrows into verifier -->
+  <line x1="750" y1="175" x2="560" y2="309" stroke="#334155" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="265" x2="450" y2="308" stroke="#334155" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Reject branch -->
+  <rect x="40" y="455" width="360" height="105" rx="10" fill="#fff1f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="220" y="482" text-anchor="middle" font-size="14" font-weight="700" fill="#991b1b">✗ 拒绝：证据不足</text>
+  <text x="220" y="506" text-anchor="middle" font-size="12" fill="#7f1d1d">"页码仍是灰色 / 未看到保存确认"</text>
+  <text x="220" y="528" text-anchor="middle" font-size="11" fill="#b91c1c">→ 理由写回轨迹，回去继续做</text>
+  <text x="220" y="548" text-anchor="middle" font-size="11" fill="#b91c1c">（Ctrl+S 之后再 done()）</text>
+
+  <!-- Pass branch -->
+  <rect x="500" y="455" width="360" height="105" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="680" y="482" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">✓ 通过：每条都有视觉证据</text>
+  <text x="680" y="506" text-anchor="middle" font-size="12" fill="#166534">红色生效 · 已保存提示 · UI 稳定</text>
+  <text x="680" y="532" text-anchor="middle" font-size="11" fill="#15803d">→ 真正结束任务</text>
+
+  <!-- Branch arrows -->
+  <line x1="380" y1="415" x2="260" y2="453" stroke="#dc2626" stroke-width="2.2" marker-end="url(#arrRed)"/>
+  <line x1="520" y1="415" x2="640" y2="453" stroke="#16a34a" stroke-width="2.2" marker-end="url(#arrGreen)"/>
+
+  <!-- Reject loop back to checklist -->
+  <path d="M 220 455 Q 160 330 316 200" fill="none" stroke="#b45309" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrLoop)"/>
+  <text x="120" y="330" font-size="11" fill="#b45309" font-style="italic">拒绝后回到清单重做</text>
+</svg>
