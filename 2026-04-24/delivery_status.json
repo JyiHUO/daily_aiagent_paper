@@ -1,0 +1,13 @@
+{
+  "feishu": "completed",
+  "wecom": "completed",
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69ecf2a11d989496e780e3cd",
+    "pid": "680e3c27d6274e74a99e502f",
+    "title": "AI Agent 论文播报｜0424：胜负手不在模型里，在模型外面那一层",
+    "review_status": "PENDING",
+    "status": "INITIALIZED",
+    "note": "duplicate eid 69ecf28d1d989496e780e320 was created during retry; please delete one in web UI"
+  }
+}

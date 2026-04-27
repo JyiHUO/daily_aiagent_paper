@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">动态重放 + 反事实调试</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">不只看日志，还能"改输入再跑一次"确认真凶</text>
+
+  <!-- Static trace (top) -->
+  <rect x="60" y="80" width="780" height="110" rx="10" fill="#f4f6fa" stroke="#aab4c4"/>
+  <text x="80" y="104" font-size="14" font-weight="700" fill="#333">① 静态 trace 提出候选失败 step</text>
+
+  <g>
+    <rect x="100" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="130" y="141" text-anchor="middle" font-size="12">Step1</text>
+    <rect x="175" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="205" y="141" text-anchor="middle" font-size="12">Step2</text>
+    <rect x="250" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="280" y="141" text-anchor="middle" font-size="12">Step3</text>
+    <rect x="325" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="355" y="141" text-anchor="middle" font-size="12">Step4</text>
+    <rect x="400" y="120" width="60" height="32" rx="5" fill="#ffd6d6" stroke="#e74c3c" stroke-width="2"/>
+    <text x="430" y="141" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">Step5?</text>
+    <rect x="475" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="505" y="141" text-anchor="middle" font-size="12">Step6</text>
+    <rect x="550" y="120" width="60" height="32" rx="5" fill="#d5dbe6"/>
+    <text x="580" y="141" text-anchor="middle" font-size="12">...</text>
+    <rect x="625" y="120" width="80" height="32" rx="5" fill="#ffe0b3" stroke="#d68910"/>
+    <text x="665" y="141" text-anchor="middle" font-size="12" font-weight="700">❌ 失败</text>
+  </g>
+
+  <text x="430" y="178" text-anchor="middle" font-size="11" fill="#c0392b">疑似凶手：orchestrator @ Step5</text>
+
+  <!-- Arrow down -->
+  <path d="M430 198 L430 232" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Counterfactual box -->
+  <rect x="60" y="240" width="780" height="220" rx="10" fill="#fff8ec" stroke="#e0a84a"/>
+  <text x="80" y="264" font-size="14" font-weight="700" fill="#333">② 从 Step4 状态重放 + 反事实替换 orchestrator 输出</text>
+
+  <!-- Branch A: original -->
+  <rect x="95" y="285" width="340" height="155" rx="8" fill="#fdecec" stroke="#e74c3c"/>
+  <text x="265" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">原输出 → 仍失败</text>
+
+  <rect x="110" y="335" width="90" height="36" rx="5" fill="#fff" stroke="#e74c3c"/>
+  <text x="155" y="358" text-anchor="middle" font-size="12">Step4 状态</text>
+
+  <path d="M200 353 L233 353" stroke="#e74c3c" stroke-width="2" marker-end="url(#arR)"/>
+
+  <rect x="238" y="335" width="110" height="36" rx="5" fill="#ffd6d6" stroke="#e74c3c"/>
+  <text x="293" y="358" text-anchor="middle" font-size="11" font-weight="700">orch. 原规划 (bug)</text>
+
+  <path d="M348 353 L388 353" stroke="#e74c3c" stroke-width="2" marker-end="url(#arR)"/>
+
+  <text x="405" y="360" font-size="22">❌</text>
+
+  <text x="265" y="415" text-anchor="middle" font-size="11" fill="#666">任务依旧崩溃</text>
+
+  <!-- Branch B: counterfactual -->
+  <rect x="465" y="285" width="340" height="155" rx="8" fill="#eafaf0" stroke="#27ae60"/>
+  <text x="635" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1e8449">替换输出 → 成功</text>
+
+  <rect x="480" y="335" width="90" height="36" rx="5" fill="#fff" stroke="#27ae60"/>
+  <text x="525" y="358" text-anchor="middle" font-size="12">Step4 状态</text>
+
+  <path d="M570 353 L603 353" stroke="#27ae60" stroke-width="2" marker-end="url(#arG)"/>
+
+  <rect x="608" y="335" width="110" height="36" rx="5" fill="#c8f0d4" stroke="#27ae60"/>
+  <text x="663" y="358" text-anchor="middle" font-size="11" font-weight="700">替换新规划 (what-if)</text>
+
+  <path d="M718 353 L758 353" stroke="#27ae60" stroke-width="2" marker-end="url(#arG)"/>
+
+  <text x="775" y="360" font-size="22">✅</text>
+
+  <text x="635" y="415" text-anchor="middle" font-size="11" fill="#666">改掉它，任务就通了</text>
+
+  <!-- Conclusion -->
+  <rect x="220" y="490" width="460" height="50" rx="10" fill="#1a2a4a"/>
+  <text x="450" y="511" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">结论：Step5 就是决定性失败点</text>
+  <text x="450" y="530" text-anchor="middle" font-size="11" fill="#9fb3d9">Step 级归因准确率 +10%（vs 纯静态）</text>
+</svg>

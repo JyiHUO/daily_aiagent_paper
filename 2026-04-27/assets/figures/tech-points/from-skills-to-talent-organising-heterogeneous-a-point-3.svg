@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d1495b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9d8f"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1d3557">E2R 树搜索：像下棋一样搜"怎么拆任务"</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">Explore 拆分 · Execute 执行 · Review 审核回传</text>
+
+  <!-- Explore -->
+  <rect x="60" y="110" width="200" height="90" rx="10" fill="#e8f1fb" stroke="#4a7ab8" stroke-width="2"/>
+  <text x="160" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#1d3557">① Explore</text>
+  <text x="160" y="165" text-anchor="middle" font-size="12" fill="#333">COO 拆任务 + 派人</text>
+  <text x="160" y="184" text-anchor="middle" font-size="12" fill="#333">生成子节点策略</text>
+
+  <!-- Execute -->
+  <rect x="350" y="110" width="200" height="90" rx="10" fill="#eaf6f1" stroke="#2a9d8f" stroke-width="2"/>
+  <text x="450" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#1d5e50">② Execute</text>
+  <text x="450" y="165" text-anchor="middle" font-size="12" fill="#333">Agent 真实产出</text>
+  <text x="450" y="184" text-anchor="middle" font-size="12" fill="#333">写代码 / 文档</text>
+
+  <!-- Review -->
+  <rect x="640" y="110" width="200" height="90" rx="10" fill="#fdecef" stroke="#d1495b" stroke-width="2"/>
+  <text x="740" y="140" text-anchor="middle" font-size="17" font-weight="700" fill="#7a1d2b">③ Review</text>
+  <text x="740" y="165" text-anchor="middle" font-size="12" fill="#333">上级 Accept / Reject</text>
+
+  <!-- arrows top row -->
+  <line x1="260" y1="155" x2="348" y2="155" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="550" y1="155" x2="638" y2="155" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Accept path down -->
+  <path d="M 740 200 L 740 290" fill="none" stroke="#2a9d8f" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="752" y="250" font-size="12" fill="#2a9d8f" font-weight="600">✓ Accept 解锁下游</text>
+
+  <!-- Reject loop back to Explore -->
+  <path d="M 680 200 Q 450 270 220 200" fill="none" stroke="#d1495b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arR)"/>
+  <text x="450" y="245" text-anchor="middle" font-size="12" fill="#d1495b" font-weight="600">✗ Reject → 同一父节点下重拆子树</text>
+
+  <!-- DAG area -->
+  <rect x="60" y="300" width="780" height="260" rx="12" fill="#fafafa" stroke="#bbb" stroke-dasharray="4,4"/>
+  <text x="80" y="325" font-size="14" font-weight="700" fill="#333">DAG 执行：评审通过才解锁下游</text>
+
+  <!-- PRD root -->
+  <rect x="400" y="345" width="100" height="42" rx="8" fill="#1d3557"/>
+  <text x="450" y="371" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">PRD 根任务</text>
+
+  <!-- API node (reviewing, failed once) -->
+  <rect x="130" y="430" width="160" height="60" rx="8" fill="#fdecef" stroke="#d1495b" stroke-width="2"/>
+  <text x="210" y="455" text-anchor="middle" font-size="13" font-weight="700" fill="#7a1d2b">后端 API</text>
+  <text x="210" y="475" text-anchor="middle" font-size="11" fill="#7a1d2b">reject → 重拆中</text>
+
+  <!-- Frontend blocked -->
+  <rect x="370" y="430" width="160" height="60" rx="8" fill="#f0f0f0" stroke="#999" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="450" y="455" text-anchor="middle" font-size="13" font-weight="700" fill="#555">前端</text>
+  <text x="450" y="475" text-anchor="middle" font-size="11" fill="#888">blocked 等 API</text>
+
+  <!-- Test blocked -->
+  <rect x="610" y="430" width="160" height="60" rx="8" fill="#f0f0f0" stroke="#999" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="690" y="455" text-anchor="middle" font-size="13" font-weight="700" fill="#555">测试</text>
+  <text x="690" y="475" text-anchor="middle" font-size="11" fill="#888">blocked 等前端</text>
+
+  <!-- decomposition edges (solid) -->
+  <line x1="425" y1="387" x2="235" y2="430" stroke="#1d3557" stroke-width="1.8"/>
+  <line x1="450" y1="387" x2="450" y2="430" stroke="#1d3557" stroke-width="1.8"/>
+  <line x1="475" y1="387" x2="665" y2="430" stroke="#1d3557" stroke-width="1.8"/>
+
+  <!-- dependency edges (dashed) -->
+  <line x1="290" y1="460" x2="368" y2="460" stroke="#d1495b" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arR)"/>
+  <line x1="530" y1="460" x2="608" y2="460" stroke="#d1495b" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arR)"/>
+
+  <!-- legend -->
+  <line x1="90" y1="530" x2="130" y2="530" stroke="#1d3557" stroke-width="1.8"/>
+  <text x="138" y="534" font-size="11" fill="#333">分解边</text>
+  <line x1="210" y1="530" x2="250" y2="530" stroke="#d1495b" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="258" y="534" font-size="11" fill="#333">依赖边（DAG，无死锁）</text>
+  <text x="560" y="534" font-size="11" fill="#666">+ 超时 / 预算熔断 保证终止</text>
+</svg>

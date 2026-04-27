@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems",
+    "authors": [
+      "Mengzhuo Chen",
+      "Junjie Wang",
+      "Fangwen Mu",
+      "Yawen Wang",
+      "Zhe Liu",
+      "Huanxiang Feng",
+      "Qing Wang"
+    ],
+    "summary": "Failure attribution, i.e., identifying the responsible agent and decisive step of a failure, is particularly challenging in LLM-based multi-agent systems (MAS) due to their natural-language reasoning, nondeterministic outputs, and intricate interaction dynamics. A reliable benchmark is therefore essential to guide and evaluate attribution techniques. Yet existing benchmarks rely on partially observable traces that capture only agent outputs, omitting the inputs and context that developers actually use when debugging. We argue that failure attribution should be studied under full execution observability, aligning with real-world developer-facing scenarios where complete traces, rather than only outputs, are accessible for diagnosis. To this end, we introduce TraceElephant, a benchmark designed for failure attribution with full execution traces and reproducible environments. We then systematically evaluate failure attribution techniques across various configurations. Specifically, full traces improve attribution accuracy by up to 76\\% over a partial-observation counterpart, confirming that missing inputs obscure many failure causes. TraceElephant provides a foundation for follow-up failure attribution research, promoting evaluation practices that reflect real-world debugging and supporting the development of more transparent MASs.",
+    "entry_id": "https://arxiv.org/abs/2604.22708",
+    "pdf_url": "https://arxiv.org/pdf/2604.22708.pdf",
+    "primary_category": "cs.MA",
+    "agent_theme": "agent_eval",
+    "relevance_score": 95,
+    "value_score": 85,
+    "interesting_score": 80,
+    "innovation_score": 78,
+    "frontier_score": 82,
+    "verdict": "must_read",
+    "reason": "针对多Agent系统失败归因提出全执行trace可观测的新benchmark TraceElephant，直接推进Agent运行时诊断与评测方法，对开发debug场景有抓手。",
+    "composite_score": 85.6,
+    "arxiv_url": "https://arxiv.org/abs/2604.22708"
+  },
+  {
+    "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
+    "authors": [
+      "Zhengxu Yu",
+      "Yu Fu",
+      "Zhiyuan He",
+      "Yuxuan Huang",
+      "Lee Ka Yiu",
+      "Meng Fang",
+      "Weilin Luo",
+      "Jun Wang"
+    ],
+    "summary": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce \\emph{OneManCompany (OMC)}, a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called \\emph{Talents}, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven \\emph{Talent Market} enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an \\emph{Explore-Execute-Review} ($\\text{E}^2$R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an $84.67\\%$ success rate, surpassing the state of the art by $15.48$ percentage points, with cross-domain case studies further demonstrating its generality.",
+    "entry_id": "https://arxiv.org/abs/2604.22446",
+    "pdf_url": "https://arxiv.org/pdf/2604.22446.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "multi_agent",
+    "relevance_score": 88,
+    "value_score": 80,
+    "interesting_score": 82,
+    "innovation_score": 78,
+    "frontier_score": 78,
+    "verdict": "must_read",
+    "reason": "提出将Agent组织层与能力层解耦的框架，Talent Market动态招募加E2R树搜索形成自组织AI组织，对多Agent编排和运行时重构有系统级贡献。",
+    "composite_score": 82.16,
+    "arxiv_url": "https://arxiv.org/abs/2604.22446"
+  },
+  {
+    "title": "Sovereign Agentic Loops: Decoupling AI Reasoning from Execution in Real-World Systems",
+    "authors": [
+      "Jun He",
+      "Deying Yu"
+    ],
+    "summary": "Large language model (LLM) agents increasingly issue API calls that mutate real systems, yet many current architectures pass stochastic model outputs directly to execution layers. We argue that this coupling creates a safety risk because model correctness, context awareness, and alignment cannot be assumed at execution time. We introduce Sovereign Agentic Loops (SAL), a control-plane architecture in which models emit structured intents with justifications, and the control plane validates those intents against true system state and policy before execution. SAL combines an obfuscation membrane, which limits model access to identity-sensitive state, with a cryptographically linked Evidence Chain for auditability and replay. We formalize SAL and show that, under the stated assumptions, it provides policy-bounded execution, identity isolation, and deterministic replay. In an OpenKedge prototype for cloud infrastructure, SAL blocks 93% of unsafe intents at the policy layer, rejects the remaining 7% via consistency checks, prevents unsafe executions in our benchmark, and adds 12.4 ms median latency.",
+    "entry_id": "https://arxiv.org/abs/2604.22136",
+    "pdf_url": "https://arxiv.org/pdf/2604.22136.pdf",
+    "primary_category": "cs.LG",
+    "agent_theme": "agent_safety",
+    "relevance_score": 92,
+    "value_score": 80,
+    "interesting_score": 78,
+    "innovation_score": 72,
+    "frontier_score": 75,
+    "verdict": "must_read",
+    "reason": "提出控制平面架构将Agent推理与执行解耦，含策略层拦截、身份隔离和审计链，直击Agent运行时治理与安全，对系统落地有抓手。",
+    "composite_score": 81.29,
+    "arxiv_url": "https://arxiv.org/abs/2604.22136"
+  }
+]

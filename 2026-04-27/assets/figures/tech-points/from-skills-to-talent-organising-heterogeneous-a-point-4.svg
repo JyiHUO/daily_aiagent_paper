@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f8fafc"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">双层自进化 · 像公司一样管理 Agent</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#64748b">经验沉淀在 Talent 包与 SOP 里，不用动基座模型</text>
+
+  <!-- Left: Individual evolution -->
+  <rect x="40" y="95" width="360" height="210" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="220" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">个人层 · 每次任务后反思</text>
+
+  <circle cx="110" cy="205" r="40" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="110" y="201" text-anchor="middle" font-size="13" fill="#1e3a8a">Agent</text>
+  <text x="110" y="219" text-anchor="middle" font-size="11" fill="#64748b">反思</text>
+
+  <rect x="200" y="152" width="170" height="46" rx="6" fill="#fff" stroke="#3b82f6"/>
+  <text x="285" y="180" text-anchor="middle" font-size="13" fill="#1e3a8a">Working Principles</text>
+
+  <rect x="200" y="212" width="170" height="46" rx="6" fill="#fff" stroke="#3b82f6"/>
+  <text x="285" y="240" text-anchor="middle" font-size="13" fill="#1e3a8a">Progress Log</text>
+
+  <path d="M150,188 L200,175" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arB)"/>
+  <path d="M150,222 L200,235" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arB)"/>
+
+  <text x="220" y="288" text-anchor="middle" font-size="11" fill="#475569">改 Talent 包，不改基座模型</text>
+
+  <!-- Right: Organization evolution -->
+  <rect x="500" y="95" width="360" height="210" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="680" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#92400e">组织层 · 项目结束 COO 复盘</text>
+
+  <rect x="520" y="150" width="150" height="100" rx="6" fill="#fff" stroke="#d97706"/>
+  <text x="595" y="180" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">自评 + 客观信号</text>
+  <text x="595" y="205" text-anchor="middle" font-size="10" fill="#78716c">重试 / 拒绝 / 消耗</text>
+  <text x="595" y="230" text-anchor="middle" font-size="10" fill="#78716c">蒸馏</text>
+
+  <rect x="700" y="150" width="140" height="100" rx="6" fill="#fff" stroke="#d97706" stroke-width="2"/>
+  <text x="770" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">SOP 文档</text>
+  <text x="770" y="203" text-anchor="middle" font-size="10" fill="#78716c">"集成前先做 API 契约评审"</text>
+  <text x="770" y="232" text-anchor="middle" font-size="10" fill="#059669">→ 注入下个项目</text>
+
+  <path d="M670,200 L700,200" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arO)"/>
+
+  <text x="680" y="288" text-anchor="middle" font-size="11" fill="#475569">经验蒸馏为公司级资产</text>
+
+  <!-- Bottom: HR pipeline -->
+  <rect x="40" y="345" width="820" height="225" rx="12" fill="#fff1f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="450" y="373" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">HR 管线 · 每 3 个项目评一次，连续三次不合格进 PIP</text>
+
+  <!-- step 1 -->
+  <rect x="70" y="400" width="150" height="80" rx="8" fill="#fff" stroke="#dc2626"/>
+  <text x="145" y="430" text-anchor="middle" font-size="13" font-weight="600" fill="#9f1239">Review</text>
+  <text x="145" y="452" text-anchor="middle" font-size="11" fill="#64748b">定期考核</text>
+  <text x="145" y="468" text-anchor="middle" font-size="11" fill="#64748b">写手连续被拒</text>
+
+  <!-- step 2 -->
+  <rect x="265" y="400" width="150" height="80" rx="8" fill="#fff" stroke="#dc2626"/>
+  <text x="340" y="430" text-anchor="middle" font-size="13" font-weight="600" fill="#9f1239">PIP</text>
+  <text x="340" y="452" text-anchor="middle" font-size="11" fill="#64748b">改进期仍失败</text>
+  <text x="340" y="468" text-anchor="middle" font-size="11" fill="#64748b">标记为不达标</text>
+
+  <!-- step 3 -->
+  <rect x="460" y="400" width="150" height="80" rx="8" fill="#fff" stroke="#dc2626"/>
+  <text x="535" y="430" text-anchor="middle" font-size="13" font-weight="600" fill="#9f1239">Offboard</text>
+  <text x="535" y="452" text-anchor="middle" font-size="11" fill="#64748b">卸载 Container</text>
+  <text x="535" y="468" text-anchor="middle" font-size="11" fill="#64748b">释放工位</text>
+
+  <!-- step 4 -->
+  <rect x="655" y="400" width="175" height="80" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="742" y="430" text-anchor="middle" font-size="13" font-weight="600" fill="#065f46">Talent Market</text>
+  <text x="742" y="452" text-anchor="middle" font-size="11" fill="#065f46">按缺口重新招聘</text>
+  <text x="742" y="468" text-anchor="middle" font-size="11" fill="#065f46">能力优胜劣汰</text>
+
+  <path d="M220,440 L265,440" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <path d="M415,440 L460,440" stroke="#dc2626" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <path d="M610,440 L655,440" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+
+  <!-- loop back -->
+  <path d="M742,480 Q742,525 450,525 Q145,525 145,480" stroke="#059669" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arG)"/>
+  <text x="450" y="548" text-anchor="middle" font-size="11" fill="#059669">新鲜血液回到考核循环</text>
+</svg>

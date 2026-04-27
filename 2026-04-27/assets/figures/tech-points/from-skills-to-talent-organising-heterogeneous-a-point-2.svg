@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2d6cdf"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22a06b"/>
+    </marker>
+  </defs>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">Talent Market：按需招聘，而非凭空想象</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#666">项目缺人 → HR去市场找现成的、已验证的Agent</text>
+
+  <!-- LEFT: CEO trigger -->
+  <g>
+    <rect x="40" y="210" width="170" height="90" rx="12" fill="#fff3e0" stroke="#e39314" stroke-width="2"/>
+    <text x="125" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#8a5a00">CEO / 策略T</text>
+    <text x="125" y="262" text-anchor="middle" font-size="12" fill="#5a4000">"缺个前端工程师"</text>
+    <text x="125" y="282" text-anchor="middle" font-size="12" fill="#5a4000">触发 recruit</text>
+  </g>
+
+  <!-- MIDDLE: HR + Market -->
+  <g>
+    <rect x="270" y="110" width="340" height="340" rx="14" fill="#eef4ff" stroke="#2d6cdf" stroke-width="2"/>
+    <text x="440" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1a3f8a">Talent Market （HR 查询）</text>
+
+    <rect x="290" y="160" width="300" height="70" rx="10" fill="#ffffff" stroke="#6f94d6"/>
+    <text x="305" y="185" font-size="13" font-weight="700" fill="#1a3f8a">① 开源社区包</text>
+    <text x="305" y="207" font-size="11.5" fill="#444">Claude Code工程师 · LangGraph写手…</text>
+
+    <rect x="290" y="244" width="300" height="70" rx="10" fill="#ffffff" stroke="#6f94d6"/>
+    <text x="305" y="269" font-size="13" font-weight="700" fill="#1a3f8a">② AI从网上组装技能</text>
+    <text x="305" y="291" font-size="11.5" fill="#444">prompt + 工具 + 脚本 + 知识</text>
+
+    <rect x="290" y="328" width="300" height="70" rx="10" fill="#ffffff" stroke="#6f94d6"/>
+    <text x="305" y="353" font-size="13" font-weight="700" fill="#1a3f8a">③ 内部晋升员工</text>
+    <text x="305" y="375" font-size="11.5" fill="#444">历史benchmark高分者</text>
+
+    <text x="440" y="428" text-anchor="middle" font-size="11.5" fill="#2d6cdf" font-style="italic">每位Talent自带: prompt · 工具 · 技能 · 知识 · 成绩</text>
+  </g>
+
+  <!-- RIGHT: shortlist + onboard -->
+  <g>
+    <rect x="670" y="140" width="180" height="110" rx="12" fill="#f3eaff" stroke="#7a4fd6" stroke-width="2"/>
+    <text x="760" y="168" text-anchor="middle" font-size="14" font-weight="700" fill="#4a2d8f">候选短名单</text>
+    <text x="760" y="192" text-anchor="middle" font-size="11.5" fill="#4a2d8f">· Agent A ✓</text>
+    <text x="760" y="210" text-anchor="middle" font-size="11.5" fill="#4a2d8f">· Agent B</text>
+    <text x="760" y="228" text-anchor="middle" font-size="11.5" fill="#4a2d8f">· Agent C</text>
+
+    <rect x="670" y="310" width="180" height="110" rx="12" fill="#e7f7ee" stroke="#22a06b" stroke-width="2"/>
+    <text x="760" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#11633f">自动入职</text>
+    <text x="760" y="365" text-anchor="middle" font-size="11.5" fill="#11633f">配容器 · 接入组织树</text>
+    <text x="760" y="385" text-anchor="middle" font-size="11.5" fill="#11633f">立即投入执行，已验证</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="212" y1="255" x2="268" y2="255" stroke="#2d6cdf" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="240" y="248" text-anchor="middle" font-size="11" fill="#2d6cdf">招聘</text>
+
+  <line x1="612" y1="195" x2="668" y2="195" stroke="#2d6cdf" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="640" y="188" text-anchor="middle" font-size="11" fill="#2d6cdf">检索</text>
+
+  <path d="M 760,252 L 760,308" fill="none" stroke="#22a06b" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="770" y="285" font-size="11" fill="#22a06b">CEO点选</text>
+
+  <!-- bottom note -->
+  <text x="440" y="500" text-anchor="middle" font-size="12.5" fill="#555">对比：其他框架让LLM"想象"新Agent → 容易幻觉能力</text>
+  <text x="440" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#22a06b">OMC：从市场招现成人，招来即用</text>
+</svg>

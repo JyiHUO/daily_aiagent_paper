@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">解耦原则：模型只提"申请"，不按"按钮"</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">Reasoning ≠ Execution  控制平面才是审批人</text>
+
+  <!-- LEFT: BAD pattern -->
+  <g>
+    <rect x="40" y="90" width="380" height="180" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="230" y="114" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">✗ 旧做法：推理即执行</text>
+
+    <rect x="70" y="145" width="110" height="70" rx="8" fill="#fff" stroke="#c0392b"/>
+    <text x="125" y="175" text-anchor="middle" font-size="13" font-weight="bold">LLM</text>
+    <text x="125" y="195" text-anchor="middle" font-size="11" fill="#666">直接发命令</text>
+
+    <rect x="280" y="145" width="110" height="70" rx="8" fill="#fff" stroke="#c0392b"/>
+    <text x="335" y="175" text-anchor="middle" font-size="13" font-weight="bold">AWS API</text>
+    <text x="335" y="195" text-anchor="middle" font-size="11" fill="#666">真实生产资源</text>
+
+    <line x1="180" y1="180" x2="278" y2="180" stroke="#c0392b" stroke-width="2" marker-end="url(#arrRed)"/>
+    <text x="229" y="172" text-anchor="middle" font-size="11" fill="#c0392b">Terminate!</text>
+
+    <text x="230" y="252" text-anchor="middle" font-size="12" fill="#c0392b">模型一错，线上就炸</text>
+  </g>
+
+  <!-- RIGHT: GOOD pattern -->
+  <g>
+    <rect x="480" y="90" width="380" height="180" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="670" y="114" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">✓ 新做法：提交意图提案</text>
+
+    <rect x="500" y="145" width="100" height="70" rx="8" fill="#fff" stroke="#27ae60"/>
+    <text x="550" y="175" text-anchor="middle" font-size="13" font-weight="bold">LLM</text>
+    <text x="550" y="195" text-anchor="middle" font-size="11" fill="#666">填"申请表"</text>
+
+    <rect x="640" y="145" width="110" height="70" rx="8" fill="#fff" stroke="#27ae60"/>
+    <text x="695" y="172" text-anchor="middle" font-size="13" font-weight="bold">Control Plane</text>
+    <text x="695" y="192" text-anchor="middle" font-size="11" fill="#666">审批 + 校验</text>
+
+    <rect x="790" y="145" width="60" height="70" rx="8" fill="#fff" stroke="#27ae60"/>
+    <text x="820" y="172" text-anchor="middle" font-size="11" font-weight="bold">真实</text>
+    <text x="820" y="190" text-anchor="middle" font-size="11" font-weight="bold">API</text>
+
+    <line x1="600" y1="180" x2="638" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="750" y1="180" x2="788" y2="180" stroke="#27ae60" stroke-width="2" marker-end="url(#arr)"/>
+
+    <text x="670" y="252" text-anchor="middle" font-size="12" fill="#1e8449">模型犯错止步于申请阶段</text>
+  </g>
+
+  <!-- Intent proposal box -->
+  <g>
+    <rect x="180" y="320" width="540" height="200" rx="12" fill="#f4f6fa" stroke="#2c3e50" stroke-width="1.5"/>
+    <text x="450" y="348" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Intent Proposal  i = ⟨ action, target, params, justification ⟩</text>
+
+    <g font-size="13">
+      <rect x="210" y="370" width="220" height="38" rx="6" fill="#fff" stroke="#7f8c8d"/>
+      <text x="222" y="394" fill="#2c3e50"><tspan font-weight="bold" fill="#8e44ad">action:</tspan> TERMINATE_NODE</text>
+
+      <rect x="470" y="370" width="220" height="38" rx="6" fill="#fff" stroke="#7f8c8d"/>
+      <text x="482" y="394" fill="#2c3e50"><tspan font-weight="bold" fill="#2980b9">target:</tspan> Node-A7x</text>
+
+      <rect x="210" y="420" width="220" height="38" rx="6" fill="#fff" stroke="#7f8c8d"/>
+      <text x="222" y="444" fill="#2c3e50"><tspan font-weight="bold" fill="#16a085">params:</tspan> force=false</text>
+
+      <rect x="470" y="420" width="220" height="38" rx="6" fill="#fff" stroke="#7f8c8d"/>
+      <text x="482" y="444" fill="#2c3e50"><tspan font-weight="bold" fill="#d35400">why:</tspan> "Memory exhausted"</text>
+    </g>
+
+    <text x="450" y="498" text-anchor="middle" font-size="12" fill="#555">结构化申请表 + 自然语言理由 J，供控制平面审核</text>
+  </g>
+
+  <!-- Connector from LLM-right to intent box -->
+  <path d="M550,215 Q530,270 495,320" fill="none" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrGray)"/>
+  <text x="495" y="275" font-size="11" fill="#1e8449">提交</text>
+</svg>

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1629"/>
+      <stop offset="1" stop-color="#1a2140"/>
+    </linearGradient>
+    <linearGradient id="org" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="mkt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="exe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="evo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a5b4fc"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="46" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">OneManCompany：把多智能体系统升级为"自组织公司"</text>
+  <text x="640" y="72" text-anchor="middle" fill="#94a3b8" font-size="13">Talent-Container 解耦 · Talent Market 招聘 · E²R 树搜索 · 双层自进化   |   PRDBench 84.67% (+15.48)</text>
+
+  <!-- Center: E2R Loop -->
+  <g>
+    <circle cx="640" cy="420" r="178" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="3 4"/>
+    <circle cx="640" cy="420" r="112" fill="#1e293b" stroke="url(#org)" stroke-width="2.5"/>
+    <text x="640" y="402" text-anchor="middle" fill="#e2e8f0" font-size="17" font-weight="700">E²R 树搜索</text>
+    <text x="640" y="424" text-anchor="middle" fill="#a5b4fc" font-size="12">Explore · Execute · Review</text>
+    <text x="640" y="448" text-anchor="middle" fill="#64748b" font-size="11">任务树 DAG · 终止 · 无死锁</text>
+
+    <!-- Three phases around ring -->
+    <g>
+      <circle cx="640" cy="242" r="42" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+      <text x="640" y="238" text-anchor="middle" fill="#e0e7ff" font-size="13" font-weight="700">Explore</text>
+      <text x="640" y="256" text-anchor="middle" fill="#c7d2fe" font-size="10">拆任务 · 选策略</text>
+    </g>
+    <g>
+      <circle cx="794" cy="510" r="42" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+      <text x="794" y="506" text-anchor="middle" fill="#d1fae5" font-size="13" font-weight="700">Execute</text>
+      <text x="794" y="524" text-anchor="middle" fill="#a7f3d0" font-size="10">Agent 产出</text>
+    </g>
+    <g>
+      <circle cx="486" cy="510" r="42" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+      <text x="486" y="506" text-anchor="middle" fill="#fef3c7" font-size="13" font-weight="700">Review</text>
+      <text x="486" y="524" text-anchor="middle" fill="#fde68a" font-size="10">主管 accept/reject</text>
+    </g>
+
+    <!-- Arrows on ring -->
+    <path d="M 682 256 A 178 178 0 0 1 795 467" fill="none" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arP)"/>
+    <path d="M 752 516 A 178 178 0 0 1 528 516" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#ar)"/>
+    <path d="M 485 467 A 178 178 0 0 1 598 256" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arO)"/>
+    <text x="772" y="378" fill="#a5b4fc" font-size="10">下发子任务</text>
+    <text x="604" y="600" text-anchor="middle" fill="#34d399" font-size="10">完成上报</text>
+    <text x="440" y="378" text-anchor="end" fill="#fbbf24" font-size="10">不过则重拆</text>
+  </g>
+
+  <!-- Left: Talent Market (Recruit) -->
+  <g>
+    <rect x="60" y="140" width="240" height="168" rx="14" fill="#0c4a6e" stroke="url(#mkt)" stroke-width="2"/>
+    <text x="180" y="168" text-anchor="middle" fill="#e0f2fe" font-size="16" font-weight="700">Talent Market</text>
+    <text x="180" y="188" text-anchor="middle" fill="#7dd3fc" font-size="11">社区 / AI 组装 / 内部晋升</text>
+    <g font-size="11" fill="#bae6fd">
+      <rect x="78" y="206" width="204" height="24" rx="6" fill="#075985"/>
+      <text x="180" y="222" text-anchor="middle">软件工程师 Talent</text>
+      <rect x="78" y="236" width="204" height="24" rx="6" fill="#075985"/>
+      <text x="180" y="252" text-anchor="middle">写作 Talent</text>
+      <rect x="78" y="266" width="204" height="24" rx="6" fill="#075985"/>
+      <text x="180" y="282" text-anchor="middle">搜索 Talent</text>
+    </g>
+
+    <!-- HR / CEO recruit -->
+    <rect x="60" y="332" width="240" height="68" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <text x="180" y="356" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="700">HR 招聘 → CEO 批准</text>
+    <text x="180" y="376" text-anchor="middle" fill="#94a3b8" font-size="11">识别能力缺口 · 短名单 · 自动入职</text>
+    <text x="180" y="392" text-anchor="middle" fill="#94a3b8" font-size="10">（不靠 LLM 幻觉出新 Agent）</text>
+  </g>
+
+  <!-- Arrow Market -> Center -->
+  <path d="M 300 300 Q 410 360 518 394" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arB)"/>
+  <text x="354" y="336" fill="#7dd3fc" font-size="11">按需招聘 / 补齐能力</text>
+
+  <!-- Right: Talent + Container architecture -->
+  <g>
+    <rect x="980" y="140" width="240" height="260" rx="14" fill="#1e1b4b" stroke="url(#org)" stroke-width="2"/>
+    <text x="1100" y="168" text-anchor="middle" fill="#e0e7ff" font-size="16" font-weight="700">Talent + Container</text>
+    <text x="1100" y="188" text-anchor="middle" fill="#a5b4fc" font-size="11">身份与执行壳解耦</text>
+
+    <!-- Talent -->
+    <rect x="998" y="204" width="204" height="58" rx="8" fill="#4338ca"/>
+    <text x="1100" y="224" text-anchor="middle" fill="#eef2ff" font-size="12" font-weight="700">Talent（可移植身份）</text>
+    <text x="1100" y="244" text-anchor="middle" fill="#c7d2fe" font-size="10">prompt · 技能 · 工具 · 原则 · 成绩</text>
+
+    <!-- Six interfaces -->
+    <rect x="998" y="270" width="204" height="46" rx="6" fill="#312e81"/>
+    <text x="1100" y="288" text-anchor="middle" fill="#e0e7ff" font-size="11" font-weight="600">六类型化接口</text>
+    <text x="1100" y="304" text-anchor="middle" fill="#a5b4fc" font-size="9">Execution/Task/Event/Storage/Context/Lifecycle</text>
+
+    <!-- Containers -->
+    <rect x="998" y="324" width="96" height="60" rx="6" fill="#0f766e"/>
+    <text x="1046" y="348" text-anchor="middle" fill="#ccfbf1" font-size="11" font-weight="600">LangGraph</text>
+    <text x="1046" y="368" text-anchor="middle" fill="#99f6e4" font-size="9">runtime</text>
+    <rect x="1106" y="324" width="96" height="60" rx="6" fill="#0f766e"/>
+    <text x="1154" y="348" text-anchor="middle" fill="#ccfbf1" font-size="11" font-weight="600">Claude Code</text>
+    <text x="1154" y="368" text-anchor="middle" fill="#99f6e4" font-size="9">runtime</text>
+  </g>
+
+  <!-- Arrow Talent -> Center -->
+  <path d="M 980 310 Q 870 360 762 394" fill="none" stroke="#a5b4fc" stroke-width="2" marker-end="url(#arP)"/>
+  <text x="820" y="340" fill="#c4b5fd" font-size="11">异构 Agent 接入</text>
+
+  <!-- Bottom: Self-Evolution loop -->
+  <g>
+    <rect x="60" y="622" width="560" height="126" rx="14" fill="#3f1d1d" stroke="url(#evo)" stroke-width="2"/>
+    <text x="340" y="650" text-anchor="middle" fill="#fee2e2" font-size="15" font-weight="700">双层自进化：个人复盘 + 组织 SOP</text>
+
+    <g font-size="11" fill="#fecaca">
+      <circle cx="110" cy="688" r="5" fill="#fbbf24"/>
+      <text x="124" y="692">个人：更新 working principles · progress log</text>
+      <circle cx="110" cy="712" r="5" fill="#f87171"/>
+      <text x="124" y="716">组织：COO 复盘 → 蒸馏 SOP 注入下轮项目</text>
+      <circle cx="110" cy="736" r="5" fill="#fb923c"/>
+      <text x="124" y="740">HR 周期评估 · PIP · 自动 offboarding 回市场重招</text>
+    </g>
+  </g>
+
+  <!-- Results panel -->
+  <g>
+    <rect x="660" y="622" width="560" height="126" rx="14" fill="#042f2e" stroke="url(#exe)" stroke-width="2"/>
+    <text x="940" y="650" text-anchor="middle" fill="#d1fae5" font-size="15" font-weight="700">PRDBench 成绩 · 开放任务泛化</text>
+
+    <!-- bar compare -->
+    <rect x="690" y="672" width="180" height="20" rx="4" fill="#334155"/>
+    <rect x="690" y="672" width="124" height="20" rx="4" fill="#64748b"/>
+    <text x="700" y="687" fill="#e2e8f0" font-size="11">SOTA 基线</text>
+    <text x="860" y="687" text-anchor="end" fill="#f1f5f9" font-size="11" font-weight="700">69.19%</text>
+
+    <rect x="690" y="700" width="180" height="20" rx="4" fill="#334155"/>
+    <rect x="690" y="700" width="152" height="20" rx="4" fill="url(#exe)"/>
+    <text x="700" y="715" fill="#f0fdf4" font-size="11" font-weight="700">OMC</text>
+    <text x="860" y="715" text-anchor="end" fill="#ecfdf5" font-size="11" font-weight="700">84.67%</text>
+
+    <text x="900" y="690" fill="#fbbf24" font-size="22" font-weight="800">+15.48</text>
+    <text x="900" y="710" fill="#fde68a" font-size="10">百分点提升</text>
+
+    <text x="1020" y="678" fill="#86efac" font-size="11">✓ 开放任务自组织</text>
+    <text x="1020" y="698" fill="#86efac" font-size="11">✓ 跨领域可泛化</text>
+    <text x="1020" y="718" fill="#86efac" font-size="11">✓ 形式保证</text>
+    <text x="1020" y="738" fill="#86efac" font-size="11">✓ 经验跨项目累积</text>
+  </g>
+
+  <!-- Arrow feedback: bottom to center ring -->
+  <path d="M 360 622 Q 400 560 478 500" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arO)"/>
+  <text x="300" y="584" fill="#fbbf24" font-size="10">经验沉淀 → 注入下一轮</text>
+
+</svg>

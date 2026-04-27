@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/downloaded_pdfs/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company",
+  "candidates": [
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "2.1 On-demand Organisation of Heterogeneous Agents by Talent–Container Architecture",
+      "clip": [
+        42.23619995117187,
+        49.95157470703123,
+        553.0366882324219,
+        378.70758056640625
+      ],
+      "clip_area": 167928.72831836223,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7939451807849618,
+      "kind": "captioned_figure",
+      "score": 26.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/01-p5-captioned_figure.png",
+      "filename": "01-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-14-block-2",
+      "page_index": 14,
+      "caption": "Figure 6: Game development task tree: iterative decomposition with human-in-the-loop feedback. The evaluator’s rejection triggers re-exploration, creating a new skill for the Art Designer and re-executing the asset pipeline.",
+      "clip": [
+        50.0,
+        54.000732421875,
+        545.260009765625,
+        270.2540283203125
+      ],
+      "clip_area": 107101.60943850875,
+      "page_area": 501156.9211820215,
+      "text_density": 0.02912789761771084,
+      "kind": "image_block_with_caption",
+      "score": 20.190017882650096,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/02-p15-image_block_with_caption.png",
+      "filename": "02-p15-image_block_with_caption.png"
+    },
+    {
+      "id": "page-14-embedded-0-0",
+      "page_index": 14,
+      "caption": "Figure 6: Game development task tree: iterative decomposition with human-in-the-loop feedback. The evaluator’s rejection triggers re-exploration, creating a new skill for the Art Designer and re-executing the asset pipeline.",
+      "clip": [
+        60.0,
+        60.000732421875,
+        535.260009765625,
+        264.2540283203125
+      ],
+      "clip_area": 97073.4234033525,
+      "page_area": 501156.9211820215,
+      "text_density": 0.004244059787067274,
+      "kind": "embedded_image_with_caption",
+      "xref": 569,
+      "score": 19.078593593370584,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/03-p15-embedded_image_with_caption.png",
+      "filename": "03-p15-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        82.91499328613281,
+        458.77618408203125,
+        513.0549926757812,
+        693.968994140625
+      ],
+      "clip_area": 101165.83517505322,
+      "page_area": 501156.9211820215,
+      "text_density": 0.022651228265036908,
+      "kind": "embedded_image",
+      "xref": 113,
+      "score": 12.12406483527837,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/04-p1-embedded_image.png",
+      "filename": "04-p1-embedded_image.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.99836730957031,
+        539.275634765625,
+        239.92926025390625
+      ],
+      "clip_area": 87922.76777115092,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08776884390474901,
+      "kind": "drawing_cluster",
+      "score": 8.510789007616737,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/05-p6-drawing_cluster.png",
+      "filename": "05-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-drawing-cluster-0",
+      "page_index": 10,
+      "caption": "第 11 页矢量图主图候选",
+      "clip": [
+        68.19270324707031,
+        62.90171813964844,
+        349.3145751953125,
+        225.7739715576172
+      ],
+      "clip_area": 45786.95276928786,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09313942999083845,
+      "kind": "drawing_cluster",
+      "score": 7.720378120208447,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/06-p11-drawing_cluster.png",
+      "filename": "06-p11-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/from-skills-to-talent-organising-heterogeneous-agents-as-a-real-world-company/contact-sheet.svg"
+}

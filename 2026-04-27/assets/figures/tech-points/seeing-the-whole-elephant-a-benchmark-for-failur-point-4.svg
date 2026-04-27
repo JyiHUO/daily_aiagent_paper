@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">失败模式随架构而异：归因不能一套打天下</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">同样是多 Agent，错在哪里、什么时候暴露，完全不同</text>
+
+  <!-- LEFT: Dynamic team (Captain-Agent) -->
+  <g>
+    <rect x="50" y="95" width="380" height="200" rx="12" fill="#eaf4ff" stroke="#4a90e2" stroke-width="2"/>
+    <text x="240" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#1a4d80">动态组队 · Captain-Agent</text>
+
+    <line x1="80" y1="200" x2="400" y2="200" stroke="#4a90e2" stroke-width="2"/>
+    <text x="80" y="225" font-size="11" fill="#666">早期</text>
+    <text x="400" y="225" text-anchor="end" font-size="11" fill="#666">晚期</text>
+
+    <circle cx="110" cy="200" r="9" fill="#e74c3c"/>
+    <circle cx="170" cy="200" r="9" fill="#e74c3c"/>
+    <circle cx="220" cy="200" r="9" fill="#e74c3c"/>
+    <circle cx="290" cy="200" r="9" fill="#e74c3c"/>
+    <circle cx="350" cy="200" r="9" fill="#e74c3c"/>
+    <circle cx="390" cy="200" r="9" fill="#e74c3c"/>
+
+    <text x="240" y="265" text-anchor="middle" font-size="14" fill="#222" font-weight="600">失败遍地开花 · 全流程分散</text>
+  </g>
+
+  <!-- RIGHT: Orchestrated (Magentic-One) -->
+  <g>
+    <rect x="470" y="95" width="380" height="200" rx="12" fill="#fff0e8" stroke="#e67e22" stroke-width="2"/>
+    <text x="660" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#8a4510">手工编排 · Magentic-One</text>
+
+    <line x1="500" y1="200" x2="820" y2="200" stroke="#e67e22" stroke-width="2"/>
+    <text x="500" y="225" font-size="11" fill="#666">早期</text>
+    <text x="820" y="225" text-anchor="end" font-size="11" fill="#666">晚期</text>
+
+    <circle cx="520" cy="200" r="11" fill="#c0392b"/>
+    <circle cx="545" cy="200" r="11" fill="#c0392b"/>
+    <circle cx="570" cy="200" r="11" fill="#c0392b"/>
+    <circle cx="595" cy="200" r="9" fill="#e74c3c"/>
+
+    <text x="660" y="265" text-anchor="middle" font-size="14" fill="#222" font-weight="600">失败集中在早期规划阶段</text>
+  </g>
+
+  <!-- Arrow down to insight panel -->
+  <line x1="450" y1="300" x2="450" y2="328" stroke="#444" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Bottom insight panel -->
+  <g>
+    <rect x="50" y="335" width="800" height="135" rx="12" fill="#fafafa" stroke="#bbb" stroke-width="1.5"/>
+    <text x="450" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#222">早期错误最难归因 —— 错在第一步，要等很久才暴露</text>
+
+    <!-- Left: bar chart -->
+    <text x="200" y="388" text-anchor="middle" font-size="12" fill="#555">Magentic-One step 级归因准确率</text>
+    <rect x="130" y="420" width="40" height="40" fill="#e74c3c"/>
+    <text x="150" y="445" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">8%</text>
+    <text x="150" y="405" text-anchor="middle" font-size="11" fill="#666">早期</text>
+
+    <rect x="235" y="395" width="40" height="65" fill="#27ae60"/>
+    <text x="255" y="432" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">52%</text>
+    <text x="255" y="405" text-anchor="middle" font-size="11" fill="#666">晚期</text>
+
+    <line x1="320" y1="380" x2="320" y2="460" stroke="#ccc" stroke-dasharray="4 3"/>
+
+    <!-- Middle: who fails -->
+    <text x="475" y="388" text-anchor="middle" font-size="12" fill="#555">谁最常翻车</text>
+    <rect x="345" y="400" width="260" height="22" fill="#c0392b"/>
+    <text x="475" y="416" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">执行类 Agent（网页/代码） &gt; 50%</text>
+    <rect x="345" y="430" width="110" height="22" fill="#e67e22"/>
+    <text x="400" y="446" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">Orchestrator 18–29%</text>
+
+    <line x1="625" y1="380" x2="625" y2="460" stroke="#ccc" stroke-dasharray="4 3"/>
+
+    <!-- Right: takeaway -->
+    <text x="737" y="402" text-anchor="middle" font-size="13" fill="#1a4d80" font-weight="700">启示</text>
+    <text x="737" y="425" text-anchor="middle" font-size="12" fill="#333">归因方法需</text>
+    <text x="737" y="445" text-anchor="middle" font-size="12" fill="#333">吃进架构先验</text>
+  </g>
+
+  <text x="450" y="500" text-anchor="middle" font-size="12" fill="#888">例：SWE-Agent 中代码编辑 Agent 留下明确工具痕迹，归因准确率可达 53%；</text>
+  <text x="450" y="520" text-anchor="middle" font-size="12" fill="#888">而 Magentic-One 中 orchestrator 早期一次错误分派，要等后续网页搜索失败才暴露。</text>
+</svg>

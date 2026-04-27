@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0424：胜负手不在模型里，在模型外面那一层",
+  "shownotes_html": "<p>今天三篇重点论文指向同一个判断：Agent 的研究重心正从\"模型能力\"转向\"执行链与系统边界\"——运行时怎么调、安全怎么守、在真实屏幕上怎么不翻车。如果你在做 Agent 产品或系统，这期值得从头听到尾。</p><p><strong>本期重点</strong></p><ul><li><strong>HARBOR: Automated Harness Optimization</strong>　Agent 外面那层工程开关（上下文压缩、缓存、记忆、工具预测……）已经多到人脑调不过来。作者在摩根大通的真实编码 Agent 上做了四轮手工调优，只有一轮跑赢基线，还发现有模块从头到尾根本没被调用。论文把 harness 调优正式当成带约束的贝叶斯优化问题来解，方法论上很有启发。</li><li><strong>跨会话威胁检测（Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms）</strong>　现在所有 Agent 的守门员都是无记忆的——每条消息单独判断。攻击者只要把动作拆到几十个会话里，单回合检测就全盲。论文第一次把\"跨会话威胁检测\"作为独立问题建模，提出有界内存算法，只保留最有信号的历史片段做关联，同时兼顾 KV-cache 复用以控制实时成本。</li><li><strong>VLAA-GUI: Knowing When to Stop, Recover, and Search</strong>　桌面 Agent 的两大顽疾——\"假完成\"和\"死循环\"——被做成了可插拔的 Stop / Recover / Search 三件套。在 OSWorld 上首次单次通过率达 77.5%，超过人类 72.4%，而且用 15 步预算就打平别人 50 步的系统。一个反直觉发现：工具调用在弱模型+紧预算下反而掉分，不能无脑开启。</li></ul><p><strong>今日趋势</strong></p><ul><li>研究关注点继续从单轮回答能力转向更完整的执行链，general_agent、agent_safety、embodied_agent 是今天最集中的主题。</li><li>真正有开拓性的工作不再卷底座模型大小，而是重新定义 Agent 怎么被评测、怎么被约束、怎么在真实环境里更稳地跑。</li></ul><p><strong>今日知识点：Tool Abstraction 为什么关键</strong><br/>系统把外部能力封装成什么粒度给 Agent 用，直接决定灵活性和效率的平衡。好的工具抽象把稳定、可复用、确定性的操作打包，把依赖环境理解的判断留给模型。今天三篇论文反复涉及工具与环境交互的设计取舍，补这个概念最划算。</p><p>如果你今天只带走一句话：<em>Agent 的胜负手，已经不在模型里了，在模型外面那一层。</em></p><p>欢迎在评论区留言交流你对 Agent 系统设计的看法。本期内容由 AI 自动生成，如有疏漏欢迎指正。我们明天见。</p>",
+  "report_date": "2026-04-24",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-04-25T16:09:39Z"
+}

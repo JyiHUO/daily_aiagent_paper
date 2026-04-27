@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1b2a49">混淆膜 Π：让模型看不见真实身份</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#556">I(S_id ; Ŝ) = 0 ，真实ID只留在控制平面</text>
+
+  <!-- Real infra (left) -->
+  <g>
+    <rect x="40" y="110" width="230" height="200" rx="12" fill="#fdecec" stroke="#b23a48" stroke-width="2"/>
+    <text x="155" y="135" text-anchor="middle" font-size="15" font-weight="bold" fill="#7a1f2b">真实基础设施</text>
+    <rect x="65" y="155" width="180" height="38" rx="6" fill="#fff" stroke="#b23a48"/>
+    <text x="155" y="179" text-anchor="middle" font-size="13" fill="#7a1f2b">i-0abc123 (10.0.4.11)</text>
+    <rect x="65" y="205" width="180" height="38" rx="6" fill="#fff" stroke="#b23a48"/>
+    <text x="155" y="229" text-anchor="middle" font-size="13" fill="#7a1f2b">db-prod.aws.internal</text>
+    <rect x="65" y="255" width="180" height="38" rx="6" fill="#fff" stroke="#b23a48"/>
+    <text x="155" y="279" text-anchor="middle" font-size="13" fill="#7a1f2b">AWS acct 889xxx</text>
+  </g>
+
+  <!-- Membrane -->
+  <g>
+    <rect x="345" y="90" width="210" height="240" rx="14" fill="#eaf3ff" stroke="#2c5fa8" stroke-width="2.5"/>
+    <text x="450" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#1b3e77">Obfuscation Membrane</text>
+    <text x="450" y="140" text-anchor="middle" font-size="12" fill="#1b3e77">Π : S → Ŝ  |  Π⁻¹ 仅控制平面</text>
+
+    <rect x="370" y="160" width="160" height="62" rx="8" fill="#fff" stroke="#2c5fa8"/>
+    <text x="450" y="183" text-anchor="middle" font-size="12" fill="#1b3e77">映射表 K (安全缓存)</text>
+    <text x="450" y="205" text-anchor="middle" font-size="12" fill="#1b3e77">Node-A7x ↔ i-0abc123</text>
+
+    <text x="450" y="255" text-anchor="middle" font-size="12" fill="#1b3e77">🔒 模型不可访问</text>
+    <text x="450" y="285" text-anchor="middle" font-size="12" fill="#1b3e77">执行前做逆映射还原</text>
+  </g>
+
+  <!-- Model view (right) -->
+  <g>
+    <rect x="630" y="110" width="230" height="200" rx="12" fill="#eefbf2" stroke="#2f8f5a" stroke-width="2"/>
+    <text x="745" y="135" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f6340">模型看到的 Ŝ</text>
+    <rect x="655" y="155" width="180" height="38" rx="6" fill="#fff" stroke="#2f8f5a"/>
+    <text x="745" y="179" text-anchor="middle" font-size="13" fill="#1f6340">Node-A7x</text>
+    <rect x="655" y="205" width="180" height="38" rx="6" fill="#fff" stroke="#2f8f5a"/>
+    <text x="745" y="229" text-anchor="middle" font-size="13" fill="#1f6340">Node-B3y</text>
+    <rect x="655" y="255" width="180" height="38" rx="6" fill="#fff" stroke="#2f8f5a"/>
+    <text x="745" y="279" text-anchor="middle" font-size="13" fill="#1f6340">acct-T1</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="270" y1="210" x2="343" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="555" y1="210" x2="628" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="306" y="200" font-size="11" fill="#333">投影 Π</text>
+  <text x="568" y="200" font-size="11" fill="#333">脱敏视图</text>
+
+  <!-- Bottom scenario -->
+  <g>
+    <rect x="60" y="370" width="780" height="150" rx="12" fill="#fafafa" stroke="#999"/>
+    <text x="80" y="395" font-size="14" font-weight="bold" fill="#222">场景：模型决策 → 控制平面执行</text>
+
+    <rect x="80" y="415" width="220" height="80" rx="8" fill="#eefbf2" stroke="#2f8f5a"/>
+    <text x="190" y="443" text-anchor="middle" font-size="12" fill="#1f6340">模型输出意图</text>
+    <text x="190" y="470" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f6340">terminate Node-A7x</text>
+
+    <rect x="345" y="415" width="210" height="80" rx="8" fill="#eaf3ff" stroke="#2c5fa8"/>
+    <text x="450" y="443" text-anchor="middle" font-size="12" fill="#1b3e77">Π⁻¹ 逆映射</text>
+    <text x="450" y="470" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3e77">Node-A7x → i-0abc123</text>
+
+    <rect x="600" y="415" width="220" height="80" rx="8" fill="#fdecec" stroke="#b23a48"/>
+    <text x="710" y="443" text-anchor="middle" font-size="12" fill="#7a1f2b">真实 API 调用</text>
+    <text x="710" y="470" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a1f2b">EC2 TerminateInstances</text>
+
+    <line x1="300" y1="455" x2="343" y2="455" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="555" y1="455" x2="598" y2="455" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <text x="450" y="545" text-anchor="middle" font-size="12" fill="#7a1f2b">即使模型日志泄露，攻击者拿到的只是 Node-A7x，拿不到真实基础设施身份</text>
+</svg>

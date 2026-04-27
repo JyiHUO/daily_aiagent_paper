@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1729"/>
+      <stop offset="1" stop-color="#1a2240"/>
+    </linearGradient>
+    <linearGradient id="ctrl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d4a7c"/>
+      <stop offset="1" stop-color="#1e3159"/>
+    </linearGradient>
+    <linearGradient id="danger" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c23a3a"/>
+      <stop offset="1" stop-color="#8a1f1f"/>
+    </linearGradient>
+    <linearGradient id="safe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d8a5f"/>
+      <stop offset="1" stop-color="#1f6244"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9fb3d9"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e06464"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4fb88a"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#f2f5fb">Sovereign Agentic Loops：把推理与执行解耦</text>
+  <text x="600" y="70" text-anchor="middle" font-size="14" fill="#8fa3c9">模型只提"意图申请"，控制平面对照真实状态与策略才放行</text>
+
+  <!-- LEFT: Agent / LLM -->
+  <g>
+    <rect x="50" y="200" width="200" height="150" rx="14" fill="#2a2240" stroke="#6b5aa8" stroke-width="1.5"/>
+    <text x="150" y="232" text-anchor="middle" font-size="16" font-weight="700" fill="#e8ddff">LLM Agent</text>
+    <text x="150" y="254" text-anchor="middle" font-size="11" fill="#b8a8e0">推理层 · 随机不可信</text>
+    <rect x="70" y="270" width="160" height="62" rx="6" fill="#1a1530" stroke="#5a4a88" stroke-dasharray="3 2"/>
+    <text x="150" y="292" text-anchor="middle" font-size="11" fill="#d9cdf5">意图提案 i =</text>
+    <text x="150" y="312" text-anchor="middle" font-size="10" fill="#a89cd0">(action, token, params, justification)</text>
+  </g>
+
+  <!-- Obfuscation Membrane -->
+  <g>
+    <line x1="285" y1="130" x2="285" y2="640" stroke="#7a8cb8" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.7"/>
+    <rect x="253" y="92" width="64" height="34" rx="6" fill="#1a2240" stroke="#7a8cb8"/>
+    <text x="285" y="107" text-anchor="middle" font-size="11" fill="#c9d4ec">混淆膜</text>
+    <text x="285" y="120" text-anchor="middle" font-size="9" fill="#8fa3c9">Π: S→Ŝ</text>
+    <text x="285" y="670" text-anchor="middle" font-size="10" fill="#8fa3c9">Node-A7x ⇔ i-0abc123 · 身份互信息 = 0</text>
+  </g>
+
+  <!-- Arrow Agent -> Control plane -->
+  <path d="M250 275 Q 330 275 400 275" stroke="#9fb3d9" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="325" y="266" text-anchor="middle" font-size="10" fill="#9fb3d9">(i, J) 去身份化</text>
+
+  <!-- CENTER: Control Plane -->
+  <g>
+    <rect x="400" y="150" width="420" height="360" rx="18" fill="url(#ctrl)" stroke="#6a88c4" stroke-width="2"/>
+    <text x="610" y="182" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Control Plane 控制平面</text>
+    <text x="610" y="202" text-anchor="middle" font-size="11" fill="#b9cbec">唯一持有执行权限 · 审批与审计中枢</text>
+
+    <!-- Policy layer -->
+    <rect x="425" y="225" width="180" height="90" rx="10" fill="#13284a" stroke="#4a7cc4"/>
+    <text x="515" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">E_policy</text>
+    <text x="515" y="272" text-anchor="middle" font-size="10" fill="#9fc0f0">策略校验 (OPA) · 硬红线</text>
+    <text x="515" y="292" text-anchor="middle" font-size="10" fill="#9fc0f0">例：禁删生产库</text>
+
+    <!-- Consistency layer -->
+    <rect x="615" y="225" width="180" height="90" rx="10" fill="#13284a" stroke="#4a7cc4"/>
+    <text x="705" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">E_consistency</text>
+    <text x="705" y="272" text-anchor="middle" font-size="10" fill="#9fc0f0">一致性校验</text>
+    <text x="705" y="292" text-anchor="middle" font-size="10" fill="#9fc0f0">理由 J vs 实时状态 c_t</text>
+
+    <!-- AND gate text -->
+    <text x="610" y="338" text-anchor="middle" font-size="13" fill="#ffd98c" font-weight="700">E = E_policy  ∧  E_consistency</text>
+
+    <!-- Context aggregator -->
+    <rect x="425" y="355" width="180" height="52" rx="8" fill="#0f1f3a" stroke="#3a5a8c"/>
+    <text x="515" y="378" text-anchor="middle" font-size="12" font-weight="600" fill="#c9dcf5">Context Aggregator</text>
+    <text x="515" y="396" text-anchor="middle" font-size="10" fill="#8fa3c9">拉取真实系统状态 s</text>
+
+    <!-- Evidence chain -->
+    <rect x="615" y="355" width="180" height="52" rx="8" fill="#0f1f3a" stroke="#3a5a8c"/>
+    <text x="705" y="378" text-anchor="middle" font-size="12" font-weight="600" fill="#c9dcf5">Evidence Chain</text>
+    <text x="705" y="396" text-anchor="middle" font-size="10" fill="#8fa3c9">SHA-256 哈希链 · 可回放</text>
+
+    <!-- Decision node -->
+    <polygon points="610,428 684,468 610,492 536,468" fill="#1e3a66" stroke="#6a9fd9" stroke-width="1.5"/>
+    <text x="610" y="466" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">执行决策</text>
+    <text x="610" y="482" text-anchor="middle" font-size="10" fill="#b9cbec">E = 1 ?</text>
+
+    <!-- internal arrows from layers into decision -->
+    <line x1="515" y1="407" x2="575" y2="455" stroke="#6a9fd9" stroke-width="1.3" opacity="0.7" marker-end="url(#ar)"/>
+    <line x1="705" y1="407" x2="645" y2="455" stroke="#6a9fd9" stroke-width="1.3" opacity="0.7" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Reject branch -->
+  <g>
+    <path d="M540 482 Q 440 560 345 560" stroke="#e06464" stroke-width="2.2" fill="none" marker-end="url(#arRed)"/>
+    <rect x="130" y="535" width="210" height="80" rx="10" fill="url(#danger)" stroke="#e06464"/>
+    <text x="235" y="562" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">拒绝 · 危险意图</text>
+    <text x="235" y="582" text-anchor="middle" font-size="11" fill="#ffd9d9">策略层拦截 93%</text>
+    <text x="235" y="600" text-anchor="middle" font-size="11" fill="#ffd9d9">一致性层拦截剩余 7%</text>
+  </g>
+
+  <!-- Execute branch -->
+  <g>
+    <path d="M684 468 Q 800 468 865 400" stroke="#4fb88a" stroke-width="2.2" fill="none" marker-end="url(#arGreen)"/>
+    <rect x="870" y="310" width="240" height="110" rx="12" fill="url(#safe)" stroke="#4fb88a"/>
+    <text x="990" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">放行 · 翻译为真实 API</text>
+    <text x="990" y="362" text-anchor="middle" font-size="11" fill="#cfeadc">Π⁻¹ 还原真实身份</text>
+    <text x="990" y="382" text-anchor="middle" font-size="11" fill="#cfeadc">中位延迟 +12.4 ms · 0 次不安全执行</text>
+  </g>
+
+  <!-- Real system -->
+  <g>
+    <rect x="870" y="450" width="240" height="90" rx="12" fill="#1a2e4a" stroke="#5a7ea8"/>
+    <text x="990" y="480" text-anchor="middle" font-size="13" font-weight="700" fill="#e8f0ff">真实系统</text>
+    <text x="990" y="500" text-anchor="middle" font-size="10" fill="#9fb3d9">云基础设施 / 数据库 / 部署</text>
+    <text x="990" y="518" text-anchor="middle" font-size="10" fill="#9fb3d9">(OpenKedge 原型)</text>
+    <line x1="990" y1="420" x2="990" y2="448" stroke="#5a7ea8" stroke-width="1.5" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Feedback loop: state back to context aggregator -->
+  <path d="M870 495 Q 660 540 515 510 Q 465 495 460 407" stroke="#8fa3c9" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#ar)" opacity="0.85"/>
+  <text x="680" y="532" text-anchor="middle" font-size="10" fill="#8fa3c9">真实状态反馈 · 确定性回放</text>
+
+  <!-- Evidence chain visual -->
+  <g transform="translate(870,580)">
+    <text x="120" y="0" text-anchor="middle" font-size="11" font-weight="700" fill="#c9dcf5">Evidence Chain · 可审计</text>
+    <rect x="10" y="14" width="55" height="26" rx="4" fill="#13284a" stroke="#4a7cc4"/>
+    <text x="37" y="31" text-anchor="middle" font-size="9" fill="#9fb3d9">C(t-1)</text>
+    <rect x="92" y="14" width="55" height="26" rx="4" fill="#13284a" stroke="#4a7cc4"/>
+    <text x="120" y="31" text-anchor="middle" font-size="9" fill="#9fb3d9">C(t)</text>
+    <rect x="174" y="14" width="55" height="26" rx="4" fill="#13284a" stroke="#4a7cc4"/>
+    <text x="202" y="31" text-anchor="middle" font-size="9" fill="#9fb3d9">C(t+1)</text>
+    <line x1="65" y1="27" x2="90" y2="27" stroke="#6a9fd9" marker-end="url(#ar)"/>
+    <line x1="147" y1="27" x2="172" y2="27" stroke="#6a9fd9" marker-end="url(#ar)"/>
+    <text x="120" y="56" text-anchor="middle" font-size="9" fill="#8fa3c9">7500 条记录 · 100% 可精确回放</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="730" text-anchor="middle" font-size="12" fill="#8fa3c9">核心转变：模型不再握有执行权 → 控制平面以"策略 ∧ 一致性"为边界，把不安全动作停在申请阶段</text>
+</svg>

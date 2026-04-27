@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/downloaded_pdfs/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi",
+  "candidates": [
+    {
+      "id": "page-1-block-1",
+      "page_index": 1,
+      "caption": "Figure 1: A failure case (from Who&When benchmark) illustrating the limitation of partial observability. When only agent outputs are visible and critical inputs are absent, localizing the decisive failure step becomes difficult.",
+      "clip": [
+        53.40299987792969,
+        52.86189270019531,
+        541.84765625,
+        344.655029296875
+      ],
+      "clip_area": 142524.79833669378,
+      "page_area": 501156.9211820215,
+      "text_density": 0.023193648629775798,
+      "kind": "image_block_with_caption",
+      "score": 51.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: A failure case (from Who&When benchmark) illustrating the limitation of partial observability. When only agent outputs are visible and critical inputs are absent, localizing the decisive failure step becomes difficult.",
+      "clip": [
+        63.40299987792969,
+        58.86189270019531,
+        531.84765625,
+        338.655029296875
+      ],
+      "clip_area": 131067.59972829535,
+      "page_area": 501156.9211820215,
+      "text_density": 0.004458672952919643,
+      "kind": "embedded_image_with_caption",
+      "xref": 491,
+      "score": 50.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of TraceElephant.",
+      "clip": [
+        48.865997314453125,
+        45.66658020019531,
+        546.377197265625,
+        213.37298583984375
+      ],
+      "clip_area": 83435.81510927947,
+      "page_area": 501156.9211820215,
+      "text_density": 0.013138767104565794,
+      "kind": "image_block_with_caption",
+      "score": 35.927064612325324,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/03-p4-image_block_with_caption.png",
+      "filename": "03-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of TraceElephant.",
+      "clip": [
+        58.865997314453125,
+        51.66658020019531,
+        536.377197265625,
+        207.37298583984375
+      ],
+      "clip_area": 74351.55259707244,
+      "page_area": 501156.9211820215,
+      "text_density": 0.002498963112995498,
+      "kind": "embedded_image_with_caption",
+      "xref": 500,
+      "score": 34.82612836218969,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-block-1",
+      "page_index": 6,
+      "caption": "Figure 4: Distribution of failure agent in TraceElephant.",
+      "clip": [
+        50.053001403808594,
+        52.86785888671875,
+        307.197509765625,
+        179.52801513671875
+      ],
+      "clip_area": 32569.963607937098,
+      "page_area": 501156.9211820215,
+      "text_density": 0.07081075837357668,
+      "kind": "image_block_with_caption",
+      "score": 28.361888484532635,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/05-p7-image_block_with_caption.png",
+      "filename": "05-p7-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Figure 4: Distribution of failure agent in TraceElephant.",
+      "clip": [
+        60.053001403808594,
+        58.86785888671875,
+        297.197509765625,
+        173.52801513671875
+      ],
+      "clip_area": 27191.0263825953,
+      "page_area": 501156.9211820215,
+      "text_density": 0.03811808866721254,
+      "kind": "embedded_image_with_caption",
+      "xref": 502,
+      "score": 27.30212251536217,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/06-p7-embedded_image_with_caption.png",
+      "filename": "06-p7-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-27/assets/figure_candidates/seeing-the-whole-elephant-a-benchmark-for-failure-attribution-in-llm-based-multi/contact-sheet.svg"
+}
