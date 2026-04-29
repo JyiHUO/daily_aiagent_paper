@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1530"/>
+      <stop offset="1" stop-color="#141a3a"/>
+    </linearGradient>
+    <linearGradient id="dayGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a3570"/>
+      <stop offset="1" stop-color="#3d4a8a"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d94656"/>
+      <stop offset="1" stop-color="#b3263a"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ec28a"/>
+      <stop offset="1" stop-color="#26a06e"/>
+    </linearGradient>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e06476"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3ec28a"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8691c4"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">ClawMark：跨工作日的"同事型 Agent"基准</text>
+  <text x="640" y="74" text-anchor="middle" fill="#9fa8d4" font-size="14">环境在悄悄变 · 1537 个确定性 checker 判分 · 7 个前沿模型端到端成功率最高仅 20%</text>
+
+  <!-- Timeline track -->
+  <line x1="110" y1="200" x2="1170" y2="200" stroke="#3a4375" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Day 1 -->
+  <g>
+    <rect x="110" y="150" width="150" height="100" rx="10" fill="url(#dayGrad)" stroke="#5867ad"/>
+    <text x="185" y="178" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Day 1 · 立案</text>
+    <text x="185" y="200" text-anchor="middle" fill="#c9d0f0" font-size="11">初始档案 / 邮件</text>
+    <text x="185" y="218" text-anchor="middle" fill="#c9d0f0" font-size="11">日程 / 知识库</text>
+    <text x="185" y="236" text-anchor="middle" fill="#c9d0f0" font-size="11">多模态证据</text>
+  </g>
+
+  <!-- Day1 -> Day2 -->
+  <line x1="260" y1="200" x2="320" y2="200" stroke="#8691c4" stroke-width="2" marker-end="url(#arrGray)"/>
+  <text x="290" y="190" text-anchor="middle" fill="#e0a34c" font-size="10">显式提醒</text>
+
+  <!-- Day 2 -->
+  <g>
+    <rect x="320" y="150" width="170" height="100" rx="10" fill="url(#dayGrad)" stroke="#5867ad"/>
+    <text x="405" y="178" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Day 2 · loud event</text>
+    <text x="405" y="200" text-anchor="middle" fill="#c9d0f0" font-size="11">客户施压要求先赔</text>
+    <text x="405" y="222" text-anchor="middle" fill="#ffd18a" font-size="11" font-weight="600">⚠ 早赔 = red-line</text>
+  </g>
+
+  <!-- Day2 -> Day3 -->
+  <line x1="490" y1="200" x2="560" y2="200" stroke="#7d89c4" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrGray)"/>
+  <text x="525" y="190" text-anchor="middle" fill="#7d89c4" font-size="10">无通知</text>
+
+  <!-- Day 3 silent mutations -->
+  <g>
+    <rect x="560" y="130" width="230" height="140" rx="10" fill="#2a2050" stroke="#7b4da0" stroke-width="1.5"/>
+    <text x="675" y="156" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Day 3 · silent mutations</text>
+    <text x="580" y="182" fill="#d9b8ef" font-size="11">• 温度传感器 CSV 新增</text>
+    <text x="580" y="202" fill="#d9b8ef" font-size="11">• 费率表被改成 5 折</text>
+    <text x="580" y="222" fill="#d9b8ef" font-size="11">• 门禁日志：CEO 起火前入场</text>
+    <text x="580" y="248" fill="#e8a9ff" font-size="11" font-style="italic">Agent 必须主动扫出这些变化</text>
+  </g>
+
+  <!-- Day3 -> DayN -->
+  <line x1="790" y1="200" x2="820" y2="200" stroke="#8691c4" stroke-width="2" marker-end="url(#arrGray)"/>
+
+  <!-- Day N -->
+  <g>
+    <rect x="820" y="150" width="150" height="100" rx="10" fill="url(#dayGrad)" stroke="#5867ad"/>
+    <text x="895" y="178" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Day N · 交付</text>
+    <text x="895" y="202" text-anchor="middle" fill="#c9d0f0" font-size="11">写回文件 / 邮件</text>
+    <text x="895" y="220" text-anchor="middle" fill="#c9d0f0" font-size="11">/ 日程 / 表格 / KB</text>
+    <text x="895" y="238" text-anchor="middle" fill="#c9d0f0" font-size="11">最终结论落盘</text>
+  </g>
+
+  <!-- DayN -> Checker -->
+  <line x1="970" y1="200" x2="1000" y2="200" stroke="#8691c4" stroke-width="2" marker-end="url(#arrGray)"/>
+
+  <!-- Checker -->
+  <g>
+    <rect x="1000" y="140" width="180" height="120" rx="10" fill="#1a2450" stroke="#4a5aa0"/>
+    <text x="1090" y="166" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">确定性评分</text>
+    <text x="1090" y="188" text-anchor="middle" fill="#c9d0f0" font-size="11">1537 个 Python checker</text>
+    <text x="1090" y="207" text-anchor="middle" fill="#c9d0f0" font-size="11">查询真实后端状态</text>
+    <text x="1090" y="226" text-anchor="middle" fill="#ffb4bf" font-size="11">55 条 red-line 一票否决</text>
+    <text x="1090" y="248" text-anchor="middle" fill="#a0b0ff" font-size="10" font-style="italic">不依赖 LLM-as-judge</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="300" x2="1220" y2="300" stroke="#2a3370" stroke-width="1"/>
+  <text x="640" y="328" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">两条执行路径：同一任务，结局天差地别</text>
+
+  <!-- FAIL path -->
+  <g>
+    <rect x="60" y="360" width="580" height="340" rx="14" fill="#2a1524" stroke="url(#redGrad)" stroke-width="2"/>
+    <text x="90" y="390" fill="#ff8091" font-size="14" font-weight="700">✗ 缓存昨日认知 · 不澄清 · 不复核</text>
+
+    <!-- Start node -->
+    <circle cx="120" cy="490" r="9" fill="#ff8091"/>
+    <text x="120" y="515" text-anchor="middle" fill="#ffb4bf" font-size="11">同一任务</text>
+
+    <!-- Divergent arrows -->
+    <g stroke="#e06476" stroke-width="1.8" fill="none" opacity="0.85">
+      <path d="M130,488 C240,450 330,445 418,440" marker-end="url(#arrRed)"/>
+      <path d="M130,490 C240,495 330,485 418,483" marker-end="url(#arrRed)"/>
+      <path d="M130,493 C240,540 330,530 418,525" marker-end="url(#arrRed)"/>
+      <path d="M130,495 C240,580 330,575 418,568" marker-end="url(#arrRed)"/>
+    </g>
+
+    <!-- Failure reasons -->
+    <g font-size="11" fill="#ffd4da">
+      <rect x="420" y="424" width="200" height="32" rx="6" fill="#3d1a28" stroke="#7a2d40"/>
+      <text x="520" y="445" text-anchor="middle">silent change 漏检 56.5%</text>
+
+      <rect x="420" y="466" width="200" height="32" rx="6" fill="#3d1a28" stroke="#7a2d40"/>
+      <text x="520" y="487" text-anchor="middle">backend writeback 失败 53.6%</text>
+
+      <rect x="420" y="508" width="200" height="32" rx="6" fill="#3d1a28" stroke="#7a2d40"/>
+      <text x="520" y="529" text-anchor="middle">证据跨源矛盾 34%</text>
+
+      <rect x="420" y="550" width="200" height="32" rx="6" fill="#3d1a28" stroke="#7a2d40"/>
+      <text x="520" y="571" text-anchor="middle">提前赔付 → red-line</text>
+    </g>
+
+    <!-- Result -->
+    <rect x="90" y="620" width="520" height="60" rx="8" fill="#1a0b14" stroke="#b3263a"/>
+    <text x="350" y="645" text-anchor="middle" fill="#ff8091" font-size="13" font-weight="700">Day 2 首次外生变化：6/7 模型掉分</text>
+    <text x="350" y="666" text-anchor="middle" fill="#e9c0c7" font-size="11">Opus 4.6：80.6 → 69.0（−11.5pp）</text>
+  </g>
+
+  <!-- PASS path -->
+  <g>
+    <rect x="660" y="360" width="560" height="340" rx="14" fill="#14301f" stroke="url(#greenGrad)" stroke-width="2"/>
+    <text x="690" y="390" fill="#5de0a8" font-size="14" font-weight="700">✓ 每日先刷新环境 · 澄清 · 写回核验</text>
+
+    <!-- Start node -->
+    <circle cx="700" cy="450" r="9" fill="#5de0a8"/>
+    <text x="700" y="436" text-anchor="middle" fill="#bfeacf" font-size="11">同一任务</text>
+
+    <!-- Three mechanisms -->
+    <g font-size="11" fill="#c7f0db">
+      <rect x="690" y="470" width="165" height="60" rx="6" fill="#0f2418" stroke="#3ec28a"/>
+      <text x="772" y="492" text-anchor="middle" font-weight="700" fill="#5de0a8">① 刷新状态</text>
+      <text x="772" y="512" text-anchor="middle">每轮扫描五类服务</text>
+
+      <rect x="875" y="470" width="165" height="60" rx="6" fill="#0f2418" stroke="#3ec28a"/>
+      <text x="957" y="492" text-anchor="middle" font-weight="700" fill="#5de0a8">② 澄清意图</text>
+      <text x="957" y="512" text-anchor="middle">压力 ≠ 授权</text>
+
+      <rect x="1045" y="470" width="160" height="60" rx="6" fill="#0f2418" stroke="#3ec28a"/>
+      <text x="1125" y="492" text-anchor="middle" font-weight="700" fill="#5de0a8">③ 写回核验</text>
+      <text x="1125" y="512" text-anchor="middle">说了就真写进系统</text>
+    </g>
+
+    <!-- Arrows through pipeline -->
+    <line x1="709" y1="452" x2="688" y2="498" stroke="#3ec28a" stroke-width="1.8" marker-end="url(#arrGreen)"/>
+    <line x1="855" y1="500" x2="875" y2="500" stroke="#3ec28a" stroke-width="1.8" marker-end="url(#arrGreen)"/>
+    <line x1="1040" y1="500" x2="1045" y2="500" stroke="#3ec28a" stroke-width="1.8" marker-end="url(#arrGreen)"/>
+
+    <!-- Closed loop: ③ back to ① -->
+    <path d="M1125,530 C1125,565 772,565 772,532" stroke="#3ec28a" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arrGreen)"/>
+    <text x="948" y="580" text-anchor="middle" fill="#5de0a8" font-size="10" font-style="italic">每轮回到刷新状态 · 形成闭环</text>
+
+    <!-- Result -->
+    <rect x="690" y="620" width="500" height="60" rx="8" fill="#0a1a11" stroke="#26a06e"/>
+    <text x="940" y="645" text-anchor="middle" fill="#5de0a8" font-size="13" font-weight="700">最强模型加权 75.8 · 严格端到端仅 20.0%</text>
+    <text x="940" y="666" text-anchor="middle" fill="#bfeacf" font-size="11">"做到一半"常见，"完整交付"依然罕见 → 可靠性才是下一关</text>
+  </g>
+
+  <!-- footer -->
+  <text x="640" y="732" text-anchor="middle" fill="#6f7aae" font-size="11">100 任务 · 13 专业场景 · 5 个有状态沙箱服务（文件 / 邮件 / 日历 / 知识库 / 表格）· 评测轨迹两次重跑须 bit-identical</text>
+</svg>

@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-27
+- **日期**：2026-04-28
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems
-  - From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company
-  - Sovereign Agentic Loops: Decoupling AI Reasoning from Execution in Real-World Systems
-- **日报路径**：[2026-04-27/daily_report.md](2026-04-27/daily_report.md)
+  - Revisable by Design: A Theory of Streaming LLM Agent Execution
+  - Beyond Single-Agent Alignment: Preventing Context-Fragmented Violations in Multi-Agent Systems
+  - ClawMark: A Living-World Benchmark for Multi-Turn, Multi-Day, Multimodal Coworker Agents
+- **日报路径**：[2026-04-28/daily_report.md](2026-04-28/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-28 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Revisable by Design: A Theory of Streaming LLM Agent Execution | [2026-04-28/daily_report.md](2026-04-28/daily_report.md) |
+|  |  |  | 2 | Beyond Single-Agent Alignment: Preventing Context-Fragmented Violations in Multi-Agent Systems |  |
+|  |  |  | 3 | ClawMark: A Living-World Benchmark for Multi-Turn, Multi-Day, Multimodal Coworker Agents |  |
 | 2026-04-27 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Seeing the Whole Elephant: A Benchmark for Failure Attribution in LLM-based Multi-Agent Systems | [2026-04-27/daily_report.md](2026-04-27/daily_report.md) |
 |  |  |  | 2 | From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company |  |
 |  |  |  | 3 | Sovereign Agentic Loops: Decoupling AI Reasoning from Execution in Real-World Systems |  |

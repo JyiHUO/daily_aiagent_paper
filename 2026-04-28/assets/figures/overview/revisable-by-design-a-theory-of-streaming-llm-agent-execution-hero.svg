@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1226"/>
+      <stop offset="1" stop-color="#151936"/>
+    </linearGradient>
+    <linearGradient id="streamG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f2a4a"/>
+      <stop offset="1" stop-color="#243055"/>
+    </linearGradient>
+    <linearGradient id="absorberG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb547"/>
+      <stop offset="1" stop-color="#ff7a3d"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c9d2ff"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff8a3d"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="60" y="58" fill="#ffffff" font-size="26" font-weight="700">流式 Agent 执行：把"中途改需求"变成一等公民</text>
+  <text x="60" y="86" fill="#8f9bd1" font-size="14">可逆性分类 + 最早冲突回滚：保留能留的，只补偿该补偿的</text>
+
+  <!-- Top: user + agent concurrent channel -->
+  <g>
+    <rect x="60" y="120" width="160" height="58" rx="10" fill="#2a3566" stroke="#5b6bb3"/>
+    <text x="140" y="148" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">用户</text>
+    <text x="140" y="168" text-anchor="middle" fill="#b9c4ee" font-size="11">随时注入修订 inj</text>
+
+    <rect x="980" y="120" width="160" height="58" rx="10" fill="#2a3566" stroke="#5b6bb3"/>
+    <text x="1060" y="148" text-anchor="middle" fill="#fff" font-size="15" font-weight="600">Agent 循环</text>
+    <text x="1060" y="168" text-anchor="middle" fill="#b9c4ee" font-size="11">thk · act · obs</text>
+
+    <!-- bidirectional channel -->
+    <path d="M222,142 L978,142" stroke="#7d8ad0" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M978,160 L222,160" stroke="#7d8ad0" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="600" y="134" text-anchor="middle" fill="#c9d2ff" font-size="11">持续打开的双向通道 · 不阻塞</text>
+  </g>
+
+  <!-- Execution stream timeline -->
+  <g transform="translate(60,210)">
+    <rect x="0" y="0" width="1080" height="130" rx="14" fill="url(#streamG)" stroke="#3a4580"/>
+    <text x="16" y="22" fill="#c9d2ff" font-size="12" font-weight="600">Execution Stream（事件流）</text>
+
+    <g font-size="12" text-anchor="middle" fill="#0d1226" font-weight="700">
+      <rect x="30" y="50" width="58" height="42" rx="6" fill="#6ecbff"/><text x="59" y="76">I</text>
+      <rect x="95" y="50" width="58" height="42" rx="6" fill="#6ecbff"/><text x="124" y="76">I</text>
+      <rect x="160" y="50" width="58" height="42" rx="6" fill="#7df0a3"/><text x="189" y="76">R</text>
+      <rect x="225" y="50" width="58" height="42" rx="6" fill="#6ecbff"/><text x="254" y="76">I</text>
+      <rect x="290" y="50" width="58" height="42" rx="6" fill="#7df0a3"/><text x="319" y="76">R</text>
+      <rect x="355" y="50" width="58" height="42" rx="6" fill="#7df0a3"/><text x="384" y="76">R</text>
+      <rect x="420" y="50" width="58" height="42" rx="6" fill="#6ecbff"/><text x="449" y="76">I</text>
+      <rect x="485" y="50" width="58" height="42" rx="6" fill="#7df0a3"/><text x="514" y="76">R</text>
+      <rect x="550" y="50" width="58" height="42" rx="6" fill="#ffb547" stroke="#ff5d77" stroke-width="3"/><text x="579" y="76">K</text>
+      <rect x="615" y="50" width="58" height="42" rx="6" fill="#ffb547"/><text x="644" y="76">K</text>
+      <rect x="680" y="50" width="58" height="42" rx="6" fill="#ff5d77"/><text x="709" y="76" fill="#fff">X</text>
+    </g>
+
+    <!-- future / replanned -->
+    <rect x="760" y="50" width="290" height="42" rx="6" fill="none" stroke="#8f9bd1" stroke-dasharray="4 4"/>
+    <text x="905" y="76" text-anchor="middle" fill="#c9d2ff" font-size="12">在新规格下续跑 / 重规划</text>
+
+    <!-- inj arrow from top -->
+    <rect x="520" y="-46" width="120" height="22" rx="11" fill="#ff7a3d"/>
+    <text x="580" y="-30" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">inj：改需求 ϕ</text>
+    <path d="M579,-22 L579,46" stroke="#ff8a3d" stroke-width="2" fill="none" marker-end="url(#arrowO)"/>
+
+    <!-- earliest conflict marker -->
+    <text x="579" y="115" text-anchor="middle" fill="#ff8fa3" font-size="11" font-weight="600">↑ 最早冲突 i_bad</text>
+
+    <!-- keep / rollback brackets -->
+    <path d="M30,44 L30,36 L548,36 L548,44" stroke="#7df0a3" fill="none" stroke-width="1.5"/>
+    <text x="289" y="30" text-anchor="middle" fill="#7df0a3" font-size="11">保留：k* = i_bad − 1（零代价撤回的 I/R）</text>
+
+    <path d="M550,98 L550,108 L738,108 L738,98" stroke="#ff8a3d" fill="none" stroke-width="1.5"/>
+    <text x="644" y="124" text-anchor="middle" fill="#ff8a3d" font-size="11">对 K 执行 comp，对 X 无法完全撤回</text>
+  </g>
+
+  <!-- Revision Absorber central module -->
+  <g transform="translate(340,390)">
+    <rect x="0" y="0" width="520" height="110" rx="16" fill="url(#absorberG)"/>
+    <text x="260" y="34" text-anchor="middle" fill="#1a1222" font-size="18" font-weight="800">Revision Absorber · 最早冲突回滚</text>
+    <text x="260" y="58" text-anchor="middle" fill="#2a1a10" font-size="12">① 扫描 trace 找首个与 (S₀ ∪ ϕ) 冲突的 K/X 动作</text>
+    <text x="260" y="76" text-anchor="middle" fill="#2a1a10" font-size="12">② 对 k* 之后动作执行 逆操作 / 补偿 / 回退</text>
+    <text x="260" y="94" text-anchor="middle" fill="#2a1a10" font-size="12">③ 截断上下文至 E_k*，在新规格 ϕ 下续跑</text>
+  </g>
+
+  <!-- connectors from stream to absorber -->
+  <path d="M600,342 L600,388" stroke="#ff8a3d" stroke-width="2" fill="none" marker-end="url(#arrowO)"/>
+  <path d="M600,502 L600,538" stroke="#c9d2ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Reversibility legend (bottom-left) -->
+  <g transform="translate(60,540)">
+    <text x="0" y="0" fill="#c9d2ff" font-size="13" font-weight="700">动作可逆性四分类</text>
+    <g font-size="12">
+      <rect x="0" y="16" width="18" height="14" rx="3" fill="#6ecbff"/><text x="26" y="28" fill="#d9deff">Idempotent · 读取，不改世界</text>
+      <rect x="0" y="38" width="18" height="14" rx="3" fill="#7df0a3"/><text x="26" y="50" fill="#d9deff">Reversible · 有精确逆操作</text>
+      <rect x="0" y="60" width="18" height="14" rx="3" fill="#ffb547"/><text x="26" y="72" fill="#d9deff">Compensable · 可补偿（如纠正邮件）</text>
+      <rect x="0" y="82" width="18" height="14" rx="3" fill="#ff5d77"/><text x="26" y="94" fill="#d9deff">Irreversible · 无法收回（如已结算）</text>
+    </g>
+    <text x="0" y="120" fill="#8f9bd1" font-size="11" font-style="italic">核心洞察：灵活性上限 = 可逆性 ρ(T)</text>
+  </g>
+
+  <!-- Results panel (bottom-right) -->
+  <g transform="translate(720,540)">
+    <rect x="0" y="0" width="420" height="170" rx="14" fill="#1b2246" stroke="#3a4580"/>
+    <text x="20" y="28" fill="#fff" font-size="14" font-weight="700">StreamBench · 1,008 次真实 LLM 实验</text>
+
+    <text x="20" y="58" fill="#b9c4ee" font-size="11">质量（越高越好）</text>
+    <rect x="20" y="66" width="240" height="12" rx="3" fill="#2a3566"/>
+    <rect x="20" y="66" width="230" height="12" rx="3" fill="#7df0a3"/>
+    <text x="270" y="76" fill="#d9deff" font-size="11">Absorber 3.07</text>
+
+    <rect x="20" y="84" width="240" height="12" rx="3" fill="#2a3566"/>
+    <rect x="20" y="84" width="238" height="12" rx="3" fill="#6ecbff"/>
+    <text x="270" y="94" fill="#d9deff" font-size="11">Full-Restart 3.17</text>
+
+    <text x="20" y="118" fill="#b9c4ee" font-size="11">浪费步数（越低越好）</text>
+    <rect x="20" y="126" width="240" height="12" rx="3" fill="#2a3566"/>
+    <rect x="20" y="126" width="16" height="12" rx="3" fill="url(#absorberG)"/>
+    <text x="270" y="136" fill="#ffd9a8" font-size="11" font-weight="700">Absorber 0.78</text>
+
+    <rect x="20" y="144" width="240" height="12" rx="3" fill="#2a3566"/>
+    <rect x="20" y="144" width="228" height="12" rx="3" fill="#ff5d77"/>
+    <text x="270" y="154" fill="#ffb3c0" font-size="11">Full-Restart 11.41</text>
+
+    <text x="210" y="175" text-anchor="middle" fill="#ffb547" font-size="12" font-weight="700">质量持平，浪费降低 14.6×</text>
+  </g>
+</svg>

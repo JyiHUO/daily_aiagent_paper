@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0427：轨迹归因、组织编排与执行治理三线齐发",
+  "shownotes_html": "<p>Agent 研究正在从\"让模型更聪明\"转向\"把 Agent 当系统来建\"。今天三篇重点论文分别在评测、多 Agent 编排和安全执行上给出了新答案——如果你在做 Agent 产品或平台，这期值得完整听完。</p><p><strong>本期重点</strong></p><ul><li><strong>看见整头大象（Seeing the Whole Elephant）</strong>：多 Agent 系统跑挂了到底怪谁？现有基准只记 Agent 输出，归因准确率低到 16%。这篇提出 TraceElephant 基准，补齐完整输入上下文后准确率直接翻倍，还能像调试器一样断点重放做反事实验证。一个关键发现：失败模式跟系统架构强相关，集中式 orchestrator 的错集中在早期规划，动态组队的错遍地开花。</li><li><strong>从技能到人才（From Skills to Talent）</strong>：把多 Agent 系统当公司来管。提出 Talent-Container 解耦（Agent 身份与运行时分离）、Talent Market 按需招聘、E2R 树搜索统一规划-执行-复盘，还搬了一整套 HR 流程——连 PIP 和裁员都有。在 PRDBench 上成功率从 69% 拉到 84.67%。</li><li><strong>主权 Agent 循环（Sovereign Agentic Loops）</strong>：别让 LLM 直接调生产 API。模型只输出结构化意图提案，由控制平面做策略+一致性双层校验后才执行，加上身份混淆膜和加密审计链。2500 条对抗意图测试中全部被拦截，7500 条执行记录 100% 可精确回放。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 评测全面升级：从只看最终成功率，转向 trace 级失败归因、token 成本和执行轨迹分析，Agent 正被当作需要可观测的系统来对待。</li><li>安全重心从\"训练更对齐的模型\"迁移到\"在执行边界做结构性拦截\"，控制平面、策略校验、审计链等系统架构思路明显增多。</li></ul><p>今天还聊了一个基础概念：<strong>Trajectory Evaluation</strong>——为什么 Agent 要看整条轨迹而不只是最终答案。越是长程、多 Agent 的系统，端到端分数越没法告诉你该改哪里，轨迹级评测正成为这批论文的共同方法论底座。</p><p>本期核心判断：做 Agent 产品，下一轮差距不会开在谁家 prompt 调得更好，而会开在记忆、世界模型、执行治理和轨迹归因这些基础设施上。</p><p>欢迎在评论区留言交流你的看法。本期内容由 AI 自动生成，如有疏漏欢迎指正。我们明天见。</p>",
+  "report_date": "2026-04-27",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-04-28T00:00:58Z"
+}

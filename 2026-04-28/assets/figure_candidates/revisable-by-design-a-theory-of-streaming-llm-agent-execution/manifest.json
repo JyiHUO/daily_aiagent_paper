@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/downloaded_pdfs/revisable-by-design-a-theory-of-streaming-llm-agent-execution.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution",
+  "candidates": [
+    {
+      "id": "page-16-drawing-caption-18",
+      "page_index": 16,
+      "caption": "Figure 6: Per-scenario quality and wasted acts across all methods (DeepSeek-V3).",
+      "clip": [
+        90.0,
+        265.431396484375,
+        521.9972534179688,
+        444.8999938964844
+      ],
+      "clip_area": 77529.94115680642,
+      "page_area": 484704.0,
+      "text_density": 0.19049911686474805,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.231496778746298,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/01-p17-drawing_cluster_with_caption.png",
+      "filename": "01-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-51",
+      "page_index": 8,
+      "caption": "Figure 3: Quality heatmap per (method × revision-type × LLM). The Absorber stays in the high- quality region across all revision types and all LLM families. Ignore collapses on substitutive and priority-shift revisions, confirming that the judge penalizes spec-violating outputs.",
+      "clip": [
+        90.0,
+        154.13162231445312,
+        522.0067138671875,
+        311.1390075683594
+      ],
+      "clip_area": 67828.24455641955,
+      "page_area": 484704.0,
+      "text_density": 0.3723776925582748,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.210985608241508,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/02-p9-drawing_cluster_with_caption.png",
+      "filename": "02-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-15-drawing-caption-26",
+      "page_index": 15,
+      "caption": "Figure 5: Extended ρ -sweep on the MockLLM grid (25,200 runs). At ρ =1 . 0 (no K -class tools), both Absorber and Full-Restart waste is near zero. Once K -tools are present ( ρ ≤ 0 . 75 ), the Absorber’s waste stabilizes at ∼ 0 . 7 while Full-Restart’s rises to ∼ 8 . 8 .",
+      "clip": [
+        90.0,
+        214.4702606201172,
+        522.0050048828125,
+        383.2090148925781
+      ],
+      "clip_area": 72895.98636339419,
+      "page_area": 484704.0,
+      "text_density": 0.17494143162138,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.11346950675491,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/03-p16-drawing_cluster_with_caption.png",
+      "filename": "03-p16-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-14",
+      "page_index": 9,
+      "caption": "CrewAI. CrewAI: Framework for orchestrating role-playing autonomous AI agents. https:// github.com/crewAIInc/crewAI , 2024.",
+      "clip": [
+        77.4,
+        353.71025390625,
+        535.6560302734375,
+        662.51025390625
+      ],
+      "clip_area": 141509.4621484375,
+      "page_area": 484704.0,
+      "text_density": 0.6656558531664861,
+      "kind": "captioned_figure",
+      "score": 12.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/04-p10-captioned_figure.png",
+      "filename": "04-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-10-block-6",
+      "page_index": 10,
+      "caption": "Google. Agent Development Kit (ADK): Google’s open-source framework for building AI agents. https://google.github.io/adk-docs/ , 2024.",
+      "clip": [
+        77.4,
+        18.0,
+        536.3387084960938,
+        274.2547607421875
+      ],
+      "clip_area": 117605.22894099505,
+      "page_area": 484704.0,
+      "text_density": 0.4980633425894133,
+      "kind": "captioned_figure",
+      "score": 12.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/05-p11-captioned_figure.png",
+      "filename": "05-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 3: Quality heatmap per (method × revision-type × LLM). The Absorber stays in the high- quality region across all revision types and all LLM families. Ignore collapses on substitutive and priority-shift revisions, confirming that the judge penalizes spec-violating outputs.",
+      "clip": [
+        142.92388916015625,
+        169.11767578125,
+        263.1578369140625,
+        278.877197265625
+      ],
+      "clip_area": 13196.820571646094,
+      "page_area": 484704.0,
+      "text_density": 0.4231015388666443,
+      "kind": "embedded_image_with_caption",
+      "xref": 635,
+      "score": 10.146631339684955,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/06-p9-embedded_image_with_caption.png",
+      "filename": "06-p9-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/revisable-by-design-a-theory-of-streaming-llm-agent-execution/contact-sheet.svg"
+}

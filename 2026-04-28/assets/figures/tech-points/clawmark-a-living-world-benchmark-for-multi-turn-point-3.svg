@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#f7f8fb"/>
+
+  <text x="450" y="38" font-size="22" font-weight="700" text-anchor="middle" fill="#1b2a4e">两种评分视角，差距悬殊</text>
+  <text x="450" y="62" font-size="13" text-anchor="middle" fill="#5a6b8c">做对大部分 ≠ 能端到端交付</text>
+
+  <!-- Left metric: Weighted Score -->
+  <g>
+    <rect x="60" y="100" width="340" height="120" rx="10" fill="#e8f0ff" stroke="#3a6fd8" stroke-width="2"/>
+    <text x="230" y="130" font-size="17" font-weight="700" text-anchor="middle" fill="#1b3a8a">Weighted Score</text>
+    <text x="230" y="158" font-size="12" text-anchor="middle" fill="#3a4a7a">checker 加权通过率 · 大致做对多少</text>
+    <text x="230" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#1b3a8a">最高 75.8</text>
+  </g>
+
+  <!-- Right metric: Task Success -->
+  <g>
+    <rect x="500" y="100" width="340" height="120" rx="10" fill="#ffecec" stroke="#d84a4a" stroke-width="2"/>
+    <text x="670" y="130" font-size="17" font-weight="700" text-anchor="middle" fill="#8a1b1b">Task Success</text>
+    <text x="670" y="158" font-size="12" text-anchor="middle" fill="#7a3a3a">全部 checker 通过才算 · 一件都不能掉</text>
+    <text x="670" y="198" font-size="22" font-weight="700" text-anchor="middle" fill="#8a1b1b">最高 20%</text>
+  </g>
+
+  <!-- Bars comparing -->
+  <g transform="translate(60,260)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#1b2a4e">Claude Sonnet 4.6（Weighted 榜首）</text>
+    <rect x="0" y="14" width="600" height="22" fill="#dde4f0"/>
+    <rect x="0" y="14" width="455" height="22" fill="#3a6fd8"/>
+    <text x="465" y="31" font-size="13" font-weight="700" fill="#1b3a8a">75.8</text>
+
+    <text x="0" y="68" font-size="14" font-weight="700" fill="#1b2a4e">Claude Opus 4.6（Task Success 最佳）</text>
+    <rect x="0" y="82" width="600" height="22" fill="#f0dde0"/>
+    <rect x="0" y="82" width="120" height="22" fill="#d84a4a"/>
+    <text x="130" y="99" font-size="13" font-weight="700" fill="#8a1b1b">20%</text>
+
+    <text x="0" y="136" font-size="14" font-weight="700" fill="#1b2a4e">Kimi K2.5（Task Success）</text>
+    <rect x="0" y="150" width="600" height="22" fill="#f0dde0"/>
+    <rect x="0" y="150" width="2" height="22" fill="#d84a4a"/>
+    <text x="10" y="167" font-size="13" font-weight="700" fill="#8a1b1b">0%</text>
+  </g>
+
+  <!-- Conclusion -->
+  <g>
+    <rect x="60" y="478" width="780" height="56" rx="8" fill="#1b2a4e"/>
+    <text x="450" y="504" font-size="15" font-weight="700" text-anchor="middle" fill="#ffffff">即便最强 Agent，也只有 1/5 任务能完美交付</text>
+    <text x="450" y="524" font-size="12" text-anchor="middle" fill="#cfd6e8">七模型评测：最佳成绩分散在 4 家，没有一家通吃</text>
+  </g>
+</svg>

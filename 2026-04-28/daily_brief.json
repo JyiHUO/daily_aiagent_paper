@@ -1,0 +1,30 @@
+{
+  "trend_overview_brief": [
+    "Agent 评测从单步答对转向轨迹与多日协作",
+    "多 Agent 安全升格为分布式系统治理问题",
+    "Agent runtime 开始关注流式执行与中途可改",
+    "红队与 sabotage 评测进入 agent 驱动时代"
+  ],
+  "trend_overview": [
+    "评测范式正在从单轮任务分数，转向跨多日、多模态、步骤级轨迹评测，ClawMark、AgentEval、OS-SPEAR 等都在补齐长程运行和错误传播诊断的空白。",
+    "多 Agent 安全不再只是'让每个模型更对齐'，而是被重新表述成分布式系统的状态一致性与攻击面问题，架构、拓扑、记忆结构成为关键变量。",
+    "Agent runtime 层出现新张力：事务式 ReAct 循环被质疑，流式执行、动作可逆性、中途回滚等运行时语义开始被形式化。",
+    "红队与 safety 研究本身也在 Agent 化，用 coding agent 搜索攻击程序、评估模型是否会破坏安全研究，Agent 同时成为攻与防的主语。"
+  ],
+  "knowledge_point": {
+    "topic": "Trajectory Evaluation 是什么",
+    "summary": "轨迹评测关心的是 Agent 每一步是否合理，而不是最后那个答案对不对。",
+    "content": "Trajectory Evaluation 不看单一的最终答案，而是沿着 Agent 的整条执行轨迹去审视：每一步的动作、工具调用、状态变化和反馈处理是不是自洽、是不是和任务目标对齐。它会把一次失败拆成感知错、规划错、执行错或恢复失败等具体环节，因此能直接指向系统该修哪一层，而不是给一个黑盒分数。在 Agent 系统里，它通常扮演'调试仪表盘'的角色，是连接评测、runtime 诊断和改版迭代的中枢。",
+    "why_today": "今天 AgentEval 的 DAG 步骤级评测、ClawMark 的多日 checker、OS-SPEAR 的多维分析都在做同一件事——把评测从结果级下沉到轨迹级，这正是理解今天多篇精读论文的共同底座。"
+  },
+  "closing_summary_brief": [
+    "Agent 研究正同时向运行时语义和轨迹级评测下沉",
+    "多 Agent 安全和评测都在被重新当作系统问题来做"
+  ],
+  "closing_summary": [
+    "今天的主线不在'哪个模型更强'，而在如何把 Agent 当成一个长期运行的系统来设计和度量。",
+    "一端是运行时：流式执行、动作可逆性、跨域策略一致性开始被形式化，说明 Agent runtime 正在补齐自己的理论基础。",
+    "另一端是评测：多日多模态 benchmark、DAG 步骤级评估、OS 级多维工具包共同把评测推到轨迹层面。",
+    "对做 Agent 平台的团队来说，现在值得投入的不是又一个 demo，而是 harness、轨迹评测和跨 Agent 治理这三块基础设施。"
+  ]
+}

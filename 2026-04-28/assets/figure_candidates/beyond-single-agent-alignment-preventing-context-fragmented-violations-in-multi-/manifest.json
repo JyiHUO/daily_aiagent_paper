@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/downloaded_pdfs/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-",
+  "candidates": [
+    {
+      "id": "page-2-block-9",
+      "page_index": 2,
+      "caption": "We now provide a rigorous mathematical framework for Context-Fragmented Violations and establish the theoretical foundations for our solution.",
+      "clip": [
+        40.846998596191405,
+        165.95262451171874,
+        570.4695068359375,
+        474.75262451171875
+      ],
+      "clip_area": 163547.43054443362,
+      "page_area": 484704.0,
+      "text_density": 0.6706257367480631,
+      "kind": "captioned_figure",
+      "score": 21.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/01-p3-captioned_figure.png",
+      "filename": "01-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-7",
+      "page_index": 7,
+      "caption": "Distributed Sentinel is a distributed zero-trust enforcement architecture that detects and prevents Context-Fragmented Violations while preserving departmental data sovereignty.",
+      "clip": [
+        41.4,
+        177.89064331054686,
+        570.5578857421875,
+        486.6906433105469
+      ],
+      "clip_area": 163403.95511718752,
+      "page_area": 484704.0,
+      "text_density": 0.4412105316708913,
+      "kind": "captioned_figure",
+      "score": 19.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        73.37342834472656,
+        72.53475952148438,
+        487.2506103515625,
+        224.02325439453125
+      ],
+      "clip_area": 62697.631364513654,
+      "page_area": 484704.0,
+      "text_density": 0.20226677531433934,
+      "kind": "drawing_cluster",
+      "score": 1.360633829634235,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/03-p9-drawing_cluster.png",
+      "filename": "03-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6103454019366908,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6174966736203117,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.5576583972950606,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/beyond-single-agent-alignment-preventing-context-fragmented-violations-in-multi-/contact-sheet.svg"
+}

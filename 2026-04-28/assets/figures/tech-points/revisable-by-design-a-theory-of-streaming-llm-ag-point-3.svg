@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d64545"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">最早冲突回滚：只撤到第一个真正打架的动作</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">用户中途改需求 φ：晚宴 → 户外 BBQ</text>
+
+  <!-- Trace bar -->
+  <g>
+    <text x="60" y="115" font-size="13" fill="#555">已执行 trace</text>
+
+    <!-- 8 I/R steps -->
+    <rect x="60" y="130" width="440" height="52" rx="6" fill="#e8f3ff" stroke="#4a90e2"/>
+    <text x="280" y="155" text-anchor="middle" font-size="14" fill="#1d4e8a" font-weight="600">步 1–8 · I/R 类动作（搜场地 / 写方案，可逆）</text>
+    <text x="280" y="173" text-anchor="middle" font-size="11" fill="#4a6a8a">对新需求不冲突，保留</text>
+
+    <!-- conflict K step -->
+    <rect x="510" y="130" width="120" height="52" rx="6" fill="#ffe1e1" stroke="#d64545" stroke-width="2"/>
+    <text x="570" y="155" text-anchor="middle" font-size="14" fill="#a01e1e" font-weight="700">步 9 · K</text>
+    <text x="570" y="173" text-anchor="middle" font-size="11" fill="#a01e1e">发提案邮件</text>
+
+    <!-- after -->
+    <rect x="640" y="130" width="200" height="52" rx="6" fill="#f0f0f0" stroke="#999" stroke-dasharray="4 3"/>
+    <text x="740" y="155" text-anchor="middle" font-size="13" fill="#555">后续 K/X 动作</text>
+    <text x="740" y="173" text-anchor="middle" font-size="11" fill="#777">（尚未发生或待撤）</text>
+
+    <!-- scan arrow -->
+    <path d="M60 210 L555 210" stroke="#d64545" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+    <text x="300" y="202" text-anchor="middle" font-size="12" fill="#d64545">扫描：找最早与 φ 冲突的动作 → i_bad = 9</text>
+
+    <!-- cut line -->
+    <line x1="505" y1="120" x2="505" y2="235" stroke="#d64545" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="505" y="250" text-anchor="middle" font-size="12" fill="#d64545" font-weight="700">回滚点 k* = 8</text>
+  </g>
+
+  <!-- bottom: two actions -->
+  <g transform="translate(0,285)">
+    <!-- keep -->
+    <rect x="60" y="0" width="360" height="140" rx="10" fill="#eaf7ec" stroke="#3aa55c" stroke-width="2"/>
+    <text x="240" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#1f6a3a">✓ 保留 步 1–8（E_k*）</text>
+    <text x="240" y="62" text-anchor="middle" font-size="12" fill="#2a6a40">I/R 对新需求不冲突，前期工作零浪费</text>
+    <text x="240" y="92" text-anchor="middle" font-size="12" fill="#2a6a40">搜过的场地、草拟方案依然可用</text>
+    <text x="240" y="122" text-anchor="middle" font-size="11" fill="#4a8a5a">对比 Full-Restart：17 步 vs 1 步损失</text>
+
+    <!-- compensate -->
+    <rect x="480" y="0" width="360" height="140" rx="10" fill="#fff4e0" stroke="#e8a33a" stroke-width="2"/>
+    <text x="660" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#8a5a14">↶ 补偿 步 9 起</text>
+    <text x="660" y="62" text-anchor="middle" font-size="12" fill="#7a5a20">K → comp（发纠正邮件）</text>
+    <text x="660" y="92" text-anchor="middle" font-size="12" fill="#7a5a20">R → 逆操作　X → 回退策略</text>
+    <text x="660" y="122" text-anchor="middle" font-size="11" fill="#a07a30">截断上下文到 E_k*，按新 φ 重新规划</text>
+  </g>
+
+  <!-- arrow from keep to compensate to show flow -->
+  <path d="M420 355 L480 355" stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- footer claim -->
+  <g transform="translate(0,460)">
+    <rect x="120" y="0" width="660" height="70" rx="10" fill="#1a2b4a"/>
+    <text x="450" y="28" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Theorem 3：该回滚点是结构最优</text>
+    <text x="450" y="52" text-anchor="middle" font-size="12" fill="#cfe0ff">O(m) 次 LLM 调用 · 无需代价估计 · 无需搜索（m = K/X 动作数）</text>
+  </g>
+</svg>

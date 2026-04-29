@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/downloaded_pdfs/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-66",
+      "page_index": 6,
+      "caption": "Figure 3: ClawMark construction pipeline. Four phases: task authoring, task-driven evidence sourc- ing, a review loop (task review + trajectory review) that iterates 3–5 rounds per task, and a release gate. A task enters the release corpus only when all four release-gate conditions hold simultaneously.",
+      "clip": [
+        338.4309997558594,
+        222.23358154296875,
+        576.1945190429688,
+        599.18408203125
+      ],
+      "clip_area": 89625.07759313099,
+      "page_area": 484704.0,
+      "text_density": 0.272497100605935,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.44600815912313,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-23",
+      "page_index": 9,
+      "caption": "Figure 4: Day-by-day trajectory on the 73 tasks with ex- actly three turns. Day 2 is where the first external mutation lands: six of seven models drop there, while Qwen 3.6 Plus is the only model with a small Day-2 gain. By Day 3 re- covery is partial, with most models still below their Day-1 baseline.",
+      "clip": [
+        308.1679992675781,
+        204.81764221191406,
+        588.8517456054688,
+        408.84600830078125
+      ],
+      "clip_area": 57267.44615302188,
+      "page_area": 484704.0,
+      "text_density": 0.5932250169408062,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.636304957255796,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/02-p10-drawing_cluster_with_caption.png",
+      "filename": "02-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-14-drawing-caption-81",
+      "page_index": 14,
+      "caption": "C. Reproducibility and framework patches",
+      "clip": [
+        28.959308624267578,
+        60.01679992675781,
+        583.0321044921875,
+        370.8390197753906
+      ],
+      "clip_area": 172218.13636940526,
+      "page_area": 484704.0,
+      "text_density": 0.17824759508939594,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.492912799174665,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/03-p15-drawing_cluster_with_caption.png",
+      "filename": "03-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-35",
+      "page_index": 3,
+      "caption": "3.1. Overview",
+      "clip": [
+        32.53394317626953,
+        61.80699920654297,
+        575.9659423828125,
+        275.6280517578125
+      ],
+      "clip_area": 116197.20206038369,
+      "page_area": 484704.0,
+      "text_density": 0.2542586235654737,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.54448258607158,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-14-block-81",
+      "page_index": 14,
+      "caption": "C. Reproducibility and framework patches",
+      "clip": [
+        24.959308624267578,
+        58.01678466796875,
+        587.0320434570312,
+        371.9766845703125
+      ],
+      "clip_area": 176468.29956593108,
+      "page_area": 484704.0,
+      "text_density": 0.1772091941528526,
+      "kind": "image_block_with_caption",
+      "score": 15.204473870244316,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/05-p15-image_block_with_caption.png",
+      "filename": "05-p15-image_block_with_caption.png"
+    },
+    {
+      "id": "page-9-block-23",
+      "page_index": 9,
+      "caption": "Figure 4: Day-by-day trajectory on the 73 tasks with ex- actly three turns. Day 2 is where the first external mutation lands: six of seven models drop there, while Qwen 3.6 Plus is the only model with a small Day-2 gain. By Day 3 re- covery is partial, with most models still below their Day-1 baseline.",
+      "clip": [
+        295.5679992675781,
+        83.16908569335936,
+        590.4299560546875,
+        391.9690856933594
+      ],
+      "clip_area": 91053.37225585939,
+      "page_area": 484704.0,
+      "text_density": 0.5795314811845679,
+      "kind": "captioned_figure",
+      "score": 10.011704136176217,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/06-p10-captioned_figure.png",
+      "filename": "06-p10-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-28/assets/figure_candidates/clawmark-a-living-world-benchmark-for-multi-turn-multi-day-multimodal-coworker-a/contact-sheet.svg"
+}

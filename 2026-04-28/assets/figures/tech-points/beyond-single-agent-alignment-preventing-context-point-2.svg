@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f7f8fa"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">STT：污点贴在"来源"，不贴在"文字"</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">LLM 改写也洗不掉</text>
+
+  <!-- LEFT: Source -->
+  <rect x="40" y="110" width="220" height="120" rx="10" fill="#fff" stroke="#2c7be5" stroke-width="2"/>
+  <text x="150" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#2c7be5">研发节点 node:titan</text>
+  <text x="150" y="164" text-anchor="middle" font-size="13" fill="#333">"Titan bug fix"（本地原文）</text>
+  <text x="150" y="188" text-anchor="middle" font-size="11" fill="#888">NDA · audience ≠ External</text>
+  <text x="150" y="210" text-anchor="middle" font-size="11" fill="#888">原文不出本域</text>
+
+  <!-- STT token -->
+  <rect x="330" y="120" width="240" height="100" rx="10" fill="#fff7e0" stroke="#e0a020" stroke-width="2"/>
+  <text x="450" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#b8860b">STT 语义污点令牌</text>
+  <text x="450" y="174" text-anchor="middle" font-size="12" fill="#333">⟨ src-id, taint-vec, constraints, sig ⟩</text>
+  <text x="450" y="200" text-anchor="middle" font-size="11" fill="#b8860b">不透明指针，无敏感内容</text>
+
+  <!-- Arrow source -> STT -->
+  <line x1="260" y1="170" x2="328" y2="170" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: Market agent rewrite -->
+  <rect x="640" y="100" width="220" height="140" rx="10" fill="#fff" stroke="#8e44ad" stroke-width="2"/>
+  <text x="750" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#8e44ad">市场 Agent 改写</text>
+  <rect x="660" y="138" width="180" height="28" rx="4" fill="#f3e8fa"/>
+  <text x="750" y="157" text-anchor="middle" font-size="12" fill="#333">"最近的质量改进"</text>
+  <rect x="660" y="172" width="180" height="28" rx="4" fill="#f3e8fa"/>
+  <text x="750" y="191" text-anchor="middle" font-size="12" fill="#333">摘要 / 翻译 / 润色</text>
+  <rect x="660" y="206" width="180" height="28" rx="4" fill="#f3e8fa"/>
+  <text x="750" y="225" text-anchor="middle" font-size="12" fill="#333">表面文本完全不同</text>
+
+  <!-- Arrow STT -> derived -->
+  <line x1="572" y1="170" x2="638" y2="170" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- divider -->
+  <line x1="60" y1="305" x2="840" y2="305" stroke="#ddd" stroke-dasharray="4 4"/>
+
+  <!-- Traditional DLP -->
+  <rect x="70" y="340" width="340" height="210" rx="12" fill="#fdecec" stroke="#c0392b" stroke-width="2"/>
+  <text x="240" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">✗ 传统关键词 DLP</text>
+  <text x="240" y="400" text-anchor="middle" font-size="13" fill="#333">匹配 "Titan" / "bug"</text>
+  <line x1="150" y1="420" x2="330" y2="420" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arRed)"/>
+  <text x="240" y="445" text-anchor="middle" font-size="13" fill="#333">改写成 "质量改进"</text>
+  <rect x="130" y="470" width="220" height="55" rx="6" fill="#fff" stroke="#c0392b"/>
+  <text x="240" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">语义被洗白</text>
+  <text x="240" y="512" text-anchor="middle" font-size="11" fill="#888">关键词消失 → 泄漏</text>
+
+  <!-- STT approach -->
+  <rect x="490" y="340" width="340" height="210" rx="12" fill="#e8f5ec" stroke="#27ae60" stroke-width="2"/>
+  <text x="660" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#27ae60">✓ STT 追踪 provenance</text>
+  <text x="660" y="398" text-anchor="middle" font-size="13" fill="#333">污点跟着 src-id 走</text>
+
+  <!-- flow inside -->
+  <rect x="510" y="415" width="90" height="38" rx="6" fill="#fff" stroke="#27ae60"/>
+  <text x="555" y="438" text-anchor="middle" font-size="11" fill="#333">原文 + STT</text>
+  <line x1="602" y1="434" x2="643" y2="434" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arGreen)"/>
+  <rect x="645" y="415" width="80" height="38" rx="6" fill="#fff" stroke="#27ae60"/>
+  <text x="685" y="438" text-anchor="middle" font-size="11" fill="#333">改写</text>
+  <line x1="727" y1="434" x2="763" y2="434" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arGreen)"/>
+  <rect x="765" y="415" width="75" height="38" rx="6" fill="#fff" stroke="#27ae60"/>
+  <text x="802" y="438" text-anchor="middle" font-size="11" fill="#333">派生+STT</text>
+
+  <rect x="540" y="470" width="240" height="55" rx="6" fill="#fff" stroke="#27ae60"/>
+  <text x="660" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#27ae60">污点保守并集合并</text>
+  <text x="660" y="512" text-anchor="middle" font-size="11" fill="#888">只会过估，不会丢失</text>
+</svg>

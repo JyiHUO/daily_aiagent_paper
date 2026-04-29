@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">CFV：每个 Agent 看都合规，合起来却违规</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">Context-Fragmented Violation — 状态没同步，不是模型不够聪明</text>
+
+  <!-- R&amp;D Agent -->
+  <g>
+    <rect x="60" y="110" width="260" height="150" rx="12" fill="#eaf3ff" stroke="#2e6fbf" stroke-width="2"/>
+    <text x="190" y="138" text-anchor="middle" font-size="16" font-weight="bold" fill="#1c4f8f">研发 Agent</text>
+    <text x="190" y="162" text-anchor="middle" font-size="12" fill="#555">本地图 G₁：Titan = NDA 项目</text>
+    <rect x="80" y="180" width="220" height="60" rx="6" fill="#fff" stroke="#8ab4dc"/>
+    <text x="190" y="205" text-anchor="middle" font-size="12" fill="#222">日志：Fixed bug in Titan  ✓ Allow</text>
+    <text x="190" y="228" text-anchor="middle" font-size="11" fill="#2a8a4a">本地观测下完全合规</text>
+  </g>
+
+  <!-- Marketing Agent -->
+  <g>
+    <rect x="580" y="110" width="260" height="150" rx="12" fill="#fff2e6" stroke="#d97a2b" stroke-width="2"/>
+    <text x="710" y="138" text-anchor="middle" font-size="16" font-weight="bold" fill="#a9561a">市场 Agent</text>
+    <text x="710" y="162" text-anchor="middle" font-size="12" fill="#555">本地图 G₂：不知道 NDA</text>
+    <rect x="600" y="180" width="220" height="60" rx="6" fill="#fff" stroke="#e2a771"/>
+    <text x="710" y="205" text-anchor="middle" font-size="12" fill="#222">客户邮件：修好了 Titan  ✓ Allow</text>
+    <text x="710" y="228" text-anchor="middle" font-size="11" fill="#2a8a4a">本地观测下完全合规</text>
+  </g>
+
+  <!-- Arrow between agents -->
+  <line x1="320" y1="205" x2="578" y2="205" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="450" y="196" text-anchor="middle" font-size="12" fill="#444">共享日志片段</text>
+
+  <!-- Global view -->
+  <g>
+    <rect x="180" y="340" width="540" height="150" rx="12" fill="#fdecec" stroke="#c0392b" stroke-width="2.5"/>
+    <text x="450" y="372" text-anchor="middle" font-size="16" font-weight="bold" fill="#a5281b">全局图 G_Global（理论上的完整视图）</text>
+    <text x="450" y="402" text-anchor="middle" font-size="13" fill="#333">Titan 是 NDA  +  对外邮件提到 Titan</text>
+    <text x="450" y="432" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">✗ 违反全局策略：NDA 项目外泄</text>
+    <text x="450" y="460" text-anchor="middle" font-size="12" fill="#666">Locality 定理：只看本地图，无法可靠检测此违规</text>
+  </g>
+
+  <!-- Arrows to global -->
+  <line x1="220" y1="260" x2="300" y2="338" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrRed)"/>
+  <line x1="680" y1="260" x2="600" y2="338" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrRed)"/>
+
+  <!-- Bottom note -->
+  <text x="450" y="528" text-anchor="middle" font-size="13" fill="#444" font-style="italic">实测 8 个前沿大模型：违规率 14%–98%</text>
+  <text x="450" y="552" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">→ 单体对齐不够，需要跨 Agent 的状态同步执行层</text>
+</svg>

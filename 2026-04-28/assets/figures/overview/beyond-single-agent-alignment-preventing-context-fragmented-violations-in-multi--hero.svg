@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f1530"/>
+      <stop offset="1" stop-color="#1a1d40"/>
+    </linearGradient>
+    <linearGradient id="danger" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff5a7a"/>
+      <stop offset="1" stop-color="#ff8a4c"/>
+    </linearGradient>
+    <linearGradient id="safe" x1="0" x2="1">
+      <stop offset="0" stop-color="#4fd1c5"/>
+      <stop offset="1" stop-color="#63a4ff"/>
+    </linearGradient>
+    <linearGradient id="stt" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd86b"/>
+      <stop offset="1" stop-color="#ff9f43"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cdd6ff"/>
+    </marker>
+    <marker id="arY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffd86b"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff7a95"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="620" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="40" y="46" fill="#fff" font-size="22" font-weight="700">Distributed Sentinel：多 Agent 系统的零信任执行层</text>
+  <text x="40" y="70" fill="#9aa4d4" font-size="13">单 Agent 都合规 · 合在一起却违规 —— STT 污点令牌在边界处跨域裁决</text>
+
+  <!-- Left: Dept A (R&amp;D) -->
+  <g>
+    <rect x="40" y="110" width="250" height="200" rx="14" fill="#232a55" stroke="#3a4488"/>
+    <text x="56" y="134" fill="#9fd8ff" font-size="13" font-weight="700">研发域 · 私有图 G₁</text>
+    <circle cx="80" cy="185" r="20" fill="#3a4488" stroke="#63a4ff"/>
+    <text x="80" y="190" text-anchor="middle" fill="#fff" font-size="11">R&amp;D</text>
+    <rect x="120" y="165" width="155" height="44" rx="8" fill="#2d3670" stroke="#5566b0"/>
+    <text x="197" y="183" text-anchor="middle" fill="#fff" font-size="11">node: Titan</text>
+    <text x="197" y="200" text-anchor="middle" fill="#ffd86b" font-size="10.5">标签 NDA · ≠External</text>
+    <text x="56" y="245" fill="#9aa4d4" font-size="11">动作："修复 Titan 并发 bug"</text>
+    <text x="56" y="265" fill="#86f0c8" font-size="11">本地判定：✓ Allow</text>
+  </g>
+
+  <!-- Right: Dept B (Marketing) -->
+  <g>
+    <rect x="710" y="110" width="250" height="200" rx="14" fill="#232a55" stroke="#3a4488"/>
+    <text x="726" y="134" fill="#ffb8c6" font-size="13" font-weight="700">市场域 · 私有图 G₂</text>
+    <circle cx="920" cy="185" r="20" fill="#3a4488" stroke="#ff8aa0"/>
+    <text x="920" y="190" text-anchor="middle" fill="#fff" font-size="11">MKT</text>
+    <rect x="725" y="165" width="155" height="44" rx="8" fill="#2d3670" stroke="#5566b0"/>
+    <text x="802" y="183" text-anchor="middle" fill="#fff" font-size="11">改写："质量提升"</text>
+    <text x="802" y="200" text-anchor="middle" fill="#9aa4d4" font-size="10.5">send-email → External</text>
+    <text x="726" y="245" fill="#9aa4d4" font-size="11">动作：对外客户邮件</text>
+    <text x="726" y="265" fill="#86f0c8" font-size="11">本地判定：✓ 看似合规</text>
+  </g>
+
+  <!-- Sidecars -->
+  <g>
+    <rect x="300" y="150" width="70" height="120" rx="10" fill="url(#safe)" opacity="0.9"/>
+    <text x="335" y="180" text-anchor="middle" fill="#0a1030" font-size="11" font-weight="700">Sidecar A</text>
+    <text x="335" y="220" text-anchor="middle" fill="#0a1030" font-size="10">注入 STT</text>
+
+    <rect x="630" y="150" width="70" height="120" rx="10" fill="url(#safe)" opacity="0.9"/>
+    <text x="665" y="180" text-anchor="middle" fill="#0a1030" font-size="11" font-weight="700">Sidecar B</text>
+    <text x="665" y="220" text-anchor="middle" fill="#0a1030" font-size="10">拦截动作</text>
+  </g>
+
+  <!-- STT flowing token -->
+  <g>
+    <path d="M 372 210 L 625 210" stroke="url(#stt)" stroke-width="3" fill="none" marker-end="url(#arY)"/>
+    <rect x="430" y="180" width="160" height="26" rx="13" fill="url(#stt)"/>
+    <text x="510" y="197" text-anchor="middle" fill="#2b1a00" font-size="11" font-weight="700">STT ⟨src, taint, sig⟩</text>
+    <text x="510" y="232" text-anchor="middle" fill="#ffd86b" font-size="10.5">只带指针 · 不暴露原文 · 抗改写洗白</text>
+  </g>
+
+  <!-- Central verifier -->
+  <g>
+    <rect x="310" y="380" width="380" height="160" rx="16" fill="#1b2250" stroke="#ffd86b" stroke-width="1.5"/>
+    <text x="500" y="406" text-anchor="middle" fill="#ffd86b" font-size="14" font-weight="700">Counterfactual Graph Simulation</text>
+    <text x="500" y="425" text-anchor="middle" fill="#cdd6ff" font-size="11">反事实图仿真 · 提交前先模拟</text>
+
+    <!-- predicate query -->
+    <rect x="330" y="442" width="150" height="86" rx="10" fill="#2a3370" stroke="#63a4ff"/>
+    <text x="405" y="463" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">跨域谓词查询</text>
+    <text x="405" y="482" text-anchor="middle" fill="#9fd8ff" font-size="10">"node-X 允许 External?"</text>
+    <text x="405" y="500" text-anchor="middle" fill="#86f0c8" font-size="10">返回 1 bit：True / False</text>
+    <text x="405" y="518" text-anchor="middle" fill="#9aa4d4" font-size="9.5">ZK-SNARK · Paillier · TEE</text>
+
+    <!-- decision -->
+    <rect x="520" y="442" width="150" height="86" rx="10" fill="#3a1f35" stroke="url(#danger)"/>
+    <text x="595" y="463" text-anchor="middle" fill="#ff8aa0" font-size="11" font-weight="700">裁决 &amp; 审计</text>
+    <text x="595" y="488" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">BLOCK</text>
+    <text x="595" y="508" text-anchor="middle" fill="#ffb8c6" font-size="10">检出 CFV · 不落明文</text>
+    <text x="595" y="523" text-anchor="middle" fill="#9aa4d4" font-size="9.5">16ms 验证 + 90ms 抽取</text>
+  </g>
+
+  <!-- arrows from sidecars into central -->
+  <path d="M 335 270 C 335 340, 390 360, 410 378" stroke="#63a4ff" stroke-width="1.8" fill="none" marker-end="url(#ar)" opacity="0.85"/>
+  <path d="M 665 270 C 665 340, 610 360, 590 378" stroke="#ff7a95" stroke-width="1.8" fill="none" marker-end="url(#arR)" opacity="0.9"/>
+
+  <!-- Block back to Marketing sidecar -->
+  <path d="M 670 442 C 730 410, 720 320, 685 272" stroke="#ff7a95" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#arR)"/>
+  <text x="735" y="380" fill="#ff8aa0" font-size="10">阻断外发</text>
+
+  <!-- Bottom: results band -->
+  <g>
+    <rect x="40" y="558" width="920" height="40" rx="8" fill="#0d1230" stroke="#3a4488"/>
+    <text x="58" y="583" fill="#9aa4d4" font-size="11.5">PhantomEcosystem · 9 类 / 200 场景</text>
+    <text x="330" y="583" fill="#ff8aa0" font-size="11.5">LLM 自律违规率 14–98%</text>
+    <text x="560" y="583" fill="#9fd8ff" font-size="11.5">Prompt 过滤 F1=0.85</text>
+    <text x="760" y="583" fill="#86f0c8" font-size="11.5" font-weight="700">Sentinel F1=0.95 / 106ms</text>
+  </g>
+
+  <!-- side annotation -->
+  <text x="40" y="350" fill="#ff8aa0" font-size="11" font-style="italic">局部性定理：只看本地图无法区分违规序列 → 需外部执行层</text>
+</svg>

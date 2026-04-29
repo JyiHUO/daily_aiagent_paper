@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <linearGradient id="gred" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ff6b6b"/><stop offset="1" stop-color="#c92a2a"/>
+    </linearGradient>
+    <linearGradient id="ggreen" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#51cf66"/><stop offset="1" stop-color="#2f9e44"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#222">模型再强也守不住：必须外挂 Sentinel</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#666">8 个前沿 LLM 在多 Agent 场景下的违规率对比</text>
+
+  <!-- LEFT: Before -->
+  <g>
+    <rect x="40" y="95" width="360" height="400" rx="14" fill="#fff5f5" stroke="#ffa8a8" stroke-width="2"/>
+    <text x="220" y="125" text-anchor="middle" font-size="17" font-weight="700" fill="#c92a2a">❌ 仅靠模型自律</text>
+    <text x="220" y="146" text-anchor="middle" font-size="12" fill="#868e96">每个 Agent 只看本部门上下文</text>
+
+    <!-- bar: Claude Opus -->
+    <text x="65" y="190" font-size="13" fill="#333">Claude Opus 4.6</text>
+    <rect x="65" y="200" width="300" height="22" fill="#ffe3e3" stroke="#ffa8a8"/>
+    <rect x="65" y="200" width="41" height="22" fill="url(#gred)"/>
+    <text x="115" y="217" font-size="12" font-weight="700" fill="#c92a2a">13.8%</text>
+
+    <!-- bar: 中间模型 -->
+    <text x="65" y="260" font-size="13" fill="#333">多数前沿模型</text>
+    <rect x="65" y="270" width="300" height="22" fill="#ffe3e3" stroke="#ffa8a8"/>
+    <rect x="65" y="270" width="165" height="22" fill="url(#gred)"/>
+    <text x="240" y="287" font-size="12" font-weight="700" fill="#c92a2a">30–60%</text>
+
+    <!-- bar: GPT mini -->
+    <text x="65" y="330" font-size="13" fill="#333">GPT-5.4-mini</text>
+    <rect x="65" y="340" width="300" height="22" fill="#ffe3e3" stroke="#ffa8a8"/>
+    <rect x="65" y="340" width="293" height="22" fill="url(#gred)"/>
+    <text x="210" y="357" font-size="12" font-weight="700" fill="#fff">97.5%</text>
+
+    <rect x="65" y="395" width="300" height="80" rx="8" fill="#fff" stroke="#ffc9c9"/>
+    <text x="215" y="420" text-anchor="middle" font-size="13" font-weight="700" fill="#c92a2a">结构性盲区</text>
+    <text x="215" y="442" text-anchor="middle" font-size="12" fill="#555">关键策略事实散落在</text>
+    <text x="215" y="460" text-anchor="middle" font-size="12" fill="#555">其他部门的私有上下文里</text>
+  </g>
+
+  <!-- Arrow -->
+  <g>
+    <path d="M410,295 L490,295" stroke="#444" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <text x="450" y="283" text-anchor="middle" font-size="12" font-weight="700" fill="#444">+Sentinel</text>
+    <text x="450" y="315" text-anchor="middle" font-size="11" fill="#666">+106ms</text>
+  </g>
+
+  <!-- RIGHT: After -->
+  <g>
+    <rect x="500" y="95" width="360" height="400" rx="14" fill="#ebfbee" stroke="#8ce99a" stroke-width="2"/>
+    <text x="680" y="125" text-anchor="middle" font-size="17" font-weight="700" fill="#2f9e44">✅ 接入 Distributed Sentinel</text>
+    <text x="680" y="146" text-anchor="middle" font-size="12" fill="#868e96">发送前跨域谓词查询 → Block</text>
+
+    <rect x="525" y="180" width="310" height="80" rx="10" fill="#fff" stroke="#8ce99a"/>
+    <text x="680" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#2f9e44">所有 8 个模型违规率</text>
+    <text x="680" y="242" text-anchor="middle" font-size="26" font-weight="800" fill="#2f9e44">3.1% – 6.2%</text>
+
+    <!-- unified bar -->
+    <text x="525" y="295" font-size="13" fill="#333">统一压制到个位数</text>
+    <rect x="525" y="305" width="310" height="22" fill="#d3f9d8" stroke="#8ce99a"/>
+    <rect x="525" y="305" width="20" height="22" fill="url(#ggreen)"/>
+    <text x="555" y="322" font-size="12" font-weight="700" fill="#2f9e44">≈5%</text>
+
+    <!-- drop -->
+    <rect x="525" y="355" width="310" height="60" rx="8" fill="#fff" stroke="#b2f2bb"/>
+    <text x="680" y="380" text-anchor="middle" font-size="14" font-weight="700" fill="#2f9e44">下降 59% – 95%</text>
+    <text x="680" y="402" text-anchor="middle" font-size="12" fill="#555">GPT-5.4-mini: 97.5% → 5.0%</text>
+
+    <!-- latency -->
+    <rect x="525" y="430" width="310" height="45" rx="8" fill="#fff" stroke="#b2f2bb"/>
+    <text x="680" y="451" text-anchor="middle" font-size="12" fill="#555">端到端延迟 106ms（抽取 90ms + 验证 16ms, A100）</text>
+  </g>
+
+  <text x="450" y="530" text-anchor="middle" font-size="13" fill="#444" font-style="italic">结论：CFV 是分布式系统问题，不是模型对齐问题 —— 需要外部执行层</text>
+</svg>

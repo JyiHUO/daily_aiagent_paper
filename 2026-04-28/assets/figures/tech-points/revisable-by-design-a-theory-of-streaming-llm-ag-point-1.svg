@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0457b"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f8fb"/>
+  <text x="450" y="32" text-anchor="middle" font-size="22" font-weight="700" fill="#1b2340">流式执行范式：Agent 直播 + 用户弹幕</text>
+  <text x="450" y="54" text-anchor="middle" font-size="13" fill="#5a6480">告别"下单→等结果"，变成持续双向通道</text>
+
+  <!-- 对比：事务式 -->
+  <g>
+    <rect x="40" y="80" width="360" height="130" rx="10" fill="#fff" stroke="#c9ced9"/>
+    <text x="60" y="104" font-size="14" font-weight="700" fill="#8a94a6">✕ 事务式 (ReAct / Reflexion)</text>
+    <rect x="70" y="125" width="70" height="40" rx="6" fill="#eef0f5" stroke="#b8bfd0"/>
+    <text x="105" y="150" text-anchor="middle" font-size="12" fill="#333">用户下单</text>
+    <line x1="140" y1="145" x2="195" y2="145" stroke="#888" stroke-width="2" marker-end="url(#ar)"/>
+    <rect x="200" y="125" width="80" height="40" rx="6" fill="#eef0f5" stroke="#b8bfd0"/>
+    <text x="240" y="150" text-anchor="middle" font-size="12" fill="#333">闷头跑完</text>
+    <line x1="280" y1="145" x2="335" y2="145" stroke="#888" stroke-width="2" marker-end="url(#ar)"/>
+    <rect x="340" y="125" width="50" height="40" rx="6" fill="#eef0f5" stroke="#b8bfd0"/>
+    <text x="365" y="150" text-anchor="middle" font-size="12" fill="#333">交付</text>
+    <text x="220" y="192" text-anchor="middle" font-size="12" fill="#c0392b">中途想改？要么等错结果，要么推倒重来</text>
+  </g>
+
+  <!-- 流式 -->
+  <g>
+    <rect x="460" y="80" width="400" height="130" rx="10" fill="#fff" stroke="#2f6feb" stroke-width="2"/>
+    <text x="480" y="104" font-size="14" font-weight="700" fill="#2f6feb">✓ 流式执行 (本文)</text>
+    <text x="480" y="128" font-size="13" fill="#333">Agent 一边干活一边广播事件</text>
+    <text x="480" y="150" font-size="13" fill="#333">用户随时"弹幕"注入修订</text>
+    <text x="480" y="172" font-size="13" fill="#333">无需打断 · 异步吸收 · 保留进度</text>
+    <text x="480" y="198" font-size="12" fill="#5a6480">→ 共享一个持续打开的双向通道</text>
+  </g>
+
+  <!-- 主图：事件流 -->
+  <text x="60" y="252" font-size="14" font-weight="700" fill="#1b2340">Agent Execution Stream</text>
+
+  <!-- 图例 -->
+  <g font-size="12">
+    <circle cx="80" cy="282" r="8" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="94" y="286" fill="#1b3a7a">内生事件：Agent 自己产生 (thk 思考 / act 动作 / obs 观察)</text>
+    <circle cx="80" cy="304" r="8" fill="#ffd7e4" stroke="#e0457b"/>
+    <text x="94" y="308" fill="#a81757">外生事件：用户随时注入的修订 inj (弹幕)</text>
+  </g>
+
+  <!-- 时间轴 -->
+  <line x1="70" y1="360" x2="830" y2="360" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="840" y="364" font-size="12" fill="#333">t</text>
+
+  <!-- 事件 -->
+  <g font-size="12" font-weight="700">
+    <circle cx="130" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="130" y="364" text-anchor="middle" fill="#1b3a7a">thk</text>
+    <circle cx="210" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="210" y="364" text-anchor="middle" fill="#1b3a7a">act</text>
+    <circle cx="290" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="290" y="364" text-anchor="middle" fill="#1b3a7a">obs</text>
+    <circle cx="460" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="460" y="364" text-anchor="middle" fill="#1b3a7a">thk</text>
+    <circle cx="540" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="540" y="364" text-anchor="middle" fill="#1b3a7a">act</text>
+    <circle cx="700" cy="360" r="22" fill="#cfe3ff" stroke="#2f6feb"/>
+    <text x="700" y="364" text-anchor="middle" fill="#1b3a7a">obs</text>
+
+    <circle cx="370" cy="360" r="24" fill="#ffd7e4" stroke="#e0457b" stroke-width="2"/>
+    <text x="370" y="364" text-anchor="middle" fill="#a81757">inj</text>
+    <circle cx="620" cy="360" r="24" fill="#ffd7e4" stroke="#e0457b" stroke-width="2"/>
+    <text x="620" y="364" text-anchor="middle" fill="#a81757">inj</text>
+  </g>
+
+  <!-- 用户弹幕注入箭头 -->
+  <g>
+    <rect x="315" y="418" width="110" height="42" rx="8" fill="#fff" stroke="#e0457b"/>
+    <text x="370" y="436" text-anchor="middle" font-size="12" fill="#a81757">用户："改成</text>
+    <text x="370" y="452" text-anchor="middle" font-size="12" fill="#a81757">户外 BBQ"</text>
+    <line x1="370" y1="418" x2="370" y2="386" stroke="#e0457b" stroke-width="2" marker-end="url(#arR)"/>
+
+    <rect x="565" y="418" width="110" height="42" rx="8" fill="#fff" stroke="#e0457b"/>
+    <text x="620" y="436" text-anchor="middle" font-size="12" fill="#a81757">用户："预算</text>
+    <text x="620" y="452" text-anchor="middle" font-size="12" fill="#a81757">上调 20%"</text>
+    <line x1="620" y1="418" x2="620" y2="386" stroke="#e0457b" stroke-width="2" marker-end="url(#arR)"/>
+  </g>
+
+  <!-- 吸收模块提示 -->
+  <g>
+    <rect x="70" y="485" width="760" height="50" rx="8" fill="#eaf1ff" stroke="#2f6feb"/>
+    <text x="450" y="505" text-anchor="middle" font-size="13" font-weight="700" fill="#1b3a7a">每个事件后检查注入队列 → 有 inj 就唤醒"吸收模块"异步处理</text>
+    <text x="450" y="524" text-anchor="middle" font-size="12" fill="#333">Agent 不停机 · 不重启 · 进度不丢</text>
+  </g>
+</svg>

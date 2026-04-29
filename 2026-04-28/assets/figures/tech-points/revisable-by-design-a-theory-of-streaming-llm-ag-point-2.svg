@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b03030"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#fafaf7"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">动作可逆性 · 四分类</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">改需求的代价，由过去做过的"不可逆程度"决定</text>
+
+  <!-- Reversibility bar -->
+  <text x="70" y="102" font-size="12" fill="#2a7a2a">← 越容易撤回</text>
+  <text x="830" y="102" text-anchor="end" font-size="12" fill="#b03030">越无法挽回 →</text>
+  <line x1="70" y1="112" x2="830" y2="112" stroke="#bbb" stroke-width="2"/>
+
+  <!-- I -->
+  <rect x="70" y="130" width="170" height="160" rx="10" fill="#e6f4e6" stroke="#2a7a2a" stroke-width="2"/>
+  <text x="155" y="160" text-anchor="middle" font-size="17" font-weight="bold" fill="#2a7a2a">I · Idempotent</text>
+  <text x="155" y="182" text-anchor="middle" font-size="12" fill="#333">不改世界 · 随便撤</text>
+  <text x="155" y="226" text-anchor="middle" font-size="28">🔍</text>
+  <text x="155" y="268" text-anchor="middle" font-size="12" fill="#444">搜场地 / 查评论</text>
+
+  <!-- R -->
+  <rect x="260" y="130" width="170" height="160" rx="10" fill="#e3eefc" stroke="#2a5db0" stroke-width="2"/>
+  <text x="345" y="160" text-anchor="middle" font-size="17" font-weight="bold" fill="#2a5db0">R · Reversible</text>
+  <text x="345" y="182" text-anchor="middle" font-size="12" fill="#333">有精确逆操作 · 可回滚</text>
+  <text x="345" y="226" text-anchor="middle" font-size="28">📝</text>
+  <text x="345" y="268" text-anchor="middle" font-size="12" fill="#444">起草方案 / 建文件</text>
+
+  <!-- K -->
+  <rect x="450" y="130" width="170" height="160" rx="10" fill="#fdf1dd" stroke="#c48a1a" stroke-width="2"/>
+  <text x="535" y="160" text-anchor="middle" font-size="17" font-weight="bold" fill="#c48a1a">K · Compensable</text>
+  <text x="535" y="182" text-anchor="middle" font-size="12" fill="#333">无逆但可补偿</text>
+  <text x="535" y="226" text-anchor="middle" font-size="28">✉️</text>
+  <text x="535" y="268" text-anchor="middle" font-size="12" fill="#444">发邀请 / 订场 → 纠正</text>
+
+  <!-- X -->
+  <rect x="640" y="130" width="170" height="160" rx="10" fill="#fbe2e2" stroke="#b03030" stroke-width="2"/>
+  <text x="725" y="160" text-anchor="middle" font-size="17" font-weight="bold" fill="#b03030">X · Irreversible</text>
+  <text x="725" y="182" text-anchor="middle" font-size="12" fill="#333">无法补偿 · 钱收不回</text>
+  <text x="725" y="226" text-anchor="middle" font-size="28">💸</text>
+  <text x="725" y="268" text-anchor="middle" font-size="12" fill="#444">付定金 / 结算</text>
+
+  <!-- Scenario strip -->
+  <text x="70" y="342" font-size="14" font-weight="bold" fill="#333">Event Planning · 15 步时间线</text>
+
+  <rect x="70" y="355" width="160" height="34" fill="#e6f4e6" stroke="#2a7a2a"/>
+  <text x="150" y="377" text-anchor="middle" font-size="13" fill="#2a7a2a">I  搜场地</text>
+
+  <rect x="230" y="355" width="130" height="34" fill="#e3eefc" stroke="#2a5db0"/>
+  <text x="295" y="377" text-anchor="middle" font-size="13" fill="#2a5db0">R  起草</text>
+
+  <rect x="360" y="355" width="180" height="34" fill="#fdf1dd" stroke="#c48a1a"/>
+  <text x="450" y="377" text-anchor="middle" font-size="13" fill="#c48a1a">K  发邀请 / 订场</text>
+
+  <rect x="540" y="355" width="160" height="34" fill="#fbe2e2" stroke="#b03030"/>
+  <text x="620" y="377" text-anchor="middle" font-size="13" fill="#b03030">X  付定金</text>
+
+  <rect x="700" y="355" width="130" height="34" fill="#fbe2e2" stroke="#b03030"/>
+  <text x="765" y="377" text-anchor="middle" font-size="13" fill="#b03030">X  付尾款</text>
+
+  <!-- User change request -->
+  <text x="620" y="422" text-anchor="middle" font-size="13" fill="#b03030">⚠ 用户此时改需求 · 已过 X，无解</text>
+  <line x1="620" y1="428" x2="620" y2="392" stroke="#b03030" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Conclusion -->
+  <rect x="70" y="450" width="760" height="80" rx="8" fill="#222"/>
+  <text x="450" y="480" text-anchor="middle" font-size="15" fill="#fff">Proposition 1：一旦跨过 X，算法再聪明也救不回来</text>
+  <text x="450" y="506" text-anchor="middle" font-size="13" fill="#ddd">灵活性 = 工具设计问题，不是算法问题   ·   可逆比率 ρ(T) = I / R 占比</text>
+</svg>

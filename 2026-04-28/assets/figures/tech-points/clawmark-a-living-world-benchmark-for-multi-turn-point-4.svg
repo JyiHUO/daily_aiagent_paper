@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f7f8fa"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Agent 两大失败源：看不见 &amp; 写不回</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#666">ClawMark 失败率分析 · 平均 31.6%</text>
+
+  <!-- Agent -->
+  <rect x="380" y="100" width="140" height="70" rx="12" fill="#2c3e50"/>
+  <text x="450" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Coworker Agent</text>
+  <text x="450" y="154" text-anchor="middle" font-size="12" fill="#bdc3c7">推理正确 ≠ 完成工作</text>
+
+  <!-- LEFT: Silent-change -->
+  <rect x="60" y="230" width="340" height="240" rx="14" fill="#fff" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="230" y="262" text-anchor="middle" font-size="17" font-weight="700" fill="#c0392b">① Silent-Change 没察觉</text>
+  <text x="230" y="292" text-anchor="middle" font-size="28" font-weight="800" fill="#c0392b">56.5%</text>
+  <text x="230" y="312" text-anchor="middle" font-size="11" fill="#888">失败率 · 近基准平均两倍</text>
+
+  <!-- scene -->
+  <rect x="85" y="330" width="290" height="120" rx="8" fill="#fdecea" stroke="#e6b0aa"/>
+  <text x="230" y="352" text-anchor="middle" font-size="12" fill="#555">周三 · 费率表被悄悄改成 5 折</text>
+  <rect x="110" y="365" width="100" height="28" rx="4" fill="#fff" stroke="#bbb"/>
+  <text x="160" y="384" text-anchor="middle" font-size="12" fill="#999" text-decoration="line-through">原价 100</text>
+  <text x="245" y="384" font-size="14" fill="#c0392b">→ 50</text>
+  <text x="230" y="420" text-anchor="middle" font-size="12" fill="#c0392b">Agent 仍按旧价赔付 ✗</text>
+  <text x="230" y="438" text-anchor="middle" font-size="11" fill="#888">环境变了，它没发现</text>
+
+  <!-- RIGHT: Backend writeback -->
+  <rect x="500" y="230" width="340" height="240" rx="14" fill="#fff" stroke="#d68910" stroke-width="2.5"/>
+  <text x="670" y="262" text-anchor="middle" font-size="17" font-weight="700" fill="#b9770e">② Backend 没写回</text>
+  <text x="670" y="292" text-anchor="middle" font-size="28" font-weight="800" fill="#b9770e">53.6%</text>
+  <text x="670" y="312" text-anchor="middle" font-size="11" fill="#888">嘴上说做了，系统里没动</text>
+
+  <!-- chat bubble -->
+  <path d="M520 340 Q520 330 530 330 L640 330 Q650 330 650 340 L650 370 Q650 380 640 380 L555 380 L545 393 L545 380 L530 380 Q520 380 520 370 Z" fill="#fff3d6" stroke="#d68910"/>
+  <text x="585" y="360" text-anchor="middle" font-size="12" fill="#333">"已写入 Notion ✓"</text>
+
+  <!-- db -->
+  <ellipse cx="760" cy="350" rx="45" ry="9" fill="#fff" stroke="#888"/>
+  <path d="M715 350 L715 400 Q715 409 760 409 Q805 409 805 400 L805 350" fill="#fff" stroke="#888"/>
+  <ellipse cx="760" cy="400" rx="45" ry="9" fill="none" stroke="#888"/>
+  <text x="760" y="383" text-anchor="middle" font-size="11" fill="#c0392b">(empty)</text>
+  <text x="760" y="432" text-anchor="middle" font-size="11" fill="#888">Notion DB</text>
+
+  <!-- cross between bubble and db -->
+  <line x1="655" y1="355" x2="712" y2="355" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="683" y="347" text-anchor="middle" font-size="18" fill="#c0392b" font-weight="700">✗</text>
+
+  <!-- arrows from Agent -->
+  <line x1="400" y1="165" x2="265" y2="225" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="165" x2="635" y2="225" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- bottom note -->
+  <rect x="140" y="500" width="620" height="70" rx="10" fill="#eaf2f8" stroke="#5dade2"/>
+  <text x="450" y="527" text-anchor="middle" font-size="13" font-weight="700" fill="#1b4f72">Day 2 首次外生变更到来时</text>
+  <text x="450" y="550" text-anchor="middle" font-size="13" fill="#1b4f72">7 个模型中 6 个掉分 · Opus 4.6  80.6 → 69.0  (−11.5pp)</text>
+</svg>

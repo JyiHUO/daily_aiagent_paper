@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">每一天，世界都在悄悄变 — Agent 必须重新扫一遍</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#64748b">ClawMark: 多天多轮 + 环境漂移</text>
+
+  <!-- Day 1 -->
+  <g>
+    <rect x="40" y="100" width="200" height="190" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="140" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">周一 Turn 1</text>
+    <text x="140" y="152" text-anchor="middle" font-size="12" fill="#1e40af">¥1.2M 火灾索赔立案</text>
+    <text x="60" y="188" font-size="12" fill="#334155">📁 初始档案</text>
+    <text x="60" y="212" font-size="12" fill="#334155">📊 费率表 v1</text>
+    <text x="60" y="236" font-size="12" fill="#334155">🚪 门禁日志 v1</text>
+    <text x="60" y="272" font-size="11" fill="#64748b">Agent: 上手处理</text>
+  </g>
+
+  <!-- Day 2 -->
+  <g>
+    <rect x="350" y="100" width="200" height="190" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="450" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#92400e">周二 Turn 2</text>
+    <rect x="365" y="144" width="170" height="26" rx="6" fill="#f59e0b"/>
+    <text x="450" y="162" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">📢 Loud: 客户催赔</text>
+    <text x="370" y="194" font-size="12" fill="#334155">wake-up 消息显式告知</text>
+    <text x="370" y="218" font-size="12" fill="#334155">✅ 明确可见的变化</text>
+    <text x="370" y="272" font-size="11" fill="#64748b">Agent: 容易接住</text>
+  </g>
+
+  <!-- Day 3 -->
+  <g>
+    <rect x="660" y="100" width="200" height="190" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="760" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#991b1b">周三 Turn 3</text>
+    <rect x="675" y="144" width="170" height="26" rx="6" fill="#dc2626"/>
+    <text x="760" y="162" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">🤫 Silent Mutations</text>
+    <text x="680" y="194" font-size="12" fill="#334155">🌡️ 新增温度 CSV</text>
+    <text x="680" y="218" font-size="12" fill="#334155">📊 费率表被改五折</text>
+    <text x="680" y="242" font-size="12" fill="#334155">🚪 CEO 起火前进场</text>
+    <text x="680" y="272" font-size="11" font-weight="700" fill="#991b1b">无人通知！</text>
+  </g>
+
+  <!-- arrows between days -->
+  <line x1="242" y1="195" x2="348" y2="195" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="552" y1="195" x2="658" y2="195" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Bottom comparison -->
+  <rect x="40" y="340" width="390" height="190" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="235" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#991b1b">❌ 偷懒 Agent：沿用昨日缓存</text>
+  <text x="60" y="402" font-size="12" fill="#334155">• 没看温度异常 → 漏线索</text>
+  <text x="60" y="426" font-size="12" fill="#334155">• 按旧费率赔付 → 金额错</text>
+  <text x="60" y="450" font-size="12" fill="#334155">• 忽略 CEO 门禁 → 漏嫌疑</text>
+  <text x="60" y="482" font-size="13" font-weight="700" fill="#dc2626">→ Python checker FAIL</text>
+
+  <rect x="470" y="340" width="390" height="190" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="665" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">✅ 同事型 Agent：开工先刷新</text>
+  <text x="490" y="402" font-size="12" fill="#334155">• 重扫邮件 / 文件 / 表格 / 日程</text>
+  <text x="490" y="426" font-size="12" fill="#334155">• 对比昨日，发现 silent 改动</text>
+  <text x="490" y="450" font-size="12" fill="#334155">• 把新证据并入推理</text>
+  <text x="490" y="482" font-size="13" font-weight="700" fill="#059669">→ 像真人同事一样工作</text>
+
+  <line x1="700" y1="292" x2="665" y2="338" stroke="#059669" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="720" y1="292" x2="300" y2="338" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+</svg>
