@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f8fafc"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">
+    BenchGuard = 机器筛查 + 人工裁决
+  </text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#475569">
+    不替代专家，而是做第一遍系统性体检
+  </text>
+
+  <!-- Benchmark source -->
+  <rect x="40" y="110" width="180" height="90" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="130" y="143" text-anchor="middle" font-size="15" font-weight="700" fill="#1e1b4b">Benchmark</text>
+  <text x="130" y="165" text-anchor="middle" font-size="11" fill="#3730a3">指令 + gold 程序</text>
+  <text x="130" y="182" text-anchor="middle" font-size="11" fill="#3730a3">+ 评测脚本 + 环境</text>
+
+  <!-- LLM auditors -->
+  <rect x="280" y="90" width="320" height="130" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">5×LLM 审计员</text>
+  <text x="440" y="140" text-anchor="middle" font-size="11" fill="#1e40af">并集式交叉筛查 (union)</text>
+
+  <circle cx="330" cy="180" r="16" fill="#fff" stroke="#2563eb"/>
+  <text x="330" y="184" text-anchor="middle" font-size="10" fill="#1e3a8a">M1</text>
+  <circle cx="370" cy="180" r="16" fill="#fff" stroke="#2563eb"/>
+  <text x="370" y="184" text-anchor="middle" font-size="10" fill="#1e3a8a">M2</text>
+  <circle cx="410" cy="180" r="16" fill="#fff" stroke="#2563eb"/>
+  <text x="410" y="184" text-anchor="middle" font-size="10" fill="#1e3a8a">M3</text>
+  <circle cx="450" cy="180" r="16" fill="#fff" stroke="#2563eb"/>
+  <text x="450" y="184" text-anchor="middle" font-size="10" fill="#1e3a8a">M4</text>
+  <circle cx="490" cy="180" r="16" fill="#fff" stroke="#2563eb"/>
+  <text x="490" y="184" text-anchor="middle" font-size="10" fill="#1e3a8a">M5</text>
+  <text x="555" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">→ ∪</text>
+
+  <!-- Expert -->
+  <rect x="660" y="110" width="200" height="90" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+  <text x="760" y="143" text-anchor="middle" font-size="15" font-weight="700" fill="#064e3b">领域专家</text>
+  <text x="760" y="165" text-anchor="middle" font-size="11" fill="#065f46">对候选缺陷做最终裁决</text>
+  <text x="760" y="182" text-anchor="middle" font-size="11" fill="#065f46">保留领域约定</text>
+
+  <!-- Arrows top row -->
+  <line x1="220" y1="155" x2="278" y2="155" stroke="#374151" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="600" y1="155" x2="658" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="249" y="148" text-anchor="middle" font-size="10" fill="#374151">审计</text>
+  <text x="629" y="148" text-anchor="middle" font-size="10" fill="#2563eb">候选缺陷</text>
+
+  <!-- Results split -->
+  <text x="450" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">
+    BIXBench Verified-50 对齐率
+  </text>
+
+  <!-- Box A: union wins -->
+  <rect x="60" y="300" width="360" height="210" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="240" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#064e3b">✓ 互补优势</text>
+
+  <rect x="90" y="348" width="140" height="44" rx="6" fill="#fff" stroke="#059669"/>
+  <text x="160" y="368" text-anchor="middle" font-size="12" fill="#065f46">最佳单模型</text>
+  <text x="160" y="385" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">54.2%</text>
+
+  <rect x="250" y="348" width="140" height="44" rx="6" fill="#059669"/>
+  <text x="320" y="368" text-anchor="middle" font-size="12" fill="#fff">五模型并集</text>
+  <text x="320" y="385" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">83.3%</text>
+
+  <text x="240" y="425" text-anchor="middle" font-size="12" fill="#065f46">含部分匹配 → 95.8%</text>
+
+  <rect x="90" y="445" width="300" height="50" rx="6" fill="#fff" stroke="#059669" stroke-dasharray="4 3"/>
+  <text x="240" y="463" text-anchor="middle" font-size="11" font-weight="700" fill="#064e3b">Case 6: gold 悄悄删样本</text>
+  <text x="240" y="482" text-anchor="middle" font-size="10" fill="#065f46">专家&quot;知识诅咒&quot;漏看，5 模型全标高危</text>
+
+  <!-- Box B: limits -->
+  <rect x="480" y="300" width="360" height="210" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="660" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">✗ 机器的边界</text>
+
+  <rect x="510" y="348" width="300" height="60" rx="6" fill="#fff" stroke="#dc2626"/>
+  <text x="660" y="370" text-anchor="middle" font-size="11" font-weight="700" fill="#7f1d1d">Case 5: &quot;用小数不要百分比&quot;</text>
+  <text x="660" y="388" text-anchor="middle" font-size="10" fill="#991b1b">LLM judge 两种都接受</text>
+  <text x="660" y="402" text-anchor="middle" font-size="10" fill="#991b1b">→ 仅 partial match</text>
+
+  <text x="660" y="440" text-anchor="middle" font-size="12" fill="#7f1d1d">领域习惯约定 LLM 会漏/误判</text>
+  <text x="660" y="462" text-anchor="middle" font-size="12" font-weight="700" fill="#7f1d1d">→ 必须留给专家</text>
+  <text x="660" y="488" text-anchor="middle" font-size="11" fill="#991b1b">50 任务 &lt; $15，适度克制</text>
+
+  <!-- connectors from expert/auditor down to result boxes -->
+  <line x1="700" y1="200" x2="660" y2="300" stroke="#059669" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrG)"/>
+  <line x1="400" y1="220" x2="260" y2="300" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrB)"/>
+</svg>

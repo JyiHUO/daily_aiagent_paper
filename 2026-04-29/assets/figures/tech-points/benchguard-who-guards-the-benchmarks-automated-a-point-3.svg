@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3c5a99"/>
+    </marker>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#f7f9fc"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2540">五模型合议 + 执行证据 = 抓出更多基准 Bug</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#5a6a85">单模型有盲点；并行审计取并集，再喂 Agent 执行痕迹补刀</text>
+
+  <!-- Left: Task (four artifacts) -->
+  <g>
+    <rect x="40" y="120" width="170" height="180" rx="10" fill="#ffffff" stroke="#3c5a99" stroke-width="2"/>
+    <text x="125" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a2540">基准任务四件套</text>
+    <text x="60" y="175" font-size="12" fill="#333">• 指令</text>
+    <text x="60" y="200" font-size="12" fill="#333">• 参考程序</text>
+    <text x="60" y="225" font-size="12" fill="#333">• 评测脚本</text>
+    <text x="60" y="250" font-size="12" fill="#333">• 环境</text>
+    <text x="60" y="283" font-size="11" fill="#888">静态产物</text>
+  </g>
+
+  <!-- Arrow to ensemble -->
+  <path d="M212 210 L276 210" stroke="#3c5a99" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Middle: 5 models -->
+  <g>
+    <rect x="280" y="110" width="280" height="200" rx="10" fill="#eaf1ff" stroke="#3c5a99" stroke-width="2"/>
+    <text x="420" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a2540">5 个前沿 LLM 并行审计</text>
+
+    <rect x="300" y="150" width="110" height="32" rx="6" fill="#fff" stroke="#6b86c7"/>
+    <text x="355" y="171" text-anchor="middle" font-size="12" fill="#1a2540">Gemini 3 Flash</text>
+
+    <rect x="430" y="150" width="110" height="32" rx="6" fill="#fff" stroke="#6b86c7"/>
+    <text x="485" y="171" text-anchor="middle" font-size="12" fill="#1a2540">Gemini 3 Pro</text>
+
+    <rect x="300" y="192" width="110" height="32" rx="6" fill="#fff" stroke="#6b86c7"/>
+    <text x="355" y="213" text-anchor="middle" font-size="12" fill="#1a2540">GPT-5.4</text>
+
+    <rect x="430" y="192" width="110" height="32" rx="6" fill="#fff" stroke="#6b86c7"/>
+    <text x="485" y="213" text-anchor="middle" font-size="12" fill="#1a2540">Claude Opus 4.6</text>
+
+    <rect x="365" y="234" width="110" height="32" rx="6" fill="#fff" stroke="#6b86c7"/>
+    <text x="420" y="255" text-anchor="middle" font-size="12" fill="#1a2540">Claude Sonnet 4.6</text>
+
+    <text x="420" y="292" text-anchor="middle" font-size="12" fill="#5a6a85">各抓各的 Bug → 结果取并集</text>
+  </g>
+
+  <!-- Right: output bugs -->
+  <path d="M562 210 L626 210" stroke="#3c5a99" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <g>
+    <rect x="630" y="140" width="230" height="140" rx="10" fill="#fff4e6" stroke="#d97706" stroke-width="2"/>
+    <text x="745" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#7a3e00">基准缺陷清单</text>
+    <text x="650" y="192" font-size="12" fill="#333">✗ 指令含糊</text>
+    <text x="650" y="215" font-size="12" fill="#333">✗ gold 程序隐含假设</text>
+    <text x="650" y="238" font-size="12" fill="#333">✗ 评测拒绝等价正解</text>
+    <text x="650" y="261" font-size="12" fill="#333">✗ 容差过严</text>
+  </g>
+
+  <!-- Bottom: optional execution evidence booster -->
+  <g>
+    <rect x="120" y="370" width="300" height="120" rx="10" fill="#ffffff" stroke="#8a8f9a" stroke-dasharray="5,4" stroke-width="2"/>
+    <text x="270" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a2540">可选：Agent 执行证据</text>
+    <text x="270" y="420" text-anchor="middle" font-size="12" fill="#444">Agent 跑出的程序 + 日志 + 评测输出</text>
+    <text x="270" y="443" text-anchor="middle" font-size="12" fill="#444">暴露只有替代解才会触发的边界 Bug</text>
+    <text x="270" y="470" text-anchor="middle" font-size="11" fill="#888">（定义级之上再补一刀）</text>
+  </g>
+
+  <!-- Dashed arrow from execution evidence box up into ensemble box -->
+  <path d="M360 370 L360 340 L390 315" stroke="#d97706" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#ar2)"/>
+
+  <!-- Right bottom: results -->
+  <g>
+    <rect x="480" y="370" width="380" height="200" rx="10" fill="#e8f7ee" stroke="#2f9e5a" stroke-width="2"/>
+    <text x="670" y="397" text-anchor="middle" font-size="14" font-weight="bold" fill="#155c32">在 ScienceAgentBench 上的召回</text>
+
+    <!-- Bars -->
+    <text x="510" y="430" font-size="12" fill="#333">Opus 单模型（静态）</text>
+    <rect x="510" y="438" width="208" height="18" fill="#b6e1c6"/>
+    <text x="728" y="452" font-size="12" fill="#155c32">83.3%</text>
+
+    <text x="510" y="478" font-size="12" fill="#333">Opus + 执行证据</text>
+    <rect x="510" y="486" width="229" height="18" fill="#7fcb9e"/>
+    <text x="745" y="500" font-size="12" fill="#155c32">91.7%</text>
+
+    <text x="510" y="526" font-size="12" fill="#333">5 模型合议 + 执行证据</text>
+    <rect x="510" y="534" width="250" height="18" fill="#2f9e5a"/>
+    <text x="770" y="548" font-size="12" fill="#155c32" font-weight="bold">100%</text>
+  </g>
+
+  <!-- Cost note -->
+  <text x="450" y="600" text-anchor="middle" font-size="12" fill="#5a6a85">50 个任务 · 5 个模型 · &lt; 15 美元 · &lt; 12 分钟</text>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "trend_overview_brief": [
+    "Agent 评测基础设施被系统性反思：基准自己要审计",
+    "Harness/runtime 工程成为 coding agent 新主战场",
+    "Agent 安全从提示注入扩展到密钥委托、技能包审计",
+    "多 Agent 编排转向结构先验迁移与统一抽象"
+  ],
+  "trend_overview": [
+    "今天初筛里评测类工作明显抬头，不只是做新 benchmark，而是开始审计既有基准、引入 rubric 和轨迹效率等更细的指标，反映大家对 Agent 评测可信度的焦虑。",
+    "Coding/terminal agent 方向普遍不再只调模型，而是把注意力放到 harness、serving、任务合成这些 runtime 与基础设施层，说明提升上限的瓶颈正从模型能力转向脚手架。",
+    "Agent 安全议题从传统 prompt injection 扩展到密钥委托协议、未受信技能包审计、甚至具身机器人的语义 DoS，开始把整条执行链当作攻击面系统治理。",
+    "多 Agent 与 workflow 方向出现从'每任务搜索'转向'结构先验迁移'和统一抽象封装的苗头，编排层正在沉淀出更可复用的设计范式。"
+  ],
+  "knowledge_point": {
+    "topic": "Harness 是什么",
+    "summary": "Harness 是把任务、工具、提示、评测、日志打包起来的 Agent 底座，决定系统能否被复现和持续迭代。",
+    "content": "Harness 可以理解成围绕模型搭的一整套脚手架：任务协议、工具接口、系统提示、中间件、记忆、评测脚本、日志采集都在里面。它本身不产生智能，但决定了模型的能力能以多大比例转化为可用的 Agent 行为。对 Agent 系统来说，harness 的好坏往往决定你是在做一次漂亮 demo，还是在做一个可复现、可回归、可持续优化的系统，因此它既是工程底座，也是研究基础设施。",
+    "why_today": "今天的头条《Agentic Harness Engineering》直接把 harness 当成自动进化对象，而 BenchGuard、Odysseys 等评测工作本质上也是在重新定义 harness 里的评测与轨迹采集部分，补齐这个概念有助于把今天多篇论文串起来看。"
+  },
+  "closing_summary_brief": [
+    "模型能力之外，harness、评测与安全协议正成为 Agent 的新上限"
+  ],
+  "closing_summary": [
+    "今天的论文集体指向一个信号：Agent 进步的瓶颈正在从模型本身转向围绕模型的基础设施。",
+    "一边是 harness、serving、workflow 迁移这类 runtime 工程被系统化，一边是基准审计、长程 rubric 评测开始动摇既有评测结论的可信度。",
+    "安全侧也从单点防注入走向密钥委托、技能包审计、具身语义 DoS 的全链治理。",
+    "对做 Agent 的团队来说，值得把注意力从 '换个更强的模型' 转向 '把 harness、评测和安全协议做扎实'。"
+  ]
+}

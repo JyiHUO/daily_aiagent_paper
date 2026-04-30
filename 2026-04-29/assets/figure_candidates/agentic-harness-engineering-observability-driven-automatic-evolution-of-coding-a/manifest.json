@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-21",
+      "page_index": 1,
+      "caption": "Figure 1: AHE evolves a bash-only seed past every human-designed and self-evolving baseline on Terminal-Bench 2. All three role agents share one base model, isolating the gain to harness edits rather than analyzer or editor capability.",
+      "clip": [
+        138.2550048828125,
+        55.9998779296875,
+        471.2618713378906,
+        231.39599609375
+      ],
+      "clip_area": 58408.11169819906,
+      "page_area": 484704.0,
+      "text_density": 0.19822281145223056,
+      "kind": "drawing_cluster_with_caption",
+      "score": 51.555610331735046,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-37",
+      "page_index": 3,
+      "caption": "Figure 2: The AHE pipeline links three observable surfaces into one closed loop. Components, rollout experience, and edit decisions each surface as structured artifacts another agent reads, and every edit becomes a falsifiable prediction the next round verifies.",
+      "clip": [
+        128.35400390625,
+        56.00044250488281,
+        481.6856384277344,
+        290.17559814453125
+      ],
+      "clip_area": 82741.49050647998,
+      "page_area": 484704.0,
+      "text_density": 0.10940164315978665,
+      "kind": "drawing_cluster_with_caption",
+      "score": 47.155251304929244,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-21",
+      "page_index": 1,
+      "caption": "Figure 1: AHE evolves a bash-only seed past every human-designed and self-evolving baseline on Terminal-Bench 2. All three role agents share one base model, isolating the gain to harness edits rather than analyzer or editor capability.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6023803710938,
+        217.6210479736328
+      ],
+      "clip_area": 91267.21830571724,
+      "page_area": 484704.0,
+      "text_density": 0.10578521964668301,
+      "kind": "captioned_figure",
+      "score": 45.466967024595874,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/03-p2-captioned_figure.png",
+      "filename": "03-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-3-embedded-13-0",
+      "page_index": 3,
+      "caption": "Figure 2: The AHE pipeline links three observable surfaces into one closed loop. Components, rollout experience, and edit decisions each surface as structured artifacts another agent reads, and every edit becomes a falsifiable prediction the next round verifies.",
+      "clip": [
+        151.69522094726562,
+        79.84278869628906,
+        276.9078674316406,
+        234.56883239746094
+      ],
+      "clip_area": 19373.65741188079,
+      "page_area": 484704.0,
+      "text_density": 0.09778797649451985,
+      "kind": "embedded_image_with_caption",
+      "xref": 1417,
+      "score": 40.14798427046082,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-32",
+      "page_index": 7,
+      "caption": "Figure 3: Cross-model transfer on terminal-bench-long-time, 89 tasks. The AHE workspace evolved on GPT-5.4 high is re-evaluated on each base without further evolution, paired against the NexAU 0 seed on the same base.",
+      "clip": [
+        124.39300537109375,
+        55.999794006347656,
+        485.1234436035156,
+        211.905029296875
+      ],
+      "clip_area": 56239.76384908077,
+      "page_area": 484704.0,
+      "text_density": 0.1449458029693507,
+      "kind": "drawing_cluster_with_caption",
+      "score": 31.728138086828743,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/05-p8-drawing_cluster_with_caption.png",
+      "filename": "05-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-32",
+      "page_index": 7,
+      "caption": "Figure 3: Cross-model transfer on terminal-bench-long-time, 89 tasks. The AHE workspace evolved on GPT-5.4 high is re-evaluated on each base without further evolution, paired against the NexAU 0 seed on the same base.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5955444335938,
+        198.27796936035156
+      ],
+      "clip_area": 82422.28435108867,
+      "page_area": 484704.0,
+      "text_density": 0.07427440262359836,
+      "kind": "captioned_figure",
+      "score": 23.91580315945654,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/06-p8-captioned_figure.png",
+      "filename": "06-p8-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/contact-sheet.svg"
+}

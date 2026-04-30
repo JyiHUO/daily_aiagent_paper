@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#f7f8fb"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">长程任务上，顶级模型依然远未解决</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#666">Odysseys · 100 步预算 · Perfect 通过率</text>
+
+  <!-- Bar chart -->
+  <g transform="translate(70,110)">
+    <text x="0" y="-10" font-size="13" fill="#333" font-weight="600">Perfect 通过率 (%)</text>
+
+    <!-- axis -->
+    <line x1="120" y1="0" x2="120" y2="230" stroke="#bbb"/>
+    <line x1="120" y1="230" x2="720" y2="230" stroke="#bbb"/>
+
+    <!-- Opus 4.6 -->
+    <rect x="120" y="10" width="178" height="28" fill="#4c6ef5" rx="3"/>
+    <text x="115" y="29" text-anchor="end" font-size="13" fill="#222">Opus 4.6</text>
+    <text x="306" y="29" font-size="13" font-weight="700" fill="#4c6ef5">44.5%</text>
+    <text x="370" y="29" font-size="11" fill="#888">（难任务仅 11%）</text>
+
+    <!-- GPT-5.4 -->
+    <rect x="120" y="54" width="134" height="28" fill="#5c7cfa" rx="3"/>
+    <text x="115" y="73" text-anchor="end" font-size="13" fill="#222">GPT-5.4</text>
+    <text x="262" y="73" font-size="13" font-weight="700" fill="#5c7cfa">33.5%</text>
+    <text x="320" y="73" font-size="11" fill="#888">（难任务仅 3.7%）</text>
+
+    <!-- Sonnet -->
+    <rect x="120" y="98" width="124" height="28" fill="#74a9ff" rx="3"/>
+    <text x="115" y="117" text-anchor="end" font-size="13" fill="#222">Sonnet 4.6</text>
+    <text x="252" y="117" font-size="13" font-weight="700" fill="#74a9ff">31%</text>
+
+    <!-- Qwen -->
+    <rect x="120" y="142" width="54" height="28" fill="#ffa94d" rx="3"/>
+    <text x="115" y="161" text-anchor="end" font-size="13" fill="#222">Qwen-3.5-9B</text>
+    <text x="182" y="161" font-size="13" font-weight="700" fill="#e8590c">13.5%</text>
+    <text x="240" y="161" font-size="11" fill="#888">（开源最强）</text>
+
+    <!-- UI-TARS -->
+    <rect x="120" y="186" width="4" height="28" fill="#fa5252" rx="2"/>
+    <text x="115" y="205" text-anchor="end" font-size="13" fill="#222">UI-TARS-1.5-7B</text>
+    <text x="132" y="205" font-size="13" font-weight="700" fill="#fa5252">1%</text>
+  </g>
+
+  <!-- arrow linking -->
+  <line x1="450" y1="350" x2="450" y2="388" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="450" y="344" text-anchor="middle" font-size="12" fill="#666">为什么分数上不去？</text>
+
+  <!-- Failure modes -->
+  <g transform="translate(35,400)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#1a1a2e">典型失败模式 · 人类不会犯</text>
+
+    <!-- card 1 -->
+    <g transform="translate(0,15)">
+      <rect width="260" height="115" fill="#fff" stroke="#4c6ef5" stroke-width="2" rx="8"/>
+      <text x="15" y="28" font-size="13" font-weight="700" fill="#4c6ef5">Opus: 过度研究不交付</text>
+      <text x="15" y="52" font-size="12" fill="#444">查资料到 100 步耗尽</text>
+      <text x="15" y="72" font-size="12" fill="#444">始终没写出最终文档</text>
+      <text x="15" y="98" font-size="11" fill="#999">12 个 0 分中有 6 个</text>
+    </g>
+
+    <!-- card 2 -->
+    <g transform="translate(280,15)">
+      <rect width="260" height="115" fill="#fff" stroke="#5c7cfa" stroke-width="2" rx="8"/>
+      <text x="15" y="28" font-size="13" font-weight="700" fill="#5c7cfa">GPT-5.4: 规划完就放弃</text>
+      <text x="15" y="52" font-size="12" fill="#444">规划漂亮 → 几步 DONE</text>
+      <text x="15" y="72" font-size="12" fill="#444">还没真正执行就结束</text>
+    </g>
+
+    <!-- card 3 -->
+    <g transform="translate(560,15)">
+      <rect width="270" height="115" fill="#fff3bf" stroke="#f59f00" stroke-width="2" rx="8"/>
+      <text x="15" y="28" font-size="13" font-weight="700" fill="#b8860b">高 fanout 任务双双卡住</text>
+      <text x="15" y="52" font-size="12" fill="#444">如「遍历 30 个 MLB 球场」</text>
+      <text x="15" y="72" font-size="12" fill="#444">单 Agent 架构明显退化</text>
+      <text x="15" y="100" font-size="11.5" fill="#b8860b" font-weight="600">→ 暗示需要多 Agent 分工</text>
+    </g>
+  </g>
+</svg>

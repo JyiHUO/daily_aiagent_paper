@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-28
+- **日期**：2026-04-29
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Revisable by Design: A Theory of Streaming LLM Agent Execution
-  - Beyond Single-Agent Alignment: Preventing Context-Fragmented Violations in Multi-Agent Systems
-  - ClawMark: A Living-World Benchmark for Multi-Turn, Multi-Day, Multimodal Coworker Agents
-- **日报路径**：[2026-04-28/daily_report.md](2026-04-28/daily_report.md)
+  - Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses
+  - BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks
+  - Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks
+- **日报路径**：[2026-04-29/daily_report.md](2026-04-29/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-29 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses | [2026-04-29/daily_report.md](2026-04-29/daily_report.md) |
+|  |  |  | 2 | BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks |  |
+|  |  |  | 3 | Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks |  |
 | 2026-04-28 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Revisable by Design: A Theory of Streaming LLM Agent Execution | [2026-04-28/daily_report.md](2026-04-28/daily_report.md) |
 |  |  |  | 2 | Beyond Single-Agent Alignment: Preventing Context-Fragmented Violations in Multi-Agent Systems |  |
 |  |  |  | 3 | ClawMark: A Living-World Benchmark for Multi-Turn, Multi-Day, Multimodal Coworker Agents |  |

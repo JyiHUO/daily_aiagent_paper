@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f8fb"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2233">从 "整卷判对错" → "按题给分"</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#667">长程任务的评测方式改造</text>
+
+  <!-- LEFT: Old way -->
+  <g>
+    <rect x="50" y="100" width="340" height="380" rx="14" fill="#fff" stroke="#e2b3b3" stroke-width="2"/>
+    <text x="220" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#b33">以往：轨迹级 pass / fail</text>
+
+    <rect x="80" y="155" width="280" height="80" rx="8" fill="#fef3f3" stroke="#e6b2b2"/>
+    <text x="220" y="185" text-anchor="middle" font-size="13" fill="#333">Agent 完成 10 件事中的 8 件</text>
+    <text x="220" y="210" text-anchor="middle" font-size="12" fill="#888">（订票 ✓ 查路线 ✓ 汇总 ✗ ...）</text>
+
+    <text x="220" y="272" text-anchor="middle" font-size="12" fill="#888">LLM judge 一次看完整条轨迹</text>
+    <path d="M 220 285 L 220 315" stroke="#b33" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+
+    <rect x="120" y="320" width="200" height="70" rx="10" fill="#b33"/>
+    <text x="220" y="362" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">FAIL</text>
+
+    <text x="220" y="425" text-anchor="middle" font-size="12" fill="#666">κ = 0.508  ·  F1 = 0.762</text>
+    <text x="220" y="450" text-anchor="middle" font-size="12" fill="#a44">噪声大 · 无部分分 · 难做 RL</text>
+  </g>
+
+  <defs>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b33"/>
+    </marker>
+  </defs>
+
+  <!-- Arrow middle -->
+  <path d="M 400 290 L 485 290" stroke="#2a7" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <!-- RIGHT: Rubric -->
+  <g>
+    <rect x="490" y="100" width="360" height="380" rx="14" fill="#fff" stroke="#9ccfb0" stroke-width="2"/>
+    <text x="670" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#1f7a4a">Odysseys：Rubric 细粒度评测</text>
+
+    <g font-size="12.5" fill="#233">
+      <rect x="515" y="150" width="310" height="32" rx="6" fill="#eaf7ef" stroke="#bfe0cc"/>
+      <circle cx="535" cy="166" r="9" fill="#2a7"/>
+      <text x="535" y="170" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+      <text x="555" y="170">R1 搜了 PIT→LAX 直飞</text>
+
+      <rect x="515" y="188" width="310" height="32" rx="6" fill="#eaf7ef" stroke="#bfe0cc"/>
+      <circle cx="535" cy="204" r="9" fill="#2a7"/>
+      <text x="535" y="208" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+      <text x="555" y="208">R2 搜了 PIT→PSP 航班</text>
+
+      <rect x="515" y="226" width="310" height="32" rx="6" fill="#eaf7ef" stroke="#bfe0cc"/>
+      <circle cx="535" cy="242" r="9" fill="#2a7"/>
+      <text x="535" y="246" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+      <text x="555" y="246">R3 估算 LAX→棕榈泉车程</text>
+
+      <rect x="515" y="264" width="310" height="32" rx="6" fill="#f3f5f7" stroke="#d0d6dc"/>
+      <text x="535" y="285" text-anchor="middle" fill="#888">…</text>
+      <text x="555" y="285" fill="#555">R4–R7  各子步骤（均 ✓）</text>
+
+      <rect x="515" y="302" width="310" height="32" rx="6" fill="#fdecec" stroke="#e6b2b2"/>
+      <circle cx="535" cy="318" r="9" fill="#c55"/>
+      <text x="535" y="322" text-anchor="middle" fill="#fff" font-size="12">✗</text>
+      <text x="555" y="322">R8 产出整合行程总结</text>
+    </g>
+
+    <rect x="540" y="355" width="260" height="70" rx="10" fill="#2a7"/>
+    <text x="670" y="383" text-anchor="middle" font-size="14" fill="#eaffe8">7 / 8 满足</text>
+    <text x="670" y="411" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">得分 88%</text>
+
+    <text x="670" y="450" text-anchor="middle" font-size="12" fill="#1f7a4a" font-weight="600">κ = 0.788  ·  F1 = 0.949</text>
+  </g>
+
+  <text x="450" y="515" text-anchor="middle" font-size="13" fill="#334" font-weight="600">每条 rubric 独立判 0/1 → 更贴近人类评分，给弱模型也留下部分奖励信号</text>
+</svg>

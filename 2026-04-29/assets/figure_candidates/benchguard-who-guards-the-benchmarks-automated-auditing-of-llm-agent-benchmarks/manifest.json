@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks",
+  "candidates": [
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        127.68099975585938,
+        196.6630096435547,
+        484.3077087402344,
+        420.24700927734375
+      ],
+      "clip_area": 79736.0259709619,
+      "page_area": 484704.0,
+      "text_density": 0.0070746883138589,
+      "kind": "embedded_image",
+      "xref": 480,
+      "score": 7.885955844121799,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/01-p3-embedded_image.png",
+      "filename": "01-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-block-3",
+      "page_index": 2,
+      "caption": "We survey related work in Section 2 , present the framework in Section 3 , and report empirical findings in Sections 4 – 5 .",
+      "clip": [
+        76.9019989013672,
+        18.0,
+        534.6013732910156,
+        167.6390838623047
+      ],
+      "clip_area": 68489.715068017,
+      "page_area": 484704.0,
+      "text_density": 0.4499185885236582,
+      "kind": "captioned_figure",
+      "score": 0.7609968340890774,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/02-p3-captioned_figure.png",
+      "filename": "02-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-15-block-15",
+      "page_index": 15,
+      "caption": "Tiered Input. The framework supports three input tiers of increasing diagnostic power:",
+      "clip": [
+        77.4,
+        371.98216552734374,
+        531.1962829589844,
+        680.7821655273438
+      ],
+      "clip_area": 140132.2921777344,
+      "page_area": 484704.0,
+      "text_density": 0.3953799924018757,
+      "kind": "captioned_figure",
+      "score": -2.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/03-p16-captioned_figure.png",
+      "filename": "03-p16-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4904993858094373,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.670509045415544,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.36189261359168945,
+      "score": -15.991415375501365,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks/contact-sheet.svg"
+}

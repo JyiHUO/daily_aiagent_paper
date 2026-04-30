@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-16",
+      "page_index": 7,
+      "caption": "Figure 3: A scatter plot of perfect success rate against number of steps taken. The pareto optimality curve for models we tested is also shown.",
+      "clip": [
+        98.65499877929688,
+        65.860595703125,
+        510.8612976074219,
+        245.34698486328125
+      ],
+      "clip_area": 73985.4201657325,
+      "page_area": 484704.0,
+      "text_density": 0.20803295064194655,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.140083185546903,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-16",
+      "page_index": 7,
+      "caption": "Figure 3: A scatter plot of perfect success rate against number of steps taken. The pareto optimality curve for models we tested is also shown.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5972229003906,
+        224.25320434570312
+      ],
+      "clip_area": 94298.39224116226,
+      "page_area": 484704.0,
+      "text_density": 0.10101312233178729,
+      "kind": "captioned_figure",
+      "score": 15.786972573883455,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-14-block-6",
+      "page_index": 14,
+      "caption": "Figure 6: The annotation interface used by participants to label their Chrome browsing journeys. The interface guides participants through four steps: selecting the key URL representing the success state, indicating an automation preference, writing a descriptive task label, and judging feasibility.",
+      "clip": [
+        86.0,
+        288.8216247558594,
+        526.0014038085938,
+        640.7369995117188
+      ],
+      "clip_area": 154843.25891440548,
+      "page_area": 484704.0,
+      "text_density": 0.02647346294948299,
+      "kind": "image_block_with_caption",
+      "score": 7.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/03-p15-image_block_with_caption.png",
+      "filename": "03-p15-image_block_with_caption.png"
+    },
+    {
+      "id": "page-14-embedded-0-0",
+      "page_index": 14,
+      "caption": "Figure 6: The annotation interface used by participants to label their Chrome browsing journeys. The interface guides participants through four steps: selecting the key URL representing the success state, indicating an automation preference, writing a descriptive task label, and judging feasibility.",
+      "clip": [
+        96.0,
+        294.8216247558594,
+        516.0014038085938,
+        634.7369995117188
+      ],
+      "clip_area": 142764.93457358517,
+      "page_area": 484704.0,
+      "text_density": 0.00013951429686198164,
+      "kind": "embedded_image_with_caption",
+      "xref": 502,
+      "score": 6.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/04-p15-embedded_image_with_caption.png",
+      "filename": "04-p15-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        92.0,
+        67.86262512207031,
+        520.014404296875,
+        302.7690124511719
+      ],
+      "clip_area": 100543.31743819639,
+      "page_area": 484704.0,
+      "text_density": 0.24628862597694562,
+      "kind": "drawing_cluster",
+      "score": 5.13983041291878,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/05-p2-drawing_cluster.png",
+      "filename": "05-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-11-block-12",
+      "page_index": 11,
+      "caption": "Evan Zheran Liu, Kelvin Guu, Panupong Pasupat, Tianlin Shi, and Percy Liang. Reinforce- ment learning on web interfaces using workflow-guided exploration. ICLR , 2018.",
+      "clip": [
+        77.4,
+        290.9362060546875,
+        536.251611328125,
+        599.7362060546875
+      ],
+      "clip_area": 141693.37757812502,
+      "page_area": 484704.0,
+      "text_density": 0.7118757009698911,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/06-p12-captioned_figure.png",
+      "filename": "06-p12-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks/contact-sheet.svg"
+}

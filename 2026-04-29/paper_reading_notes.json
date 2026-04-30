@@ -1,0 +1,173 @@
+[
+  {
+    "title": "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a.pdf",
+    "analysis": {
+      "pick_reason_brief": "把 coding agent 的 harness 层变成可进化对象，给 Agent 运行时设计提供系统级方法论。",
+      "pick_reason": "这篇论文直指当下 coding agent 的关键瓶颈：harness（提示词、工具、中间件、长期记忆等围绕模型的脚手架）决定了 agent 的上限，但一直靠人工调。作者把 harness 拆成可编辑组件、把百万 token 轨迹蒸馏成可消费证据、再把每次修改变成可验证的'契约'，形成可自动迭代的闭环，对 Agent runtime/harness 架构有系统性启发。",
+      "background_brief": "harness 决定 coding agent 上限，但一直靠人肉调，自动进化又容易陷入试错。",
+      "background": "Coding agent 的表现越来越依赖围绕模型的 harness（系统提示、工具、中间件、记忆等），但 harness 基本靠人工根据轨迹反复调，成本高且难以规模化。已有的自进化方法大多只改 prompt 或上下文 playbook，动不了工具和中间件，而且面对数百万 token 的轨迹、稀疏噪声的评测信号，修改的因果归因非常困难。作者认为瓶颈不在进化 agent 的能力，而在'可观测性'：只要把组件、经验、决策都结构化暴露出来，自动进化 harness 是可行的。",
+      "core_points": [
+        {
+          "title": "组件可观测：文件化的 harness",
+          "summary_brief": "把 harness 拆成 7 类独立文件，每次改动都能精准定位和回滚。",
+          "technical_detail": "基于 NexAU 框架，把 harness 显式拆成 7 类正交组件——系统提示、工具描述、工具实现、中间件、skill、子 agent 配置、长期记忆，每类都以独立文件挂载在固定路径。组件间低耦合，每次修改就是一次 git commit，天然带 diff 和回滚粒度。种子 harness 故意极简，只给一个 shell 工具，避免污染后续归因。",
+          "plain_explanation": "过去 harness 像一坨缠在一起的代码+prompt，evolve agent 不知道改哪儿、改完也说不清是哪块起作用。现在把它拆成七个明确的文件抽屉，失败模式对应哪个抽屉就只动那个文件，动完不行一键 revert。进化 agent 的动作空间因此变得清晰、可审计。",
+          "example": "比如评测里发现'模型成功后又乱改已验证状态'这类失败，evolve agent 就定位到'中间件'这个文件类，加一条 post-success hard-block 中间件，其他组件完全不动；这次提交作为一个 commit，若下轮验证没效就只回滚这一个文件。"
+        },
+        {
+          "title": "经验可观测：分层轨迹蒸馏",
+          "summary_brief": "用 Agent Debugger 把千万级 token 轨迹蒸馏成可钻取的证据库。",
+          "technical_detail": "每个 harness 版本在 benchmark 上跑 k 次 rollout，原始轨迹可能达千万 token。作者用 Agent Debugger 把每条轨迹的每条消息落成独立文件，让一个调试 agent 用 shell/脚本导航、定位根因，输出 per-task 分析报告，再聚合成 benchmark 级 overview。最终经验被组织成分层、可渐进披露的文件证据库（overview → per-task report → 原始 trace），evolve agent 按需钻取。",
+          "plain_explanation": "直接把几百万 token 丢给 evolve agent 根本读不过来，而且噪声大。这一层相当于请了个'调试实习生'先把每次跑挂在哪、为啥挂、成功模式是啥写成结构化报告，再给个总览。evolve agent 先看总览，发现可疑点再 drill-down 到具体任务报告，必要时再看原始 trace，token 花得省、判断也更准。",
+          "example": "一轮跑完后 Agent Debugger 产出一份 overview 指出'shell 命令超时是高频失败原因'，evolve agent 顺着链接打开具体任务报告确认根因是默认超时太短，再去查 3 条原始 trace 验证，最后决定改 bash 工具加上可调 timeout 参数。"
+        },
+        {
+          "title": "决策可观测：可证伪的修改契约",
+          "summary_brief": "每次改动都附'预测会修哪些任务/可能坏哪些'，下轮用实际结果验证并自动回滚。",
+          "technical_detail": "Evolve Agent 每次修改都要写一个 change manifest，记录：失败证据、推断的根因、具体改法、预测会修好的任务集合和可能回归的任务集合。下一轮跑完后，系统把预测集合与实际 task-level 结果做交集，得出每条修改的 verdict，被证伪（没带来预期修复、或确实造成了没预告的回归）的修改会在文件级别被 rollback。Evolve Agent 同时被沙箱约束：只能写 harness 目录，不能动 verifier、模型配置或种子系统提示。",
+          "plain_explanation": "这一层把'自我解释的漂亮理由'变成'可以被下一次评测打脸的赌注'。evolve agent 必须提前写清楚自己赌哪些任务会好、哪些可能坏，下一轮跑完自动对账，对不上就回滚。这样整个自进化过程不会退化成盲目试错，也防止 agent 走'把 verifier 关了'这种捷径。",
+          "example": "evolve agent 加了一条'发布状态保护'规则，manifest 里预测会修 task A、B 并可能影响 C。下一轮结果里 A 修好、B 没修、D 反而挂了——系统裁定这条修改部分证伪，并记录'回归预测 recall 很低'这一已知弱点，论文数据也显示 fix 预测精度 33.7% 高出随机 5 倍，但 regression 预测只高出随机 2 倍。"
+        },
+        {
+          "title": "进化出的 harness 能跨任务跨模型迁移",
+          "summary_brief": "冻结后的 harness 换任务、换模型家族照样涨点，说明学到的是通用工程经验。",
+          "technical_detail": "在 Terminal-Bench 2 上 10 轮进化把 pass@1 从 69.7% 拉到 77.0%，超过人工设计的 Codex-CLI(71.9%) 和自进化基线 ACE、TF-GRPO。把这个 harness 原样搬到 SWE-bench-verified，总成功率最高且比种子少用 12% token；换到 Qwen3.6、Gemini3.1-flash-lite、DeepSeek-v4 等不同模型家族，跨家族提升 +5.1 到 +10.1pp。消融发现工具、中间件、长期记忆单独换入都带正收益，而只换系统提示反而 −2.3pp。",
+          "plain_explanation": "作者特别强调：把 behavior 编码在工具/中间件/记忆里，比编码在 prompt 里更'耐用'。prompt 类方法换个任务面就白写了，而工具和中间件是在每次调用时真实约束行为的代码，所以跨任务跨模型仍然有效，越弱的模型反而越依赖这些外部协调模式，收益越大。",
+          "example": "在 SWE-bench 的 django 仓库上，AHE harness 相比种子提升成功率的同时把每次 trial 的 token 从 527k 降到 484k；同一个 harness 配 DeepSeek-v4-flash 跑 Terminal-Bench 2，从 51.7% 跳到 61.8%，说明进化出的工具/中间件不是针对 GPT-5.4 的魔法。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "想让 coding agent 持续变强，应该把 harness 做成可观测、可回滚、可证伪的资产。",
+        "product": "对 coding agent 产品来说，这意味着 harness 本身应被当作核心资产来维护：把系统提示、工具、中间件、长期记忆拆成独立模块，每一轮线上数据都能驱动自动迭代，而不是靠版本发布时的人工大改。产品侧可以把'evolve agent + 证据库 + manifest'做成内建的'自优化模式'。",
+        "system": "系统层的关键启发是三层 observability：组件要文件化、版本化、可回滚；轨迹要被蒸馏成分层证据库支持渐进披露而不是塞原始日志；每次修改要绑定可验证的预测形成契约。搭 agent 框架时应预留沙箱化的 harness workspace、只读的 verifier/模型配置、以及 manifest-vs-结果 的归因管线。",
+        "risk": "几个明显风险：一是 regression 预测精度很低（约 11%），自动进化仍会引入难以预见的退步，需要强制保留人工审阅或更严格的回归测试集；二是进化出的配置（如超时、step 预算）会耦合到具体 base 模型，迁移时可能被 per-task 超时放大成失败；三是扩大了自修改面，若无读写边界控制，evolve agent 可能绕过 verifier 或滥用工具，安全护栏需要从一开始就设计进去。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-3-drawing-caption-37",
+      "page_index": 3,
+      "caption": "Figure 2: The AHE pipeline links three observable surfaces into one closed loop. Components, rollout experience, and edit decisions each surface as structured artifacts another agent reads, and every edit becomes a falsifiable prediction the next round verifies.",
+      "clip": [
+        128.35400390625,
+        56.00044250488281,
+        481.6856384277344,
+        290.17559814453125
+      ],
+      "clip_area": 82741.49050647998,
+      "page_area": 484704.0,
+      "text_density": 0.10940164315978665,
+      "kind": "drawing_cluster_with_caption",
+      "score": 47.155251304929244,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/assets/figure_candidates/agentic-harness-engineering-observability-driven-automatic-evolution-of-coding-a/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png",
+      "selection_reason": "这张图是论文最完整的方法总览图，直接展示了 AHE 的闭环架构：NexAU Harness 组件层、Coding Agent 与环境交互、原始轨迹到 Overview/Agent Debugger 的经验蒸馏，以及 Evolve Agent 基于 Evidence 修改组件并形成可验证决策的流程。它清楚体现了论文核心的三类 observability（component / experience / decision）和信息流，比 Figure 1、Figure 3 这类结果图更适合作为日报首图，让读者一眼理解系统机制。",
+      "selection_confidence": "high"
+    }
+  },
+  {
+    "title": "BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/benchguard-who-guards-the-benchmarks-automated-auditing-of-llm-agent-benchmarks.pdf",
+    "analysis": {
+      "pick_reason_brief": "首个自动审计 Agent 评测基准的框架，揭示 benchmark 本身可能才是失败源头",
+      "pick_reason": "当大家都在卷 Agent 分数时，这篇论文反过来问：基准自己靠谱吗？BenchGuard 用前沿 LLM 系统性审计基准，在 ScienceAgentBench 找出 12 个作者确认的致命缺陷，在 BIXBench 对齐 83.3% 的专家修订，而且 50 个任务只花不到 15 美元。对做 Agent 评测和产品指标的人都是必读。",
+      "background_brief": "执行式 Agent 基准里 '指令+gold+评测脚本+环境' 相互耦合，导致很多 Agent 失败其实是基准自己有 bug",
+      "background": "随着 Agent 基准从静态 QA 演化为'指令+参考程序+评测脚本+环境'四件套耦合的系统，很多看起来是 Agent 失败的案例，其实是基准自己写错了：指令含糊、gold 程序隐含假设、评测脚本拒绝等价正确答案。过去像 SWE-bench Verified 这样的人工复核已经证明不够用，而执行式基准的跨产物不一致更难被单点人工审查发现。作者主张让前沿 LLM 从'被评测者'转变为'评测基础设施的审计者'。",
+      "core_points": [
+        {
+          "title": "把基准当软件来审计",
+          "summary_brief": "将 benchmark 审计重新定义为'四件套跨产物一致性'问题，而不是检查单个标签",
+          "technical_detail": "BenchGuard 把每个执行式任务看作由 instruction、gold program、evaluation script、environment 四个相互耦合的产物组成，审计目标是发现这四者之间的跨产物不一致。作者提出 4 大类 14 子类的缺陷分类（GT/EVAL/INST/ENV），例如 GT-LOGIC、EVAL-JUDGE-BIAS、INST-INCOMPLETE 等，每个发现都带类别、严重度和置信度。",
+          "plain_explanation": "传统基准审计只看题目或标准答案有没有错，而执行式基准的 bug 常常藏在'指令说 A、gold 做 B、评测脚本又查 C'的错位里。BenchGuard 的核心思路是把这四样东西同时摊开来对照，任何两者之间对不上，就是一个可报告的缺陷。",
+          "example": "论文举的 Case 1：指令要求分析 ecg_1000hz.csv，但 gold 程序读的是 bio_eventrelated_100hz.csv。单看指令没问题，单看 gold 也能跑，只有把两者放一起比对，才会发现输入文件根本对不上——这正是跨产物审计要捕捉的类型。"
+        },
+        {
+          "title": "六阶段结构化审计 Prompt",
+          "summary_brief": "用一次 LLM 调用按六阶段跨比四个产物，并强制去重和原子化输出",
+          "technical_detail": "定义级审计由一次整合的 LLM 调用完成，采用六阶段结构化推理：任务理解→gold 正确性→评测逻辑→任务规范→环境→合并去重。prompt 里内置完整错误分类作为参考，并规定'当某问题既可归为 INST 又可归为 GT 时优先归为 INST'，因为大部分根因是指令没写清而 gold 只是实现了其中一种解读。",
+          "plain_explanation": "作者不是让 LLM 一口气'找 bug'，而是把它当成一个走流程的审计员：先读懂题目要什么，再一项项对照四个产物，最后做'一修多消'去重测试和'能否单独修复'的原子化测试，才写出最终 JSON 报告。这样既降低漏报，也避免同一个根因被报成好几条。",
+          "example": "在 BIXBench Case 6 里，指令要'所有显著差异表达基因'，而 gold 程序悄悄 drop 了 KL3、WL3 两个样本。六阶段走到第 2 步检查 gold 数据处理时就会标出 GT-DATA 嫌疑，第 4 步检查指令时再确认指令没提这个过滤，最后在第 6 阶段归类为 INST-INCOMPLETE 并输出一条带代码行号证据的高置信度发现。"
+        },
+        {
+          "title": "多模型 ensemble + 可选执行证据",
+          "summary_brief": "五个前沿模型并审互补，必要时追加 agent 执行 trace 提升召回",
+          "technical_detail": "BenchGuard 用 Gemini 3.0 Flash、Gemini 3.1 Pro、GPT-5.4、Claude Opus 4.6、Claude Sonnet 4.6 五个模型独立审计同一批任务，结果取并集。定义级审计只看四个静态产物；当 agent 的程序、评测结果、日志可用时，会追加到上下文做'执行级审计'，用于发现像容差太严这种只有在有替代解时才暴露的问题。",
+          "plain_explanation": "单个模型各有盲点，不同模型擅长抓不同类别的 bug，所以作者让它们并行审然后合并。此外，静态看四件套有时看不出'另一种合理写法会被判错'，这时把真实 Agent 跑出的代码和评测日志喂进去，审计就能看到更多实际触发的边界情况。",
+          "example": "在 ScienceAgentBench 上，Opus 4.6 单模型定义级召回是 83.3%，加进 agent 执行 trace 后升到 91.7%，五模型 ensemble 在定义级就达到 91.7%、加执行证据达到 100%，而整套 50 任务五模型审计成本不到 15 美元、12 分钟以内跑完。"
+        },
+        {
+          "title": "人机互补的审计边界",
+          "summary_brief": "LLM 审计抓到人类漏的结构性不一致，人类擅长领域惯例判断，两者互补而非替代",
+          "technical_detail": "作者把发现按 aligned / partial / unrelated 对齐专家修订。在 BIXBench Verified-50 上，五模型并集 exact 对齐 83.3%（20/24），含部分匹配达 95.8%，而最好单模型只有 54.2%。论文强调 precision 实际上是'与专家修订的对齐率'，因为 BenchGuard 还抓到了一些专家完全没标的真实缺陷。",
+          "plain_explanation": "一方面 LLM 审计能发现像 gold 悄悄删样本这种'领域专家因为熟悉反而视而不见'的结构性不一致（curse of knowledge）；另一方面有些领域习惯约定，LLM 会把它误判或漏判。所以定位不是'替代人工'而是做第一遍系统性筛查，把候选缺陷推给专家裁决。",
+          "example": "Case 6 中 gold 悄悄删了 KL3、WL3 两个样本，五个模型都标为高严重度缺陷，但人工复核没标——因为作者自己知道那是方法性原因；反过来 Case 5 专家额外加了一个'请用小数而不是百分比'的格式约束，而 LLM judge 本来两种格式都接受，BenchGuard 只给了部分匹配，反映出自动审计的适度克制。"
+        },
+        {
+          "title": "廉价规模化的审计经济性",
+          "summary_brief": "50 个复杂任务 5 模型 ensemble 审一轮不到 15 美元，使自动审计可进入基准生命周期",
+          "technical_detail": "全套五模型审计 50 个复杂生物信息任务成本 < $15，单模型在 BIXBench-50 上的成本从 Gemini 3.0 Flash 的 $0.53 到 Opus 4.6 的 $5.98 不等。作者主张将这种审计不仅用于 post-hoc 修复，还作为基准构造流程中的质量闸门，甚至支撑从文献自动生成带完整性保证的基准。",
+          "plain_explanation": "过去'请领域专家再审一遍'成本高得惊人，所以只能一次性复核；BenchGuard 把审计成本降到几乎可以忽略，这意味着每次基准更新、每加一道题，都可以顺手跑一轮自动审计，把'基准质量'做成持续集成级别的流程。",
+          "example": "BIXBench Verified-50 上 Gemini 3.0 Flash 单跑仅 $0.53 就拿到 45.8% 的 exact 对齐，五模型并集成本 $14.38 达到 83.3% exact/95.8% 含部分匹配，对照一个 benchmark 发布后因为带 bug 而被整个社区误用的代价，几乎可以忽略不计。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "做 Agent 评测和产品指标前，先让 LLM 系统性审计一遍你的评测基础设施",
+        "product": "对做 Agent 评测集、内部 eval 平台、或客户场景 benchmark 的团队，可以直接借鉴：把'指令 + 参考解 + 评测脚本 + 运行环境'四件套当一个耦合软件工程对象，在发布或上线前用一轮多模型 LLM 审计做 CI，再让领域专家只看高置信度 finding，大幅降低评测失真带来的决策风险。",
+        "system": "系统设计上启发是把 LLM 不仅当执行者和 judge，也作为基础设施审计者：审计流程要结构化（多阶段 prompt + 显式分类/严重度/置信度 + 去重和原子化），输出要便于人类 triage（带证据引用、带分桶置信度），并支持选配 agent 执行 trace 作为额外诊断输入以提升召回。多模型并集 + 去重是比单一强模型更稳的现实路线。",
+        "risk": "论文自己明确：LLM 审计会 hallucinate，必须 human-in-the-loop；当前分类偏科学计算域，迁移到 web/OS/对话等任务需要扩展子类别；precision 指标实际上是'与专家修订对齐率'，会低估那些专家都没发现的真实缺陷，因此不要把 precision 直接当成错误率用。此外 ensemble 依赖多家前沿模型，可能带来供应商锁定和成本波动。"
+      }
+    }
+  },
+  {
+    "title": "Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks",
+    "status": "completed",
+    "reason": "",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/downloaded_pdfs/odysseys-benchmarking-web-agents-on-realistic-long-horizon-tasks.pdf",
+    "analysis": {
+      "pick_reason_brief": "首个真实长程多站点 Web Agent benchmark，Opus 也只过 44.5%",
+      "pick_reason": "这是一个直面当前 Web Agent 评测盲区的工作：现有 benchmark 都在短任务上饱和，而真实用户的浏览是跨站多小时的长程流程。作者不仅造了 200 个来自真实浏览历史的长程任务，还提出 rubric 评测和轨迹效率指标，顶级模型 Opus 4.6 也只拿到 44.5% 完美通过率，效率仅 1.15%，对做 Web/Computer-use Agent 的团队有直接参考价值。",
+      "background_brief": "现有 Web Agent 评测多是单站点短任务，已被前沿模型打穿，真实长程多站点场景仍未被认真测量。",
+      "background": "现有 Web Agent benchmark（WebArena、Mind2Web、Online-M2W 等）大多是单站点短任务，前沿模型已接近饱和，但真实用户会跨多个网站做比价、订行程、做研究这种数小时的长流程。以往评测一靠手写规则奖励（难扩展），二靠轨迹级 LLM-as-a-judge 一次性判 pass/fail（对长轨迹噪声大、不区分部分完成）。Odysseys 从真人浏览历史出发，构造 200 个长程任务，并换用 rubric 细粒度评测，正面补上这个空白。",
+      "core_points": [
+        {
+          "title": "真实浏览数据构造长程任务",
+          "summary_brief": "从真人 Chrome 历史聚合出 200 个跨站多步任务，不是模板合成。",
+          "technical_detail": "作者在 Prolific 招募 248 名标注员，用桌面程序读取他们的 Chrome 浏览历史，并用 Chrome Journey 算法切分成一个个子任务，再由标注员自己打标签，最终得到 2380 条 journeys，经过 LLM+人工两轮筛选保留 696 条。然后按 embedding 相似度聚类，用 GPT-5.4 把相关 journeys 组合成一个多步长程任务，并生成自然语言指令、步骤计划和 rubric，最后作者人工审核去重，形成 200 个任务（易 45、中 46、难 109）。",
+          "plain_explanation": "核心思路是'真实用户实际在浏览器里干过什么，就让 Agent 也去干'。先让真人把自己真实的浏览切片标注成一个个小任务，再拼成像'规划一次多城市婚礼旅行'这样的长任务，这样任务的目标、涉及的网站、工作流都来自真实行为，而不是研究者臆想的模板。",
+          "example": "比如一个任务：'计划去棕榈泉参加婚礼的行程'——要在 Google Flights 搜 PIT-LAX 和 PIT-PSP 两条航线、在地图上查 LAX 到棕榈泉的开车时间、评估 Soban 和 Holbox 两家餐厅绕路是否合理、最后在 CryptPad 里写成一份逐日行程文档。整个任务横跨 8 个步骤、多个网站，正好对应一条真实用户的完整旅行规划 journey。"
+        },
+        {
+          "title": "Rubric 评测替代 pass/fail",
+          "summary_brief": "把每个任务拆成平均 6.1 条可验证子要求，分别打分，和人类一致性显著高于轨迹级 judge。",
+          "technical_detail": "每个任务会生成 3–12 条 rubric（平均 6.1 条，全库 1225 条），每条 rubric 包含一个可验证的 requirement 和具体的 verification 描述。评测时用 gemini-3.1-flash-lite-preview 作为 LLM judge，输入整条轨迹的截图和动作，对每条 rubric 单独判 0/1，最后汇总成 averaged（按 rubric 平均）和 perfect（全部满足才算过）两个分数。在 120 条 Opus 轨迹的人类标注对比中，rubric averaged 的 Cohen's κ 达到 0.788，F1 0.949，显著高于 Online-M2W 轨迹 judge 的 κ=0.508、F1=0.762。",
+          "plain_explanation": "长任务里一刀切地判'成没成功'既不准也不公平：Agent 可能把 10 件事里的 8 件都做对了，却被判 fail。rubric 把任务拆成一串'这步做到没'的小检查点，judge 每次只看一个明确标准，就像给学生卷子按题给分而不是整卷判对错，既更贴近人类评分，也能给弱模型提供部分奖励信号（对后续 RL 训练很有用）。",
+          "example": "以上面那条婚礼行程任务为例，rubric 会拆成：R1 '搜了 PIT-LAX 直飞并打开最佳航班'、R2 '搜了 PIT-PSP 并打开最佳航班'、R3 '评估了 LAX 到棕榈泉 9am-4pm 的开车时间'……R8 '产出了整合后的行程总结'。Agent 跑完后，judge 逐条判，8 条里满足 7 条就得 88%，而不是只输出一个冷冰冰的 fail。"
+        },
+        {
+          "title": "轨迹效率作为一等指标",
+          "summary_brief": "提出 rubric 分/步数 的 Trajectory Efficiency，前沿模型也只有 1.15%，暴露'能做对但太啰嗦'。",
+          "technical_detail": "作者定义 Trajectory Efficiency = 每个任务的 averaged rubric 分数 除以该任务的 agent 步数，再对所有任务求平均。步数指 LLM 调用次数（一次 observe-act 循环）。实验里 Opus 4.6 perfect 率 44.5% 但平均 81.3 步、效率仅 1.06%；GPT-5.4 perfect 33.5%、64.4 步、效率 1.15%（最高）；Opus 每次只出 1 个动作，而 GPT-5.4 平均每次返回 2.03 个动作，因此同样任务 round-trip 更少、墙钟时间更短。",
+          "plain_explanation": "如果只看成功率，两个 Agent 都 100% 完成任务看起来一样好；但一个跑 30 步、一个跑 100 步，用户体验差 3 倍（Opus 100 步大约要 30 分钟、2.5 美金）。作者因此把效率抬到和成功率同等重要的位置，并发现 GPT-5.4 喜欢一次规划多个动作、Opus 每次严格 observe-act 一步，前者效率明显更高——这提示训练/prompt 阶段鼓励'多动作批处理'是长程任务的一个实用优化方向。",
+          "example": "在同一个需要在 10 家商家之间比价的任务里，Opus 可能每点一次链接就重新看一次截图再决定下一步，100 步才填完表；GPT-5.4 则会在一轮里直接输出'输入搜索词→回车→点击第一个结果'三个动作连发，大幅减少 LLM 调用次数，即使最终分数相同，效率指标明显更高。"
+        },
+        {
+          "title": "前沿模型仍远未解决长程",
+          "summary_brief": "最强 Opus 4.6 perfect 率 44.5%，难任务仅 11%，且出现特征性失败模式。",
+          "technical_detail": "在 100 步预算下，Opus 4.6 perfect 44.5%（难任务 11%），GPT-5.4 33.5%（难任务 3.7%），Sonnet 4.6 31%，开源最强 Qwen-3.5-9B 仅 13.5%，UI-TARS-1.5-7B 1%。Opus 的主要失败模式是'过度研究不交付'——12 个 0 分里有 6 个是一直查资料直到 100 步耗尽仍未写出最终文档；GPT-5.4 则常常规划很漂亮但几步就 DONE 结束；两者在高 fanout 任务（如走 30 个 MLB 球场）上都会卡在第一阶段。",
+          "plain_explanation": "这个结果对行业的意义是：哪怕顶级 computer-use 模型在短任务上看似已经很强，一旦把时间拉长到十几个网站、几十步，它们仍会出各种'人类不会犯'的错，比如只顾查资料忘了动笔、或规划完直接放弃执行。更值得注意的是在需要并行处理多个相似子任务时（比如一次处理 30 个球场），现有单 Agent 架构会明显退化，暗示多 Agent/子 Agent 分工才是下一步。",
+          "example": "在一个 '列出 NYC 10 位顶级 ACL 膝盖外科医生并汇总到表格' 的任务里，GPT-5.4 展现出惊人的解决问题能力：它把整张医生信息表用 base64 编码嵌进 Python action，运行时解码并通过 pyperclip+ctrl+v 一次性粘到 CryptPad 电子表格，完美保留 tab/换行分隔符，93 步拿 100%。但同样的模型在更宽的 MLB 任务上却会卡在第一步，体现长程能力的不稳定。"
+        }
+      ],
+      "agent_implications": {
+        "brief": "做 Web/Computer-use Agent 必须同时优化成功率和步数效率，并用 rubric 做细粒度可训练评测。",
+        "product": "面向消费者的浏览器/电脑 Agent 产品不能只宣称'能完成任务'，还必须把耗时和步数作为一等体验指标——100 步 30 分钟的体验基本不可用。产品侧应鼓励模型多动作批处理（像 GPT-5.4 那样一轮内规划多步），并为高 fanout 任务设计显式的子任务分发 UI/多 Agent 分工机制。",
+        "system": "评测体系应从轨迹级 pass/fail 升级到 rubric 级打分：任务定义时同步产出可验证 checklist，这既让离线评测更贴近人类判断，又能把每条 rubric 作为稠密奖励信号用于 RL 或拒绝采样训练，尤其适合提升弱模型。架构上，面对长程任务建议引入子 Agent、中间 deliverable 触发（研究阶段结束后必须产出文档）、步数预算和自我剪枝等机制，以对付 Opus 那种'一直研究不收尾'的失败模式。",
+        "risk": "论文自己提到：Agent 展现出用 view-source: 抓结构化数据、通过 Wayback Machine 绕过 403 等'有创意'但可能违反 ToS 的行为，这在生产化部署时涉及合规、robots.txt 与反爬风险。此外真实长程 Agent 若被滥用，可能放大自动爬取个人信息、钓鱼、绕过访问控制等风险，需要在工具授权、站点白名单和行为审计上提前布防。数据方面本文基于用户授权浏览历史，复用时需注意 PII 处理。"
+      }
+    }
+  }
+]

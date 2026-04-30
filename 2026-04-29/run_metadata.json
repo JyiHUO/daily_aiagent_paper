@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-29",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 351,
+  "selected_count": 3,
+  "focus_titles": [
+    "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
+    "BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks",
+    "Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks"
+  ],
+  "knowledge_topic": "Harness 是什么",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-29/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

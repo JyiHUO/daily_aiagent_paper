@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a">轨迹效率 = 分数 / 步数</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#666">光看成功率不够，100 步和 30 步体验差 3 倍</text>
+
+  <!-- Left agent: Opus -->
+  <rect x="60" y="100" width="340" height="380" rx="14" fill="#fff5f5" stroke="#d9534f" stroke-width="2"/>
+  <text x="230" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#b52b27">Opus 4.6 · 每步 1 动作</text>
+
+  <!-- mini steps -->
+  <g transform="translate(90,160)">
+    <rect width="70" height="40" rx="6" fill="#fff" stroke="#d9534f"/>
+    <text x="35" y="25" text-anchor="middle" font-size="12">看→点</text>
+    <rect x="85" width="70" height="40" rx="6" fill="#fff" stroke="#d9534f"/>
+    <text x="120" y="25" text-anchor="middle" font-size="12">看→点</text>
+    <rect x="170" width="70" height="40" rx="6" fill="#fff" stroke="#d9534f"/>
+    <text x="205" y="25" text-anchor="middle" font-size="12">看→点</text>
+    <text x="275" y="25" font-size="14" fill="#b52b27">... ×81</text>
+  </g>
+
+  <rect x="90" y="230" width="280" height="110" rx="10" fill="#fff" stroke="#d9534f"/>
+  <text x="230" y="258" text-anchor="middle" font-size="14" fill="#333">Perfect 率 · 平均步数</text>
+  <text x="230" y="292" text-anchor="middle" font-size="22" font-weight="bold" fill="#b52b27">44.5%  ·  81.3 步</text>
+  <text x="230" y="322" text-anchor="middle" font-size="13" fill="#555">≈ 30 分钟 / $2.5</text>
+
+  <rect x="90" y="370" width="280" height="90" rx="10" fill="#d9534f"/>
+  <text x="230" y="400" text-anchor="middle" font-size="14" fill="#fff">效率</text>
+  <text x="230" y="440" text-anchor="middle" font-size="32" font-weight="bold" fill="#fff">1.06%</text>
+
+  <!-- Right agent: GPT -->
+  <rect x="500" y="100" width="340" height="380" rx="14" fill="#f0f8ff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="670" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f5cb2">GPT-5.4 · 每步 2.03 动作</text>
+
+  <g transform="translate(530,160)">
+    <rect width="120" height="40" rx="6" fill="#fff" stroke="#2a7ae2"/>
+    <text x="60" y="25" text-anchor="middle" font-size="11">搜索+回车+点</text>
+    <rect x="135" width="120" height="40" rx="6" fill="#fff" stroke="#2a7ae2"/>
+    <text x="195" y="25" text-anchor="middle" font-size="11">填表+提交</text>
+    <text x="280" y="25" font-size="14" fill="#1f5cb2">... ×32</text>
+  </g>
+
+  <rect x="530" y="230" width="280" height="110" rx="10" fill="#fff" stroke="#2a7ae2"/>
+  <text x="670" y="258" text-anchor="middle" font-size="14" fill="#333">Perfect 率 · 平均步数</text>
+  <text x="670" y="292" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f5cb2">33.5%  ·  64.4 步</text>
+  <text x="670" y="322" text-anchor="middle" font-size="13" fill="#555">动作批处理 → 更少调用</text>
+
+  <rect x="530" y="370" width="280" height="90" rx="10" fill="#2a7ae2"/>
+  <text x="670" y="400" text-anchor="middle" font-size="14" fill="#fff">效率（最高）</text>
+  <text x="670" y="440" text-anchor="middle" font-size="32" font-weight="bold" fill="#fff">1.15%</text>
+
+  <!-- VS -->
+  <circle cx="450" cy="290" r="26" fill="#1a1a1a"/>
+  <text x="450" y="297" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">VS</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="120" y="500" width="660" height="44" rx="8" fill="#fffbe6" stroke="#e1b000"/>
+  <text x="450" y="528" text-anchor="middle" font-size="14" fill="#6b4e00">启示：长程任务应鼓励「一轮多动作」，效率与成功率同等重要</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2d3e50"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="1" stop-color="#eaf0f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg)"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1f2d3d">六阶段结构化审计 Prompt</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#55657a">让 LLM 当流水线审计员，而不是一口气找 bug</text>
+
+  <!-- Left: six stages -->
+  <rect x="40" y="95" width="300" height="400" rx="12" fill="#ffffff" stroke="#2d3e50" stroke-width="1.5"/>
+  <text x="190" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#2d3e50">单次 LLM 调用 · 六步推理</text>
+
+  <g font-size="13" fill="#1f2d3d">
+    <rect x="60" y="140" width="260" height="45" rx="6" fill="#fef3e7" stroke="#e69b3a"/>
+    <text x="75" y="160" font-weight="700" fill="#b86b00">① 任务理解</text>
+    <text x="75" y="177" font-size="11" fill="#6b4a1a">题目到底要什么？</text>
+
+    <rect x="60" y="195" width="260" height="45" rx="6" fill="#e8f1fb" stroke="#4a86c5"/>
+    <text x="75" y="215" font-weight="700" fill="#1e4d82">② Gold 程序正确性</text>
+    <text x="75" y="232" font-size="11" fill="#2b4a6b">参考答案真对吗？</text>
+
+    <rect x="60" y="250" width="260" height="45" rx="6" fill="#e8f1fb" stroke="#4a86c5"/>
+    <text x="75" y="270" font-weight="700" fill="#1e4d82">③ 评测脚本逻辑</text>
+    <text x="75" y="287" font-size="11" fill="#2b4a6b">会不会误杀等价答案？</text>
+
+    <rect x="60" y="305" width="260" height="45" rx="6" fill="#e8f1fb" stroke="#4a86c5"/>
+    <text x="75" y="325" font-weight="700" fill="#1e4d82">④ 任务指令规范</text>
+    <text x="75" y="342" font-size="11" fill="#2b4a6b">指令是否含糊？</text>
+
+    <rect x="60" y="360" width="260" height="45" rx="6" fill="#e8f1fb" stroke="#4a86c5"/>
+    <text x="75" y="380" font-weight="700" fill="#1e4d82">⑤ 环境与数据</text>
+    <text x="75" y="397" font-size="11" fill="#2b4a6b">文件/依赖是否一致？</text>
+
+    <rect x="60" y="415" width="260" height="55" rx="6" fill="#e8f9ec" stroke="#3aa35a"/>
+    <text x="75" y="435" font-weight="700" fill="#1d6b32">⑥ 合并 &amp; 去重</text>
+    <text x="75" y="453" font-size="11" fill="#2a5c39">一修多消，同根因只留一条</text>
+  </g>
+
+  <!-- Arrow to the right -->
+  <line x1="340" y1="295" x2="400" y2="295" stroke="#2d3e50" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Right top: priority rule -->
+  <rect x="405" y="110" width="460" height="110" rx="12" fill="#fff7f0" stroke="#d97842" stroke-width="1.5"/>
+  <text x="425" y="138" font-size="15" font-weight="700" fill="#9c3d10">内置优先级规则</text>
+  <text x="425" y="163" font-size="13" fill="#4a2710">当同一问题既像 INST 又像 GT →</text>
+  <text x="425" y="185" font-size="14" font-weight="700" fill="#9c3d10">优先归为 INST（指令没写清）</text>
+  <text x="425" y="206" font-size="12" fill="#6a4a2a">大多数根因是指令模糊，gold 只是其中一种解读</text>
+
+  <!-- Right bottom: example case -->
+  <rect x="405" y="245" width="460" height="250" rx="12" fill="#ffffff" stroke="#2d3e50" stroke-width="1.5"/>
+  <text x="425" y="272" font-size="15" font-weight="700" fill="#1f2d3d">案例：BIXBench Case 6</text>
+
+  <rect x="425" y="288" width="420" height="44" rx="6" fill="#f4f7fb" stroke="#9fb4cc"/>
+  <text x="435" y="306" font-size="12" fill="#2d3e50">指令：找出所有显著差异表达基因</text>
+  <text x="435" y="323" font-size="12" fill="#2d3e50">Gold 程序：悄悄 drop 掉 KL3、WL3 样本</text>
+
+  <g font-size="12" fill="#1f2d3d">
+    <circle cx="438" cy="358" r="11" fill="#4a86c5"/><text x="438" y="362" text-anchor="middle" font-weight="700" fill="#fff">2</text>
+    <text x="460" y="362">步骤②：gold 数据处理异常 → 疑似 GT-DATA</text>
+
+    <circle cx="438" cy="390" r="11" fill="#4a86c5"/><text x="438" y="394" text-anchor="middle" font-weight="700" fill="#fff">4</text>
+    <text x="460" y="394">步骤④：指令未提过滤 → 指令确实模糊</text>
+
+    <circle cx="438" cy="422" r="11" fill="#3aa35a"/><text x="438" y="426" text-anchor="middle" font-weight="700" fill="#fff">6</text>
+    <text x="460" y="426">步骤⑥：合并 → 归类 INST-INCOMPLETE</text>
+  </g>
+
+  <rect x="425" y="446" width="420" height="38" rx="6" fill="#e8f9ec" stroke="#3aa35a"/>
+  <text x="635" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#1d6b32">输出带代码行号证据的高置信度发现</text>
+
+  <text x="450" y="530" text-anchor="middle" font-size="12" fill="#6a7a90">流水线化审计 → 少漏报、不重复，同一根因只报一次</text>
+</svg>

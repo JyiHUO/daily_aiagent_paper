@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="#f7fafc"/>
+
+  <text x="480" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1a202c">Harness：从"一坨代码" → 七个可观测文件抽屉</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#4a5568">每次修改 = 一次 git commit，可 diff、可回滚</text>
+
+  <!-- Before: tangled blob -->
+  <g>
+    <rect x="40" y="100" width="280" height="320" rx="12" fill="#fff5f5" stroke="#c53030" stroke-width="2"/>
+    <text x="180" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#c53030">Before: 缠绕的 harness</text>
+
+    <g stroke="#c53030" stroke-width="1.8" fill="none" opacity="0.55">
+      <path d="M80,200 C150,170 220,250 280,210"/>
+      <path d="M80,270 C160,310 210,200 280,280"/>
+      <path d="M90,340 C170,310 230,370 275,340"/>
+    </g>
+
+    <g font-size="11" fill="#742a2a">
+      <text x="95" y="190">prompt</text>
+      <text x="215" y="225">tools</text>
+      <text x="90" y="260">middleware</text>
+      <text x="220" y="295">memory</text>
+      <text x="110" y="330">skills</text>
+      <text x="210" y="365">sub-agent</text>
+    </g>
+
+    <text x="180" y="400" text-anchor="middle" font-size="12" fill="#742a2a">改哪儿？谁起作用？说不清</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="335" y1="260" x2="400" y2="260" stroke="#2b6cb0" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="367" y="250" text-anchor="middle" font-size="12" fill="#2b6cb0">拆解</text>
+
+  <!-- After: 7 drawers -->
+  <g>
+    <rect x="410" y="100" width="510" height="320" rx="12" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="665" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#2b6cb0">After: 7 类正交组件文件</text>
+
+    <g font-size="12" fill="#1a365d">
+      <rect x="430" y="150" width="145" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="502" y="173" text-anchor="middle" font-weight="600">system prompt</text>
+      <text x="502" y="192" text-anchor="middle" font-size="10" fill="#718096">prompt.md</text>
+
+      <rect x="585" y="150" width="145" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="657" y="173" text-anchor="middle" font-weight="600">tool desc</text>
+      <text x="657" y="192" text-anchor="middle" font-size="10" fill="#718096">tools/*.yaml</text>
+
+      <rect x="740" y="150" width="160" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="820" y="173" text-anchor="middle" font-weight="600">tool impl</text>
+      <text x="820" y="192" text-anchor="middle" font-size="10" fill="#718096">tools/*.py</text>
+
+      <rect x="430" y="218" width="145" height="54" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-width="2.5"/>
+      <text x="502" y="241" text-anchor="middle" font-weight="700" fill="#9c4221">middleware</text>
+      <text x="502" y="260" text-anchor="middle" font-size="10" fill="#9c4221">middleware/*.py</text>
+
+      <rect x="585" y="218" width="145" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="657" y="241" text-anchor="middle" font-weight="600">skill</text>
+      <text x="657" y="260" text-anchor="middle" font-size="10" fill="#718096">skills/*.md</text>
+
+      <rect x="740" y="218" width="160" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="820" y="241" text-anchor="middle" font-weight="600">sub-agent cfg</text>
+      <text x="820" y="260" text-anchor="middle" font-size="10" fill="#718096">agents/*.yaml</text>
+
+      <rect x="585" y="286" width="145" height="54" rx="6" fill="#fff" stroke="#2b6cb0"/>
+      <text x="657" y="309" text-anchor="middle" font-weight="600">long-term memory</text>
+      <text x="657" y="328" text-anchor="middle" font-size="10" fill="#718096">memory/*.json</text>
+    </g>
+
+    <!-- callout for middleware edit -->
+    <rect x="430" y="354" width="470" height="52" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-dasharray="4,3"/>
+    <text x="445" y="374" font-size="12" fill="#9c4221" font-weight="600">例：模型成功后乱改已验证状态</text>
+    <text x="445" y="394" font-size="11" fill="#744210">→ 只动 middleware/post_success_block.py，一次 commit，失效就 revert</text>
+  </g>
+
+  <!-- bottom caption -->
+  <g>
+    <rect x="40" y="450" width="880" height="120" rx="10" fill="#fff" stroke="#cbd5e0"/>
+    <text x="60" y="480" font-size="14" font-weight="700" fill="#1a202c">组件可观测性 (Component Observability)</text>
+
+    <text x="60" y="508" font-size="12" fill="#2d3748">• 7 类正交组件，各自独立文件，低耦合</text>
+    <text x="60" y="530" font-size="12" fill="#2d3748">• 每次 evolve = 一个 git commit，带 diff 与回滚粒度</text>
+    <text x="60" y="552" font-size="12" fill="#2d3748">• 种子 harness 极简（仅 shell 工具），避免污染归因</text>
+
+    <text x="500" y="508" font-size="12" fill="#2b6cb0">evolve agent 的动作空间 → 清晰、可审计</text>
+    <text x="500" y="530" font-size="12" fill="#2b6cb0">失败模式 ↔ 组件类 一一对应</text>
+    <text x="500" y="552" font-size="12" fill="#c53030">改错了？一键 revert 那个文件即可</text>
+  </g>
+</svg>

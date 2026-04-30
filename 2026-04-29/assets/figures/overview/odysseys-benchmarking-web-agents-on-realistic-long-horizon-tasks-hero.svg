@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1430"/>
+      <stop offset="1" stop-color="#1a1f4a"/>
+    </linearGradient>
+    <linearGradient id="gReal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ec6ff"/>
+      <stop offset="1" stop-color="#2b7bd6"/>
+    </linearGradient>
+    <linearGradient id="gRubric" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ef8a3c"/>
+    </linearGradient>
+    <linearGradient id="gEff" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6b9d"/>
+      <stop offset="1" stop-color="#c93a82"/>
+    </linearGradient>
+    <linearGradient id="gAgent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ef6c8"/>
+      <stop offset="1" stop-color="#3cc29a"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cfd6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <text x="640" y="52" text-anchor="middle" fill="#fff" font-size="28" font-weight="700">Odysseys：面向真实长程浏览的 Web Agent 评测闭环</text>
+  <text x="640" y="80" text-anchor="middle" fill="#9aa7d6" font-size="15">200 个跨站长任务 · rubric 细粒度评分 · 把轨迹效率当作一等指标</text>
+
+  <!-- LEFT -->
+  <g transform="translate(60,130)">
+    <rect width="300" height="520" rx="18" fill="#1b2350" stroke="#2f3c7a"/>
+    <text x="150" y="32" text-anchor="middle" fill="#8fd4ff" font-size="13" font-weight="700">① 真实浏览历史挖掘</text>
+
+    <g transform="translate(20,50)">
+      <circle cx="20" cy="20" r="14" fill="#3ec6ff"/>
+      <circle cx="55" cy="20" r="14" fill="#3ec6ff" opacity="0.8"/>
+      <circle cx="90" cy="20" r="14" fill="#3ec6ff" opacity="0.6"/>
+      <text x="150" y="15" fill="#cfd6ff" font-size="12">248 名 Prolific 标注员</text>
+      <text x="150" y="31" fill="#8a95c8" font-size="11">读取本地 Chrome 历史</text>
+    </g>
+
+    <g transform="translate(20,100)">
+      <rect width="260" height="56" rx="8" fill="#0f1a3e" stroke="url(#gReal)"/>
+      <text x="12" y="20" fill="#9aa7d6" font-size="11">Chrome Journey 切片</text>
+      <rect x="10" y="28" width="38" height="18" rx="3" fill="#2b7bd6"/>
+      <rect x="52" y="28" width="38" height="18" rx="3" fill="#2b7bd6" opacity="0.8"/>
+      <rect x="94" y="28" width="38" height="18" rx="3" fill="#2b7bd6" opacity="0.65"/>
+      <rect x="136" y="28" width="38" height="18" rx="3" fill="#2b7bd6" opacity="0.5"/>
+      <rect x="178" y="28" width="38" height="18" rx="3" fill="#2b7bd6" opacity="0.35"/>
+      <text x="225" y="41" fill="#cfd6ff" font-size="11">2380 条</text>
+    </g>
+
+    <g transform="translate(20,172)">
+      <path d="M0 0 L260 0 L200 28 L60 28 Z" fill="#0f1a3e" stroke="#3ec6ff"/>
+      <text x="130" y="18" text-anchor="middle" fill="#cfd6ff" font-size="11">LLM + 人工筛选 → 696 条</text>
+    </g>
+
+    <g transform="translate(20,218)">
+      <rect width="260" height="70" rx="8" fill="#0f1a3e" stroke="#3ec6ff" stroke-dasharray="3 3"/>
+      <circle cx="45" cy="35" r="10" fill="#3ec6ff"/>
+      <circle cx="70" cy="22" r="8" fill="#3ec6ff" opacity="0.75"/>
+      <circle cx="68" cy="50" r="7" fill="#3ec6ff" opacity="0.75"/>
+      <text x="110" y="30" fill="#cfd6ff" font-size="11">embedding 聚类</text>
+      <text x="110" y="46" fill="#8a95c8" font-size="10.5">GPT 拼接为多步长任务</text>
+      <text x="110" y="60" fill="#8a95c8" font-size="10.5">+ 指令 / 计划 / rubric</text>
+    </g>
+
+    <g transform="translate(20,304)">
+      <rect width="260" height="86" rx="10" fill="url(#gReal)"/>
+      <text x="130" y="24" text-anchor="middle" fill="#0b1030" font-size="14" font-weight="700">Odysseys · 200 个长任务</text>
+      <text x="130" y="46" text-anchor="middle" fill="#0b1030" font-size="11">易 45 · 中 46 · 难 109</text>
+      <text x="130" y="64" text-anchor="middle" fill="#0b1030" font-size="11">跨多站点 · 数小时工作流</text>
+      <text x="130" y="80" text-anchor="middle" fill="#0b1030" font-size="10.5" opacity="0.75">平均 6.1 条 rubric / 任务</text>
+    </g>
+
+    <g transform="translate(20,408)">
+      <rect width="260" height="96" rx="8" fill="#0f1a3e" stroke="#2f3c7a"/>
+      <text x="12" y="18" fill="#ffd166" font-size="11" font-weight="700">示例任务</text>
+      <text x="12" y="36" fill="#cfd6ff" font-size="10.5">“规划棕榈泉婚礼行程”</text>
+      <text x="12" y="52" fill="#8a95c8" font-size="10">Google Flights · Maps ·</text>
+      <text x="12" y="66" fill="#8a95c8" font-size="10">餐厅评估 · CryptPad 文档</text>
+      <text x="12" y="84" fill="#7ef6c8" font-size="10">8 步 · 跨 4 个站点</text>
+    </g>
+  </g>
+
+  <!-- CENTER -->
+  <g transform="translate(420,130)">
+    <rect width="440" height="520" rx="18" fill="#1b2350" stroke="#2f3c7a"/>
+    <text x="220" y="32" text-anchor="middle" fill="#7ef6c8" font-size="13" font-weight="700">② Live Internet 竞技场：Agent 运行轨迹</text>
+
+    <g transform="translate(24,54)">
+      <rect width="180" height="48" rx="10" fill="url(#gAgent)"/>
+      <text x="90" y="22" text-anchor="middle" fill="#0b1030" font-size="12" font-weight="700">前沿 Agent</text>
+      <text x="90" y="38" text-anchor="middle" fill="#0b1030" font-size="10.5">Opus 4.6 · GPT-5.4 · Sonnet</text>
+    </g>
+    <g transform="translate(228,54)">
+      <rect width="188" height="48" rx="10" fill="#0f1a3e" stroke="#3cc29a"/>
+      <text x="94" y="22" text-anchor="middle" fill="#7ef6c8" font-size="12" font-weight="700">开源基线</text>
+      <text x="94" y="38" text-anchor="middle" fill="#9aa7d6" font-size="10.5">Qwen-3.5 · UI-TARS</text>
+    </g>
+
+    <text x="24" y="128" fill="#9aa7d6" font-size="11">100 步轨迹 (observe → act 循环)</text>
+    <g transform="translate(24,138)">
+      <rect width="392" height="40" rx="6" fill="#0b1234" stroke="#2f3c7a"/>
+      <g fill="#3ec6ff">
+        <rect x="6" y="8" width="10" height="24" rx="2"/>
+        <rect x="20" y="8" width="10" height="24" rx="2"/>
+        <rect x="34" y="8" width="10" height="24" rx="2"/>
+        <rect x="48" y="8" width="10" height="24" rx="2" opacity="0.85"/>
+        <rect x="62" y="8" width="10" height="24" rx="2" opacity="0.85"/>
+        <rect x="76" y="8" width="10" height="24" rx="2" opacity="0.85"/>
+        <rect x="90" y="8" width="10" height="24" rx="2" opacity="0.7"/>
+      </g>
+      <g fill="#ffd166">
+        <rect x="110" y="8" width="10" height="24" rx="2"/>
+        <rect x="124" y="8" width="10" height="24" rx="2"/>
+        <rect x="138" y="8" width="10" height="24" rx="2"/>
+      </g>
+      <g fill="#7ef6c8">
+        <rect x="158" y="8" width="10" height="24" rx="2"/>
+        <rect x="172" y="8" width="10" height="24" rx="2"/>
+        <rect x="186" y="8" width="10" height="24" rx="2"/>
+        <rect x="200" y="8" width="10" height="24" rx="2"/>
+      </g>
+      <g fill="#ff6b9d">
+        <rect x="220" y="8" width="10" height="24" rx="2"/>
+        <rect x="234" y="8" width="10" height="24" rx="2"/>
+        <rect x="248" y="8" width="10" height="24" rx="2"/>
+      </g>
+      <g fill="#3ec6ff" opacity="0.35">
+        <rect x="272" y="8" width="10" height="24" rx="2"/>
+        <rect x="286" y="8" width="10" height="24" rx="2"/>
+        <rect x="300" y="8" width="10" height="24" rx="2"/>
+        <rect x="314" y="8" width="10" height="24" rx="2"/>
+        <rect x="328" y="8" width="10" height="24" rx="2"/>
+        <rect x="342" y="8" width="10" height="24" rx="2"/>
+        <rect x="356" y="8" width="10" height="24" rx="2"/>
+        <rect x="370" y="8" width="10" height="24" rx="2"/>
+      </g>
+    </g>
+    <g font-size="10" fill="#8a95c8" transform="translate(24,192)">
+      <text x="44" y="0">搜索</text>
+      <text x="124" y="0">比较</text>
+      <text x="186" y="0">规划</text>
+      <text x="248" y="0">整合</text>
+    </g>
+
+    <g transform="translate(24,216)">
+      <rect width="392" height="180" rx="12" fill="#0f1a3e" stroke="url(#gRubric)"/>
+      <text x="14" y="22" fill="#ffd166" font-size="12" font-weight="700">③ Rubric 细粒度评分 (LLM-as-judge)</text>
+      <text x="14" y="38" fill="#8a95c8" font-size="10.5">对轨迹截图+动作逐条判 0/1，替代一刀切 pass/fail</text>
+
+      <g font-size="11" transform="translate(14,54)">
+        <g transform="translate(0,0)">
+          <circle cx="8" cy="8" r="7" fill="#7ef6c8"/>
+          <text x="4.5" y="12" fill="#0b1030" font-weight="700" font-size="10">✓</text>
+          <text x="24" y="12" fill="#cfd6ff">R1  搜了 PIT→LAX 直飞</text>
+        </g>
+        <g transform="translate(0,22)">
+          <circle cx="8" cy="8" r="7" fill="#7ef6c8"/>
+          <text x="4.5" y="12" fill="#0b1030" font-weight="700" font-size="10">✓</text>
+          <text x="24" y="12" fill="#cfd6ff">R2  搜了 PIT→PSP 最佳航班</text>
+        </g>
+        <g transform="translate(0,44)">
+          <circle cx="8" cy="8" r="7" fill="#7ef6c8"/>
+          <text x="4.5" y="12" fill="#0b1030" font-weight="700" font-size="10">✓</text>
+          <text x="24" y="12" fill="#cfd6ff">R3  估算 LAX→棕榈泉开车时间</text>
+        </g>
+        <g transform="translate(0,66)">
+          <circle cx="8" cy="8" r="7" fill="#7ef6c8"/>
+          <text x="4.5" y="12" fill="#0b1030" font-weight="700" font-size="10">✓</text>
+          <text x="24" y="12" fill="#cfd6ff">R4~R7  餐厅评估 · 逐日规划</text>
+        </g>
+        <g transform="translate(0,88)">
+          <circle cx="8" cy="8" r="7" fill="#ff6b9d"/>
+          <text x="5" y="12" fill="#0b1030" font-weight="700" font-size="10">✗</text>
+          <text x="24" y="12" fill="#cfd6ff">R8  CryptPad 写出最终行程文档</text>
+        </g>
+      </g>
+
+      <g transform="translate(220,66)">
+        <text x="80" y="0" text-anchor="middle" fill="#9aa7d6" font-size="10.5">averaged 得分</text>
+        <rect x="0" y="10" width="160" height="14" rx="7" fill="#1b2350" stroke="#2f3c7a"/>
+        <rect x="0" y="10" width="140" height="14" rx="7" fill="url(#gRubric)"/>
+        <text x="80" y="40" text-anchor="middle" fill="#ffd166" font-size="16" font-weight="700">7 / 8  =  88%</text>
+        <text x="80" y="58" text-anchor="middle" fill="#8a95c8" font-size="10">perfect=0（未全中）</text>
+        <text x="80" y="92" text-anchor="middle" fill="#7ef6c8" font-size="10.5">κ=0.788 · F1=0.949</text>
+        <text x="80" y="106" text-anchor="middle" fill="#8a95c8" font-size="9.5">优于轨迹级 judge</text>
+      </g>
+    </g>
+
+    <g transform="translate(24,410)">
+      <rect width="392" height="94" rx="12" fill="#0f1a3e" stroke="url(#gEff)"/>
+      <text x="14" y="22" fill="#ff6b9d" font-size="12" font-weight="700">④ 轨迹效率 = rubric 得分 / 步数</text>
+      <text x="14" y="40" fill="#8a95c8" font-size="10.5">长程任务：不是“终能做完”，而是“多快做完”</text>
+
+      <g transform="translate(14,54)">
+        <text x="0" y="12" fill="#cfd6ff" font-size="11">GPT-5.4</text>
+        <rect x="90" y="2" width="180" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="2" width="175" height="12" rx="6" fill="url(#gEff)"/>
+        <text x="280" y="12" fill="#ff6b9d" font-size="11" font-weight="700">1.15%</text>
+        <text x="326" y="12" fill="#8a95c8" font-size="10">64 步 · 多动作</text>
+
+        <text x="0" y="32" fill="#cfd6ff" font-size="11">Opus 4.6</text>
+        <rect x="90" y="22" width="180" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="22" width="162" height="12" rx="6" fill="url(#gEff)" opacity="0.7"/>
+        <text x="280" y="32" fill="#ff6b9d" font-size="11" font-weight="700">1.06%</text>
+        <text x="326" y="32" fill="#8a95c8" font-size="10">81 步 · 单动作</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT -->
+  <g transform="translate(920,130)">
+    <rect width="300" height="520" rx="18" fill="#1b2350" stroke="#2f3c7a"/>
+    <text x="150" y="32" text-anchor="middle" fill="#ff6b9d" font-size="13" font-weight="700">⑤ 诊断 → 下一代 Agent</text>
+
+    <g transform="translate(20,50)">
+      <text x="0" y="12" fill="#9aa7d6" font-size="11">perfect 通过率 (100 步预算)</text>
+
+      <g transform="translate(0,22)" font-size="11">
+        <text x="0" y="12" fill="#cfd6ff">Opus 4.6</text>
+        <rect x="90" y="2" width="170" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="2" width="76" height="12" rx="6" fill="#7ef6c8"/>
+        <text x="268" y="12" fill="#7ef6c8" font-weight="700">44.5%</text>
+
+        <text x="0" y="32" fill="#cfd6ff">GPT-5.4</text>
+        <rect x="90" y="22" width="170" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="22" width="57" height="12" rx="6" fill="#3ec6ff"/>
+        <text x="268" y="32" fill="#3ec6ff" font-weight="700">33.5%</text>
+
+        <text x="0" y="52" fill="#cfd6ff">Sonnet 4.6</text>
+        <rect x="90" y="42" width="170" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="42" width="53" height="12" rx="6" fill="#3ec6ff" opacity="0.75"/>
+        <text x="268" y="52" fill="#cfd6ff" font-weight="700">31%</text>
+
+        <text x="0" y="72" fill="#cfd6ff">Qwen-3.5</text>
+        <rect x="90" y="62" width="170" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="62" width="23" height="12" rx="6" fill="#ffd166"/>
+        <text x="268" y="72" fill="#ffd166" font-weight="700">13.5%</text>
+
+        <text x="0" y="92" fill="#cfd6ff">UI-TARS</text>
+        <rect x="90" y="82" width="170" height="12" rx="6" fill="#1b2350"/>
+        <rect x="90" y="82" width="3" height="12" rx="2" fill="#ff6b9d"/>
+        <text x="268" y="92" fill="#ff6b9d" font-weight="700">1%</text>
+      </g>
+    </g>
+
+    <g transform="translate(20,200)">
+      <rect width="260" height="150" rx="10" fill="#0f1a3e" stroke="#2f3c7a"/>
+      <text x="12" y="20" fill="#ff6b9d" font-size="12" font-weight="700">典型失败模式</text>
+
+      <g transform="translate(12,32)" font-size="10.5">
+        <circle cx="4" cy="8" r="3" fill="#ff6b9d"/>
+        <text x="14" y="11" fill="#cfd6ff">Opus：过度研究，不交付</text>
+        <text x="14" y="25" fill="#8a95c8">100 步耗尽仍未写出文档</text>
+
+        <circle cx="4" cy="46" r="3" fill="#ffd166"/>
+        <text x="14" y="49" fill="#cfd6ff">GPT：早早 DONE，浅尝辄止</text>
+        <text x="14" y="63" fill="#8a95c8">规划漂亮但只执行几步</text>
+
+        <circle cx="4" cy="84" r="3" fill="#3ec6ff"/>
+        <text x="14" y="87" fill="#cfd6ff">高 fanout 任务全员卡死</text>
+        <text x="14" y="101" fill="#8a95c8">单 Agent 难并行 30 子项</text>
+      </g>
+    </g>
+
+    <g transform="translate(20,368)">
+      <rect width="260" height="136" rx="12" fill="url(#gAgent)"/>
+      <text x="130" y="26" text-anchor="middle" fill="#0b1030" font-size="13" font-weight="700">驱动下一代 Web Agent</text>
+      <g font-size="11" fill="#0b1030" transform="translate(18,42)">
+        <text x="0" y="0">• rubric 分数 → 部分奖励信号</text>
+        <text x="0" y="20">• 多动作批处理 → 提升效率</text>
+        <text x="0" y="40">• 多 Agent 分工攻高 fanout</text>
+        <text x="0" y="60">• 更长 horizon、更难环境</text>
+      </g>
+      <text x="130" y="128" text-anchor="middle" fill="#0b1030" font-size="10" opacity="0.7">环境与 Agent 共同进化</text>
+    </g>
+  </g>
+
+  <!-- Connecting arrows -->
+  <path d="M360 390 L 418 390" stroke="#3ec6ff" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="389" y="382" text-anchor="middle" fill="#8fd4ff" font-size="10">部署到</text>
+
+  <path d="M862 390 L 918 390" stroke="#ff6b9d" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="890" y="382" text-anchor="middle" fill="#ff9bc0" font-size="10">诊断</text>
+
+  <!-- Loop feedback -->
+  <path d="M1070 655 C 1070 705, 800 725, 640 725 C 480 725, 210 705, 210 655"
+        stroke="#7ef6c8" stroke-width="2.2" fill="none" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <text x="640" y="718" text-anchor="middle" fill="#7ef6c8" font-size="11.5" font-weight="600">靶向训练 → 更强 Agent · 更难任务 · 回灌 Odysseys</text>
+
+  <!-- Footer badges -->
+  <g transform="translate(60,742)" font-size="11">
+    <rect width="110" height="26" rx="13" fill="#0f1a3e" stroke="#3ec6ff"/>
+    <text x="55" y="17" text-anchor="middle" fill="#8fd4ff">200 个长任务</text>
+  </g>
+  <g transform="translate(180,742)" font-size="11">
+    <rect width="120" height="26" rx="13" fill="#0f1a3e" stroke="#ffd166"/>
+    <text x="60" y="17" text-anchor="middle" fill="#ffd166">1225 条 rubric</text>
+  </g>
+  <g transform="translate(310,742)" font-size="11">
+    <rect width="130" height="26" rx="13" fill="#0f1a3e" stroke="#ff6b9d"/>
+    <text x="65" y="17" text-anchor="middle" fill="#ff9bc0">效率 &lt; 1.2%</text>
+  </g>
+</svg>

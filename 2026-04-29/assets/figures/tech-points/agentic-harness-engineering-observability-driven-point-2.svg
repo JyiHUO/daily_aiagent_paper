@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#805ad5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f9fc"/>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a202c">分层轨迹蒸馏：让 Evolve Agent 少读、读得准</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#4a5568">千万 token 原始轨迹 → 结构化证据库，按需钻取</text>
+
+  <!-- Raw traces -->
+  <g>
+    <rect x="40" y="110" width="200" height="340" rx="10" fill="#fee2e2" stroke="#c53030" stroke-width="2"/>
+    <text x="140" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#742a2a">原始轨迹</text>
+    <text x="140" y="158" text-anchor="middle" font-size="12" fill="#742a2a">~10M tokens · 噪声大</text>
+
+    <g font-size="10" fill="#9b2c2c" font-family="monospace">
+      <rect x="60" y="180" width="160" height="14" fill="#fff5f5" stroke="#feb2b2"/>
+      <text x="66" y="190">msg_001.json</text>
+      <rect x="60" y="200" width="160" height="14" fill="#fff5f5" stroke="#feb2b2"/>
+      <text x="66" y="210">msg_002.json</text>
+      <rect x="60" y="220" width="160" height="14" fill="#fff5f5" stroke="#feb2b2"/>
+      <text x="66" y="230">msg_003.json</text>
+      <text x="140" y="252" text-anchor="middle">...</text>
+      <rect x="60" y="262" width="160" height="14" fill="#fff5f5" stroke="#feb2b2"/>
+      <text x="66" y="272">msg_N.json</text>
+    </g>
+    <text x="140" y="305" text-anchor="middle" font-size="11" fill="#742a2a">每条消息独立文件</text>
+
+    <rect x="60" y="330" width="160" height="100" rx="6" fill="#fff" stroke="#c53030"/>
+    <text x="140" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#c53030">Agent Debugger</text>
+    <text x="140" y="374" text-anchor="middle" font-size="10" fill="#4a5568">shell / grep 导航</text>
+    <text x="140" y="392" text-anchor="middle" font-size="10" fill="#4a5568">定位根因</text>
+    <text x="140" y="410" text-anchor="middle" font-size="10" fill="#4a5568">生成报告</text>
+  </g>
+
+  <!-- Per-task reports -->
+  <g>
+    <rect x="330" y="200" width="220" height="180" rx="10" fill="#fefcbf" stroke="#b7791f" stroke-width="2"/>
+    <text x="440" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#744210">Per-Task 报告</text>
+    <text x="440" y="246" text-anchor="middle" font-size="11" fill="#744210">结构化分析</text>
+    <g font-size="11" fill="#744210">
+      <text x="344" y="278">• task_42: shell timeout</text>
+      <text x="344" y="300">• task_78: 路径解析失败</text>
+      <text x="344" y="322">• task_93: 成功模式 ✓</text>
+      <text x="344" y="344">• ...</text>
+      <text x="344" y="368" font-weight="bold">根因 + 修复建议</text>
+    </g>
+  </g>
+
+  <!-- Overview -->
+  <g>
+    <rect x="620" y="110" width="240" height="150" rx="10" fill="#c6f6d5" stroke="#276749" stroke-width="2"/>
+    <text x="740" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#22543d">Benchmark Overview</text>
+    <text x="740" y="158" text-anchor="middle" font-size="11" fill="#22543d">聚合总览 · 最先读</text>
+    <g font-size="11" fill="#22543d">
+      <text x="634" y="188">⚠ shell 超时 = 高频失败</text>
+      <text x="634" y="210">⚠ 长路径工具易出错</text>
+      <text x="634" y="232">✓ TDD 流程普遍奏效</text>
+    </g>
+  </g>
+
+  <!-- Evolve Agent -->
+  <g>
+    <rect x="620" y="310" width="240" height="150" rx="10" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="740" y="338" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a365d">Evolve Agent</text>
+    <text x="740" y="360" text-anchor="middle" font-size="11" fill="#2c5282">渐进式钻取 (drill-down)</text>
+    <text x="740" y="384" text-anchor="middle" font-size="11" fill="#2c5282">1. 看 Overview 定位可疑点</text>
+    <text x="740" y="406" text-anchor="middle" font-size="11" fill="#2c5282">2. 打开相关 Per-Task 报告</text>
+    <text x="740" y="428" text-anchor="middle" font-size="11" fill="#2c5282">3. 必要时回看原始 trace</text>
+  </g>
+
+  <!-- Arrows: raw -> per-task -->
+  <path d="M240,280 L 328,280" fill="none" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="284" y="272" text-anchor="middle" font-size="11" fill="#2b6cb0">蒸馏</text>
+
+  <!-- per-task -> overview -->
+  <path d="M550,220 L 618,180" fill="none" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="578" y="210" font-size="11" fill="#2b6cb0">聚合</text>
+
+  <!-- overview -> evolve -->
+  <path d="M740,260 L 740,308" fill="none" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="750" y="288" font-size="11" fill="#2b6cb0">先读</text>
+
+  <!-- evolve drill back to per-task -->
+  <path d="M618,360 L 552,320" fill="none" stroke="#805ad5" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrP)"/>
+  <text x="560" y="358" font-size="11" fill="#805ad5">按需钻取</text>
+
+  <!-- evolve drill back to raw -->
+  <path d="M620,430 L 400,475 L 240,430" fill="none" stroke="#805ad5" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrP)"/>
+  <text x="410" y="495" text-anchor="middle" font-size="11" fill="#805ad5">极少数情况才回看原始 trace</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="535" text-anchor="middle" font-size="12" fill="#4a5568" font-style="italic">结果：token 开销大降，根因判断更准 —— 经验变成可渐进披露的证据库</text>
+</svg>
