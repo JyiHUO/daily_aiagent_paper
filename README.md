@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-30
+- **日期**：2026-05-01
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital
-  - Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents
-  - SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent
-- **日报路径**：[2026-04-30/daily_report.md](2026-04-30/daily_report.md)
+  - Synthetic Computers at Scale for Long-Horizon Productivity Simulation
+  - Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes
+  - MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents
+- **日报路径**：[2026-05-01/daily_report.md](2026-05-01/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-01 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Synthetic Computers at Scale for Long-Horizon Productivity Simulation | [2026-05-01/daily_report.md](2026-05-01/daily_report.md) |
+|  |  |  | 2 | Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes |  |
+|  |  |  | 3 | MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents |  |
 | 2026-04-30 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital | [2026-04-30/daily_report.md](2026-04-30/daily_report.md) |
 |  |  |  | 2 | Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents |  |
 |  |  |  | 3 | SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent |  |

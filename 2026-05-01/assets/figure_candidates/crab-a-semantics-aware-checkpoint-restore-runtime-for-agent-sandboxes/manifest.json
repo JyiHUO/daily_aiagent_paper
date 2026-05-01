@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/downloaded_pdfs/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-36",
+      "page_index": 4,
+      "caption": "Figure 5. Architecture overview of Crab; yellow blocks are key components of Crab.",
+      "clip": [
+        299.9549865722656,
+        55.99827575683594,
+        575.9502563476562,
+        201.3645782470703
+      ],
+      "clip_area": 40120.411872043274,
+      "page_area": 484704.0,
+      "text_density": 0.2572066821777806,
+      "kind": "drawing_cluster_with_caption",
+      "score": 33.81338142346698,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-17",
+      "page_index": 7,
+      "caption": "Figure 8. The Checkpoint Manager maintains versioned recoverable manifests over partial filesystem and process checkpoints ( left ), and enforces transactional checkpoint publication through lifecycle tracking ( right ).",
+      "clip": [
+        36.0,
+        55.99964904785156,
+        312.0025329589844,
+        161.2919464111328
+      ],
+      "clip_area": 29060.940773336217,
+      "page_area": 484704.0,
+      "text_density": 0.27173818732392546,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.818608102490433,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/02-p8-drawing_cluster_with_caption.png",
+      "filename": "02-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-25",
+      "page_index": 2,
+      "caption": "Figure 1. Recovery-state gap under four recovery strategies. Left: task solve rate. Right: CDF of per-task runtime. Slow- down is defined as median restart / no failure solve time.",
+      "clip": [
+        284.95703125,
+        11.005722045898438,
+        576.4215087890625,
+        246.44482421875
+      ],
+      "clip_area": 68622.13490707614,
+      "page_area": 484704.0,
+      "text_density": 0.24373592584888,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.938312614701385,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/03-p3-drawing_cluster_with_caption.png",
+      "filename": "03-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-17",
+      "page_index": 7,
+      "caption": "Figure 8. The Checkpoint Manager maintains versioned recoverable manifests over partial filesystem and process checkpoints ( left ), and enforces transactional checkpoint publication through lifecycle tracking ( right ).",
+      "clip": [
+        23.4,
+        18.0,
+        324.6433349609375,
+        150.07980346679688
+      ],
+      "clip_area": 39788.160477323094,
+      "page_area": 484704.0,
+      "text_density": 0.17909633864591573,
+      "kind": "captioned_figure",
+      "score": 21.496310353215314,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/04-p8-captioned_figure.png",
+      "filename": "04-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-3-block-19",
+      "page_index": 3,
+      "caption": "Figure 2. Agent turn-time distribution and checkpoint pres- sure at host scale. Left: CDF of agent turn time. Right: host- side ch eckpoint arrival RPS distribution vs sandbox density.",
+      "clip": [
+        23.4,
+        18.0,
+        326.3325439453125,
+        153.1007537841797
+      ],
+      "clip_area": 40926.41503277086,
+      "page_area": 484704.0,
+      "text_density": 0.14398003363798226,
+      "kind": "captioned_figure",
+      "score": 20.615935926529627,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/05-p4-captioned_figure.png",
+      "filename": "05-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-25",
+      "page_index": 2,
+      "caption": "Figure 1. Recovery-state gap under four recovery strategies. Left: task solve rate. Right: CDF of per-task runtime. Slow- down is defined as median restart / no failure solve time.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        590.2787109375,
+        229.6613311767578
+      ],
+      "clip_area": 64117.23874416678,
+      "page_area": 484704.0,
+      "text_density": 0.2204225169901114,
+      "kind": "captioned_figure",
+      "score": 15.28706274441739,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/06-p3-captioned_figure.png",
+      "filename": "06-p3-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/crab-a-semantics-aware-checkpoint-restore-runtime-for-agent-sandboxes/contact-sheet.svg"
+}

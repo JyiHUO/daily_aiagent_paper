@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c026d3"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">双 Agent 长程仿真：模拟一个月上班节奏</text>
+
+  <!-- Setup Agent -->
+  <rect x="40" y="80" width="210" height="150" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="145" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#92400e">Setup Agent</text>
+  <text x="145" y="140" text-anchor="middle" font-size="12" fill="#78350f">定一个月目标 · 5 个交付物</text>
+  <text x="145" y="164" text-anchor="middle" font-size="12" fill="#78350f">造一组协作者</text>
+  <text x="145" y="196" text-anchor="middle" font-size="11" fill="#a16207" font-style="italic">经理 / 客户 / 合规</text>
+
+  <!-- Work Agent -->
+  <rect x="335" y="80" width="240" height="150" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="455" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">Work Agent（扮演用户）</text>
+  <text x="455" y="140" text-anchor="middle" font-size="12" fill="#1e40af">每周规划 · 每天独立 session</text>
+  <text x="455" y="164" text-anchor="middle" font-size="12" fill="#1e40af">读文件 → 改文件 → 发消息</text>
+  <text x="455" y="196" text-anchor="middle" font-size="11" fill="#3b82f6" font-style="italic">像真的打工人一样上班</text>
+
+  <!-- Collaborators -->
+  <rect x="660" y="80" width="200" height="150" rx="12" fill="#fce7f3" stroke="#c026d3" stroke-width="2"/>
+  <text x="760" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#86198f">协作者</text>
+  <text x="760" y="140" text-anchor="middle" font-size="12" fill="#86198f">角色 / 语气</text>
+  <text x="760" y="164" text-anchor="middle" font-size="12" fill="#86198f">私藏关键材料，问了才给</text>
+  <text x="760" y="196" text-anchor="middle" font-size="11" fill="#a21caf" font-style="italic">逼 Agent 学沟通</text>
+
+  <!-- arrows top row -->
+  <path d="M250,155 L333,155" stroke="#334155" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="291" y="148" text-anchor="middle" font-size="11" fill="#334155">布置目标</text>
+
+  <path d="M575,140 L658,140" stroke="#c026d3" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <text x="616" y="132" text-anchor="middle" font-size="11" fill="#c026d3">邮件/提问</text>
+
+  <path d="M658,180 L575,180" stroke="#c026d3" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <text x="616" y="196" text-anchor="middle" font-size="11" fill="#c026d3">反馈/资料</text>
+
+  <!-- Weekly mini-timeline -->
+  <rect x="40" y="260" width="820" height="250" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="450" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">示例：金融顾问的一周</text>
+
+  <!-- Mon -->
+  <rect x="60" y="310" width="140" height="160" rx="8" fill="#ffffff" stroke="#64748b"/>
+  <text x="130" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">周一</text>
+  <text x="130" y="362" text-anchor="middle" font-size="11" fill="#334155">给 Vanguard 的</text>
+  <text x="130" y="380" text-anchor="middle" font-size="11" fill="#334155">Patricia 发邮件</text>
+  <text x="130" y="398" text-anchor="middle" font-size="11" fill="#334155">索要数据</text>
+  <text x="130" y="442" text-anchor="middle" font-size="22">📧</text>
+
+  <!-- Wed -->
+  <rect x="220" y="310" width="140" height="160" rx="8" fill="#ffffff" stroke="#64748b"/>
+  <text x="290" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">周三</text>
+  <text x="290" y="362" text-anchor="middle" font-size="11" fill="#334155">与 HNW 客户</text>
+  <text x="290" y="380" text-anchor="middle" font-size="11" fill="#334155">Castellano</text>
+  <text x="290" y="398" text-anchor="middle" font-size="11" fill="#334155">开会 + 写纪要</text>
+  <text x="290" y="442" text-anchor="middle" font-size="22">📞</text>
+
+  <!-- Thu -->
+  <rect x="380" y="310" width="140" height="160" rx="8" fill="#ffffff" stroke="#64748b"/>
+  <text x="450" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">周四</text>
+  <text x="450" y="362" text-anchor="middle" font-size="11" fill="#334155">搭建 VCMM</text>
+  <text x="450" y="380" text-anchor="middle" font-size="11" fill="#334155">2026 vs 2025</text>
+  <text x="450" y="398" text-anchor="middle" font-size="11" fill="#334155">差异分析表</text>
+  <text x="450" y="442" text-anchor="middle" font-size="22">📊</text>
+
+  <!-- Fri -->
+  <rect x="540" y="310" width="140" height="160" rx="8" fill="#ffffff" stroke="#64748b"/>
+  <text x="610" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">周五</text>
+  <text x="610" y="362" text-anchor="middle" font-size="11" fill="#334155">Memo 发给</text>
+  <text x="610" y="380" text-anchor="middle" font-size="11" fill="#334155">经理 Hartley</text>
+  <text x="610" y="398" text-anchor="middle" font-size="11" fill="#334155">要周二反馈</text>
+  <text x="610" y="442" text-anchor="middle" font-size="22">📝</text>
+
+  <!-- Output -->
+  <rect x="710" y="310" width="130" height="160" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="775" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">产出</text>
+  <text x="775" y="368" text-anchor="middle" font-size="11" fill="#166534">交付物 + 过程信号</text>
+  <text x="775" y="408" text-anchor="middle" font-size="11" fill="#15803d">→ 训练数据</text>
+  <text x="775" y="428" text-anchor="middle" font-size="11" fill="#15803d">→ 改进 Agent</text>
+
+  <path d="M200,390 L218,390" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M360,390 L378,390" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M520,390 L538,390" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M680,390 L708,390" stroke="#16a34a" stroke-width="2" marker-end="url(#g)"/>
+
+  <text x="450" y="545" text-anchor="middle" font-size="12" fill="#475569" font-style="italic">不是一把做完，而是把一个月的打工节奏完整仿真下来</text>
+</svg>

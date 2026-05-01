@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0430：可靠性不在模型里，在操作层",
+  "shownotes_html": "<p>今天三篇重点论文方向不同，但矛头一致：Agent 的可靠性、安全和效率，都不在单次生成里，而在围绕模型搭起来的那层执行系统。如果你在做 Agent 产品，这期值得从头听到尾。</p><p><strong>本期重点</strong></p><ul><li><strong>链上 Agent 的操作层控制（Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital）</strong>——3505 个 Agent 用真 ETH 在链上跑了 21 天，prompt 里一句话挪个位置就能让 Agent 瘫痪不交易。作者系统性地证明：可靠性是操作层属性，不是模型属性。结构化滑块用户的盈利比例远超自由聊天用户，对产品设计极有启发。</li><li><strong>行为防火墙（Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents）</strong>——现有 Agent 安全网关逐次检查工具调用，对\"每步合法但串起来是攻击\"的序列注入几乎无效。这篇把经典入侵检测的 n-gram 思路搬到 Agent 工具调用层，用 DFA 固化正常行为轨迹，运行时只需 2.2ms 查表，多步攻击成功率压到 0%。</li><li><strong>SWE-Edit：代码 Agent 的 harness 重构（SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent）</strong>——把\"看代码\"和\"改代码\"从主 Agent 剥离到两个干净上下文的子 Agent，SWE-bench Verified 解决率涨 2.1%、成本降 17.9%，在多种推理模型上稳定生效。用 8B 小模型训练 Editor 就能追平大模型效果，harness 工程比堆参数划算得多。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 可靠性的重心正在从模型选型转向 operating layer 的工程深度——prompt 编译、typed controls、policy 校验、全链路 trace，这些才是真正的杠杆。</li><li>Agent 安全从逐次拦截走向轨迹级治理：有状态的行为画像 + 极低延迟执行，正在替代\"每步都叫大模型审查\"的旧范式。</li></ul><p><strong>今日知识点：Trajectory（执行轨迹）</strong><br/>Trajectory 是 Agent 从接收意图到最终结果之间所有动作、工具调用、中间观察串起来的完整路径。今天三篇论文都把它当成核心对象——链上 Agent 用 trace 做失败归因和跨模型迁移，行为防火墙把良性轨迹编译成 DFA 来拦截攻击，代码 Agent 通过拆分 harness 让轨迹更干净。</p><p>本期内容由 AI 自动生成，如有疏漏欢迎留言指正。也欢迎在评论区聊聊你在 Agent 工程化中遇到的实际问题，我们明天见。</p>",
+  "report_date": "2026-04-30",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-01T14:28:43Z"
+}

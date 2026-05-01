@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">路径决定风险，不是模型</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">机制家族贡献 62% 方差，模型身份仅 32%</text>
+
+  <!-- Agent node -->
+  <circle cx="450" cy="290" r="52" fill="#fff3cd" stroke="#b8860b" stroke-width="2"/>
+  <text x="450" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Agent</text>
+  <text x="450" y="306" text-anchor="middle" font-size="11" fill="#666">同一个模型</text>
+
+  <!-- LEFT: browser-to-local (risky) -->
+  <rect x="60" y="130" width="240" height="90" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="180" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">browser → local file</text>
+  <text x="180" y="184" text-anchor="middle" font-size="12" fill="#555">整页 HTML，无列级粒度</text>
+  <text x="180" y="204" text-anchor="middle" font-size="12" fill="#555">字符串过滤挡不住 token</text>
+
+  <rect x="60" y="240" width="240" height="72" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="180" y="268" text-anchor="middle" font-size="12" fill="#666">泄漏率</text>
+  <text x="180" y="300" text-anchor="middle" font-size="26" font-weight="800" fill="#c0392b">74.4%</text>
+
+  <!-- RIGHT: file-to-doc (safe) -->
+  <rect x="600" y="130" width="240" height="90" rx="10" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
+  <text x="720" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#1e8449">file → doc summary</text>
+  <text x="720" y="184" text-anchor="middle" font-size="12" fill="#555">模型知道不该贴密钥</text>
+  <text x="720" y="204" text-anchor="middle" font-size="12" fill="#555">indirect exposure 更安全</text>
+
+  <rect x="600" y="240" width="240" height="72" rx="8" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="720" y="268" text-anchor="middle" font-size="12" fill="#666">泄漏率</text>
+  <text x="720" y="300" text-anchor="middle" font-size="26" font-weight="800" fill="#1e8449">2.6%</text>
+
+  <!-- Arrows to agent -->
+  <line x1="300" y1="200" x2="400" y2="275" stroke="#c0392b" stroke-width="2" marker-end="url(#arRed)"/>
+  <line x1="600" y1="200" x2="500" y2="275" stroke="#1e8449" stroke-width="2" marker-end="url(#arGreen)"/>
+
+  <!-- 25x gap -->
+  <rect x="330" y="388" width="240" height="54" rx="27" fill="#1a1a1a"/>
+  <text x="450" y="410" text-anchor="middle" font-size="13" fill="#fff">同模型 · 不同路径</text>
+  <text x="450" y="431" text-anchor="middle" font-size="17" font-weight="800" fill="#ffd24d">差距 ≈ 25×</text>
+
+  <!-- Bottom takeaway -->
+  <text x="450" y="478" text-anchor="middle" font-size="14" fill="#333">启示：按<tspan font-weight="700" fill="#c0392b">数据路径</tspan>加护栏，而不是等一个"更安全的模型"</text>
+
+  <!-- canary hint -->
+  <text x="450" y="518" text-anchor="middle" font-size="11" fill="#999">canary token: ghp-xxxx · 用字符串匹配量化跨服务器泄漏</text>
+</svg>

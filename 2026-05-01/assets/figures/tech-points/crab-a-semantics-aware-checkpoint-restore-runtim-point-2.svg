@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c62828"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="21" font-weight="bold">eBPF Inspector: 用"净变化"决定要不要 checkpoint</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">像 git diff 一样，turn 结束后对比上次存档点</text>
+
+  <!-- Turn A -->
+  <g>
+    <rect x="50" y="90" width="360" height="190" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+    <text x="230" y="116" text-anchor="middle" font-size="15" font-weight="bold">Turn A · 临时文件</text>
+    <text x="230" y="146" text-anchor="middle" font-size="13" font-family="monospace">echo x &gt; tmp ; cat tmp ; rm tmp</text>
+    <line x1="90" y1="170" x2="370" y2="170" stroke="#e65100" stroke-dasharray="4 3"/>
+    <text x="230" y="196" text-anchor="middle" font-size="12" fill="#555">syscall 观察: 有写 + 有删</text>
+    <text x="230" y="218" text-anchor="middle" font-size="12" fill="#555">turn 结束时 tmp 已不存在</text>
+    <text x="230" y="256" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">净变化 = ∅</text>
+  </g>
+
+  <!-- Turn B -->
+  <g>
+    <rect x="490" y="90" width="360" height="190" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+    <text x="670" y="116" text-anchor="middle" font-size="15" font-weight="bold">Turn B · 安装依赖</text>
+    <text x="670" y="146" text-anchor="middle" font-size="13" font-family="monospace">pip install requests</text>
+    <line x1="530" y1="170" x2="810" y2="170" stroke="#e65100" stroke-dasharray="4 3"/>
+    <text x="670" y="196" text-anchor="middle" font-size="12" fill="#555">新文件 + 新进程 + 脏页</text>
+    <text x="670" y="218" text-anchor="middle" font-size="12" fill="#555">turn 结束后仍然留存</text>
+    <text x="670" y="256" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">净变化 ≠ ∅</text>
+  </g>
+
+  <!-- Inspector -->
+  <rect x="270" y="320" width="360" height="90" rx="10" fill="#fffde7" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="450" y="350" text-anchor="middle" font-size="16" font-weight="bold">eBPF Inspector (kernel)</text>
+  <text x="450" y="372" text-anchor="middle" font-size="12" fill="#555">syscall tracepoint · cgroup · soft-dirty page</text>
+  <text x="450" y="394" text-anchor="middle" font-size="12" fill="#555">输出: none / FS-only / Proc-only / Full</text>
+
+  <line x1="230" y1="280" x2="370" y2="318" stroke="#333" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="670" y1="280" x2="530" y2="318" stroke="#333" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- Decisions -->
+  <rect x="110" y="450" width="280" height="70" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="250" y="480" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Skip checkpoint</text>
+  <text x="250" y="502" text-anchor="middle" font-size="12" fill="#555">临时文件/子进程被忽略</text>
+
+  <rect x="510" y="450" width="280" height="70" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="650" y="480" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">Full checkpoint</text>
+  <text x="650" y="502" text-anchor="middle" font-size="12" fill="#555">保留进程 + 文件系统状态</text>
+
+  <line x1="360" y1="410" x2="270" y2="448" stroke="#2e7d32" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="540" y1="410" x2="630" y2="448" stroke="#c62828" stroke-width="2" marker-end="url(#ar)"/>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a2b4a"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2e7d4f"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f9fc"/>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2b4a">Prompt 不够用，得在编排层装护栏</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#5a6a80">从“拜托模型别泄漏”到“运行时强制脱敏”</text>
+
+  <!-- LEFT: Prompt mitigation -->
+  <g>
+    <rect x="40" y="90" width="380" height="200" rx="10" fill="#fff" stroke="#d0d7e2" stroke-width="1.5"/>
+    <text x="230" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#b0412b">方案A · Prompt 提醒 (M1/M2/M3)</text>
+    <text x="230" y="140" text-anchor="middle" font-size="12" fill="#5a6a80">system prompt：“别把密钥写到外部”</text>
+
+    <g font-size="12" fill="#333">
+      <text x="60" y="175">GPT-5</text>
+      <rect x="140" y="163" width="200" height="16" fill="#e8ecf2"/>
+      <rect x="140" y="163" width="6" height="16" fill="#2e7d4f"/>
+      <text x="350" y="175" fill="#2e7d4f" font-weight="600">-97%</text>
+
+      <text x="60" y="212">DeepSeek</text>
+      <rect x="140" y="200" width="200" height="16" fill="#e8ecf2"/>
+      <rect x="140" y="200" width="50" height="16" fill="#d89020"/>
+      <text x="350" y="212" fill="#d89020" font-weight="600">-75%</text>
+
+      <text x="60" y="249">MiniMax</text>
+      <rect x="140" y="237" width="200" height="16" fill="#e8ecf2"/>
+      <rect x="140" y="237" width="106" height="16" fill="#c0392b"/>
+      <text x="350" y="249" fill="#c0392b" font-weight="600">-47%</text>
+    </g>
+    <text x="230" y="278" text-anchor="middle" font-size="12" fill="#b0412b" font-weight="600">✗ 依赖模型自觉，效果飘</text>
+  </g>
+
+  <!-- Arrow between -->
+  <g>
+    <path d="M 425 190 L 480 190" stroke="#1a2b4a" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="452" y="182" text-anchor="middle" font-size="11" fill="#1a2b4a" font-weight="600">升级</text>
+  </g>
+
+  <!-- RIGHT: Redact at sink -->
+  <g>
+    <rect x="485" y="90" width="375" height="200" rx="10" fill="#e8f5ec" stroke="#2e7d4f" stroke-width="2"/>
+    <text x="672" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#2e7d4f">方案B · Sink 端污点守卫</text>
+    <text x="672" y="140" text-anchor="middle" font-size="12" fill="#3a5a48">运行时拦截，不靠模型</text>
+
+    <rect x="505" y="160" width="160" height="110" rx="8" fill="#fff" stroke="#2e7d4f"/>
+    <text x="585" y="195" text-anchor="middle" font-size="28" font-weight="700" fill="#2e7d4f">0%</text>
+    <text x="585" y="218" text-anchor="middle" font-size="12" fill="#3a5a48">泄漏率</text>
+    <text x="585" y="248" text-anchor="middle" font-size="11" fill="#5a6a80">4/5 模型归零 (含 MiniMax)</text>
+
+    <rect x="680" y="160" width="160" height="110" rx="8" fill="#fff" stroke="#2e7d4f"/>
+    <text x="760" y="195" text-anchor="middle" font-size="26" font-weight="700" fill="#2e7d4f">85–96%</text>
+    <text x="760" y="218" text-anchor="middle" font-size="12" fill="#3a5a48">不安全 trace 被拦截</text>
+    <text x="760" y="248" text-anchor="middle" font-size="11" fill="#5a6a80">non-CRS 效用不变</text>
+  </g>
+
+  <!-- Bottom: example flow -->
+  <g transform="translate(0,320)">
+    <text x="450" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2b4a">示例：bw-config → sqlite.insert</text>
+
+    <rect x="60" y="45" width="150" height="80" rx="8" fill="#fff4e0" stroke="#d89020" stroke-width="1.5"/>
+    <text x="135" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#8a5a10">Bitwarden</text>
+    <text x="135" y="92" text-anchor="middle" font-size="11" fill="#8a5a10">读到 token:</text>
+    <text x="135" y="112" text-anchor="middle" font-size="12" font-family="monospace" fill="#c0392b">ghp-XXXX</text>
+
+    <rect x="280" y="45" width="150" height="80" rx="8" fill="#fff" stroke="#1a2b4a" stroke-width="1.5"/>
+    <text x="355" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2b4a">Agent</text>
+    <text x="355" y="100" text-anchor="middle" font-size="11" fill="#5a6a80">(带 canary 标记)</text>
+
+    <rect x="500" y="45" width="150" height="80" rx="8" fill="#e8f5ec" stroke="#2e7d4f" stroke-width="2"/>
+    <text x="575" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d4f">Sink Guard</text>
+    <text x="575" y="94" text-anchor="middle" font-size="11" fill="#3a5a48">检测 canary</text>
+    <text x="575" y="112" text-anchor="middle" font-size="11" fill="#3a5a48">→ 替换占位符</text>
+
+    <rect x="720" y="45" width="150" height="80" rx="8" fill="#fff" stroke="#1a2b4a" stroke-width="1.5"/>
+    <text x="795" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2b4a">SQLite</text>
+    <text x="795" y="94" text-anchor="middle" font-size="12" font-family="monospace" fill="#2e7d4f">(REDACTED)</text>
+    <text x="795" y="113" text-anchor="middle" font-size="11" fill="#2e7d4f">✓ 无密钥落库</text>
+
+    <path d="M 210 85 L 275 85" stroke="#1a2b4a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 430 85 L 495 85" stroke="#1a2b4a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 650 85 L 715 85" stroke="#2e7d4f" stroke-width="2" fill="none" marker-end="url(#arrowG)"/>
+  </g>
+</svg>

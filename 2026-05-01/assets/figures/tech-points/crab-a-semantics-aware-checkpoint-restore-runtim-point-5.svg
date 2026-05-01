@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c6fbf"/>
+    </marker>
+    <marker id="arPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8e44ad"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a1a">Crab 恢复一致性：让 Agent 记忆追上磁盘</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">Checkpoint 只到 turn 2，恢复后文件已是 turn 3 状态 — 怎么办？</text>
+
+  <!-- Left: WRONG -->
+  <g>
+    <rect x="40" y="80" width="380" height="215" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+    <text x="230" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">❌ 朴素重放：脏写</text>
+
+    <rect x="60" y="125" width="140" height="55" rx="6" fill="#fff" stroke="#c0392b"/>
+    <text x="130" y="148" text-anchor="middle" font-size="13" font-weight="600">Agent (turn 2)</text>
+    <text x="130" y="167" text-anchor="middle" font-size="11" fill="#666">内存落后</text>
+
+    <rect x="260" y="125" width="140" height="55" rx="6" fill="#fff" stroke="#c0392b"/>
+    <text x="330" y="148" text-anchor="middle" font-size="13" font-weight="600">foo = "ab"</text>
+    <text x="330" y="167" text-anchor="middle" font-size="11" fill="#666">文件已是 turn 3</text>
+
+    <path d="M130,185 L130,215 L325,215 L325,185" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#arRed)"/>
+    <text x="230" y="237" text-anchor="middle" font-size="12" fill="#c0392b">重发 echo 'b' &gt;&gt; foo</text>
+    <text x="230" y="275" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">foo → "abb"  🐞</text>
+  </g>
+
+  <!-- Right: Crab -->
+  <g>
+    <rect x="480" y="80" width="380" height="215" rx="10" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="670" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#1e8449">✅ Crab：合成回答遮蔽</text>
+
+    <rect x="500" y="125" width="140" height="55" rx="6" fill="#fff" stroke="#1e8449"/>
+    <text x="570" y="148" text-anchor="middle" font-size="13" font-weight="600">Agent (turn 2)</text>
+    <text x="570" y="167" text-anchor="middle" font-size="11" fill="#666">发出 turn 3 请求</text>
+
+    <rect x="700" y="125" width="140" height="55" rx="6" fill="#fff" stroke="#1e8449"/>
+    <text x="770" y="148" text-anchor="middle" font-size="13" font-weight="600">foo = "ab"</text>
+    <text x="770" y="167" text-anchor="middle" font-size="11" fill="#666">不再执行</text>
+
+    <path d="M640,152 L700,152" stroke="#bbb" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="670" y="145" text-anchor="middle" font-size="10" fill="#999">拦截</text>
+
+    <rect x="560" y="220" width="220" height="55" rx="6" fill="#fff8dc" stroke="#c9a227" stroke-width="2"/>
+    <text x="670" y="242" text-anchor="middle" font-size="12" font-weight="700" fill="#8a6d00">Coordinator 对话日志</text>
+    <text x="670" y="261" text-anchor="middle" font-size="11" fill="#8a6d00">缓存 request → response</text>
+
+    <path d="M620,220 L590,185" fill="none" stroke="#1e8449" stroke-width="2" marker-end="url(#arGreen)"/>
+    <text x="498" y="210" font-size="11" font-weight="600" fill="#1e8449">回放响应</text>
+  </g>
+
+  <!-- Bottom: two scenarios -->
+  <g>
+    <rect x="40" y="325" width="400" height="210" rx="10" fill="#eef3fb" stroke="#2c6fbf" stroke-width="1.5"/>
+    <text x="240" y="351" text-anchor="middle" font-size="14" font-weight="700" fill="#2c6fbf">场景 A：Agent 在 Sandbox 外</text>
+    <text x="240" y="373" text-anchor="middle" font-size="12" fill="#333">in-flight 命令丢失 → 持久日志重发</text>
+
+    <rect x="65" y="395" width="110" height="55" rx="6" fill="#fff" stroke="#2c6fbf"/>
+    <text x="120" y="418" text-anchor="middle" font-size="12" font-weight="600">Agent</text>
+    <text x="120" y="436" text-anchor="middle" font-size="10" fill="#666">外部</text>
+
+    <rect x="305" y="395" width="110" height="55" rx="6" fill="#fff" stroke="#2c6fbf"/>
+    <text x="360" y="418" text-anchor="middle" font-size="12" font-weight="600">Sandbox</text>
+    <text x="360" y="436" text-anchor="middle" font-size="10" fill="#666">崩溃后重启</text>
+
+    <path d="M175,422 L305,422" stroke="#2c6fbf" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="240" y="414" text-anchor="middle" font-size="11" fill="#2c6fbf">重发命令</text>
+    <text x="240" y="485" text-anchor="middle" font-size="11" fill="#555">对 agent 完全透明：只看到命令"正常返回"</text>
+    <text x="240" y="515" text-anchor="middle" font-size="11" fill="#555">→ 外部 agent 无需感知恢复过程</text>
+  </g>
+
+  <g>
+    <rect x="460" y="325" width="400" height="210" rx="10" fill="#fbf0f8" stroke="#8e44ad" stroke-width="1.5"/>
+    <text x="660" y="351" text-anchor="middle" font-size="14" font-weight="700" fill="#8e44ad">场景 B：Agent 在 Sandbox 内</text>
+    <text x="660" y="373" text-anchor="middle" font-size="12" fill="#333">脑子落后于磁盘 → 合成回答让它追上</text>
+
+    <rect x="495" y="395" width="135" height="55" rx="6" fill="#fff" stroke="#8e44ad"/>
+    <text x="562" y="418" text-anchor="middle" font-size="12" font-weight="600">Agent (内存)</text>
+    <text x="562" y="436" text-anchor="middle" font-size="10" fill="#666">turn 2</text>
+
+    <rect x="690" y="395" width="150" height="55" rx="6" fill="#fff" stroke="#8e44ad"/>
+    <text x="765" y="418" text-anchor="middle" font-size="12" font-weight="600">Checkpoint head</text>
+    <text x="765" y="436" text-anchor="middle" font-size="10" fill="#666">turn 3</text>
+
+    <path d="M630,422 L690,422" stroke="#8e44ad" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arPurple)"/>
+    <text x="660" y="414" text-anchor="middle" font-size="11" fill="#8e44ad">回放缓存响应</text>
+    <text x="660" y="485" text-anchor="middle" font-size="11" fill="#555">追上 checkpoint head 后才恢复真实执行</text>
+    <text x="660" y="515" text-anchor="middle" font-size="11" fill="#555">→ 内存与磁盘重新对齐</text>
+  </g>
+</svg>

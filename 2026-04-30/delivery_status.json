@@ -1,0 +1,12 @@
+{
+  "feishu": "completed",
+  "wecom": "completed",
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69f4b8a778d33cb2c4fb7de2",
+    "status": "INITIALIZED",
+    "review_status": "PENDING",
+    "audio_url": "https://media.xyzcdn.net/lrGbjIL5kkV-5bckhdhvw9fi0MRj.mp3",
+    "title": "AI Agent 论文播报｜0430：可靠性不在模型里，在操作层"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/downloaded_pdfs/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser",
+  "candidates": [
+    {
+      "id": "page-14-block-7",
+      "page_index": 14,
+      "caption": "Figure 2 shows a representative browser_to_local non-CRS trace from GPT-5.4: the agent reads a canary API key from a web page and writes it into the local database during a routine “sync” task, crossing the browser → database trust boundary without any adversarial prompt.",
+      "clip": [
+        77.4,
+        99.77382202148436,
+        535.8498474121094,
+        408.5738220214844
+      ],
+      "clip_area": 141569.3128808594,
+      "page_area": 484704.0,
+      "text_density": 0.52515554240496,
+      "kind": "captioned_figure",
+      "score": 11.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/01-p15-captioned_figure.png",
+      "filename": "01-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        92.0,
+        57.998779296875,
+        520.167724609375,
+        260.3779754638672
+      ],
+      "clip_area": 86652.23993109539,
+      "page_area": 484704.0,
+      "text_density": 0.19484320107397032,
+      "kind": "drawing_cluster",
+      "score": 4.072210601462841,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/02-p4-drawing_cluster.png",
+      "filename": "02-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-block-31",
+      "page_index": 3,
+      "caption": "The labeling pipeline computes 11 binary risk signals using per-canary causal tracking with temporal ordering, organized into two tiers:",
+      "clip": [
+        77.09100189208985,
+        384.803759765625,
+        534.6017700195313,
+        693.603759765625
+      ],
+      "clip_area": 141279.32519775393,
+      "page_area": 484704.0,
+      "text_density": 0.6293683261475925,
+      "kind": "captioned_figure",
+      "score": 0.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/03-p4-captioned_figure.png",
+      "filename": "03-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-14-block-11",
+      "page_index": 14,
+      "caption": "Figure 2: A representative browser_to_local non-CRS trace illustrating policy-violating propaga- tion . The agent reads a canary API key from a web page (step 1, yellow ) and writes it into the local",
+      "clip": [
+        77.4,
+        255.53111572265624,
+        536.2580505371094,
+        564.3311157226562
+      ],
+      "clip_area": 141695.3660058594,
+      "page_area": 484704.0,
+      "text_density": 0.602661036619477,
+      "kind": "captioned_figure",
+      "score": -10.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/04-p15-captioned_figure.png",
+      "filename": "04-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.40497505152593866,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6411970842591591,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-01/assets/figure_candidates/mcphunt-an-evaluation-framework-for-cross-boundary-data-propagation-in-multi-ser/contact-sheet.svg"
+}

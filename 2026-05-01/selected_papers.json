@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Synthetic Computers at Scale for Long-Horizon Productivity Simulation",
+    "authors": [
+      "Tao Ge",
+      "Baolin Peng",
+      "Hao Cheng",
+      "Jianfeng Gao"
+    ],
+    "summary": "Realistic long-horizon productivity work is strongly conditioned on user-specific computer environments, where much of the work context is stored and organized through directory structures and content-rich artifacts. To scale synthetic data creation for such productivity scenarios, we introduce Synthetic Computers at Scale, a scalable methodology for creating such environments with realistic folder hierarchies and content-rich artifacts (e.g., documents, spreadsheets, and presentations). Conditioned on each synthetic computer, we run long-horizon simulations: one agent creates productivity objectives that are specific to the computer's user and require multiple professional deliverables and about a month of human work; another agent then acts as that user and keeps working across the computer -- for example, navigating the filesystem for grounding, coordinating with simulated collaborators, and producing professional artifacts -- until these objectives are completed. In preliminary experiments, we create 1,000 synthetic computers and run long-horizon simulations on them; each run requires over 8 hours of agent runtime and spans more than 2,000 turns on average. These simulations produce rich experiential learning signals, whose effectiveness is validated by significant improvements in agent performance on both in-domain and out-of-domain productivity evaluations. Given that personas are abundant at billion scale, this methodology can in principle scale to millions or even billions of synthetic user worlds with sufficient compute, enabling broader coverage of diverse professions, roles, contexts, environments, and productivity needs. We argue that scalable synthetic computer creation, together with at-scale simulations, is highly promising as a foundational substrate for agent self-improvement and agentic reinforcement learning in long-horizon productivity scenarios.",
+    "entry_id": "https://arxiv.org/abs/2604.28181",
+    "pdf_url": "https://arxiv.org/pdf/2604.28181.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "computer_use",
+    "relevance_score": 95,
+    "value_score": 90,
+    "interesting_score": 88,
+    "innovation_score": 85,
+    "frontier_score": 90,
+    "verdict": "must_read",
+    "reason": "大规模合成计算机环境+长程Agent仿真，面向productivity agent自我改进和agentic RL的数据基础，直接推进Agent训练与评测边界。",
+    "composite_score": 90.39,
+    "arxiv_url": "https://arxiv.org/abs/2604.28181"
+  },
+  {
+    "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes",
+    "authors": [
+      "Tianyuan Wu",
+      "Chaokun Chang",
+      "Lunxi Cao",
+      "Wei Gao",
+      "Wei Wang"
+    ],
+    "summary": "Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault tolerance, spot execution, RL rollout branching, and safe rollback-yet existing approaches fall into two extremes: application-level recovery preserves chat history but misses OS-side effects, while full per-turn checkpointing is correct but too expensive under dense co-location. The root cause is an agent-OS semantic gap: agent frameworks see tool calls but not their OS effects; the OS sees state changes but lacks turn-level context to judge recovery relevance. This gap hides massive sparsity: over 75% of agent turns produce no recovery-relevant state, so most checkpoints are unnecessary. Crab (Checkpoint-and-Restore for Agent SandBoxes) is a transparent host-side runtime that bridges this gap without modifying agents or C/R backends. An eBPF-based inspector classifies each turn's OS-visible effects to decide checkpoint granularity; a coordinator aligns checkpoints with turn boundaries and overlaps C/R with LLM wait time; and a host-scoped engine schedules checkpoint traffic across co-located sandboxes. On shell-intensive and code-repair workloads, Crab raises recovery correctness from 8% (chat-only) to 100%, cuts checkpoint traffic by up to 87%, and stays within 1.9% of fault-free execution time.",
+    "entry_id": "https://arxiv.org/abs/2604.28138",
+    "pdf_url": "https://arxiv.org/pdf/2604.28138.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "general_agent",
+    "relevance_score": 95,
+    "value_score": 90,
+    "interesting_score": 88,
+    "innovation_score": 85,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "Agent sandbox 的 checkpoint/restore runtime，解决 agent-OS 语义鸿沟，直接推进 Agent 运行时与容错系统，属于 harness 层关键工作。",
+    "composite_score": 89.64,
+    "arxiv_url": "https://arxiv.org/abs/2604.28138"
+  },
+  {
+    "title": "MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents",
+    "authors": [
+      "Haonan Li",
+      "Tianjun Sun",
+      "Yongqing Wang",
+      "Qisheng Zhang"
+    ],
+    "summary": "Multi-server MCP agents create an information-flow control problem: faithful tool composition can turn individually benign read/write permissions into cross-boundary credential propagation -- a structural side effect of workflow topology, not necessarily malicious model behavior. We present MCPHunt, to our knowledge the first controlled benchmark that isolates non-adversarial, verbatim credential propagation across multi-server MCP trust boundaries, with three methodological contributions: (1) canary-based taint tracking that reduces propagation detection to objective string matching; (2) an environment-controlled coverage design with risky, benign, and hard-negative conditions that validates pipeline soundness and controls for credential-format confounds; (3) CRS stratification that disentangles task-mandated propagation (faithful execution of verbatim-transfer instructions) from policy-violating propagation (credentials included despite the option to redact). Across 3,615 main-benchmark traces from 5 models spanning 147 tasks and 9 mechanism families, policy-violating propagation rates reach 11.5--41.3% across all models. This propagation is pathway-specific (25x cross-mechanism range) and concentrated in browser-mediated data flows; hard-negative controls provide evidence that production-format credentials are not necessary -- prompt-directed cross-boundary data flow is sufficient. A prompt-mitigation study across 3 models reduces policy-violating propagation by up to 97% while preserving 80.5% utility, but effectiveness varies with instruction-following capability -- suggesting that prompt-level defenses alone may not suffice. Code, traces, and labeling pipeline are released under MIT and CC BY 4.0.",
+    "entry_id": "https://arxiv.org/abs/2604.27819",
+    "pdf_url": "https://arxiv.org/pdf/2604.27819.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 95,
+    "value_score": 88,
+    "interesting_score": 85,
+    "innovation_score": 82,
+    "frontier_score": 85,
+    "verdict": "must_read",
+    "reason": "针对多服务器 MCP agent 跨信任边界凭证传播设计 canary taint 追踪 benchmark，首次系统量化非对抗性策略违规传播，MCP 协议安全关键新工作。",
+    "composite_score": 88.21,
+    "arxiv_url": "https://arxiv.org/abs/2604.27819"
+  }
+]

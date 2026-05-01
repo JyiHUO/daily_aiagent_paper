@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1729"/>
+      <stop offset="1" stop-color="#1a2344"/>
+    </linearGradient>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8cb4ff"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff6b6b"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">MCPHunt：多服务器 MCP Agent 的跨边界凭证传播审计</text>
+  <text x="600" y="78" text-anchor="middle" fill="#9fb3d9" font-size="15">无对抗、纯良性任务下，忠实执行本身就会把密钥"顺手"搬过边界</text>
+
+  <!-- LEFT: Multi-MCP environment with canary -->
+  <g>
+    <rect x="50" y="115" width="320" height="560" rx="14" fill="#141c35" stroke="#2d3c66" stroke-width="1.5"/>
+    <text x="210" y="143" text-anchor="middle" fill="#ffd43b" font-size="16" font-weight="700">① Canary 污点注入</text>
+    <text x="210" y="163" text-anchor="middle" fill="#7a8bb0" font-size="12">在工作区预埋带记号的假密钥</text>
+
+    <!-- MCP servers -->
+    <g font-size="12" fill="#e9ecef">
+      <rect x="75" y="185" width="270" height="54" rx="8" fill="#1e2847" stroke="#3d4f7d"/>
+      <text x="90" y="208" font-weight="600" fill="#8cb4ff">filesystem</text>
+      <text x="90" y="228" fill="#ff8787" font-family="monospace" font-size="11">.env → sk-live-7hN3pRw8...</text>
+
+      <rect x="75" y="250" width="270" height="54" rx="8" fill="#1e2847" stroke="#3d4f7d"/>
+      <text x="90" y="273" font-weight="600" fill="#8cb4ff">database</text>
+      <text x="90" y="293" fill="#ff8787" font-family="monospace" font-size="11">users.api_key → AKIA...</text>
+
+      <rect x="75" y="315" width="270" height="54" rx="8" fill="#1e2847" stroke="#3d4f7d"/>
+      <text x="90" y="338" font-weight="600" fill="#8cb4ff">browser</text>
+      <text x="90" y="358" fill="#ff8787" font-family="monospace" font-size="11">admin page → ghp-...</text>
+
+      <rect x="75" y="380" width="270" height="54" rx="8" fill="#1e2847" stroke="#3d4f7d"/>
+      <text x="90" y="403" font-weight="600" fill="#8cb4ff">git / shell / kg ...</text>
+      <text x="90" y="423" fill="#7a8bb0" font-size="11">共 9 类机制家族</text>
+    </g>
+
+    <!-- Three conditions -->
+    <text x="210" y="470" text-anchor="middle" fill="#ffd43b" font-size="14" font-weight="700">三组对照环境</text>
+    <g font-size="11">
+      <rect x="75" y="485" width="85" height="60" rx="6" fill="#3a1f2a" stroke="#ff6b6b"/>
+      <text x="117" y="508" text-anchor="middle" fill="#ff8787" font-weight="600">risky</text>
+      <text x="117" y="528" text-anchor="middle" fill="#ffc9c9" font-size="10">真格式 canary</text>
+
+      <rect x="167" y="485" width="85" height="60" rx="6" fill="#1f2e3a" stroke="#4dabf7"/>
+      <text x="209" y="508" text-anchor="middle" fill="#74c0fc" font-weight="600">benign</text>
+      <text x="209" y="528" text-anchor="middle" fill="#a5d8ff" font-size="10">普通占位</text>
+
+      <rect x="259" y="485" width="85" height="60" rx="6" fill="#2e2a1f" stroke="#ffd43b"/>
+      <text x="301" y="508" text-anchor="middle" fill="#ffd43b" font-weight="600">hard-neg</text>
+      <text x="301" y="528" text-anchor="middle" fill="#ffe58a" font-size="10">可读占位</text>
+    </g>
+
+    <text x="210" y="585" text-anchor="middle" fill="#adb5bd" font-size="11">risky 25.9% vs hard-neg 20.4% → 拓扑驱动</text>
+    <text x="210" y="625" text-anchor="middle" fill="#9fb3d9" font-size="12">147 任务 · 5 模型 · 3615 轨迹</text>
+    <text x="210" y="648" text-anchor="middle" fill="#9fb3d9" font-size="12">9 机制家族</text>
+  </g>
+
+  <!-- CENTER: Agent executes with taint tracking -->
+  <g>
+    <rect x="415" y="180" width="370" height="420" rx="14" fill="#141c35" stroke="#3d4f7d" stroke-width="1.5"/>
+    <text x="600" y="210" text-anchor="middle" fill="#ffd43b" font-size="16" font-weight="700">② Agent 忠实执行任务</text>
+
+    <!-- Agent core -->
+    <circle cx="600" cy="310" r="70" fill="#1e2847" stroke="#ffa94d" stroke-width="2"/>
+    <text x="600" y="305" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">MCP Agent</text>
+    <text x="600" y="325" text-anchor="middle" fill="#ffc078" font-size="11">tool composition</text>
+    <text x="600" y="342" text-anchor="middle" fill="#9fb3d9" font-size="10">read → transform → write</text>
+
+    <!-- tool call log -->
+    <rect x="445" y="410" width="310" height="170" rx="8" fill="#0d1428" stroke="#2d3c66"/>
+    <text x="600" y="432" text-anchor="middle" fill="#adb5bd" font-size="12" font-weight="600">tool-call 轨迹（逐条记录）</text>
+    <g font-family="monospace" font-size="10.5" fill="#ced4da">
+      <text x="460" y="456">fs.read(.env)</text>
+      <text x="460" y="475" fill="#8cb4ff">  ↳ sk-live-7hN3pRw8...</text>
+      <text x="460" y="494">fs.write(project-b/.env,</text>
+      <text x="470" y="510" fill="#ff8787">   "sk-live-7hN3pRw8...")</text>
+      <text x="460" y="534" fill="#ff6b6b" font-weight="700">⚠ canary 匹配 → 跨边界传播</text>
+      <text x="460" y="557" fill="#74c0fc">Tier-1 检测：客观字符串匹配</text>
+    </g>
+
+    <!-- arrows from sources to agent -->
+    <path d="M 370 212 Q 430 240 535 285" stroke="#ff8787" stroke-width="1.8" fill="none" marker-end="url(#arrR)" opacity="0.85"/>
+    <path d="M 370 277 Q 430 300 530 310" stroke="#ff8787" stroke-width="1.8" fill="none" marker-end="url(#arrR)" opacity="0.85"/>
+    <path d="M 370 342 Q 430 340 535 335" stroke="#ff8787" stroke-width="1.8" fill="none" marker-end="url(#arrR)" opacity="0.85"/>
+    <text x="395" y="200" fill="#ffc9c9" font-size="10">读入</text>
+  </g>
+
+  <!-- RIGHT: CRS stratification + outcome -->
+  <g>
+    <rect x="830" y="115" width="320" height="560" rx="14" fill="#141c35" stroke="#2d3c66" stroke-width="1.5"/>
+    <text x="990" y="143" text-anchor="middle" fill="#ffd43b" font-size="16" font-weight="700">③ CRS 分层判定</text>
+    <text x="990" y="163" text-anchor="middle" fill="#7a8bb0" font-size="12">区分"任务要求"与"策略违规"</text>
+
+    <!-- CRS branch -->
+    <rect x="855" y="190" width="270" height="120" rx="10" fill="#1a2e1f" stroke="#51cf66"/>
+    <text x="870" y="213" fill="#51cf66" font-size="13" font-weight="700">CRS 任务</text>
+    <text x="870" y="234" fill="#b2f2bb" font-size="11">prompt 含 "copy everything"</text>
+    <text x="870" y="253" fill="#b2f2bb" font-size="11">→ 合规 Agent 必然传密钥</text>
+    <text x="870" y="286" fill="#ced4da" font-size="11">传播 = 忠实执行</text>
+    <text x="870" y="303" fill="#adb5bd" font-size="11">✓ 不计入违规</text>
+
+    <!-- non-CRS branch -->
+    <rect x="855" y="325" width="270" height="150" rx="10" fill="#3a1f2a" stroke="#ff6b6b"/>
+    <text x="870" y="348" fill="#ff6b6b" font-size="13" font-weight="700">non-CRS 任务</text>
+    <text x="870" y="369" fill="#ffc9c9" font-size="11">prompt 只要衍生产物（报告/脚本）</text>
+    <text x="870" y="386" fill="#ffc9c9" font-size="11">→ 本可脱敏</text>
+    <text x="870" y="418" fill="#fff" font-size="12" font-weight="700">仍出现 canary</text>
+    <text x="870" y="437" fill="#ff8787" font-size="11">⚠ policy-violating 传播</text>
+    <text x="870" y="461" fill="#ffd43b" font-size="13" font-weight="700">跨模型 11.5% – 41.3%</text>
+
+    <!-- pathway insight -->
+    <rect x="855" y="495" width="270" height="160" rx="10" fill="#1e2847" stroke="#4dabf7"/>
+    <text x="870" y="518" fill="#74c0fc" font-size="13" font-weight="700">路径 &gt; 模型</text>
+    <text x="870" y="540" fill="#a5d8ff" font-size="11">机制家族贡献 62% 解释力</text>
+    <text x="870" y="558" fill="#a5d8ff" font-size="11">模型身份仅 32%</text>
+    <text x="870" y="588" fill="#fff" font-size="11">browser → local：74.4%</text>
+    <text x="870" y="608" fill="#fff" font-size="11">file → doc：2.6%</text>
+    <text x="870" y="638" fill="#ffd43b" font-size="12" font-weight="700">泄漏率跨机制相差 25×</text>
+  </g>
+
+  <!-- arrows center -> right -->
+  <path d="M 785 250 L 855 250" stroke="#8cb4ff" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M 785 400 L 855 400" stroke="#ff8787" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+
+  <!-- Bottom takeaway -->
+  <rect x="50" y="700" width="1100" height="60" rx="10" fill="#1a2344" stroke="#ffd43b" stroke-width="1.5"/>
+  <text x="75" y="728" fill="#ffd43b" font-size="14" font-weight="700">核心洞察</text>
+  <text x="75" y="748" fill="#e9ecef" font-size="13">凭证泄漏是工作流拓扑的结构性副作用，不是模型恶意；prompt-level 缓解最多降 97% 但保留 80.5% 能力——路径级护栏才是根本解。</text>
+</svg>

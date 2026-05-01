@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">Agent 与 OS 之间的语义鸿沟</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">Agent 只看 tool call，OS 只看状态变化——没人同时知道这一轮该不该存</text>
+
+  <!-- Agent view -->
+  <rect x="60" y="90" width="300" height="150" rx="10" fill="#eaf3ff" stroke="#3a6ea5" stroke-width="2"/>
+  <text x="210" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a66">Agent 视角</text>
+  <text x="210" y="138" text-anchor="middle" font-size="12" fill="#333">看得到：tool name + 参数</text>
+  <rect x="85" y="155" width="250" height="32" rx="5" fill="#fff" stroke="#3a6ea5"/>
+  <text x="210" y="176" text-anchor="middle" font-size="12" fill="#1e3a66">run_shell("python check.py")</text>
+  <rect x="85" y="195" width="250" height="32" rx="5" fill="#fff" stroke="#3a6ea5"/>
+  <text x="210" y="216" text-anchor="middle" font-size="12" fill="#1e3a66">run_shell("python setup.py install")</text>
+
+  <!-- OS view -->
+  <rect x="540" y="90" width="300" height="150" rx="10" fill="#fff0e6" stroke="#b85c1f" stroke-width="2"/>
+  <text x="690" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#7a3a10">OS 视角</text>
+  <text x="690" y="138" text-anchor="middle" font-size="12" fill="#333">看得到：文件 / 进程 / 内存变化</text>
+  <rect x="565" y="155" width="250" height="32" rx="5" fill="#fff" stroke="#b85c1f"/>
+  <text x="690" y="176" text-anchor="middle" font-size="12" fill="#7a3a10">只读 → 无副作用 ✓</text>
+  <rect x="565" y="195" width="250" height="32" rx="5" fill="#fff" stroke="#b85c1f"/>
+  <text x="690" y="216" text-anchor="middle" font-size="12" fill="#7a3a10">装包 → 写 /usr/lib + 新进程 ✗</text>
+
+  <!-- Gap -->
+  <line x1="365" y1="165" x2="535" y2="165" stroke="#999" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="450" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#c33">语义鸿沟</text>
+  <text x="450" y="182" text-anchor="middle" font-size="11" fill="#666">同一 tool 签名，效果完全不同</text>
+
+  <!-- stats row -->
+  <rect x="60" y="270" width="240" height="80" rx="8" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="180" y="302" text-anchor="middle" font-size="26" font-weight="700" fill="#c33">60%</text>
+  <text x="180" y="326" text-anchor="middle" font-size="12" fill="#333">tool call 是 run-shell，名字判断不了副作用</text>
+
+  <rect x="330" y="270" width="240" height="80" rx="8" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="450" y="302" text-anchor="middle" font-size="26" font-weight="700" fill="#c33">75%+</text>
+  <text x="450" y="326" text-anchor="middle" font-size="12" fill="#333">turn 未改持久状态，全量快照即浪费</text>
+
+  <rect x="600" y="270" width="240" height="80" rx="8" fill="#f6f6f6" stroke="#bbb"/>
+  <text x="720" y="302" text-anchor="middle" font-size="26" font-weight="700" fill="#c33">5.3%</text>
+  <text x="720" y="326" text-anchor="middle" font-size="12" fill="#333">命令才含重定向，语法也推不出效果</text>
+
+  <!-- Conclusion -->
+  <rect x="120" y="395" width="660" height="130" rx="12" fill="#fffbe6" stroke="#d4a017" stroke-width="2"/>
+  <text x="450" y="425" text-anchor="middle" font-size="16" font-weight="700" fill="#7a5a00">Crab 的做法：桥接两端语义</text>
+
+  <rect x="150" y="445" width="180" height="60" rx="6" fill="#fff" stroke="#d4a017"/>
+  <text x="240" y="470" text-anchor="middle" font-size="12" font-weight="700" fill="#333">Agent 层：标记 turn 边界</text>
+  <text x="240" y="490" text-anchor="middle" font-size="11" fill="#555">告诉内核"一轮结束了"</text>
+
+  <rect x="360" y="445" width="180" height="60" rx="6" fill="#fff2b0" stroke="#d4a017" stroke-width="2"/>
+  <text x="450" y="470" text-anchor="middle" font-size="12" font-weight="700" fill="#7a5a00">eBPF Inspector</text>
+  <text x="450" y="490" text-anchor="middle" font-size="11" fill="#555">观察真实 OS 副作用</text>
+
+  <rect x="570" y="445" width="180" height="60" rx="6" fill="#fff" stroke="#d4a017"/>
+  <text x="660" y="470" text-anchor="middle" font-size="12" font-weight="700" fill="#333">按需 checkpoint</text>
+  <text x="660" y="490" text-anchor="middle" font-size="11" fill="#555">有改动才存</text>
+
+  <line x1="330" y1="475" x2="358" y2="475" stroke="#2a7" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="540" y1="475" x2="568" y2="475" stroke="#2a7" stroke-width="2" marker-end="url(#ag)"/>
+</svg>

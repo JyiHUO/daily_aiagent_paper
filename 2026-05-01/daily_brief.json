@@ -1,0 +1,26 @@
+{
+  "trend_overview_brief": [
+    "Computer-use Agent 环境与数据成为训练瓶颈",
+    "Agent 运行时与 sandbox 容错被严肃对待",
+    "MCP 多服务器数据泄露进入评测视野",
+    "评测从结果分数转向轨迹与演化工作流"
+  ],
+  "trend_overview": [
+    "Computer-use 方向今天明显从'刷任务'升级到'造整台电脑+长程工作流'，合成环境成为 Agent 训练和 RL 的新底座。",
+    "Agent runtime/harness 层研究密度上升，从 sandbox checkpoint/restore 到 GPU-CPU 协同调度，都在补 Agent 系统工程的短板。",
+    "安全议题从传统 prompt injection 扩展到多服务器 MCP 场景下的良性数据跨界传播，非对抗性结构风险首次被量化。",
+    "评测方法论在分化：既有轨迹级污染诊断和 live benchmark，也有对 terminal agent 任务设计准则的反思，单一成功率不再够用。"
+  ],
+  "knowledge_point": {
+    "topic": "Harness 是什么",
+    "summary": "Harness 是把任务、环境、协议、日志和评测打包起来的 Agent 实验底座，决定结果能否复现与比较。",
+    "content": "Harness 可以理解成一套把任务定义、运行环境、输入输出协议、评测脚本和执行日志统一封装起来的实验底座。它的意义不在于跑出一次漂亮分数，而在于让不同模型、不同工具链、不同防御策略能在同一套协议下被公平重复地比较。对 Agent 系统来说，harness 往往决定你是在做一次 demo，还是在做可复现、可回归、可持续迭代的评测和训练流水线，它同时也是 runtime、sandbox 和 benchmark 三者的交汇处。",
+    "why_today": "今天多篇重点论文——Crab 的 sandbox checkpoint/restore、WindowsWorld 和 Claw-Eval-Live 的新基准、Synthetic Computers 的合成环境——本质上都在重做 harness 的某一层，理解这个概念才能看清它们彼此的位置。"
+  },
+  "closing_summary_brief": [
+    "Agent 研究正在把重心从模型能力搬到环境、运行时和评测底座。"
+  ],
+  "closing_summary": [
+    "今天的整体信号很清晰：Agent 领域的瓶颈正从'模型够不够聪明'转向'环境、运行时和评测够不够扎实'。合成电脑、sandbox C/R、协同调度这一串工作在补 harness 层的底，MCPHunt 和轨迹污染分析则在补安全与可靠性的评测底。对做 Agent 系统的人来说，值得关注的是这些底座工作往往比新 prompt 技巧更能决定产品能否真正上线。"
+  ]
+}

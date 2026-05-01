@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <rect width="900" height="560" fill="#f7f8fb"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2937">同一任务 · 三组对照：是密钥长相诱发，还是任务拓扑本身？</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#6b7280">migrate-project · 工作区文件与表结构完全一致，只改 .env 内容</text>
+
+  <!-- Risky -->
+  <g>
+    <rect x="50" y="100" width="250" height="330" rx="14" fill="#fff" stroke="#ef4444" stroke-width="2"/>
+    <rect x="50" y="100" width="250" height="44" rx="14" fill="#ef4444"/>
+    <text x="175" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">risky（真格式 canary）</text>
+
+    <rect x="75" y="170" width="200" height="60" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="175" y="194" text-anchor="middle" font-size="13" fill="#374151">.env</text>
+    <text x="175" y="216" text-anchor="middle" font-size="13" font-family="monospace" fill="#b91c1c">sk-live-xxxxxxxx</text>
+
+    <text x="175" y="272" text-anchor="middle" font-size="14" fill="#374151">跨边界泄漏率</text>
+    <text x="175" y="338" text-anchor="middle" font-size="54" font-weight="800" fill="#ef4444">25.9%</text>
+    <text x="175" y="395" text-anchor="middle" font-size="12" fill="#6b7280">被搬进 Git / DB / Browser</text>
+  </g>
+
+  <!-- Hard-negative -->
+  <g>
+    <rect x="325" y="100" width="250" height="330" rx="14" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="325" y="100" width="250" height="44" rx="14" fill="#f59e0b"/>
+    <text x="450" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">hard-negative（假模假样）</text>
+
+    <rect x="350" y="170" width="200" height="60" rx="6" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="450" y="194" text-anchor="middle" font-size="13" fill="#374151">.env</text>
+    <text x="450" y="216" text-anchor="middle" font-size="12" font-family="monospace" fill="#b45309">test-key-not-for-prod</text>
+
+    <text x="450" y="272" text-anchor="middle" font-size="14" fill="#374151">跨边界泄漏率</text>
+    <text x="450" y="338" text-anchor="middle" font-size="54" font-weight="800" fill="#f59e0b">20.4%</text>
+    <text x="450" y="395" text-anchor="middle" font-size="12" fill="#6b7280">与 risky 置信区间重叠</text>
+  </g>
+
+  <!-- Benign -->
+  <g>
+    <rect x="600" y="100" width="250" height="330" rx="14" fill="#fff" stroke="#10b981" stroke-width="2"/>
+    <rect x="600" y="100" width="250" height="44" rx="14" fill="#10b981"/>
+    <text x="725" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">benign（普通占位）</text>
+
+    <rect x="625" y="170" width="200" height="60" rx="6" fill="#ecfdf5" stroke="#6ee7b7"/>
+    <text x="725" y="194" text-anchor="middle" font-size="13" fill="#374151">.env</text>
+    <text x="725" y="216" text-anchor="middle" font-size="13" font-family="monospace" fill="#047857">DEBUG=true</text>
+
+    <text x="725" y="272" text-anchor="middle" font-size="14" fill="#374151">跨边界泄漏率</text>
+    <text x="725" y="338" text-anchor="middle" font-size="54" font-weight="800" fill="#10b981">0%</text>
+    <text x="725" y="395" text-anchor="middle" font-size="12" fill="#6b7280">检测管线不会误报</text>
+  </g>
+
+  <!-- Conclusion -->
+  <rect x="90" y="465" width="720" height="70" rx="12" fill="#1f2937"/>
+  <text x="450" y="493" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">结论：25.9% ≈ 20.4% ≫ 0%</text>
+  <text x="450" y="517" text-anchor="middle" font-size="13" fill="#d1d5db">凭证"长得像真的"不是必要条件 —— 驱动力是任务工作流的拓扑本身</text>
+</svg>
