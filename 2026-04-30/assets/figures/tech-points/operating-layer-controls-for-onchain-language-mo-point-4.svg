@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b5bdb"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8a5f"/>
+    </marker>
+    <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#f7f6f2"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">一条 Trace，三种用法</text>
+  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#666">真实结算轨迹 = 调试线索 + 跨模型迁移 + RL 奖励</text>
+
+  <!-- Trace 主模块 -->
+  <rect x="50" y="110" width="260" height="340" rx="10" fill="#fff" stroke="#222" stroke-width="2"/>
+  <text x="180" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Invocation Trace</text>
+  <line x1="70" y1="150" x2="290" y2="150" stroke="#ddd"/>
+
+  <g font-size="12" fill="#333">
+    <rect x="70" y="165" width="220" height="28" rx="4" fill="#eef3ff"/>
+    <text x="82" y="184">① 用户配置</text>
+    <rect x="70" y="200" width="220" height="28" rx="4" fill="#eef3ff"/>
+    <text x="82" y="219">② 渲染后的 prompt</text>
+    <rect x="70" y="235" width="220" height="28" rx="4" fill="#eef3ff"/>
+    <text x="82" y="254">③ reasoning</text>
+    <rect x="70" y="270" width="220" height="28" rx="4" fill="#eef3ff"/>
+    <text x="82" y="289">④ 工具参数</text>
+    <rect x="70" y="305" width="220" height="28" rx="4" fill="#eef3ff"/>
+    <text x="82" y="324">⑤ 校验结果</text>
+    <rect x="70" y="340" width="220" height="28" rx="4" fill="#ffe9d9"/>
+    <text x="82" y="359">⑥ 链上结算 (真钱)</text>
+  </g>
+  <text x="180" y="395" text-anchor="middle" font-size="11" fill="#888">每次动作都可追溯</text>
+  <text x="180" y="414" text-anchor="middle" font-size="11" fill="#888">区分 模型糊涂 / 策略矛盾 / 正确拒绝</text>
+
+  <!-- 用法1：调试 -->
+  <rect x="400" y="100" width="430" height="115" rx="10" fill="#fff" stroke="#3b5bdb" stroke-width="2"/>
+  <text x="420" y="128" font-size="15" font-weight="700" fill="#3b5bdb">① 精确调试</text>
+  <text x="420" y="152" font-size="12" fill="#333">漏单 → 查 trace → reasoning 说 &quot;冷却期未到&quot;</text>
+  <text x="420" y="172" font-size="12" fill="#333">→ memory 里重复观察 → 修掉重复注入</text>
+  <text x="420" y="198" font-size="11" fill="#888">不再瞎调 prompt，定位到具体组件</text>
+
+  <!-- 用法2：跨模型迁移 -->
+  <rect x="400" y="230" width="430" height="115" rx="10" fill="#fff" stroke="#1e8a5f" stroke-width="2"/>
+  <text x="420" y="258" font-size="15" font-weight="700" fill="#1e8a5f">② 换模型也能用</text>
+  <text x="420" y="280" font-size="12" fill="#333">同一套 harness 套到 Claude 4 / 4.6 的 EVM swap：</text>
+
+  <g font-size="13" font-weight="700">
+    <rect x="420" y="298" width="66" height="30" rx="4" fill="#fde2e2"/>
+    <text x="453" y="318" text-anchor="middle" fill="#b23">87%</text>
+    <text x="500" y="318" text-anchor="middle" fill="#1e8a5f" font-size="16">→</text>
+    <rect x="515" y="298" width="66" height="30" rx="4" fill="#fff3cc"/>
+    <text x="548" y="318" text-anchor="middle" fill="#a66">96%</text>
+    <text x="595" y="318" text-anchor="middle" fill="#1e8a5f" font-size="16">→</text>
+    <rect x="610" y="298" width="76" height="30" rx="4" fill="#d4f5df"/>
+    <text x="648" y="318" text-anchor="middle" fill="#1e8a5f">99.9%</text>
+  </g>
+  <text x="700" y="318" font-size="11" fill="#888">修 interface,</text>
+  <text x="700" y="332" font-size="11" fill="#888">不修模型</text>
+
+  <!-- 用法3：RL 信号 -->
+  <rect x="400" y="360" width="430" height="90" rx="10" fill="#fff" stroke="#b8860b" stroke-width="2"/>
+  <text x="420" y="388" font-size="15" font-weight="700" fill="#b8860b">③ 天然 RL 奖励</text>
+  <text x="420" y="412" font-size="12" fill="#333">带真实结算结果的轨迹 = 真实 reward 信号</text>
+  <text x="420" y="432" font-size="11" fill="#888">回测骗不了人，链上赚亏一目了然</text>
+
+  <!-- 箭头 -->
+  <path d="M310,157 L400,157" stroke="#3b5bdb" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <path d="M310,287 L400,287" stroke="#1e8a5f" stroke-width="2" fill="none" marker-end="url(#g)"/>
+  <path d="M310,400 L400,400" stroke="#b8860b" stroke-width="2" fill="none" marker-end="url(#y)"/>
+
+  <text x="440" y="490" text-anchor="middle" font-size="12" fill="#666" font-style="italic">可靠性属于 operating layer，不属于某一次 prompt</text>
+</svg>

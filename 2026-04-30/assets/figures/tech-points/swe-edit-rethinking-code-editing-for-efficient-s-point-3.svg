@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="23" font-weight="700" fill="#0f172a">PR-Edit：便宜的 Editor 代理评测</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#64748b">用 GitHub PR 当单元测试，几分钟预测 SWE-bench 结果</text>
+
+  <!-- LEFT: SWE-bench expensive -->
+  <g>
+    <rect x="50" y="100" width="300" height="180" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+    <text x="200" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#b91c1c">SWE-bench Verified</text>
+    <text x="200" y="172" text-anchor="middle" font-size="34">🔥 💸</text>
+    <text x="200" y="210" text-anchor="middle" font-size="13" fill="#334155">端到端 agent 评测</text>
+    <text x="200" y="238" text-anchor="middle" font-size="19" font-weight="700" fill="#b91c1c">~数小时 · $200</text>
+    <text x="200" y="262" text-anchor="middle" font-size="12" fill="#64748b">每换一个 editor 都要烧一次</text>
+  </g>
+
+  <!-- RIGHT: PR-Edit cheap -->
+  <g>
+    <rect x="550" y="100" width="300" height="180" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+    <text x="700" y="132" text-anchor="middle" font-size="16" font-weight="700" fill="#047857">PR-Edit 基准 (500 题)</text>
+    <text x="700" y="172" text-anchor="middle" font-size="34">⚡ 🧪</text>
+    <text x="700" y="210" text-anchor="middle" font-size="13" fill="#334155">单步编辑评测</text>
+    <text x="700" y="238" text-anchor="middle" font-size="19" font-weight="700" fill="#047857">~几分钟 · 近乎免费</text>
+    <text x="700" y="262" text-anchor="middle" font-size="12" fill="#64748b">Format / GPT Grader / Norm-Match</text>
+  </g>
+
+  <!-- Middle arrow: predicts -->
+  <line x1="548" y1="190" x2="352" y2="190" stroke="#10b981" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arG)"/>
+  <text x="450" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#047857">强相关 · 可预测</text>
+
+  <!-- Data source -->
+  <g>
+    <rect x="300" y="320" width="300" height="70" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="450" y="348" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">3.5K GitHub PR 构造</text>
+    <text x="450" y="372" text-anchor="middle" font-size="12" fill="#334155">合并前后文件 + diff + GPT-4.1 改写指令</text>
+  </g>
+  <line x1="550" y1="320" x2="670" y2="282" stroke="#3b82f6" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Correlation mini-chart -->
+  <g transform="translate(180,420)">
+    <rect x="0" y="0" width="540" height="140" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="270" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">PR-Edit 分数 ↑   ⇒   SWE-bench 解决率 ↑</text>
+
+    <!-- axes -->
+    <line x1="70" y1="115" x2="510" y2="115" stroke="#94a3b8"/>
+    <line x1="70" y1="45" x2="70" y2="115" stroke="#94a3b8"/>
+
+    <!-- trend line -->
+    <line x1="110" y1="108" x2="475" y2="58" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+
+    <!-- points + labels -->
+    <circle cx="130" cy="105" r="5" fill="#6366f1"/>
+    <text x="130" y="93" text-anchor="middle" font-size="10" fill="#475569">Qwen3-8B 56→68.5</text>
+
+    <circle cx="245" cy="85" r="5" fill="#6366f1"/>
+    <text x="245" y="73" text-anchor="middle" font-size="10" fill="#475569">+GRPO 68→69.9</text>
+
+    <circle cx="335" cy="78" r="5" fill="#6366f1"/>
+    <text x="335" y="66" text-anchor="middle" font-size="10" fill="#475569">GPT-5-nano 66→70</text>
+
+    <circle cx="460" cy="62" r="5" fill="#6366f1"/>
+    <text x="460" y="50" text-anchor="middle" font-size="10" fill="#475569">GPT-5-mini 77→72</text>
+
+    <text x="510" y="132" text-anchor="end" font-size="10" fill="#64748b">PR-Edit →</text>
+    <text x="66" y="42" text-anchor="end" font-size="10" fill="#64748b">SWE ↑</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2aa86b"/>
+    </marker>
+    <marker id="bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d64545"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">pDFA：把 Agent 的"正常走法"刻成一张图</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#666">节点 = (近 w 步上下文 + 当前工具)    边 = 允许的下一步 + 参数模式</text>
+
+  <!-- Offline training box -->
+  <rect x="40" y="95" width="820" height="70" rx="10" fill="#eef4ff" stroke="#4a7bd6"/>
+  <text x="60" y="125" font-size="14" font-weight="bold" fill="#2a4fa0">离线：benign traces  →  w-gram 前缀 + 参数范围</text>
+  <text x="60" y="150" font-size="12" fill="#2a4fa0">read → write → send  ·  read → write → send  ·  …   （低频状态按 θ 剪枝，序列化为 MessagePack）</text>
+
+  <!-- DFA graph -->
+  <g>
+    <circle cx="160" cy="360" r="46" fill="#fff" stroke="#2a4fa0" stroke-width="2"/>
+    <text x="160" y="356" text-anchor="middle" font-size="13" font-weight="bold">read</text>
+    <text x="160" y="374" text-anchor="middle" font-size="11" fill="#666">ticket</text>
+
+    <circle cx="380" cy="360" r="46" fill="#fff" stroke="#2a4fa0" stroke-width="2"/>
+    <text x="380" y="356" text-anchor="middle" font-size="13" font-weight="bold">write</text>
+    <text x="380" y="374" text-anchor="middle" font-size="11" fill="#666">summary</text>
+
+    <circle cx="600" cy="360" r="46" fill="#fff" stroke="#2a4fa0" stroke-width="2"/>
+    <text x="600" y="356" text-anchor="middle" font-size="13" font-weight="bold">send</text>
+    <text x="600" y="374" text-anchor="middle" font-size="11" fill="#666">email</text>
+
+    <!-- legal edges -->
+    <line x1="206" y1="360" x2="331" y2="360" stroke="#2aa86b" stroke-width="2.5" marker-end="url(#ok)"/>
+    <line x1="426" y1="360" x2="551" y2="360" stroke="#2aa86b" stroke-width="2.5" marker-end="url(#ok)"/>
+    <text x="268" y="348" text-anchor="middle" font-size="11" fill="#2aa86b">合法出边</text>
+    <text x="488" y="348" text-anchor="middle" font-size="11" fill="#2aa86b">参数 ∈ 白名单</text>
+
+    <!-- illegal jump: read -> send, ends at halt box -->
+    <path d="M 190 325 Q 400 215 700 330" fill="none" stroke="#d64545" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#bad)"/>
+    <text x="430" y="230" text-anchor="middle" font-size="12" fill="#d64545" font-weight="bold">注入跳转：read → send (to=attacker@x.com)</text>
+
+    <!-- halt -->
+    <rect x="705" y="320" width="150" height="80" rx="10" fill="#fff3f3" stroke="#d64545" stroke-width="2"/>
+    <text x="780" y="350" text-anchor="middle" font-size="14" font-weight="bold" fill="#d64545">边不存在</text>
+    <text x="780" y="372" text-anchor="middle" font-size="12" fill="#d64545">HALT</text>
+    <text x="780" y="390" text-anchor="middle" font-size="12" fill="#d64545">+ 审计日志</text>
+  </g>
+
+  <!-- bottom caption -->
+  <rect x="40" y="450" width="820" height="120" rx="10" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="60" y="477" font-size="14" font-weight="bold" fill="#333">运行时判定：O(1) 查表</text>
+  <text x="60" y="502" font-size="12" fill="#444">① 取当前 (上下文 + 工具) 定位状态    ② 下一次调用是否在合法出边？参数是否落在学到的区间/类别里？</text>
+  <text x="60" y="524" font-size="12" fill="#444">③ 否 → 阻断。语法合法但顺序异常的 context-sequential 攻击被挡下。</text>
+  <text x="60" y="552" font-size="12" fill="#2a4fa0" font-style="italic">灵感来自 Forrest 的系统调用 n-gram 入侵检测，搬到 LLM Agent 工具调用层。</text>
+</svg>

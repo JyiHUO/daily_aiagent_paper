@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1535"/>
+      <stop offset="1" stop-color="#1a1f48"/>
+    </linearGradient>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="danger" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f87171"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" fill="#f1f5f9" font-size="26" font-weight="700">行为防火墙：把 Agent 的良性轨迹刻进 pDFA</text>
+  <text x="640" y="78" text-anchor="middle" fill="#94a3b8" font-size="15">结构+参数双重守门 · O(1) 状态转移 · 上下文序列攻击 ASR 降至 0%</text>
+
+  <!-- LEFT: Agent -->
+  <g>
+    <rect x="50" y="130" width="230" height="120" rx="14" fill="#1e293b" stroke="#475569"/>
+    <text x="165" y="162" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700">LLM Agent</text>
+    <text x="165" y="188" text-anchor="middle" fill="#94a3b8" font-size="12">结构化工作流</text>
+    <text x="165" y="212" text-anchor="middle" fill="#94a3b8" font-size="12">read → write → send</text>
+    <text x="165" y="234" text-anchor="middle" fill="#94a3b8" font-size="12">(tool-calling via MCP)</text>
+
+    <!-- attack bubble -->
+    <ellipse cx="165" cy="350" rx="115" ry="60" fill="url(#danger)"/>
+    <rect x="55" y="300" width="220" height="110" rx="12" fill="#2a1524" stroke="#f43f5e" stroke-dasharray="4 3"/>
+    <text x="165" y="328" text-anchor="middle" fill="#fecaca" font-size="14" font-weight="700">提示注入 / 拼接攻击</text>
+    <text x="165" y="352" text-anchor="middle" fill="#fca5a5" font-size="11.5">单次合法，顺序异常</text>
+    <text x="165" y="374" text-anchor="middle" fill="#fca5a5" font-size="11.5">上下文序列外泄</text>
+    <text x="165" y="396" text-anchor="middle" fill="#fca5a5" font-size="11.5">1000 条 splice payload</text>
+  </g>
+
+  <!-- arrows to gateway -->
+  <path d="M 285 200 Q 360 220 418 270" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="345" y="210" fill="#cbd5e1" font-size="12">工具调用</text>
+  <path d="M 285 350 Q 360 320 418 300" stroke="#f87171" stroke-width="2" fill="none" stroke-dasharray="5 3" marker-end="url(#arRed)"/>
+
+  <!-- CENTER: Gateway -->
+  <g>
+    <rect x="420" y="240" width="440" height="310" rx="20" fill="url(#gw)" opacity="0.15" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="640" y="272" text-anchor="middle" fill="#e9d5ff" font-size="17" font-weight="700">运行时网关 (Rust sidecar)</text>
+    <text x="640" y="294" text-anchor="middle" fill="#c4b5fd" font-size="12">每次调用 2.2 ms · 比 Aegis 快 3.7×</text>
+
+    <!-- Step 1: structural -->
+    <rect x="445" y="315" width="180" height="90" rx="10" fill="#0f172a" stroke="#22d3ee"/>
+    <text x="535" y="340" text-anchor="middle" fill="#67e8f9" font-size="13" font-weight="700">① 结构检查</text>
+    <text x="535" y="362" text-anchor="middle" fill="#cbd5e1" font-size="11">pDFA 邻接表 O(1) 查边</text>
+    <text x="535" y="382" text-anchor="middle" fill="#cbd5e1" font-size="11">状态 = (工具, w-gram)</text>
+    <text x="535" y="400" text-anchor="middle" fill="#94a3b8" font-size="10.5">不存在 → halt</text>
+
+    <!-- Step 2: param -->
+    <rect x="655" y="315" width="180" height="90" rx="10" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="745" y="340" text-anchor="middle" fill="#fcd34d" font-size="13" font-weight="700">② 参数守门</text>
+    <text x="745" y="362" text-anchor="middle" fill="#cbd5e1" font-size="11">数值区间 · 类别白名单</text>
+    <text x="745" y="382" text-anchor="middle" fill="#cbd5e1" font-size="11">字符串 centroid + 半径</text>
+    <text x="745" y="400" text-anchor="middle" fill="#94a3b8" font-size="10.5">敏感字段走精确白名单</text>
+
+    <!-- session pointer -->
+    <rect x="445" y="425" width="390" height="50" rx="10" fill="#1e1b4b" stroke="#818cf8"/>
+    <text x="470" y="455" fill="#c7d2fe" font-size="12" font-weight="700">Session 指针</text>
+    <circle cx="605" cy="450" r="7" fill="#22d3ee"/>
+    <circle cx="650" cy="450" r="7" fill="#22d3ee"/>
+    <circle cx="695" cy="450" r="7" fill="#22d3ee"/>
+    <circle cx="740" cy="450" r="10" fill="#f472b6" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="790" cy="450" r="7" fill="#475569"/>
+    <path d="M 612 450 L 643 450" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#ar)"/>
+    <path d="M 657 450 L 688 450" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#ar)"/>
+    <path d="M 702 450 L 727 450" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#ar)"/>
+
+    <text x="640" y="505" text-anchor="middle" fill="#e9d5ff" font-size="12">拒绝则指针不动 · 可良性重试</text>
+    <text x="640" y="528" text-anchor="middle" fill="#a5b4fc" font-size="11">审计日志：SHA-256 hash chain</text>
+  </g>
+
+  <!-- RIGHT: pDFA compile -->
+  <g>
+    <rect x="930" y="130" width="300" height="200" rx="16" fill="#042f2e" stroke="#14b8a6"/>
+    <text x="1080" y="158" text-anchor="middle" fill="#5eead4" font-size="15" font-weight="700">离线画像 · pDFA 编译</text>
+    <text x="1080" y="178" text-anchor="middle" fill="#99f6e4" font-size="11">from verified benign telemetry</text>
+
+    <!-- mini DFA -->
+    <circle cx="975" cy="240" r="18" fill="#0f766e" stroke="#5eead4"/>
+    <text x="975" y="244" text-anchor="middle" fill="#ecfeff" font-size="10">read</text>
+    <circle cx="1055" cy="215" r="18" fill="#0f766e" stroke="#5eead4"/>
+    <text x="1055" y="219" text-anchor="middle" fill="#ecfeff" font-size="10">write</text>
+    <circle cx="1135" cy="240" r="18" fill="#0f766e" stroke="#5eead4"/>
+    <text x="1135" y="244" text-anchor="middle" fill="#ecfeff" font-size="10">send</text>
+    <circle cx="1055" cy="290" r="18" fill="#0f766e" stroke="#5eead4"/>
+    <text x="1055" y="294" text-anchor="middle" fill="#ecfeff" font-size="10">log</text>
+    <path d="M 992 232 L 1037 221" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+    <path d="M 1072 222 L 1118 234" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+    <path d="M 988 252 L 1038 286" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+    <path d="M 1072 285 L 1120 252" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+
+    <!-- feedback -->
+    <rect x="930" y="360" width="300" height="130" rx="14" fill="#1e293b" stroke="#64748b" stroke-dasharray="4 3"/>
+    <text x="1080" y="386" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">人工审批 · 增量回灌</text>
+    <text x="1080" y="410" text-anchor="middle" fill="#94a3b8" font-size="11">默认拒绝 → 运维复核</text>
+    <text x="1080" y="430" text-anchor="middle" fill="#94a3b8" font-size="11">pending queue → 夜间重编译</text>
+    <text x="1080" y="450" text-anchor="middle" fill="#94a3b8" font-size="11">仅更新受影响的状态和边</text>
+    <text x="1080" y="476" text-anchor="middle" fill="#fbbf24" font-size="11">抵御 concept drift</text>
+  </g>
+
+  <!-- gateway to DFA (load) -->
+  <path d="M 860 280 Q 895 240 928 230" stroke="#5eead4" stroke-width="2" fill="none" stroke-dasharray="5 3" marker-end="url(#ar)"/>
+  <text x="878" y="238" fill="#5eead4" font-size="11">加载</text>
+
+  <!-- gateway -> human feedback -->
+  <path d="M 860 450 Q 895 455 928 430" stroke="#94a3b8" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <text x="868" y="478" fill="#cbd5e1" font-size="11">拦截事件</text>
+  <!-- human feedback -> DFA (loop closing) -->
+  <path d="M 1080 358 L 1080 335" stroke="#fbbf24" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- BOTTOM: results -->
+  <g>
+    <rect x="50" y="610" width="1180" height="130" rx="14" fill="#0b1228" stroke="#334155"/>
+    <text x="80" y="640" fill="#f1f5f9" font-size="14" font-weight="700">在 Agent Security Bench 上的收益</text>
+
+    <g transform="translate(80,660)">
+      <rect width="220" height="60" rx="8" fill="#052e1a" stroke="#34d399"/>
+      <text x="110" y="24" text-anchor="middle" fill="#86efac" font-size="12">结构化工作流 ASR</text>
+      <text x="110" y="48" text-anchor="middle" fill="#f0fdf4" font-size="17" font-weight="700">2.2% ← 12.8% (Aegis)</text>
+    </g>
+    <g transform="translate(320,660)">
+      <rect width="220" height="60" rx="8" fill="#052e1a" stroke="#34d399"/>
+      <text x="110" y="24" text-anchor="middle" fill="#86efac" font-size="12">多步 / 上下文序列攻击</text>
+      <text x="110" y="48" text-anchor="middle" fill="#f0fdf4" font-size="18" font-weight="700">ASR = 0%</text>
+    </g>
+    <g transform="translate(560,660)">
+      <rect width="220" height="60" rx="8" fill="#052e1a" stroke="#34d399"/>
+      <text x="110" y="24" text-anchor="middle" fill="#86efac" font-size="12">1000 条拼接外泄 payload</text>
+      <text x="110" y="48" text-anchor="middle" fill="#f0fdf4" font-size="18" font-weight="700">0 条端到端成功</text>
+    </g>
+    <g transform="translate(800,660)">
+      <rect width="200" height="60" rx="8" fill="#0b2545" stroke="#60a5fa"/>
+      <text x="100" y="24" text-anchor="middle" fill="#bfdbfe" font-size="12">每次调用延迟</text>
+      <text x="100" y="48" text-anchor="middle" fill="#eff6ff" font-size="17" font-weight="700">2.2 ms (3.7× 快)</text>
+    </g>
+    <g transform="translate(1020,660)">
+      <rect width="190" height="60" rx="8" fill="#2a1524" stroke="#f87171"/>
+      <text x="95" y="24" text-anchor="middle" fill="#fecaca" font-size="12">连续参数同义替换</text>
+      <text x="95" y="48" text-anchor="middle" fill="#fee2e2" font-size="15" font-weight="700">18% 绕过 (待加固)</text>
+    </g>
+  </g>
+
+  <!-- connector gateway -> results -->
+  <path d="M 640 550 L 640 608" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3" fill="none" marker-end="url(#arGreen)"/>
+</svg>

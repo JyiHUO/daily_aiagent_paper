@@ -1,0 +1,27 @@
+{
+  "trend_overview_brief": [
+    "可靠性重心从模型转向 operating layer",
+    "Agent 安全从单点拦截走向轨迹级治理",
+    "Memory 与 harness 成工程落地关键抓手"
+  ],
+  "trend_overview": [
+    "当天多篇高分论文把 Agent 可靠性归因到 operating layer，而不是单次 prompt 质量，真实资金和生产环境案例集中出现。",
+    "Agent 安全研究从静态拦截单次工具调用，转向用轨迹/序列模型做 stateful 防御，并开始关注对齐伪装等新型信号。",
+    "Memory 方向出现视觉模态记忆和工业级分层语义记忆两种路线，共同指向长程、可扩展、低延迟这三个硬指标。",
+    "Code agent 和 computer-use agent 越来越明确地把 harness 设计（编辑接口、子 Agent 拆分、评测代理）当成核心变量。"
+  ],
+  "knowledge_point": {
+    "topic": "Trajectory：Agent 系统里的执行轨迹",
+    "summary": "Trajectory 是 Agent 的完整执行路径，今天多篇论文都把它当成可靠性与安全的核心对象。",
+    "content": "Trajectory 指 Agent 从接收意图到最终结果之间，所有动作、工具调用、中间观察和状态变化串起来的那条路径。和'最终答案对不对'相比，trajectory 更关心每一步是否合理、顺序是否正常、失败发生在哪一环。在 Agent 系统里，它通常同时扮演三个角色：调试时的诊断对象、安全治理时的检测单位，以及训练和迁移时可复用的数据资产。",
+    "why_today": "链上 Agent 论文用 trace 做失败归因和迁移训练，行为防火墙直接把 benign trajectory 建成 DFA 来拦截攻击，forecasting agent 评测也在用推理 trace 诊断策略失误——三条线索都落在同一个概念上。"
+  },
+  "closing_summary_brief": [
+    "Agent 竞争正从'模型选型'转向'operating layer 工程深度'"
+  ],
+  "closing_summary": [
+    "今天的高分论文几乎一致指向同一个判断：Agent 的可靠性、安全和长程能力，都不在单次生成里，而在围绕它搭起来的那层执行栈。",
+    "operating layer、behavioral firewall、harness 拆分、长程 memory，看似分散，其实都是在给 Agent 的执行轨迹加结构。",
+    "对正在做 Agent 产品的团队来说，接下来值得投入的，不是再换一个更强的基座，而是把轨迹、工具接口和记忆层认真工程化。"
+  ]
+}

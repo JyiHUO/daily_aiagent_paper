@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#10b981"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#db2777"/>
+    </marker>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ecfdf5"/><stop offset="1" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">让编辑器自己选：拧螺丝 还是 换整块板？</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748b">SWE-Edit · 自适应编辑格式（GRPO 单步决策）</text>
+
+  <!-- Input -->
+  <rect x="40" y="180" width="180" height="110" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">输入</text>
+  <text x="130" y="238" text-anchor="middle" font-size="12" fill="#334155">文件内容 + 编辑指令</text>
+  <text x="130" y="262" text-anchor="middle" font-size="11" fill="#64748b">（来自主 Agent）</text>
+
+  <!-- Decision diamond -->
+  <polygon points="360,235 440,170 520,235 440,300" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">Editor 决策</text>
+  <text x="440" y="244" text-anchor="middle" font-size="12" fill="#92400e">选哪种模式?</text>
+  <text x="440" y="264" text-anchor="middle" font-size="11" fill="#b45309">m ∈ {FR, WFR}</text>
+
+  <line x1="220" y1="235" x2="355" y2="235" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Mode A: find-replace -->
+  <rect x="620" y="105" width="240" height="130" rx="10" fill="url(#g1)" stroke="#10b981" stroke-width="1.8"/>
+  <text x="740" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#065f46">Find-Replace（拧螺丝）</text>
+  <text x="740" y="158" text-anchor="middle" font-size="12" fill="#065f46">小修小补 · 省 token，但对空格敏感</text>
+  <rect x="640" y="178" width="200" height="42" rx="4" fill="#ffffff" stroke="#a7f3d0"/>
+  <text x="740" y="196" text-anchor="middle" font-size="11" fill="#065f46" font-family="monospace">- old_line</text>
+  <text x="740" y="212" text-anchor="middle" font-size="11" fill="#065f46" font-family="monospace">+ new_line</text>
+
+  <!-- Mode B: whole-file rewrite -->
+  <rect x="620" y="295" width="240" height="130" rx="10" fill="url(#g2)" stroke="#3b82f6" stroke-width="1.8"/>
+  <text x="740" y="324" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">Whole-File Rewrite（换板）</text>
+  <text x="740" y="348" text-anchor="middle" font-size="12" fill="#1e3a8a">大范围重构 · 避开匹配坑</text>
+  <rect x="640" y="368" width="200" height="42" rx="4" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="740" y="394" text-anchor="middle" font-size="11" fill="#1e3a8a" font-family="monospace">输出整份新文件</text>
+
+  <!-- Arrows from diamond to modes (land on box edge) -->
+  <path d="M500,205 Q560,175 620,170" fill="none" stroke="#10b981" stroke-width="2.2" marker-end="url(#ag)"/>
+  <path d="M500,265 Q560,320 620,360" fill="none" stroke="#3b82f6" stroke-width="2.2" marker-end="url(#ab)"/>
+
+  <!-- GRPO reward box -->
+  <rect x="260" y="415" width="380" height="95" rx="10" fill="#fdf2f8" stroke="#db2777" stroke-width="1.8"/>
+  <text x="450" y="442" text-anchor="middle" font-size="15" font-weight="700" fill="#9d174d">GRPO 奖励：Normalized Match</text>
+  <text x="450" y="465" text-anchor="middle" font-size="12" fill="#831843">去注释 + 规范空白后比对</text>
+  <text x="450" y="487" text-anchor="middle" font-size="12" fill="#831843">学会何时拧螺丝，何时换板</text>
+
+  <!-- Feedback loop: reward updates decision -->
+  <path d="M440,300 L440,413" fill="none" stroke="#db2777" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ap)"/>
+
+  <!-- Result badges -->
+  <rect x="40" y="335" width="200" height="150" rx="10" fill="#1e293b"/>
+  <text x="140" y="363" text-anchor="middle" font-size="13" font-weight="700" fill="#f1f5f9">Qwen3-8B 训练后</text>
+  <text x="140" y="390" text-anchor="middle" font-size="12" fill="#cbd5e1">Format Success</text>
+  <text x="140" y="412" text-anchor="middle" font-size="15" font-weight="700" fill="#4ade80">76.8% → 90.4%</text>
+  <text x="140" y="438" text-anchor="middle" font-size="12" fill="#cbd5e1">Edit Success</text>
+  <text x="140" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#60a5fa">68.6% → 81.1%</text>
+</svg>

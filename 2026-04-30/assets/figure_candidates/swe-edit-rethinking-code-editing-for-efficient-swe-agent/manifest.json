@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/downloaded_pdfs/swe-edit-rethinking-code-editing-for-efficient-swe-agent.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-4",
+      "page_index": 1,
+      "caption": "Figure 1. Overview of the proposed SWE-Edit framework architecture. The figure illustrates the dual optimization mechanism, demonstrating how optimization occurs simultaneously at both the scaffolding level (coordinating components and context) and the model level (refining the underlying models).",
+      "clip": [
+        49.59100341796875,
+        58.2589111328125,
+        547.2869873046875,
+        384.01300048828125
+      ],
+      "clip_area": 162126.50200689211,
+      "page_area": 484704.0,
+      "text_density": 0.02662966653680705,
+      "kind": "drawing_cluster_with_caption",
+      "score": 94.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-4",
+      "page_index": 1,
+      "caption": "Figure 1. Overview of the proposed SWE-Edit framework architecture. The figure illustrates the dual optimization mechanism, demonstrating how optimization occurs simultaneously at both the scaffolding level (coordinating components and context) and the model level (refining the underlying models).",
+      "clip": [
+        24.293001556396483,
+        58.35991210937499,
+        573.161767578125,
+        367.159912109375
+      ],
+      "clip_area": 169490.67494750977,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "captioned_figure",
+      "score": 81.6128511464721,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/02-p2-captioned_figure.png",
+      "filename": "02-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-11",
+      "page_index": 4,
+      "caption": "Figure 2. Adaptive editing mode selection. The editor analyzes task characteristics to choose between find-replace (token-efficient but matching-sensitive) and whole-file rewrite (robust but costly), enabling optimal strategy selection based on edit scope and complexity.",
+      "clip": [
+        49.59100341796875,
+        58.25987243652344,
+        547.2869873046875,
+        307.2569885253906
+      ],
+      "clip_area": 123924.86467680428,
+      "page_area": 484704.0,
+      "text_density": 0.03465398375622299,
+      "kind": "drawing_cluster_with_caption",
+      "score": 41.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/03-p5-drawing_cluster_with_caption.png",
+      "filename": "03-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-16",
+      "page_index": 7,
+      "caption": "Figure 4. PR-Edit benchmark scores correlate with downstream agent performance, enabling efficient editor model selection with- out full SWE-bench evaluation.",
+      "clip": [
+        289.44000244140625,
+        51.06129455566406,
+        559.8355102539062,
+        246.28399658203125
+      ],
+      "clip_area": 52787.34165094793,
+      "page_area": 484704.0,
+      "text_density": 0.12412531706715417,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.939006994314617,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/04-p8-drawing_cluster_with_caption.png",
+      "filename": "04-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-11",
+      "page_index": 4,
+      "caption": "Figure 2. Adaptive editing mode selection. The editor analyzes task characteristics to choose between find-replace (token-efficient but matching-sensitive) and whole-file rewrite (robust but costly), enabling optimal strategy selection based on edit scope and complexity.",
+      "clip": [
+        24.293001556396483,
+        18.0,
+        572.0410400390625,
+        290.4305419921875
+      ],
+      "clip_area": 149223.29499899028,
+      "page_area": 484704.0,
+      "text_density": 0.014237413374318074,
+      "kind": "captioned_figure",
+      "score": 29.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/05-p5-captioned_figure.png",
+      "filename": "05-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-5",
+      "page_index": 2,
+      "caption": "3. Method: The SWE-Edit Framework",
+      "clip": [
+        276.8400024414062,
+        18.0,
+        536.2213684082031,
+        207.96417236328125
+      ],
+      "clip_area": 49273.16651233994,
+      "page_area": 484704.0,
+      "text_density": 0.6639786913156063,
+      "kind": "captioned_figure",
+      "score": 26.54747962791489,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/06-p3-captioned_figure.png",
+      "filename": "06-p3-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/swe-edit-rethinking-code-editing-for-efficient-swe-agent/contact-sheet.svg"
+}

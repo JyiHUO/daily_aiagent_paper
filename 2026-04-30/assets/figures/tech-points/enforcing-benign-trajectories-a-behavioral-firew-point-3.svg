@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c5fa8"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f7f9fc"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1b2a4e">结构 + 参数：双重窄通道防御</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#556">只有同时过结构 DFA 与参数 guard 才能放行</text>
+
+  <!-- Attacker -->
+  <g>
+    <rect x="40" y="240" width="140" height="90" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+    <text x="110" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">攻击调用</text>
+    <text x="110" y="295" text-anchor="middle" font-size="11" fill="#7b241c">合法顺序</text>
+    <text x="110" y="313" text-anchor="middle" font-size="11" fill="#7b241c">+ 外部邮箱参数</text>
+  </g>
+
+  <!-- Gate 1: DFA -->
+  <g>
+    <rect x="230" y="140" width="210" height="140" rx="12" fill="#eaf2fb" stroke="#2c5fa8" stroke-width="2"/>
+    <text x="335" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#2c5fa8">① 结构 DFA · 能去哪？</text>
+    <!-- tiny graph -->
+    <circle cx="270" cy="220" r="11" fill="#2c5fa8"/>
+    <circle cx="335" cy="220" r="11" fill="#2c5fa8"/>
+    <circle cx="400" cy="220" r="11" fill="#2c5fa8"/>
+    <line x1="281" y1="220" x2="324" y2="220" stroke="#2c5fa8" stroke-width="2" marker-end="url(#arB)"/>
+    <line x1="346" y1="220" x2="389" y2="220" stroke="#2c5fa8" stroke-width="2" marker-end="url(#arB)"/>
+    <text x="270" y="248" text-anchor="middle" font-size="10" fill="#445">read</text>
+    <text x="335" y="248" text-anchor="middle" font-size="10" fill="#445">write</text>
+    <text x="400" y="248" text-anchor="middle" font-size="10" fill="#445">send</text>
+    <text x="335" y="270" text-anchor="middle" font-size="11" fill="#2c5fa8">窄路径：仅少数合法序列</text>
+  </g>
+
+  <!-- Gate 2: Param guard -->
+  <g>
+    <rect x="230" y="310" width="210" height="160" rx="12" fill="#eaf7ee" stroke="#1e8449" stroke-width="2"/>
+    <text x="335" y="340" text-anchor="middle" font-size="15" font-weight="700" fill="#1e8449">② 参数 Guard · 带什么料？</text>
+
+    <!-- centroid circle -->
+    <circle cx="300" cy="410" r="34" fill="none" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <circle cx="300" cy="410" r="4" fill="#1e8449"/>
+    <text x="300" y="458" text-anchor="middle" font-size="10" fill="#1e8449">内部邮箱 centroid (半径 r)</text>
+    <!-- outlier -->
+    <circle cx="395" cy="390" r="4" fill="#c0392b"/>
+    <text x="402" y="394" font-size="10" fill="#c0392b">attacker@ext</text>
+    <text x="402" y="408" font-size="10" fill="#c0392b">越界 → 拒绝</text>
+  </g>
+
+  <!-- Sensitive override -->
+  <g>
+    <rect x="470" y="345" width="210" height="110" rx="10" fill="#fff6e5" stroke="#c27803" stroke-width="2"/>
+    <text x="575" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#945700">敏感字段精确白名单</text>
+    <text x="575" y="395" text-anchor="middle" font-size="11" fill="#6b4200">path 等连续边界不够</text>
+    <text x="575" y="413" text-anchor="middle" font-size="11" fill="#6b4200">同义替换 18% 绕过</text>
+    <text x="575" y="435" text-anchor="middle" font-size="11" font-weight="600" fill="#945700">→ 强制精确匹配</text>
+  </g>
+
+  <!-- Result box -->
+  <g>
+    <rect x="710" y="210" width="160" height="180" rx="12" fill="#1b2a4e"/>
+    <text x="790" y="240" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">端到端结果</text>
+    <text x="790" y="280" text-anchor="middle" font-size="24" font-weight="800" fill="#4ade80">0 / 1000</text>
+    <text x="790" y="300" text-anchor="middle" font-size="11" fill="#cfd6e4">exfil 成功</text>
+    <line x1="730" y1="315" x2="850" y2="315" stroke="#3a4a6e" stroke-width="1"/>
+    <text x="790" y="340" text-anchor="middle" font-size="11" fill="#cfd6e4">14 条过结构</text>
+    <text x="790" y="358" text-anchor="middle" font-size="11" fill="#cfd6e4">全被参数拦下</text>
+    <text x="790" y="378" text-anchor="middle" font-size="11" fill="#cfd6e4">ASR: 5.6% → 0%</text>
+  </g>
+
+  <!-- Flow arrows from attacker -->
+  <line x1="180" y1="265" x2="225" y2="215" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+  <line x1="180" y1="305" x2="225" y2="385" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+
+  <!-- DFA to result: few pass -->
+  <text x="500" y="200" font-size="11" fill="#2c5fa8">少数过结构</text>
+  <line x1="440" y1="210" x2="708" y2="250" stroke="#2c5fa8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arB)"/>
+
+  <!-- Param guard to result: all blocked -->
+  <text x="500" y="335" font-size="11" fill="#1e8449">全部拦截</text>
+  <line x1="440" y1="360" x2="708" y2="340" stroke="#1e8449" stroke-width="2" marker-end="url(#arG)"/>
+
+  <!-- Override reinforces guard -->
+  <line x1="470" y1="400" x2="442" y2="400" stroke="#c27803" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+
+  <!-- Bottom summary -->
+  <rect x="60" y="505" width="780" height="70" rx="8" fill="#ffffff" stroke="#d0d7e2"/>
+  <text x="90" y="532" font-size="12" fill="#1b2a4e"><tspan font-weight="700">窄通道 =</tspan> 顺序合法 (DFA) <tspan font-weight="700" fill="#2c5fa8"> ∧ </tspan> 参数合法 (guard) <tspan font-weight="700" fill="#c27803"> ∧ </tspan> 敏感字段精确白名单</text>
+  <text x="90" y="555" font-size="11" fill="#556">macro-ASR：baseline → 5.6%；结构化 workflow 2.2%（Aegis 12.8%）；multi-step &amp; context-sequential 0%</text>
+</svg>

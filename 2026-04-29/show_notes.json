@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜2026-04-29｜脚手架自进化、基准审计与长程效率",
+  "shownotes_html": "<p>Agent 的瓶颈正在从模型本身转向模型外面那一圈基础设施——今天三篇论文从 harness 自动进化、benchmark 审计、长程任务效率三个角度同时印证了这一点。如果你在做 Agent 产品或评测，这期值得完整听完。</p><p><strong>本期重点</strong></p><ul><li><strong>Agentic Harness Engineering（脚手架自进化工程）</strong>：把 coding agent 围绕模型的脚手架拆成可版本化、可回滚的组件，让另一个 Agent 基于可观测证据自动迭代，还能跨任务跨模型迁移。核心亮点是\"修改契约\"——每次改动必须提前预测会修好哪些任务、可能弄坏哪些，下一轮自动对账，对不上就回滚。</li><li><strong>BenchGuard: Who Guards the Benchmarks?（谁来监督评测基准）</strong>：用前沿 LLM 系统性审计 Agent 基准本身的 bug，在 ScienceAgentBench 找出 12 个作者确认的致命缺陷，50 个任务审计成本不到 15 美元。对做评测集和产品指标的团队是直接可用的方法。</li><li><strong>Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks（长程 Web Agent 评测）</strong>：从真人 Chrome 浏览历史出发构造 200 个跨站长程任务，最强模型 Opus 完美通过率仅 44.5%、平均要 81 步，效率指标只有约 1%。引入 rubric 细粒度评测和轨迹效率作为一等公民。</li></ul><p><strong>今日趋势</strong></p><ul><li>评测类工作明显抬头：不再只造新 benchmark，而是开始审计已有基准、引入 rubric 和效率等更细指标，反映对 Agent 评测可信度的焦虑。</li><li>Coding/terminal agent 的注意力从模型能力转向 harness、runtime 与任务合成等基础设施层，提升上限的瓶颈正在外移。</li></ul><p><strong>知识点补充：Harness 是什么？</strong><br/>Harness 是围绕模型搭的一整套脚手架：任务协议、工具接口、系统提示、中间件、记忆、评测脚本、日志采集都在里面。它本身不产生智能，但决定模型能力能以多大比例转化为可用的 Agent 行为。今天三篇论文都在不同维度重新定义和优化 harness 的各个部分。</p><p>欢迎在评论区留言讨论你对 Agent 脚手架工程化的看法。本期内容由 AI 自动生成，如有疏漏欢迎指正，我们明天见。</p>",
+  "report_date": "2026-04-29",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-04-30T03:57:31Z"
+}

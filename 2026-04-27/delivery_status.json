@@ -1,6 +1,13 @@
 {
   "feishu": "completed",
   "wecom": "completed",
-  "xiaoyuzhou": "failed",
-  "xiaoyuzhou_error": "请求失败 401 https://balloon.xiaoyuzhoufm.com/qiniu/provision?type=MEDIA&midway-project-id=v6worU4NnWyL: <html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n<!-- a padding to disable MSIE and Chrome friendly error page -->\r\n<!-- a padding to disable MSIE and Chrome friendly error page -->\r\n<!-- a padding to disable MSIE and Chrome friendly error page -->\r\n<!-- a padding to disable MSIE and Chrome friendly error page -->\r\n<!-- a padding to disable MSIE and Chrome friendly error"
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69f38d305c60a99573fee502",
+    "pid": "680e3c27d6274e74a99e502f",
+    "title": "AI Agent 论文播报｜0427：轨迹归因、组织编排与执行治理三线齐发",
+    "audio_url": "https://media.xyzcdn.net/lluzLbi9snegpmU8XOq-L3xNeDx_.mp3",
+    "review_status": "PENDING",
+    "status": "INITIALIZED"
+  }
 }

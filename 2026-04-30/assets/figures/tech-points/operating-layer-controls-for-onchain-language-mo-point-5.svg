@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#fafaf7"/>
+
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222">同一个模型 × 不同 slider = 异质行为 + 群体羊群</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">Harness 冻结 21 天，变化只来自用户配置</text>
+
+  <!-- Central model -->
+  <g>
+    <rect x="370" y="80" width="160" height="64" rx="10" fill="#2c3e50"/>
+    <text x="450" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">同一个 Qwen</text>
+    <text x="450" y="128" text-anchor="middle" font-size="11" fill="#cfd8dc">3505 vault 共用</text>
+  </g>
+
+  <!-- Slider knobs -->
+  <g transform="translate(120,80)">
+    <rect width="200" height="64" rx="10" fill="#fff" stroke="#888"/>
+    <text x="100" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#222">用户 slider（保守→激进）</text>
+    <line x1="20" y1="42" x2="180" y2="42" stroke="#bbb" stroke-width="3"/>
+    <circle cx="50" cy="42" r="6" fill="#27ae60"/>
+    <circle cx="100" cy="42" r="6" fill="#f39c12"/>
+    <circle cx="155" cy="42" r="6" fill="#c0392b"/>
+    <text x="100" y="58" text-anchor="middle" font-size="10" fill="#666">Trading Activity 等 5 个 slider</text>
+  </g>
+  <line x1="320" y1="112" x2="366" y2="112" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Tape -->
+  <g transform="translate(580,80)">
+    <rect width="200" height="64" rx="10" fill="#fff" stroke="#888"/>
+    <text x="100" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#222">共同市场 tape</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#666">所有 agent 读同一份</text>
+    <text x="100" y="58" text-anchor="middle" font-size="11" fill="#666">价格 / 新闻 / 订单流</text>
+  </g>
+  <line x1="580" y1="112" x2="534" y2="112" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Split down -->
+  <line x1="450" y1="144" x2="450" y2="194" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Scene A: diversity -->
+  <g transform="translate(60,205)">
+    <rect width="370" height="310" rx="12" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+    <text x="185" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1e8449">✓ 5 分钟窗口：双向市场（92.9% 交易量）</text>
+
+    <rect x="30" y="60" width="140" height="72" rx="8" fill="#fff" stroke="#27ae60"/>
+    <text x="100" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#222">激进 slider</text>
+    <text x="100" y="104" text-anchor="middle" font-size="12" fill="#27ae60">买入 FEET</text>
+    <text x="100" y="122" text-anchor="middle" font-size="10" fill="#666">频率 ×6</text>
+
+    <rect x="200" y="60" width="140" height="72" rx="8" fill="#fff" stroke="#c0392b"/>
+    <text x="270" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#222">保守 slider</text>
+    <text x="270" y="104" text-anchor="middle" font-size="12" fill="#c0392b">卖出 FEET</text>
+    <text x="270" y="122" text-anchor="middle" font-size="10" fill="#666">低频 / 止盈</text>
+
+    <line x1="170" y1="90" x2="198" y2="90" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="200" y1="110" x2="172" y2="110" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+    <rect x="30" y="170" width="310" height="120" rx="8" fill="#fff" stroke="#27ae60"/>
+    <text x="185" y="198" text-anchor="middle" font-size="13" font-weight="700" fill="#1e8449">结论</text>
+    <text x="185" y="222" text-anchor="middle" font-size="12" fill="#333">结构化用户指令 → 行为多样性</text>
+    <text x="185" y="244" text-anchor="middle" font-size="12" fill="#333">不需要换模型，slider 就够</text>
+    <text x="185" y="272" text-anchor="middle" font-size="11" fill="#666">同一 token 既有人买、也有人卖</text>
+  </g>
+
+  <!-- Scene B: herding -->
+  <g transform="translate(470,205)">
+    <rect width="370" height="310" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="185" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#a93226">⚠ 小时级：群体级联（共享 prompt 放大羊群）</text>
+
+    <g transform="translate(30,55)">
+      <rect width="310" height="90" rx="6" fill="#fff" stroke="#c0392b"/>
+      <text x="155" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#222">FEET 买入级联：1544 / 3454 vault，1 小时内</text>
+      <g fill="#c0392b">
+        <circle cx="25" cy="48" r="3"/><circle cx="40" cy="51" r="3"/><circle cx="55" cy="46" r="3"/>
+        <circle cx="70" cy="53" r="3"/><circle cx="85" cy="47" r="3"/><circle cx="100" cy="50" r="3"/>
+        <circle cx="115" cy="48" r="3"/><circle cx="130" cy="52" r="3"/><circle cx="145" cy="46" r="3"/>
+        <circle cx="160" cy="49" r="3"/><circle cx="175" cy="51" r="3"/><circle cx="190" cy="47" r="3"/>
+        <circle cx="205" cy="50" r="3"/><circle cx="220" cy="48" r="3"/><circle cx="235" cy="52" r="3"/>
+        <circle cx="250" cy="46" r="3"/><circle cx="265" cy="49" r="3"/><circle cx="280" cy="51" r="3"/>
+        <circle cx="25" cy="70" r="3"/><circle cx="55" cy="72" r="3"/><circle cx="85" cy="68" r="3"/>
+        <circle cx="115" cy="71" r="3"/><circle cx="145" cy="69" r="3"/><circle cx="175" cy="72" r="3"/>
+        <circle cx="205" cy="70" r="3"/><circle cx="235" cy="73" r="3"/><circle cx="265" cy="69" r="3"/>
+      </g>
+    </g>
+
+    <g transform="translate(30,165)">
+      <rect width="145" height="125" rx="6" fill="#fff" stroke="#c0392b"/>
+      <text x="72" y="38" text-anchor="middle" font-size="26" font-weight="700" fill="#c0392b">3878</text>
+      <text x="72" y="62" text-anchor="middle" font-size="11" fill="#333">次卖出级联</text>
+      <text x="72" y="88" text-anchor="middle" font-size="10" fill="#666">≥10 vault / 10 分钟</text>
+      <text x="72" y="106" text-anchor="middle" font-size="10" fill="#666">同一 token</text>
+    </g>
+    <g transform="translate(185,165)">
+      <rect width="155" height="125" rx="6" fill="#fff" stroke="#c0392b"/>
+      <text x="77" y="38" text-anchor="middle" font-size="26" font-weight="700" fill="#c0392b">9.5s</text>
+      <text x="77" y="62" text-anchor="middle" font-size="11" fill="#333">POOPCOIN 抛售间隔</text>
+      <text x="77" y="88" text-anchor="middle" font-size="10" fill="#666">中位值</text>
+      <text x="77" y="106" text-anchor="middle" font-size="10" fill="#666">438 次集中卖出</text>
+    </g>
+  </g>
+
+  <text x="450" y="545" text-anchor="middle" font-size="12" font-weight="700" fill="#222">异质性来自 operating layer 的用户配置；羊群风险来自共享的 prompt 结构</text>
+</svg>

@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/downloaded_pdfs/operating-layer-controls-for-onchain-language-model-agents-under-real-capital.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital",
+  "candidates": [
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1: DX Terminal Pro user-facing interface in a test environment, with production scale summary. The interface view is from public design documentation; measurements come from production logs and onchain records ( DXRG Team , 2026 ).",
+      "clip": [
+        101.10800170898438,
+        468.74481201171875,
+        508.4216003417969,
+        726.9920043945312
+      ],
+      "clip_area": 105187.5932662636,
+      "page_area": 484704.0,
+      "text_density": 0.02919343852528951,
+      "kind": "embedded_image_with_caption",
+      "xref": 378,
+      "score": 40.168751036291816,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/01-p1-embedded_image_with_caption.png",
+      "filename": "01-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-block-5",
+      "page_index": 0,
+      "caption": "Figure 1: DX Terminal Pro user-facing interface in a test environment, with production scale summary. The interface view is from public design documentation; measurements come from production logs and onchain records ( DXRG Team , 2026 ).",
+      "clip": [
+        91.10800170898438,
+        462.74481201171875,
+        518.4216003417969,
+        732.9920043945312
+      ],
+      "clip_area": 115480.3002975136,
+      "page_area": 484704.0,
+      "text_density": 0.049382341032189456,
+      "kind": "image_block_with_caption",
+      "score": 40.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/02-p1-image_block_with_caption.png",
+      "filename": "02-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "Figure 3: Agent configuration surface. Sliders expressed prompt-compiled behavioral preferences; maximum trade amount, slippage tolerance, pause, and liquidation controls were enforced outside the model as execution or user controls.",
+      "clip": [
+        83.93000030517578,
+        89.96170043945312,
+        528.0737915039062,
+        395.0379943847656
+      ],
+      "clip_area": 135497.7417977294,
+      "page_area": 484704.0,
+      "text_density": 0.04302658387063553,
+      "kind": "image_block_with_caption",
+      "score": 36.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/03-p5-image_block_with_caption.png",
+      "filename": "03-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 3: Agent configuration surface. Sliders expressed prompt-compiled behavioral preferences; maximum trade amount, slippage tolerance, pause, and liquidation controls were enforced outside the model as execution or user controls.",
+      "clip": [
+        93.93000030517578,
+        95.96170043945312,
+        518.0737915039062,
+        389.0379943847656
+      ],
+      "clip_area": 124306.49042443838,
+      "page_area": 484704.0,
+      "text_density": 0.012463419775524651,
+      "kind": "embedded_image_with_caption",
+      "xref": 388,
+      "score": 35.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        79.4000015258789,
+        448.60546875,
+        532.6076049804688,
+        581.0960083007812
+      ],
+      "clip_area": 60045.71991021512,
+      "page_area": 484704.0,
+      "text_density": 0.13689592488352492,
+      "kind": "drawing_cluster",
+      "score": 5.253419172657562,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/05-p9-drawing_cluster.png",
+      "filename": "05-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        79.4000015258789,
+        246.34918212890625,
+        532.6035766601562,
+        411.9909973144531
+      ],
+      "clip_area": 75069.46283382108,
+      "page_area": 484704.0,
+      "text_density": 0.17325573231892247,
+      "kind": "drawing_cluster",
+      "score": 5.238761203462665,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/06-p4-drawing_cluster.png",
+      "filename": "06-p4-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/operating-layer-controls-for-onchain-language-model-agents-under-real-capital/contact-sheet.svg"
+}

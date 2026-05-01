@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#f8fafc"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">主 Agent 不再亲自读文件 / 写 diff</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#64748b">一个 llm-editor 工具，内部拆成两个干净上下文的子 Agent</text>
+
+  <!-- Main Agent -->
+  <rect x="340" y="100" width="220" height="90" rx="12" fill="#1e293b"/>
+  <text x="450" y="135" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">主 Agent（PM）</text>
+  <text x="450" y="160" text-anchor="middle" font-size="12" fill="#cbd5e1">只做推理 &amp; 编排</text>
+  <text x="450" y="178" text-anchor="middle" font-size="12" fill="#cbd5e1">上下文干净</text>
+
+  <!-- Viewer -->
+  <rect x="70" y="290" width="280" height="150" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="210" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#0369a1">Viewer 子 Agent</text>
+  <text x="210" y="348" text-anchor="middle" font-size="12" fill="#334155">"fetch-data 里超时怎么设的？"</text>
+  <line x1="95" y1="360" x2="325" y2="360" stroke="#bae6fd"/>
+  <text x="210" y="385" text-anchor="middle" font-size="12" fill="#0369a1">只返回相关的十几行（原文件 39.7%）</text>
+  <text x="210" y="415" text-anchor="middle" font-size="11" fill="#64748b">无关代码留在自己上下文里</text>
+
+  <!-- Editor -->
+  <rect x="550" y="290" width="280" height="150" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+  <text x="690" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#c2410c">Editor 子 Agent</text>
+  <text x="690" y="348" text-anchor="middle" font-size="12" fill="#334155">"把 timeout 从 5 改成 10"</text>
+  <line x1="575" y1="360" x2="805" y2="360" stroke="#fed7aa"/>
+  <text x="690" y="385" text-anchor="middle" font-size="12" fill="#c2410c">自选 find-replace / 整文件重写</text>
+  <text x="690" y="415" text-anchor="middle" font-size="11" fill="#64748b">diff 细节不回流主 Agent</text>
+
+  <!-- Arrows down (query/instruction) -->
+  <path d="M400,190 L260,290" stroke="#0ea5e9" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <path d="M500,190 L640,290" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#c)"/>
+
+  <text x="295" y="240" font-size="11" fill="#0369a1" font-weight="600">自然语言 query</text>
+  <text x="540" y="240" font-size="11" fill="#c2410c" font-weight="600">自然语言指令</text>
+
+  <!-- Arrows back (results) -->
+  <path d="M300,290 L430,195" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#a)"/>
+  <path d="M600,290 L470,195" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#a)"/>
+
+  <text x="310" y="275" font-size="11" fill="#334155">只回相关片段</text>
+  <text x="530" y="275" font-size="11" fill="#334155">只回执行结果</text>
+
+  <!-- Result -->
+  <rect x="180" y="490" width="540" height="80" rx="10" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="450" y="520" text-anchor="middle" font-size="14" font-weight="700" fill="#365314">效果：上下文不再被原始代码污染</text>
+  <text x="450" y="545" text-anchor="middle" font-size="12" fill="#365314">非缓存输入 token 276.7K → 181.3K</text>
+  <text x="450" y="562" text-anchor="middle" font-size="12" fill="#365314">解决率 +2.1%，成本 −17.9%</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#f7f8fb"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">同一句话，放哪里决定 Agent 的成败</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#666">"每笔交易 2.3% 费用" —— 位置与语气的微调</text>
+
+  <!-- Left: Bad placement -->
+  <g>
+    <rect x="40" y="100" width="380" height="200" rx="10" fill="#fff" stroke="#d94a4a" stroke-width="2"/>
+    <text x="230" y="125" text-anchor="middle" font-size="15" font-weight="bold" fill="#d94a4a">v2.9 放到第 1 段</text>
+
+    <rect x="60" y="145" width="340" height="28" fill="#ffe4e4" stroke="#d94a4a"/>
+    <text x="70" y="164" font-size="12" fill="#b02020">① 2.3% 费用（开头·强调）</text>
+    <rect x="60" y="180" width="340" height="14" fill="#f1f1f1"/>
+    <rect x="60" y="200" width="340" height="14" fill="#f1f1f1"/>
+    <rect x="60" y="220" width="340" height="14" fill="#f1f1f1"/>
+
+    <text x="230" y="262" text-anchor="middle" font-size="13" fill="#b02020" font-weight="bold">Fee Paralysis 费用瘫痪</text>
+    <text x="230" y="285" text-anchor="middle" font-size="12" fill="#666">74% 推理围着费用转 · 不敢动</text>
+  </g>
+
+  <!-- Right: Good placement -->
+  <g>
+    <rect x="480" y="100" width="380" height="200" rx="10" fill="#fff" stroke="#2e9e5b" stroke-width="2"/>
+    <text x="670" y="125" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e9e5b">修复：放进波动语境</text>
+
+    <rect x="500" y="145" width="340" height="14" fill="#f1f1f1"/>
+    <rect x="500" y="165" width="340" height="44" fill="#e4f6ea" stroke="#2e9e5b"/>
+    <text x="510" y="183" font-size="12" fill="#1f6b3d">代币日内波动 10–50%…</text>
+    <text x="510" y="201" font-size="12" fill="#1f6b3d">（其中）2.3% 费用可忽略</text>
+    <rect x="500" y="215" width="340" height="14" fill="#f1f1f1"/>
+    <rect x="500" y="235" width="340" height="14" fill="#f1f1f1"/>
+
+    <text x="670" y="262" text-anchor="middle" font-size="13" fill="#1f6b3d" font-weight="bold">Agent 恢复交易节奏</text>
+    <text x="670" y="285" text-anchor="middle" font-size="12" fill="#666">费用不再是主角</text>
+  </g>
+
+  <!-- Arrow between -->
+  <line x1="425" y1="200" x2="475" y2="200" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="450" y="192" text-anchor="middle" font-size="11" fill="#444">改措辞</text>
+
+  <!-- Metrics -->
+  <rect x="40" y="340" width="820" height="240" rx="10" fill="#fff" stroke="#ccc"/>
+  <text x="450" y="370" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">可靠性是 operating layer 属性，不是模型能力</text>
+
+  <!-- legend -->
+  <rect x="705" y="390" width="12" height="12" fill="#d94a4a"/>
+  <text x="722" y="400" font-size="11" fill="#666">修复前</text>
+  <rect x="775" y="390" width="12" height="12" fill="#2e9e5b"/>
+  <text x="792" y="400" font-size="11" fill="#666">修复后</text>
+
+  <!-- bar 1 -->
+  <g transform="translate(80,430)">
+    <text x="0" y="0" font-size="12" fill="#333" font-weight="bold">费用主导观察</text>
+    <rect x="160" y="-12" width="260" height="16" fill="#d94a4a"/>
+    <text x="430" y="1" font-size="12" fill="#d94a4a">32.5%</text>
+    <rect x="160" y="12" width="80" height="16" fill="#2e9e5b"/>
+    <text x="250" y="25" font-size="12" fill="#2e9e5b">&lt; 10%</text>
+  </g>
+
+  <!-- bar 2 -->
+  <g transform="translate(80,490)">
+    <text x="0" y="0" font-size="12" fill="#333" font-weight="bold">捏造 sell 规则</text>
+    <rect x="160" y="-12" width="456" height="16" fill="#d94a4a"/>
+    <text x="625" y="1" font-size="12" fill="#d94a4a">57%</text>
+    <rect x="160" y="12" width="24" height="16" fill="#2e9e5b"/>
+    <text x="195" y="25" font-size="12" fill="#2e9e5b">3%</text>
+  </g>
+
+  <!-- bar 3 -->
+  <g transform="translate(80,550)">
+    <text x="0" y="0" font-size="12" fill="#333" font-weight="bold">资金部署率</text>
+    <rect x="160" y="-12" width="172" height="16" fill="#d94a4a"/>
+    <text x="340" y="1" font-size="12" fill="#d94a4a">42.9%</text>
+    <rect x="160" y="12" width="312" height="16" fill="#2e9e5b"/>
+    <text x="480" y="25" font-size="12" fill="#2e9e5b">78.0%</text>
+  </g>
+</svg>

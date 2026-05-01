@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b3a55"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="560" fill="#f6f7fb"/>
+
+  <text x="480" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1b2340">可靠性 = Operating Layer，而不只是 LLM</text>
+  <text x="480" y="63" text-anchor="middle" font-size="13" fill="#5a6480">模型只是大脑；真正托住真金白银的是它周围的制度</text>
+
+  <rect x="40" y="110" width="880" height="240" rx="14" fill="#ffffff" stroke="#2b3a55" stroke-width="2"/>
+  <text x="60" y="135" font-size="13" font-weight="700" fill="#2b3a55">Operating Layer</text>
+
+  <g font-size="13" fill="#1b2340">
+    <rect x="70" y="170" width="140" height="130" rx="10" fill="#eaf1ff" stroke="#3b5bdb" stroke-width="1.8"/>
+    <text x="140" y="200" text-anchor="middle" font-weight="700">用户意图</text>
+    <text x="140" y="222" text-anchor="middle" font-size="11" fill="#3b5bdb">slider · 策略文本</text>
+    <text x="140" y="275" text-anchor="middle" font-size="26">🎚</text>
+
+    <rect x="240" y="170" width="140" height="130" rx="10" fill="#fff4e0" stroke="#e67e22" stroke-width="1.8"/>
+    <text x="310" y="200" text-anchor="middle" font-weight="700">Prompt 编译</text>
+    <text x="310" y="222" text-anchor="middle" font-size="11" fill="#b35c00">组合 + 行情</text>
+    <text x="310" y="275" text-anchor="middle" font-size="26">📝</text>
+
+    <rect x="410" y="170" width="140" height="130" rx="10" fill="#f0e6ff" stroke="#6f42c1" stroke-width="1.8"/>
+    <text x="480" y="200" text-anchor="middle" font-weight="700">LLM 推理</text>
+    <text x="480" y="222" text-anchor="middle" font-size="11" fill="#6f42c1">typed tool call</text>
+    <text x="480" y="275" text-anchor="middle" font-size="26">🧠</text>
+
+    <rect x="580" y="170" width="140" height="130" rx="10" fill="#ffe9e9" stroke="#c0392b" stroke-width="1.8"/>
+    <text x="650" y="200" text-anchor="middle" font-weight="700">Policy 校验</text>
+    <text x="650" y="222" text-anchor="middle" font-size="11" fill="#c0392b">白名单 · 滑点</text>
+    <text x="650" y="275" text-anchor="middle" font-size="26">🛡</text>
+
+    <rect x="750" y="170" width="140" height="130" rx="10" fill="#e3f9ec" stroke="#138d5b" stroke-width="1.8"/>
+    <text x="820" y="200" text-anchor="middle" font-weight="700">链上结算</text>
+    <text x="820" y="222" text-anchor="middle" font-size="11" fill="#138d5b">vault / swap</text>
+    <text x="820" y="275" text-anchor="middle" font-size="26">⛓</text>
+  </g>
+
+  <g stroke="#2b3a55" stroke-width="2" fill="none" marker-end="url(#a)">
+    <line x1="210" y1="235" x2="238" y2="235"/>
+    <line x1="380" y1="235" x2="408" y2="235"/>
+    <line x1="550" y1="235" x2="578" y2="235"/>
+    <line x1="720" y1="235" x2="748" y2="235"/>
+  </g>
+
+  <path d="M 650 170 Q 650 130 482 130" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#ar)" stroke-dasharray="5,4"/>
+  <text x="566" y="122" font-size="11" fill="#c0392b" font-weight="700">拒绝非法单</text>
+
+  <rect x="70" y="400" width="820" height="70" rx="10" fill="#1b2340"/>
+  <text x="90" y="428" font-size="14" font-weight="700" fill="#ffd166">Trace 日志（全链路可审计）</text>
+  <text x="90" y="452" font-size="12" fill="#dfe4f2">用户配置 → 渲染 prompt → 推理 → 工具调用 → 校验结果 → 链上结果</text>
+
+  <g stroke="#ffd166" stroke-width="1.5" stroke-dasharray="3,3" fill="none">
+    <line x1="140" y1="300" x2="140" y2="400"/>
+    <line x1="310" y1="300" x2="310" y2="400"/>
+    <line x1="480" y1="300" x2="480" y2="400"/>
+    <line x1="650" y1="300" x2="650" y2="400"/>
+    <line x1="820" y1="300" x2="820" y2="400"/>
+  </g>
+
+  <text x="480" y="510" text-anchor="middle" font-size="14" fill="#1b2340" font-weight="700">每一步都可观测 · 可归因 · 可纠正</text>
+  <text x="480" y="532" text-anchor="middle" font-size="12" fill="#5a6480">3505 个 Agent · 真实 ETH · 21 天 —— 问题几乎都出在这条链路，而非模型本身</text>
+</svg>

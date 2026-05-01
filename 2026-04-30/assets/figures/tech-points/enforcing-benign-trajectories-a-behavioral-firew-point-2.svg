@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c53030"/>
+    </marker>
+    <marker id="arrK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#718096"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a202c">O(1) 运行时行为防火墙</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#4a5568">贵的事离线做，线上只查哈希表</text>
+
+  <!-- Agent -->
+  <rect x="30" y="235" width="130" height="80" rx="10" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="95" y="268" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b6cb0">LLM Agent</text>
+  <text x="95" y="292" text-anchor="middle" font-size="12" fill="#2c5282">tool call</text>
+
+  <!-- Gateway big box -->
+  <rect x="210" y="120" width="470" height="290" rx="14" fill="#fffaf0" stroke="#d69e2e" stroke-width="2.5"/>
+  <text x="445" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#975a16">Rust Sidecar Gateway</text>
+
+  <!-- Step1 DFA lookup -->
+  <rect x="230" y="170" width="190" height="100" rx="10" fill="#fff" stroke="#d69e2e"/>
+  <text x="325" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#744210">① DFA 查边</text>
+  <text x="325" y="219" text-anchor="middle" font-size="11" fill="#4a5568">HashMap 邻接表</text>
+  <text x="325" y="238" text-anchor="middle" font-size="11" fill="#4a5568">state + call → next?</text>
+  <text x="325" y="258" text-anchor="middle" font-size="11" font-weight="bold" fill="#2f855a">O(1)</text>
+
+  <!-- Step2 schema -->
+  <rect x="470" y="170" width="190" height="100" rx="10" fill="#fff" stroke="#d69e2e"/>
+  <text x="565" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#744210">② 参数校验</text>
+  <text x="565" y="219" text-anchor="middle" font-size="11" fill="#4a5568">数值比较 / 集合查找</text>
+  <text x="565" y="238" text-anchor="middle" font-size="11" fill="#4a5568">字符串：量化 embed + cosine</text>
+  <text x="565" y="258" text-anchor="middle" font-size="11" fill="#4a5568">一次轻量计算</text>
+
+  <!-- Step3 advance -->
+  <rect x="345" y="300" width="210" height="90" rx="10" fill="#f0fff4" stroke="#2f855a"/>
+  <text x="450" y="325" text-anchor="middle" font-size="13" font-weight="bold" fill="#22543d">③ 推进状态指针</text>
+  <text x="450" y="348" text-anchor="middle" font-size="11" fill="#22543d">允许 → 放行并前进</text>
+  <text x="450" y="368" text-anchor="middle" font-size="11" fill="#c53030">非法 → 拦截，指针不动</text>
+
+  <!-- arrows inside gateway -->
+  <line x1="420" y1="220" x2="470" y2="220" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="565" y1="270" x2="490" y2="300" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="325" y1="270" x2="410" y2="300" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- agent -> gateway -->
+  <line x1="160" y1="260" x2="228" y2="220" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="168" y="248" font-size="11" fill="#2b6cb0">send-email</text>
+
+  <!-- tool -->
+  <rect x="740" y="235" width="130" height="80" rx="10" fill="#e6fffa" stroke="#2c7a7b" stroke-width="2"/>
+  <text x="805" y="268" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c7a7b">MCP Tool</text>
+  <text x="805" y="292" text-anchor="middle" font-size="12" fill="#234e52">合法调用</text>
+
+  <!-- allow path -->
+  <line x1="555" y1="335" x2="740" y2="285" stroke="#2f855a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="645" y="315" font-size="11" font-weight="bold" fill="#2f855a">allow</text>
+
+  <!-- block back to agent -->
+  <path d="M 345 360 Q 220 400 160 300" fill="none" stroke="#c53030" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="195" y="395" font-size="11" font-weight="bold" fill="#c53030">block + 审计日志</text>
+
+  <!-- bottom note -->
+  <rect x="210" y="435" width="470" height="90" rx="10" fill="#edf2f7" stroke="#718096" stroke-dasharray="4 3"/>
+  <text x="445" y="460" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3748">离线 Profiling 阶段</text>
+  <text x="445" y="482" text-anchor="middle" font-size="12" fill="#4a5568">LLM 语义分析 · 轨迹聚类 · 编译成 pDFA</text>
+  <text x="445" y="503" text-anchor="middle" font-size="12" fill="#4a5568">运行时零 LLM，延迟稳定，可作透明中间件</text>
+
+  <line x1="445" y1="410" x2="445" y2="433" stroke="#718096" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrK)"/>
+</svg>

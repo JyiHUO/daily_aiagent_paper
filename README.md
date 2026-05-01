@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-04-29
+- **日期**：2026-04-30
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses
-  - BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks
-  - Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks
-- **日报路径**：[2026-04-29/daily_report.md](2026-04-29/daily_report.md)
+  - Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital
+  - Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents
+  - SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent
+- **日报路径**：[2026-04-30/daily_report.md](2026-04-30/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-30 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital | [2026-04-30/daily_report.md](2026-04-30/daily_report.md) |
+|  |  |  | 2 | Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents |  |
+|  |  |  | 3 | SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent |  |
 | 2026-04-29 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses | [2026-04-29/daily_report.md](2026-04-29/daily_report.md) |
 |  |  |  | 2 | BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks |  |
 |  |  |  | 3 | Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks |  |

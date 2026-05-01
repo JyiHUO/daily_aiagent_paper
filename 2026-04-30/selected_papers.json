@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital",
+    "authors": [
+      "T.J. Barton",
+      "Chris Constantakis",
+      "Patti Hauseman",
+      "Annie Mous",
+      "Alaska Hoffman",
+      "Brian Bergeron",
+      "Hunter Goodreau"
+    ],
+    "summary": "We study reliability in autonomous language-model agents that translate user mandates into validated tool actions under real capital. The setting is DX Terminal Pro, a 21-day deployment in which 3,505 user-funded agents traded real ETH in a bounded onchain market. Users configured vaults through structured controls and natural-language strategies, but only agents could choose normal buy/sell trades. The system produced 7.5M agent invocations, roughly 300K onchain actions, about $20M in volume, more than 5,000 ETH deployed, roughly 70B inference tokens, and 99.9% settlement success for policy-valid submitted transactions. Long-running agents accumulated thousands of sequential decisions, including 6,000+ prompt-state-action cycles for continuously active agents, yielding a large-scale trace from user mandate to rendered prompt, reasoning, validation, portfolio state, and settlement. Reliability did not come from the base model alone; it emerged from the operating layer around the model: prompt compilation, typed controls, policy validation, execution guards, memory design, and trace-level observability. Pre-launch testing exposed failures that text-only benchmarks rarely measure, including fabricated trading rules, fee paralysis, numeric anchoring, cadence trading, and misread tokenomics. Targeted harness changes reduced fabricated sell rules from 57% to 3%, reduced fee-led observations from 32.5% to below 10%, and increased capital deployment from 42.9% to 78.0% in an affected test population. We show that capital-managing agents should be evaluated across the full path from user mandate to prompt, validated action, and settlement.",
+    "entry_id": "https://arxiv.org/abs/2604.26091",
+    "pdf_url": "https://arxiv.org/pdf/2604.26091.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "general_agent",
+    "relevance_score": 92,
+    "value_score": 90,
+    "interesting_score": 88,
+    "innovation_score": 80,
+    "frontier_score": 82,
+    "verdict": "must_read",
+    "reason": "真实资金下3505个链上Agent 21天大规模部署，展示operating layer(prompt编译/typed controls/policy validation/memory/trace)如何决定可靠性，并给出具体失败模式与修复，对Agent系统设计极具参考价值。",
+    "composite_score": 87.54,
+    "arxiv_url": "https://arxiv.org/abs/2604.26091"
+  },
+  {
+    "title": "Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents",
+    "authors": [
+      "Hung Dang"
+    ],
+    "summary": "Structured-workflow agents driven by large language models execute tool calls against sensitive external environments. We propose \\codename, a telemetry-driven behavioral anomaly detection firewall. Drawing on sequence-based intrusion detection, \\codename\\ compiles verified benign tool-call telemetry into a parameterized deterministic finite automaton (pDFA). The model defines permitted tool sequences, sequential contexts, and parameter bounds. At runtime, a lightweight gateway enforces these boundaries via an $O(1)$ state-transition structural lookup, shifting computationally expensive analysis entirely offline. Evaluated on the Agent Security Bench (ASB), \\codename\\ achieves a 5.6\\% macro-averaged attack success rate (ASR) across five scenarios. Within three structured workflows, ASR drops to 2.2\\%, outperforming Aegis, a state-of-the-art stateless scanner, at 12.8\\%. \\codename\\ achieves 0\\% ASR on multi-step and context-sequential attacks in structured settings. Furthermore, against 1,000 algorithmically spliced exfiltration payloads, only 1.4\\% matched valid structural paths, all of which failed end-to-end string parameter guards (0 successes out of 14 surviving paths, 95\\% CI [0\\%, 23.2\\%]). \\codename\\ introduces just 2.2~ms of per-call latency (a 3.7$\\times$ speedup over \\textsc{Aegis}) while maintaining a 2.0\\% benign task failure rate (BTFR) on benign workloads. Modeling the behavioral trajectory effectively collapses the available attack surface, but unmaintained continuous parameter bounds remain vulnerable to synonym-substitution attacks (18\\% evasion rate). Thus, exact-match whitelisting of sensitive parameters ultimately bears the final defensive load against execution.",
+    "entry_id": "https://arxiv.org/abs/2604.26274",
+    "pdf_url": "https://arxiv.org/pdf/2604.26274.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 95,
+    "value_score": 85,
+    "interesting_score": 80,
+    "innovation_score": 78,
+    "frontier_score": 80,
+    "verdict": "must_read",
+    "reason": "针对结构化workflow Agent提出行为防火墙，在ASB上评测，直接作用于Agent runtime安全治理层。",
+    "composite_score": 85.3,
+    "arxiv_url": "https://arxiv.org/abs/2604.26274"
+  },
+  {
+    "title": "SWE-Edit: Rethinking Code Editing for Efficient SWE-Agent",
+    "authors": [
+      "Yikai Zhang",
+      "Jiaxin Pei",
+      "Kenan Li",
+      "Maoquan Wang",
+      "Jin Pan",
+      "Yu Kang",
+      "Shengyu Fu",
+      "Elsie Nallipogu",
+      "Junjie Hu",
+      "Yufan Huang",
+      "Zijian Jin"
+    ],
+    "summary": "Large language model agents have achieved remarkable progress on software engineering tasks, yet current approaches suffer from a fundamental context coupling problem: the standard code editing interface conflates code inspection, modification planning, and edit execution within a single context window, forcing agents to interleave exploratory viewing with strictly formatted edit generation. This causes irrelevant information to accumulate and degrades agent performance. To address this, we propose SWE-Edit, which decomposes code editing into two specialized subagents: a Viewer that extracts task-relevant code on demand, and an Editor that executes modifications from high-level plans--allowing the main agent to focus on reasoning while delegating context-intensive operations to clean context windows. We further investigate what makes an effective editing model: observing that the prevalent find-and-replace format is error-prone, we train Qwen3-8B with GRPO to adaptively select editing modes, yielding improved editing efficiency over single-format baselines. On SWE-bench Verified, SWE-Edit improves resolved rate by 2.1% while reducing inference cost by 17.9%. We additionally propose a code editing benchmark that reliably predicts downstream agentic performance, providing practical guidance for editing model selection. Our code is publicly available at https://github.com/microsoft/SWE-Edit.",
+    "entry_id": "https://arxiv.org/abs/2604.26102",
+    "pdf_url": "https://arxiv.org/pdf/2604.26102.pdf",
+    "primary_category": "cs.CL",
+    "agent_theme": "code_agent",
+    "relevance_score": 95,
+    "value_score": 85,
+    "interesting_score": 80,
+    "innovation_score": 78,
+    "frontier_score": 75,
+    "verdict": "must_read",
+    "reason": "明确针对 SWE-Agent 的 harness 问题，将代码编辑拆分为 Viewer/Editor 子 agent 解耦上下文，并在 SWE-bench Verified 上验证，对 code agent 架构设计有直接启发。",
+    "composite_score": 84.55,
+    "arxiv_url": "https://arxiv.org/abs/2604.26102"
+  }
+]

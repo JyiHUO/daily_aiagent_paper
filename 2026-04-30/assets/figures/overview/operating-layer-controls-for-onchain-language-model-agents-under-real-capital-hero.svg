@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f1530"/>
+      <stop offset="1" stop-color="#1a1138"/>
+    </linearGradient>
+    <linearGradient id="leftGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ff4d6d" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ff4d6d" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="rightGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#3dd9a3" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#3dd9a3" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#8a5bff"/>
+    </linearGradient>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3dd9a3"/>
+    </marker>
+    <marker id="arrL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff6b86"/>
+    </marker>
+    <marker id="arrW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c9d3ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700">可靠性不来自模型本身，而来自模型外的 Operating Layer</text>
+  <text x="640" y="80" text-anchor="middle" fill="#a9b3d9" font-size="15">DX Terminal Pro · 3505 个真金 Agent · 21 天 · 约 $20M 链上交易量</text>
+
+  <!-- Central mandate -->
+  <g>
+    <rect x="520" y="104" width="240" height="64" rx="12" fill="#ffffff" opacity="0.08" stroke="#c9d3ff" stroke-opacity="0.4"/>
+    <text x="640" y="132" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="600">同一条用户指令</text>
+    <text x="640" y="154" text-anchor="middle" fill="#a9b3d9" font-size="12">"帮我 outperform" · slider + 策略文本</text>
+  </g>
+
+  <!-- LEFT: divergent chaos -->
+  <g>
+    <path d="M60 200 Q 40 430, 80 620 L 500 620 L 500 200 Z" fill="url(#leftGrad)" stroke="#ff4d6d" stroke-opacity="0.35" stroke-dasharray="4 4"/>
+    <text x="90" y="230" fill="#ff6b86" font-size="17" font-weight="700">裸模型 · 执行发散</text>
+    <text x="90" y="250" fill="#ff9db0" font-size="12">同一 mandate，每次 rollout 都跑偏</text>
+
+    <!-- divergent trajectories from mandate down-left -->
+    <g fill="none" stroke="#ff6b86" stroke-width="1.8" opacity="0.85">
+      <path d="M540 168 C 430 240, 350 300, 260 335" marker-end="url(#arrL)"/>
+      <path d="M540 168 C 420 290, 340 380, 245 425" marker-end="url(#arrL)"/>
+      <path d="M540 168 C 460 340, 380 470, 275 515" marker-end="url(#arrL)"/>
+      <path d="M540 168 C 500 380, 440 530, 335 585" marker-end="url(#arrL)"/>
+    </g>
+
+    <!-- failure modes -->
+    <g font-size="12.5">
+      <g>
+        <circle cx="265" cy="335" r="7" fill="#ff4d6d"/>
+        <text x="280" y="331" fill="#ffd4dc" font-weight="600">捏造交易规则</text>
+        <text x="280" y="348" fill="#ff9db0">把 prompt 软提示当硬规则 · 57%</text>
+      </g>
+      <g>
+        <circle cx="250" cy="425" r="7" fill="#ff4d6d"/>
+        <text x="265" y="421" fill="#ffd4dc" font-weight="600">费用瘫痪</text>
+        <text x="265" y="438" fill="#ff9db0">过度惜动，资金闲置 · 32.5%</text>
+      </g>
+      <g>
+        <circle cx="280" cy="515" r="7" fill="#ff4d6d"/>
+        <text x="295" y="511" fill="#ffd4dc" font-weight="600">数字锚定</text>
+        <text x="295" y="528" fill="#ff9db0">"最多 33%" 被当成目标再平衡</text>
+      </g>
+      <g>
+        <circle cx="340" cy="585" r="7" fill="#ff4d6d"/>
+        <text x="355" y="581" fill="#ffd4dc" font-weight="600">节奏交易 / 误读代币经济</text>
+        <text x="355" y="598" fill="#ff9db0">固定 tick · 把先前决策当先例</text>
+      </g>
+    </g>
+
+    <text x="90" y="668" fill="#ff9db0" font-size="12">资金部署率仅 42.9% · 结算路径上到处漏水</text>
+  </g>
+
+  <!-- Central "operating layer" funnel -->
+  <g>
+    <path d="M560 200 L 720 200 L 760 400 L 720 600 L 560 600 L 520 400 Z"
+          fill="url(#coreGrad)" opacity="0.92" stroke="#c9d3ff" stroke-opacity="0.5"/>
+    <text x="640" y="240" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">Operating Layer</text>
+    <text x="640" y="258" text-anchor="middle" fill="#d8deff" font-size="11">模型外的制度约束</text>
+
+    <g font-size="12" fill="#ffffff">
+      <text x="640" y="295" text-anchor="middle" font-weight="600">Prompt 编译</text>
+      <text x="640" y="313" text-anchor="middle" opacity="0.75" font-size="10.5">重排措辞 · 结构化白皮书</text>
+
+      <text x="640" y="345" text-anchor="middle" font-weight="600">Typed 控件 + Policy 校验</text>
+      <text x="640" y="363" text-anchor="middle" opacity="0.75" font-size="10.5">白名单 · 滑点 · 余额硬约束</text>
+
+      <text x="640" y="395" text-anchor="middle" font-weight="600">执行守卫 / Memory</text>
+      <text x="640" y="413" text-anchor="middle" opacity="0.75" font-size="10.5">过滤重复观察 · 近期结构化 state</text>
+
+      <text x="640" y="445" text-anchor="middle" font-weight="600">Trace 级可观测性</text>
+      <text x="640" y="463" text-anchor="middle" opacity="0.75" font-size="10.5">从 mandate 到结算全链路归因</text>
+    </g>
+
+    <!-- feedback loop inside -->
+    <path d="M590 500 Q 640 560, 690 500" fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.8" marker-end="url(#arrW)"/>
+    <text x="640" y="555" text-anchor="middle" fill="#ffffff" font-size="11" opacity="0.9">Trace → 定位失败 → 改 harness → 回灌</text>
+  </g>
+
+  <!-- RIGHT: convergent outcomes -->
+  <g>
+    <path d="M1220 200 Q 1240 430, 1200 620 L 780 620 L 780 200 Z" fill="url(#rightGrad)" stroke="#3dd9a3" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+    <text x="1190" y="230" text-anchor="end" fill="#3dd9a3" font-size="17" font-weight="700">加上 Operating Layer · 执行收敛</text>
+    <text x="1190" y="250" text-anchor="end" fill="#9be7c6" font-size="12">同一模型、同一 mandate，轨迹几乎重合</text>
+
+    <!-- convergent trajectories -->
+    <g fill="none" stroke="#3dd9a3" stroke-width="1.8" opacity="0.9">
+      <path d="M740 168 C 900 230, 1000 300, 1080 370" marker-end="url(#arrR)"/>
+      <path d="M740 168 C 880 260, 990 330, 1080 382" marker-end="url(#arrR)"/>
+      <path d="M740 168 C 900 290, 1010 350, 1080 394" marker-end="url(#arrR)"/>
+      <path d="M740 168 C 860 320, 990 370, 1080 406" marker-end="url(#arrR)"/>
+    </g>
+
+    <!-- converged node -->
+    <g>
+      <circle cx="1130" cy="388" r="46" fill="#3dd9a3" opacity="0.18"/>
+      <circle cx="1130" cy="388" r="30" fill="#3dd9a3"/>
+      <text x="1130" y="392" text-anchor="middle" fill="#0f1530" font-size="13" font-weight="700">稳定结算</text>
+    </g>
+
+    <!-- metric chips -->
+    <g font-size="12.5">
+      <g transform="translate(800,480)">
+        <rect width="200" height="48" rx="10" fill="#ffffff" opacity="0.06" stroke="#3dd9a3" stroke-opacity="0.5"/>
+        <text x="14" y="20" fill="#d7f5e8" font-weight="600">捏造 sell 规则</text>
+        <text x="186" y="20" text-anchor="end" fill="#3dd9a3" font-weight="700">57% → 3%</text>
+        <text x="14" y="38" fill="#9be7c6" font-size="11">决策作为上下文，而非先例</text>
+      </g>
+      <g transform="translate(1020,480)">
+        <rect width="180" height="48" rx="10" fill="#ffffff" opacity="0.06" stroke="#3dd9a3" stroke-opacity="0.5"/>
+        <text x="14" y="20" fill="#d7f5e8" font-weight="600">费用主导</text>
+        <text x="166" y="20" text-anchor="end" fill="#3dd9a3" font-weight="700">32.5% → &lt;10%</text>
+        <text x="14" y="38" fill="#9be7c6" font-size="11">费率纳入日内波动语境</text>
+      </g>
+      <g transform="translate(890,548)">
+        <rect width="220" height="48" rx="10" fill="#ffffff" opacity="0.06" stroke="#3dd9a3" stroke-opacity="0.5"/>
+        <text x="14" y="20" fill="#d7f5e8" font-weight="600">资金部署率</text>
+        <text x="206" y="20" text-anchor="end" fill="#3dd9a3" font-weight="700">42.9% → 78.0%</text>
+        <text x="14" y="38" fill="#9be7c6" font-size="11">Policy 合法 · settlement 成功 99.9%</text>
+      </g>
+    </g>
+
+    <text x="1190" y="668" text-anchor="end" fill="#9be7c6" font-size="12">Harness 迁移 Claude 4 → 4.6：aligned 成功率 87% → 96% → 99.9%</text>
+  </g>
+
+  <!-- Bottom axis label -->
+  <text x="640" y="720" text-anchor="middle" fill="#7c87b8" font-size="12.5">从用户 mandate · prompt 渲染 · 推理 · 校验 · 组合状态 · 链上结算 —— 评测必须覆盖全路径，而非只测文本</text>
+</svg>

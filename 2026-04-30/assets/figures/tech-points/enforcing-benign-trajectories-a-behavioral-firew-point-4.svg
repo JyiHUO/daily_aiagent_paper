@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="ared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="agreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">人工审批式增量更新</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748b">默认拒绝 · 人工放行 · 夜间回灌 pDFA</text>
+
+  <!-- Agent call -->
+  <rect x="40" y="110" width="170" height="90" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="125" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">Agent 新调用</text>
+  <text x="125" y="166" text-anchor="middle" font-size="12" fill="#78350f">refund_order()</text>
+  <text x="125" y="186" text-anchor="middle" font-size="11" fill="#92400e">未见过的路径</text>
+
+  <!-- Gateway -->
+  <rect x="260" y="100" width="190" height="110" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="355" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#991b1b">pDFA Gateway</text>
+  <text x="355" y="160" text-anchor="middle" font-size="12" fill="#991b1b">不在白名单 → 拦截</text>
+  <text x="355" y="184" text-anchor="middle" font-size="11" fill="#7f1d1d">事件入 pending queue (default deny)</text>
+
+  <line x1="212" y1="155" x2="258" y2="155" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Human review -->
+  <rect x="530" y="100" width="200" height="110" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="630" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#075985">运维人工复核</text>
+  <text x="630" y="162" text-anchor="middle" font-size="12" fill="#075985">✓ 合法新 workflow</text>
+  <text x="630" y="184" text-anchor="middle" font-size="12" fill="#075985">✗ 攻击 / 误用</text>
+
+  <line x1="452" y1="155" x2="528" y2="155" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Night profiler -->
+  <rect x="300" y="300" width="310" height="110" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="455" y="332" text-anchor="middle" font-size="15" font-weight="700" fill="#5b21b6">夜间 Profiler · 增量重编译</text>
+  <text x="455" y="360" text-anchor="middle" font-size="12" fill="#5b21b6">只重建受影响的状态与边，其他保留</text>
+  <text x="455" y="390" text-anchor="middle" font-size="11" fill="#6d28d9">🌙 异步窗口，不阻塞线上</text>
+
+  <path d="M630 212 Q 630 280 560 300" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#agreen)"/>
+  <text x="640" y="260" font-size="11" fill="#15803d">批准样本回灌</text>
+
+  <!-- pDFA visualization -->
+  <rect x="60" y="300" width="210" height="160" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+  <text x="165" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">pDFA 白名单</text>
+
+  <circle cx="95" cy="370" r="14" fill="#cbd5e1" stroke="#334155"/>
+  <circle cx="165" cy="370" r="14" fill="#cbd5e1" stroke="#334155"/>
+  <circle cx="235" cy="370" r="14" fill="#cbd5e1" stroke="#334155"/>
+  <line x1="109" y1="370" x2="151" y2="370" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="179" y1="370" x2="221" y2="370" stroke="#334155" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- new state added -->
+  <circle cx="165" cy="425" r="14" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="165" y="429" text-anchor="middle" font-size="10" fill="#14532d" font-weight="700">new</text>
+  <line x1="165" y1="384" x2="165" y2="411" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#agreen)"/>
+
+  <text x="165" y="455" text-anchor="middle" font-size="11" fill="#334155">新增 1 个状态 + 1 条边</text>
+
+  <path d="M300 355 Q 285 340 272 340" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="278" y="330" font-size="11" fill="#5b21b6">局部更新</text>
+
+  <!-- Bottom result -->
+  <rect x="650" y="320" width="210" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="755" y="352" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">次日生效</text>
+  <text x="755" y="378" text-anchor="middle" font-size="11" fill="#166534">新路径放行，老路径不受影响</text>
+  <line x1="610" y1="360" x2="648" y2="360" stroke="#16a34a" stroke-width="2" marker-end="url(#agreen)"/>
+
+  <!-- Bottom note -->
+  <text x="450" y="505" text-anchor="middle" font-size="12" fill="#475569">应对 concept drift，又防止对抗样本悄悄扩大 envelope</text>
+  <text x="450" y="525" text-anchor="middle" font-size="11" fill="#94a3b8">每一条新路径进入允许集合，都必须先被人看过一眼</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9e0"/><stop offset="1" stop-color="#ffd1c2"/>
+    </linearGradient>
+    <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f0ff"/><stop offset="1" stop-color="#c2dcff"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">SWE-Edit：换主模型也不翻车</text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#666">格式活交给 Editor 子 Agent，主 Agent 只负责“要改什么”</text>
+
+  <!-- Left: baseline -->
+  <g>
+    <rect x="40" y="100" width="360" height="200" rx="12" fill="url(#gA)" stroke="#e07a5f" stroke-width="2"/>
+    <text x="220" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#8a2b1a">Baseline：主模型自己写 diff</text>
+    <text x="220" y="152" text-anchor="middle" font-size="13" fill="#6b3a2a">推理强，但格式常常崩</text>
+
+    <rect x="70" y="178" width="300" height="28" rx="5" fill="#fff" stroke="#d09080"/>
+    <text x="85" y="197" font-size="13" fill="#333">Kimi-K2 Thinking</text>
+    <text x="355" y="197" font-size="13" font-weight="700" fill="#c0392b" text-anchor="end">75.6%</text>
+
+    <rect x="70" y="214" width="300" height="28" rx="5" fill="#fff" stroke="#d09080"/>
+    <text x="85" y="233" font-size="13" fill="#333">MiniMax</text>
+    <text x="355" y="233" font-size="13" font-weight="700" fill="#c0392b" text-anchor="end">82.0%</text>
+
+    <rect x="70" y="250" width="300" height="28" rx="5" fill="#fff" stroke="#d09080"/>
+    <text x="85" y="269" font-size="13" fill="#333">GLM</text>
+    <text x="355" y="269" font-size="13" font-weight="700" fill="#c0392b" text-anchor="end">79.6%</text>
+  </g>
+
+  <!-- Middle arrow -->
+  <g>
+    <rect x="405" y="170" width="90" height="60" rx="30" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+    <text x="450" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#222">接入</text>
+    <text x="450" y="215" text-anchor="middle" font-size="13" font-weight="700" fill="#222">SWE-Edit</text>
+    <line x1="400" y1="200" x2="405" y2="200" stroke="#444" stroke-width="2"/>
+    <line x1="495" y1="200" x2="498" y2="200" stroke="#444" stroke-width="2"/>
+    <line x1="400" y1="200" x2="400" y2="200" stroke="#444"/>
+    <path d="M395,200 L403,200" stroke="#444" stroke-width="2" marker-start="url(#ar)"/>
+    <path d="M497,200 L505,200" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Right: with SWE-Edit -->
+  <g>
+    <rect x="500" y="100" width="360" height="200" rx="12" fill="url(#gB)" stroke="#3d7dc8" stroke-width="2"/>
+    <text x="680" y="130" text-anchor="middle" font-size="17" font-weight="700" fill="#1a4b8a">接入 SWE-Edit 后</text>
+    <text x="680" y="152" text-anchor="middle" font-size="13" fill="#2a4a6b">Editor 统一处理格式，全部锁高位</text>
+
+    <rect x="530" y="178" width="300" height="28" rx="5" fill="#fff" stroke="#80a8d0"/>
+    <text x="545" y="197" font-size="13" fill="#333">Kimi-K2 Thinking</text>
+    <text x="815" y="197" font-size="13" font-weight="700" fill="#1f7a3f" text-anchor="end">93.9%  ▲18.3</text>
+
+    <rect x="530" y="214" width="300" height="28" rx="5" fill="#fff" stroke="#80a8d0"/>
+    <text x="545" y="233" font-size="13" fill="#333">MiniMax</text>
+    <text x="815" y="233" font-size="13" font-weight="700" fill="#1f7a3f" text-anchor="end">95.9%  ▲13.9</text>
+
+    <rect x="530" y="250" width="300" height="28" rx="5" fill="#fff" stroke="#80a8d0"/>
+    <text x="545" y="269" font-size="13" fill="#333">GLM</text>
+    <text x="815" y="269" font-size="13" font-weight="700" fill="#1f7a3f" text-anchor="end">94.3%  ▲14.7</text>
+  </g>
+
+  <!-- Bottom mechanism -->
+  <g>
+    <text x="450" y="345" text-anchor="middle" font-size="15" font-weight="700" fill="#222">机制：解耦“想”和“写”</text>
+
+    <rect x="110" y="370" width="200" height="110" rx="10" fill="#fff7e6" stroke="#d49a2e" stroke-width="2"/>
+    <text x="210" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#7a5410">主 Agent（可替换）</text>
+    <text x="210" y="425" text-anchor="middle" font-size="12" fill="#5a4010">Kimi / MiniMax / GLM</text>
+    <text x="210" y="452" text-anchor="middle" font-size="12" fill="#5a4010">只说：改哪里、怎么改</text>
+
+    <rect x="590" y="370" width="200" height="110" rx="10" fill="#e8f5ee" stroke="#2f8a55" stroke-width="2"/>
+    <text x="690" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#1f5a38">Editor 子 Agent（固定）</text>
+    <text x="690" y="425" text-anchor="middle" font-size="12" fill="#1f5a38">GPT-5-mini</text>
+    <text x="690" y="452" text-anchor="middle" font-size="12" fill="#1f5a38">专职产出合法 diff</text>
+
+    <line x1="312" y1="415" x2="588" y2="415" stroke="#444" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="450" y="408" text-anchor="middle" font-size="12" fill="#444">自然语言指令（不再自己写格式）</text>
+  </g>
+
+  <text x="450" y="520" text-anchor="middle" font-size="13" fill="#333" font-style="italic">结论：SWE-Edit 是一层通用适配器，套在任何 reasoning 主模型外面都稳定有效</text>
+</svg>

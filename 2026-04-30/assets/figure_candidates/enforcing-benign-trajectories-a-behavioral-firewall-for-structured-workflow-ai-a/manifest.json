@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/downloaded_pdfs/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a",
+  "candidates": [
+    {
+      "id": "page-0-block-0",
+      "page_index": 0,
+      "caption": "Enforcing Benign Trajectories: A Behavioral Firewall for Structured-Workflow AI Agents",
+      "clip": [
+        102.57819519042968,
+        18.0,
+        468.21271362304685,
+        127.02676391601562
+      ],
+      "clip_area": 39863.94832069901,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "captioned_figure",
+      "score": 78.44293275911888,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-caption-5",
+      "page_index": 7,
+      "caption": "Fig. 1 The two-stage lifecycle of Praetor . The telemetry profiler compiles historical telemetry into a pDFA, which the runtime gateway enforces at execution time with O (1) overhead.",
+      "clip": [
+        109.35832214355469,
+        72.53528594970703,
+        507.1236572265625,
+        219.0135040283203
+      ],
+      "clip_area": 58263.957496401505,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2700912155021508,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.241904375386525,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/02-p8-drawing_cluster_with_caption.png",
+      "filename": "02-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-5",
+      "page_index": 7,
+      "caption": "Fig. 1 The two-stage lifecycle of Praetor . The telemetry profiler compiles historical telemetry into a pDFA, which the runtime gateway enforces at execution time with O (1) overhead.",
+      "clip": [
+        94.831201171875,
+        18.0,
+        524.8648742675781,
+        200.88812255859375
+      ],
+      "clip_area": 78648.05110944918,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15238861745644966,
+      "kind": "captioned_figure",
+      "score": 10.530550187162454,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/03-p8-captioned_figure.png",
+      "filename": "03-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-2",
+      "page_index": 2,
+      "caption": "2.1 LLM Agent Architecture and Tool Calling",
+      "clip": [
+        70.30719909667968,
+        18.0,
+        403.60883178710935,
+        198.1906280517578
+      ],
+      "clip_area": 60057.83052516481,
+      "page_area": 501156.9211820215,
+      "text_density": 0.46771977015509275,
+      "kind": "captioned_figure",
+      "score": 7.667309228057388,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        111.35832214355469,
+        74.53528594970703,
+        505.1236572265625,
+        217.0135040283203
+      ],
+      "clip_area": 56102.98328375502,
+      "page_area": 501156.9211820215,
+      "text_density": 0.26728651626828376,
+      "kind": "drawing_cluster",
+      "score": -2.613824495166414,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/05-p8-drawing_cluster.png",
+      "filename": "05-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.4725740993188427,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-04-30/assets/figure_candidates/enforcing-benign-trajectories-a-behavioral-firewall-for-structured-workflow-ai-a/contact-sheet.svg"
+}
