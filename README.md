@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-01
+- **日期**：2026-05-04
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Synthetic Computers at Scale for Long-Horizon Productivity Simulation
-  - Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes
-  - MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents
-- **日报路径**：[2026-05-01/daily_report.md](2026-05-01/daily_report.md)
+  - Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis
+  - SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters
+  - To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling
+- **日报路径**：[2026-05-04/daily_report.md](2026-05-04/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-04 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis | [2026-05-04/daily_report.md](2026-05-04/daily_report.md) |
+|  |  |  | 2 | SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters |  |
+|  |  |  | 3 | To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling |  |
 | 2026-05-01 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Synthetic Computers at Scale for Long-Horizon Productivity Simulation | [2026-05-01/daily_report.md](2026-05-01/daily_report.md) |
 |  |  |  | 2 | Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes |  |
 |  |  |  | 3 | MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents |  |

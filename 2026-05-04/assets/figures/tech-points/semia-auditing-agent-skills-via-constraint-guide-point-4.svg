@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2980b9"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="21" font-weight="700">同一个 Skill，三种审计给三种答案</text>
+  <text x="450" y="60" text-anchor="middle" font-size="12" fill="#666">案例 clawnads：从外部输入直达 crypto-sign，且无审批门</text>
+
+  <!-- Skill box -->
+  <rect x="360" y="82" width="180" height="58" rx="8" fill="#fff5e6" stroke="#e67e22" stroke-width="2"/>
+  <text x="450" y="107" text-anchor="middle" font-size="15" font-weight="700">clawnads skill</text>
+  <text x="450" y="127" text-anchor="middle" font-size="11" fill="#666">YAML + 英文策略</text>
+
+  <!-- 3 auditors -->
+  <g>
+    <rect x="60" y="200" width="220" height="90" rx="8" fill="#fbeeee" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="170" y="226" text-anchor="middle" font-size="14" font-weight="700">社区评审</text>
+    <text x="170" y="250" text-anchor="middle" font-size="12" fill="#555">GitHub 无人报告</text>
+    <text x="170" y="278" text-anchor="middle" font-size="15" fill="#c0392b" font-weight="700">✗ 漏报</text>
+  </g>
+
+  <g>
+    <rect x="340" y="200" width="220" height="90" rx="8" fill="#fbeeee" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="450" y="226" text-anchor="middle" font-size="14" font-weight="700">签名扫描 (VirusTotal)</text>
+    <text x="450" y="250" text-anchor="middle" font-size="12" fill="#555">读不懂英文策略</text>
+    <text x="450" y="278" text-anchor="middle" font-size="15" fill="#c0392b" font-weight="700">✗ 判 benign</text>
+  </g>
+
+  <g>
+    <rect x="620" y="200" width="220" height="90" rx="8" fill="#fbeeee" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="730" y="226" text-anchor="middle" font-size="14" font-weight="700">LLM 直接审</text>
+    <text x="730" y="250" text-anchor="middle" font-size="12" fill="#555">两次问，结论相反</text>
+    <text x="730" y="278" text-anchor="middle" font-size="15" fill="#c0392b" font-weight="700">? 不稳定</text>
+  </g>
+
+  <line x1="400" y1="140" x2="220" y2="198" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arR)"/>
+  <line x1="450" y1="140" x2="450" y2="198" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arR)"/>
+  <line x1="500" y1="140" x2="680" y2="198" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arR)"/>
+
+  <!-- Semia -->
+  <rect x="240" y="330" width="420" height="110" rx="10" fill="#e8f4fd" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="450" y="360" text-anchor="middle" font-size="16" font-weight="700" fill="#1a5a85">Semia：把策略编译成 SDL 事实库 + 可达性查询</text>
+  <text x="450" y="385" text-anchor="middle" font-size="12" fill="#333">input → crypto-sign：路径上无 barrier-gate</text>
+  <text x="450" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#1e8449">✓ 稳定命中 MHG + UCI，一次查询可复现</text>
+
+  <line x1="450" y1="290" x2="450" y2="328" stroke="#2980b9" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Scale results -->
+  <text x="450" y="478" text-anchor="middle" font-size="13" font-weight="700" fill="#1a5a85">在 13,728 个真实 skill 上的规模化结果</text>
+
+  <rect x="60" y="495" width="250" height="70" rx="6" fill="#f4faf4" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="185" y="522" text-anchor="middle" font-size="14" font-weight="700">13,728 真实 skill</text>
+  <text x="185" y="545" text-anchor="middle" font-size="11" fill="#555">过半含语义风险</text>
+
+  <rect x="325" y="495" width="250" height="70" rx="6" fill="#f4faf4" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="450" y="522" text-anchor="middle" font-size="14" font-weight="700">F1 = 90.6%</text>
+  <text x="450" y="545" text-anchor="middle" font-size="11" fill="#555">P 84.5 / R 97.7（541 专家标注，κ=0.83）</text>
+
+  <rect x="590" y="495" width="250" height="70" rx="6" fill="#f4faf4" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="715" y="522" text-anchor="middle" font-size="14" font-weight="700">OpenClaw 0-day × 17</text>
+  <text x="715" y="545" text-anchor="middle" font-size="11" fill="#555">已确认并披露</text>
+</svg>

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/downloaded_pdfs/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-28",
+      "page_index": 3,
+      "caption": "Figure 2: High-level workflow of Semia. Phase 1 lifts an agent skill 𝑠 into an SDL fact base 𝑝 ∗ via a constrained refinement loop disciplined by fidelity feedback; Phase 2 evaluates de- rived predicates and reachability rules over 𝑝 ∗ to emit secu- rity findings.",
+      "clip": [
+        42.398468017578125,
+        304.3417053222656,
+        163.71151733398438,
+        457.3936767578125
+      ],
+      "clip_area": 18567.2013587337,
+      "page_area": 484704.0,
+      "text_density": 0.11191345884585521,
+      "kind": "drawing_cluster_with_caption",
+      "score": 60.29149470656795,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-28",
+      "page_index": 3,
+      "caption": "Figure 2: High-level workflow of Semia. Phase 1 lifts an agent skill 𝑠 into an SDL fact base 𝑝 ∗ via a constrained refinement loop disciplined by fidelity feedback; Phase 2 evaluates de- rived predicates and reachability rules over 𝑝 ∗ to emit secu- rity findings.",
+      "clip": [
+        23.198000335693358,
+        145.434375,
+        326.24761352539065,
+        454.234375
+      ],
+      "clip_area": 93581.72055297853,
+      "page_area": 484704.0,
+      "text_density": 0.3106432621925557,
+      "kind": "captioned_figure",
+      "score": 37.20120116347975,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-10-drawing-caption-13",
+      "page_index": 10,
+      "caption": "Figure 5: Ablation study: F1 scores of the full Semia pipeline vs. degraded variants (541-skill sample, 301 positive, 240 clean).",
+      "clip": [
+        79.07635498046875,
+        184.14906311035156,
+        310.49493408203125,
+        307.70574951171875
+      ],
+      "clip_area": 28593.312805501744,
+      "page_area": 484704.0,
+      "text_density": 0.17467712757980652,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.637075820828294,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/03-p11-drawing_cluster_with_caption.png",
+      "filename": "03-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-16",
+      "page_index": 3,
+      "caption": "Figure 1: Motivating example: the clawnads skill (a) evades community review, VirusTotal, and direct-LLM analysis; Semia (b) lifts it into SDL facts and proves an unsanitized path from external context to the ungated crypto_sign sink.",
+      "clip": [
+        51.91211700439453,
+        79.73345947265625,
+        563.362060546875,
+        277.26934814453125
+      ],
+      "clip_area": 101029.71910884418,
+      "page_area": 484704.0,
+      "text_density": 0.4300820257588586,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.122552434542712,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-25",
+      "page_index": 9,
+      "caption": "Figure 4: Skill-level detection effectiveness on the 541-skill labeled sample (301 positive, 240 clean). C-Scan covers 524 of the 541 skills; its metrics are computed over that subset.",
+      "clip": [
+        343.0765380859375,
+        67.68524169921875,
+        574.493408203125,
+        194.81089782714844
+      ],
+      "clip_area": 29419.021452719346,
+      "page_area": 484704.0,
+      "text_density": 0.18896822057553345,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.78878478160932,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/05-p10-drawing_cluster_with_caption.png",
+      "filename": "05-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-16",
+      "page_index": 3,
+      "caption": "Figure 1: Motivating example: the clawnads skill (a) evades community review, VirusTotal, and direct-LLM analysis; Semia (b) lifts it into SDL facts and proves an unsanitized path from external context to the ungated crypto_sign sink.",
+      "clip": [
+        23.198000335693358,
+        18.0,
+        589.3661743164063,
+        274.0465393066406
+      ],
+      "clip_area": 144965.40161332156,
+      "page_area": 484704.0,
+      "text_density": 0.3239991979416153,
+      "kind": "captioned_figure",
+      "score": 12.360048123503082,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/06-p4-captioned_figure.png",
+      "filename": "06-p4-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/semia-auditing-agent-skills-via-constraint-guided-representation-synthesis/contact-sheet.svg"
+}

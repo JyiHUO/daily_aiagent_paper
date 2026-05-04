@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334"/>
+    </marker>
+    <linearGradient id="gA" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef3ff"/><stop offset="1" stop-color="#cbd9ff"/>
+    </linearGradient>
+    <linearGradient id="gB" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff4e3"/><stop offset="1" stop-color="#ffd9a8"/>
+    </linearGradient>
+    <linearGradient id="gC" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe6e6"/><stop offset="1" stop-color="#ffbcbc"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">
+    11 条 Datalog 规则 = 确定性的 Skill 审计
+  </text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#555">
+    Phase 2 不再调 LLM：同一 skill 跑 N 次结论一致，还附证据路径
+  </text>
+
+  <!-- Left: facts -->
+  <rect x="40" y="110" width="210" height="180" rx="12" fill="url(#gA)" stroke="#5670c0" stroke-width="1.5"/>
+  <text x="145" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2b6b">事实库 (SDL 派生谓词)</text>
+  <text x="145" y="168" text-anchor="middle" font-size="12" fill="#24356e">data-flows · var-tainted</text>
+  <text x="145" y="190" text-anchor="middle" font-size="12" fill="#24356e">var-secret · call-reachable</text>
+  <text x="145" y="212" text-anchor="middle" font-size="12" fill="#24356e">unconditional · ...</text>
+  <text x="145" y="250" text-anchor="middle" font-size="11" fill="#666" font-style="italic">从 skill 静态抽取</text>
+  <text x="145" y="270" text-anchor="middle" font-size="11" fill="#666" font-style="italic">确定性、可缓存</text>
+
+  <!-- Middle: 11 detectors -->
+  <rect x="330" y="95" width="240" height="210" rx="12" fill="url(#gB)" stroke="#c57a1f" stroke-width="1.8"/>
+  <text x="450" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#5a3a0a">11 条 Datalog 检测器</text>
+  <line x1="350" y1="132" x2="550" y2="132" stroke="#c57a1f" stroke-dasharray="3,3"/>
+  <text x="450" y="155" text-anchor="middle" font-size="12" font-weight="600" fill="#5a3a0a">7 类语义漏洞</text>
+  <text x="450" y="174" text-anchor="middle" font-size="11" fill="#4a2d06">MHG · UCI · SLRO · SC …</text>
+  <text x="450" y="205" text-anchor="middle" font-size="12" font-weight="600" fill="#5a3a0a">4 类恶意作者模式</text>
+  <text x="450" y="224" text-anchor="middle" font-size="11" fill="#4a2d06">混淆 · 硬编码 C2 …</text>
+  <rect x="360" y="244" width="180" height="48" rx="6" fill="#fff" stroke="#c57a1f"/>
+  <text x="450" y="263" text-anchor="middle" font-size="11" fill="#333">纯规则查询 · 可复现</text>
+  <text x="450" y="281" text-anchor="middle" font-size="11" fill="#333">每个命中 → 证据路径</text>
+
+  <!-- Right: findings -->
+  <rect x="650" y="95" width="210" height="210" rx="12" fill="url(#gC)" stroke="#c53030" stroke-width="1.5"/>
+  <text x="755" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#7a1f1f">命中 + Witness</text>
+  <rect x="665" y="138" width="180" height="70" rx="6" fill="#fff" stroke="#c53030"/>
+  <text x="755" y="157" text-anchor="middle" font-size="11" font-weight="700" fill="#7a1f1f">MHG: Trade skill</text>
+  <text x="755" y="176" text-anchor="middle" font-size="10" fill="#444">npx awal trade *</text>
+  <text x="755" y="195" text-anchor="middle" font-size="10" fill="#444">无 human-approval gate</text>
+  <rect x="665" y="218" width="180" height="76" rx="6" fill="#fff" stroke="#c53030"/>
+  <text x="755" y="237" text-anchor="middle" font-size="11" font-weight="700" fill="#7a1f1f">SC: Game Light Tracker</text>
+  <text x="755" y="256" text-anchor="middle" font-size="10" fill="#444">读 .homeassistant-config</text>
+  <text x="755" y="275" text-anchor="middle" font-size="10" fill="#444">+ 网络 egress</text>
+
+  <!-- arrows -->
+  <line x1="252" y1="200" x2="328" y2="200" stroke="#334" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="572" y1="200" x2="648" y2="200" stroke="#334" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- bottom contrast -->
+  <rect x="60" y="370" width="360" height="180" rx="10" fill="#fff5f5" stroke="#e0a0a0"/>
+  <text x="240" y="398" text-anchor="middle" font-size="14" font-weight="700" fill="#8a2a2a">✗ LLM 审计</text>
+  <text x="240" y="425" text-anchor="middle" font-size="12" fill="#5a2a2a">每次结论都不一样</text>
+  <text x="240" y="448" text-anchor="middle" font-size="12" fill="#5a2a2a">英文策略易被 prompt 注入绕过</text>
+  <text x="240" y="471" text-anchor="middle" font-size="12" fill="#5a2a2a">无法证明「不存在污染路径」</text>
+  <text x="240" y="507" text-anchor="middle" font-size="11" fill="#888" font-style="italic">传统签名扫描也看不懂英文</text>
+
+  <rect x="480" y="370" width="360" height="180" rx="10" fill="#f2fbf4" stroke="#7fbf8a"/>
+  <text x="660" y="398" text-anchor="middle" font-size="14" font-weight="700" fill="#1e5a2a">✓ Datalog 检测</text>
+  <text x="660" y="425" text-anchor="middle" font-size="12" fill="#1e4a25">确定性：可复现、可回归</text>
+  <text x="660" y="448" text-anchor="middle" font-size="12" fill="#1e4a25">可解释：附证据路径</text>
+  <text x="660" y="471" text-anchor="middle" font-size="12" fill="#1e4a25">可扩展：加规则即加检测</text>
+  <text x="660" y="507" text-anchor="middle" font-size="11" fill="#3a7a45" font-style="italic">在 1.3 万 skill 上跑通</text>
+</svg>

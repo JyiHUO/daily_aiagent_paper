@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#222">SAGA: 工具感知TTL + 会话亲和 + Work Stealing</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">让 Agent 的 KV cache 保留多久、放在哪张卡，都按工作流来决定</text>
+
+  <!-- Part 1: Tool-aware TTL -->
+  <g>
+    <rect x="30" y="90" width="280" height="250" rx="12" fill="#eaf3ff" stroke="#4a90d9" stroke-width="2"/>
+    <text x="170" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a5f">① 工具感知 TTL (P95)</text>
+
+    <g font-size="11" fill="#222">
+      <text x="55" y="150">File</text>
+      <rect x="100" y="140" width="30" height="12" fill="#4a90d9"/>
+      <text x="140" y="150" fill="#555">45ms</text>
+
+      <text x="55" y="180">DB</text>
+      <rect x="100" y="170" width="70" height="12" fill="#4a90d9"/>
+      <text x="180" y="180" fill="#555">~1s</text>
+
+      <text x="55" y="210">Code</text>
+      <rect x="100" y="200" width="110" height="12" fill="#4a90d9"/>
+      <text x="220" y="210" fill="#555">~3s</text>
+
+      <text x="55" y="240">Web</text>
+      <rect x="100" y="230" width="170" height="12" fill="#c0392b"/>
+      <text x="280" y="240" text-anchor="end" fill="#c0392b">45s</text>
+    </g>
+
+    <line x1="50" y1="262" x2="290" y2="262" stroke="#999" stroke-dasharray="3,3"/>
+    <text x="170" y="283" text-anchor="middle" font-size="12" fill="#333">每类工具学 log-normal → TTL = P95</text>
+    <text x="170" y="303" text-anchor="middle" font-size="12" fill="#333">显存吃紧: TTL × (1 − 0.5m), 上限 300s</text>
+    <text x="170" y="325" text-anchor="middle" font-size="11" fill="#888">该留则留，该扔则扔</text>
+  </g>
+
+  <!-- Part 2: Affinity + Work Stealing -->
+  <g>
+    <rect x="340" y="90" width="530" height="250" rx="12" fill="#f1f9ee" stroke="#6aaa5c" stroke-width="2"/>
+    <text x="605" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#2a5020">② 会话亲和 + Work Stealing</text>
+
+    <!-- Worker A (idle) -->
+    <rect x="370" y="140" width="180" height="140" rx="8" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+    <text x="460" y="163" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">Worker A (空闲)</text>
+    <rect x="390" y="180" width="140" height="22" rx="4" fill="#c8e6c9"/>
+    <text x="460" y="196" text-anchor="middle" font-size="11" fill="#1b5e20">Session#7  KV hit ✓</text>
+    <text x="460" y="225" text-anchor="middle" font-size="11" fill="#555">队列空 &gt; 100ms</text>
+    <text x="460" y="250" text-anchor="middle" font-size="11" fill="#555">负载: ▂▂▂</text>
+
+    <!-- Worker B (busy) -->
+    <rect x="660" y="140" width="180" height="140" rx="8" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <text x="750" y="163" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">Worker B (过载)</text>
+    <rect x="680" y="180" width="140" height="12" rx="3" fill="#ffcdd2"/>
+    <rect x="680" y="196" width="140" height="12" rx="3" fill="#ffcdd2"/>
+    <rect x="680" y="212" width="140" height="12" rx="3" fill="#ffcdd2"/>
+    <text x="750" y="244" text-anchor="middle" font-size="11" fill="#555">负载 = 2.3 × A</text>
+    <text x="750" y="264" text-anchor="middle" font-size="11" fill="#555">负载: ██████</text>
+
+    <!-- Steal arrow: B -> A -->
+    <path d="M 660 218 C 605 310, 555 310, 552 240" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrR)"/>
+    <text x="605" y="325" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">Steal + Llumnix 搬 KV (~230ms), affinity 改绑 A</text>
+  </g>
+
+  <!-- Bottom result -->
+  <g>
+    <rect x="30" y="360" width="840" height="230" rx="12" fill="#fff7e6" stroke="#e0a94a" stroke-width="2"/>
+    <text x="450" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#7a5200">效果: Worker 利用率收窄, 重算开销下降</text>
+
+    <!-- before -->
+    <g>
+      <text x="180" y="420" text-anchor="middle" font-size="13" font-weight="700" fill="#555">之前 (LRU, 按请求调度)</text>
+      <rect x="60" y="438" width="240" height="24" fill="#ddd"/>
+      <rect x="60" y="438" width="170" height="24" fill="#4a90d9" opacity="0.4"/>
+      <text x="180" y="455" text-anchor="middle" font-size="11" fill="#222">利用率 23% ~ 94% (抖动大)</text>
+      <text x="180" y="485" text-anchor="middle" font-size="11" fill="#a33">38% 时间在重算 KV</text>
+    </g>
+
+    <!-- arrow -->
+    <line x1="325" y1="450" x2="405" y2="450" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- after -->
+    <g>
+      <text x="600" y="420" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">SAGA (workflow 原子)</text>
+      <rect x="445" y="438" width="310" height="24" fill="#ddd"/>
+      <rect x="555" y="438" width="90" height="24" fill="#2e7d32"/>
+      <text x="600" y="455" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">68% ~ 79%</text>
+      <text x="600" y="485" text-anchor="middle" font-size="11" fill="#2e7d32">端到端任务完成 1.64× 提速</text>
+    </g>
+
+    <text x="450" y="535" text-anchor="middle" font-size="12" fill="#7a5200">同 Agent 多步回到同一张卡 → 命中 cache；某卡被压死 → 偷活并把 KV 一起搬过去</text>
+    <text x="450" y="560" text-anchor="middle" font-size="11" fill="#aa7733">核心: 把整个 workflow 当成调度的一等公民，而不是一堆孤立请求</text>
+  </g>
+</svg>

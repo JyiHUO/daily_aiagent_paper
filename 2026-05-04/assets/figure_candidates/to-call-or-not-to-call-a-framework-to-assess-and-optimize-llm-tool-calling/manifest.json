@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/downloaded_pdfs/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-38",
+      "page_index": 2,
+      "caption": "Figure 1: Given input x , the model M decides π ( x ) ∈{ 0, 1 } to call a tool (response r ) or not, producing y = M ( x , r ) or y = M ( x ) . We compare NO TOOL, ALWAYS TOOL, and SELF-DECISION, and evaluate decisions via need (requires help), utility (performance gain), and affordability (cost vs. gain), distinguishing perceived vs. true quantities.",
+      "clip": [
+        109.62767028808594,
+        155.48486328125,
+        502.200439453125,
+        388.05706787109375
+      ],
+      "clip_area": 91301.51438665297,
+      "page_area": 484704.0,
+      "text_density": 0.45326090803212077,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.01446127096281,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-37",
+      "page_index": 6,
+      "caption": "Figure 3: Perceived need is only partially aligned with tool call (perceived utility). The x-axis shows the model’s perceived need, and the y-axis shows perceived utility / tool-call decisions.",
+      "clip": [
+        90.0,
+        60.87982940673828,
+        522.0004577636719,
+        145.6810302734375
+      ],
+      "clip_area": 36634.15759332315,
+      "page_area": 484704.0,
+      "text_density": 0.360921603735927,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.55174997132575,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-37",
+      "page_index": 6,
+      "caption": "Figure 3: Perceived need is only partially aligned with tool call (perceived utility). The x-axis shows the model’s perceived need, and the y-axis shows perceived utility / tool-call decisions.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5974060058594,
+        147.5324249267578
+      ],
+      "clip_area": 59221.8886701624,
+      "page_area": 484704.0,
+      "text_density": 0.23899525525280382,
+      "kind": "captioned_figure",
+      "score": 21.118305670055797,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/03-p7-captioned_figure.png",
+      "filename": "03-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-111",
+      "page_index": 6,
+      "caption": "Figure 5: The perceived need and utility are not aligned with the true need and utility. Entity Task; Top: true vs perceived need. Bottom: true vs. perceived utility across models.",
+      "clip": [
+        90.0,
+        176.35577392578125,
+        522.0004577636719,
+        342.6809997558594
+      ],
+      "clip_area": 71852.57369623985,
+      "page_area": 484704.0,
+      "text_density": 0.42204247208970647,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.798361929958219,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-15-drawing-caption-13",
+      "page_index": 15,
+      "caption": "Factuality is measured with an automated two-stage pipeline built on top of the OpenAI Responses API:",
+      "clip": [
+        90.0,
+        481.5469665527344,
+        522.0,
+        579.1419677734375
+      ],
+      "clip_area": 42161.04052734375,
+      "page_area": 484704.0,
+      "text_density": 0.4007772464021138,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.468456005859377,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/05-p16-drawing_cluster_with_caption.png",
+      "filename": "05-p16-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-block-5",
+      "page_index": 16,
+      "caption": "Claim Extraction and Verification Prompts. To evaluate factuality, we adopt a two-stage pipeline consisting of claim extraction followed by claim verification.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6015258789063,
+        156.25433349609375
+      ],
+      "clip_area": 63210.092233785246,
+      "page_area": 484704.0,
+      "text_density": 0.2129728116836672,
+      "kind": "captioned_figure",
+      "score": 8.723965657133139,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/06-p17-captioned_figure.png",
+      "filename": "06-p17-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/to-call-or-not-to-call-a-framework-to-assess-and-optimize-llm-tool-calling/contact-sheet.svg"
+}

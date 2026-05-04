@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7f8fb"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">SDL：把英文 Skill 策略编译成可查询的事实库</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#666">prose → Datalog facts → reachability query</text>
+
+  <!-- Left: prose skill -->
+  <g>
+    <rect x="40" y="110" width="240" height="210" rx="10" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="160" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">Skill（英文策略）</text>
+    <text x="55" y="165" font-size="12" fill="#333">wallet.skill:</text>
+    <text x="55" y="188" font-size="12" fill="#555">"外部转账需审批"</text>
+    <text x="55" y="210" font-size="12" fill="#555">"agent 间转账立即执行"</text>
+    <text x="55" y="248" font-size="11" fill="#999">每次由 LLM 重新解读，</text>
+    <text x="55" y="266" font-size="11" fill="#999">提示注入一句话即绕过</text>
+    <text x="55" y="298" font-size="11" fill="#c0392b" font-weight="bold">✗ 无法证明安全</text>
+  </g>
+
+  <!-- Middle: SDL -->
+  <g>
+    <rect x="330" y="110" width="240" height="210" rx="10" fill="#fff" stroke="#2c6fbb" stroke-width="2"/>
+    <text x="450" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c6fbb">SDL Facts（Datalog）</text>
+    <text x="345" y="162" font-size="11" fill="#333" font-family="monospace">action-trigger(a,'external').</text>
+    <text x="345" y="182" font-size="11" fill="#333" font-family="monospace">call(c1, a,'crypto-sign').</text>
+    <text x="345" y="202" font-size="11" fill="#333" font-family="monospace">call-input(c1, msg, v).</text>
+    <text x="345" y="222" font-size="11" fill="#aaa" font-family="monospace">¬ barrier-gate(a,'approval').</text>
+    <line x1="345" y1="240" x2="555" y2="240" stroke="#ddd"/>
+    <text x="450" y="265" text-anchor="middle" font-size="11" fill="#666">闭集谓词：effect / gate / trigger / claim / secret</text>
+    <text x="450" y="298" text-anchor="middle" font-size="11" fill="#2c6fbb" font-weight="bold">结构化、可推理</text>
+  </g>
+
+  <!-- Right: query -->
+  <g>
+    <rect x="620" y="110" width="240" height="210" rx="10" fill="#fff" stroke="#1e824c" stroke-width="2"/>
+    <text x="740" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e824c">Detector = Datalog Query</text>
+    <text x="635" y="168" font-size="11" font-family="monospace" fill="#333">?- high-priv-call(C),</text>
+    <text x="635" y="186" font-size="11" font-family="monospace" fill="#333">   reachable(Input, C),</text>
+    <text x="635" y="204" font-size="11" font-family="monospace" fill="#333">   ¬ gated(C,'approval').</text>
+    <rect x="635" y="225" width="210" height="70" rx="6" fill="#eafaf1" stroke="#1e824c"/>
+    <text x="740" y="252" text-anchor="middle" font-size="13" fill="#1e824c" font-weight="bold">✓ 命中污染路径</text>
+    <text x="740" y="275" text-anchor="middle" font-size="11" fill="#1e824c">确定性 · 可复现 · 可证明</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="282" y1="215" x2="326" y2="215" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <text x="304" y="205" text-anchor="middle" font-size="11" fill="#333">lift</text>
+
+  <line x1="572" y1="215" x2="616" y2="215" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <text x="594" y="205" text-anchor="middle" font-size="11" fill="#333">query</text>
+
+  <!-- Bottom key insight -->
+  <g>
+    <rect x="120" y="380" width="660" height="130" rx="12" fill="#1a1a2e"/>
+    <text x="450" y="412" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">核心洞察：把"能不能绕过审批到达高危操作"变成数据库查询</text>
+    <text x="450" y="445" text-anchor="middle" font-size="13" fill="#9ecbff">英文策略不再被 LLM 反复解读，一次 lift 成 ground facts</text>
+    <text x="450" y="470" text-anchor="middle" font-size="13" fill="#9ecbff">污点可达性 = Datalog reachability，结果稳定、可审计</text>
+    <text x="450" y="495" text-anchor="middle" font-size="12" fill="#ffd670">已在 13k 个真实 skill 上跑通静态审计</text>
+  </g>
+</svg>

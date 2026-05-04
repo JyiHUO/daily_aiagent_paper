@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0501：合成电脑、沙箱容错与 MCP 数据泄漏",
+  "shownotes_html": "<p>Agent 的瓶颈正从\"模型聪不聪明\"转向\"脚底下的基础设施扎不扎实\"。今天三篇重点论文分别砸在训练环境、运行时容错和多工具安全三个点上，值得做 Agent 系统的人认真听一遍。</p><br/><p><strong>本期重点</strong></p><ul><li><strong>大规模合成电脑（Synthetic Computers at Scale for Long-Horizon Productivity Simulation）</strong>——不只合成任务，而是合成一整台带文件历史和协作记录的用户电脑，再用双 Agent 跑一个月仿真，产出过程轨迹和交付物双重训练信号。直接戳中 computer-use Agent 最缺的数据瓶颈。</li><li><strong>Crab：语义感知的 Agent 沙箱快照恢复运行时（Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes）</strong>——用 eBPF 在内核层观察每轮净变化，把 checkpoint 分四档做，再利用 LLM 推理等待窗口异步完成存档。64 个 sandbox 同跑时，checkpoint 延迟只占 0.44%，崩溃恢复后端到端仅慢 1.9%。</li><li><strong>MCPHunt：多服务器 MCP Agent 跨边界数据传播评测框架（MCPHunt: An Evaluation Framework for Cross-Boundary Data Propagation in Multi-Server MCP Agents）</strong>——在没有攻击者的情况下，Agent 老老实实执行任务，仍会以 11.5%–41.3% 的概率把凭证搬错地方。最关键发现：62% 的风险由数据流路径决定，而非模型身份；光靠 prompt 提醒不靠谱，编排层污点守卫才能稳住。</li></ul><br/><p><strong>今日趋势</strong></p><ol><li>Computer-use 方向从\"刷任务\"升级到\"造整台电脑 + 长程工作流\"，合成环境成为 Agent 训练和 RL 的新底座。</li><li>Agent 运行时、sandbox 容错、MCP 安全评测等 harness 层工作密度明显上升——单一成功率不再够用，轨迹级和结构级评测正在成为标配。</li></ol><br/><p><strong>知识点：Harness 是什么？</strong></p><p>Harness 是把任务定义、运行环境、输入输出协议、评测脚本和执行日志统一封装起来的 Agent 实验底座。它决定的不是一次漂亮分数，而是不同模型、工具链、防御策略能否在同一套协议下被公平、可复现地比较。今天三篇论文本质上都在重做 harness 的某一层。</p><br/><p>以上内容由 AI 自动生成，如有疏漏欢迎留言指正。也欢迎在评论区聊聊你对 Agent 基础设施的看法——你的 Agent 有一台像样的电脑去上班吗？</p>",
+  "report_date": "2026-05-01",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-01T23:56:38Z"
+}

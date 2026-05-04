@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="gLLM" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="gCtrl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="gNo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="gYes" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arrY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">To Call or Not to Call：用隐状态外挂决定何时调工具</text>
+  <text x="500" y="66" text-anchor="middle" fill="#94a3b8" font-size="13">模型自感知 ≠ 真实需求；读取隐状态训练轻量估计器，外部控制工具调用</text>
+
+  <!-- Input -->
+  <g>
+    <rect x="40" y="170" width="150" height="70" rx="10" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="198" text-anchor="middle" fill="#e0f2fe" font-size="13" font-weight="600">查询 x</text>
+    <text x="115" y="220" text-anchor="middle" fill="#7dd3fc" font-size="11">2024 超级碗中场</text>
+    <text x="115" y="234" text-anchor="middle" fill="#7dd3fc" font-size="11">表演者是谁？</text>
+  </g>
+
+  <!-- LLM with hidden state -->
+  <g>
+    <rect x="230" y="140" width="230" height="130" rx="12" fill="url(#gLLM)" stroke="#64748b"/>
+    <text x="345" y="168" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700">LLM（NO TOOL 前向）</text>
+    <text x="345" y="188" text-anchor="middle" fill="#cbd5e1" font-size="11">读取最后一层隐状态 h(x)</text>
+    <g transform="translate(255,205)">
+      <rect width="180" height="28" rx="6" fill="#0f172a" stroke="#475569"/>
+      <g>
+        <circle cx="15" cy="14" r="4" fill="#60a5fa"/>
+        <circle cx="35" cy="14" r="4" fill="#a78bfa"/>
+        <circle cx="55" cy="14" r="4" fill="#f472b6"/>
+        <circle cx="75" cy="14" r="4" fill="#60a5fa"/>
+        <circle cx="95" cy="14" r="4" fill="#34d399"/>
+        <circle cx="115" cy="14" r="4" fill="#fbbf24"/>
+        <circle cx="135" cy="14" r="4" fill="#a78bfa"/>
+        <circle cx="155" cy="14" r="4" fill="#60a5fa"/>
+      </g>
+    </g>
+    <text x="345" y="255" text-anchor="middle" fill="#fca5a5" font-size="10.5" font-style="italic">嘴上不知道，隐藏层其实知道</text>
+  </g>
+
+  <!-- Controller (central) -->
+  <g>
+    <rect x="520" y="120" width="220" height="170" rx="14" fill="url(#gCtrl)" opacity="0.95"/>
+    <text x="630" y="148" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">轻量控制器</text>
+    <text x="630" y="166" text-anchor="middle" fill="#fff7ed" font-size="11">（隐状态 MLP，不动原模型）</text>
+
+    <rect x="540" y="180" width="85" height="42" rx="7" fill="#fff" opacity="0.92"/>
+    <text x="582" y="198" text-anchor="middle" fill="#b45309" font-size="12" font-weight="700">LNE</text>
+    <text x="582" y="214" text-anchor="middle" fill="#78350f" font-size="10">必要性 Need</text>
+
+    <rect x="635" y="180" width="85" height="42" rx="7" fill="#fff" opacity="0.92"/>
+    <text x="677" y="198" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="700">LUE</text>
+    <text x="677" y="214" text-anchor="middle" fill="#7f1d1d" font-size="10">收益 Utility</text>
+
+    <text x="630" y="248" text-anchor="middle" fill="#fff" font-size="11">按 Utility 置信度排序</text>
+    <text x="630" y="264" text-anchor="middle" fill="#fff" font-size="11">预算 K 内取 Top-K 调用</text>
+    <text x="630" y="282" text-anchor="middle" fill="#fef3c7" font-size="10" font-style="italic">= Affordability 可负担性</text>
+  </g>
+
+  <!-- Decision branches -->
+  <g>
+    <rect x="800" y="130" width="160" height="70" rx="10" fill="url(#gNo)"/>
+    <text x="880" y="158" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">不调用</text>
+    <text x="880" y="178" text-anchor="middle" fill="#ecfdf5" font-size="11">用参数知识直接答</text>
+    <text x="880" y="192" text-anchor="middle" fill="#ecfdf5" font-size="10.5">省成本 · 避免噪声</text>
+
+    <rect x="800" y="220" width="160" height="70" rx="10" fill="url(#gYes)"/>
+    <text x="880" y="248" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">调用 Web 搜索</text>
+    <text x="880" y="268" text-anchor="middle" fill="#dbeafe" font-size="11">外部信息补齐短板</text>
+    <text x="880" y="282" text-anchor="middle" fill="#dbeafe" font-size="10.5">只花在高收益样本</text>
+  </g>
+
+  <!-- Arrows input -> LLM -->
+  <path d="M190 205 L228 205" stroke="#cbd5e1" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- LLM -> controller -->
+  <path d="M460 210 L518 205" stroke="#fbbf24" stroke-width="2.2" fill="none" marker-end="url(#arrY)"/>
+  <text x="478" y="198" fill="#fbbf24" font-size="10.5">h(x)</text>
+  <!-- controller -> NO/YES -->
+  <path d="M740 170 Q770 165 798 165" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M740 245 Q770 252 798 255" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrB)"/>
+
+  <!-- Misalignment panel (left-bottom) -->
+  <g transform="translate(40,330)">
+    <rect width="420" height="270" rx="12" fill="#0b1220" stroke="#334155"/>
+    <text x="210" y="28" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700">核心问题：感知 ≠ 真实</text>
+
+    <g transform="translate(40,55)">
+      <circle cx="120" cy="95" r="70" fill="#3b82f6" opacity="0.35" stroke="#60a5fa"/>
+      <circle cx="220" cy="95" r="70" fill="#ef4444" opacity="0.35" stroke="#f87171"/>
+      <text x="80" y="45" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="600">模型自认为该调</text>
+      <text x="260" y="45" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="600">真正有收益的调用</text>
+      <text x="170" y="98" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="700">理应重合</text>
+      <text x="170" y="114" text-anchor="middle" fill="#fde68a" font-size="10">实则错位</text>
+    </g>
+
+    <text x="30" y="240" fill="#cbd5e1" font-size="11">· 自信模型高估需求 → 冗余调用，甚至改错</text>
+    <text x="30" y="258" fill="#cbd5e1" font-size="11">· 小模型低估自己 → 该调时不调，漏掉外部信息</text>
+  </g>
+
+  <!-- Results panel (right-bottom) -->
+  <g transform="translate(500,330)">
+    <rect width="460" height="270" rx="12" fill="#0b1220" stroke="#334155"/>
+    <text x="230" y="28" text-anchor="middle" fill="#f1f5f9" font-size="14" font-weight="700">效果：更少错判，更高收益</text>
+
+    <g transform="translate(30,60)">
+      <text x="0" y="0" fill="#94a3b8" font-size="11">Llama3.2-3B · Entity 任务</text>
+
+      <text x="0" y="35" fill="#cbd5e1" font-size="11">自决策</text>
+      <rect x="75" y="22" width="180" height="16" rx="3" fill="#64748b"/>
+      <text x="265" y="35" fill="#e2e8f0" font-size="11">0.74</text>
+      <text x="300" y="35" fill="#94a3b8" font-size="10">(340 次调用)</text>
+
+      <text x="0" y="70" fill="#cbd5e1" font-size="11">LNE 控制</text>
+      <rect x="75" y="57" width="195" height="16" rx="3" fill="url(#gCtrl)"/>
+      <text x="280" y="70" fill="#fde68a" font-size="11" font-weight="700">0.79</text>
+      <text x="315" y="70" fill="#94a3b8" font-size="10">(429 次，更精准)</text>
+    </g>
+
+    <g transform="translate(40,160)">
+      <circle cx="10" cy="10" r="5" fill="#22c55e"/>
+      <text x="25" y="14" fill="#cbd5e1" font-size="11">三维评估：Necessity · Utility · Affordability</text>
+
+      <circle cx="10" cy="35" r="5" fill="#3b82f6"/>
+      <text x="25" y="39" fill="#cbd5e1" font-size="11">隐状态 MLP：无需微调，即插即用</text>
+
+      <circle cx="10" cy="60" r="5" fill="#f59e0b"/>
+      <text x="25" y="64" fill="#cbd5e1" font-size="11">6 模型 × 3 任务稳定超越自决策</text>
+
+      <circle cx="10" cy="85" r="5" fill="#ef4444"/>
+      <text x="25" y="89" fill="#cbd5e1" font-size="11">预算内 Top-K 排序，把钱花在刀刃上</text>
+    </g>
+  </g>
+
+  <!-- feedback from results panel to controller -->
+  <path d="M700 330 Q690 305 660 292" stroke="#64748b" stroke-width="1.2" fill="none" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="705" y="322" fill="#94a3b8" font-size="10">真值监督训练</text>
+</svg>

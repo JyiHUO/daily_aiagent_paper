@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="-apple-system,Segoe UI,PingFang SC,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1530"/>
+      <stop offset="1" stop-color="#1a2040"/>
+    </linearGradient>
+    <linearGradient id="skillBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a3555"/>
+      <stop offset="1" stop-color="#1e2745"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6b9d"/>
+      <stop offset="1" stop-color="#c060ff"/>
+    </linearGradient>
+    <linearGradient id="sdlGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fd1c5"/>
+      <stop offset="1" stop-color="#38b6ff"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9fb3ff"/>
+    </marker>
+    <marker id="arrPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff8ab0"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4fd1c5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="44" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Semia：把 Agent Skill 的英文策略编译成可推理事实库</text>
+  <text x="600" y="70" text-anchor="middle" fill="#9fb3ff" font-size="14">让“污点能否到达高危操作”从 LLM 猜测变成 Datalog 可复现查询</text>
+
+  <!-- LEFT: Skill input -->
+  <g>
+    <rect x="50" y="120" width="250" height="260" rx="14" fill="url(#skillBox)" stroke="#3d4a70"/>
+    <text x="175" y="148" text-anchor="middle" fill="#ffd27a" font-size="14" font-weight="700">Agent Skill（混合制品）</text>
+
+    <rect x="70" y="166" width="210" height="86" rx="6" fill="#0f1530" stroke="#4a5a85"/>
+    <text x="80" y="184" fill="#8ec5ff" font-size="11" font-weight="600">结构半：YAML 接口</text>
+    <text x="80" y="204" fill="#c8d4f0" font-size="10.5" font-family="monospace">tools: [crypto-sign, http-fetch]</text>
+    <text x="80" y="222" fill="#c8d4f0" font-size="10.5" font-family="monospace">trigger: external</text>
+    <text x="80" y="244" fill="#8ec5ff" font-size="10" font-style="italic">静态分析可读</text>
+
+    <rect x="70" y="262" width="210" height="102" rx="6" fill="#2a1525" stroke="#a05070"/>
+    <text x="80" y="280" fill="#ff9ec0" font-size="11" font-weight="600">Prose 半：英文策略</text>
+    <text x="80" y="300" fill="#f0d0e0" font-size="10.5" font-style="italic">“外部转账需人工审批，</text>
+    <text x="80" y="316" fill="#f0d0e0" font-size="10.5" font-style="italic">agent 间转账立即执行…”</text>
+    <text x="80" y="340" fill="#ff9ec0" font-size="10">LLM 每次解读不同</text>
+    <text x="80" y="356" fill="#ff9ec0" font-size="10">⚠ 一句注入即可绕过</text>
+  </g>
+
+  <!-- Arrow to CGRS -->
+  <path d="M 305 250 L 368 250" stroke="#9fb3ff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="336" y="242" text-anchor="middle" fill="#9fb3ff" font-size="10">lift</text>
+
+  <!-- CENTER: CGRS loop -->
+  <g>
+    <rect x="370" y="120" width="460" height="360" rx="16" fill="#181f3d" stroke="url(#coreGrad)" stroke-width="2"/>
+    <text x="600" y="148" text-anchor="middle" font-size="16" font-weight="700">
+      <tspan fill="#ff6b9d">CGRS</tspan><tspan fill="#ffffff"> · 约束引导的表示合成循环</tspan>
+    </text>
+    <text x="600" y="168" text-anchor="middle" fill="#c8d4f0" font-size="11">propose → validate → verbalize，直到结构合法且语义回译匹配</text>
+
+    <!-- Propose -->
+    <g>
+      <rect x="398" y="196" width="130" height="58" rx="10" fill="#3a2550" stroke="#c060ff"/>
+      <text x="463" y="220" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">① Propose</text>
+      <text x="463" y="240" text-anchor="middle" fill="#d0b0ff" font-size="10.5">LLM 生成候选 SDL</text>
+    </g>
+    <!-- Validate -->
+    <g>
+      <rect x="672" y="196" width="130" height="58" rx="10" fill="#25404a" stroke="#4fd1c5"/>
+      <text x="737" y="220" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">② Validate</text>
+      <text x="737" y="240" text-anchor="middle" fill="#8ee5dc" font-size="10.5">I-ref / I-flow / I-auth</text>
+    </g>
+    <!-- Verbalize -->
+    <g>
+      <rect x="535" y="310" width="130" height="58" rx="10" fill="#3a3025" stroke="#ffb86b"/>
+      <text x="600" y="334" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">③ Verbalize</text>
+      <text x="600" y="352" text-anchor="middle" fill="#ffd4a8" font-size="10.5">回译比对 · 距离 d</text>
+    </g>
+
+    <!-- Loop arrows: propose -> validate -> verbalize -> (back to propose) -->
+    <path d="M 528 225 L 670 225" stroke="#9fb3ff" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+    <path d="M 720 254 Q 700 300 665 330" stroke="#9fb3ff" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+    <path d="M 535 330 Q 500 300 478 254" stroke="#ff8ab0" stroke-width="1.8" fill="none" stroke-dasharray="5,3" marker-end="url(#arrPink)"/>
+    <text x="388" y="295" fill="#ff8ab0" font-size="10">结构坏 → Diagnose</text>
+    <text x="388" y="310" fill="#ff8ab0" font-size="10">语义偏 → 重写</text>
+
+    <!-- Output: SDL fact base -->
+    <rect x="398" y="398" width="404" height="66" rx="10" fill="#0f2a30" stroke="url(#sdlGrad)" stroke-width="1.5"/>
+    <text x="600" y="420" text-anchor="middle" fill="#4fd1c5" font-size="12" font-weight="700">SDL 事实库（Datalog ground facts）</text>
+    <text x="600" y="438" text-anchor="middle" fill="#c8f0ea" font-size="10.5" font-family="monospace">action-trigger(a,'external').  call(c,a,'crypto-sign').</text>
+    <text x="600" y="453" text-anchor="middle" fill="#c8f0ea" font-size="10.5" font-family="monospace">call-input(c,msg,v).   ⛔ no barrier-gate(a,'human').</text>
+
+    <path d="M 600 368 L 600 396" stroke="#4fd1c5" stroke-width="2" fill="none" marker-end="url(#arrGreen)"/>
+  </g>
+
+  <!-- Arrow CGRS -> Detectors -->
+  <path d="M 832 430 L 898 430" stroke="#4fd1c5" stroke-width="2" fill="none" marker-end="url(#arrGreen)"/>
+  <text x="865" y="422" text-anchor="middle" fill="#4fd1c5" font-size="10">query</text>
+
+  <!-- RIGHT: Datalog detectors -->
+  <g>
+    <rect x="900" y="120" width="250" height="320" rx="14" fill="#1a2545" stroke="#4fd1c5"/>
+    <text x="1025" y="148" text-anchor="middle" fill="#4fd1c5" font-size="14" font-weight="700">11 条 Datalog 检测器</text>
+    <text x="1025" y="168" text-anchor="middle" fill="#9fb3ff" font-size="10">确定性查询 · 每条命中附证据路径</text>
+
+    <g font-size="11" fill="#e0e8f5">
+      <rect x="918" y="184" width="214" height="26" rx="5" fill="#2a1f3d"/>
+      <text x="928" y="202">MHG · 缺审批门</text>
+      <rect x="918" y="216" width="214" height="26" rx="5" fill="#2a1f3d"/>
+      <text x="928" y="234">UCI · 上下文未清洗</text>
+      <rect x="918" y="248" width="214" height="26" rx="5" fill="#2a1f3d"/>
+      <text x="928" y="266">SLRO · 敏感资源越权</text>
+      <rect x="918" y="280" width="214" height="26" rx="5" fill="#2a1f3d"/>
+      <text x="928" y="298">SC · 影子凭证</text>
+      <rect x="918" y="312" width="214" height="26" rx="5" fill="#2a1f3d"/>
+      <text x="928" y="330">间接注入 / 混淆作者 …</text>
+    </g>
+    <text x="1025" y="372" text-anchor="middle" fill="#8ee5dc" font-size="10.5" font-style="italic">不再调用 LLM · 结果可复现</text>
+    <text x="1025" y="400" text-anchor="middle" fill="#c8d4f0" font-size="10.5">输出：告警 + 证据路径</text>
+  </g>
+
+  <!-- Bottom results band -->
+  <g>
+    <rect x="50" y="510" width="1100" height="130" rx="14" fill="#12183a" stroke="#3d4a70"/>
+    <text x="600" y="540" text-anchor="middle" fill="#ffd27a" font-size="15" font-weight="700">真实 marketplace 评测 · 13,728 个 Skill 全量可审计</text>
+
+    <g transform="translate(90,558)">
+      <rect width="200" height="64" rx="10" fill="#1e2a4a" stroke="#4fd1c5"/>
+      <text x="100" y="30" text-anchor="middle" fill="#4fd1c5" font-size="24" font-weight="700">97.7%</text>
+      <text x="100" y="52" text-anchor="middle" fill="#c8d4f0" font-size="11">召回率（541 专家样本）</text>
+    </g>
+    <g transform="translate(310,558)">
+      <rect width="200" height="64" rx="10" fill="#1e2a4a" stroke="#c060ff"/>
+      <text x="100" y="30" text-anchor="middle" fill="#d0a0ff" font-size="24" font-weight="700">90.6</text>
+      <text x="100" y="52" text-anchor="middle" fill="#c8d4f0" font-size="11">F1 · 超越签名与 LLM 基线</text>
+    </g>
+    <g transform="translate(530,558)">
+      <rect width="200" height="64" rx="10" fill="#1e2a4a" stroke="#ff8ab0"/>
+      <text x="100" y="30" text-anchor="middle" fill="#ff9ec0" font-size="24" font-weight="700">&gt;50%</text>
+      <text x="100" y="52" text-anchor="middle" fill="#c8d4f0" font-size="11">真实 Skill 带至少一个关键风险</text>
+    </g>
+    <g transform="translate(750,558)">
+      <rect width="200" height="64" rx="10" fill="#1e2a4a" stroke="#ffb86b"/>
+      <text x="100" y="30" text-anchor="middle" fill="#ffd4a8" font-size="24" font-weight="700">17</text>
+      <text x="100" y="52" text-anchor="middle" fill="#c8d4f0" font-size="11">已确认零日漏洞</text>
+    </g>
+    <g transform="translate(970,558)">
+      <rect width="140" height="64" rx="10" fill="#1e2a4a" stroke="#8ec5ff"/>
+      <text x="70" y="30" text-anchor="middle" fill="#8ec5ff" font-size="20" font-weight="700">-19.9</text>
+      <text x="70" y="52" text-anchor="middle" fill="#c8d4f0" font-size="10.5">去 SDL 的 F1 跌幅</text>
+    </g>
+  </g>
+
+  <text x="600" y="672" text-anchor="middle" fill="#9fb3ff" font-size="12">核心张力：prose 策略 LLM 每次解读不同 · Semia 用 CGRS 固化为 Datalog，“攻击者输入能否到达 crypto-sign”变成可证伪查询</text>
+  <text x="600" y="694" text-anchor="middle" fill="#6b7aa0" font-size="11">motivating case：clawnads skill —— VirusTotal 判 benign · LLM 两次结论相反 · Semia 稳定命中 MHG &amp; UCI</text>
+</svg>

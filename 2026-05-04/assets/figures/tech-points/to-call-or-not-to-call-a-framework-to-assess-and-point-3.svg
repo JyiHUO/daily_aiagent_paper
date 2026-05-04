@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9d6a"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c64545"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a1a">隐状态轻量估计器：读"心"替 LLM 决定要不要调工具</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#666">模型嘴上说不用，其实隐藏层早知道答案</text>
+
+  <!-- Input -->
+  <rect x="30" y="120" width="150" height="80" rx="10" fill="#eef3fb" stroke="#4a74c9" stroke-width="2"/>
+  <text x="105" y="150" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">用户问题 x</text>
+  <text x="105" y="175" text-anchor="middle" font-size="12" fill="#555">"谁是 XX 的作者?"</text>
+
+  <!-- Frozen LLM -->
+  <rect x="220" y="95" width="240" height="140" rx="12" fill="#fff5e6" stroke="#d89023" stroke-width="2"/>
+  <text x="340" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">冻结的 LLM（NO TOOL 走一遍）</text>
+  <circle cx="265" cy="165" r="10" fill="#ffd28a"/>
+  <circle cx="295" cy="165" r="10" fill="#ffd28a"/>
+  <circle cx="325" cy="165" r="10" fill="#ffd28a"/>
+  <circle cx="360" cy="165" r="10" fill="#ffd28a"/>
+  <circle cx="395" cy="165" r="14" fill="#ff9a3c" stroke="#b35a00" stroke-width="2"/>
+  <text x="340" y="210" text-anchor="middle" font-size="11" fill="#b35a00" font-weight="600">取最后 token 隐状态 h(x)</text>
+
+  <!-- Arrow in -->
+  <line x1="180" y1="160" x2="218" y2="160" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <!-- Arrow LLM -> MLP -->
+  <line x1="460" y1="165" x2="518" y2="165" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Tiny MLP -->
+  <rect x="520" y="95" width="240" height="170" rx="12" fill="#e8f6ee" stroke="#2a9d6a" stroke-width="2"/>
+  <text x="640" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">轻量 MLP 控制器</text>
+  <text x="640" y="140" text-anchor="middle" font-size="12" fill="#2a9d6a">LNE（是否需要） / LUE（是否有用）</text>
+  <g stroke="#2a9d6a" stroke-width="0.8" fill="#2a9d6a">
+    <circle cx="560" cy="185" r="4"/><circle cx="560" cy="215" r="4"/>
+    <circle cx="610" cy="175" r="4"/><circle cx="610" cy="200" r="4"/><circle cx="610" cy="225" r="4"/>
+    <circle cx="665" cy="185" r="4"/><circle cx="665" cy="215" r="4"/>
+    <circle cx="715" cy="200" r="5"/>
+    <line x1="560" y1="185" x2="610" y2="175"/>
+    <line x1="560" y1="185" x2="610" y2="200"/>
+    <line x1="560" y1="215" x2="610" y2="200"/>
+    <line x1="560" y1="215" x2="610" y2="225"/>
+    <line x1="610" y1="175" x2="665" y2="185"/>
+    <line x1="610" y1="200" x2="665" y2="185"/>
+    <line x1="610" y1="200" x2="665" y2="215"/>
+    <line x1="610" y1="225" x2="665" y2="215"/>
+    <line x1="665" y1="185" x2="715" y2="200"/>
+    <line x1="665" y1="215" x2="715" y2="200"/>
+  </g>
+  <text x="640" y="252" text-anchor="middle" font-size="12" fill="#444">输出 P(需要工具)</text>
+
+  <!-- Branch Yes -->
+  <path d="M710 265 L780 345" stroke="#2a9d6a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="670" y="350" width="210" height="90" rx="10" fill="#e8f6ee" stroke="#2a9d6a" stroke-width="2"/>
+  <text x="775" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#2a9d6a">调用工具</text>
+  <text x="775" y="400" text-anchor="middle" font-size="12" fill="#333">p=0.85 → Web 搜索</text>
+  <text x="775" y="420" text-anchor="middle" font-size="12" fill="#333">拿外部知识再回答</text>
+
+  <!-- Branch No -->
+  <path d="M570 265 L490 345" stroke="#c64545" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="280" y="350" width="210" height="90" rx="10" fill="#fdecec" stroke="#c64545" stroke-width="2"/>
+  <text x="385" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#c64545">不调用</text>
+  <text x="385" y="400" text-anchor="middle" font-size="12" fill="#333">p=0.12 → 直接回答</text>
+  <text x="385" y="420" text-anchor="middle" font-size="12" fill="#333">省 token、省延迟</text>
+
+  <!-- Bottom highlight -->
+  <rect x="80" y="475" width="740" height="80" rx="10" fill="#f4f0ff" stroke="#7a5af5" stroke-width="1.5"/>
+  <text x="450" y="505" text-anchor="middle" font-size="14" font-weight="700" fill="#4b3bbf">不改模型参数 · 只训一个小 MLP · 即插即用</text>
+  <text x="450" y="530" text-anchor="middle" font-size="12" fill="#555">Llama3.2-3B Entity 任务：0.74 → 0.79，逼近更大模型</text>
+</svg>

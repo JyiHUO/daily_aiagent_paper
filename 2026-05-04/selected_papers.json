@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis",
+    "authors": [
+      "Hongbo Wen",
+      "Ying Li",
+      "Hanzhi Liu",
+      "Chaofan Shou",
+      "Yanju Chen",
+      "Yuan Tian",
+      "Yu Feng"
+    ],
+    "summary": "An agent skill is a configuration package that equips an LLM-driven agent with a concrete capability, such as reading email, executing shell commands, or signing blockchain transactions. Each skill is a hybrid artifact-a structured half declares executable interfaces, while a prose half dictates when and how those interfaces fire-and the prose is reinterpreted probabilistically on every invocation. Conventional static analyzers parse the structured half but ignore the prose; LLM-based tools read the prose but cannot reproducibly prove that a tainted input reaches a high-impact sink. We present Semia, a static auditor for agent skills. Semia lifts each skill into the Skill Description Language (SDL), a Datalog fact base that captures LLM-triggered actions, prose-defined conditions, and human-in-the-loop checkpoints. Synthesizing a fact base that is both structurally sound and semantically faithful to the original prose is the central challenge; we address it with Constraint-Guided Representation Synthesis (CGRS), a propose-verify-evaluate loop that refines LLM candidates until convergence. Security properties (e.g., indirect injection, secret leakage, confused deputies, unguarded sinks, etc.) over an agent skill can then be reduced to Datalog reachability queries. We evaluate Semia on 13,728 real-world skills from public marketplaces. Semia renders all of them auditable and finds that more than half carry at least one critical semantic risk. On a stratified sample of 541 expert-labeled skills, Semia achieves 97.7% recall and an F1 of 90.6%, substantially outperforming signature-based scanners and LLM baselines.",
+    "entry_id": "https://arxiv.org/abs/2605.00314",
+    "pdf_url": "https://arxiv.org/pdf/2605.00314.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "agent_safety",
+    "relevance_score": 95,
+    "value_score": 85,
+    "interesting_score": 82,
+    "innovation_score": 85,
+    "frontier_score": 80,
+    "verdict": "must_read",
+    "reason": "面向Agent skill的静态安全审计，涵盖间接注入、泄漏等关键运行时安全属性，对Agent安全栈很有价值。",
+    "composite_score": 86.71,
+    "arxiv_url": "https://arxiv.org/abs/2605.00314"
+  },
+  {
+    "title": "SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters",
+    "authors": [
+      "Dongxin Guo",
+      "Jikun Wu",
+      "Siu Ming Yiu"
+    ],
+    "summary": "AI agents execute tens to hundreds of chained LLM calls per task, yet GPU schedulers treat each call as independent, discarding gigabytes of intermediate state between steps and inflating end-to-end latency by 3-8x. We argue that this request-level abstraction is fundamentally mismatched to compound AI workloads, and propose a shift to program-level scheduling: treating the entire agent workflow (not individual inference calls) as the first-class schedulable unit. We present SAGA, a distributed scheduler that implements this abstraction through three mechanisms: (1) Agent Execution Graphs that capture workflow structure to predict KV cache reuse across tool-call boundaries, achieving within 1.31x of Bélády's optimal offline policy; (2) session-affinity batching with work stealing that co-locates correlated requests while maintaining global load balance; and (3) Agent Fair Share, a task-completion-time fairness metric with provable bounded-deviation guarantees. On a 64-GPU cluster serving SWE-bench coding agents and WebArena browser tasks, SAGA reduces task completion time by 1.64x (geometric mean, p < 0.001) over vLLM v0.15.1 with prefix caching and affinity routing, while improving GPU memory utilization by 1.22x and achieving 99.2% SLO attainment under multi-tenant interference. These latency gains come at a quantified cost: approximately 30% lower peak throughput than throughput-optimal batch scheduling, a tradeoff appropriate for the latency-sensitive interactive deployments that dominate compound AI usage. Our results demonstrate that workflow-aware scheduling is essential for efficient compound AI serving.",
+    "entry_id": "https://arxiv.org/abs/2605.00528",
+    "pdf_url": "https://arxiv.org/pdf/2605.00528.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "general_agent",
+    "relevance_score": 95,
+    "value_score": 85,
+    "interesting_score": 80,
+    "innovation_score": 80,
+    "frontier_score": 80,
+    "verdict": "must_read",
+    "reason": "以整个agent workflow为调度单位的GPU集群调度器，含Agent Execution Graph、KV cache复用、公平性指标，直接推进Agent runtime系统。",
+    "composite_score": 85.6,
+    "arxiv_url": "https://arxiv.org/abs/2605.00528"
+  },
+  {
+    "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+    "authors": [
+      "Qinyuan Wu",
+      "Soumi Das",
+      "Mahsa Amani",
+      "Arijit Nag",
+      "Seungeon Lee",
+      "Krishna P. Gummadi",
+      "Abhilasha Ravichander",
+      "Muhammad Bilal Zafar"
+    ],
+    "summary": "Agentic AI architectures augment LLMs with external tools, unlocking strong capabilities. However, tool use is not always beneficial; some calls may be redundant or even harmful. Effective tool use, therefore, hinges on a core LLM decision: whether to call or not call a tool, when performing a task. This decision is particularly challenging for web search tools, where the benefits of external information depend on the model's internal knowledge and its ability to integrate potentially noisy tool responses. We introduce a principled framework inspired by decision-making theory to evaluate web search tool-use decisions along three key factors: necessity, utility, and affordability. Our analysis combines two complementary lenses: a normative perspective that infers true need and utility from an optimal allocation of tool calls, and a descriptive perspective that infers the model's self-perceived need and utility from their observed behaviors. We find that models' perceived need and utility of tool calls are often misaligned with their true need and utility. Building on this framework, we train lightweight estimators of need and utility based on models' hidden states. Our estimators enable simple controllers that can improve decision quality and lead to stronger task performance than the self-perceived set up across three tasks and six models.",
+    "entry_id": "https://arxiv.org/abs/2605.00737",
+    "pdf_url": "https://arxiv.org/pdf/2605.00737.pdf",
+    "primary_category": "cs.AI",
+    "agent_theme": "tool_use",
+    "relevance_score": 92,
+    "value_score": 82,
+    "interesting_score": 78,
+    "innovation_score": 78,
+    "frontier_score": 75,
+    "verdict": "must_read",
+    "reason": "直接作用于 Agent 工具使用决策层，提出基于必要性/效用/成本三因素的框架，并训练隐状态估计器做运行时控制。对 Agent tool use 的可靠性和效率有直接抓手。",
+    "composite_score": 82.63,
+    "arxiv_url": "https://arxiv.org/abs/2605.00737"
+  }
+]

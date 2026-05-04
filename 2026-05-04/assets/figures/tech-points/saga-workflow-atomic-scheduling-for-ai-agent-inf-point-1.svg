@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e7e34"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold">WA-LRU: 用 Agent 执行图给 KV cache 打分</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#555">不只看"最近用过"，还要看"接下来会不会再用"</text>
+
+  <!-- AEG box -->
+  <rect x="40" y="90" width="310" height="210" rx="12" fill="#eef4fb" stroke="#2c6cb0" stroke-width="2"/>
+  <text x="195" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c6cb0">Agent Execution Graph (AEG)</text>
+
+  <circle cx="90" cy="180" r="26" fill="#fff" stroke="#2c6cb0" stroke-width="2"/>
+  <text x="90" y="184" text-anchor="middle" font-size="11">read</text>
+  <circle cx="195" cy="180" r="26" fill="#fff" stroke="#2c6cb0" stroke-width="2"/>
+  <text x="195" y="184" text-anchor="middle" font-size="11">edit</text>
+  <circle cx="300" cy="180" r="26" fill="#fff" stroke="#2c6cb0" stroke-width="2"/>
+  <text x="300" y="184" text-anchor="middle" font-size="11">test</text>
+
+  <line x1="116" y1="180" x2="169" y2="180" stroke="#2c6cb0" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="221" y1="180" x2="274" y2="180" stroke="#2c6cb0" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="142" y="170" text-anchor="middle" font-size="11" fill="#2c6cb0">p=0.9</text>
+  <text x="247" y="170" text-anchor="middle" font-size="11" fill="#2c6cb0">p=0.95</text>
+
+  <text x="195" y="245" text-anchor="middle" font-size="12" fill="#333">节点 = LLM 步   边 = 转移概率</text>
+  <text x="195" y="268" text-anchor="middle" font-size="12" fill="#333">预测: 未来复用概率 × prefix overlap</text>
+
+  <!-- Score formula -->
+  <rect x="390" y="110" width="470" height="100" rx="10" fill="#fff7e6" stroke="#d08a1a" stroke-width="2"/>
+  <text x="625" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#a0620a">WA-LRU 淘汰分数</text>
+  <text x="625" y="170" text-anchor="middle" font-size="15" font-family="monospace">score = 0.3·recency + 0.5·reuse + 0.2·size</text>
+  <text x="625" y="194" text-anchor="middle" font-size="11" fill="#a0620a">reuse 来自 AEG:  Σ (后继 p × prefix overlap)</text>
+
+  <!-- Arrow AEG -> score -->
+  <line x1="350" y1="160" x2="388" y2="160" stroke="#333" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Case A: keep -->
+  <rect x="40" y="340" width="390" height="240" rx="12" fill="#e9f7ec" stroke="#1e7e34" stroke-width="2"/>
+  <text x="235" y="368" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e7e34">① 正在等 run-test (2.4s)</text>
+  <rect x="70" y="384" width="330" height="58" rx="6" fill="#fff" stroke="#1e7e34"/>
+  <text x="235" y="406" text-anchor="middle" font-size="12">KV cache · 12K tokens</text>
+  <text x="235" y="425" text-anchor="middle" font-size="11" fill="#555">最近没动，但 AEG 预测 overlap≈0.95</text>
+
+  <text x="235" y="472" text-anchor="middle" font-size="13">reuse 高 → score 很低</text>
+  <rect x="130" y="490" width="210" height="40" rx="8" fill="#1e7e34"/>
+  <text x="235" y="516" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">✓ 保留在显存</text>
+  <line x1="540" y1="210" x2="400" y2="380" stroke="#1e7e34" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arG)"/>
+
+  <!-- Case B: evict -->
+  <rect x="470" y="340" width="390" height="240" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="665" y="368" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">② 已完成的 session</text>
+  <rect x="500" y="384" width="330" height="58" rx="6" fill="#fff" stroke="#c0392b"/>
+  <text x="665" y="406" text-anchor="middle" font-size="12">KV cache · 刚访问过</text>
+  <text x="665" y="425" text-anchor="middle" font-size="11" fill="#555">无 AEG 后继 → 未来复用 = 0</text>
+
+  <text x="665" y="472" text-anchor="middle" font-size="13">recency 高，但 reuse = 0</text>
+  <rect x="560" y="490" width="210" height="40" rx="8" fill="#c0392b"/>
+  <text x="665" y="516" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">✗ 优先淘汰</text>
+  <line x1="710" y1="210" x2="665" y2="380" stroke="#c0392b" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arR)"/>
+
+  <!-- bottom result -->
+  <text x="450" y="605" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">对比 Bélády 最优仅差 1.31×  ·  远胜 LRU (2.84×) 与 prefix cache (1.86×)</text>
+</svg>

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/downloaded_pdfs/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters",
+  "candidates": [
+    {
+      "id": "page-0-block-13",
+      "page_index": 0,
+      "caption": "GPU cluster scheduling, distributed inference serving, compound AI systems, workflow scheduling, KV cache management, AI agents, LLM serving",
+      "clip": [
+        287.0409912109375,
+        18.0,
+        589.7887817382813,
+        217.20420837402344
+      ],
+      "clip_area": 60308.63394898419,
+      "page_area": 484704.0,
+      "text_density": 0.28720451829374644,
+      "kind": "captioned_figure",
+      "score": 71.23782483514171,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-28",
+      "page_index": 4,
+      "caption": "1 ○ AEG submission and 2 ○ workflow-atomic dispatch trace control flow between layers.",
+      "clip": [
+        42.534759521484375,
+        67.8348388671875,
+        305.3092346191406,
+        373.38134765625
+      ],
+      "clip_area": 80289.82346496731,
+      "page_area": 484704.0,
+      "text_density": 0.13338409543494087,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.68906342351429,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/02-p5-drawing_cluster_with_caption.png",
+      "filename": "02-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-30",
+      "page_index": 4,
+      "caption": "This section describes how SAGA manages KV cache to maximize reuse across agent workflow steps.",
+      "clip": [
+        22.92899932861328,
+        245.680712890625,
+        324.64446411132815,
+        554.480712890625
+      ],
+      "clip_area": 93169.73552490237,
+      "page_area": 484704.0,
+      "text_density": 0.4625140518169568,
+      "kind": "captioned_figure",
+      "score": 20.035219283610026,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-28",
+      "page_index": 4,
+      "caption": "1 ○ AEG submission and 2 ○ workflow-atomic dispatch trace control flow between layers.",
+      "clip": [
+        23.198000335693358,
+        184.7372619628906,
+        324.6463256835938,
+        493.5372619628906
+      ],
+      "clip_area": 93087.24286743166,
+      "page_area": 484704.0,
+      "text_density": 0.40709381657440474,
+      "kind": "captioned_figure",
+      "score": 13.034302698527018,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/04-p5-captioned_figure.png",
+      "filename": "04-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        39.512046813964844,
+        70.22416687011719,
+        308.2076110839844,
+        203.10723876953125
+      ],
+      "clip_area": 35705.09198594664,
+      "page_area": 484704.0,
+      "text_density": 0.1145070807175418,
+      "kind": "drawing_cluster",
+      "score": 12.326298401235789,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/05-p2-drawing_cluster.png",
+      "filename": "05-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-block-5",
+      "page_index": 7,
+      "caption": "We analyze the cache efficiency gap between request-level and workflow-aware schedulers, providing both a motivating observa- tion and formal competitive ratio bounds.",
+      "clip": [
+        22.768000030517577,
+        18.0,
+        326.1595703125,
+        180.45712280273438
+      ],
+      "clip_area": 49288.12159061444,
+      "page_area": 484704.0,
+      "text_density": 0.3376405027955977,
+      "kind": "captioned_figure",
+      "score": 8.089215627715408,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/06-p8-captioned_figure.png",
+      "filename": "06-p8-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-04/assets/figure_candidates/saga-workflow-atomic-scheduling-for-ai-agent-inference-on-gpu-clusters/contact-sheet.svg"
+}
