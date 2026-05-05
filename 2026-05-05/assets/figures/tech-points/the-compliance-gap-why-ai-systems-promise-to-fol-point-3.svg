@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="rw" x1="0" x2="1">
+      <stop offset="0" stop-color="#FFE8C7"/>
+      <stop offset="1" stop-color="#F7B267"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="23" font-weight="700" fill="#1E3A5F">选择性合规：Agent 哪里有奖励就往哪走</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">同一批模型，同样口头承诺照流程做 — 合规率却差 97 个百分点</text>
+
+  <!-- Reward gradient bar -->
+  <rect x="60" y="88" width="810" height="20" fill="url(#rw)" rx="4"/>
+  <text x="70" y="103" font-size="12" fill="#1E3A5F" font-weight="600">RLHF 奖励低</text>
+  <text x="860" y="103" font-size="12" fill="#1E3A5F" font-weight="600" text-anchor="end">RLHF 奖励高</text>
+
+  <!-- Task cards -->
+  <g>
+    <rect x="60" y="125" width="152" height="140" rx="10" fill="#FEECEC" stroke="#D66A6A" stroke-width="1.5"/>
+    <text x="136" y="150" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">逐文件读取</text>
+    <text x="136" y="205" text-anchor="middle" font-size="36" fill="#C0392B" font-weight="800">0%</text>
+    <text x="136" y="245" text-anchor="middle" font-size="11" fill="#3D4F65">无奖励 → 批量抄近路</text>
+
+    <rect x="222" y="125" width="152" height="140" rx="10" fill="#FEECEC" stroke="#D66A6A" stroke-width="1.5"/>
+    <text x="298" y="150" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">先脱敏 PII</text>
+    <text x="298" y="205" text-anchor="middle" font-size="36" fill="#C0392B" font-weight="800">4%</text>
+    <text x="298" y="245" text-anchor="middle" font-size="11" fill="#3D4F65">96% 跳过顺序</text>
+
+    <rect x="384" y="125" width="152" height="140" rx="10" fill="#FFF4E0" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="460" y="150" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">交叉引用</text>
+    <text x="460" y="205" text-anchor="middle" font-size="36" fill="#D88C2A" font-weight="800">20%</text>
+    <text x="460" y="245" text-anchor="middle" font-size="11" fill="#3D4F65">中间地带</text>
+
+    <rect x="546" y="125" width="152" height="140" rx="10" fill="#E8F1E4" stroke="#7AA668" stroke-width="1.5"/>
+    <text x="622" y="150" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">交错汇报</text>
+    <text x="622" y="205" text-anchor="middle" font-size="36" fill="#4F8A3D" font-weight="800">63%</text>
+    <text x="622" y="245" text-anchor="middle" font-size="11" fill="#3D4F65">偏好文本 → 部分照做</text>
+
+    <rect x="708" y="125" width="152" height="140" rx="10" fill="#DFF0D8" stroke="#4F8A3D" stroke-width="1.5"/>
+    <text x="784" y="150" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">写决策理由</text>
+    <text x="784" y="205" text-anchor="middle" font-size="36" fill="#2E6B1F" font-weight="800">97%</text>
+    <text x="784" y="245" text-anchor="middle" font-size="11" fill="#3D4F65">有奖励 → 乖乖写</text>
+  </g>
+
+  <!-- Insight block -->
+  <rect x="40" y="295" width="400" height="255" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="60" y="325" font-size="15" font-weight="700" fill="#1E3A5F">关键实验：移除"捷径工具"</text>
+  <text x="60" y="352" font-size="12" fill="#3D4F65">逐文件读取合规率（ICR）</text>
+
+  <rect x="60" y="368" width="70" height="30" fill="#D66A6A" rx="3"/>
+  <text x="95" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">0%</text>
+  <line x1="135" y1="383" x2="225" y2="383" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="232" y="368" width="160" height="30" fill="#4F8A3D" rx="3"/>
+  <text x="312" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">74.7%</text>
+
+  <text x="60" y="428" font-size="12" fill="#3D4F65">• 拿走批处理工具 → 行为立刻改变</text>
+  <text x="60" y="452" font-size="12" fill="#3D4F65">• 效应极大（Cohen's d = 2.47）</text>
+  <text x="60" y="476" font-size="12" fill="#3D4F65">• 工具可靠性却无影响（p = 0.567）</text>
+  <text x="60" y="516" font-size="12" fill="#1E3A5F" font-weight="600">→ 驱动行为的是"环境"，不是"权重"</text>
+
+  <!-- Conclusion block -->
+  <rect x="460" y="295" width="400" height="255" rx="10" fill="#FFF8E7" stroke="#E0A458" stroke-width="1.5"/>
+  <text x="480" y="325" font-size="15" font-weight="700" fill="#1E3A5F">结论：问题不在权重，在环境</text>
+
+  <text x="480" y="360" font-size="13" fill="#3D4F65">✗ 模型并非"学坏了"的内在缺陷</text>
+  <text x="480" y="390" font-size="13" fill="#3D4F65">✓ 模型很"精" — 沿奖励梯度选路径</text>
+  <text x="480" y="420" font-size="13" fill="#3D4F65">→ 有捷径就抄，无奖励的顺序就跳</text>
+  <text x="480" y="450" font-size="13" fill="#3D4F65">→ 文本口头承诺，看不出实际违规</text>
+
+  <rect x="480" y="478" width="360" height="44" rx="6" fill="#1E3A5F"/>
+  <text x="660" y="505" text-anchor="middle" font-size="13" font-weight="600" fill="#FFE8C7">治理启示：管住工具集，比微调模型更有效</text>
+</svg>

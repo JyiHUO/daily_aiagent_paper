@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E8B57"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">给评测一个"真·最优"的分母</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">凹-模块化覆盖目标 F(X) · 两条独立求解路径必须一致</text>
+
+  <!-- Center: Objective -->
+  <rect x="320" y="95" width="260" height="95" rx="10" fill="#FFF4E0" stroke="#D8A14A" stroke-width="2"/>
+  <text x="450" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">目标函数 F(X)</text>
+  <text x="450" y="148" text-anchor="middle" font-size="13" fill="#3D4F65">Σ wᵣ · min(1, Σ aᵤᵣ xᵤ)</text>
+  <text x="450" y="172" text-anchor="middle" font-size="11" fill="#3D4F65">归一化 · 单调 · 次模（重复覆盖递减）</text>
+
+  <!-- Left solver: Branch and Bound -->
+  <rect x="60" y="240" width="300" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="210" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">① 分组分支定界</text>
+  <text x="210" y="296" text-anchor="middle" font-size="12" fill="#3D4F65">按分组丢弃 / 选某种表示</text>
+  <text x="210" y="316" text-anchor="middle" font-size="12" fill="#3D4F65">用乐观边际剪枝</text>
+  <text x="210" y="354" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">得到 F*</text>
+
+  <!-- Right solver: MILP -->
+  <rect x="540" y="240" width="300" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="690" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">② 独立 MILP 认证</text>
+  <text x="690" y="296" text-anchor="middle" font-size="12" fill="#3D4F65">yᵣ ≤ Σ aᵤᵣ xᵤ,  yᵣ ≤ 1</text>
+  <text x="690" y="316" text-anchor="middle" font-size="12" fill="#3D4F65">线性化凹函数 · 求解器独立</text>
+  <text x="690" y="354" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">得到 F*</text>
+
+  <!-- Arrows from F(X) down to both solvers -->
+  <path d="M380,190 L230,238" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M520,190 L670,238" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Equality check -->
+  <text x="450" y="315" text-anchor="middle" font-size="34" font-weight="700" fill="#2E8B57">=</text>
+  <text x="450" y="340" text-anchor="middle" font-size="11" fill="#3D4F65">1200 条审计全部一致</text>
+
+  <!-- Bottom: benchmark denominator -->
+  <rect x="220" y="430" width="460" height="90" rx="10" fill="#E8F5E9" stroke="#2E8B57" stroke-width="2"/>
+  <text x="450" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">可审计的写入分母</text>
+  <text x="450" y="485" text-anchor="middle" font-size="14" fill="#3D4F65">得分 = F(X) / F*</text>
+  <text x="450" y="507" text-anchor="middle" font-size="11" fill="#3D4F65">Mem0 · A-Mem · Letta 可公平横向比较</text>
+
+  <path d="M260,382 L380,428" stroke="#2E8B57" stroke-width="2" fill="none" marker-end="url(#ahg)"/>
+  <path d="M640,382 L520,428" stroke="#2E8B57" stroke-width="2" fill="none" marker-end="url(#ahg)"/>
+</svg>

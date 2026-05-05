@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">Union 分母：让真实系统写的记忆也成为候选</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">把系统自己写出的 Y 并入 package，再把低分拆成「抽取差」vs「预算选择差」</text>
+
+  <!-- Left: Original candidates -->
+  <g>
+    <rect x="40" y="100" width="210" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="145" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">原候选集 P</text>
+    <text x="145" y="155" text-anchor="middle" font-size="12" fill="#3D4F65">论文给定的候选记忆</text>
+    <text x="145" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">+ 裁定过的覆盖表</text>
+  </g>
+
+  <!-- system output -->
+  <g>
+    <rect x="40" y="250" width="210" height="110" rx="10" fill="#FFF4E6" stroke="#E9A23B" stroke-width="1.5"/>
+    <text x="145" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">系统写出 Y</text>
+    <text x="145" y="305" text-anchor="middle" font-size="12" fill="#3D4F65">Mem0 / A-Mem / Letta</text>
+    <text x="145" y="328" text-anchor="middle" font-size="12" fill="#3D4F65">可能不在 P 里</text>
+  </g>
+
+  <!-- merge arrows -->
+  <path d="M250,175 L390,225" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M250,285 L390,265" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Merged package -->
+  <g>
+    <rect x="390" y="195" width="220" height="100" rx="10" fill="#E6F0FB" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="500" y="225" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">P+(Y) 联合 package</text>
+    <text x="500" y="252" text-anchor="middle" font-size="12" fill="#3D4F65">ρ-union = F(Y) / OPT⁻(B)</text>
+    <text x="500" y="274" text-anchor="middle" font-size="12" fill="#3D4F65">分母公平重建</text>
+  </g>
+
+  <!-- diagnosis split -->
+  <path d="M610,220 L720,145" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M610,270 L720,345" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Upper pruned high -->
+  <g>
+    <rect x="720" y="95" width="140" height="95" rx="10" fill="#E7F6EC" stroke="#3FA96A" stroke-width="1.5"/>
+    <text x="790" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">upper-pruned 高</text>
+    <text x="790" y="148" text-anchor="middle" font-size="11" fill="#3D4F65">抽取到好证据</text>
+    <text x="790" y="168" text-anchor="middle" font-size="11" fill="#3D4F65">但预算没选好</text>
+  </g>
+
+  <!-- Upper pruned low -->
+  <g>
+    <rect x="720" y="305" width="140" height="95" rx="10" fill="#FBE9E9" stroke="#C95757" stroke-width="1.5"/>
+    <text x="790" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">upper-pruned 低</text>
+    <text x="790" y="358" text-anchor="middle" font-size="11" fill="#3D4F65">抽取本身就弱</text>
+    <text x="790" y="378" text-anchor="middle" font-size="11" fill="#3D4F65">或成本超 B</text>
+  </g>
+
+  <!-- Example box -->
+  <g>
+    <rect x="80" y="420" width="720" height="110" rx="10" fill="#F5F0E6" stroke="#B08640" stroke-width="1.2"/>
+    <text x="100" y="448" font-size="14" font-weight="bold" fill="#1E3A5F">例：Natural-87, B=100</text>
+    <text x="100" y="475" font-size="12.5" fill="#3D4F65">• Mem0：upper-pruned = 0.886，salience-pruned = 0.427 → 有好证据，预算感知选择不行</text>
+    <text x="100" y="497" font-size="12.5" fill="#3D4F65">• A-Mem 整笔记：0.000 → 平均最小笔记 1768 词，塞不进 B=100</text>
+    <text x="100" y="519" font-size="12.5" fill="#3D4F65">→ 定位到问题在 admission/cost，而不是 coverage</text>
+  </g>
+</svg>

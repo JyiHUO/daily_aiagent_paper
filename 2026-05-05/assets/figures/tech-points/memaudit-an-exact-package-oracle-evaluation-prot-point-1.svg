@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="argray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9AB0C4"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#FAF7F2"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">MEMAUDIT: 把"写记忆"变成一道有标准答案的题</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">写入层单独考试 · 与检索/阅读解耦</text>
+
+  <!-- Frozen Package -->
+  <rect x="40" y="100" width="300" height="340" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="190" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">❄ Frozen Package (题目包)</text>
+
+  <rect x="60" y="150" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#8FB8E0"/>
+  <text x="70" y="170" font-size="12" font-weight="600" fill="#1E3A5F">经验流</text>
+  <text x="70" y="186" font-size="11" fill="#3D4F65">"我吃素" → "我吃鱼素"</text>
+
+  <rect x="60" y="202" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#8FB8E0"/>
+  <text x="70" y="222" font-size="12" font-weight="600" fill="#1E3A5F">候选记忆表示 + 代价</text>
+  <text x="70" y="238" font-size="11" fill="#3D4F65">span / 旧事实 / 新事实 / tombstone</text>
+
+  <rect x="60" y="254" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#8FB8E0"/>
+  <text x="70" y="274" font-size="12" font-weight="600" fill="#1E3A5F">证据单元 + 需求</text>
+  <text x="70" y="290" font-size="11" fill="#3D4F65">未来查询需要覆盖哪些事实</text>
+
+  <rect x="60" y="306" width="260" height="42" rx="6" fill="#FFFFFF" stroke="#8FB8E0"/>
+  <text x="70" y="326" font-size="12" font-weight="600" fill="#1E3A5F">存储预算 B</text>
+  <text x="70" y="342" font-size="11" fill="#3D4F65">背包 ∩ 每条经验选一种 (拟阵)</text>
+
+  <rect x="60" y="362" width="260" height="60" rx="6" fill="#1E3A5F"/>
+  <text x="190" y="386" text-anchor="middle" font-size="12" font-weight="700" fill="#FFE8B0">✓ 可认证最优解 OPT</text>
+  <text x="190" y="406" text-anchor="middle" font-size="11" fill="#EFF6FF">有限组合优化 → 当分母</text>
+
+  <!-- Write strategies -->
+  <rect x="425" y="110" width="200" height="140" rx="10" fill="#FFF3E0" stroke="#E8A055" stroke-width="2"/>
+  <text x="525" y="134" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">写入策略 (被考者)</text>
+  <text x="525" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">Mem0 · A-Mem · Letta</text>
+  <text x="525" y="192" text-anchor="middle" font-size="11" fill="#8B5A2B">在预算 B 下挑选记忆表示</text>
+  <text x="525" y="222" text-anchor="middle" font-size="11" fill="#8B5A2B">受题目包约束，输出写入方案</text>
+
+  <!-- Arrow: package -> strategy -->
+  <line x1="340" y1="180" x2="423" y2="180" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="381" y="172" text-anchor="middle" font-size="10" fill="#4B8BDA">题目</text>
+
+  <!-- Scoring block -->
+  <rect x="425" y="290" width="200" height="150" rx="10" fill="#E8F5E9" stroke="#5BAA6E" stroke-width="2"/>
+  <text x="525" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">写入时评分</text>
+  <text x="525" y="352" text-anchor="middle" font-size="13" fill="#1E3A5F">你的写入覆盖</text>
+  <line x1="460" y1="364" x2="590" y2="364" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="525" y="384" text-anchor="middle" font-size="13" fill="#1E3A5F">OPT 覆盖 (分母)</text>
+  <text x="525" y="416" text-anchor="middle" font-size="11" fill="#3D4F65">不碰检索 / 不碰阅读</text>
+
+  <!-- Arrow: strategy -> score -->
+  <line x1="525" y1="252" x2="525" y2="288" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Arrow: OPT -> score (denominator feed) -->
+  <path d="M 340 392 C 380 392, 400 365, 423 365" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="382" y="358" text-anchor="middle" font-size="10" fill="#4B8BDA">OPT 当分母</text>
+
+  <!-- Downstream optional -->
+  <line x1="628" y1="365" x2="690" y2="365" stroke="#9AB0C4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#argray)"/>
+
+  <rect x="695" y="310" width="165" height="110" rx="10" fill="#F5F5F5" stroke="#9AB0C4" stroke-dasharray="4,3" stroke-width="1.5"/>
+  <text x="777" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#5A6B7C">可选下游</text>
+  <text x="777" y="360" text-anchor="middle" font-size="12" fill="#5A6B7C">Retriever</text>
+  <text x="777" y="380" text-anchor="middle" font-size="12" fill="#5A6B7C">Reader / QA</text>
+  <text x="777" y="405" text-anchor="middle" font-size="10" fill="#8896A5">(另外单独评)</text>
+
+  <!-- Bottom contrast -->
+  <rect x="40" y="470" width="820" height="80" rx="10" fill="#FFFFFF" stroke="#D6C4A8"/>
+  <text x="60" y="496" font-size="13" font-weight="700" fill="#B04545">过去：</text>
+  <text x="115" y="496" font-size="12" fill="#3D4F65">只看最终 QA 准确率 → 写入 / 检索 / 阅读搅在一起，不知道哪层出错</text>
+  <text x="60" y="528" font-size="13" font-weight="700" fill="#2E7D5B">现在：</text>
+  <text x="115" y="528" font-size="12" fill="#3D4F65">固定 package + 认证最优解 → 写入层可审计、可横向对比、能定位短板</text>
+</svg>

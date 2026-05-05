@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#F7F4EE"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">说了不算，环境说了算</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">每个任务拆成 4 类 checkpoint，由三种 grader 判分</text>
+
+  <!-- Agent -->
+  <rect x="40" y="170" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="130" y="205" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">LLM Agent</text>
+  <text x="130" y="235" text-anchor="middle" font-size="12" fill="#3D4F65">"我已下单 CTA"</text>
+  <text x="130" y="260" text-anchor="middle" font-size="12" fill="#3D4F65">"已写好病历"</text>
+
+  <!-- arrow to checkpoints -->
+  <line x1="220" y1="230" x2="295" y2="230" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Checkpoints column -->
+  <rect x="300" y="100" width="220" height="340" rx="10" fill="#FFF5E6" stroke="#D98E3E" stroke-width="2"/>
+  <text x="410" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Checkpoints (670)</text>
+
+  <rect x="318" y="148" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#D98E3E"/>
+  <text x="410" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">CP1 数据检索</text>
+  <text x="410" y="190" text-anchor="middle" font-size="11" fill="#3D4F65">Data Retrieval</text>
+
+  <rect x="318" y="214" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#D98E3E"/>
+  <text x="410" y="236" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">CP2 临床推理</text>
+  <text x="410" y="256" text-anchor="middle" font-size="11" fill="#3D4F65">CHA2DS2-VASc 等</text>
+
+  <rect x="318" y="280" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#D98E3E"/>
+  <text x="410" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">CP3 动作执行</text>
+  <text x="410" y="322" text-anchor="middle" font-size="11" fill="#3D4F65">下单 / 转诊</text>
+
+  <rect x="318" y="346" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#D98E3E"/>
+  <text x="410" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">CP4 病历文档</text>
+  <text x="410" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">Documentation</text>
+
+  <!-- arrows to graders -->
+  <line x1="520" y1="176" x2="605" y2="176" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="520" y1="308" x2="605" y2="308" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="520" y1="374" x2="605" y2="374" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Graders -->
+  <rect x="610" y="140" width="250" height="72" rx="8" fill="#E8F1FA" stroke="#2E5C8A" stroke-width="2"/>
+  <text x="625" y="165" font-size="13" font-weight="bold" fill="#1E3A5F">Code Grader</text>
+  <text x="625" y="187" font-size="11" fill="#3D4F65">查 FHIR: ServiceRequest</text>
+  <text x="625" y="203" font-size="11" fill="#3D4F65">status = active ?</text>
+
+  <rect x="610" y="272" width="250" height="72" rx="8" fill="#E8F1FA" stroke="#2E5C8A" stroke-width="2"/>
+  <text x="625" y="297" font-size="13" font-weight="bold" fill="#1E3A5F">Hybrid Grader</text>
+  <text x="625" y="319" font-size="11" fill="#3D4F65">EHR 算金标准</text>
+  <text x="625" y="335" font-size="11" fill="#3D4F65">对齐 Agent 输出</text>
+
+  <rect x="610" y="338" width="250" height="72" rx="8" fill="#E8F1FA" stroke="#2E5C8A" stroke-width="2"/>
+  <text x="625" y="363" font-size="13" font-weight="bold" fill="#1E3A5F">LLM-Judge</text>
+  <text x="625" y="385" font-size="11" fill="#3D4F65">按 rubric 判</text>
+  <text x="625" y="401" font-size="11" fill="#3D4F65">pass / partial / fail</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="470" width="820" height="60" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="450" y="495" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">只要任一关键 checkpoint 不过 → 整个任务判 FAIL</text>
+  <text x="450" y="515" text-anchor="middle" font-size="12" fill="#3D4F65">精确定位掉链子的环节：检索？推理？执行？还是写病历？</text>
+</svg>

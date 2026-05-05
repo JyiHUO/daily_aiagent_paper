@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">说得多，做得少：Agent 失败的主因</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">失败 checkpoint 分布：临床推理 50% · 执行 19% · 文档 18% · 检索 12%</text>
+
+  <!-- Left: Agent thinks/writes -->
+  <g>
+    <rect x="50" y="100" width="300" height="175" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="200" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Agent 在笔记里写</text>
+    <rect x="70" y="145" width="260" height="115" rx="6" fill="#FFFFFF" stroke="#BBD3EC"/>
+    <text x="82" y="168" font-size="12" fill="#3D4F65">cardiology-note.txt</text>
+    <text x="82" y="195" font-size="13" fill="#1E3A5F">"启动高强度他汀"</text>
+    <text x="82" y="217" font-size="13" fill="#1E3A5F">"6 周复查肝酶"</text>
+    <text x="82" y="248" font-size="12" fill="#8A6D00">✓ 推理正确 · 方案合理</text>
+  </g>
+
+  <!-- Right: EHR state -->
+  <g>
+    <rect x="550" y="100" width="300" height="175" rx="12" fill="#FFF1F0" stroke="#D9534F" stroke-width="2"/>
+    <text x="700" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#8B1E1E">FHIR EHR 实际状态</text>
+    <rect x="570" y="145" width="260" height="115" rx="6" fill="#FFFFFF" stroke="#F0C0BD"/>
+    <text x="582" y="168" font-size="12" fill="#3D4F65">MedicationRequest:</text>
+    <text x="700" y="210" text-anchor="middle" font-size="22" font-weight="700" fill="#D9534F">∅  未创建</text>
+    <text x="582" y="248" font-size="12" fill="#8B1E1E">✗ 未调用 fhir-medication-request-create</text>
+  </g>
+
+  <!-- Gap arrow -->
+  <line x1="355" y1="200" x2="545" y2="200" stroke="#D9534F" stroke-width="3" stroke-dasharray="8,5" marker-end="url(#arRed)"/>
+  <text x="450" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#D9534F">Output Gap</text>
+  <text x="450" y="222" text-anchor="middle" font-size="12" fill="#8B1E1E">62%–73% 执行失败源于此</text>
+
+  <!-- Bottom: failure breakdown -->
+  <g transform="translate(0,310)">
+    <text x="450" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">失败 Checkpoint 分布</text>
+
+    <!-- Stacked bar -->
+    <g transform="translate(100,40)">
+      <rect x="0" y="0" width="353" height="38" fill="#D9534F"/>
+      <rect x="353" y="0" width="132" height="38" fill="#E8A33D"/>
+      <rect x="485" y="0" width="129" height="38" fill="#4B8BDA"/>
+      <rect x="614" y="0" width="86" height="38" fill="#7FB77E"/>
+
+      <text x="176" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Clinical Reasoning 50.4%</text>
+      <text x="419" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">Exec 18.8%</text>
+      <text x="549" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">Doc 18.4%</text>
+      <text x="657" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">Data 12.4%</text>
+    </g>
+
+    <!-- Key insight boxes -->
+    <g transform="translate(100,105)">
+      <rect x="0" y="0" width="340" height="95" rx="8" fill="#FDF4E6" stroke="#E8A33D" stroke-width="1.5"/>
+      <text x="15" y="25" font-size="13" font-weight="700" fill="#8A5A00">推理失败 · 近一半</text>
+      <text x="15" y="50" font-size="12" fill="#3D4F65">• incomplete reasoning</text>
+      <text x="15" y="72" font-size="12" fill="#3D4F65">• near-miss：漏一个剂量 / 漏一项监测</text>
+    </g>
+
+    <g transform="translate(460,105)">
+      <rect x="0" y="0" width="340" height="95" rx="8" fill="#FFECEA" stroke="#D9534F" stroke-width="1.5"/>
+      <text x="15" y="25" font-size="13" font-weight="700" fill="#8B1E1E">执行失败 · output gap</text>
+      <text x="15" y="50" font-size="12" fill="#3D4F65">• 在笔记里"开了 CT"</text>
+      <text x="15" y="72" font-size="12" fill="#3D4F65">• 却没真正调 FHIR 工具创建订单</text>
+    </g>
+  </g>
+
+  <text x="450" y="545" text-anchor="middle" font-size="12" font-style="italic" fill="#1E3A5F">模型不是不懂医学，而是说得多、做得少 — 需要在工具对齐层专门修复。</text>
+</svg>

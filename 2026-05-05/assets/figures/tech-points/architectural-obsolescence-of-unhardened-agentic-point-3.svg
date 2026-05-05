@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">真实 CLI 在体实测：不是 mock，是它自己的判决</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">spawn `node openclaw.mjs message send --dry-run --json` · 1600 样本 · 10 个 LLM 生成路径</text>
+
+  <!-- Input -->
+  <rect x="40" y="170" width="220" height="140" rx="10" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="150" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">攻击样本</text>
+  <text x="150" y="225" text-anchor="middle" font-size="12" fill="#3D4F65">sk-... 伪装成 "recovery context"</text>
+  <text x="150" y="262" text-anchor="middle" font-size="12" fill="#8A6A3D">100 legit + 100 adv</text>
+  <text x="150" y="282" text-anchor="middle" font-size="12" fill="#8A6A3D">× 4 类 × 2 通道 = 1600</text>
+
+  <!-- Split arrows -->
+  <line x1="260" y1="220" x2="330" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="260" y1="260" x2="330" y2="410" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- OpenClaw branch -->
+  <rect x="335" y="170" width="240" height="130" rx="10" fill="#FDECEC" stroke="#C8553D" stroke-width="2"/>
+  <text x="455" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">OpenClaw (无加固)</text>
+  <text x="455" y="228" text-anchor="middle" font-size="12" fill="#3D4F65">payload 原样推送 → Discord/TG</text>
+  <rect x="360" y="250" width="190" height="34" rx="6" fill="#C8553D"/>
+  <text x="455" y="273" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Recall = 0.000</text>
+
+  <!-- enclawed branch -->
+  <rect x="335" y="360" width="240" height="130" rx="10" fill="#E8F3EC" stroke="#3D8A5F" stroke-width="2"/>
+  <text x="455" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">enclawed-oss</text>
+  <text x="455" y="418" text-anchor="middle" font-size="12" fill="#3D4F65">DLP 触发 · payload 不落盘</text>
+  <rect x="360" y="440" width="190" height="34" rx="6" fill="#3D8A5F"/>
+  <text x="455" y="463" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Recall = 1.000</text>
+
+  <!-- Verdict arrows -->
+  <line x1="575" y1="235" x2="665" y2="280" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="575" y1="425" x2="665" y2="320" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="665" y="240" width="200" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="765" y="268" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">JSON envelope</text>
+  <text x="765" y="288" text-anchor="middle" font-size="12" fill="#3D4F65">= 它自己的 verdict</text>
+  <line x1="685" y1="302" x2="845" y2="302" stroke="#B8C8D8"/>
+  <text x="765" y="325" text-anchor="middle" font-size="12" fill="#3D4F65">扩至 80k · Wilson 上界</text>
+  <text x="765" y="352" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">≤ 3.84e-4</text>
+
+  <!-- Bottom note -->
+  <rect x="40" y="500" width="820" height="44" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="520" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">不是 shim、不是 mock — 只在最后一跳 --dry-run 拦截</text>
+  <text x="450" y="537" text-anchor="middle" font-size="11" fill="#3D4F65">模板分布 &amp; 10 个 LLM 生成分布上，enclawed 稳定 1.000；OpenClaw 稳定 0.000</text>
+</svg>

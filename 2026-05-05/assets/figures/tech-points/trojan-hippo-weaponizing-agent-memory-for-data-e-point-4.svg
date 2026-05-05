@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C0504D"/>
+      <stop offset="100%" stop-color="#6FB56F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">记忆投毒的三道防线与安全-效用权衡</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">越靠后越安全，但也越容易挡掉正常任务</text>
+
+  <!-- Stage 1: Write -->
+  <rect x="60" y="100" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="170" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">① 写入记忆</text>
+  <text x="170" y="158" text-anchor="middle" font-size="12" fill="#3D4F65">只存用户原话</text>
+  <text x="170" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">读过不可信工具的会话</text>
+  <text x="170" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">禁写记忆</text>
+
+  <!-- Stage 2: Retrieve -->
+  <rect x="340" y="100" width="220" height="120" rx="10" fill="#FFF6E6" stroke="#E0A75E" stroke-width="2"/>
+  <text x="450" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">② 检索记忆</text>
+  <text x="450" y="168" text-anchor="middle" font-size="12" fill="#3D4F65">限制条目长度</text>
+  <text x="450" y="190" text-anchor="middle" font-size="12" fill="#3D4F65">削掉隐藏指令</text>
+
+  <!-- Stage 3: Send -->
+  <rect x="620" y="100" width="220" height="120" rx="10" fill="#FDECEC" stroke="#C0504D" stroke-width="2"/>
+  <text x="730" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">③ 对外发送</text>
+  <text x="730" y="158" text-anchor="middle" font-size="12" fill="#3D4F65">IFC 信息流控制</text>
+  <text x="730" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">读过污点源的会话</text>
+  <text x="730" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">禁用 send 类工具</text>
+
+  <!-- arrows between stages -->
+  <line x1="280" y1="160" x2="335" y2="160" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="560" y1="160" x2="615" y2="160" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ASR bar -->
+  <text x="60" y="262" font-size="13" font-weight="bold" fill="#1E3A5F">攻击成功率 ASR</text>
+  <rect x="60" y="274" width="780" height="22" fill="url(#g1)" stroke="#888" stroke-width="1"/>
+  <text x="70" y="290" font-size="11" fill="#fff" font-weight="bold">无防御：高</text>
+  <text x="830" y="290" font-size="11" fill="#fff" font-weight="bold" text-anchor="end">IFC：0%</text>
+
+  <!-- Trade-off lower panel -->
+  <text x="450" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">效用代价因用户而异</text>
+
+  <!-- User A: reader -->
+  <rect x="90" y="355" width="330" height="210" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="255" y="382" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">用户A：只读邮件</text>
+  <text x="255" y="408" text-anchor="middle" font-size="12" fill="#3D4F65">典型任务：读收件箱 → 总结给我</text>
+  <line x1="110" y1="425" x2="400" y2="425" stroke="#D0D7E2"/>
+  <text x="255" y="452" text-anchor="middle" font-size="12" fill="#3D4F65">IFC 防御效果</text>
+  <text x="255" y="490" text-anchor="middle" font-size="22" font-weight="bold" fill="#2F7D32">几乎无影响</text>
+  <text x="255" y="535" text-anchor="middle" font-size="12" fill="#3D4F65">安全 100% · 效用保留</text>
+
+  <!-- User B: writer -->
+  <rect x="480" y="355" width="330" height="210" rx="10" fill="#FDECEC" stroke="#C0504D" stroke-width="2"/>
+  <text x="645" y="382" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">用户B：代写回复</text>
+  <text x="645" y="408" text-anchor="middle" font-size="12" fill="#3D4F65">典型任务：读收件箱 → 替我回信</text>
+  <line x1="500" y1="425" x2="790" y2="425" stroke="#E6C9C9"/>
+  <text x="645" y="452" text-anchor="middle" font-size="12" fill="#3D4F65">IFC 防御效果</text>
+  <text x="645" y="490" text-anchor="middle" font-size="22" font-weight="bold" fill="#C0504D">send 被拦</text>
+  <text x="645" y="535" text-anchor="middle" font-size="12" fill="#3D4F65">核心任务断流 · 需手动介入</text>
+
+  <!-- takeaway -->
+  <text x="450" y="600" text-anchor="middle" font-size="13" font-style="italic" fill="#1E3A5F">启示：按用户 flow 分布组合防御，而非追求单一聚合分数</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#F7F5F0"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">
+    7 项运行时原语：缺一个，整条防线就断
+  </text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#3D4F65">
+    安全不是调参，而是架构原语是否到位
+  </text>
+
+  <!-- LEFT: OpenClaw -->
+  <rect x="40" y="100" width="370" height="430" rx="12" fill="#FDECEC" stroke="#C86B6B" stroke-width="2"/>
+  <text x="225" y="130" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">OpenClaw（无加固）</text>
+  <text x="225" y="150" text-anchor="middle" font-size="12" fill="#3D4F65">14,419 源文件 tree-walk：7 项全零命中</text>
+
+  <g font-size="13" fill="#1E3A5F">
+    <rect x="65" y="170" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="191">✗ 双射 checker</text>
+    <rect x="65" y="210" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="231">✗ 哈希链审计日志</text>
+    <rect x="65" y="250" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="271">✗ Admission gate</text>
+    <rect x="65" y="290" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="311">✗ 两层 egress guard</text>
+    <rect x="65" y="330" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="351">✗ Bell-LaPadula 分级</text>
+    <rect x="65" y="370" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="391">✗ 模块签名信任根</text>
+    <rect x="65" y="410" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#C86B6B"/>
+    <text x="80" y="431">✗ Bootstrap seal</text>
+  </g>
+
+  <rect x="65" y="455" width="320" height="60" rx="6" fill="#C86B6B"/>
+  <text x="225" y="478" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">F1/F2/F3/F4 召回率 = 0.000</text>
+  <text x="225" y="500" text-anchor="middle" font-size="11" fill="#FFFFFF">加 6 行 DLP 正则：无 gate/log 可落地</text>
+
+  <!-- Arrow -->
+  <line x1="415" y1="315" x2="485" y2="315" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="450" y="305" text-anchor="middle" font-size="11" fill="#1E3A5F">重构</text>
+
+  <!-- RIGHT: enclawed-oss -->
+  <rect x="490" y="100" width="370" height="430" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="675" y="130" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">enclawed-oss（加固替代）</text>
+  <text x="675" y="150" text-anchor="middle" font-size="12" fill="#3D4F65">全量具备 7 项原语，MIT 许可 drop-in</text>
+
+  <g font-size="13" fill="#1E3A5F">
+    <rect x="515" y="170" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="191">✓ 双射 checker</text>
+    <rect x="515" y="210" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="231">✓ 哈希链审计日志</text>
+    <rect x="515" y="250" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="271">✓ Admission gate</text>
+    <rect x="515" y="290" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="311">✓ 两层 egress guard</text>
+    <rect x="515" y="330" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="351">✓ Bell-LaPadula 分级</text>
+    <rect x="515" y="370" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="391">✓ 模块签名信任根</text>
+    <rect x="515" y="410" width="320" height="32" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="530" y="431">✓ Bootstrap seal</text>
+  </g>
+
+  <rect x="515" y="455" width="320" height="60" rx="6" fill="#4B8BDA"/>
+  <text x="675" y="478" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">同样 6 行规则 → F3 TP +14.6%</text>
+  <text x="675" y="500" text-anchor="middle" font-size="11" fill="#FFFFFF">precision 不变，4 个 Ollama LLM 验证</text>
+</svg>

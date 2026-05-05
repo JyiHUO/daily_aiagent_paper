@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFE"/>
+      <stop offset="1" stop-color="#EAF1FA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">12 个模型全面落后：最强也只有 46%</text>
+  <text x="450" y="72" text-anchor="middle" font-size="14" fill="#3D4F65">PhysicianBench · 100 个真实 EHR 工作流任务 · pass@1</text>
+
+  <!-- Left: Bar chart -->
+  <g transform="translate(60,110)">
+    <rect x="0" y="0" width="470" height="430" rx="12" fill="#FFFFFF" stroke="#CBD9EA"/>
+    <text x="20" y="30" font-size="15" font-weight="700" fill="#1E3A5F">pass@1 排行</text>
+
+    <!-- baseline -->
+    <line x1="140" y1="380" x2="140" y2="60" stroke="#CBD9EA"/>
+    <line x1="420" y1="60" x2="420" y2="380" stroke="#E4ECF6" stroke-dasharray="3,3"/>
+    <text x="140" y="395" font-size="10" fill="#7A8AA0" text-anchor="middle">0%</text>
+    <text x="420" y="395" font-size="10" fill="#7A8AA0" text-anchor="middle">100%</text>
+
+    <!-- GPT-5.5 46.3% -->
+    <text x="30" y="80" font-size="13" fill="#1E3A5F" font-weight="600">GPT-5.5</text>
+    <rect x="140" y="66" width="186" height="22" rx="4" fill="#4B8BDA"/>
+    <text x="334" y="82" font-size="13" fill="#1E3A5F" font-weight="700">46.3%</text>
+
+    <!-- Claude Opus 4.6 31.7% -->
+    <text x="30" y="135" font-size="13" fill="#1E3A5F" font-weight="600">Claude Opus 4.6</text>
+    <rect x="140" y="121" width="127" height="22" rx="4" fill="#7BA9DC"/>
+    <text x="275" y="137" font-size="13" fill="#1E3A5F" font-weight="700">31.7%</text>
+
+    <!-- Claude Opus 4.7 29.3% -->
+    <text x="30" y="190" font-size="13" fill="#1E3A5F" font-weight="600">Claude Opus 4.7</text>
+    <rect x="140" y="176" width="117" height="22" rx="4" fill="#7BA9DC"/>
+    <text x="265" y="192" font-size="13" fill="#1E3A5F" font-weight="700">29.3%</text>
+
+    <!-- DeepSeek V4-Pro 18.7% -->
+    <text x="30" y="245" font-size="13" fill="#1E3A5F" font-weight="600">DeepSeek V4-Pro</text>
+    <rect x="140" y="231" width="75" height="22" rx="4" fill="#B8C9DC"/>
+    <text x="223" y="247" font-size="13" fill="#1E3A5F" font-weight="700">18.7% (开源最强)</text>
+
+    <!-- others -->
+    <text x="30" y="305" font-size="13" fill="#8696AA">其余 8 个模型</text>
+    <rect x="140" y="291" width="40" height="18" rx="4" fill="#D8E1EC"/>
+    <rect x="140" y="314" width="32" height="18" rx="4" fill="#D8E1EC"/>
+    <rect x="140" y="337" width="26" height="18" rx="4" fill="#D8E1EC"/>
+    <text x="195" y="328" font-size="11" fill="#8696AA">更低</text>
+
+    <text x="235" y="415" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">最强模型距离“能用”也还很远</text>
+  </g>
+
+  <!-- Right side: two cards -->
+  <g transform="translate(560,110)">
+
+    <!-- Card 1: Stability -->
+    <rect x="0" y="0" width="290" height="200" rx="12" fill="#FFF6EC" stroke="#E8C79A"/>
+    <text x="20" y="32" font-size="15" font-weight="700" fill="#1E3A5F">稳定性很差</text>
+    <text x="20" y="56" font-size="12" fill="#3D4F65">同一任务独立跑 3 次</text>
+
+    <g transform="translate(20,75)">
+      <circle cx="15" cy="15" r="14" fill="#4B8BDA"/>
+      <text x="15" y="20" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">✓</text>
+      <circle cx="55" cy="15" r="14" fill="#4B8BDA"/>
+      <text x="55" y="20" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">✓</text>
+      <circle cx="95" cy="15" r="14" fill="#D86A6A"/>
+      <text x="95" y="20" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">✗</text>
+      <text x="125" y="20" font-size="12" fill="#3D4F65">不可复现</text>
+    </g>
+
+    <text x="20" y="140" font-size="12" fill="#3D4F65">三次全过的任务仅：</text>
+    <text x="20" y="180" font-size="34" font-weight="800" fill="#D86A6A">28%</text>
+    <text x="115" y="180" font-size="12" fill="#8696AA">pass^3 (GPT-5.5)</text>
+
+    <!-- Card 2: Treatment Planning hardest -->
+    <rect x="0" y="220" width="290" height="150" rx="12" fill="#EFF6FF" stroke="#A8C6E6"/>
+    <text x="20" y="252" font-size="15" font-weight="700" fill="#1E3A5F">最难子任务</text>
+    <text x="20" y="278" font-size="13" fill="#3D4F65">Treatment Planning</text>
+
+    <rect x="20" y="295" width="250" height="16" rx="3" fill="#E4ECF6"/>
+    <rect x="20" y="295" width="59" height="16" rx="3" fill="#D86A6A"/>
+    <text x="275" y="308" text-anchor="end" font-size="13" font-weight="700" fill="#1E3A5F">23.5%</text>
+    <text x="20" y="338" font-size="11" fill="#8696AA">次强模型在“开医嘱”上几乎崩盘</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <g transform="translate(60,550)">
+    <rect x="0" y="0" width="790" height="36" rx="8" fill="#1E3A5F"/>
+    <text x="395" y="24" text-anchor="middle" font-size="14" font-weight="600" fill="#FFFFFF">结论：当前 LLM Agent 还无法可靠地跑完一条真实临床工作流</text>
+  </g>
+</svg>

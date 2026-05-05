@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrLoop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8944A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">医生参与的任务构造流水线</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">像 GitHub PR 一样审题：医生提意见 → Agent 生成 diff → 医生逐条批准</text>
+
+  <!-- Module 1: Doctor review -->
+  <rect x="40" y="110" width="200" height="130" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">① 医生初审</text>
+  <text x="140" y="170" text-anchor="middle" font-size="12" fill="#3D4F65">自然语言意见</text>
+  <text x="140" y="200" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">"eGFR 阈值要区分</text>
+  <text x="140" y="216" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">肌酐与 cystatin C"</text>
+
+  <!-- Module 2: LLM Agent diff -->
+  <rect x="340" y="110" width="220" height="130" rx="12" fill="#FDF1E4" stroke="#E8944A" stroke-width="2"/>
+  <text x="450" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">② LLM Agent 生成 diff</text>
+  <text x="450" y="168" text-anchor="middle" font-size="12" fill="#3D4F65">把意见翻译成结构化改动</text>
+  <line x1="360" y1="180" x2="540" y2="180" stroke="#E8944A" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="450" y="200" text-anchor="middle" font-size="11" fill="#8B4513">~ instruction / FHIR / rubric</text>
+  <text x="450" y="222" text-anchor="middle" font-size="11" fill="#8B4513">三处联动修改</text>
+
+  <!-- Module 3: Doctor approve in diff UI -->
+  <rect x="660" y="110" width="200" height="130" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="760" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">③ 医生逐条审核</text>
+  <text x="760" y="165" text-anchor="middle" font-size="12" fill="#3D4F65">diff 界面 approve/reject</text>
+  <g transform="translate(690,185)">
+    <rect width="140" height="18" fill="#D4F0D4" stroke="#4CAF50"/>
+    <text x="8" y="13" font-size="11" fill="#2E7D32">✓ approve</text>
+    <rect y="22" width="140" height="18" fill="#D4F0D4" stroke="#4CAF50"/>
+    <text x="8" y="35" font-size="11" fill="#2E7D32">✓ approve</text>
+  </g>
+
+  <!-- Forward arrows -->
+  <line x1="240" y1="175" x2="335" y2="175" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="560" y1="175" x2="655" y2="175" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Loop back arrow: from ③ back to ② when rejected -->
+  <path d="M 760 240 Q 760 310 450 310 Q 340 310 340 245" fill="none" stroke="#E8944A" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrLoop)"/>
+  <rect x="510" y="292" width="170" height="26" rx="6" fill="#FDF1E4" stroke="#E8944A"/>
+  <text x="595" y="310" text-anchor="middle" font-size="12" fill="#8B4513">未通过 → 回到 Agent 迭代</text>
+
+  <!-- Finalized output -->
+  <rect x="240" y="410" width="420" height="130" rx="12" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="450" y="440" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">✓ Finalized Task</text>
+  <g font-size="12" fill="#3D4F65">
+    <text x="275" y="470">• 自然语言 instruction</text>
+    <text x="275" y="492">• FHIR 病历</text>
+    <text x="500" y="470">• 评估测试套件</text>
+    <text x="500" y="492">• 审核 checklist</text>
+  </g>
+  <text x="450" y="522" text-anchor="middle" font-size="11" fill="#2E7D32">11 位医生 · 三阶段全批准后发布</text>
+
+  <!-- Arrow from ③ down to finalized -->
+  <line x1="760" y1="240" x2="760" y2="380" stroke="#4B8BDA" stroke-width="2.5"/>
+  <path d="M 760 380 Q 760 405 660 470" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+</svg>

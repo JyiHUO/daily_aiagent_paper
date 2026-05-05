@@ -1,0 +1,21 @@
+# 中间产物
+raw_papers.json
+ad_candidates.json
+ai_agent_screening.json
+selected_papers.json
+paper_reading_notes.json
+daily_brief.json
+notification_summary_translations.json
+delivery_status.json
+
+# 图片候选中间产物
+assets/figure_candidates/
+
+# PDF 缓存
+downloaded_pdfs/
+
+# 调试文件
+assets/debug/
+
+# OS
+.DS_Store

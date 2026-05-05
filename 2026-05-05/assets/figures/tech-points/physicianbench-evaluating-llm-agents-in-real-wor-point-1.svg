@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="520" fill="#F7FAFD"/>
+
+  <text x="410" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">
+    把 Agent 放进真实 EHR 沙箱，像住院医一样工作
+  </text>
+  <text x="410" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">
+    平均 27 次工具调用 · 14 个 FHIR 工具 · Docker 独立环境
+  </text>
+
+  <!-- Agent -->
+  <rect x="40" y="180" width="170" height="150" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="125" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">LLM Agent</text>
+  <text x="125" y="240" text-anchor="middle" font-size="12" fill="#3D4F65">扮演住院医</text>
+  <circle cx="125" cy="285" r="22" fill="#4B8BDA"/>
+  <text x="125" y="292" text-anchor="middle" font-size="18" fill="#FFFFFF">Dr.</text>
+
+  <!-- 14 FHIR Tools -->
+  <rect x="290" y="140" width="230" height="230" rx="12" fill="#FFF3E6" stroke="#E8A76B" stroke-width="2"/>
+  <text x="405" y="168" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">14 个结构化 FHIR 工具</text>
+
+  <rect x="305" y="185" width="200" height="30" rx="5" fill="#FFFFFF" stroke="#E8A76B"/>
+  <text x="405" y="205" text-anchor="middle" font-size="12" fill="#3D4F65">GET  Observation / Condition</text>
+
+  <rect x="305" y="222" width="200" height="30" rx="5" fill="#FFFFFF" stroke="#E8A76B"/>
+  <text x="405" y="242" text-anchor="middle" font-size="12" fill="#3D4F65">GET  DocumentReference</text>
+
+  <rect x="305" y="259" width="200" height="30" rx="5" fill="#FFFFFF" stroke="#E8A76B"/>
+  <text x="405" y="279" text-anchor="middle" font-size="12" fill="#3D4F65">POST ServiceRequest (开单)</text>
+
+  <rect x="305" y="296" width="200" height="30" rx="5" fill="#FFFFFF" stroke="#E8A76B"/>
+  <text x="405" y="316" text-anchor="middle" font-size="12" fill="#3D4F65">POST MedicationRequest</text>
+
+  <rect x="305" y="333" width="200" height="30" rx="5" fill="#FFFFFF" stroke="#E8A76B"/>
+  <text x="405" y="353" text-anchor="middle" font-size="12" fill="#3D4F65">write-file  (评估笔记)</text>
+
+  <!-- EHR sandbox -->
+  <rect x="600" y="180" width="180" height="150" rx="12" fill="#E8F0E4" stroke="#6BA368" stroke-width="2"/>
+  <text x="690" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">HAPI FHIR 沙箱</text>
+  <text x="690" y="232" text-anchor="middle" font-size="12" fill="#3D4F65">真实 STARR 去标识病历</text>
+  <text x="690" y="252" text-anchor="middle" font-size="12" fill="#3D4F65">Docker 独立容器</text>
+  <rect x="625" y="268" width="130" height="46" rx="6" fill="#FFFFFF" stroke="#6BA368"/>
+  <text x="690" y="286" text-anchor="middle" font-size="11" fill="#3D4F65">评分 = 直接检查</text>
+  <text x="690" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">EHR 状态变化</text>
+
+  <!-- Arrows -->
+  <line x1="212" y1="240" x2="287" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="250" y="232" text-anchor="middle" font-size="11" fill="#1E3A5F">调用</text>
+
+  <line x1="522" y1="255" x2="597" y2="255" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="560" y="247" text-anchor="middle" font-size="11" fill="#1E3A5F">查 / 写</text>
+
+  <line x1="600" y1="275" x2="525" y2="275" stroke="#4B8BDA" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="560" y="294" text-anchor="middle" font-size="11" fill="#1E3A5F">返回结果</text>
+
+  <!-- Example strip -->
+  <rect x="40" y="410" width="740" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="60" y="435" font-size="13" font-weight="700" fill="#1E3A5F">示例 · 心脏科</text>
+  <text x="60" y="458" font-size="12" fill="#3D4F65">① 查肌酐/eGFR → ② 读心超报告: 主动脉根 4.2 cm → ③ 下 CTA 胸部 + 血管外科转诊</text>
+  <text x="60" y="478" font-size="12" fill="#3D4F65">④ 写评估笔记  （整个链条落到真实 EHR，不是口头回答）</text>
+</svg>

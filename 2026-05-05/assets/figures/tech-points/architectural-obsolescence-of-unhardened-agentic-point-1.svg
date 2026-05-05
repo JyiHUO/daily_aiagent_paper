@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#F7FAFC"/>
+
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#D98A3D"/>
+    </marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1E3A5F">世界做了什么  =  账本记了什么 ?</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#3D4F65">按 (capability, target) 做集合 diff，结构不等即定位失效类型</text>
+
+  <!-- D module -->
+  <rect x="60" y="95" width="300" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="210" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">D : 世界的改动（实际执行）</text>
+  <text x="210" y="158" text-anchor="middle" font-size="13" fill="#1E3A5F">{ (publish, channelB) }</text>
+  <text x="210" y="188" text-anchor="middle" font-size="11" fill="#3D4F65">corpus-delta 多重集</text>
+
+  <!-- S module -->
+  <rect x="540" y="95" width="300" height="120" rx="10" fill="#FEF3E7" stroke="#D98A3D" stroke-width="2"/>
+  <text x="690" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">S : 哈希链审计（日志声称）</text>
+  <text x="690" y="158" text-anchor="middle" font-size="13" fill="#1E3A5F">{ (publish, channelA) }</text>
+  <text x="690" y="188" text-anchor="middle" font-size="11" fill="#3D4F65">ok=true 的 executed 投影</text>
+
+  <!-- Arrows into comparator -->
+  <line x1="270" y1="215" x2="405" y2="285" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ah)"/>
+  <line x1="630" y1="215" x2="495" y2="285" stroke="#D98A3D" stroke-width="2.5" marker-end="url(#ao)"/>
+
+  <!-- Comparator -->
+  <polygon points="450,255 525,310 450,365 375,310" fill="#1E3A5F"/>
+  <text x="450" y="308" text-anchor="middle" font-size="19" font-weight="bold" fill="#FFFFFF">diff</text>
+  <text x="450" y="330" text-anchor="middle" font-size="11" fill="#EFF6FF">D  vs  S</text>
+
+  <!-- Verdict branches (clean fan-out from comparator bottom) -->
+  <path d="M450,365 L140,425" stroke="#1E3A5F" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M450,365 L350,425" stroke="#1E3A5F" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M450,365 L560,425" stroke="#1E3A5F" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M450,365 L765,425" stroke="#1E3A5F" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- F1/F3 -->
+  <rect x="50" y="430" width="180" height="90" rx="8" fill="#FFE8E8" stroke="#C94F4F" stroke-width="2"/>
+  <text x="140" y="456" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">F1 / F3   (D ⊋ S)</text>
+  <text x="140" y="485" text-anchor="middle" font-size="11" fill="#3D4F65">做了但账本缺</text>
+  <text x="140" y="503" text-anchor="middle" font-size="11" fill="#3D4F65">绕过门 / 静默失败</text>
+
+  <!-- F2 -->
+  <rect x="260" y="430" width="180" height="90" rx="8" fill="#FFF0D9" stroke="#D98A3D" stroke-width="2"/>
+  <text x="350" y="456" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">F2   (S ⊋ D)</text>
+  <text x="350" y="485" text-anchor="middle" font-size="11" fill="#3D4F65">账本有、世界无</text>
+  <text x="350" y="503" text-anchor="middle" font-size="11" fill="#3D4F65">伪造审计</text>
+
+  <!-- F4 -->
+  <rect x="470" y="430" width="180" height="90" rx="8" fill="#E8EFFF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="560" y="456" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">F4   (互不包含)</text>
+  <text x="560" y="485" text-anchor="middle" font-size="11" fill="#3D4F65">打错目标</text>
+  <text x="560" y="503" text-anchor="middle" font-size="11" fill="#3D4F65">channelB ≠ channelA</text>
+
+  <!-- OK -->
+  <rect x="680" y="430" width="170" height="90" rx="8" fill="#E3F4E3" stroke="#5AA85A" stroke-width="2"/>
+  <text x="765" y="456" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">✓  D = S</text>
+  <text x="765" y="485" text-anchor="middle" font-size="11" fill="#3D4F65">双射一致</text>
+  <text x="765" y="503" text-anchor="middle" font-size="11" fill="#3D4F65">系统健康</text>
+</svg>

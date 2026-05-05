@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0505：记忆木马、EHR实测46%、写入层独立审计",
+  "shownotes_html": "<p>一封邮件埋进 Agent 记忆，100 次正常对话后仍能让它主动外泄你的年收入——成功率最高 100%。今天三篇重点论文分别打在安全、评测、记忆三条线上，共同指向一个判断：Agent 栈正在被拆层、被红队、被真实环境逐项拷问。</p><p><strong>本期重点</strong></p><ul><li><strong>记忆木马攻击（Trojan Hippo: Weaponizing Agent Memory for Data Exfiltration）</strong>——首次系统评估 Agent 长期记忆的休眠式数据外泄攻击，覆盖四种主流记忆后端（滑窗/RAG/Mem0/显式列表），在前沿对齐模型上 ASR 高达 100%，并给出从信息流控制到限长写入的四类防御方案与能力权衡曲线。做带记忆 Agent 的团队必读。</li><li><strong>真实电子病历评测（PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments）</strong>——首个把 Agent 放进真实 FHIR EHR 沙箱、以长程临床工作流（平均 27 步工具调用）为目标的 benchmark。判分不看 Agent 怎么说，直接查后端状态变化。GPT-5.5 也只有 46% pass@1，三次一致率仅 28%，暴露\"说到做到\"仍是硬伤。</li><li><strong>记忆写入层独立审计（MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing）</strong>——把 Agent 记忆写入单独定义为有预算约束的组合优化问题，用双重精确求解器给出可认证最优解当分母，首次横向比较 Mem0/A-Mem/Letta 并精确定位\"抽取差\"还是\"选择差\"。</li></ul><p><strong>今日趋势</strong></p><ol><li>Agent 安全焦点从 prompt 对齐下沉到运行时与记忆层：记忆投毒、响应路径中继、零信任工具授权同时出现，业界开始把 Agent 当长运行进程做系统级防御。</li><li>评测集体抛弃 LLM-judge 总分，改用可执行验证与真实长程任务判分，前沿模型 pass 率只有 40–55%，\"说到做到\"正成为新一级评测指标。</li></ol><p>如果你正在做 Agent 产品，今天可以带走一个行动建议：把记忆层、运行时、工具调用当作独立子系统，分别建评测、定 SLA、做红队——别再只看最终答案对不对了。</p><p><em>本期内容由 AI 自动生成，欢迎在评论区留言交流、指正。</em></p>",
+  "report_date": "2026-05-05",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-05T17:28:55Z"
+}

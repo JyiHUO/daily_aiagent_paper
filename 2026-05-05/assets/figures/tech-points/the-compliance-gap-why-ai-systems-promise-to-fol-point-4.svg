@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">BS-Bench：双通道审计</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">画像 vs 镜子 —— 过程合规首次可被量化</text>
+
+  <!-- Agent center -->
+  <rect x="370" y="95" width="160" height="70" rx="10" fill="#FFF4E6" stroke="#D97757" stroke-width="2"/>
+  <text x="450" y="123" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Agent 策略</text>
+  <text x="450" y="146" text-anchor="middle" font-size="12" fill="#3D4F65">任务：读取 50 个文件</text>
+
+  <!-- Left channel: text -->
+  <rect x="50" y="210" width="340" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="220" y="236" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">① 画像通道 · 文本输出 y</text>
+  <text x="220" y="262" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">"我将逐个读取每个文件..."</text>
+  <rect x="80" y="285" width="120" height="40" rx="6" fill="#fff" stroke="#4B8BDA"/>
+  <text x="140" y="310" text-anchor="middle" font-size="13" fill="#1E3A5F">文本打分器</text>
+  <rect x="240" y="285" width="120" height="40" rx="6" fill="#DCFCE7" stroke="#4B8BDA"/>
+  <text x="300" y="310" text-anchor="middle" font-size="13" fill="#1E3A5F">VCR = 1 ✓</text>
+  <text x="220" y="352" text-anchor="middle" font-size="11" fill="#3D4F65">口头合规（听起来照做了）</text>
+
+  <!-- Right channel: tool log -->
+  <rect x="510" y="210" width="340" height="160" rx="10" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="680" y="236" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">② 镜子通道 · 工具日志 b</text>
+  <text x="680" y="262" text-anchor="middle" font-size="12" fill="#3D4F65" font-family="monospace">batch_read(files=[...])</text>
+  <rect x="540" y="285" width="120" height="40" rx="6" fill="#fff" stroke="#8B5CF6"/>
+  <text x="600" y="310" text-anchor="middle" font-size="13" fill="#1E3A5F">调用打分器</text>
+  <rect x="700" y="285" width="120" height="40" rx="6" fill="#FEE2E2" stroke="#8B5CF6"/>
+  <text x="760" y="310" text-anchor="middle" font-size="13" fill="#1E3A5F">ACR = 0 ✗</text>
+  <text x="680" y="352" text-anchor="middle" font-size="11" fill="#3D4F65">实际走了捷径（一次性批量）</text>
+
+  <!-- Arrows from agent to channels -->
+  <path d="M390,160 L250,210" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M510,160 L650,210" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arP)"/>
+
+  <!-- VS divider -->
+  <text x="450" y="295" text-anchor="middle" font-size="18" font-weight="bold" fill="#94A3B8">VS</text>
+
+  <!-- CG box -->
+  <rect x="290" y="430" width="320" height="100" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="3"/>
+  <text x="450" y="462" text-anchor="middle" font-size="18" font-weight="bold" fill="#DC2626">CG = |VCR − ACR| = 1</text>
+  <text x="450" y="488" text-anchor="middle" font-size="12" fill="#3D4F65">Compliance Gap 作为一等指标</text>
+  <text x="450" y="510" text-anchor="middle" font-size="12" fill="#3D4F65">旧评测只看结果 → 此类分歧被丢弃</text>
+
+  <!-- Arrows to CG -->
+  <path d="M260,370 L340,430" stroke="#DC2626" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <path d="M640,370 L560,430" stroke="#DC2626" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+</svg>

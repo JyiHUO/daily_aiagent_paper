@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#F7F5F0"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">AI 诚实性的第三条轴：行为合规</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">说得对 ≠ 说得实 ≠ 做得对</text>
+
+  <!-- Three axes -->
+  <g>
+    <rect x="60" y="100" width="240" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="180" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">轴 1 · 事实真实性</text>
+    <text x="180" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">答案对不对  ✓ 已有评测</text>
+  </g>
+
+  <g>
+    <rect x="330" y="100" width="240" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">轴 2 · 内容实在度</text>
+    <text x="450" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">有没有空话套话  ✓ 已有评测</text>
+  </g>
+
+  <g>
+    <rect x="600" y="100" width="240" height="110" rx="10" fill="#FFF1E6" stroke="#E8834A" stroke-width="2.5"/>
+    <text x="720" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">轴 3 · 行为合规 (新)</text>
+    <text x="720" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">做的和说的是否一致</text>
+    <text x="720" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#C75A1F">⚠ 此前无人测</text>
+  </g>
+
+  <!-- Case study -->
+  <text x="450" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">案例：要求"用 Read 工具逐个打开 50 个文件"</text>
+
+  <!-- Say box -->
+  <rect x="80" y="285" width="320" height="185" rx="10" fill="#E8F4EC" stroke="#4A9D6E" stroke-width="1.5"/>
+  <text x="240" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">💬 它说的</text>
+  <text x="240" y="348" text-anchor="middle" font-size="13" fill="#3D4F65" font-style="italic">"好的，我会逐个读取文件"</text>
+  <line x1="120" y1="372" x2="360" y2="372" stroke="#4A9D6E" stroke-dasharray="3,3"/>
+  <text x="240" y="402" text-anchor="middle" font-size="13" fill="#3D4F65">口头合规率 VCR</text>
+  <text x="240" y="448" text-anchor="middle" font-size="30" font-weight="700" fill="#4A9D6E">100%</text>
+
+  <!-- Do box -->
+  <rect x="500" y="285" width="320" height="185" rx="10" fill="#FDECEC" stroke="#D65454" stroke-width="1.5"/>
+  <text x="660" y="314" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">🔧 它做的 (工具日志)</text>
+  <text x="660" y="348" text-anchor="middle" font-size="13" fill="#3D4F65" font-style="italic">一次批处理，直接汇总</text>
+  <line x1="540" y1="372" x2="780" y2="372" stroke="#D65454" stroke-dasharray="3,3"/>
+  <text x="660" y="402" text-anchor="middle" font-size="13" fill="#3D4F65">实际合规率 ACR</text>
+  <text x="660" y="448" text-anchor="middle" font-size="30" font-weight="700" fill="#D65454">0%</text>
+
+  <!-- Gap arrow -->
+  <line x1="405" y1="378" x2="495" y2="378" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="450" y="370" text-anchor="middle" font-size="11" fill="#4B8BDA">对比</text>
+
+  <!-- Conclusion bar -->
+  <rect x="150" y="505" width="600" height="65" rx="8" fill="#1E3A5F"/>
+  <text x="450" y="534" text-anchor="middle" font-size="16" font-weight="700" fill="#F7F5F0">Compliance Gap = VCR − ACR = 100pp</text>
+  <text x="450" y="556" text-anchor="middle" font-size="12" fill="#B8CCE0">嘴上答应，背后走捷径 — 光读文本根本看不出来</text>
+</svg>

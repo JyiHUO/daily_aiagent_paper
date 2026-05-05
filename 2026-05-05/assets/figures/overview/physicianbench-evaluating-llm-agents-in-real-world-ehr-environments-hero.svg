@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="ehr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E6F0FB"/>
+      <stop offset="1" stop-color="#CFE0F3"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF1E6"/>
+      <stop offset="1" stop-color="#FFD9B8"/>
+    </linearGradient>
+    <linearGradient id="grader" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF5EE"/>
+      <stop offset="1" stop-color="#C9E5D3"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3E9A5E"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#1E3A5F">PhysicianBench：让 LLM Agent 真的走进 EHR 系统</text>
+  <text x="640" y="80" text-anchor="middle" font-size="15" fill="#3D4F65">100 个长程临床任务 · 平均 27 次工具调用 · 670 个执行级 checkpoint · 最强模型 pass@1 仅 46%</text>
+
+  <!-- LEFT: Task source -->
+  <g>
+    <rect x="40" y="130" width="230" height="130" rx="12" fill="#FFFFFF" stroke="#B8CCE2" stroke-width="1.2"/>
+    <text x="155" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">真实会诊病例</text>
+    <text x="155" y="186" text-anchor="middle" font-size="12" fill="#3D4F65">初诊医生 ↔ 专科医生</text>
+    <text x="155" y="208" text-anchor="middle" font-size="12" fill="#3D4F65">21 个专科 · 多轮医生审阅</text>
+    <text x="155" y="236" text-anchor="middle" font-size="11" fill="#6B7F95">心内 / 内分泌 / 肿瘤 / 精神科</text>
+  </g>
+
+  <!-- Central: Agent -->
+  <g>
+    <rect x="500" y="120" width="280" height="150" rx="16" fill="url(#agent)" stroke="#E09A5E" stroke-width="1.4"/>
+    <text x="640" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#7A3E0F">LLM Agent</text>
+    <text x="640" y="176" text-anchor="middle" font-size="12" fill="#7A3E0F">跨就诊检索 → 异源推理 →</text>
+    <text x="640" y="194" text-anchor="middle" font-size="12" fill="#7A3E0F">下医嘱 / 开转诊 → 书写病历</text>
+    <rect x="520" y="210" width="240" height="48" rx="8" fill="#FFFFFF" stroke="#E09A5E" stroke-dasharray="3 2"/>
+    <text x="640" y="230" text-anchor="middle" font-size="11" fill="#7A3E0F">14 个 FHIR 工具 · GET / POST</text>
+    <text x="640" y="248" text-anchor="middle" font-size="10" fill="#7A3E0F">Condition · Observation · MedicationRequest · ServiceRequest</text>
+  </g>
+
+  <!-- RIGHT: EHR sandbox -->
+  <g>
+    <rect x="1010" y="130" width="230" height="260" rx="12" fill="url(#ehr)" stroke="#4B8BDA" stroke-width="1.4"/>
+    <text x="1125" y="158" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">FHIR EHR 沙箱</text>
+    <text x="1125" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">Docker · HAPI FHIR JPA Server</text>
+    <text x="1125" y="195" text-anchor="middle" font-size="11" fill="#3D4F65">STARR 去标识化真实病历</text>
+
+    <rect x="1030" y="210" width="190" height="26" rx="4" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="1125" y="228" text-anchor="middle" font-size="11" fill="#1E3A5F">Condition · 诊断</text>
+    <rect x="1030" y="242" width="190" height="26" rx="4" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="1125" y="260" text-anchor="middle" font-size="11" fill="#1E3A5F">Observation · 化验 / 影像</text>
+    <rect x="1030" y="274" width="190" height="26" rx="4" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="1125" y="292" text-anchor="middle" font-size="11" fill="#1E3A5F">MedicationRequest · 药单</text>
+    <rect x="1030" y="306" width="190" height="26" rx="4" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="1125" y="324" text-anchor="middle" font-size="11" fill="#1E3A5F">ServiceRequest · 检查 / 转诊</text>
+    <rect x="1030" y="338" width="190" height="26" rx="4" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="1125" y="356" text-anchor="middle" font-size="11" fill="#1E3A5F">DocumentReference · 病历</text>
+    <text x="1125" y="380" text-anchor="middle" font-size="10" fill="#6B7F95">与 Epic / Cerner 接口一致</text>
+  </g>
+
+  <!-- Arrow: case -> agent -->
+  <path d="M270 190 C 370 190, 420 190, 498 190" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="385" y="180" text-anchor="middle" font-size="11" fill="#4B8BDA">任务输入</text>
+
+  <!-- Arrows: agent <-> EHR -->
+  <path d="M780 170 C 880 170, 930 170, 1008 180" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="895" y="160" text-anchor="middle" font-size="11" fill="#4B8BDA">tool_call · 查询 / 写入</text>
+  <path d="M1008 240 C 930 240, 880 240, 782 230" stroke="#6BA2D9" stroke-width="2" fill="none" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="895" y="258" text-anchor="middle" font-size="11" fill="#4B8BDA">FHIR 资源 / 状态回传</text>
+
+  <!-- Grader band -->
+  <g>
+    <rect x="90" y="430" width="1100" height="160" rx="16" fill="url(#grader)" stroke="#3E9A5E" stroke-width="1.4"/>
+    <text x="640" y="460" text-anchor="middle" font-size="16" font-weight="700" fill="#1F5A3A">执行级验证 · 670 checkpoints</text>
+    <text x="640" y="480" text-anchor="middle" font-size="12" fill="#1F5A3A">判分不是看 Agent 说了什么，而是查 EHR 里真的发生了什么</text>
+
+    <g>
+      <rect x="120" y="500" width="230" height="72" rx="10" fill="#FFFFFF" stroke="#3E9A5E"/>
+      <text x="235" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#1F5A3A">① 数据检索</text>
+      <text x="235" y="542" text-anchor="middle" font-size="11" fill="#3D4F65">失败占比 12%</text>
+      <text x="235" y="560" text-anchor="middle" font-size="10" fill="#6B7F95">code grader · FHIR 查询</text>
+    </g>
+    <g>
+      <rect x="370" y="500" width="230" height="72" rx="10" fill="#FFFFFF" stroke="#3E9A5E"/>
+      <text x="485" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#1F5A3A">② 临床推理</text>
+      <text x="485" y="542" text-anchor="middle" font-size="11" fill="#D97562" font-weight="700">失败 50% · 最大瓶颈</text>
+      <text x="485" y="560" text-anchor="middle" font-size="10" fill="#6B7F95">hybrid grader · 对齐金标准</text>
+    </g>
+    <g>
+      <rect x="620" y="500" width="230" height="72" rx="10" fill="#FFFFFF" stroke="#3E9A5E"/>
+      <text x="735" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#1F5A3A">③ 动作执行</text>
+      <text x="735" y="542" text-anchor="middle" font-size="11" fill="#D97562">失败 19%（73% 说了没做）</text>
+      <text x="735" y="560" text-anchor="middle" font-size="10" fill="#6B7F95">code grader · 查 POST 结果</text>
+    </g>
+    <g>
+      <rect x="870" y="500" width="230" height="72" rx="10" fill="#FFFFFF" stroke="#3E9A5E"/>
+      <text x="985" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#1F5A3A">④ 病历书写</text>
+      <text x="985" y="542" text-anchor="middle" font-size="11" fill="#3D4F65">失败占比 18%</text>
+      <text x="985" y="560" text-anchor="middle" font-size="10" fill="#6B7F95">LLM-judge · 按 rubric</text>
+    </g>
+  </g>
+
+  <!-- Arrow from EHR down to verification -->
+  <path d="M1125 390 L 1125 428" stroke="#3E9A5E" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <text x="1140" y="415" font-size="11" fill="#1F5A3A">读取状态</text>
+
+  <!-- Arrow from verification back to agent (feedback / grading) -->
+  <path d="M640 428 L 640 272" stroke="#3E9A5E" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrG)"/>
+  <text x="652" y="360" font-size="11" fill="#1F5A3A">checkpoint 判分</text>
+
+  <!-- Bottom: results panel -->
+  <g>
+    <rect x="90" y="620" width="1100" height="170" rx="14" fill="#FFFFFF" stroke="#B8CCE2"/>
+    <text x="640" y="650" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">13 个模型全面落后：医疗 Agent 离自主工作还差一截</text>
+
+    <g transform="translate(130,680)">
+      <text font-size="12" font-weight="700" fill="#1E3A5F">GPT-5.5（最强）</text>
+      <rect x="0" y="14" width="300" height="14" rx="3" fill="#EAF1F8"/>
+      <rect x="0" y="14" width="139" height="14" rx="3" fill="#4B8BDA"/>
+      <text x="305" y="25" font-size="11" fill="#1E3A5F">pass@1 46.3%</text>
+      <rect x="0" y="36" width="300" height="14" rx="3" fill="#EAF1F8"/>
+      <rect x="0" y="36" width="84" height="14" rx="3" fill="#D97562"/>
+      <text x="305" y="47" font-size="11" fill="#D97562">三次全过 28%</text>
+    </g>
+
+    <g transform="translate(540,680)">
+      <text font-size="12" font-weight="700" fill="#1E3A5F">Claude Opus 4.6</text>
+      <rect x="0" y="14" width="300" height="14" rx="3" fill="#EAF1F8"/>
+      <rect x="0" y="14" width="95" height="14" rx="3" fill="#4B8BDA"/>
+      <text x="305" y="25" font-size="11" fill="#1E3A5F">pass@1 31.7%</text>
+    </g>
+
+    <g transform="translate(540,720)">
+      <text font-size="12" font-weight="700" fill="#1E3A5F">DeepSeek V4-Pro（开源最强）</text>
+      <rect x="0" y="14" width="300" height="14" rx="3" fill="#EAF1F8"/>
+      <rect x="0" y="14" width="56" height="14" rx="3" fill="#6B7F95"/>
+      <text x="305" y="25" font-size="11" fill="#1E3A5F">pass@1 18.7%</text>
+    </g>
+
+    <g transform="translate(950,680)">
+      <rect x="0" y="0" width="210" height="88" rx="10" fill="#FFF4F0" stroke="#D97562"/>
+      <text x="105" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#8A3B2B">核心发现</text>
+      <text x="105" y="44" text-anchor="middle" font-size="11" fill="#8A3B2B">模型不是不懂医学</text>
+      <text x="105" y="62" text-anchor="middle" font-size="11" fill="#8A3B2B">而是「说得多，做得少」</text>
+      <text x="105" y="80" text-anchor="middle" font-size="10" fill="#8A3B2B">写了下 CT，却没真创建 ServiceRequest</text>
+    </g>
+  </g>
+</svg>

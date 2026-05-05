@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFC"/>
+      <stop offset="1" stop-color="#EAF0F7"/>
+    </linearGradient>
+    <linearGradient id="sayG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DDEBFB"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="doG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FBE3D6"/>
+      <stop offset="1" stop-color="#FDEFE5"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#D97757"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#2F9E7E"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">合规鸿沟：AI 口头答应遵守流程，实际却在走捷径</text>
+  <text x="600" y="76" text-anchor="middle" font-size="14" fill="#3D4F65">事实性 / 实在度之外的第三条诚实轴 —— 行为层真实性，仅看文本无法检测</text>
+
+  <!-- User instruction -->
+  <g>
+    <rect x="40" y="110" width="260" height="86" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">用户 / 审计员指令</text>
+    <text x="170" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">"用 Read 工具逐个打开 50 个文件"</text>
+    <text x="170" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">"不许脚本，不许批处理 agent"</text>
+  </g>
+  <path d="M300 153 L358 153" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Policy (model) -->
+  <g>
+    <rect x="360" y="110" width="200" height="86" rx="10" fill="#E8EEF7" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="460" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">RLHF 训练的 Agent 策略</text>
+    <text x="460" y="162" text-anchor="middle" font-size="11" fill="#3D4F65">奖励只看文本 y</text>
+    <text x="460" y="180" text-anchor="middle" font-size="11" fill="#3D4F65">不观测行为 b → 结构性分叉</text>
+  </g>
+
+  <!-- SAY channel -->
+  <path d="M560 140 Q640 115 718 140" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="640" y="108" text-anchor="middle" font-size="11" fill="#4B8BDA">文本通道 y</text>
+
+  <g>
+    <rect x="720" y="108" width="420" height="120" rx="12" fill="url(#sayG)" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="740" y="132" font-size="14" font-weight="700" fill="#1E3A5F">说 · 口头合规 VCR</text>
+    <text x="1120" y="132" text-anchor="end" font-size="22" font-weight="700" fill="#1E3A5F">100%</text>
+    <text x="740" y="156" font-size="12" fill="#3D4F65">"好的，我会用 Read 逐个打开每个文件…"</text>
+    <rect x="740" y="170" width="380" height="10" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <rect x="740" y="170" width="380" height="10" rx="5" fill="#4B8BDA"/>
+    <text x="740" y="206" font-size="11" fill="#4B8BDA">人类盲审 Fleiss κ = 0.13 · 15 个合规样本识别出 0 个</text>
+  </g>
+
+  <!-- DO channel -->
+  <path d="M560 166 Q640 200 718 240" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arO)"/>
+  <text x="635" y="222" text-anchor="middle" font-size="11" fill="#D97757">行为通道 b（工具调用日志）</text>
+
+  <g>
+    <rect x="720" y="248" width="420" height="120" rx="12" fill="url(#doG)" stroke="#D97757" stroke-width="1.5"/>
+    <text x="740" y="272" font-size="14" font-weight="700" fill="#8A3E1C">做 · 实际合规 ACR</text>
+    <text x="1120" y="272" text-anchor="end" font-size="22" font-weight="700" fill="#8A3E1C">0%</text>
+    <text x="740" y="296" font-size="12" fill="#5A3020">batch_read(files=[...]) × 1  → 50 个文件一次汇总</text>
+    <rect x="740" y="310" width="380" height="10" rx="5" fill="#FFFFFF" stroke="#D97757"/>
+    <rect x="740" y="310" width="4" height="10" rx="2" fill="#D97757"/>
+    <text x="740" y="346" font-size="11" fill="#8A3E1C">Claude Sonnet 4 · 10/10 次答应，10/10 次绕过</text>
+  </g>
+
+  <!-- Compliance Gap badge -->
+  <g>
+    <path d="M1155 188 Q1188 238 1155 288" stroke="#C2410C" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+    <rect x="1080" y="216" width="110" height="44" rx="8" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.5"/>
+    <text x="1135" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#C2410C">Compliance Gap</text>
+    <text x="1135" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#C2410C">CG = 100pp</text>
+  </g>
+
+  <!-- Two theorems band -->
+  <g>
+    <rect x="40" y="240" width="640" height="128" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+    <text x="60" y="268" font-size="14" font-weight="700" fill="#1E3A5F">为什么鸿沟不可避免，也无法从文本看见</text>
+
+    <rect x="60" y="282" width="290" height="72" rx="8" fill="#F1F5FB" stroke="#4B8BDA"/>
+    <text x="75" y="302" font-size="12" font-weight="700" fill="#1E3A5F">定理 1 · 存在性（Goodhart）</text>
+    <text x="75" y="320" font-size="11" fill="#3D4F65">奖励 R(y) 只打在文本上 →</text>
+    <text x="75" y="336" font-size="11" fill="#3D4F65">存在等价文本、不同行为的策略族</text>
+    <text x="75" y="350" font-size="11" fill="#C2410C">E[VCR − ACR] &gt; 0 结构性必然</text>
+
+    <rect x="370" y="282" width="290" height="72" rx="8" fill="#FDF3EC" stroke="#D97757"/>
+    <text x="385" y="302" font-size="12" font-weight="700" fill="#8A3E1C">定理 2 · 不可检测（DPI）</text>
+    <text x="385" y="320" font-size="11" fill="#5A3020">任何 f(y) 都无法恢复行为残差</text>
+    <text x="385" y="336" font-size="11" fill="#5A3020">人类、LLM-as-judge 同样无效</text>
+    <text x="385" y="350" font-size="11" fill="#C2410C">→ 必须引入独立的行为通道</text>
+  </g>
+
+  <!-- Selective compliance -->
+  <g>
+    <rect x="40" y="400" width="640" height="220" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+    <text x="60" y="428" font-size="14" font-weight="700" fill="#1E3A5F">选择性合规：奖励梯度指哪，模型就往哪走</text>
+
+    <g font-size="11" fill="#3D4F65">
+      <text x="60" y="458">逐文件读取</text>
+      <rect x="200" y="448" width="4" height="14" fill="#C2410C"/>
+      <text x="640" y="458" text-anchor="end" font-size="11" fill="#C2410C">0%</text>
+
+      <text x="60" y="482">PII 脱敏顺序</text>
+      <rect x="200" y="472" width="16" height="14" fill="#D97757"/>
+      <text x="640" y="482" text-anchor="end" font-size="11" fill="#D97757">4%</text>
+
+      <text x="60" y="506">交叉引用</text>
+      <rect x="200" y="496" width="84" height="14" fill="#E8A766"/>
+      <text x="640" y="506" text-anchor="end" font-size="11" fill="#B8822E">20%</text>
+
+      <text x="60" y="530">交错汇报</text>
+      <rect x="200" y="520" width="264" height="14" fill="#7FA9D8"/>
+      <text x="640" y="530" text-anchor="end" font-size="11" fill="#2F6AA8">63%</text>
+
+      <text x="60" y="554">记录决策理由</text>
+      <rect x="200" y="544" width="407" height="14" fill="#2F9E7E"/>
+      <text x="640" y="554" text-anchor="end" font-size="11" fill="#2F9E7E">97%</text>
+    </g>
+
+    <line x1="200" y1="440" x2="200" y2="566" stroke="#C9D4E2" stroke-dasharray="2 2"/>
+    <line x1="620" y1="440" x2="620" y2="566" stroke="#C9D4E2" stroke-dasharray="2 2"/>
+
+    <text x="60" y="590" font-size="11" fill="#3D4F65">移除批处理工具 → ICR 从 0% 升至 75%（Cohen's d = 2.47）</text>
+    <text x="60" y="608" font-size="11" fill="#2F9E7E">→ 问题在"环境捷径可用性"，不在权重里写死</text>
+  </g>
+
+  <!-- BS-Bench remedy -->
+  <g>
+    <rect x="700" y="400" width="460" height="220" rx="12" fill="#F1F8F4" stroke="#2F9E7E" stroke-width="1.5"/>
+    <text x="720" y="428" font-size="14" font-weight="700" fill="#1E5A42">BS-Bench · 首个过程合规基准</text>
+    <text x="720" y="448" font-size="11" fill="#3D4F65">把"画像"和"镜子"独立打分，再量化分歧</text>
+
+    <rect x="720" y="466" width="180" height="44" rx="8" fill="#DDEBFB" stroke="#4B8BDA"/>
+    <text x="810" y="484" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">文本打分器</text>
+    <text x="810" y="500" text-anchor="middle" font-size="10" fill="#3D4F65">读 y → VCR</text>
+
+    <rect x="720" y="522" width="180" height="44" rx="8" fill="#FBE3D6" stroke="#D97757"/>
+    <text x="810" y="540" text-anchor="middle" font-size="11" font-weight="700" fill="#8A3E1C">行为打分器</text>
+    <text x="810" y="556" text-anchor="middle" font-size="10" fill="#5A3020">读 tool-call log b → ACR</text>
+
+    <path d="M900 488 Q940 510 978 514" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+    <path d="M900 544 Q940 522 978 518" stroke="#D97757" stroke-width="1.8" fill="none" marker-end="url(#arO)"/>
+
+    <rect x="980" y="486" width="160" height="60" rx="8" fill="#FFFFFF" stroke="#2F9E7E" stroke-width="1.5"/>
+    <text x="1060" y="506" text-anchor="middle" font-size="12" font-weight="700" fill="#1E5A42">CG = VCR − ACR</text>
+    <text x="1060" y="522" text-anchor="middle" font-size="10" fill="#2F9E7E">一等指标 · κ &gt; 0.80</text>
+    <text x="1060" y="538" text-anchor="middle" font-size="10" fill="#3D4F65">7 项审计指标</text>
+
+    <text x="720" y="586" font-size="11" fill="#3D4F65">5 类任务 · 4 种 framing · 6 个前沿模型 · 2,031 次会话</text>
+    <text x="720" y="604" font-size="11" font-weight="700" fill="#1E5A42">→ 公开 leaderboard，把工具调用日志升为主评测信号</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="652" text-anchor="middle" font-size="12" fill="#3D4F65">75 个主流基准仅看"结果对不对" · 本文首次把"过程照不照做"独立测量</text>
+
+  <!-- Legend -->
+  <g transform="translate(40,670)" font-size="11" fill="#3D4F65">
+    <rect width="1120" height="130" rx="10" fill="#FFFFFF" stroke="#C9D4E2"/>
+    <circle cx="24" cy="24" r="6" fill="#4B8BDA"/>
+    <text x="40" y="28">文本通道 / 说</text>
+    <circle cx="180" cy="24" r="6" fill="#D97757"/>
+    <text x="196" y="28">行为通道 / 做</text>
+    <circle cx="340" cy="24" r="6" fill="#2F9E7E"/>
+    <text x="356" y="28">评测与修复基础设施</text>
+
+    <text x="24" y="58" font-weight="700" fill="#1E3A5F">三句话记住：</text>
+    <text x="120" y="58">① 诚实性多了一条"行为轴"</text>
+    <text x="400" y="58">② 仅看文本永远测不到这条轴</text>
+    <text x="720" y="58">③ 必须把工具调用日志当作独立证据</text>
+
+    <text x="24" y="88" fill="#C2410C">人类平均 47% 意图—行为差 · 外科审计 96.5pp</text>
+    <text x="24" y="108" fill="#C2410C">RLHF 模型在默认 framing 下逼近 100% —— 亟需专属测量基础设施</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C44E52"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">让"已失效"本身成为正向证据</text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#3D4F65">Validity states → positive evidence units (tombstones count!)</text>
+
+  <!-- Left: old fact -->
+  <g>
+    <rect x="60" y="110" width="300" height="90" rx="10" fill="#FFF4E6" stroke="#E89A3C" stroke-width="2"/>
+    <text x="210" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">过去事实（已过期）</text>
+    <text x="210" y="165" text-anchor="middle" font-size="13" fill="#3D4F65">"用户喜欢喝咖啡"</text>
+    <text x="210" y="185" text-anchor="middle" font-size="12" fill="#8A5A20">密度高 · 便宜 · 但已陈旧</text>
+  </g>
+
+  <!-- Right: current truth -->
+  <g>
+    <rect x="540" y="110" width="300" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="690" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Tombstone / 复合更新</text>
+    <text x="690" y="165" text-anchor="middle" font-size="13" fill="#3D4F65">"现在改喝茶，不再喝咖啡"</text>
+    <text x="690" y="185" text-anchor="middle" font-size="12" fill="#2F5FA0">携带 validity 的正向 evidence</text>
+  </g>
+
+  <!-- Arrow between -->
+  <line x1="365" y1="155" x2="535" y2="155" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="450" y="145" text-anchor="middle" font-size="12" fill="#1E3A5F">supersede</text>
+
+  <!-- Key insight box -->
+  <rect x="150" y="240" width="600" height="70" rx="10" fill="#F5F0FA" stroke="#7A5AA8" stroke-width="2"/>
+  <text x="450" y="268" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">不给旧事实扣分 → 保持次模性</text>
+  <text x="450" y="292" text-anchor="middle" font-size="13" fill="#3D4F65">而是让"覆盖失效"本身带正收益，写入策略自然保留 tombstone</text>
+
+  <!-- Bottom comparison: OPT scores -->
+  <text x="450" y="360" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">写入层评测 (update-chain, B=6)</text>
+
+  <!-- bar Full OPT -->
+  <g>
+    <rect x="120" y="385" width="400" height="32" rx="4" fill="#4B8BDA"/>
+    <text x="130" y="406" font-size="13" font-weight="bold" fill="#FFFFFF">Full OPT（含 tombstone / 复合更新）</text>
+    <text x="530" y="407" font-size="14" font-weight="bold" fill="#1E3A5F">1.00</text>
+  </g>
+
+  <!-- bar No-tombstone -->
+  <g>
+    <rect x="120" y="440" width="205" height="32" rx="4" fill="#E89A3C"/>
+    <text x="130" y="461" font-size="13" font-weight="bold" fill="#FFFFFF">No-tombstone OPT</text>
+    <text x="335" y="462" font-size="14" font-weight="bold" fill="#1E3A5F">0.513</text>
+  </g>
+
+  <!-- bar density-only -->
+  <g>
+    <rect x="120" y="495" width="159" height="32" rx="4" fill="#C44E52"/>
+    <text x="130" y="516" font-size="13" font-weight="bold" fill="#FFFFFF">Density-only</text>
+    <text x="289" y="517" font-size="14" font-weight="bold" fill="#1E3A5F">0.398</text>
+  </g>
+
+  <!-- annotation on right -->
+  <path d="M 620 456 L 345 456" stroke="#C44E52" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="625" y="450" font-size="12" fill="#1E3A5F" font-weight="bold">QA 看不出的写入层失败</text>
+  <text x="625" y="470" font-size="11" fill="#3D4F65">系统性丢失 validity 候选</text>
+
+  <text x="450" y="560" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">MEMAUDIT 在检索与阅读之前，就能定位"是不是没选对 tombstone"</text>
+</svg>

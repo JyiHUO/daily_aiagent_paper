@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-04
+- **日期**：2026-05-05
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis
-  - SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters
-  - To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling
-- **日报路径**：[2026-05-04/daily_report.md](2026-05-04/daily_report.md)
+  - The Compliance Gap: Why AI Systems Promise to Follow Process Instructions but Don't
+  - Architectural Obsolescence of Unhardened Agentic-AI Runtimes
+  - MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing
+- **日报路径**：[2026-05-05/daily_report.md](2026-05-05/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-05 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Compliance Gap: Why AI Systems Promise to Follow Process Instructions but Don't | [2026-05-05/daily_report.md](2026-05-05/daily_report.md) |
+|  |  |  | 2 | Architectural Obsolescence of Unhardened Agentic-AI Runtimes |  |
+|  |  |  | 3 | MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing |  |
 | 2026-05-04 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis | [2026-05-04/daily_report.md](2026-05-04/daily_report.md) |
 |  |  |  | 2 | SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters |  |
 |  |  |  | 3 | To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling |  |

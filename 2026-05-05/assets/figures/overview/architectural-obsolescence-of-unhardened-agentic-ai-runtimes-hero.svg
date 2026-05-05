@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F8FC"/>
+      <stop offset="1" stop-color="#E8EEF6"/>
+    </linearGradient>
+    <linearGradient id="leftBad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCE8E8"/>
+      <stop offset="1" stop-color="#F5D5D5"/>
+    </linearGradient>
+    <linearGradient id="rightGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E3F0E3"/>
+      <stop offset="1" stop-color="#D0E6D4"/>
+    </linearGradient>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C84A4A"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3E8E4B"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">无加固 Agent Runtime 的架构性过时</text>
+  <text x="600" y="74" text-anchor="middle" font-size="14" fill="#3D4F65">动作集合 D ⇔ 审计投影 S：不一致即暴露 F1–F4 四类失效</text>
+
+  <!-- Central LLM/Agent -->
+  <rect x="510" y="120" width="180" height="56" rx="10" fill="#FFF7E6" stroke="#D9A441" stroke-width="1.5"/>
+  <text x="600" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">LLM Agent</text>
+  <text x="600" y="163" text-anchor="middle" font-size="12" fill="#3D4F65">发消息 · 调工具 · 操控设备</text>
+
+  <!-- Split arrows down -->
+  <path d="M555,176 Q420,210 295,238" fill="none" stroke="#C84A4A" stroke-width="2" marker-end="url(#arrRed)"/>
+  <path d="M645,176 Q780,210 905,238" fill="none" stroke="#3E8E4B" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- LEFT PANEL: OpenClaw -->
+  <rect x="60" y="240" width="460" height="450" rx="14" fill="url(#leftBad)" stroke="#C84A4A" stroke-width="1.5"/>
+  <text x="290" y="272" text-anchor="middle" font-size="18" font-weight="700" fill="#7A1E1E">OpenClaw（无加固）</text>
+  <text x="290" y="292" text-anchor="middle" font-size="12" fill="#5A2020">14,419 份源文件 · 7 项安全原语零命中</text>
+
+  <!-- hollow pipeline -->
+  <rect x="90" y="312" width="400" height="90" rx="8" fill="#FFFFFF" stroke="#C84A4A" stroke-dasharray="5 4"/>
+  <text x="290" y="336" text-anchor="middle" font-size="13" fill="#7A1E1E" font-weight="600">动作管线（无 gate / 无审计链）</text>
+  <text x="290" y="358" text-anchor="middle" font-size="11" fill="#5A2020">✗ biconditional checker   ✗ admission gate</text>
+  <text x="290" y="376" text-anchor="middle" font-size="11" fill="#5A2020">✗ hash-chained audit log   ✗ egress guard</text>
+  <text x="290" y="394" text-anchor="middle" font-size="11" fill="#5A2020">✗ BLP 分级   ✗ 签名信任根   ✗ bootstrap seal</text>
+
+  <!-- D vs S on left -->
+  <circle cx="180" cy="470" r="55" fill="#FFFFFF" stroke="#C84A4A" stroke-width="1.5"/>
+  <text x="180" y="466" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1E1E">D</text>
+  <text x="180" y="484" text-anchor="middle" font-size="10" fill="#5A2020">真实动作</text>
+  <circle cx="400" cy="470" r="55" fill="#FFFFFF" stroke="#C84A4A" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="400" y="466" text-anchor="middle" font-size="14" font-weight="700" fill="#7A1E1E">S = ∅</text>
+  <text x="400" y="484" text-anchor="middle" font-size="10" fill="#5A2020">审计投影缺失</text>
+  <path d="M237,470 L343,470" stroke="#C84A4A" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="290" y="462" text-anchor="middle" font-size="11" fill="#7A1E1E">无法 diff</text>
+
+  <!-- Failure badges -->
+  <g font-size="11" fill="#7A1E1E">
+    <rect x="90"  y="560" width="95" height="42" rx="6" fill="#FFFFFF" stroke="#C84A4A"/>
+    <text x="137" y="578" text-anchor="middle" font-weight="700">F1 越过门</text>
+    <text x="137" y="594" text-anchor="middle">R = 0.000</text>
+
+    <rect x="195" y="560" width="95" height="42" rx="6" fill="#FFFFFF" stroke="#C84A4A"/>
+    <text x="242" y="578" text-anchor="middle" font-weight="700">F2 伪造账</text>
+    <text x="242" y="594" text-anchor="middle">R = 0.000</text>
+
+    <rect x="300" y="560" width="95" height="42" rx="6" fill="#FFFFFF" stroke="#C84A4A"/>
+    <text x="347" y="578" text-anchor="middle" font-weight="700">F3 静默失败</text>
+    <text x="347" y="594" text-anchor="middle">R = 0.000</text>
+
+    <rect x="405" y="560" width="95" height="42" rx="6" fill="#FFFFFF" stroke="#C84A4A"/>
+    <text x="452" y="578" text-anchor="middle" font-weight="700">F4 打错目标</text>
+    <text x="452" y="594" text-anchor="middle">R = 0.000</text>
+  </g>
+
+  <rect x="90" y="622" width="400" height="50" rx="8" fill="#FFFFFF" stroke="#C84A4A"/>
+  <text x="290" y="644" text-anchor="middle" font-size="12" fill="#7A1E1E" font-weight="600">1600 样本 · 生产 CLI 在体实测 · 10-LLM 泛化</text>
+  <text x="290" y="662" text-anchor="middle" font-size="11" fill="#5A2020">四类失效召回率全部为 0.000（Wilson 上界 3.84e-4）</text>
+
+  <!-- RIGHT PANEL: enclawed-oss -->
+  <rect x="680" y="240" width="460" height="450" rx="14" fill="url(#rightGood)" stroke="#3E8E4B" stroke-width="1.5"/>
+  <text x="910" y="272" text-anchor="middle" font-size="18" font-weight="700" fill="#1F5A2A">enclawed-oss（MIT drop-in）</text>
+  <text x="910" y="292" text-anchor="middle" font-size="12" fill="#264D2D">7 项结构原语全量具备 · 可直接替换</text>
+
+  <!-- 7 primitives -->
+  <rect x="710" y="312" width="400" height="150" rx="10" fill="#FFFFFF" stroke="#3E8E4B"/>
+  <text x="910" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#1F5A2A">7 项运行时原语（结构性，不可调参替代）</text>
+  <g font-size="10.5" fill="#1F5A2A">
+    <rect x="725" y="344" width="118" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="784" y="361" text-anchor="middle">① biconditional checker</text>
+    <rect x="850" y="344" width="118" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="909" y="361" text-anchor="middle">② hash-chain audit</text>
+    <rect x="975" y="344" width="120" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="1035" y="361" text-anchor="middle">③ admission gate</text>
+
+    <rect x="725" y="376" width="118" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="784" y="393" text-anchor="middle">④ 2-layer egress</text>
+    <rect x="850" y="376" width="118" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="909" y="393" text-anchor="middle">⑤ Bell-LaPadula</text>
+    <rect x="975" y="376" width="120" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="1035" y="393" text-anchor="middle">⑥ 模块签名信任根</text>
+
+    <rect x="850" y="408" width="118" height="26" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="909" y="425" text-anchor="middle">⑦ bootstrap seal</text>
+  </g>
+  <text x="910" y="452" text-anchor="middle" font-size="10.5" fill="#264D2D" font-style="italic">任一缺失 → 下游 checker 失去输入</text>
+
+  <!-- D == S closed loop -->
+  <circle cx="800" cy="540" r="55" fill="#FFFFFF" stroke="#3E8E4B" stroke-width="1.5"/>
+  <text x="800" y="536" text-anchor="middle" font-size="14" font-weight="700" fill="#1F5A2A">D</text>
+  <text x="800" y="554" text-anchor="middle" font-size="10" fill="#264D2D">真实动作</text>
+
+  <circle cx="1020" cy="540" r="55" fill="#FFFFFF" stroke="#3E8E4B" stroke-width="1.5"/>
+  <text x="1020" y="536" text-anchor="middle" font-size="14" font-weight="700" fill="#1F5A2A">S</text>
+  <text x="1020" y="554" text-anchor="middle" font-size="10" fill="#264D2D">哈希链审计投影</text>
+
+  <path d="M855,528 C905,508 915,508 963,528" fill="none" stroke="#3E8E4B" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <path d="M965,555 C915,575 905,575 857,555" fill="none" stroke="#3E8E4B" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <text x="910" y="512" text-anchor="middle" font-size="11" fill="#1F5A2A" font-weight="600">按 (capability, target) 双射比对</text>
+  <text x="910" y="590" text-anchor="middle" font-size="10.5" fill="#264D2D">D ⊋ S → F1/F3  ·  S ⊋ D → F2  ·  互不含 → F4</text>
+
+  <!-- Results -->
+  <rect x="710" y="622" width="400" height="50" rx="8" fill="#FFFFFF" stroke="#3E8E4B"/>
+  <text x="910" y="644" text-anchor="middle" font-size="13" fill="#1F5A2A" font-weight="700">P = R = F₁ = Accuracy = 1.000</text>
+  <text x="910" y="662" text-anchor="middle" font-size="11" fill="#264D2D">同一 harness · Discord / Telegram 真实通道 · DLP +6 行 → F3 +14.6%</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="240" y="704" width="720" height="40" rx="8" fill="#1E3A5F"/>
+  <text x="600" y="729" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="600">架构性过时 = 可复现 harness + 源码 tree-walk 零命中 + drop-in 替代存在</text>
+</svg>
