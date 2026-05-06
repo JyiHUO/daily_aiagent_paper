@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">上下文碎片不是主因</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">即使把三张工单放进同一会话，Agent 仍会照做</text>
+
+  <!-- Left: Fresh session -->
+  <g>
+    <rect x="60" y="110" width="330" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="225" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Fresh Session（分三次）</text>
+    <rect x="85"  y="158" width="80" height="38" rx="6" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="125" y="182" text-anchor="middle" font-size="13" fill="#1E3A5F">工单1</text>
+    <rect x="185" y="158" width="80" height="38" rx="6" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="225" y="182" text-anchor="middle" font-size="13" fill="#1E3A5F">工单2</text>
+    <rect x="285" y="158" width="80" height="38" rx="6" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="325" y="182" text-anchor="middle" font-size="13" fill="#1E3A5F">工单3</text>
+    <text x="225" y="238" text-anchor="middle" font-size="14" fill="#3D4F65">Codex ASR</text>
+    <text x="225" y="272" text-anchor="middle" font-size="28" font-weight="700" fill="#C8553D">85.9%</text>
+  </g>
+
+  <!-- Right: Resumed session -->
+  <g>
+    <rect x="510" y="110" width="330" height="180" rx="12" fill="#FFF4E6" stroke="#E08A3C" stroke-width="1.5"/>
+    <text x="675" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Resumed Session（同会话全记忆）</text>
+    <rect x="535" y="158" width="280" height="38" rx="6" fill="#FCE3C2" stroke="#E08A3C"/>
+    <text x="675" y="182" text-anchor="middle" font-size="13" fill="#1E3A5F">工单1 → 工单2 → 工单3</text>
+    <text x="675" y="238" text-anchor="middle" font-size="14" fill="#3D4F65">Codex ASR</text>
+    <text x="675" y="272" text-anchor="middle" font-size="28" font-weight="700" fill="#C8553D">63.3%</text>
+  </g>
+
+  <!-- Arrow between -->
+  <line x1="395" y1="200" x2="505" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="450" y="192" text-anchor="middle" font-size="12" fill="#3D4F65">给它看全</text>
+
+  <!-- Bottom comparison -->
+  <rect x="60" y="330" width="780" height="230" rx="12" fill="#F7F9FC" stroke="#B8C6DA"/>
+  <text x="450" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">若真是"看不见全局"才合规，直接 prompt 应同样糟 — 并没有</text>
+
+  <!-- Three bars: axis baseline at x=220, scale 5px per 1% -->
+  <g transform="translate(0,0)">
+    <!-- Fresh chain 85.9% -->
+    <text x="210" y="411" text-anchor="end" font-size="12" fill="#3D4F65">分阶段 Fresh</text>
+    <rect x="220" y="395" width="430" height="26" fill="#C8553D"/>
+    <text x="660" y="413" font-size="13" font-weight="700" fill="#1E3A5F">85.9%</text>
+
+    <!-- Resumed 63.3% -->
+    <text x="210" y="451" text-anchor="end" font-size="12" fill="#3D4F65">看全 Resumed</text>
+    <rect x="220" y="435" width="317" height="26" fill="#E08A3C"/>
+    <text x="547" y="453" font-size="13" font-weight="700" fill="#1E3A5F">63.3%</text>
+
+    <!-- Direct 20.4% -->
+    <text x="210" y="491" text-anchor="end" font-size="12" fill="#3D4F65">一次性 Direct</text>
+    <rect x="220" y="475" width="102" height="26" fill="#4B8BDA"/>
+    <text x="332" y="493" font-size="13" font-weight="700" fill="#1E3A5F">20.4%</text>
+  </g>
+
+  <!-- Conclusion -->
+  <rect x="120" y="515" width="660" height="36" rx="8" fill="#1E3A5F"/>
+  <text x="450" y="539" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">结论：漏洞来自"工程工单语境"削弱安全反射，而非上下文被切碎</text>
+</svg>

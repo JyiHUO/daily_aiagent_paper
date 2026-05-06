@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">并行 BFS 快照回滚：支撑大规模并发评测</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">不整盘重拷，只补差异 → 工作空间秒级还原</text>
+
+  <!-- Baseline snapshot -->
+  <g>
+    <rect x="40" y="100" width="210" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="145" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">基线快照</text>
+    <text x="145" y="144" text-anchor="middle" font-size="11" fill="#3D4F65">Baseline Snapshot</text>
+    <g font-size="11" fill="#1E3A5F">
+      <text x="60" y="172">📁 workspace/</text>
+      <text x="80" y="192">📁 docs/</text>
+      <text x="100" y="210">📄 a.md</text>
+      <text x="100" y="228">📄 b.xlsx</text>
+      <text x="80" y="248">📁 src/</text>
+      <text x="100" y="266">📄 m.py</text>
+    </g>
+  </g>
+
+  <!-- After agent run -->
+  <g>
+    <rect x="650" y="100" width="210" height="180" rx="10" fill="#FFF4ED" stroke="#D97757" stroke-width="1.8"/>
+    <text x="755" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#8C3E1F">Agent 跑完后</text>
+    <text x="755" y="144" text-anchor="middle" font-size="11" fill="#8C3E1F">被污染的工作空间</text>
+    <g font-size="11">
+      <text x="670" y="172" fill="#1E3A5F">📁 workspace/</text>
+      <text x="690" y="192" fill="#1E3A5F">📁 docs/</text>
+      <text x="710" y="210" fill="#D97757">📄 a.md  ✎改</text>
+      <text x="710" y="228" fill="#3D4F65">📄 b.xlsx</text>
+      <text x="710" y="246" fill="#2E8B57">📄 out.csv  ＋新</text>
+      <text x="690" y="266" fill="#D97757">📁 src/  ✗删</text>
+    </g>
+  </g>
+
+  <!-- Middle: parallel BFS diff -->
+  <g>
+    <rect x="310" y="100" width="280" height="180" rx="10" fill="#E8F0FB" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="450" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">并行 BFS 逐层比对</text>
+
+    <circle cx="450" cy="158" r="10" fill="#4B8BDA"/>
+    <line x1="450" y1="168" x2="370" y2="198" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="450" y1="168" x2="450" y2="198" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="450" y1="168" x2="530" y2="198" stroke="#4B8BDA" stroke-width="1.5"/>
+
+    <circle cx="370" cy="208" r="10" fill="#D97757"/>
+    <text x="370" y="232" text-anchor="middle" font-size="10" fill="#8C3E1F">改 → 替换</text>
+
+    <circle cx="450" cy="208" r="10" fill="#2E8B57"/>
+    <text x="450" y="232" text-anchor="middle" font-size="10" fill="#1E5E3A">新增 → 删除</text>
+
+    <circle cx="530" cy="208" r="10" fill="#B23A48"/>
+    <text x="530" y="232" text-anchor="middle" font-size="10" fill="#8C1F2E">缺失 → 补回</text>
+
+    <text x="450" y="262" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">只动差异节点，避免整盘重拷</text>
+  </g>
+
+  <!-- arrows between three modules -->
+  <line x1="252" y1="190" x2="308" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="648" y1="190" x2="592" y2="190" stroke="#D97757" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Bottom: Sandbox pool + parallelism -->
+  <g>
+    <rect x="40" y="330" width="820" height="200" rx="12" fill="#F5F7FB" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="450" y="358" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Sandbox Pool · 预克隆多副本，双重并行</text>
+
+    <!-- workspace level 5x -->
+    <g>
+      <rect x="70" y="380" width="160" height="130" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="150" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Workspace × 5</text>
+      <rect x="90" y="418" width="30" height="60" fill="#4B8BDA" opacity="0.85"/>
+      <rect x="130" y="418" width="30" height="60" fill="#4B8BDA" opacity="0.65"/>
+      <rect x="170" y="418" width="30" height="60" fill="#4B8BDA" opacity="0.45"/>
+      <text x="150" y="498" text-anchor="middle" font-size="10" fill="#3D4F65">角色副本并行</text>
+    </g>
+
+    <text x="250" y="450" font-size="22" fill="#4B8BDA">×</text>
+
+    <g>
+      <rect x="280" y="380" width="290" height="130" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="425" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Task 级并行</text>
+      <g font-size="10" fill="#1E3A5F">
+        <rect x="295" y="415" width="70" height="22" rx="4" fill="#fff" stroke="#4B8BDA"/><text x="330" y="430" text-anchor="middle">task-1</text>
+        <rect x="375" y="415" width="70" height="22" rx="4" fill="#fff" stroke="#4B8BDA"/><text x="410" y="430" text-anchor="middle">task-2</text>
+        <rect x="455" y="415" width="100" height="22" rx="4" fill="#fff" stroke="#4B8BDA"/><text x="505" y="430" text-anchor="middle">task-N …</text>
+        <rect x="295" y="448" width="120" height="22" rx="4" fill="#fff" stroke="#4B8BDA"/><text x="355" y="463" text-anchor="middle">同副本串跑</text>
+        <rect x="425" y="448" width="130" height="22" rx="4" fill="#fff" stroke="#4B8BDA"/><text x="490" y="463" text-anchor="middle">跑完立即回滚</text>
+      </g>
+      <text x="425" y="498" text-anchor="middle" font-size="10" fill="#3D4F65">YAML 声明式配置</text>
+    </g>
+
+    <text x="585" y="450" font-size="22" fill="#4B8BDA">→</text>
+
+    <g>
+      <rect x="615" y="380" width="230" height="130" rx="8" fill="#FFF7E6" stroke="#D4A04A"/>
+      <text x="730" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#8C6A1F">评测成本 ↓ ~70%</text>
+      <text x="730" y="434" text-anchor="middle" font-size="11" fill="#8C6A1F">Lite 子集：388 → 100 题</text>
+      <text x="730" y="456" text-anchor="middle" font-size="11" fill="#8C6A1F">按难度 / 能力均衡抽样</text>
+      <text x="730" y="486" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">大规模 harness × model 对比可行</text>
+    </g>
+  </g>
+</svg>

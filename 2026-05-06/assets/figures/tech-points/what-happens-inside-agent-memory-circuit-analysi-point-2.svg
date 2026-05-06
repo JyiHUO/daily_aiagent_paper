@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C85A5A"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D98324"/>
+    </marker>
+    <radialGradient id="hubG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE8B5"/>
+      <stop offset="100%" stop-color="#F3B562"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#F7F5EF"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1E3A5F">Write 与 Read 共享同一个 Grounding Hub</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">记忆框架并没造新模块，而是借用 base 模型 L34 的通用"拉上下文"底座</text>
+
+  <!-- Write box -->
+  <rect x="40" y="175" width="200" height="120" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="203" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Write 电路</text>
+  <text x="140" y="228" text-anchor="middle" font-size="12" fill="#3D4F65">"去夏威夷旅行"</text>
+  <text x="140" y="250" text-anchor="middle" font-size="12" fill="#3D4F65">抽取事实 → 存入</text>
+  <text x="140" y="278" text-anchor="middle" font-size="11" fill="#6B7A8F">L22 → L28 → L34</text>
+
+  <!-- Read box -->
+  <rect x="660" y="175" width="200" height="120" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="760" y="203" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Read 电路</text>
+  <text x="760" y="228" text-anchor="middle" font-size="12" fill="#3D4F65">"根据 MEMORY 回答"</text>
+  <text x="760" y="250" text-anchor="middle" font-size="12" fill="#3D4F65">拉回检索条目</text>
+  <text x="760" y="278" text-anchor="middle" font-size="11" fill="#6B7A8F">L34 共享 hub</text>
+
+  <!-- Hub (center) -->
+  <circle cx="450" cy="235" r="88" fill="url(#hubG)" stroke="#C6873A" stroke-width="2"/>
+  <text x="450" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">L34 Hub</text>
+  <text x="450" y="234" text-anchor="middle" font-size="12" fill="#3D4F65">~10 个 co-recurring</text>
+  <text x="450" y="252" text-anchor="middle" font-size="12" fill="#3D4F65">features（共享）</text>
+  <text x="450" y="274" text-anchor="middle" font-size="11" fill="#7A5010">base 模型自带</text>
+
+  <!-- small feature dots in hub -->
+  <g fill="#B5651D" opacity="0.7">
+    <circle cx="398" cy="190" r="4"/>
+    <circle cx="502" cy="190" r="4"/>
+    <circle cx="378" cy="235" r="4"/>
+    <circle cx="522" cy="235" r="4"/>
+    <circle cx="415" cy="295" r="4"/>
+    <circle cx="485" cy="295" r="4"/>
+  </g>
+
+  <!-- arrows write/read to hub -->
+  <line x1="240" y1="235" x2="358" y2="235" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="660" y1="235" x2="542" y2="235" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Grounding direction label -->
+  <text x="450" y="345" text-anchor="middle" font-size="12" fill="#7A5010" font-style="italic">grounding 方向</text>
+
+  <!-- Bottom: two scenarios -->
+  <rect x="70" y="395" width="330" height="165" rx="12" fill="#E8F4E8" stroke="#5A9A5A" stroke-width="2"/>
+  <text x="235" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">正常：激活 grounding</text>
+  <text x="235" y="452" text-anchor="middle" font-size="12" fill="#3D4F65">把 "Tesla Model 3" 从 MEMORY</text>
+  <text x="235" y="472" text-anchor="middle" font-size="12" fill="#3D4F65">拉进回答 ✓</text>
+  <rect x="110" y="498" width="250" height="36" rx="6" fill="#FFFFFF" stroke="#5A9A5A"/>
+  <text x="235" y="521" text-anchor="middle" font-size="12" fill="#1E3A5F">ΔM = +0.32（context 对照）</text>
+
+  <rect x="500" y="395" width="330" height="165" rx="12" fill="#FBEAEA" stroke="#C85A5A" stroke-width="2"/>
+  <text x="665" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">抑制方向：忽视记忆</text>
+  <text x="665" y="452" text-anchor="middle" font-size="12" fill="#3D4F65">退回参数先验答案</text>
+  <text x="665" y="472" text-anchor="middle" font-size="12" fill="#3D4F65">55% 预测被扰动 ✗</text>
+  <rect x="540" y="498" width="250" height="36" rx="6" fill="#FFFFFF" stroke="#C85A5A"/>
+  <text x="665" y="521" text-anchor="middle" font-size="12" fill="#1E3A5F">ΔM = −2.30，log-prob −0.5</text>
+
+  <!-- connectors from hub to scenarios -->
+  <path d="M 410 315 Q 320 360 260 395" stroke="#D98324" stroke-width="2.5" fill="none" marker-end="url(#arrOrange)"/>
+  <path d="M 490 315 Q 580 360 640 395" stroke="#C85A5A" stroke-width="2.5" fill="none" marker-end="url(#arrRed)" stroke-dasharray="6 4"/>
+
+  <!-- footnote -->
+  <text x="450" y="595" text-anchor="middle" font-size="11" fill="#6B7A8F">改 prompt / 存储格式难以突破底座上限 —— 记忆的天花板在电路里</text>
+</svg>

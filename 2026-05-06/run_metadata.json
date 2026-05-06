@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-06",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 389,
+  "selected_count": 3,
+  "focus_titles": [
+    "MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents",
+    "What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis",
+    "Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-06/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-06/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

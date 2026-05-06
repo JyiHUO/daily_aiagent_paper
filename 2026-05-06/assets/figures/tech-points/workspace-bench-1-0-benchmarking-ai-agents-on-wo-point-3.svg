@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#F7FAFC"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">六维能力 × 三难度：给 Agent 做体检</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">不是一个总分，而是定位每一项短板</text>
+
+  <!-- Left: 6 capability bars -->
+  <g>
+    <text x="60" y="108" font-size="15" font-weight="700" fill="#1E3A5F">6 项能力标签 (任务数)</text>
+
+    <g font-size="12" fill="#1E3A5F">
+      <rect x="60" y="122" width="262" height="26" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="70" y="140">Workspace Exploration · 262</text>
+
+      <rect x="60" y="156" width="238" height="26" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="70" y="174">Task-Supporting Files · 238</text>
+
+      <rect x="60" y="190" width="211" height="26" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="70" y="208">Result-Providing Files · 211</text>
+
+      <rect x="60" y="224" width="170" height="26" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="70" y="242">Semantic Content Relations · 170</text>
+
+      <rect x="60" y="258" width="140" height="26" fill="#FEE2E2" stroke="#DC6B5C"/>
+      <text x="70" y="276" fill="#9A2B2B" font-weight="700">Heterogeneous Files · 140  ⚠</text>
+
+      <rect x="60" y="292" width="136" height="26" fill="#FEE2E2" stroke="#DC6B5C"/>
+      <text x="70" y="310" fill="#9A2B2B" font-weight="700">Lineage Tracing · 136  ⚠</text>
+    </g>
+  </g>
+
+  <!-- Right: difficulty split -->
+  <g>
+    <text x="560" y="108" font-size="15" font-weight="700" fill="#1E3A5F">3 档难度 (按步数 / 协作)</text>
+
+    <rect x="560" y="125" width="280" height="55" rx="8" fill="#E6F4EA" stroke="#6BA368"/>
+    <text x="580" y="148" font-size="14" font-weight="700" fill="#1E3A5F">Easy · 14%</text>
+    <text x="580" y="168" font-size="12" fill="#3D4F65">翻目录找文件即可</text>
+    <text x="828" y="160" font-size="20" font-weight="700" fill="#2E7D32" text-anchor="end">57.6%</text>
+
+    <rect x="560" y="195" width="280" height="55" rx="8" fill="#FFF4E0" stroke="#E0A458"/>
+    <text x="580" y="218" font-size="14" font-weight="700" fill="#1E3A5F">Medium · 53%</text>
+    <text x="580" y="238" font-size="12" fill="#3D4F65">多文件跨引用</text>
+    <text x="828" y="230" font-size="20" font-weight="700" fill="#B07419" text-anchor="end">~48%</text>
+
+    <rect x="560" y="265" width="280" height="55" rx="8" fill="#FDE2E2" stroke="#DC6B5C"/>
+    <text x="580" y="288" font-size="14" font-weight="700" fill="#1E3A5F">Hard · 33%</text>
+    <text x="580" y="308" font-size="12" fill="#3D4F65">跨模态 + 版本血缘</text>
+    <text x="828" y="300" font-size="20" font-weight="700" fill="#9A2B2B" text-anchor="end">40.5%</text>
+  </g>
+
+  <!-- arrow from weak capabilities to hard -->
+  <path d="M 340 305 Q 450 340 556 292" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,4"/>
+  <text x="448" y="355" text-anchor="middle" font-size="12" fill="#4B8BDA" font-weight="600">薄弱能力 → 拉垮 Hard 任务</text>
+
+  <!-- Conclusion panel -->
+  <g>
+    <rect x="60" y="390" width="780" height="200" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="420" font-size="16" font-weight="700" fill="#1E3A5F">诊断报告可以精确到一项</text>
+
+    <g font-size="13" fill="#3D4F65">
+      <text x="80" y="453">传统评测：</text>
+      <rect x="200" y="436" width="240" height="24" rx="4" fill="#E5E7EB" stroke="#9CA3AF"/>
+      <text x="320" y="453" text-anchor="middle" fill="#1E3A5F">总分 51% ✓ 差不多吧</text>
+
+      <text x="80" y="498">Workspace-Bench：</text>
+      <rect x="200" y="481" width="620" height="24" rx="4" fill="#FEE2E2" stroke="#DC6B5C"/>
+      <text x="510" y="498" text-anchor="middle" fill="#9A2B2B" font-weight="700">所有配置都卡在 "异构格式" 与 "版本血缘追踪"</text>
+    </g>
+
+    <text x="80" y="540" font-size="13" fill="#1E3A5F" font-weight="600">举例</text>
+    <text x="80" y="562" font-size="12.5" fill="#3D4F65">· PPT 的图 ← 要回溯到源 Excel：异构 + 血缘</text>
+    <text x="80" y="580" font-size="12.5" fill="#3D4F65">· report_v2 vs report_final：识别哪个才是最终版</text>
+  </g>
+</svg>

@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-05
+- **日期**：2026-05-06
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - The Compliance Gap: Why AI Systems Promise to Follow Process Instructions but Don't
-  - Architectural Obsolescence of Unhardened Agentic-AI Runtimes
-  - MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing
-- **日报路径**：[2026-05-05/daily_report.md](2026-05-05/daily_report.md)
+  - MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents
+  - What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis
+  - Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies
+- **日报路径**：[2026-05-06/daily_report.md](2026-05-06/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-06 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents | [2026-05-06/daily_report.md](2026-05-06/daily_report.md) |
+|  |  |  | 2 | What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis |  |
+|  |  |  | 3 | Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies |  |
 | 2026-05-05 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Compliance Gap: Why AI Systems Promise to Follow Process Instructions but Don't | [2026-05-05/daily_report.md](2026-05-05/daily_report.md) |
 |  |  |  | 2 | Architectural Obsolescence of Unhardened Agentic-AI Runtimes |  |
 |  |  |  | 3 | MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing |  |

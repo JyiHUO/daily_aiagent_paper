@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75B5B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A5F">看得见电路 ≠ 能调它</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">对 Write 电路放大 top features，不同倍数下结果不可预测</text>
+
+  <!-- Left: circuit box -->
+  <rect x="40" y="110" width="220" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="150" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Write 电路</text>
+  <circle cx="90" cy="185" r="16" fill="#4B8BDA"/>
+  <circle cx="150" cy="185" r="16" fill="#4B8BDA"/>
+  <circle cx="210" cy="185" r="16" fill="#4B8BDA"/>
+  <text x="90" y="190" text-anchor="middle" font-size="11" fill="white">L22</text>
+  <text x="150" y="190" text-anchor="middle" font-size="11" fill="white">L28</text>
+  <text x="210" y="190" text-anchor="middle" font-size="11" fill="white">L34</text>
+  <text x="150" y="235" text-anchor="middle" font-size="12" fill="#3D4F65">top features ×K 放大</text>
+  <text x="150" y="258" text-anchor="middle" font-size="11" fill="#3D4F65">(Qwen-3 4B, Write)</text>
+
+  <!-- Arrow -->
+  <line x1="265" y1="185" x2="315" y2="185" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="290" y="176" text-anchor="middle" font-size="12" fill="#1E3A5F">干预</text>
+
+  <!-- Right: 4B chart -->
+  <rect x="320" y="110" width="540" height="260" rx="12" fill="#FFF7F0" stroke="#E8A87C" stroke-width="2"/>
+  <text x="590" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">fact recall 随倍数剧烈跳动</text>
+
+  <!-- axis -->
+  <line x1="380" y1="330" x2="830" y2="330" stroke="#3D4F65" stroke-width="1.5"/>
+  <line x1="380" y1="160" x2="380" y2="330" stroke="#3D4F65" stroke-width="1.5"/>
+  <text x="372" y="165" text-anchor="end" font-size="11" fill="#3D4F65">1.0</text>
+  <text x="372" y="250" text-anchor="end" font-size="11" fill="#3D4F65">0.5</text>
+  <text x="372" y="334" text-anchor="end" font-size="11" fill="#3D4F65">0</text>
+
+  <!-- connecting line first (behind points) -->
+  <polyline points="420,183 500,190 580,207 660,258 800,177"
+            fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- data points -->
+  <circle cx="420" cy="183" r="6" fill="#4B8BDA"/>
+  <text x="420" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">baseline</text>
+  <text x="420" y="172" text-anchor="middle" font-size="11" fill="#1E3A5F">.838</text>
+
+  <circle cx="500" cy="190" r="6" fill="#4B8BDA"/>
+  <text x="500" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">×2</text>
+
+  <circle cx="580" cy="207" r="6" fill="#4B8BDA"/>
+  <text x="580" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">×3</text>
+
+  <circle cx="660" cy="258" r="8" fill="#C75B5B"/>
+  <text x="660" y="350" text-anchor="middle" font-size="11" font-weight="bold" fill="#C75B5B">×5</text>
+  <text x="660" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#C75B5B">.218</text>
+
+  <circle cx="800" cy="177" r="6" fill="#4B8BDA"/>
+  <text x="800" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">×10</text>
+  <text x="800" y="166" text-anchor="middle" font-size="11" fill="#1E3A5F">.866</text>
+
+  <!-- crash annotation -->
+  <path d="M690,275 Q720,300 745,295" fill="none" stroke="#C75B5B" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="790" y="300" text-anchor="middle" font-size="12" fill="#C75B5B">−62pp 塌陷</text>
+
+  <!-- Bottom conclusion -->
+  <rect x="80" y="410" width="740" height="120" rx="12" fill="#F3EFFB" stroke="#8B7CB8" stroke-width="2"/>
+  <text x="450" y="444" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">结论：放弃"写入式干预"，改用电路信号做只读诊断</text>
+  <text x="450" y="472" text-anchor="middle" font-size="13" fill="#3D4F65">同一电路在不同倍数下非单调，行为无法稳定预测</text>
+  <text x="450" y="498" text-anchor="middle" font-size="13" fill="#3D4F65">诊断 ✓     实时干预 ✗     想做"运行时改记忆"的产品请绕行</text>
+</svg>
