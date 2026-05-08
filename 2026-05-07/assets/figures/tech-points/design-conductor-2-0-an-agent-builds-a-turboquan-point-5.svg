@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C86464"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A9D5F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A5F">新瓶颈：人类审核跟不上 Agent</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">80 小时产出百万行设计 —— 人看不过来</text>
+
+  <!-- Agent module -->
+  <rect x="60" y="110" width="240" height="140" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="180" y="142" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">Design Agent</text>
+  <text x="180" y="172" text-anchor="middle" font-size="13" fill="#3D4F65">80h · RTL + 综合 + P&amp;R</text>
+  <text x="180" y="225" text-anchor="middle" font-size="32">⚙️</text>
+
+  <!-- Output arrow -->
+  <line x1="302" y1="180" x2="398" y2="180" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="350" y="170" text-anchor="middle" font-size="12" fill="#4B8BDA">海量产物</text>
+
+  <!-- Human reviewer -->
+  <rect x="400" y="110" width="220" height="140" rx="12" fill="#FFF4EC" stroke="#D97757" stroke-width="2"/>
+  <text x="510" y="142" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">Human Review</text>
+  <text x="510" y="172" text-anchor="middle" font-size="13" fill="#3D4F65">读不完 · 审不过来</text>
+  <text x="510" y="198" text-anchor="middle" font-size="13" fill="#D97757" font-weight="bold">⚠ 成为新瓶颈</text>
+  <text x="510" y="232" text-anchor="middle" font-size="26">🧑‍💻</text>
+
+  <!-- Symptoms box -->
+  <rect x="660" y="110" width="200" height="140" rx="12" fill="#F5F0FA" stroke="#8B6FB8" stroke-width="2"/>
+  <text x="760" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">典型症状</text>
+  <text x="760" y="165" text-anchor="middle" font-size="12" fill="#3D4F65">· 简单问题查 20 分钟</text>
+  <text x="760" y="188" text-anchor="middle" font-size="12" fill="#3D4F65">· 能改脚本却改 RTL</text>
+  <text x="760" y="211" text-anchor="middle" font-size="12" fill="#3D4F65">· 时钟目标定太激进</text>
+  <text x="760" y="234" text-anchor="middle" font-size="12" fill="#3D4F65">· 过度谨慎 methodical</text>
+
+  <line x1="620" y1="180" x2="658" y2="180" stroke="#8B6FB8" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Divider -->
+  <line x1="80" y1="300" x2="820" y2="300" stroke="#B8C5D6" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="450" y="330" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">解药：把约束前置</text>
+
+  <!-- Before -->
+  <rect x="80" y="360" width="340" height="190" rx="12" fill="#FDECEC" stroke="#C86464" stroke-width="2"/>
+  <text x="250" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">❌ 事后审核</text>
+  <text x="250" y="416" text-anchor="middle" font-size="13" fill="#3D4F65">"你先做，我再挑毛病"</text>
+  <rect x="110" y="440" width="80" height="36" rx="4" fill="#fff" stroke="#C86464"/>
+  <text x="150" y="463" text-anchor="middle" font-size="12" fill="#3D4F65">产出</text>
+  <line x1="192" y1="458" x2="236" y2="458" stroke="#C86464" stroke-width="2" marker-end="url(#arR)"/>
+  <rect x="240" y="440" width="90" height="36" rx="4" fill="#fff" stroke="#C86464"/>
+  <text x="285" y="463" text-anchor="middle" font-size="12" fill="#3D4F65">审核爆炸</text>
+  <text x="250" y="515" text-anchor="middle" font-size="12" fill="#C86464">返工成本高 · 拖慢整条链</text>
+
+  <!-- After -->
+  <rect x="480" y="360" width="340" height="190" rx="12" fill="#E8F5E9" stroke="#4A9D5F" stroke-width="2"/>
+  <text x="650" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">✅ 启动前锁定 PPA</text>
+  <text x="650" y="416" text-anchor="middle" font-size="13" fill="#3D4F65">性能 / 功耗 / 面积 一次讲死</text>
+  <rect x="500" y="440" width="90" height="36" rx="4" fill="#fff" stroke="#4A9D5F"/>
+  <text x="545" y="463" text-anchor="middle" font-size="12" fill="#3D4F65">人类约束</text>
+  <line x1="592" y1="458" x2="634" y2="458" stroke="#4A9D5F" stroke-width="2" marker-end="url(#arG)"/>
+  <rect x="638" y="440" width="90" height="36" rx="4" fill="#fff" stroke="#4A9D5F"/>
+  <text x="683" y="463" text-anchor="middle" font-size="12" fill="#3D4F65">Agent 执行</text>
+  <text x="650" y="515" text-anchor="middle" font-size="12" fill="#4A9D5F">方向对了 · 审核量骤降</text>
+</svg>

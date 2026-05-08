@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#FAFBFD"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">同样的步数预算，谁能走到答案？</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">三种上下文管理策略在 BrowseComp 上的对比</text>
+
+  <!-- Discard-all -->
+  <g>
+    <rect x="40" y="100" width="260" height="200" rx="10" fill="#FEF2F2" stroke="#E5A5A5" stroke-width="1.5"/>
+    <text x="170" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Discard-all</text>
+    <text x="170" y="148" text-anchor="middle" font-size="11" fill="#8B5A5A">满了就整体清空</text>
+
+    <rect x="60" y="165" width="220" height="22" fill="#F5D5D5"/>
+    <text x="170" y="181" text-anchor="middle" font-size="11" fill="#3D4F65">历史: 搜A → 搜B → 线索C...</text>
+    <text x="170" y="215" text-anchor="middle" font-size="18" fill="#C94B4B">✗ 全部丢弃，重复走回头路</text>
+
+    <rect x="70" y="260" width="200" height="24" rx="4" fill="#fff" stroke="#E5A5A5"/>
+    <text x="170" y="277" text-anchor="middle" font-size="13" font-weight="700" fill="#C94B4B">准确率偏低</text>
+  </g>
+
+  <!-- Summary -->
+  <g>
+    <rect x="320" y="100" width="260" height="200" rx="10" fill="#FFF8E6" stroke="#D4B878" stroke-width="1.5"/>
+    <text x="450" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Summary</text>
+    <text x="450" y="148" text-anchor="middle" font-size="11" fill="#8B7A4A">固定粒度摘要</text>
+
+    <rect x="340" y="165" width="220" height="22" fill="#F0E0B8"/>
+    <text x="450" y="181" text-anchor="middle" font-size="11" fill="#3D4F65">数字 42.7% → “大约四十多”</text>
+    <text x="450" y="215" text-anchor="middle" font-size="18" fill="#B8924A">～ 细节糊掉，误差累积</text>
+
+    <rect x="350" y="260" width="200" height="24" rx="4" fill="#fff" stroke="#D4B878"/>
+    <text x="450" y="277" text-anchor="middle" font-size="13" font-weight="700" fill="#B8924A">准确率中等</text>
+  </g>
+
+  <!-- Context-ReAct -->
+  <g>
+    <rect x="600" y="100" width="260" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="730" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Context-ReAct ★</text>
+    <text x="730" y="148" text-anchor="middle" font-size="11" fill="#4B8BDA">弹性多分辨率管理</text>
+
+    <rect x="620" y="165" width="100" height="22" fill="#B8D4F0"/>
+    <text x="670" y="181" text-anchor="middle" font-size="10" fill="#1E3A5F">Compress 已落地</text>
+    <rect x="725" y="165" width="115" height="22" fill="#7FB2E8"/>
+    <text x="782" y="181" text-anchor="middle" font-size="10" fill="#fff">保留待验证线索</text>
+
+    <text x="730" y="215" text-anchor="middle" font-size="18" fill="#2E6BB8">✓ 按重要性分辨率保留</text>
+
+    <rect x="630" y="260" width="200" height="24" rx="4" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="730" y="277" text-anchor="middle" font-size="13" font-weight="700" fill="#2E6BB8">61.5%  领先</text>
+  </g>
+
+  <!-- operation distribution -->
+  <g>
+    <text x="450" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">学到的算子分布：Compress / Rollback 是主力</text>
+
+    <g transform="translate(180,380)">
+      <rect x="0" y="0" width="150" height="36" rx="6" fill="#4B8BDA"/>
+      <text x="75" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Compress</text>
+    </g>
+    <g transform="translate(345,380)">
+      <rect x="0" y="0" width="130" height="36" rx="6" fill="#6FA3DC"/>
+      <text x="65" y="23" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Rollback</text>
+    </g>
+    <g transform="translate(490,380)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="#B8D4F0"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Skip</text>
+    </g>
+    <g transform="translate(585,380)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="#D4E4F5"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Snippet</text>
+    </g>
+    <g transform="translate(680,380)">
+      <rect x="0" y="0" width="80" height="36" rx="6" fill="#E5EEF7"/>
+      <text x="40" y="23" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Delete</text>
+    </g>
+    <text x="450" y="438" text-anchor="middle" font-size="11" fill="#6B7A8F">主力算子 ← 高频调用          低频调用 → 保守使用</text>
+  </g>
+
+  <!-- insight -->
+  <g>
+    <rect x="100" y="480" width="700" height="70" rx="10" fill="#1E3A5F"/>
+    <text x="450" y="510" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">核心洞察</text>
+    <text x="450" y="533" text-anchor="middle" font-size="12" fill="#D4E4F5">一刀切（清空 / 统一摘要）输给“细粒度 + 多分辨率”的上下文编排</text>
+  </g>
+
+  <line x1="730" y1="300" x2="450" y2="343" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+</svg>

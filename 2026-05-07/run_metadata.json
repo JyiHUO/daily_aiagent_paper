@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-07",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 444,
+  "selected_count": 3,
+  "focus_titles": [
+    "DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents",
+    "Design Conductor 2.0: An agent builds a TurboQuant inference accelerator in 80 hours",
+    "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-07/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-07/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

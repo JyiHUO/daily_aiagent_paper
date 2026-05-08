@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E7D5B"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#F7FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="23" font-weight="700" fill="#1E3A5F">五个原子操作：像整理备忘录一样管理上下文</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">长历史 → 选对动作 → 弹性多分辨率记忆</text>
+
+  <!-- Left: messy context -->
+  <rect x="30" y="90" width="190" height="450" rx="10" fill="#E8EEF5" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="125" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Agent 历史轨迹</text>
+  <g font-size="11" fill="#3D4F65">
+    <rect x="45" y="128" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="145">step1 search Uganda…</text>
+    <rect x="45" y="160" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="177">step2 读取 wiki 长文</text>
+    <rect x="45" y="192" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="209">step3 literacy 不匹配</text>
+    <rect x="45" y="224" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="241">step4 尝试无关链接</text>
+    <rect x="45" y="256" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="273">step5 搜 Zimbabwe</text>
+    <rect x="45" y="288" width="160" height="26" rx="4" fill="#FFFEEA" stroke="#E0A93A"/>
+    <text x="54" y="305">step6 找到 marshalli…</text>
+    <rect x="45" y="320" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="337">step7 多轮浏览…</text>
+    <rect x="45" y="352" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="369">step8 冗余观察</text>
+    <rect x="45" y="384" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="401">step9 空结果</text>
+    <rect x="45" y="416" width="160" height="26" rx="4" fill="#FFFFFF" stroke="#B8C7D9"/>
+    <text x="54" y="433">step10 …</text>
+  </g>
+  <text x="125" y="475" text-anchor="middle" font-size="11" fill="#8A5A3B" font-style="italic">又长又噪，容易爆窗口</text>
+  <text x="125" y="515" text-anchor="middle" font-size="11" fill="#3D4F65">ReAct 累加 → token 爆炸</text>
+
+  <!-- Arrow to ops -->
+  <line x1="222" y1="300" x2="288" y2="300" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="255" y="292" text-anchor="middle" font-size="10" fill="#4B8BDA">选择操作</text>
+
+  <!-- Middle: five operations -->
+  <!-- Skip -->
+  <rect x="295" y="95" width="280" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="310" y="120" font-size="14" font-weight="700" fill="#1E3A5F">⏭ Skip · 保持原样</text>
+  <text x="310" y="140" font-size="11" fill="#3D4F65">不确定要不要动？先放着</text>
+  <text x="310" y="156" font-size="11" fill="#3D4F65">→ 不改动任何历史</text>
+
+  <!-- Compress -->
+  <rect x="295" y="175" width="280" height="70" rx="8" fill="#FFF4E6" stroke="#E0933A" stroke-width="1.8"/>
+  <text x="310" y="200" font-size="14" font-weight="700" fill="#1E3A5F">🗜 Compress · 区间摘要</text>
+  <text x="310" y="220" font-size="11" fill="#3D4F65">把 step(a..b) 啰嗦内容合并成一句</text>
+  <text x="310" y="236" font-size="11" fill="#3D4F65">→ 表达完备，降低 token</text>
+
+  <!-- Rollback -->
+  <rect x="295" y="255" width="280" height="70" rx="8" fill="#FDECEC" stroke="#C8553D" stroke-width="1.8"/>
+  <text x="310" y="280" font-size="14" font-weight="700" fill="#1E3A5F">↩ Rollback · 断点重来</text>
+  <text x="310" y="300" font-size="11" fill="#3D4F65">回退到第 k 步，记录失败原因</text>
+  <text x="310" y="316" font-size="11" fill="#3D4F65">→ 保留可迁移洞见，不白走</text>
+
+  <!-- Snippet (highlight) -->
+  <rect x="295" y="335" width="280" height="90" rx="8" fill="#E8F5E9" stroke="#2E7D5B" stroke-width="2.5"/>
+  <text x="310" y="360" font-size="14" font-weight="700" fill="#1E3A5F">✂ Snippet · 无损精确截取 ★</text>
+  <text x="310" y="380" font-size="11" fill="#3D4F65">用 pre/suf 锚点复印原文子串</text>
+  <text x="310" y="396" font-size="11" fill="#3D4F65">数字 / 人名 / URL / 代码专用</text>
+  <text x="310" y="412" font-size="11" fill="#2E7D5B" font-weight="600">→ 避免摘要幻觉</text>
+
+  <!-- Delete -->
+  <rect x="295" y="435" width="280" height="65" rx="8" fill="#ECECEC" stroke="#6B6B6B" stroke-width="1.8"/>
+  <text x="310" y="460" font-size="14" font-weight="700" fill="#1E3A5F">🗑 Delete · 整步抹掉</text>
+  <text x="310" y="480" font-size="11" fill="#3D4F65">彻底无用的弯路 → 直接删除</text>
+
+  <!-- Loop back arrow: ops -> history (elastic management) -->
+  <path d="M 295 515 Q 255 540 215 515 L 180 490" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="245" y="540" text-anchor="middle" font-size="10" fill="#4B8BDA">更新历史（弹性多分辨率）</text>
+
+  <!-- Arrow from Snippet to example -->
+  <line x1="578" y1="380" x2="622" y2="380" stroke="#2E7D5B" stroke-width="2.5" marker-end="url(#arg)"/>
+
+  <!-- Right: example -->
+  <rect x="625" y="90" width="250" height="450" rx="10" fill="#FFFFFF" stroke="#2E7D5B" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="750" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">案例：变色龙查询</text>
+
+  <rect x="640" y="130" width="220" height="85" rx="6" fill="#FDECEC" stroke="#C8553D"/>
+  <text x="652" y="150" font-size="12" font-weight="700" fill="#C8553D">Rollback</text>
+  <text x="652" y="169" font-size="10.5" fill="#3D4F65">Uganda 分支整段回退</text>
+  <text x="652" y="185" font-size="10.5" fill="#3D4F65">附注：literacy rate 不匹配</text>
+  <text x="652" y="205" font-size="10" fill="#8A5A3B" font-style="italic">(教训被保留)</text>
+
+  <rect x="640" y="225" width="220" height="190" rx="6" fill="#E8F5E9" stroke="#2E7D5B"/>
+  <text x="652" y="245" font-size="12" font-weight="700" fill="#2E7D5B">Snippet（原文复印）</text>
+  <text x="652" y="266" font-size="10.5" fill="#3D4F65">pre: "specific name"</text>
+  <text x="652" y="282" font-size="10.5" fill="#3D4F65">suf: "Marshall"</text>
+  <rect x="648" y="292" width="204" height="90" rx="4" fill="#FFFFFF" stroke="#2E7D5B" stroke-dasharray="2,2"/>
+  <text x="656" y="310" font-size="10.5" fill="#1E3A5F" font-style="italic">"specific name</text>
+  <text x="656" y="326" font-size="10.5" fill="#1E3A5F" font-style="italic">marshalli is in</text>
+  <text x="656" y="342" font-size="10.5" fill="#1E3A5F" font-style="italic">honor of</text>
+  <text x="656" y="358" font-size="10.5" fill="#1E3A5F" font-style="italic">G.A.K. Marshall"</text>
+  <text x="652" y="405" font-size="10" fill="#2E7D5B">✓ 一字不差保留</text>
+
+  <rect x="640" y="425" width="220" height="100" rx="6" fill="#FFF4E6" stroke="#E0933A"/>
+  <text x="652" y="445" font-size="12" font-weight="700" fill="#B8722A">Compress + Delete</text>
+  <text x="652" y="465" font-size="10.5" fill="#3D4F65">冗余浏览 → 合并一句</text>
+  <text x="652" y="483" font-size="10.5" fill="#3D4F65">空结果 → 抹掉</text>
+  <text x="652" y="508" font-size="10" fill="#8A5A3B" font-style="italic">释放 token 预算</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="575" text-anchor="middle" font-size="12" fill="#3D4F65">Compress 单独即"表达完备"；其余四个是为了<tspan font-weight="700" fill="#1E3A5F">效率与保真</tspan>的专用算子</text>
+  <text x="450" y="598" text-anchor="middle" font-size="11" fill="#8A5A3B">→ 上下文管理成为 Agent 策略的一等公民</text>
+</svg>

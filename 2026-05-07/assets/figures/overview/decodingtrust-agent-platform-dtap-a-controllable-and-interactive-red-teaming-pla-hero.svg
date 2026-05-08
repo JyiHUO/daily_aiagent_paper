@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFF"/>
+      <stop offset="1" stop-color="#EEF2F9"/>
+    </linearGradient>
+    <linearGradient id="env" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF2FE"/>
+      <stop offset="1" stop-color="#D9E6FB"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE8DE"/>
+      <stop offset="1" stop-color="#FFD2BD"/>
+    </linearGradient>
+    <linearGradient id="judge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E5F3EC"/>
+      <stop offset="1" stop-color="#CFE8DA"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E2744A"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E9E6B"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="42" text-anchor="middle" font-size="23" font-weight="700" fill="#1E3A5F">DTap：AI Agent 的可控交互式红队闭环</text>
+  <text x="500" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">政策驱动风险 · 真实仿真环境 · 自主红队探索 · 状态级可验证判别</text>
+
+  <!-- Left: Policy source -->
+  <g>
+    <rect x="30" y="110" width="170" height="140" rx="12" fill="#FFF5E5" stroke="#E8B96B" stroke-width="1.3"/>
+    <text x="115" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">政策与法规</text>
+    <text x="115" y="165" text-anchor="middle" font-size="11" fill="#3D4F65">Salesforce AUP</text>
+    <text x="115" y="184" text-anchor="middle" font-size="11" fill="#3D4F65">EU AI Act · FINRA</text>
+    <text x="115" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">300+ 风险类别</text>
+    <text x="115" y="229" text-anchor="middle" font-size="11" fill="#3D4F65">4K+ 恶意目标</text>
+  </g>
+
+  <!-- Arrow to red-team -->
+  <path d="M200,180 C235,180 245,195 275,200" stroke="#E2744A" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  <text x="235" y="172" font-size="10" fill="#8A4A2A">抽取目标</text>
+
+  <!-- DTap-Red (attacker) -->
+  <g>
+    <rect x="275" y="135" width="220" height="150" rx="14" fill="url(#red)" stroke="#E2744A" stroke-width="1.6"/>
+    <text x="385" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#7A2E0E">DTap-Red 自主红队 Agent</text>
+    <rect x="292" y="176" width="88" height="28" rx="6" fill="#FFFFFF" stroke="#E2744A" stroke-width="0.9"/>
+    <text x="336" y="194" text-anchor="middle" font-size="10.5" fill="#7A2E0E">200+ 攻击技能</text>
+    <rect x="388" y="176" width="90" height="28" rx="6" fill="#FFFFFF" stroke="#E2744A" stroke-width="0.9"/>
+    <text x="433" y="194" text-anchor="middle" font-size="10.5" fill="#7A2E0E">三层记忆模块</text>
+    <rect x="292" y="212" width="186" height="28" rx="6" fill="#FFFFFF" stroke="#E2744A" stroke-width="0.9"/>
+    <text x="385" y="230" text-anchor="middle" font-size="10.5" fill="#7A2E0E">ε-greedy 探索与利用</text>
+    <text x="385" y="262" text-anchor="middle" font-size="10.5" fill="#7A2E0E">注入通道：prompt · 工具 · 技能 · 环境</text>
+  </g>
+
+  <!-- Injection arrow to env -->
+  <path d="M495,210 C535,210 555,235 585,248" stroke="#E2744A" stroke-width="2.2" fill="none" marker-end="url(#arrR)"/>
+  <text x="515" y="228" font-size="10.5" fill="#8A4A2A" font-weight="600">注入攻击载荷</text>
+
+  <!-- Sandbox Environment -->
+  <g>
+    <rect x="575" y="110" width="395" height="235" rx="14" fill="url(#env)" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="772" y="136" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">DTap 仿真沙箱 · 14 领域 / 50+ 环境</text>
+    <text x="772" y="154" text-anchor="middle" font-size="10.5" fill="#3D4F65">动态状态 · 确定性转移 · 快照重置 · 容器化并发</text>
+
+    <!-- System icons -->
+    <g font-size="11" fill="#1E3A5F">
+      <rect x="590" y="170" width="82" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="631" y="189" text-anchor="middle">Gmail</text>
+      <rect x="678" y="170" width="82" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="719" y="189" text-anchor="middle">PayPal</text>
+      <rect x="766" y="170" width="82" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="807" y="189" text-anchor="middle">Slack</text>
+      <rect x="854" y="170" width="100" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="904" y="189" text-anchor="middle">Workspace</text>
+
+      <rect x="590" y="206" width="100" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="640" y="225" text-anchor="middle">Calendar</text>
+      <rect x="696" y="206" width="90" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="741" y="225" text-anchor="middle">CRM</text>
+      <rect x="792" y="206" width="80" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="832" y="225" text-anchor="middle">Files</text>
+      <rect x="878" y="206" width="76" height="30" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="916" y="225" text-anchor="middle">... 50+</text>
+    </g>
+
+    <!-- Victim Agent -->
+    <rect x="625" y="250" width="294" height="80" rx="10" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.3"/>
+    <text x="772" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">受测 Agent（GPT / Claude / ...）</text>
+    <text x="772" y="295" text-anchor="middle" font-size="10.5" fill="#3D4F65">读邮件 → 调工具 → 产生真实状态变化</text>
+    <text x="772" y="314" text-anchor="middle" font-size="10.5" fill="#3D4F65">发邮件 · 转账 · 删文件 · 下载附件</text>
+  </g>
+
+  <!-- Verifiable Judge -->
+  <g>
+    <rect x="575" y="395" width="395" height="115" rx="14" fill="url(#judge)" stroke="#2E9E6B" stroke-width="1.6"/>
+    <text x="772" y="422" text-anchor="middle" font-size="15" font-weight="700" fill="#1E5B3C">可验证判别器（查真实状态，非看回答）</text>
+    <rect x="592" y="436" width="118" height="56" rx="8" fill="#FFFFFF" stroke="#2E9E6B"/>
+    <text x="651" y="458" text-anchor="middle" font-size="10.5" fill="#1E5B3C">转账记录？</text>
+    <text x="651" y="480" text-anchor="middle" font-size="10.5" fill="#1E5B3C">外发邮件？</text>
+    <rect x="720" y="436" width="118" height="56" rx="8" fill="#FFFFFF" stroke="#2E9E6B"/>
+    <text x="779" y="458" text-anchor="middle" font-size="10.5" fill="#1E5B3C">文件被删？</text>
+    <text x="779" y="480" text-anchor="middle" font-size="10.5" fill="#1E5B3C">恶意程序？</text>
+    <rect x="848" y="436" width="110" height="56" rx="8" fill="#FFFFFF" stroke="#2E9E6B"/>
+    <text x="903" y="458" text-anchor="middle" font-size="10.5" fill="#1E5B3C">Refinement</text>
+    <text x="903" y="480" text-anchor="middle" font-size="10.5" fill="#1E5B3C">失败原因反馈</text>
+  </g>
+
+  <!-- Agent → Judge -->
+  <path d="M772,330 L772,395" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="782" y="366" font-size="10.5" fill="#1E3A5F">终态</text>
+
+  <!-- Feedback loop Judge → Red -->
+  <path d="M575,450 C470,450 400,380 385,285" stroke="#2E9E6B" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrG)"/>
+  <text x="400" y="430" font-size="11" fill="#1E5B3C" font-weight="600">成败信号 · 策略迭代</text>
+
+  <!-- Bottom: Output / Benchmark -->
+  <g>
+    <rect x="30" y="540" width="940" height="78" rx="12" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.4"/>
+    <text x="60" y="568" font-size="14" font-weight="700" fill="#1E3A5F">DTap-Bench</text>
+    <text x="60" y="588" font-size="11" fill="#3D4F65">6682 条任务</text>
+    <text x="60" y="606" font-size="11" fill="#3D4F65">benign · 间接威胁 · 直接威胁</text>
+
+    <line x1="245" y1="555" x2="245" y2="605" stroke="#CBD6E6"/>
+    <text x="275" y="568" font-size="13" font-weight="700" fill="#1E3A5F">系统性漏洞图谱</text>
+    <text x="275" y="588" font-size="11" fill="#3D4F65">跨 backbone 横评：安全策略 · 风险类别 · 攻击策略</text>
+    <text x="275" y="606" font-size="11" fill="#3D4F65">揭示 prompt / 工具 / 技能 / 环境 组合注入的脆弱点</text>
+
+    <line x1="720" y1="555" x2="720" y2="605" stroke="#CBD6E6"/>
+    <text x="745" y="568" font-size="13" font-weight="700" fill="#1E3A5F">投入规模</text>
+    <text x="745" y="588" font-size="11" fill="#3D4F65">17 位红队专家 · ~16000 人时</text>
+    <text x="745" y="606" font-size="11" fill="#3D4F65">~$120K API · 全流程可复现</text>
+  </g>
+
+  <!-- Sandbox → Benchmark curation arrow -->
+  <path d="M280,330 C230,430 180,500 150,540" stroke="#4B8BDA" stroke-width="1.6" fill="none" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="180" y="475" font-size="10.5" fill="#1E3A5F">成功攻击 → 入库</text>
+</svg>

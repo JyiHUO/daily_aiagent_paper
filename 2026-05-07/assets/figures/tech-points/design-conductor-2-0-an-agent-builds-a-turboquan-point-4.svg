@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97C5D"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">从"按菜谱"到"第一性原理"的架构判断</text>
+  <text x="450" y="66" text-anchor="middle" font-size="14" fill="#3D4F65">Agent 利用问题特性做专用优化，而非调用通用模块</text>
+
+  <!-- LEFT: Generic approach -->
+  <g>
+    <rect x="50" y="110" width="340" height="200" rx="12" fill="#F3F0EA" stroke="#B8A98A" stroke-width="1.5"/>
+    <text x="220" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#8A6A3B">DC 1.0 · 照菜谱</text>
+
+    <rect x="80" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#B8A98A"/>
+    <text x="145" y="190" text-anchor="middle" font-size="13" fill="#3D4F65">通用 exp 单元</text>
+    <text x="145" y="210" text-anchor="middle" font-size="11" fill="#6B7A8F">覆盖全部输入</text>
+
+    <rect x="230" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#B8A98A"/>
+    <text x="295" y="190" text-anchor="middle" font-size="13" fill="#3D4F65">布线后才发现</text>
+    <text x="295" y="210" text-anchor="middle" font-size="11" fill="#6B7A8F">跨 die 延迟爆炸</text>
+
+    <text x="220" y="280" text-anchor="middle" font-size="12" fill="#8A6A3B">→ 延迟高、频率低、返工多</text>
+  </g>
+
+  <!-- RIGHT: First-principles -->
+  <g>
+    <rect x="510" y="110" width="340" height="200" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="680" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">DC 2.0 · 看食材调火候</text>
+
+    <rect x="540" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="605" y="186" text-anchor="middle" font-size="13" fill="#1E3A5F">特化 exp 单元</text>
+    <text x="605" y="206" text-anchor="middle" font-size="11" fill="#3D4F65">贴合 softmax 分布</text>
+
+    <rect x="690" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="755" y="186" text-anchor="middle" font-size="13" fill="#1E3A5F">架构阶段即</text>
+    <text x="755" y="206" text-anchor="middle" font-size="11" fill="#3D4F65">规避跨 SLR 信号</text>
+
+    <text x="680" y="280" text-anchor="middle" font-size="12" fill="#1E3A5F">→ 更快、更省资源、一次到位</text>
+  </g>
+
+  <!-- VS -->
+  <circle cx="450" cy="210" r="26" fill="#1E3A5F"/>
+  <text x="450" y="217" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">VS</text>
+
+  <!-- Bottom: Evidence box -->
+  <rect x="60" y="350" width="780" height="180" rx="14" fill="#FDF6EE" stroke="#C97C5D" stroke-width="1.8"/>
+  <text x="450" y="380" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">实例：FP32 加减法单元（KU5P-3）</text>
+
+  <!-- Agent node -->
+  <rect x="90" y="405" width="170" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="175" y="435" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Agent</text>
+  <text x="175" y="457" text-anchor="middle" font-size="11" fill="#3D4F65">生成多套 TCL 脚本</text>
+  <text x="175" y="473" text-anchor="middle" font-size="11" fill="#3D4F65">后端策略 grid search</text>
+
+  <!-- arrow -->
+  <line x1="262" y1="450" x2="345" y2="450" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="303" y="440" text-anchor="middle" font-size="11" fill="#3D4F65">挑最优</text>
+
+  <!-- Result node -->
+  <rect x="355" y="405" width="220" height="90" rx="10" fill="#FFFFFF" stroke="#C97C5D"/>
+  <text x="465" y="432" text-anchor="middle" font-size="13" fill="#1E3A5F">896 MHz · 11 级流水</text>
+  <text x="465" y="454" text-anchor="middle" font-size="13" fill="#1E3A5F">437 LUT</text>
+  <text x="465" y="478" text-anchor="middle" font-size="11" fill="#8A5A3B">自主架构决策结果</text>
+
+  <!-- vs Xilinx -->
+  <line x1="577" y1="450" x2="655" y2="450" stroke="#C97C5D" stroke-width="2.2" marker-end="url(#arR)"/>
+  <text x="616" y="440" text-anchor="middle" font-size="11" fill="#8A5A3B">超越</text>
+
+  <rect x="665" y="410" width="155" height="80" rx="10" fill="#F3F0EA" stroke="#B8A98A"/>
+  <text x="742" y="440" text-anchor="middle" font-size="13" font-weight="600" fill="#3D4F65">Xilinx 官方 IP</text>
+  <text x="742" y="462" text-anchor="middle" font-size="11" fill="#6B7A8F">基准时钟频率</text>
+</svg>

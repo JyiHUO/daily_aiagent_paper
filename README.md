@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-06
+- **日期**：2026-05-07
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents
-  - What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis
-  - Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies
-- **日报路径**：[2026-05-06/daily_report.md](2026-05-06/daily_report.md)
+  - DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents
+  - Design Conductor 2.0: An agent builds a TurboQuant inference accelerator in 80 hours
+  - LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents
+- **日报路径**：[2026-05-07/daily_report.md](2026-05-07/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-07 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | DecodingTrust-Agent Platform (DTap): A Controllable and Interactive Red-Teaming Platform for AI Agents | [2026-05-07/daily_report.md](2026-05-07/daily_report.md) |
+|  |  |  | 2 | Design Conductor 2.0: An agent builds a TurboQuant inference accelerator in 80 hours |  |
+|  |  |  | 3 | LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents |  |
 | 2026-05-06 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents | [2026-05-06/daily_report.md](2026-05-06/daily_report.md) |
 |  |  |  | 2 | What Happens Inside Agent Memory? Circuit Analysis from Emergence to Diagnosis |  |
 |  |  |  | 3 | Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies |  |

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#F7FAFC"/>
+
+  <text x="450" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1E3A5F">Context-ReAct：让 Agent 自己整理备忘录</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">把 (r, c, o) 升级为 (r, M, c, o)，整理动作与推理同出一次生成</text>
+
+  <!-- Top: Classic ReAct -->
+  <g>
+    <text x="60" y="92" font-size="13" font-weight="700" fill="#1E3A5F">经典 ReAct</text>
+    <rect x="60" y="102" width="110" height="54" rx="8" fill="#FDECEC" stroke="#E57373" stroke-width="1.5"/>
+    <text x="115" y="126" text-anchor="middle" font-size="12" fill="#1E3A5F">think  r</text>
+    <text x="115" y="144" text-anchor="middle" font-size="12" fill="#1E3A5F">call    c</text>
+
+    <path d="M170 129 L210 129" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+    <rect x="215" y="102" width="110" height="54" rx="8" fill="#FDECEC" stroke="#E57373" stroke-width="1.5"/>
+    <text x="270" y="134" text-anchor="middle" font-size="12" fill="#1E3A5F">obs  o</text>
+
+    <path d="M325 129 L365 129" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+    <rect x="370" y="97" width="380" height="64" rx="8" fill="#FFF4E6" stroke="#E0A96D" stroke-width="1.5"/>
+    <text x="560" y="122" text-anchor="middle" font-size="12" fill="#1E3A5F">历史 H ← H + (r, c, o)</text>
+    <text x="560" y="144" text-anchor="middle" font-size="11" fill="#8A5A2B">上下文不断累加 → 又长又噪 → 爆窗口</text>
+
+    <text x="770" y="137" font-size="28" fill="#E57373">⚠</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="182" x2="840" y2="182" stroke="#CBD5E0" stroke-dasharray="5,5"/>
+
+  <!-- Bottom: Context-ReAct -->
+  <g>
+    <text x="60" y="208" font-size="13" font-weight="700" fill="#1E3A5F">Context-ReAct（本文）</text>
+
+    <!-- Single autoregressive box -->
+    <rect x="60" y="222" width="300" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="210" y="244" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">一次自回归生成</text>
+
+    <rect x="78" y="258" width="264" height="32" rx="6" fill="#FFFFFF" stroke="#A9C7EC"/>
+    <text x="210" y="278" text-anchor="middle" font-size="12" fill="#3D4F65">&lt;think&gt; 推理 r &lt;/think&gt;</text>
+
+    <rect x="78" y="296" width="264" height="46" rx="6" fill="#FFF9DB" stroke="#D4B254"/>
+    <text x="210" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#8A6A1F">&lt;meta-tool&gt; M</text>
+    <text x="210" y="332" text-anchor="middle" font-size="11" fill="#8A6A1F">compress 1–4,  delete 6</text>
+
+    <rect x="78" y="348" width="264" height="32" rx="6" fill="#FFFFFF" stroke="#A9C7EC"/>
+    <text x="210" y="368" text-anchor="middle" font-size="12" fill="#3D4F65">&lt;motivation&gt; 为啥这么整理</text>
+
+    <rect x="78" y="386" width="264" height="38" rx="6" fill="#E6F4EA" stroke="#6FB07F"/>
+    <text x="210" y="410" text-anchor="middle" font-size="12" font-weight="700" fill="#256A3E">&lt;tool-call&gt; search-web(...) c</text>
+
+    <!-- Arrow: M acts on H -->
+    <path d="M360 320 L445 320" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+    <text x="402" y="311" text-anchor="middle" font-size="11" fill="#1E3A5F">M 先作用</text>
+
+    <!-- History H -> H' -->
+    <rect x="450" y="240" width="160" height="100" rx="8" fill="#FDECEC" stroke="#E57373"/>
+    <text x="530" y="260" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">旧历史 H</text>
+    <rect x="464" y="270" width="132" height="10" rx="2" fill="#E8B4B4"/>
+    <rect x="464" y="284" width="132" height="10" rx="2" fill="#E8B4B4"/>
+    <rect x="464" y="298" width="132" height="10" rx="2" fill="#E8B4B4"/>
+    <rect x="464" y="312" width="132" height="10" rx="2" fill="#E8B4B4"/>
+
+    <path d="M615 290 L665 290" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+    <rect x="670" y="240" width="170" height="100" rx="8" fill="#E6F4EA" stroke="#6FB07F"/>
+    <text x="755" y="260" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">新工作上下文 H′</text>
+    <rect x="686" y="270" width="138" height="8" rx="2" fill="#B5D8BF"/>
+    <rect x="686" y="284" width="90" height="8" rx="2" fill="#B5D8BF"/>
+    <rect x="686" y="298" width="60" height="8" rx="2" fill="#B5D8BF"/>
+    <text x="755" y="322" text-anchor="middle" font-size="10" fill="#256A3E">压缩 / 删除后</text>
+
+    <!-- Tool call feeds into env with H' -->
+    <path d="M342 405 C 520 405, 700 385, 755 345" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+    <text x="560" y="425" text-anchor="middle" font-size="11" fill="#3D4F65">下一轮环境基于 H′ 执行工具</text>
+
+    <!-- Five atomic ops -->
+    <rect x="450" y="362" width="390" height="80" rx="8" fill="#F0E8FA" stroke="#9B7FC4"/>
+    <text x="645" y="384" text-anchor="middle" font-size="12" font-weight="700" fill="#4A2E7A">5 个可学习的元操作 M</text>
+    <text x="645" y="406" text-anchor="middle" font-size="12" fill="#4A2E7A">Skip · Compress · Rollback · Snippet · Delete</text>
+    <text x="645" y="426" text-anchor="middle" font-size="10.5" fill="#6B5A85">无需外部阈值，由策略自己决定</text>
+  </g>
+
+  <text x="450" y="490" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">上下文管理 = Agent 策略的一等公民</text>
+  <text x="450" y="512" text-anchor="middle" font-size="12" fill="#3D4F65">BrowseComp 61.5%  ·  超过 Tongyi DeepResearch (43.2%) / AgentFold (36.2%)</text>
+</svg>

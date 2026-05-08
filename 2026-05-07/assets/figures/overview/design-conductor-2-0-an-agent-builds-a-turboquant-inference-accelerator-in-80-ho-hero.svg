@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="-apple-system,Helvetica Neue,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F9FD"/>
+      <stop offset="1" stop-color="#EAF0F8"/>
+    </linearGradient>
+    <linearGradient id="coreG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E5A8C"/>
+      <stop offset="1" stop-color="#4B8BDA"/>
+    </linearGradient>
+    <linearGradient id="chipG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DE"/>
+      <stop offset="1" stop-color="#FFE0B3"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A3C"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7A8F"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">Design Conductor 2.0 · 从一篇论文到一颗流片级芯片</text>
+  <text x="640" y="76" text-anchor="middle" font-size="14" fill="#3D4F65">多Agent harness 自主完成 架构 → RTL → 验证 → 综合 → P&amp;R，80 小时产出 VerTQ 推理加速器</text>
+
+  <!-- Stage labels -->
+  <g font-size="10" fill="#6B7A8F">
+    <text x="155" y="112" text-anchor="middle">① 规格</text>
+    <text x="640" y="112" text-anchor="middle">② 自主设计</text>
+    <text x="1125" y="112" text-anchor="middle">③ 可流片的硬件</text>
+  </g>
+
+  <!-- LEFT: Input -->
+  <g>
+    <rect x="40" y="135" width="230" height="205" rx="12" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="155" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">输入（仅 1 页规格）</text>
+    <text x="60" y="190" font-size="12" fill="#3D4F65">• TurboQuant arXiv 论文</text>
+    <text x="60" y="212" font-size="12" fill="#3D4F65">• Python 参考实现</text>
+    <text x="60" y="234" font-size="12" fill="#3D4F65">• 自然语言需求：</text>
+    <text x="76" y="254" font-size="11" fill="#6B7A8F">目标 FPGA: XCVU29P-3, 125 MHz</text>
+    <text x="76" y="272" font-size="11" fill="#6B7A8F">模型: Qwen3-4B</text>
+    <text x="76" y="290" font-size="11" fill="#6B7A8F">KV 压缩: 3-bit PQ + 1-bit QJL</text>
+    <text x="76" y="308" font-size="11" fill="#6B7A8F">FP16 KV cache</text>
+    <text x="76" y="326" font-size="11" fill="#6B7A8F">ctx = 64 对齐</text>
+  </g>
+
+  <!-- RIGHT: Output chip -->
+  <g>
+    <rect x="1010" y="135" width="230" height="205" rx="12" fill="url(#chipG)" stroke="#E08A3C" stroke-width="1.5"/>
+    <text x="1125" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#7A4A12">产出：VerTQ 加速器</text>
+    <rect x="1040" y="178" width="170" height="105" rx="4" fill="#FFE6BF" stroke="#B7751F"/>
+    <g stroke="#B7751F" stroke-width="0.8" fill="none">
+      <line x1="1040" y1="204" x2="1210" y2="204"/>
+      <line x1="1040" y1="231" x2="1210" y2="231"/>
+      <line x1="1040" y1="257" x2="1210" y2="257"/>
+    </g>
+    <text x="1125" y="197" text-anchor="middle" font-size="10" fill="#7A4A12">SLR0</text>
+    <text x="1125" y="223" text-anchor="middle" font-size="10" fill="#7A4A12">SLR1 · FlashAttn</text>
+    <text x="1125" y="250" text-anchor="middle" font-size="10" fill="#7A4A12">SLR2 · K/V 压缩</text>
+    <text x="1125" y="276" text-anchor="middle" font-size="10" fill="#7A4A12">4th SLR 避用</text>
+    <text x="1125" y="304" text-anchor="middle" font-size="11" fill="#7A4A12">240 周期流水 · 5129 FP16/32 单元</text>
+    <text x="1125" y="322" text-anchor="middle" font-size="11" fill="#7A4A12">TSMC 16FF · 5.7 mm² · 125 MHz</text>
+  </g>
+
+  <!-- arrows in/out to core -->
+  <path d="M270,235 L395,235" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M885,235 L1010,235" stroke="#E08A3C" stroke-width="2" fill="none" marker-end="url(#arO)"/>
+
+  <!-- CORE: multi-agent harness -->
+  <g>
+    <rect x="395" y="130" width="490" height="355" rx="16" fill="#4B8BDA" opacity="0.07"/>
+    <rect x="395" y="130" width="490" height="355" rx="16" fill="none" stroke="#2E5A8C" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="640" y="154" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Design Conductor 2.0 · 多Agent Harness</text>
+
+    <!-- 4 pillars -->
+    <g font-size="10.5" fill="#1E3A5F">
+      <rect x="410" y="168" width="108" height="44" rx="6" fill="#FFFFFF" stroke="#B9CEE8"/>
+      <text x="464" y="186" text-anchor="middle" font-weight="600">上下文管理</text>
+      <text x="464" y="202" text-anchor="middle" font-size="9.5" fill="#6B7A8F">prefix 命中</text>
+
+      <rect x="525" y="168" width="108" height="44" rx="6" fill="#FFFFFF" stroke="#B9CEE8"/>
+      <text x="579" y="186" text-anchor="middle" font-weight="600">子会话编排</text>
+      <text x="579" y="202" text-anchor="middle" font-size="9.5" fill="#6B7A8F">任务结构化</text>
+
+      <rect x="647" y="168" width="108" height="44" rx="6" fill="#FFFFFF" stroke="#B9CEE8"/>
+      <text x="701" y="186" text-anchor="middle" font-weight="600">跨会话记忆</text>
+      <text x="701" y="202" text-anchor="middle" font-size="9.5" fill="#6B7A8F">月级项目状态</text>
+
+      <rect x="762" y="168" width="108" height="44" rx="6" fill="#FFFFFF" stroke="#B9CEE8"/>
+      <text x="816" y="186" text-anchor="middle" font-weight="600">领域知识注入</text>
+      <text x="816" y="202" text-anchor="middle" font-size="9.5" fill="#6B7A8F">EDA / RTL</text>
+    </g>
+
+    <!-- Architect agent center -->
+    <circle cx="640" cy="265" r="52" fill="url(#coreG)"/>
+    <text x="640" y="260" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">首席架构 Agent</text>
+    <text x="640" y="278" text-anchor="middle" font-size="10" fill="#DCE8F7">拆分 · 调度 · 集成</text>
+
+    <!-- sub agents -->
+    <g>
+      <rect x="418" y="335" width="135" height="58" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="485" y="356" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">K/V 压缩子Agent</text>
+      <text x="485" y="374" text-anchor="middle" font-size="10" fill="#3D4F65">PQ · QJL 量化</text>
+      <text x="485" y="388" text-anchor="middle" font-size="10" fill="#3D4F65">RTL + 单元验证</text>
+    </g>
+    <g>
+      <rect x="572" y="335" width="135" height="58" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="640" y="356" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">FlashAttention</text>
+      <text x="640" y="374" text-anchor="middle" font-size="10" fill="#3D4F65">online softmax</text>
+      <text x="640" y="388" text-anchor="middle" font-size="10" fill="#3D4F65">特化 exp 单元</text>
+    </g>
+    <g>
+      <rect x="726" y="335" width="135" height="58" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="793" y="356" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">集成/验证子Agent</text>
+      <text x="793" y="374" text-anchor="middle" font-size="10" fill="#3D4F65">vLLM 端到端</text>
+      <text x="793" y="388" text-anchor="middle" font-size="10" fill="#3D4F65">36 层 Qwen3-4B</text>
+    </g>
+
+    <!-- lines architect -> subs -->
+    <path d="M605,305 L500,335" stroke="#4B8BDA" stroke-width="1.3" fill="none" marker-end="url(#ar)"/>
+    <path d="M640,317 L640,335" stroke="#4B8BDA" stroke-width="1.3" fill="none" marker-end="url(#ar)"/>
+    <path d="M675,305 L780,335" stroke="#4B8BDA" stroke-width="1.3" fill="none" marker-end="url(#ar)"/>
+
+    <!-- token pie line -->
+    <g transform="translate(412,415)">
+      <text x="0" y="0" font-size="11" fill="#1E3A5F" font-weight="600">Token 消耗画像</text>
+      <rect x="0" y="10" width="28" height="14" fill="#A8C3E4"/>
+      <rect x="28" y="10" width="125" height="14" fill="#7DA8D9"/>
+      <rect x="153" y="10" width="145" height="14" fill="#4B8BDA"/>
+      <rect x="298" y="10" width="148" height="14" fill="#2E5A8C"/>
+      <text x="14" y="44" text-anchor="middle" font-size="9.5" fill="#3D4F65">架构 6%</text>
+      <text x="90" y="44" text-anchor="middle" font-size="9.5" fill="#3D4F65">底层模块 28%</text>
+      <text x="225" y="44" text-anchor="middle" font-size="9.5" fill="#3D4F65">高层模块 33%</text>
+      <text x="372" y="44" text-anchor="middle" font-size="9.5" fill="#3D4F65">集成/验证 33%</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM: Closed-loop feedback from EDA -->
+  <g>
+    <rect x="40" y="530" width="1200" height="155" rx="14" fill="#FFFFFF" stroke="#6B7A8F" stroke-width="1"/>
+    <text x="640" y="556" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">闭环反馈：EDA 工具链的时序 / PPA 反向驱动架构重构</text>
+
+    <g font-size="11.5" fill="#1E3A5F">
+      <rect x="70" y="578" width="140" height="82" rx="8" fill="#F0F4FA" stroke="#4B8BDA"/>
+      <text x="140" y="602" text-anchor="middle" font-weight="600">综合</text>
+      <text x="140" y="622" text-anchor="middle" font-size="10" fill="#3D4F65">Yosys / DC</text>
+      <text x="140" y="640" text-anchor="middle" font-size="10" fill="#3D4F65">面积 / 时序估计</text>
+
+      <rect x="232" y="578" width="140" height="82" rx="8" fill="#F0F4FA" stroke="#4B8BDA"/>
+      <text x="302" y="602" text-anchor="middle" font-weight="600">Place &amp; Route</text>
+      <text x="302" y="622" text-anchor="middle" font-size="10" fill="#3D4F65">Vivado · 跨SLR</text>
+      <text x="302" y="640" text-anchor="middle" font-size="10" fill="#3D4F65">拥塞报告</text>
+
+      <rect x="394" y="578" width="140" height="82" rx="8" fill="#F0F4FA" stroke="#4B8BDA"/>
+      <text x="464" y="602" text-anchor="middle" font-weight="600">时序分析</text>
+      <text x="464" y="622" text-anchor="middle" font-size="10" fill="#3D4F65">critical path</text>
+      <text x="464" y="640" text-anchor="middle" font-size="10" fill="#3D4F65">slack 报告</text>
+
+      <rect x="556" y="578" width="165" height="82" rx="8" fill="#FFF1E4" stroke="#E08A3C"/>
+      <text x="638" y="600" text-anchor="middle" font-weight="600" fill="#7A4A12">架构级重构决策</text>
+      <text x="638" y="620" text-anchor="middle" font-size="10" fill="#7A4A12">7nm ASIC → 60级 S-Box</text>
+      <text x="638" y="636" text-anchor="middle" font-size="10" fill="#7A4A12">FPGA → LUT6 映射</text>
+      <text x="638" y="652" text-anchor="middle" font-size="9.5" fill="#B7751F">同一 repo，两份 RTL</text>
+
+      <rect x="743" y="578" width="165" height="82" rx="8" fill="#EAF6EE" stroke="#3E8E5A"/>
+      <text x="825" y="600" text-anchor="middle" font-weight="600" fill="#1E5A35">一阶原理优化</text>
+      <text x="825" y="620" text-anchor="middle" font-size="10" fill="#2E6E45">softmax 输入分布</text>
+      <text x="825" y="636" text-anchor="middle" font-size="10" fill="#2E6E45">五阶 Taylor+Horner</text>
+      <text x="825" y="652" text-anchor="middle" font-size="9.5" fill="#2E6E45">特化 exp 单元</text>
+
+      <rect x="930" y="578" width="140" height="82" rx="8" fill="#F0F4FA" stroke="#4B8BDA"/>
+      <text x="1000" y="602" text-anchor="middle" font-weight="600">vLLM 端到端</text>
+      <text x="1000" y="622" text-anchor="middle" font-size="10" fill="#3D4F65">功能等价验证</text>
+      <text x="1000" y="640" text-anchor="middle" font-size="10" fill="#3D4F65">ctx = 64 对齐</text>
+
+      <rect x="1092" y="578" width="128" height="82" rx="8" fill="#FFF1E4" stroke="#E08A3C"/>
+      <text x="1156" y="600" text-anchor="middle" font-weight="600" fill="#7A4A12">回灌架构</text>
+      <text x="1156" y="620" text-anchor="middle" font-size="10" fill="#7A4A12">时序 / PPA</text>
+      <text x="1156" y="636" text-anchor="middle" font-size="10" fill="#7A4A12">触发重写</text>
+      <text x="1156" y="652" text-anchor="middle" font-size="9.5" fill="#B7751F">refactor ≈ 零成本</text>
+    </g>
+
+    <!-- feedback flow arrows -->
+    <path d="M210,619 L232,619" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+    <path d="M372,619 L394,619" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+    <path d="M534,619 L556,619" stroke="#E08A3C" stroke-width="1.8" fill="none" marker-end="url(#arO)"/>
+    <path d="M721,619 L743,619" stroke="#3E8E5A" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+    <path d="M908,619 L930,619" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+    <path d="M1070,619 L1092,619" stroke="#E08A3C" stroke-width="1.6" fill="none" marker-end="url(#arO)"/>
+  </g>
+
+  <!-- Core -> feedback (down arrow) -->
+  <path d="M640,485 L640,528" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="650" y="510" font-size="10" fill="#3D4F65">生成 RTL</text>
+
+  <!-- Feedback -> Core (return up arrow, closed loop) -->
+  <path d="M1156,578 C1156,510 1050,490 885,490" stroke="#E08A3C" stroke-width="2" fill="none" marker-end="url(#arO)" stroke-dasharray="5 3"/>
+  <text x="1020" y="505" font-size="10" fill="#7A4A12">反馈重写架构</text>
+
+  <!-- Bottom takeaway -->
+  <text x="640" y="715" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">核心机制：agent 把 refactor 成本压到接近零 — 换工艺、换目标频率 = 重新设计，而不再是灾难</text>
+  <text x="640" y="740" text-anchor="middle" font-size="12" fill="#3D4F65">相较 1.0：任务规模 ×80，从 12h RISC-V CPU → 80h 全定制 LLM 推理加速器（含架构探索）</text>
+  <text x="640" y="762" text-anchor="middle" font-size="11" fill="#6B7A8F">对比传统流程：18–36 个月 · 数百人 · &gt; 4 亿美元   ⇒   80 小时 · 1 个 agent harness · 全自主</text>
+</svg>

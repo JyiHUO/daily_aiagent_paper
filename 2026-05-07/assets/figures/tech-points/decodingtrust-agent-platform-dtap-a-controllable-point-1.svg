@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A5F">影子互联网：50+ 真实环境红队沙箱</text>
+  <text x="450" y="65" text-anchor="middle" font-size="14" fill="#3D4F65">长得像真货 · 随便搞破坏 · 一键回滚</text>
+
+  <!-- Red Team Agent (left) -->
+  <rect x="40" y="230" width="170" height="130" rx="12" fill="#FFF1EC" stroke="#D97757" stroke-width="2"/>
+  <text x="125" y="262" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">🎯 红队 Agent</text>
+  <text x="125" y="295" text-anchor="middle" font-size="12" fill="#3D4F65">自主探索攻击路径</text>
+  <text x="125" y="318" text-anchor="middle" font-size="12" fill="#3D4F65">注入恶意邮件 / 评论</text>
+  <text x="125" y="341" text-anchor="middle" font-size="12" fill="#3D4F65">4k+ 恶意目标</text>
+
+  <!-- Sandbox Box (center big) -->
+  <rect x="260" y="110" width="450" height="380" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="485" y="140" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">仿真沙箱 · 14 领域 / 50+ 环境</text>
+
+  <!-- Mini apps inside -->
+  <rect x="285" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="350" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">📧 Gmail</text>
+  <text x="350" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">收件箱 / 邮件注入</text>
+
+  <rect x="420" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="485" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">💳 PayPal</text>
+  <text x="485" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">转账 / 账户状态</text>
+
+  <rect x="555" y="160" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="620" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">💬 Slack</text>
+  <text x="620" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">频道 / 评论注入</text>
+
+  <rect x="285" y="245" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="350" y="273" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">📇 CRM</text>
+  <text x="350" y="295" text-anchor="middle" font-size="11" fill="#3D4F65">客户数据</text>
+
+  <rect x="420" y="245" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="485" y="273" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">📅 日历</text>
+  <text x="485" y="295" text-anchor="middle" font-size="11" fill="#3D4F65">邀请 / 日程</text>
+
+  <rect x="555" y="245" width="130" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="620" y="273" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">⋯ 50+</text>
+  <text x="620" y="295" text-anchor="middle" font-size="11" fill="#3D4F65">金融 / 办公 / 云</text>
+
+  <!-- Features strip -->
+  <rect x="285" y="340" width="400" height="130" rx="10" fill="#FFFFFF" stroke="#94B8D9" stroke-dasharray="4,3"/>
+  <text x="485" y="365" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">真实 MCP 工具 + GUI/HTML 1:1 复刻</text>
+
+  <circle cx="315" cy="397" r="5" fill="#4B8BDA"/>
+  <text x="330" y="401" font-size="12" fill="#3D4F65">快照重置 · 秒级回滚</text>
+
+  <circle cx="315" cy="425" r="5" fill="#4B8BDA"/>
+  <text x="330" y="429" font-size="12" fill="#3D4F65">动态状态 · 确定性转移</text>
+
+  <circle cx="315" cy="453" r="5" fill="#4B8BDA"/>
+  <text x="330" y="457" font-size="12" fill="#3D4F65">容器化 · 大规模并发</text>
+
+  <!-- Victim Agent (right) -->
+  <rect x="740" y="230" width="130" height="130" rx="12" fill="#F0F7EC" stroke="#6BA368" stroke-width="2"/>
+  <text x="805" y="268" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">🤖 目标 Agent</text>
+  <text x="805" y="305" text-anchor="middle" font-size="11" fill="#3D4F65">读邮件 · 调工具</text>
+  <text x="805" y="328" text-anchor="middle" font-size="11" fill="#3D4F65">真实反应可观测</text>
+
+  <!-- Arrows -->
+  <line x1="210" y1="280" x2="256" y2="280" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="233" y="270" text-anchor="middle" font-size="11" fill="#D97757">注入</text>
+
+  <line x1="710" y1="280" x2="736" y2="280" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Feedback loop -->
+  <path d="M 805 360 L 805 505 L 485 505 L 485 494" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="645" y="498" text-anchor="middle" font-size="11" fill="#3D4F65">行为回写 · 状态追溯</text>
+
+  <!-- Bottom conclusion -->
+  <text x="450" y="555" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">零真实后果 · 可复现评测 · 结果迁移回真实世界</text>
+</svg>
