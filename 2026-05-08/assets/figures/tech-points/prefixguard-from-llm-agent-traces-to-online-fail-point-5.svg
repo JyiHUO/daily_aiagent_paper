@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">DFA 监控器：能审计，但有边界</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">轨迹规整 → 紧凑可审计；行为发散 → 状态爆炸</text>
+
+  <!-- Source: traces -->
+  <g>
+    <rect x="50" y="150" width="180" height="100" rx="10" fill="#FFF4E6" stroke="#E0A86B" stroke-width="1.5"/>
+    <text x="140" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Agent Traces</text>
+    <text x="140" y="204" text-anchor="middle" font-size="12" fill="#3D4F65">hard symbol z_t</text>
+    <text x="140" y="224" text-anchor="middle" font-size="12" fill="#3D4F65">→ RPNI 抽取 DFA</text>
+  </g>
+
+  <!-- Arrow split -->
+  <path d="M230,185 L325,185" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M230,215 L325,410" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- GOOD case -->
+  <g>
+    <rect x="330" y="100" width="520" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="350" y="128" font-size="15" font-weight="700" fill="#1E3A5F">✓ 规整任务：紧凑 DFA，可拿去审计</text>
+
+    <!-- small DFA sketch -->
+    <g transform="translate(360,150)">
+      <circle cx="20" cy="50" r="16" fill="#DBEAFE" stroke="#1E3A5F"/>
+      <circle cx="90" cy="30" r="16" fill="#DBEAFE" stroke="#1E3A5F"/>
+      <circle cx="90" cy="80" r="16" fill="#DBEAFE" stroke="#1E3A5F"/>
+      <circle cx="160" cy="50" r="16" fill="#DBEAFE" stroke="#1E3A5F"/>
+      <circle cx="230" cy="30" r="16" fill="#FECACA" stroke="#B91C1C"/>
+      <circle cx="230" cy="80" r="16" fill="#DBEAFE" stroke="#1E3A5F"/>
+      <line x1="36" y1="46" x2="74" y2="34" stroke="#4B8BDA"/>
+      <line x1="36" y1="54" x2="74" y2="76" stroke="#4B8BDA"/>
+      <line x1="106" y1="34" x2="144" y2="46" stroke="#4B8BDA"/>
+      <line x1="106" y1="76" x2="144" y2="54" stroke="#4B8BDA"/>
+      <line x1="176" y1="46" x2="214" y2="34" stroke="#4B8BDA"/>
+      <line x1="176" y1="54" x2="214" y2="76" stroke="#4B8BDA"/>
+      <text x="230" y="34" text-anchor="middle" font-size="10" fill="#B91C1C" font-weight="700">!</text>
+    </g>
+
+    <text x="620" y="170" font-size="13" fill="#1E3A5F" font-weight="600">WebArena: 29 状态</text>
+    <text x="620" y="192" font-size="13" fill="#1E3A5F" font-weight="600">τ²-Bench: 20 状态</text>
+    <text x="620" y="220" font-size="12" fill="#3D4F65">覆盖 99.9% 前缀，仅 6 警告态</text>
+    <text x="620" y="250" font-size="12" fill="#2F855A" font-weight="700">→ 适合合规审计 / 复盘</text>
+  </g>
+
+  <!-- BAD case -->
+  <g>
+    <rect x="330" y="320" width="520" height="200" rx="12" fill="#FEF2F2" stroke="#DC6B6B" stroke-width="2"/>
+    <text x="350" y="348" font-size="15" font-weight="700" fill="#1E3A5F">✗ 发散任务：DFA 状态爆炸，AUPRC 掉</text>
+
+    <!-- messy DFA -->
+    <g transform="translate(360,370)" opacity="0.95">
+      <g fill="#FECACA" stroke="#B91C1C" stroke-width="1">
+        <circle cx="10" cy="20" r="5"/><circle cx="35" cy="8" r="5"/><circle cx="55" cy="35" r="5"/>
+        <circle cx="80" cy="15" r="5"/><circle cx="100" cy="50" r="5"/><circle cx="125" cy="25" r="5"/>
+        <circle cx="150" cy="60" r="5"/><circle cx="170" cy="10" r="5"/><circle cx="195" cy="40" r="5"/>
+        <circle cx="215" cy="70" r="5"/><circle cx="25" cy="70" r="5"/><circle cx="65" cy="80" r="5"/>
+        <circle cx="115" cy="90" r="5"/><circle cx="175" cy="85" r="5"/><circle cx="225" cy="20" r="5"/>
+        <circle cx="45" cy="55" r="5"/><circle cx="90" cy="75" r="5"/><circle cx="135" cy="65" r="5"/>
+      </g>
+      <g stroke="#B91C1C" stroke-width="0.8" opacity="0.6" fill="none">
+        <line x1="10" y1="20" x2="35" y2="8"/><line x1="35" y1="8" x2="55" y2="35"/>
+        <line x1="55" y1="35" x2="80" y2="15"/><line x1="80" y1="15" x2="100" y2="50"/>
+        <line x1="100" y1="50" x2="125" y2="25"/><line x1="125" y1="25" x2="150" y2="60"/>
+        <line x1="150" y1="60" x2="170" y2="10"/><line x1="170" y1="10" x2="195" y2="40"/>
+        <line x1="195" y1="40" x2="215" y2="70"/><line x1="25" y1="70" x2="65" y2="80"/>
+        <line x1="65" y1="80" x2="115" y2="90"/><line x1="115" y1="90" x2="175" y2="85"/>
+        <line x1="45" y1="55" x2="90" y2="75"/><line x1="90" y1="75" x2="135" y2="65"/>
+        <line x1="135" y1="65" x2="175" y2="85"/><line x1="170" y1="10" x2="225" y2="20"/>
+      </g>
+    </g>
+
+    <text x="620" y="395" font-size="13" fill="#1E3A5F" font-weight="600">SkillsBench: 151 状态</text>
+    <text x="620" y="417" font-size="13" fill="#1E3A5F" font-weight="600">TerminalBench: 187 状态</text>
+    <text x="620" y="445" font-size="12" fill="#3D4F65">CLI 行为太发散，AUPRC 明显损失</text>
+    <text x="620" y="475" font-size="12" fill="#B91C1C" font-weight="700">→ 仍需 GRU 神经在线打分</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="450" y="548" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">DFA 是诊断工具，不是神经监控器的替代品</text>
+</svg>

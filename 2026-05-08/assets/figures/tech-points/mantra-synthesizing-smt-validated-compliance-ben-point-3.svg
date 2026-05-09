@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">采样子图 = 难度旋钮</text>
+  <text x="440" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">手册依赖图 G_D 上的 coverage-islands 采样</text>
+
+  <!-- Manual dependency graph -->
+  <rect x="40" y="90" width="260" height="420" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="170" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">手册依赖图 G_D</text>
+  <text x="170" y="136" text-anchor="middle" font-size="11" fill="#3D4F65">节点=段落 · 边=引用</text>
+
+  <!-- Nodes cluster A (small island) -->
+  <circle cx="110" cy="200" r="22" fill="#FFD8A8" stroke="#D98B3A" stroke-width="2"/>
+  <text x="110" y="205" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">A</text>
+  <circle cx="170" cy="235" r="16" fill="#FFE8CC" stroke="#D98B3A"/>
+  <circle cx="90" cy="260" r="14" fill="#FFE8CC" stroke="#D98B3A"/>
+  <line x1="110" y1="222" x2="165" y2="230" stroke="#B5793A" stroke-width="1.5"/>
+  <line x1="110" y1="222" x2="95" y2="248" stroke="#B5793A" stroke-width="1.5"/>
+
+  <!-- Nodes cluster B -->
+  <circle cx="230" cy="340" r="22" fill="#C3DAFE" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="345" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">B</text>
+  <circle cx="180" cy="390" r="15" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <circle cx="250" cy="420" r="15" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <circle cx="130" cy="420" r="14" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <line x1="230" y1="360" x2="190" y2="380" stroke="#4B8BDA" stroke-width="1.5"/>
+  <line x1="230" y1="360" x2="245" y2="405" stroke="#4B8BDA" stroke-width="1.5"/>
+  <line x1="180" y1="400" x2="140" y2="415" stroke="#4B8BDA" stroke-width="1.5"/>
+
+  <!-- cross link A-B (dashed) -->
+  <line x1="170" y1="248" x2="215" y2="325" stroke="#9BA8BC" stroke-width="1.3" stroke-dasharray="4,3"/>
+
+  <!-- Arrows to cases -->
+  <path d="M300 220 Q 355 200 405 190" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M300 380 Q 355 400 405 410" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Case 1: small subgraph -->
+  <rect x="410" y="110" width="430" height="170" rx="12" fill="#FFF7EC" stroke="#D98B3A" stroke-width="1.8"/>
+  <text x="432" y="138" font-size="15" font-weight="700" fill="#1E3A5F">Case 1 · 小子图 → 简单任务</text>
+  <text x="432" y="160" font-size="12" fill="#3D4F65">只采到段落 A（标准履约）</text>
+
+  <rect x="432" y="180" width="130" height="36" rx="6" fill="#FFE8CC" stroke="#D98B3A"/>
+  <text x="497" y="203" text-anchor="middle" font-size="12" fill="#1E3A5F">check-inventory</text>
+  <line x1="562" y1="198" x2="598" y2="198" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <rect x="600" y="180" width="180" height="36" rx="6" fill="#FFE8CC" stroke="#D98B3A"/>
+  <text x="690" y="203" text-anchor="middle" font-size="12" fill="#1E3A5F">assign-warehouse-picker</text>
+
+  <text x="432" y="254" font-size="11" fill="#3D4F65">工具子集 T_S：2 步 · 单一规则</text>
+
+  <!-- Case 2: large subgraph -->
+  <rect x="410" y="310" width="430" height="210" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="432" y="338" font-size="15" font-weight="700" fill="#1E3A5F">Case 2 · 大跨段子图 → 复杂任务</text>
+  <text x="432" y="358" font-size="12" fill="#3D4F65">采到 A+B（库存不足转采购）</text>
+
+  <rect x="425" y="378" width="92" height="32" rx="6" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <text x="471" y="399" text-anchor="middle" font-size="11" fill="#1E3A5F">check-inventory</text>
+  <rect x="528" y="378" width="108" height="32" rx="6" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <text x="582" y="399" text-anchor="middle" font-size="11" fill="#1E3A5F">check-legacy-portal</text>
+  <rect x="647" y="378" width="120" height="32" rx="6" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <text x="707" y="399" text-anchor="middle" font-size="11" fill="#1E3A5F">create-purchase-order</text>
+
+  <rect x="520" y="440" width="130" height="32" rx="6" fill="#DCE7FB" stroke="#4B8BDA"/>
+  <text x="585" y="461" text-anchor="middle" font-size="11" fill="#1E3A5F">set-delivery-options</text>
+
+  <line x1="517" y1="394" x2="526" y2="394" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <line x1="636" y1="394" x2="645" y2="394" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <path d="M707 410 Q 707 435 652 445" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+
+  <text x="432" y="498" font-size="11" fill="#3D4F65">工具子集 T_S：多步组合 · 跨规则推理</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A6B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">TACT：在激活空间"轻推"一下，就少绕弯</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">SWE-bench Verified · Qwen3.5-27B</text>
+
+  <!-- Baseline -->
+  <g>
+    <rect x="60" y="100" width="360" height="170" rx="12" fill="#FDEEEA" stroke="#C97A6B" stroke-width="1.5"/>
+    <text x="240" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Baseline (no steering)</text>
+
+    <!-- winding path -->
+    <path d="M90,200 Q140,150 180,200 T270,200 T380,200" stroke="#C97A6B" stroke-width="2.5" fill="none" marker-end="url(#arR)"/>
+    <circle cx="90" cy="200" r="5" fill="#1E3A5F"/>
+    <text x="90" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">bug</text>
+    <text x="385" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">patch</text>
+
+    <text x="240" y="258" text-anchor="middle" font-size="13" fill="#8A3B2B" font-weight="600">67.0%  ·  75.2 steps</text>
+  </g>
+
+  <!-- TACT -->
+  <g>
+    <rect x="480" y="100" width="360" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="660" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">TACT-GATE (activation steering)</text>
+
+    <!-- straighter path -->
+    <path d="M510,200 Q620,188 720,196 T805,200" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+    <circle cx="510" cy="200" r="5" fill="#1E3A5F"/>
+    <text x="510" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">bug</text>
+    <text x="810" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">patch</text>
+
+    <text x="660" y="258" text-anchor="middle" font-size="13" fill="#1E4E8C" font-weight="600">73.3% (+6.3pp)  ·  65.3 steps</text>
+  </g>
+
+  <!-- Arrow between -->
+  <path d="M425,185 L475,185" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="450" y="178" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">hook</text>
+
+  <!-- Variants comparison -->
+  <rect x="60" y="310" width="780" height="140" rx="12" fill="#F5F7FB" stroke="#B8C7DC"/>
+  <text x="450" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">三种变体 · 一种零成本 hook</text>
+
+  <g font-size="12" fill="#3D4F65">
+    <!-- CAP -->
+    <rect x="90" y="355" width="220" height="80" rx="8" fill="#FFF7E8" stroke="#D9A441"/>
+    <text x="200" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">CAP · 限速带</text>
+    <text x="200" y="400" text-anchor="middle">少介入，最省步数</text>
+    <text x="200" y="420" text-anchor="middle" font-weight="600" fill="#8A6410">-26% steps (55.7)</text>
+
+    <!-- GATE -->
+    <rect x="340" y="355" width="220" height="80" rx="8" fill="#EAF3FC" stroke="#4B8BDA"/>
+    <text x="450" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GATE · 平衡</text>
+    <text x="450" y="400" text-anchor="middle">resolve 率最高</text>
+    <text x="450" y="420" text-anchor="middle" font-weight="600" fill="#1E4E8C">+6.3pp resolve</text>
+
+    <!-- vs AgentDebug -->
+    <rect x="590" y="355" width="220" height="80" rx="8" fill="#F0ECF7" stroke="#8B7AB8"/>
+    <text x="700" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">vs AgentDebug</text>
+    <text x="700" y="400" text-anchor="middle">无额外 LLM 调用</text>
+    <text x="700" y="420" text-anchor="middle" font-weight="600" fill="#5B4687">+3pp，步数 ×1.4↓</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="490" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">沿 overthinking / overacting 两轴正交投影，top-10 层注入残差流</text>
+  <text x="450" y="512" text-anchor="middle" font-size="12" fill="#3D4F65">→ 同一个 bug，少绕弯，更快命中正确 patch</text>
+</svg>

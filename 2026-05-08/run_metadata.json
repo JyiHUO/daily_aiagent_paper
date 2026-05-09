@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-08",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 681,
+  "selected_count": 3,
+  "focus_titles": [
+    "TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering",
+    "MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents",
+    "PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-08/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-08/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

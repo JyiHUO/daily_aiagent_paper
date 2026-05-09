@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7E57C2"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">双产物 + SMT 交叉验证</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">让 LLM 用两种方式描述同一条规则，交给 Z3 找矛盾</text>
+
+  <!-- Manual source -->
+  <rect x="370" y="86" width="160" height="58" rx="10" fill="#FEF3E8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="450" y="111" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">SOP 手册</text>
+  <text x="450" y="130" text-anchor="middle" font-size="11" fill="#3D4F65">一段自然语言规则</text>
+
+  <!-- Two branches -->
+  <line x1="408" y1="144" x2="240" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="492" y1="144" x2="660" y2="200" stroke="#7E57C2" stroke-width="2" marker-end="url(#arP)"/>
+
+  <!-- Left: Checks -->
+  <rect x="70" y="205" width="300" height="130" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="220" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">① Trace Checks（按顺序）</text>
+  <text x="220" y="249" text-anchor="middle" font-size="11" fill="#3D4F65">轨迹算子: call / precedes / follows</text>
+  <rect x="90" y="262" width="260" height="60" rx="6" fill="#FFFFFF" stroke="#B8CFE8"/>
+  <text x="220" y="284" text-anchor="middle" font-size="12" fill="#1E3A5F">check-inventory  precedes</text>
+  <text x="220" y="305" text-anchor="middle" font-size="12" fill="#3D4F65">assign-warehouse-picker</text>
+
+  <!-- Right: World Model -->
+  <rect x="530" y="205" width="300" height="130" rx="12" fill="#F0EAF8" stroke="#7E57C2" stroke-width="2"/>
+  <text x="680" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">② World Model（按条件）</text>
+  <text x="680" y="249" text-anchor="middle" font-size="11" fill="#3D4F65">DSL 状态 + 转移关系</text>
+  <rect x="550" y="262" width="260" height="60" rx="6" fill="#FFFFFF" stroke="#C9B8E0"/>
+  <text x="680" y="284" text-anchor="middle" font-size="12" fill="#1E3A5F">assign-picker 前置条件:</text>
+  <text x="680" y="305" text-anchor="middle" font-size="12" fill="#3D4F65">in-stock = true</text>
+
+  <!-- Arrows to SMT -->
+  <line x1="250" y1="335" x2="370" y2="398" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="335" x2="530" y2="398" stroke="#7E57C2" stroke-width="2" marker-end="url(#arP)"/>
+
+  <!-- Side label -->
+  <text x="450" y="378" text-anchor="middle" font-size="11" fill="#6B7F95" font-style="italic">两次独立翻译，比对差异</text>
+
+  <!-- SMT box -->
+  <rect x="310" y="402" width="280" height="82" rx="12" fill="#1E3A5F"/>
+  <text x="450" y="428" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">Z3 / SMT 求解器</text>
+  <text x="450" y="449" text-anchor="middle" font-size="11" fill="#B8CFE8">枚举长度 ≤ 16 的轨迹</text>
+  <text x="450" y="468" text-anchor="middle" font-size="11" fill="#B8CFE8">搜索只被一方接受的反例</text>
+
+  <!-- Output -->
+  <line x1="450" y1="484" x2="450" y2="513" stroke="#D97757" stroke-width="2.5" marker-end="url(#arR)"/>
+  <rect x="240" y="518" width="420" height="34" rx="8" fill="#FEF3E8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="450" y="540" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">矛盾轨迹 → 定位 check 漏洞 或 model 过严</text>
+</svg>

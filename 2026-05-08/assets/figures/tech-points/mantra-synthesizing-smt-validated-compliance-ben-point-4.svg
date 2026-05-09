@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">确定性 Trace 级评分</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">每条工具调用轨迹，用 grounded checks 逐条判定 · 可复现 · 可归因</text>
+
+  <!-- Agent trace -->
+  <rect x="40" y="100" width="250" height="340" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="165" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Agent Trace</text>
+
+  <rect x="60" y="150" width="210" height="38" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="75" y="174" font-size="13" fill="#3D4F65">① create_purchase_order(..)</text>
+
+  <rect x="60" y="200" width="210" height="38" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="75" y="224" font-size="13" fill="#3D4F65">② check_inventory(..)</text>
+
+  <rect x="60" y="250" width="210" height="38" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="75" y="274" font-size="13" fill="#3D4F65">③ notify_vendor(..)</text>
+
+  <rect x="60" y="300" width="210" height="38" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="75" y="324" font-size="13" fill="#3D4F65">④ confirm_order(..)</text>
+
+  <text x="165" y="378" text-anchor="middle" font-size="12" fill="#6B7A8F" font-style="italic">"还没读就急着写"</text>
+
+  <!-- Checks panel -->
+  <rect x="330" y="100" width="330" height="340" rx="10" fill="#FFF4EC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="495" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Trace-level Checks</text>
+
+  <rect x="348" y="150" width="294" height="44" rx="5" fill="#FFFFFF" stroke="#2E9966"/>
+  <text x="358" y="170" font-size="12" font-weight="700" fill="#2E9966">✓ call</text>
+  <text x="358" y="187" font-size="11" fill="#3D4F65">check_inventory 被调用</text>
+
+  <rect x="348" y="204" width="294" height="44" rx="5" fill="#FFFFFF" stroke="#D97757"/>
+  <text x="358" y="224" font-size="12" font-weight="700" fill="#D97757">✗ precedes</text>
+  <text x="358" y="241" font-size="11" fill="#3D4F65">check_inventory ≺ create_PO</text>
+
+  <rect x="348" y="258" width="294" height="44" rx="5" fill="#FFFFFF" stroke="#D97757"/>
+  <text x="358" y="278" font-size="12" font-weight="700" fill="#D97757">✗ after</text>
+  <text x="358" y="295" font-size="11" fill="#3D4F65">notify_vendor after confirm</text>
+
+  <rect x="348" y="312" width="294" height="44" rx="5" fill="#FFFFFF" stroke="#2E9966"/>
+  <text x="358" y="332" font-size="12" font-weight="700" fill="#2E9966">✓ no-call</text>
+  <text x="358" y="349" font-size="11" fill="#3D4F65">未调用 refund 工具</text>
+
+  <text x="495" y="395" text-anchor="middle" font-size="11" fill="#6B7A8F">算子: call / no-call / after / before / follows / precedes</text>
+  <text x="495" y="415" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">每条 check 100% 确定性判定</text>
+
+  <!-- Arrow from trace to checks -->
+  <line x1="290" y1="270" x2="328" y2="270" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#a)"/>
+
+  <!-- Diagnosis -->
+  <rect x="700" y="100" width="170" height="340" rx="10" fill="#F3ECFF" stroke="#7B5FC7" stroke-width="1.8"/>
+  <text x="785" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">失败归因</text>
+
+  <rect x="715" y="155" width="140" height="70" rx="6" fill="#FFFFFF" stroke="#7B5FC7"/>
+  <text x="785" y="182" text-anchor="middle" font-size="22" font-weight="700" fill="#D97757">76%</text>
+  <text x="785" y="202" text-anchor="middle" font-size="11" fill="#3D4F65">Missing-Required</text>
+  <text x="785" y="217" text-anchor="middle" font-size="11" fill="#3D4F65">+ Missing-Anchor</text>
+
+  <rect x="715" y="240" width="140" height="50" rx="6" fill="#FFFFFF" stroke="#7B5FC7"/>
+  <text x="785" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">漏调用? 顺序错?</text>
+  <text x="785" y="280" text-anchor="middle" font-size="11" fill="#6B7A8F">check 粒度细到单步</text>
+
+  <rect x="715" y="305" width="140" height="60" rx="6" fill="#FFFFFF" stroke="#7B5FC7"/>
+  <text x="785" y="328" text-anchor="middle" font-size="11" fill="#3D4F65">一眼定位</text>
+  <text x="785" y="346" text-anchor="middle" font-size="11" fill="#3D4F65">具体挂在哪一步</text>
+
+  <text x="785" y="400" text-anchor="middle" font-size="11" fill="#6B7A8F">可复现 · 可聚类</text>
+  <text x="785" y="418" text-anchor="middle" font-size="11" fill="#6B7A8F">无 LLM-judge 方差</text>
+
+  <line x1="662" y1="270" x2="698" y2="270" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#a)"/>
+
+  <!-- Footer comparison -->
+  <rect x="40" y="470" width="400" height="70" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-dasharray="4 3"/>
+  <text x="55" y="493" font-size="13" font-weight="700" fill="#D97757">✗ LLM-as-Judge</text>
+  <text x="55" y="513" font-size="11" fill="#3D4F65">打分方差大 · 长轨迹时序判断不可靠</text>
+  <text x="55" y="530" font-size="11" fill="#3D4F65">说不清到底错在哪一步</text>
+
+  <rect x="460" y="470" width="400" height="70" rx="8" fill="#FFFFFF" stroke="#2E9966" stroke-dasharray="4 3"/>
+  <text x="475" y="493" font-size="13" font-weight="700" fill="#2E9966">✓ MANTRA 确定性评分</text>
+  <text x="475" y="513" font-size="11" fill="#3D4F65">同一轨迹，每次评分完全一致</text>
+  <text x="475" y="530" font-size="11" fill="#3D4F65">细到单次调用与顺序，失败模式可归类</text>
+</svg>

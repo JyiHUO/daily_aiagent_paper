@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="calZone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D7F0E2"/>
+      <stop offset="1" stop-color="#B8E3CE"/>
+    </linearGradient>
+    <radialGradient id="drift" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FDE4CE"/>
+      <stop offset="1" stop-color="#F3C0A0" stop-opacity="0.3"/>
+    </radialGradient>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07A5F"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3BA776"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">TACT：在残差流里把"漂移中的 Coding Agent"拉回校准区</text>
+  <text x="640" y="78" text-anchor="middle" font-size="14" fill="#3D4F65">两条线性漂移轴 · 测试时激活转向 · 无需重训/重试，步数 ↓26%，resolve ↑6.3pp</text>
+
+  <!-- LEFT: Agent trajectory -->
+  <g>
+    <text x="40" y="128" font-size="15" font-weight="700" fill="#1E3A5F">长程 Coding Agent 轨迹</text>
+    <text x="40" y="148" font-size="12" fill="#6A7A8C">逐步 think → act，常在中途漂移</text>
+
+    <line x1="80" y1="200" x2="80" y2="520" stroke="#4B8BDA" stroke-dasharray="3,3" opacity="0.5"/>
+
+    <g font-size="11" fill="#1E3A5F">
+      <circle cx="80" cy="200" r="14" fill="#D8E6F5" stroke="#4B8BDA"/>
+      <text x="80" y="204" text-anchor="middle">t1</text>
+      <circle cx="80" cy="250" r="14" fill="#D8E6F5" stroke="#4B8BDA"/>
+      <text x="80" y="254" text-anchor="middle">t2</text>
+
+      <circle cx="80" cy="305" r="14" fill="#FBE3D4" stroke="#E07A5F"/>
+      <text x="80" y="309" text-anchor="middle">t3</text>
+      <text x="102" y="302" font-size="11" fill="#B04A2E">重复推理同一 bug 假设</text>
+      <text x="102" y="316" font-size="10" fill="#B04A2E" font-style="italic">overthinking</text>
+
+      <circle cx="80" cy="360" r="14" fill="#D8E6F5" stroke="#4B8BDA"/>
+      <text x="80" y="364" text-anchor="middle">t4</text>
+
+      <circle cx="80" cy="415" r="14" fill="#FBE3D4" stroke="#E07A5F"/>
+      <text x="80" y="419" text-anchor="middle">t5</text>
+      <text x="102" y="412" font-size="11" fill="#B04A2E">又 grep 已知的 QuerySet</text>
+      <text x="102" y="426" font-size="10" fill="#B04A2E" font-style="italic">overacting</text>
+
+      <circle cx="80" cy="470" r="14" fill="#D8E6F5" stroke="#4B8BDA"/>
+      <text x="80" y="474" text-anchor="middle">t6</text>
+      <circle cx="80" cy="520" r="14" fill="#D8E6F5" stroke="#4B8BDA"/>
+      <text x="80" y="524" text-anchor="middle">…</text>
+    </g>
+
+    <!-- extraction hook -->
+    <path d="M 95 305 Q 200 305 260 330" stroke="#E07A5F" stroke-width="1.8" fill="none" marker-end="url(#arrR)"/>
+    <path d="M 95 415 Q 200 415 260 400" stroke="#E07A5F" stroke-width="1.8" fill="none" marker-end="url(#arrR)"/>
+    <text x="180" y="355" font-size="11" fill="#3D4F65" text-anchor="middle">抽取 hidden state</text>
+    <text x="180" y="372" font-size="10" fill="#6A7A8C" text-anchor="middle">(在 &lt;/think&gt; 处)</text>
+  </g>
+
+  <!-- CENTER: Drift-axes space -->
+  <g transform="translate(340,170)">
+    <rect x="0" y="0" width="580" height="460" rx="18" fill="#FFFFFF" stroke="#C9D6E5"/>
+    <text x="290" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">激活空间中的两条漂移轴</text>
+    <text x="290" y="50" text-anchor="middle" font-size="12" fill="#6A7A8C">每层 hidden state 按标签线性可分，AUC ≈ 0.9</text>
+
+    <!-- axes background zones -->
+    <ellipse cx="290" cy="240" rx="210" ry="150" fill="url(#drift)" opacity="0.5"/>
+    <ellipse cx="290" cy="240" rx="72" ry="55" fill="url(#calZone)"/>
+
+    <!-- axes -->
+    <line x1="290" y1="240" x2="470" y2="110" stroke="#E07A5F" stroke-width="2.2" marker-end="url(#arrR)"/>
+    <text x="478" y="108" font-size="12" font-weight="700" fill="#B04A2E">v̂OT</text>
+    <text x="478" y="124" font-size="10" fill="#B04A2E">overthinking 方向</text>
+
+    <line x1="290" y1="240" x2="110" y2="370" stroke="#E07A5F" stroke-width="2.2" marker-end="url(#arrR)"/>
+    <text x="72" y="382" font-size="12" font-weight="700" fill="#B04A2E">v̂OA⊥</text>
+    <text x="45" y="398" font-size="10" fill="#B04A2E">overacting 方向 (正交化)</text>
+
+    <!-- calibrated cluster -->
+    <g fill="#2E8B5E">
+      <circle cx="275" cy="235" r="3"/>
+      <circle cx="295" cy="228" r="3"/>
+      <circle cx="305" cy="250" r="3"/>
+      <circle cx="280" cy="255" r="3"/>
+      <circle cx="298" cy="242" r="3"/>
+      <circle cx="285" cy="225" r="3"/>
+    </g>
+    <text x="290" y="288" font-size="11" font-weight="700" fill="#2E8B5E" text-anchor="middle">calibrated 区  µCAL ± τ·σCAL</text>
+
+    <!-- a drifted point + steering arrow -->
+    <circle cx="430" cy="145" r="6" fill="#E07A5F" stroke="#B04A2E" stroke-width="1.5"/>
+    <text x="440" y="138" font-size="10" fill="#B04A2E">第 t 步 +2.5σ</text>
+
+    <path d="M 426 148 Q 370 185 305 235" stroke="#3BA776" stroke-width="2.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrG)"/>
+    <text x="388" y="185" font-size="11" font-weight="700" fill="#2E8B5E">Steering：投影并拉回</text>
+
+    <!-- drifted OA point -->
+    <circle cx="160" cy="335" r="5" fill="#E07A5F" opacity="0.7"/>
+
+    <!-- strategies -->
+    <g transform="translate(20,340)">
+      <rect x="0" y="0" width="170" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="85" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">三种 Hook 策略</text>
+      <text x="12" y="42" font-size="10" fill="#3D4F65"><tspan font-weight="700" fill="#1E3A5F">CAP</tspan>：越界夹回带内</text>
+      <text x="12" y="58" font-size="10" fill="#3D4F65"><tspan font-weight="700" fill="#1E3A5F">ADD</tspan>：每步固定反向偏移</text>
+      <text x="12" y="74" font-size="10" fill="#3D4F65"><tspan font-weight="700" fill="#1E3A5F">GATE</tspan>：越界触发·λ 缩放</text>
+      <text x="12" y="92" font-size="9" fill="#6A7A8C">仅在 Top-10 关键层注册 hook</text>
+    </g>
+  </g>
+
+  <!-- Annotator (top right small panel) -->
+  <g transform="translate(950,110)">
+    <rect x="0" y="0" width="280" height="150" rx="12" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">三阶段标注 pipeline</text>
+    <text x="20" y="48" font-size="11" fill="#3D4F65">① State Maintainer：维护滚动 KnownFacts Kt</text>
+    <text x="20" y="72" font-size="11" fill="#3D4F65">② Verifier：审计幻觉 / 遗漏 / 矛盾</text>
+    <text x="20" y="96" font-size="11" fill="#3D4F65">③ Annotator：逐步贴 OT / OA / CAL 标签</text>
+    <text x="20" y="124" font-size="10" fill="#6A7A8C" font-style="italic">产出训练漂移轴 v̂OT / v̂OA 的监督信号</text>
+  </g>
+  <path d="M 760 230 Q 860 190 950 180" stroke="#4B8BDA" stroke-width="1.6" fill="none" stroke-dasharray="4,3" marker-end="url(#arrB)"/>
+
+  <!-- RIGHT: Results -->
+  <g transform="translate(950,300)">
+    <rect x="0" y="0" width="280" height="330" rx="14" fill="#FFFFFF" stroke="#C9D6E5"/>
+    <text x="140" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">可靠性收益</text>
+
+    <text x="20" y="54" font-size="11" fill="#3D4F65">SWE-bench Verified · Qwen3.5-27B</text>
+
+    <!-- resolve rate bars -->
+    <rect x="20" y="64" width="160" height="14" fill="#D5E0EC"/>
+    <rect x="20" y="64" width="107" height="14" fill="#8FB0D0"/>
+    <text x="188" y="75" font-size="10" fill="#6A7A8C">基线 67.0%</text>
+
+    <rect x="20" y="84" width="160" height="14" fill="#D5E0EC"/>
+    <rect x="20" y="84" width="117" height="14" fill="#3BA776"/>
+    <text x="188" y="95" font-size="10" fill="#2E8B5E" font-weight="700">TACT 73.3% (+6.3pp)</text>
+
+    <!-- steps -->
+    <text x="20" y="124" font-size="11" fill="#3D4F65">解题步数（越少越好）</text>
+    <rect x="20" y="132" width="160" height="14" fill="#D5E0EC"/>
+    <rect x="20" y="132" width="152" height="14" fill="#8FB0D0"/>
+    <text x="188" y="143" font-size="10" fill="#6A7A8C">基线 75.2</text>
+
+    <rect x="20" y="152" width="160" height="14" fill="#D5E0EC"/>
+    <rect x="20" y="152" width="112" height="14" fill="#3BA776"/>
+    <text x="188" y="163" font-size="10" fill="#2E8B5E" font-weight="700">CAP 55.7 (−26%)</text>
+
+    <line x1="20" y1="188" x2="260" y2="188" stroke="#D5E0EC"/>
+    <text x="20" y="210" font-size="11" font-weight="700" fill="#1E3A5F">vs. 行为层方法</text>
+    <text x="20" y="228" font-size="10" fill="#6A7A8C">Reflexion / Self-Refine / AgentDebug</text>
+    <text x="20" y="246" font-size="10" fill="#3D4F65">需额外 LLM 调用 &amp; retry，步数 1.4–1.7×</text>
+    <text x="20" y="262" font-size="10" fill="#3D4F65">收益仍低于 TACT</text>
+    <line x1="20" y1="278" x2="260" y2="278" stroke="#D5E0EC"/>
+
+    <text x="20" y="300" font-size="11" font-weight="700" fill="#1E3A5F">TACT 优势</text>
+    <text x="20" y="318" font-size="10" fill="#3D4F65">零重训 · 零 retry · 仅 forward hook</text>
+  </g>
+
+  <!-- Flow arrow center -> right results -->
+  <path d="M 920 430 Q 935 440 950 440" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arrB)"/>
+
+  <!-- Bottom banner -->
+  <g transform="translate(60,660)">
+    <rect x="0" y="0" width="1160" height="90" rx="12" fill="#1E3A5F"/>
+    <text x="30" y="32" font-size="14" font-weight="700" fill="#F7FAFD">核心洞见</text>
+    <text x="30" y="56" font-size="12" fill="#D5E0EC">Agent drift 不只是行为问题——它在残差流中是一个"可操纵的方向"。把 overthinking 和 overacting</text>
+    <text x="30" y="74" font-size="12" fill="#D5E0EC">画成两条正交轴，推理时实时投影 + 拉回，就能把长程 Coding Agent 的可靠性从 prompt 层下沉到 activation 层。</text>
+  </g>
+</svg>
