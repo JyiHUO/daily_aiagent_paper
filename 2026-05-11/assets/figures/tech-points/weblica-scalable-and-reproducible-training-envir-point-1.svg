@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#FAF7F2"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">给网站拍一张「可交互快照」</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">录一次 → 剥噪声 → 断网也能稳定重放</text>
+
+  <!-- Step 1: Record -->
+  <g>
+    <rect x="40" y="110" width="240" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="160" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">① 录制</text>
+    <text x="160" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">Playwright 浏一遍</text>
+    <rect x="62" y="178" width="196" height="28" rx="4" fill="#fff" stroke="#B8D4F0"/>
+    <text x="72" y="197" font-size="11" fill="#3D4F65">/search?q=cats&amp;t=111&amp;sess=abc</text>
+    <rect x="62" y="212" width="196" height="28" rx="4" fill="#fff" stroke="#B8D4F0"/>
+    <text x="72" y="231" font-size="11" fill="#3D4F65">/search?q=cats&amp;t=999&amp;sess=xyz</text>
+    <text x="160" y="266" text-anchor="middle" font-size="11" fill="#7A6A55">同 URL，参数却变了</text>
+  </g>
+
+  <!-- Step 2: Diff -->
+  <g>
+    <rect x="330" y="110" width="240" height="180" rx="12" fill="#FFF4E6" stroke="#E8A95C" stroke-width="2"/>
+    <text x="450" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">② 识别噪声参数</text>
+
+    <rect x="352" y="160" width="80" height="32" rx="6" fill="#D4F0D4" stroke="#5BA85B"/>
+    <text x="392" y="181" text-anchor="middle" font-size="13" fill="#1E3A5F">q ✓</text>
+
+    <rect x="442" y="160" width="50" height="32" rx="6" fill="#FCD9D9" stroke="#D86B6B"/>
+    <text x="467" y="181" text-anchor="middle" font-size="13" fill="#1E3A5F">t ✗</text>
+
+    <rect x="500" y="160" width="60" height="32" rx="6" fill="#FCD9D9" stroke="#D86B6B"/>
+    <text x="530" y="181" text-anchor="middle" font-size="13" fill="#1E3A5F">sess ✗</text>
+
+    <rect x="352" y="216" width="208" height="56" rx="6" fill="#fff" stroke="#E8A95C"/>
+    <text x="456" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">规则: exclude = (t, sess)</text>
+  </g>
+
+  <!-- Step 3: Replay -->
+  <g>
+    <rect x="620" y="110" width="240" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="740" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">③ 断网重放</text>
+    <text x="740" y="158" text-anchor="middle" font-size="12" fill="#3D4F65">只看 q=cats → 命中</text>
+
+    <rect x="642" y="174" width="196" height="100" rx="6" fill="#fff" stroke="#B8D4F0"/>
+    <text x="740" y="196" text-anchor="middle" font-size="11" fill="#7A6A55">📵 offline</text>
+    <text x="740" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">🐱 Cats Page</text>
+    <text x="740" y="252" text-anchor="middle" font-size="11" fill="#3D4F65">每次回放都一样</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="282" y1="200" x2="326" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="572" y1="200" x2="616" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Bottom outcome -->
+  <g>
+    <rect x="120" y="350" width="660" height="160" rx="14" fill="#1E3A5F"/>
+    <text x="450" y="386" text-anchor="middle" font-size="17" font-weight="700" fill="#FFE9B8">结果：可复现的训练环境</text>
+
+    <g transform="translate(170,410)">
+      <circle cx="20" cy="20" r="20" fill="#4B8BDA"/>
+      <text x="20" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">∞</text>
+      <text x="55" y="18" font-size="13" fill="#fff">不会超时</text>
+      <text x="55" y="36" font-size="13" fill="#fff">不会被反爬</text>
+    </g>
+
+    <g transform="translate(390,410)">
+      <circle cx="20" cy="20" r="20" fill="#4B8BDA"/>
+      <text x="20" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">=</text>
+      <text x="55" y="18" font-size="13" fill="#fff">每次回放</text>
+      <text x="55" y="36" font-size="13" fill="#fff">完全一致</text>
+    </g>
+
+    <g transform="translate(610,410)">
+      <circle cx="20" cy="20" r="20" fill="#E8A95C"/>
+      <text x="20" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">15K</text>
+      <text x="55" y="18" font-size="13" fill="#fff">筛出任务</text>
+      <text x="55" y="36" font-size="13" fill="#fff">可供 RL 训练</text>
+    </g>
+
+    <text x="450" y="490" text-anchor="middle" font-size="12" fill="#B8D4F0">仅保留「断网下也能完成」的会话 → 进入训练集</text>
+  </g>
+</svg>

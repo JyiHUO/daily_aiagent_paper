@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#F7FAFC"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">前沿模型零训练即可上手 Spell</text>
+  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">仅靠 system prompt + 文档，模型在上下文里学会这门小众 Lisp</text>
+
+  <!-- Left: Inputs -->
+  <g>
+    <rect x="40" y="110" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Spell 文档</text>
+    <text x="140" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">塞进 system prompt</text>
+    <text x="140" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">零微调 / 零训练</text>
+  </g>
+
+  <!-- Center: 5 models -->
+  <g>
+    <rect x="300" y="100" width="280" height="220" rx="12" fill="#FFF4E6" stroke="#E89B4A" stroke-width="1.5"/>
+    <text x="440" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">5 个前沿大模型 (32 任务子集)</text>
+
+    <rect x="318" y="140" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
+    <text x="330" y="159" font-size="12" fill="#1E3A5F">GPT-5.4</text>
+    <text x="550" y="159" text-anchor="end" font-size="12" font-weight="700" fill="#2F855A">最佳 / 零致命错</text>
+
+    <rect x="318" y="174" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
+    <text x="330" y="193" font-size="12" fill="#1E3A5F">Claude Opus 4.6</text>
+    <text x="550" y="193" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+
+    <rect x="318" y="208" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
+    <text x="330" y="227" font-size="12" fill="#1E3A5F">GLM-5.1</text>
+    <text x="550" y="227" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+
+    <rect x="318" y="242" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
+    <text x="330" y="261" font-size="12" fill="#1E3A5F">Kimi-K2.6</text>
+    <text x="550" y="261" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+
+    <rect x="318" y="276" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
+    <text x="330" y="295" font-size="12" fill="#1E3A5F">Qwen3.6 Plus</text>
+    <text x="550" y="295" text-anchor="end" font-size="12" fill="#B45309">较弱（最小）</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="240" y1="210" x2="298" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="582" y1="210" x2="638" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- Right: Output -->
+  <g>
+    <rect x="640" y="110" width="200" height="210" rx="10" fill="#E8F4EA" stroke="#4B8BDA"/>
+    <text x="740" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">直接写出 Spell</text>
+    <text x="740" y="158" text-anchor="middle" font-size="12" fill="#3D4F65">完成真实编码任务</text>
+
+    <rect x="656" y="172" width="168" height="136" rx="6" fill="#1E3A5F"/>
+    <text x="666" y="192" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">(loop (k 1</text>
+    <text x="666" y="208" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  current init</text>
+    <text x="666" y="224" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  acc ())</text>
+    <text x="666" y="240" font-size="10.5" font-family="Menlo,monospace" fill="#F6C177">  (!llm-self ...)</text>
+    <text x="666" y="256" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  (conj acc ...)</text>
+    <text x="666" y="272" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  ...)</text>
+    <text x="666" y="296" font-size="10" font-family="Menlo,monospace" fill="#7FB069">; 模型自写循环</text>
+  </g>
+
+  <!-- Bottom: Benchmark comparison -->
+  <g>
+    <rect x="40" y="370" width="380" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="230" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Terminal-Bench (n=80)</text>
+
+    <rect x="70" y="410" width="167" height="22" rx="3" fill="#4B8BDA"/>
+    <text x="245" y="426" font-size="12" fill="#1E3A5F">Spell+GPT-5.4: 40</text>
+
+    <rect x="70" y="440" width="180" height="22" rx="3" fill="#94A3B8"/>
+    <text x="258" y="456" font-size="12" fill="#1E3A5F">Codex CLI: 43</text>
+
+    <text x="230" y="500" text-anchor="middle" font-size="12" fill="#B45309" font-weight="600">Codex 成本约 2×</text>
+  </g>
+
+  <g>
+    <rect x="460" y="370" width="380" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="650" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">SWE-bench Lite (n=300)</text>
+
+    <rect x="490" y="410" width="178" height="22" rx="3" fill="#4B8BDA"/>
+    <text x="676" y="426" font-size="12" fill="#1E3A5F">Spell: 171</text>
+
+    <rect x="490" y="440" width="179" height="22" rx="3" fill="#94A3B8"/>
+    <text x="677" y="456" font-size="12" fill="#1E3A5F">Codex: 172</text>
+
+    <text x="650" y="500" text-anchor="middle" font-size="12" fill="#2F855A" font-weight="600">几乎打平，token ≈ 1/4</text>
+  </g>
+</svg>

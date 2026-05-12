@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07A5F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">MCP 专属污点语义：只盯协议边界的 4 类对象</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">通用分析器把全部参数都当源 → 噪声爆炸；本文只标 MCP 跨信任域的位置</text>
+
+  <!-- Center MCP Tool Box -->
+  <rect x="300" y="200" width="300" height="160" rx="14" fill="#FFF7ED" stroke="#E07A5F" stroke-width="2"/>
+  <text x="450" y="228" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">MCP Tool Handler (fetch-mcp)</text>
+  <line x1="320" y1="244" x2="580" y2="244" stroke="#E07A5F" stroke-dasharray="3,3"/>
+  <text x="450" y="272" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="monospace">validatedArgs.url</text>
+  <text x="450" y="294" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="monospace">fetch(url) → response.text()</text>
+  <text x="450" y="316" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="monospace">return { content:[{text: html}] }</text>
+  <text x="450" y="344" text-anchor="middle" font-size="10" fill="#9A6B4F" font-style="italic">信任边界内</text>
+
+  <!-- S-req (top-left, into) -->
+  <rect x="40" y="120" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">S-req · 请求源</text>
+  <text x="140" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">用户传入的工具参数</text>
+  <text x="140" y="187" text-anchor="middle" font-size="10" font-family="monospace" fill="#3D4F65">request.params.arguments</text>
+
+  <!-- K-op (bottom-left, dangerous sink) -->
+  <rect x="40" y="360" width="200" height="80" rx="10" fill="#FEF2F2" stroke="#DC5A5A" stroke-width="2"/>
+  <text x="140" y="388" text-anchor="middle" font-size="15" font-weight="bold" fill="#8B2A2A">K-op · 危险操作汇</text>
+  <text x="140" y="410" text-anchor="middle" font-size="11" fill="#3D4F65">shell / file / net / DB</text>
+  <text x="140" y="427" text-anchor="middle" font-size="10" font-family="monospace" fill="#3D4F65">Py 317 + JS/TS 112 规则</text>
+
+  <!-- S-ext (top-right, external content) -->
+  <rect x="660" y="120" width="200" height="80" rx="10" fill="#F3E8FF" stroke="#9B6BD8" stroke-width="2"/>
+  <text x="760" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#4A2A6B">S-ext · 外部源</text>
+  <text x="760" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">抓回的外部/敏感内容</text>
+  <text x="760" y="187" text-anchor="middle" font-size="10" font-family="monospace" fill="#3D4F65">response.text(), pod log</text>
+
+  <!-- K-ret (bottom-right, return back to model) -->
+  <rect x="660" y="360" width="200" height="80" rx="10" fill="#FFF1F2" stroke="#E07A5F" stroke-width="2"/>
+  <text x="760" y="388" text-anchor="middle" font-size="15" font-weight="bold" fill="#8B3A2A">K-ret · 返回汇</text>
+  <text x="760" y="410" text-anchor="middle" font-size="11" fill="#3D4F65">回流到 LLM 的协议返回</text>
+  <text x="760" y="427" text-anchor="middle" font-size="10" font-family="monospace" fill="#3D4F65">return content</text>
+
+  <!-- Forward arrows: S-req -> handler -> K-op -->
+  <line x1="240" y1="160" x2="298" y2="220" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="298" y1="340" x2="240" y2="395" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="180" y="285" font-size="12" fill="#1E3A5F" font-weight="bold">前向污点</text>
+  <text x="180" y="300" font-size="10" fill="#3D4F65">S-req → K-op</text>
+
+  <!-- Backward arrows: S-ext -> handler -> K-ret -->
+  <line x1="660" y1="160" x2="602" y2="220" stroke="#E07A5F" stroke-width="2.2" marker-end="url(#arO)"/>
+  <line x1="602" y1="340" x2="660" y2="395" stroke="#E07A5F" stroke-width="2.2" marker-end="url(#arO)"/>
+  <text x="660" y="285" font-size="12" fill="#8B3A2A" font-weight="bold">后向污点</text>
+  <text x="660" y="300" font-size="10" fill="#3D4F65">S-ext → K-ret</text>
+
+  <!-- LLM tag at bottom -->
+  <rect x="280" y="478" width="340" height="58" rx="10" fill="#ECFDF5" stroke="#3FA679" stroke-width="1.8"/>
+  <text x="450" y="500" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">LLM 只兜底两件事（主流程仍是确定性）</text>
+  <text x="450" y="520" text-anchor="middle" font-size="11" fill="#3D4F65">① source 是否可控   ② guard 是否有效</text>
+</svg>

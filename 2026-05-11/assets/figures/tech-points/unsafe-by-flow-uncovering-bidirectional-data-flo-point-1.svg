@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08B5C"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">MCP 双向数据流威胁模型</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">传统只看"进"，MCP 还要看"出" — 返回值会被 LLM 再读一次</text>
+
+  <!-- Left: User/Host -->
+  <rect x="40" y="130" width="160" height="240" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Host / LLM</text>
+  <text x="120" y="182" text-anchor="middle" font-size="12" fill="#3D4F65">用户 + 模型推理</text>
+  <circle cx="120" cy="240" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="120" y="248" text-anchor="middle" font-size="22">🧠</text>
+  <text x="120" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">读返回值 → 再次调用</text>
+
+  <!-- Center: MCP Server -->
+  <rect x="320" y="110" width="240" height="300" rx="14" fill="#FFF6EC" stroke="#E08B5C" stroke-width="2.5"/>
+  <text x="440" y="138" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">MCP Server (trust boundary)</text>
+
+  <!-- Source: S-req -->
+  <rect x="345" y="178" width="90" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="390" y="198" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">S-req</text>
+  <text x="390" y="215" text-anchor="middle" font-size="10" fill="#3D4F65">请求参数</text>
+
+  <!-- Sink: K-op -->
+  <rect x="445" y="178" width="90" height="48" rx="8" fill="#FCE9E0" stroke="#E08B5C"/>
+  <text x="490" y="198" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">K-op</text>
+  <text x="490" y="215" text-anchor="middle" font-size="10" fill="#3D4F65">exec/file/SSRF</text>
+
+  <!-- Source: S-ext -->
+  <rect x="345" y="298" width="90" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="390" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">S-ext</text>
+  <text x="390" y="335" text-anchor="middle" font-size="10" fill="#3D4F65">外部数据</text>
+
+  <!-- Sink: K-ret -->
+  <rect x="445" y="298" width="90" height="48" rx="8" fill="#FCE9E0" stroke="#E08B5C"/>
+  <text x="490" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">K-ret</text>
+  <text x="490" y="335" text-anchor="middle" font-size="10" fill="#3D4F65">协议返回值</text>
+
+  <!-- forward arrow inside -->
+  <line x1="435" y1="202" x2="445" y2="202" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="435" y1="322" x2="445" y2="322" stroke="#E08B5C" stroke-width="2" marker-end="url(#arR)"/>
+
+  <text x="440" y="385" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">同一服务器内：两条污点链</text>
+
+  <!-- Right: External world -->
+  <rect x="680" y="130" width="160" height="240" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="760" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">外部资源</text>
+  <text x="760" y="182" text-anchor="middle" font-size="12" fill="#3D4F65">系统 / 网络 / DB</text>
+  <circle cx="760" cy="240" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="760" y="248" text-anchor="middle" font-size="22">🌐</text>
+  <text x="760" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">pod logs / files / DB</text>
+
+  <!-- Forward flow: Host -> S-req -->
+  <line x1="200" y1="202" x2="343" y2="202" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="271" y="195" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E3A5F">① 请求侧</text>
+
+  <!-- Forward: K-op -> external -->
+  <line x1="537" y1="202" x2="680" y2="202" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Return flow: external -> S-ext -->
+  <line x1="680" y1="322" x2="537" y2="322" stroke="#E08B5C" stroke-width="2.5" marker-end="url(#arR)"/>
+
+  <!-- Return: K-ret -> Host -->
+  <line x1="343" y1="322" x2="200" y2="322" stroke="#E08B5C" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="271" y="340" text-anchor="middle" font-size="11" font-weight="bold" fill="#B8542A">② 返回侧（新）</text>
+
+  <!-- Mixed chain note -->
+  <rect x="40" y="445" width="800" height="70" rx="10" fill="#F4EEE6" stroke="#B8956A" stroke-width="1.5"/>
+  <text x="60" y="470" font-size="13" font-weight="bold" fill="#1E3A5F">🔗 Mixed Chain 案例 — CVE-2025-53355 (mcp-server-kubernetes)</text>
+  <text x="60" y="492" font-size="11.5" fill="#3D4F65">pod 日志(S-ext) → 工具返回(K-ret) → LLM 读取 → 再次触发工具调用 → 命令执行(K-op)</text>
+  <text x="60" y="508" font-size="11" fill="#7A6244" font-style="italic">传统分析器只看 ① 一条线，遗漏 ② 反向通路引发的二次调用风险</text>
+</svg>

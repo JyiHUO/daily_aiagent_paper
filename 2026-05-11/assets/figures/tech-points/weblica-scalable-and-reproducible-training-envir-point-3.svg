@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAFCFF"/>
+      <stop offset="1" stop-color="#F1F5FB"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">本地化高速 RL：把网页搬回家再训练</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">action → screenshot：1.5s ⟶ 50–150ms，吞吐 ×10+</text>
+
+  <!-- Left: Real Web (slow) -->
+  <g>
+    <rect x="50" y="105" width="320" height="170" rx="12" fill="#FFF3EC" stroke="#E59A6B" stroke-width="2"/>
+    <text x="210" y="135" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">真实网络 RL（慢）</text>
+
+    <!-- globe icon -->
+    <circle cx="100" cy="200" r="30" fill="#FFE2CD" stroke="#E59A6B" stroke-width="2"/>
+    <ellipse cx="100" cy="200" rx="13" ry="30" fill="none" stroke="#E59A6B" stroke-width="1.5"/>
+    <line x1="70" y1="200" x2="130" y2="200" stroke="#E59A6B" stroke-width="1.5"/>
+
+    <text x="155" y="185" font-size="13" fill="#3D4F65">网络往返 + 页面动画</text>
+    <text x="155" y="210" font-size="13" fill="#3D4F65">反爬 / 超时不稳定</text>
+    <text x="155" y="235" font-size="13" fill="#3D4F65">页面频繁变化难复现</text>
+
+    <text x="210" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#C4541C">~1.5 s / step</text>
+  </g>
+
+  <!-- Right: Local Web (fast) -->
+  <g>
+    <rect x="530" y="105" width="320" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="690" y="135" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Weblica 本地环境（快）</text>
+
+    <!-- server icon -->
+    <rect x="568" y="170" width="64" height="60" rx="6" fill="#D5E5F8" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="578" cy="184" r="3" fill="#4B8BDA"/>
+    <circle cx="578" cy="200" r="3" fill="#4B8BDA"/>
+    <circle cx="578" cy="216" r="3" fill="#4B8BDA"/>
+    <line x1="590" y1="184" x2="624" y2="184" stroke="#4B8BDA"/>
+    <line x1="590" y1="200" x2="624" y2="200" stroke="#4B8BDA"/>
+    <line x1="590" y1="216" x2="624" y2="216" stroke="#4B8BDA"/>
+
+    <text x="645" y="185" font-size="13" fill="#3D4F65">HTTP 缓存冻结真实站</text>
+    <text x="645" y="210" font-size="13" fill="#3D4F65">Claude 合成站点</text>
+    <text x="645" y="235" font-size="13" fill="#3D4F65">跳过 Playwright 动画</text>
+
+    <text x="690" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#1E6FCC">50–150 ms / step</text>
+  </g>
+
+  <!-- Arrow between -->
+  <line x1="378" y1="190" x2="522" y2="190" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ah)"/>
+  <text x="450" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">搬到本地</text>
+
+  <!-- Bottom: Agent loop -->
+  <g>
+    <rect x="80" y="320" width="240" height="120" rx="12" fill="#EAF2FB" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="200" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Agent (Qwen3-VL 8B)</text>
+    <text x="200" y="378" text-anchor="middle" font-size="12" fill="#3D4F65">观测：截图 + URL</text>
+    <text x="200" y="400" text-anchor="middle" font-size="12" fill="#3D4F65">动作：像素坐标点击</text>
+    <text x="200" y="422" text-anchor="middle" font-size="12" fill="#3D4F65">大规模 RL rollout</text>
+
+    <rect x="580" y="320" width="240" height="120" rx="12" fill="#FFF8E6" stroke="#D9A441" stroke-width="2"/>
+    <text x="700" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Online-Mind2Web</text>
+    <text x="700" y="378" text-anchor="middle" font-size="13" fill="#3D4F65">基线 Qwen3-VL-8B：28.6%</text>
+    <text x="700" y="402" text-anchor="middle" font-size="14" font-weight="700" fill="#C4541C">Weblica-8B：39.2% pass@1</text>
+    <text x="700" y="424" text-anchor="middle" font-size="11" fill="#3D4F65">k 增大时仍持续上升</text>
+
+    <!-- forward arrow -->
+    <line x1="325" y1="370" x2="575" y2="370" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ah)"/>
+    <text x="450" y="362" text-anchor="middle" font-size="12" fill="#1E3A5F">数千环境 · 上万任务</text>
+
+    <!-- feedback arrow (closing the loop) -->
+    <path d="M575,400 L325,400" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="6,4" fill="none" marker-end="url(#ah)"/>
+    <text x="450" y="418" text-anchor="middle" font-size="12" fill="#3D4F65">奖励反馈 · RL 更新</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="490" text-anchor="middle" font-size="13" fill="#3D4F65">关键洞见：RL 的瓶颈是<tspan font-weight="700" fill="#1E3A5F">环境吞吐</tspan>，不是算法</text>
+  <text x="450" y="512" text-anchor="middle" font-size="12" fill="#5A6D85">本地 serve + 跳动画，让 agent 一秒踩十几步</text>
+</svg>

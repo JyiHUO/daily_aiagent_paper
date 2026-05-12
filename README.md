@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-08
+- **日期**：2026-05-11
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering
-  - MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents
-  - PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors
-- **日报路径**：[2026-05-08/daily_report.md](2026-05-08/daily_report.md)
+  - Self-Programmed Execution for Language-Model Agents
+  - Weblica: Scalable and Reproducible Training Environments for Visual Web Agents
+  - Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem
+- **日报路径**：[2026-05-11/daily_report.md](2026-05-11/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-11 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Self-Programmed Execution for Language-Model Agents | [2026-05-11/daily_report.md](2026-05-11/daily_report.md) |
+|  |  |  | 2 | Weblica: Scalable and Reproducible Training Environments for Visual Web Agents |  |
+|  |  |  | 3 | Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem |  |
 | 2026-05-08 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering | [2026-05-08/daily_report.md](2026-05-08/daily_report.md) |
 |  |  |  | 2 | MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents |  |
 |  |  |  | 3 | PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors |  |

@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FAFD"/>
+      <stop offset="1" stop-color="#EEF2F8"/>
+    </linearGradient>
+    <linearGradient id="trad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF1E8"/>
+      <stop offset="1" stop-color="#FFE3D1"/>
+    </linearGradient>
+    <linearGradient id="spe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E3EEFD"/>
+      <stop offset="1" stop-color="#D3E3FA"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97742"/>
+    </marker>
+    <marker id="ark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#1E3A5F">自编排执行 SPE：让模型补全本身成为 Agent 编排程序</text>
+  <text x="640" y="80" text-anchor="middle" font-size="15" fill="#3D4F65">harness 退化为 Lisp 解释器 · 编排策略从框架代码迁入模型输出</text>
+
+  <!-- ============ LEFT: Traditional ============ -->
+  <g>
+    <rect x="60" y="120" width="380" height="640" rx="14" fill="url(#trad)" stroke="#E5B999" stroke-width="1.2"/>
+    <text x="250" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#8A4A1F">传统 Agent：固定 harness 编排</text>
+    <text x="250" y="174" text-anchor="middle" font-size="12" fill="#7A5C46">ReAct / Codex CLI / Claude Code …</text>
+
+    <!-- harness loop box -->
+    <rect x="92" y="200" width="316" height="430" rx="10" fill="#FFFFFF" stroke="#D89A6E" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="250" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#8A4A1F">harness while-loop（人工调优）</text>
+
+    <!-- LLM box inside -->
+    <rect x="138" y="250" width="224" height="78" rx="8" fill="#FFE3D1" stroke="#D97742"/>
+    <text x="250" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#7A3911">模型补全</text>
+    <text x="250" y="300" text-anchor="middle" font-size="11" fill="#8A4A1F">仅生成下一步动作</text>
+    <text x="250" y="318" text-anchor="middle" font-size="11" fill="#8A4A1F">无权决定循环结构</text>
+
+    <!-- harness controls -->
+    <rect x="112" y="360" width="120" height="58" rx="6" fill="#FFF7EE" stroke="#C9874C"/>
+    <text x="172" y="382" text-anchor="middle" font-size="11" font-weight="600" fill="#7A3911">上下文裁剪</text>
+    <text x="172" y="400" text-anchor="middle" font-size="10" fill="#8A5C3A">由框架决定</text>
+
+    <rect x="268" y="360" width="120" height="58" rx="6" fill="#FFF7EE" stroke="#C9874C"/>
+    <text x="328" y="382" text-anchor="middle" font-size="11" font-weight="600" fill="#7A3911">工具调度</text>
+    <text x="328" y="400" text-anchor="middle" font-size="10" fill="#8A5C3A">由框架决定</text>
+
+    <rect x="112" y="430" width="120" height="58" rx="6" fill="#FFF7EE" stroke="#C9874C"/>
+    <text x="172" y="452" text-anchor="middle" font-size="11" font-weight="600" fill="#7A3911">何时终止</text>
+    <text x="172" y="470" text-anchor="middle" font-size="10" fill="#8A5C3A">由框架决定</text>
+
+    <rect x="268" y="430" width="120" height="58" rx="6" fill="#FFF7EE" stroke="#C9874C"/>
+    <text x="328" y="452" text-anchor="middle" font-size="11" font-weight="600" fill="#7A3911">反思 / 子 Agent</text>
+    <text x="328" y="470" text-anchor="middle" font-size="10" fill="#8A5C3A">由框架决定</text>
+
+    <!-- clean loop arrow: model -> controls -> back to model -->
+    <path d="M 138 289 C 100 289 100 540 250 540 C 380 540 380 360 362 330" fill="none" stroke="#D97742" stroke-width="1.8" marker-end="url(#aro)"/>
+    <text x="250" y="560" text-anchor="middle" font-size="11" fill="#7A3911">turn → turn 控制权属于 harness</text>
+
+    <rect x="112" y="660" width="276" height="78" rx="8" fill="#FFEFE0" stroke="#C9874C"/>
+    <text x="250" y="682" text-anchor="middle" font-size="12" font-weight="700" fill="#7A3911">痛点</text>
+    <text x="250" y="702" text-anchor="middle" font-size="11" fill="#8A4A1F">编排策略越来越靠人工 prompt 工程</text>
+    <text x="250" y="720" text-anchor="middle" font-size="11" fill="#8A4A1F">上下文窗口管理是最难调的环节</text>
+  </g>
+
+  <!-- arrow between two columns -->
+  <g>
+    <path d="M 450 440 L 505 440" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ark)"/>
+    <text x="477" y="425" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">范式翻转</text>
+  </g>
+
+  <!-- ============ RIGHT: SPE ============ -->
+  <g>
+    <rect x="510" y="120" width="710" height="640" rx="14" fill="url(#spe)" stroke="#9FBEE8" stroke-width="1.2"/>
+    <text x="865" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">SPE：补全即编排程序</text>
+    <text x="865" y="174" text-anchor="middle" font-size="12" fill="#3D4F65">harness = Spell 解释器 · 不再持有任何编排策略</text>
+
+    <!-- harness as thin shell -->
+    <rect x="540" y="200" width="650" height="50" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="865" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Harness（Spell 解释器）</text>
+    <text x="865" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">只做：eval(let y = lm q in eval(y))   不做编排</text>
+
+    <!-- core: model completion as program -->
+    <rect x="600" y="290" width="530" height="280" rx="14" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="865" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">模型补全 = 一段可自我编辑的 Spell 程序</text>
+
+    <!-- code-like block -->
+    <rect x="630" y="334" width="470" height="138" rx="8" fill="#F4F8FE" stroke="#B8D0EE"/>
+    <text x="650" y="358" font-size="12" font-family="monospace" fill="#2E5FA8">(quine completion</text>
+    <text x="670" y="378" font-size="12" font-family="monospace" fill="#3D4F65">(eval (do</text>
+    <text x="690" y="398" font-size="12" font-family="monospace" fill="#3D4F65">  ;; 本轮局部计算（纯）</text>
+    <text x="690" y="418" font-size="12" font-family="monospace" fill="#D97742">  '(do (read-file ...)   ;; 尾表达式</text>
+    <text x="690" y="438" font-size="12" font-family="monospace" fill="#D97742">       (self-call new-prefix)) )))</text>
+    <text x="650" y="460" font-size="11" font-family="monospace" fill="#7A8AA0">// 旧尾表达式被追加新代码后降级为字面数据，不重放副作用</text>
+
+    <!-- three pillars below code -->
+    <rect x="600" y="486" width="166" height="74" rx="8" fill="#E3EEFD" stroke="#7AA8DC"/>
+    <text x="683" y="508" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">上下文即代码</text>
+    <text x="683" y="528" text-anchor="middle" font-size="10" fill="#3D4F65">quine 把源码作为数据</text>
+    <text x="683" y="544" text-anchor="middle" font-size="10" fill="#3D4F65">交给模型编辑</text>
+
+    <rect x="782" y="486" width="166" height="74" rx="8" fill="#E3EEFD" stroke="#7AA8DC"/>
+    <text x="865" y="508" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">副作用不重放</text>
+    <text x="865" y="528" text-anchor="middle" font-size="10" fill="#3D4F65">仅尾表达式被 eval</text>
+    <text x="865" y="544" text-anchor="middle" font-size="10" fill="#3D4F65">旧调用化为惰性数据</text>
+
+    <rect x="964" y="486" width="166" height="74" rx="8" fill="#E3EEFD" stroke="#7AA8DC"/>
+    <text x="1047" y="508" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">轮间隔离</text>
+    <text x="1047" y="528" text-anchor="middle" font-size="10" fill="#3D4F65">self-call 在新局部</text>
+    <text x="1047" y="544" text-anchor="middle" font-size="10" fill="#3D4F65">环境中求值</text>
+
+    <!-- self-loop arrow: from code box right side back to harness -->
+    <path d="M 1130 400 C 1210 400 1210 225 1190 225" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="1235" y="320" text-anchor="middle" font-size="11" font-weight="600" fill="#2E5FA8">self-call</text>
+    <text x="1235" y="336" text-anchor="middle" font-size="10" fill="#3D4F65">模型决定</text>
+    <text x="1235" y="350" text-anchor="middle" font-size="10" fill="#3D4F65">下一轮</text>
+
+    <!-- arrow harness -> code -->
+    <path d="M 865 250 L 865 288" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+    <!-- bottom: outcome strip -->
+    <rect x="540" y="600" width="650" height="140" rx="10" fill="#FFFFFF" stroke="#9FBEE8"/>
+    <text x="865" y="624" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">实测收益（前沿模型零训练即可上手）</text>
+
+    <rect x="560" y="640" width="200" height="84" rx="8" fill="#EFF6FF" stroke="#B8D0EE"/>
+    <text x="660" y="662" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SWE-bench Lite</text>
+    <text x="660" y="684" text-anchor="middle" font-size="11" fill="#3D4F65">Spell 171 ≈ Codex 172</text>
+    <text x="660" y="706" text-anchor="middle" font-size="11" font-weight="600" fill="#2E5FA8">token 量 ≈ 1/4</text>
+
+    <rect x="770" y="640" width="200" height="84" rx="8" fill="#EFF6FF" stroke="#B8D0EE"/>
+    <text x="870" y="662" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Terminal-Bench</text>
+    <text x="870" y="684" text-anchor="middle" font-size="11" fill="#3D4F65">GPT-5 高 effort 40/80</text>
+    <text x="870" y="706" text-anchor="middle" font-size="11" fill="#3D4F65">Codex 43/80（成本约 2×）</text>
+
+    <rect x="980" y="640" width="200" height="84" rx="8" fill="#EFF6FF" stroke="#B8D0EE"/>
+    <text x="1080" y="662" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">模型最爱用的能力</text>
+    <text x="1080" y="684" text-anchor="middle" font-size="11" fill="#3D4F65">!peek 精控上下文</text>
+    <text x="1080" y="706" text-anchor="middle" font-size="11" fill="#3D4F65">一次串多个工具调用</text>
+  </g>
+
+  <text x="640" y="795" text-anchor="middle" font-size="12" fill="#5B6B82">编排权从 harness 迁入模型输出 ⇒ 上下文管理由模型自行掌控，token 大幅下降</text>
+</svg>
