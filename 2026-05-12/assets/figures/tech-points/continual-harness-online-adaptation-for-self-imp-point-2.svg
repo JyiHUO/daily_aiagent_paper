@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA371"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAF7F2"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">学生与脚手架同时进化 · 环境永不重置</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">Gemma 学生玩同一局游戏，老师改差片段，harness 同步精修</text>
+
+  <!-- Student -->
+  <rect x="70" y="120" width="210" height="130" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="175" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">学生 θk</text>
+  <text x="175" y="174" text-anchor="middle" font-size="12" fill="#3D4F65">Gemma-4（开源）</text>
+  <text x="175" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">在 Ht 中跑 K=256 步</text>
+  <text x="175" y="224" text-anchor="middle" font-size="12" fill="#3D4F65">过程奖励模型打分</text>
+
+  <!-- Harness in middle -->
+  <rect x="345" y="130" width="210" height="110" rx="14" fill="#E8F1E5" stroke="#5BA371" stroke-width="2"/>
+  <text x="450" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Harness Ht</text>
+  <text x="450" y="186" text-anchor="middle" font-size="12" fill="#3D4F65">工具 / 记忆 / 规划</text>
+  <text x="450" y="212" text-anchor="middle" font-size="12" fill="#3D4F65">Refiner 持续改写</text>
+
+  <!-- Teacher -->
+  <rect x="620" y="120" width="210" height="130" rx="14" fill="#F5EEFF" stroke="#8B6FCB" stroke-width="2"/>
+  <text x="725" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#3B2A6B">老师</text>
+  <text x="725" y="174" text-anchor="middle" font-size="12" fill="#3D4F65">Gemini-3.1-pro</text>
+  <text x="725" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">重标低奖励片段</text>
+  <text x="725" y="224" text-anchor="middle" font-size="12" fill="#3D4F65">soft SFT → θ(k+1)</text>
+
+  <!-- Arrows: student -> teacher (bad clips) -->
+  <path d="M280 150 Q 450 85 620 150" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="450" y="100" text-anchor="middle" font-size="12" fill="#1E3A5F">差片段送审</text>
+
+  <!-- Arrows: teacher -> student (demo) -->
+  <path d="M620 220 Q 450 305 280 220" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="450" y="295" text-anchor="middle" font-size="12" fill="#1E3A5F">示范答案 → 微调</text>
+
+  <!-- student uses harness (bidirectional via harness) -->
+  <line x1="280" y1="185" x2="343" y2="185" stroke="#5BA371" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="555" y1="185" x2="618" y2="185" stroke="#5BA371" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrG)"/>
+
+  <!-- harness updates back to student (closed loop) -->
+  <path d="M450 240 L 450 355 L 175 355 L 175 250" fill="none" stroke="#5BA371" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arrG)"/>
+  <text x="312" y="372" text-anchor="middle" font-size="11" fill="#3D4F65">脚手架进化 → 学生数据分布随之变化</text>
+
+  <!-- Bottom result strip -->
+  <rect x="60" y="400" width="780" height="60" rx="10" fill="#FFF8EC" stroke="#D9A24A" stroke-width="1.5"/>
+  <text x="80" y="425" font-size="13" font-weight="700" fill="#1E3A5F">效果对比</text>
+  <text x="80" y="448" font-size="12" fill="#3D4F65">✓ 有 warm-up 的 Gemma-4：里程碑 +2 ~ +5 持续推进</text>
+  <text x="500" y="448" font-size="12" fill="#A65A3D">✗ 无 warm-up 的 Qwen3.5：连出生点都走不出</text>
+
+  <!-- Game timeline (one continuous game) -->
+  <rect x="60" y="495" width="780" height="60" rx="10" fill="#FFF1E0" stroke="#E89B5A" stroke-width="2"/>
+  <text x="80" y="520" font-size="13" font-weight="700" fill="#1E3A5F">同一局 Pokémon</text>
+  <text x="80" y="540" font-size="11" fill="#7A4A1F">第 k 轮存档 → 第 k+1 轮起点（无 reset）</text>
+  <line x1="280" y1="528" x2="820" y2="528" stroke="#E89B5A" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrO)"/>
+</svg>

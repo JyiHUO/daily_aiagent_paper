@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0512：1MB脚本戳穿评测假象，Agent正在补基础设施债",
+  "shownotes_html": "<p>一个不看屏幕的1MB小脚本，在主流Agent评测榜单上打败了前沿大模型——这不是行为艺术，而是整个Agent评测体系被戳穿的起点。本期聚焦三篇论文，拼出一幅清晰的图景：<strong>研究社区正集体从\"造更强Agent\"转向\"让Agent的分数和运行时真正可信\"</strong>。</p><p><strong>🎧 本期重点</strong></p><ul><li><strong>Computer Use at the Edge of the Statistical Precipice</strong><br/>Meta超级智能实验室的工作。用盲重放脚本证明：在静态环境下，pass@k测的是记忆而非能力。论文提出PRISM五条环境设计原则和DigiWorld基准（320万+可验证配置），同一脚本成功率从71%崩到6.9%。还用分层Bootstrap把名义95%覆盖率从17%拉回到真正的95%。做CUA评测的人必读。</li><li><strong>Continual Harness: Online Adaptation for Self-Improving Foundation Agents</strong><br/>普林斯顿与Google DeepMind合作。让Agent在不重置环境的前提下，边玩宝可梦边自动改写自己的提示、子代理、技能和记忆。最有意思的反结果：弱模型用这套自我精修反而比最简方案更差——存在\"能力地板\"，别指望小模型靠花哨框架翻身。</li><li><strong>Can Agent Benchmarks Support Their Scores?</strong><br/>审计AndroidWorld、AgentDojo、AppWorld、τ3-bench retail、MiniWoB五大Agent评测。把每条运行打成Pass/Fail/Unknown三态，用上下界区间替代单点成功率。AgentDojo上Claude原生93%的分数，证据视角下变成71%~92%的区间，三模型排序全部不可识别。朋友圈里的Agent榜单排名，可能很多对其实是统计噪声。</li></ul><p><strong>📊 今日趋势</strong></p><ul><li>Agent评测方法论集体反思：从单一pass分到证据三态、分层bootstrap、log审计，多篇高分论文都在挑战\"榜单分数本身可不可信\"。</li><li>Harness/Runtime被当成可优化的一等公民而非脚手架：在线自我改进、形式化执行trace、演绎式安全验证，可靠性正从模型对齐外移到运行时基底。</li></ul><p>如果你正好在做Agent产品，可以问自己三个问题：环境是不是每次都从同一个状态开始？分数旁边有没有置信区间？运行日志能不能反演出任务到底完成没有？三个问题里有一个答案是\"否\"，本期三篇论文都值得认真读一下。</p><p><em>本期内容由 AI 自动生成，欢迎在评论区留言交流、指正。</em></p>",
+  "report_date": "2026-05-12",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-13T16:05:09Z"
+}

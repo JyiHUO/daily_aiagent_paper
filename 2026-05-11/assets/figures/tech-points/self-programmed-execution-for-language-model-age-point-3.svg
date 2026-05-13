@@ -3,91 +3,92 @@
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#F0EFEA"/>
+    </linearGradient>
   </defs>
 
-  <rect width="880" height="560" fill="#F7FAFC"/>
+  <rect width="880" height="560" fill="url(#bg)"/>
 
-  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">前沿模型零训练即可上手 Spell</text>
-  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">仅靠 system prompt + 文档，模型在上下文里学会这门小众 Lisp</text>
+  <!-- Title -->
+  <text x="440" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">前沿模型 零训练 即可上手 Spell</text>
+  <text x="440" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">仅靠 system prompt + 文档，模型在上下文里学会这门小众 Lisp</text>
 
-  <!-- Left: Inputs -->
+  <!-- Left: Input -->
   <g>
-    <rect x="40" y="110" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="140" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Spell 文档</text>
-    <text x="140" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">塞进 system prompt</text>
-    <text x="140" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">零微调 / 零训练</text>
+    <rect x="40" y="110" width="200" height="120" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">仅给提示词</text>
+    <text x="140" y="166" text-anchor="middle" font-size="12" fill="#3D4F65">Spell 语言文档</text>
+    <text x="140" y="188" text-anchor="middle" font-size="12" fill="#3D4F65">system prompt</text>
+    <text x="140" y="214" text-anchor="middle" font-size="11" fill="#7A6A4F">无微调 · 无训练</text>
   </g>
 
-  <!-- Center: 5 models -->
+  <!-- Middle: Models -->
   <g>
-    <rect x="300" y="100" width="280" height="220" rx="12" fill="#FFF4E6" stroke="#E89B4A" stroke-width="1.5"/>
-    <text x="440" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">5 个前沿大模型 (32 任务子集)</text>
+    <rect x="310" y="100" width="260" height="220" rx="14" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.8"/>
+    <text x="440" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">五款前沿模型 (32 任务子集)</text>
 
-    <rect x="318" y="140" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
-    <text x="330" y="159" font-size="12" fill="#1E3A5F">GPT-5.4</text>
-    <text x="550" y="159" text-anchor="end" font-size="12" font-weight="700" fill="#2F855A">最佳 / 零致命错</text>
+    <rect x="328" y="146" width="224" height="28" rx="6" fill="#FFFFFF" stroke="#E0A458"/>
+    <text x="340" y="165" font-size="12" fill="#1E3A5F">GPT-5.4</text>
+    <text x="540" y="165" text-anchor="end" font-size="12" font-weight="700" fill="#2E7D5B">最佳 · 零致命错</text>
 
-    <rect x="318" y="174" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
-    <text x="330" y="193" font-size="12" fill="#1E3A5F">Claude Opus 4.6</text>
-    <text x="550" y="193" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+    <rect x="328" y="180" width="224" height="24" rx="6" fill="#FFFFFF" stroke="#E0A458"/>
+    <text x="340" y="197" font-size="12" fill="#1E3A5F">Claude Opus 4.6</text>
+    <text x="540" y="197" text-anchor="end" font-size="12" fill="#3D4F65">≥10/32</text>
 
-    <rect x="318" y="208" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
-    <text x="330" y="227" font-size="12" fill="#1E3A5F">GLM-5.1</text>
-    <text x="550" y="227" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+    <rect x="328" y="210" width="224" height="24" rx="6" fill="#FFFFFF" stroke="#E0A458"/>
+    <text x="340" y="227" font-size="12" fill="#1E3A5F">GLM-5.1</text>
+    <text x="540" y="227" text-anchor="end" font-size="12" fill="#3D4F65">≥10/32</text>
 
-    <rect x="318" y="242" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
-    <text x="330" y="261" font-size="12" fill="#1E3A5F">Kimi-K2.6</text>
-    <text x="550" y="261" text-anchor="end" font-size="12" fill="#2F855A">≥ 10/32</text>
+    <rect x="328" y="240" width="224" height="24" rx="6" fill="#FFFFFF" stroke="#E0A458"/>
+    <text x="340" y="257" font-size="12" fill="#1E3A5F">Kimi-K2.6</text>
+    <text x="540" y="257" text-anchor="end" font-size="12" fill="#3D4F65">≥10/32</text>
 
-    <rect x="318" y="276" width="244" height="28" rx="5" fill="#FFFFFF" stroke="#D4A574"/>
-    <text x="330" y="295" font-size="12" fill="#1E3A5F">Qwen3.6 Plus</text>
-    <text x="550" y="295" text-anchor="end" font-size="12" fill="#B45309">较弱（最小）</text>
+    <rect x="328" y="270" width="224" height="24" rx="6" fill="#FFFFFF" stroke="#CFC4B0"/>
+    <text x="340" y="287" font-size="12" fill="#7A6A4F">Qwen3.6 Plus</text>
+    <text x="540" y="287" text-anchor="end" font-size="12" fill="#B85450">较弱</text>
+  </g>
+
+  <!-- Right: Result -->
+  <g>
+    <rect x="640" y="110" width="200" height="220" rx="12" fill="#E8F1E8" stroke="#5A8F6B" stroke-width="1.5"/>
+    <text x="740" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">真实任务表现</text>
+
+    <text x="660" y="172" font-size="12" fill="#3D4F65">Terminal-Bench (n=80)</text>
+    <text x="660" y="194" font-size="16" font-weight="700" fill="#1E3A5F">40 / 80</text>
+    <text x="824" y="194" text-anchor="end" font-size="11" fill="#7A6A4F">vs Codex 43</text>
+
+    <line x1="660" y1="210" x2="820" y2="210" stroke="#CFC4B0" stroke-dasharray="3 3"/>
+
+    <text x="660" y="232" font-size="12" fill="#3D4F65">SWE-bench Lite (n=300)</text>
+    <text x="660" y="254" font-size="16" font-weight="700" fill="#1E3A5F">171 / 300</text>
+    <text x="824" y="254" text-anchor="end" font-size="11" fill="#7A6A4F">≈ Codex 172</text>
+
+    <rect x="656" y="270" width="168" height="48" rx="6" fill="#FFFFFF" stroke="#5A8F6B"/>
+    <text x="740" y="288" text-anchor="middle" font-size="12" font-weight="700" fill="#2E7D5B">Token 量 ↓ ~4×</text>
+    <text x="740" y="306" text-anchor="middle" font-size="11" fill="#3D4F65">成本远低于 Codex CLI</text>
   </g>
 
   <!-- Arrows -->
-  <line x1="240" y1="210" x2="298" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
-  <line x1="582" y1="210" x2="638" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="244" y1="170" x2="306" y2="170" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <line x1="574" y1="210" x2="636" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
 
-  <!-- Right: Output -->
+  <!-- Bottom note: example + caveat -->
   <g>
-    <rect x="640" y="110" width="200" height="210" rx="10" fill="#E8F4EA" stroke="#4B8BDA"/>
-    <text x="740" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">直接写出 Spell</text>
-    <text x="740" y="158" text-anchor="middle" font-size="12" fill="#3D4F65">完成真实编码任务</text>
+    <rect x="40" y="360" width="800" height="170" rx="12" fill="#FFFFFF" stroke="#CFC4B0" stroke-width="1.2"/>
+    <text x="60" y="388" font-size="13" font-weight="700" fill="#1E3A5F">例：Telephone 小游戏 — 模型自己写出编排循环（无外部 agent loop）</text>
 
-    <rect x="656" y="172" width="168" height="136" rx="6" fill="#1E3A5F"/>
-    <text x="666" y="192" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">(loop (k 1</text>
-    <text x="666" y="208" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  current init</text>
-    <text x="666" y="224" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  acc ())</text>
-    <text x="666" y="240" font-size="10.5" font-family="Menlo,monospace" fill="#F6C177">  (!llm-self ...)</text>
-    <text x="666" y="256" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  (conj acc ...)</text>
-    <text x="666" y="272" font-size="10.5" font-family="Menlo,monospace" fill="#A7D7F5">  ...)</text>
-    <text x="666" y="296" font-size="10" font-family="Menlo,monospace" fill="#7FB069">; 模型自写循环</text>
-  </g>
+    <rect x="60" y="400" width="490" height="110" rx="6" fill="#F5F1E8" stroke="#CFC4B0"/>
+    <text x="72" y="422" font-size="11" font-family="Menlo,monospace" fill="#1E3A5F">(loop (k 1 current initial-wording acc ())</text>
+    <text x="72" y="442" font-size="11" font-family="Menlo,monospace" fill="#1E3A5F">  (let next (!llm-self rewrite current))</text>
+    <text x="72" y="462" font-size="11" font-family="Menlo,monospace" fill="#1E3A5F">  (conj acc next) ...)   ; 跑满 8 轮</text>
+    <text x="72" y="488" font-size="11" font-family="Menlo,monospace" fill="#7A6A4F">; 完全由模型生成的确定性 workflow</text>
 
-  <!-- Bottom: Benchmark comparison -->
-  <g>
-    <rect x="40" y="370" width="380" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="230" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Terminal-Bench (n=80)</text>
-
-    <rect x="70" y="410" width="167" height="22" rx="3" fill="#4B8BDA"/>
-    <text x="245" y="426" font-size="12" fill="#1E3A5F">Spell+GPT-5.4: 40</text>
-
-    <rect x="70" y="440" width="180" height="22" rx="3" fill="#94A3B8"/>
-    <text x="258" y="456" font-size="12" fill="#1E3A5F">Codex CLI: 43</text>
-
-    <text x="230" y="500" text-anchor="middle" font-size="12" fill="#B45309" font-weight="600">Codex 成本约 2×</text>
-  </g>
-
-  <g>
-    <rect x="460" y="370" width="380" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="650" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">SWE-bench Lite (n=300)</text>
-
-    <rect x="490" y="410" width="178" height="22" rx="3" fill="#4B8BDA"/>
-    <text x="676" y="426" font-size="12" fill="#1E3A5F">Spell: 171</text>
-
-    <rect x="490" y="440" width="179" height="22" rx="3" fill="#94A3B8"/>
-    <text x="677" y="456" font-size="12" fill="#1E3A5F">Codex: 172</text>
-
-    <text x="650" y="500" text-anchor="middle" font-size="12" fill="#2F855A" font-weight="600">几乎打平，token ≈ 1/4</text>
+    <rect x="570" y="400" width="250" height="110" rx="6" fill="#FFF6F4" stroke="#E0B4AE"/>
+    <text x="585" y="422" font-size="12" font-weight="700" fill="#B85450">⚠ 局限</text>
+    <text x="585" y="446" font-size="11" fill="#3D4F65">LongBench / AppWorld 上</text>
+    <text x="585" y="464" font-size="11" fill="#3D4F65">明显落后 Codex CLI</text>
+    <text x="585" y="492" font-size="11" fill="#7A6A4F">→ 当前更适合编码场景</text>
   </g>
 </svg>

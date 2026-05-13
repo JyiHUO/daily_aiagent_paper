@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,sans-serif">
+  <rect width="900" height="560" fill="#F7FAFC"/>
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">证据三态标签：不知道就老实说不知道</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#3D4F65">评分前先冻结 checklist，再去 trace 里找证据</text>
+
+  <!-- Checklist box -->
+  <rect x="40" y="100" width="240" height="170" rx="10" fill="#FEF3E7" stroke="#E89B4C" stroke-width="2"/>
+  <text x="160" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Case Checklist (评分前锁定)</text>
+  <line x1="60" y1="142" x2="260" y2="142" stroke="#E89B4C" stroke-dasharray="3,3"/>
+  <text x="60" y="168" font-size="12" fill="#3D4F65">✓ post-state 快照</text>
+  <text x="60" y="192" font-size="12" fill="#3D4F65">✓ receipts / 日志</text>
+  <text x="60" y="216" font-size="12" fill="#3D4F65">✓ paired-arm 对照</text>
+  <text x="60" y="248" font-size="11" fill="#7A8599" font-style="italic">每条要带 source pointer</text>
+
+  <!-- Arrow to evaluator -->
+  <path d="M 285 185 L 320 185" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+
+  <!-- Trace audit -->
+  <rect x="325" y="120" width="180" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="415" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">查 trace</text>
+  <text x="415" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">artifact 找到了吗？</text>
+  <text x="415" y="214" text-anchor="middle" font-size="11" fill="#7A8599">不改任务 / agent</text>
+  <text x="415" y="232" text-anchor="middle" font-size="11" fill="#7A8599">不改原评测器</text>
+
+  <!-- Three branches -->
+  <path d="M 505 155 L 600 135" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M 505 185 L 600 255" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M 505 215 L 600 380" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+
+  <!-- Evidence Pass -->
+  <rect x="605" y="105" width="250" height="70" rx="10" fill="#E6F4EA" stroke="#4CAF82" stroke-width="2"/>
+  <text x="625" y="140" font-size="15" font-weight="700" fill="#2E7D4F">✓ Evidence Pass</text>
+  <text x="625" y="160" font-size="11" fill="#3D4F65">checklist 全齐 → 真成功</text>
+
+  <!-- Evidence Fail -->
+  <rect x="605" y="225" width="250" height="70" rx="10" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+  <text x="625" y="260" font-size="15" font-weight="700" fill="#B33A36">✗ Evidence Fail</text>
+  <text x="625" y="280" font-size="11" fill="#3D4F65">证据反驳了成功声明</text>
+
+  <!-- Unknown (highlighted) -->
+  <rect x="605" y="345" width="250" height="90" rx="10" fill="#FFF4D6" stroke="#E5A823" stroke-width="3"/>
+  <text x="625" y="378" font-size="15" font-weight="700" fill="#8A5A00">? Unknown</text>
+  <text x="625" y="400" font-size="11" fill="#3D4F65">证据不足 — 不丢，不算赢</text>
+  <text x="625" y="420" font-size="11" font-weight="600" fill="#B8860B">★ 本文核心：保留它</text>
+
+  <!-- Bottom example -->
+  <rect x="40" y="455" width="820" height="85" rx="10" fill="#EEF2F7" stroke="#3D4F65" stroke-width="1.5"/>
+  <text x="60" y="482" font-size="13" font-weight="700" fill="#1E3A5F">例：τ3-bench 改地址</text>
+  <text x="60" y="505" font-size="12" fill="#3D4F65">trace 只有 "Save 已点击"，没有数据库地址快照</text>
+  <text x="60" y="525" font-size="12" fill="#3D4F65">→ 旧法按 reward 信号 = 成功 ✗    本文 =</text>
+  <text x="430" y="525" font-size="12" font-weight="700" fill="#B8860B">Unknown ?（诚实保留）</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAF7F2"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">分层 Bootstrap：让置信区间不再骗人</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">同一 App 内任务高度相关，必须按层级逐级重采样</text>
+
+  <!-- Left: naive -->
+  <g>
+    <rect x="40" y="100" width="360" height="200" rx="10" fill="#FCEEEA" stroke="#E08A6E" stroke-width="1.5"/>
+    <text x="220" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">❌ 只重采 rollout</text>
+    <text x="220" y="150" text-anchor="middle" font-size="12" fill="#3D4F65">把每次跑当独立硬币</text>
+
+    <line x1="120" y1="220" x2="320" y2="220" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="200" y1="210" x2="200" y2="230" stroke="#C0563A" stroke-width="2"/>
+    <line x1="240" y1="210" x2="240" y2="230" stroke="#C0563A" stroke-width="2"/>
+    <rect x="200" y="214" width="40" height="12" fill="#E08A6E" opacity="0.6"/>
+    <circle cx="220" cy="220" r="4" fill="#C0563A"/>
+    <text x="220" y="252" text-anchor="middle" font-size="11" fill="#3D4F65">误差棒过窄</text>
+
+    <text x="220" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#C0563A">覆盖率仅 17%</text>
+  </g>
+
+  <!-- Right: hierarchical -->
+  <g>
+    <rect x="500" y="100" width="360" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="680" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">✅ 分层 Bootstrap</text>
+    <text x="680" y="150" text-anchor="middle" font-size="12" fill="#3D4F65">每层都重采，反映真实抖动</text>
+
+    <line x1="540" y1="220" x2="820" y2="220" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="580" y1="208" x2="580" y2="232" stroke="#2563A6" stroke-width="2"/>
+    <line x1="780" y1="208" x2="780" y2="232" stroke="#2563A6" stroke-width="2"/>
+    <rect x="580" y="214" width="200" height="12" fill="#4B8BDA" opacity="0.5"/>
+    <circle cx="680" cy="220" r="4" fill="#1E3A5F"/>
+    <text x="680" y="252" text-anchor="middle" font-size="11" fill="#3D4F65">误差棒诚实</text>
+
+    <text x="680" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#2563A6">覆盖率达 95%</text>
+  </g>
+
+  <!-- Layer stack -->
+  <text x="450" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">逐层有放回重采样</text>
+
+  <g font-size="12" fill="#1E3A5F">
+    <rect x="80" y="370" width="140" height="60" rx="8" fill="#E8F0FB" stroke="#4B8BDA"/>
+    <text x="150" y="395" text-anchor="middle" font-weight="700">Scenario</text>
+    <text x="150" y="415" text-anchor="middle" font-size="11" fill="#3D4F65">换一批任务场景</text>
+
+    <rect x="260" y="370" width="140" height="60" rx="8" fill="#E8F0FB" stroke="#4B8BDA"/>
+    <text x="330" y="395" text-anchor="middle" font-weight="700">Config 轴</text>
+    <text x="330" y="415" text-anchor="middle" font-size="11" fill="#3D4F65">换数据 / UI 设置</text>
+
+    <rect x="440" y="370" width="140" height="60" rx="8" fill="#E8F0FB" stroke="#4B8BDA"/>
+    <text x="510" y="395" text-anchor="middle" font-weight="700">Rollout</text>
+    <text x="510" y="415" text-anchor="middle" font-size="11" fill="#3D4F65">换一次随机采样</text>
+
+    <rect x="620" y="370" width="200" height="60" rx="8" fill="#FFF3E0" stroke="#E0A04B"/>
+    <text x="720" y="395" text-anchor="middle" font-weight="700">Wilson 区间</text>
+    <text x="720" y="415" text-anchor="middle" font-size="11" fill="#3D4F65">叶子层小样本更稳</text>
+
+    <line x1="220" y1="400" x2="257" y2="400" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="400" y1="400" x2="437" y2="400" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="580" y1="400" x2="617" y2="400" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Outcome -->
+  <rect x="100" y="475" width="700" height="95" rx="10" fill="#1E3A5F"/>
+  <text x="450" y="505" text-anchor="middle" font-size="14" font-weight="700" fill="#FAF7F2">真实案例：Claude vs Gemini</text>
+  <text x="260" y="535" text-anchor="middle" font-size="13" fill="#FAF7F2">Claude 0.455 (0.39, 0.51)</text>
+  <text x="640" y="535" text-anchor="middle" font-size="13" fill="#FAF7F2">Gemini 0.525 (0.46, 0.57)</text>
+  <text x="450" y="558" text-anchor="middle" font-size="13" font-weight="700" fill="#FFD27A">CI 重叠 → 判「无显著差异」，部署遗憾 9.8% → 6.0%</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#FAF7F2"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">把 Agent 记忆看作 provenance 族谱</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">修复目标 = 整片受影响的后代 D(F)，而不只是源头 F</text>
+
+  <!-- LEFT: 传统做法 -->
+  <g>
+    <text x="220" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#8B5A3C">✗ 传统：只改源头</text>
+
+    <!-- R1 -->
+    <circle cx="220" cy="160" r="32" fill="#FCE8E6" stroke="#D9534F" stroke-width="2.5" stroke-dasharray="5,3"/>
+    <text x="220" y="156" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">R1</text>
+    <text x="220" y="172" text-anchor="middle" font-size="10" fill="#8B5A3C">已删除</text>
+
+    <!-- children still alive -->
+    <line x1="200" y1="185" x2="150" y2="240" stroke="#B8B0A0" stroke-width="1.5"/>
+    <line x1="220" y1="192" x2="220" y2="240" stroke="#B8B0A0" stroke-width="1.5"/>
+    <line x1="240" y1="185" x2="290" y2="240" stroke="#B8B0A0" stroke-width="1.5"/>
+
+    <rect x="100" y="245" width="80" height="44" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="263" text-anchor="middle" font-size="12" fill="#1E3A5F">S1 summary</text>
+    <text x="140" y="280" text-anchor="middle" font-size="10" fill="#3D4F65">仍可见</text>
+
+    <rect x="180" y="245" width="80" height="44" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="220" y="263" text-anchor="middle" font-size="12" fill="#1E3A5F">C2 cache</text>
+    <text x="220" y="280" text-anchor="middle" font-size="10" fill="#3D4F65">仍可见</text>
+
+    <rect x="260" y="245" width="80" height="44" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="300" y="263" text-anchor="middle" font-size="12" fill="#1E3A5F">K3 skill</text>
+    <text x="300" y="280" text-anchor="middle" font-size="10" fill="#3D4F65">仍可见</text>
+
+    <!-- ghost arrow -->
+    <path d="M 220 300 L 220 410" stroke="#D9534F" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrR)"/>
+    <rect x="110" y="415" width="220" height="55" rx="8" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+    <text x="220" y="438" text-anchor="middle" font-size="13" font-weight="bold" fill="#8B2C2C">隐性故障</text>
+    <text x="220" y="457" text-anchor="middle" font-size="11" fill="#3D4F65">用着过期支撑做决策</text>
+  </g>
+
+  <!-- DIVIDER -->
+  <line x1="450" y1="90" x2="450" y2="500" stroke="#C9C0B0" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- RIGHT: MemoRepair -->
+  <g>
+    <text x="680" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">✓ MemoRepair：级联定位</text>
+
+    <!-- envelope: D(F) -->
+    <rect x="540" y="120" width="280" height="190" rx="14" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="7,4"/>
+    <text x="810" y="138" text-anchor="end" font-size="12" font-weight="bold" fill="#1E3A5F">D(F) = Reach(F; E_inf)</text>
+
+    <!-- F = R1 -->
+    <circle cx="680" cy="170" r="30" fill="#FFE8C2" stroke="#E59A3F" stroke-width="2.5"/>
+    <text x="680" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">F</text>
+    <text x="680" y="181" text-anchor="middle" font-size="10" fill="#8B5A3C">源头</text>
+
+    <!-- influence edges -->
+    <line x1="660" y1="190" x2="610" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="680" y1="200" x2="680" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="700" y1="190" x2="750" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+    <text x="612" y="222" font-size="10" fill="#4B8BDA" font-style="italic">E_inf</text>
+
+    <rect x="560" y="248" width="80" height="44" rx="6" fill="#FFE8C2" stroke="#E59A3F" stroke-width="2"/>
+    <text x="600" y="266" text-anchor="middle" font-size="12" fill="#1E3A5F">S1 summary</text>
+    <text x="600" y="283" text-anchor="middle" font-size="10" fill="#8B5A3C">后代</text>
+
+    <rect x="640" y="248" width="80" height="44" rx="6" fill="#FFE8C2" stroke="#E59A3F" stroke-width="2"/>
+    <text x="680" y="266" text-anchor="middle" font-size="12" fill="#1E3A5F">C2 cache</text>
+    <text x="680" y="283" text-anchor="middle" font-size="10" fill="#8B5A3C">后代</text>
+
+    <rect x="720" y="248" width="80" height="44" rx="6" fill="#FFE8C2" stroke="#E59A3F" stroke-width="2"/>
+    <text x="760" y="266" text-anchor="middle" font-size="12" fill="#1E3A5F">K3 skill</text>
+    <text x="760" y="283" text-anchor="middle" font-size="10" fill="#8B5A3C">后代</text>
+
+    <!-- arrow down to repair -->
+    <path d="M 680 320 L 680 410" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+    <rect x="560" y="415" width="240" height="55" rx="8" fill="#E8F4E8" stroke="#5BA85B" stroke-width="2"/>
+    <text x="680" y="438" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">整片后代纳入修复</text>
+    <text x="680" y="457" text-anchor="middle" font-size="11" fill="#3D4F65">withdraw → reconstruct → republish</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="450" y="522" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">G = (V, E_inf, E_sem)   ·   artifact kinds: record / cache / summary / skill</text>
+</svg>

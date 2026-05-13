@@ -1,59 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="-apple-system,Segoe UI,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#D9914B"/>
     </marker>
   </defs>
 
-  <rect width="800" height="520" fill="#FAF7F2"/>
+  <rect width="880" height="560" fill="#FAF6F0"/>
 
   <!-- Title -->
-  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">能表达 ≠ 会表达</text>
-  <text x="400" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">SPE 理论上图灵完备，但模型并不会主动写复杂编排</text>
+  <text x="440" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">能表达 ≠ 会表达</text>
+  <text x="440" y="70" text-anchor="middle" font-size="14" fill="#3D4F65">SPE 理论上图灵完备，但模型未必主动用</text>
 
   <!-- Left: Capability -->
-  <rect x="50" y="100" width="320" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-  <text x="210" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">✓ 能力：图灵完备</text>
-  <text x="210" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">CEK 求值器可表达任何可计算 agent</text>
+  <rect x="50" y="105" width="360" height="180" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="135" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">能力：图灵完备</text>
+  <text x="230" y="160" text-anchor="middle" font-size="13" fill="#3D4F65">种子状态 x* 可生成任何可计算的 agentic machine</text>
 
-  <rect x="80" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#4B8BDA"/>
-  <text x="120" y="220" text-anchor="middle" font-size="11" fill="#1E3A5F">Auction</text>
-  <text x="120" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D5B">8/8</text>
+  <rect x="80" y="180" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="130" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">Auction</text>
+  <text x="130" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#2E7D5B">8/8</text>
 
-  <rect x="170" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#4B8BDA"/>
-  <text x="210" y="220" text-anchor="middle" font-size="11" fill="#1E3A5F">Telephone</text>
-  <text x="210" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#C97B3D">4/8</text>
+  <rect x="190" y="180" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="240" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">Telephone</text>
+  <text x="240" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#C77E2E">4/8</text>
 
-  <rect x="260" y="195" width="80" height="55" rx="6" fill="#fff" stroke="#4B8BDA"/>
-  <text x="300" y="220" text-anchor="middle" font-size="11" fill="#1E3A5F">20-Questions</text>
-  <text x="300" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D5B">7/8</text>
+  <rect x="300" y="180" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="350" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">20 Questions</text>
+  <text x="350" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#2E7D5B">7/8</text>
+
+  <!-- VS -->
+  <circle cx="440" cy="195" r="26" fill="#1E3A5F"/>
+  <text x="440" y="201" text-anchor="middle" font-size="16" font-weight="700" fill="#FAF6F0">VS</text>
 
   <!-- Right: Habit -->
-  <rect x="430" y="100" width="320" height="170" rx="12" fill="#FBEDE4" stroke="#C97B3D" stroke-width="2"/>
-  <text x="590" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#7A3F1A">✗ 习惯：仍是 ReAct</text>
-  <text x="590" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">日常任务只写最简单的循环</text>
+  <rect x="470" y="105" width="360" height="180" rx="14" fill="#FBEFE6" stroke="#D9914B" stroke-width="2"/>
+  <text x="650" y="135" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">习惯：只写简单循环</text>
+  <text x="650" y="160" text-anchor="middle" font-size="13" fill="#3D4F65">日常编码中模型几乎只生成 ReAct + 上下文裁剪</text>
 
-  <rect x="470" y="195" width="240" height="55" rx="6" fill="#fff" stroke="#C97B3D"/>
-  <text x="590" y="218" text-anchor="middle" font-size="12" fill="#3D4F65">while not done:</text>
-  <text x="590" y="238" text-anchor="middle" font-size="12" fill="#3D4F65">  think → tool → observe</text>
+  <rect x="500" y="185" width="300" height="80" rx="8" fill="#FFFFFF" stroke="#D9914B"/>
+  <text x="650" y="215" text-anchor="middle" font-size="13" fill="#3D4F65" font-family="monospace">while not done:</text>
+  <text x="650" y="245" text-anchor="middle" font-size="13" fill="#3D4F65" font-family="monospace">  think() → act() → observe()</text>
 
-  <!-- VS divider -->
-  <circle cx="400" cy="185" r="22" fill="#1E3A5F"/>
-  <text x="400" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#FAF7F2">VS</text>
+  <!-- Bottom insight -->
+  <rect x="60" y="320" width="760" height="210" rx="14" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="440" y="352" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">真正的价值：把"编排"变成模型的 action space</text>
 
-  <!-- Bottom conclusion -->
-  <rect x="100" y="320" width="600" height="160" rx="12" fill="#E8EEF5" stroke="#1E3A5F" stroke-width="2"/>
-  <text x="400" y="352" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">真正价值：把"编排"放进模型的 action space</text>
+  <!-- bullets -->
+  <circle cx="110" cy="402" r="20" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="408" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">1</text>
+  <text x="145" y="397" font-size="13" fill="#1E3A5F" font-weight="600">谁来表达策略</text>
+  <text x="145" y="416" font-size="12" fill="#3D4F65">harness 写死 → 模型补全自己写</text>
 
-  <rect x="140" y="375" width="220" height="85" rx="8" fill="#fff" stroke="#4B8BDA"/>
-  <text x="250" y="400" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">传统 Agent</text>
-  <text x="250" y="422" text-anchor="middle" font-size="11" fill="#3D4F65">人类写 harness</text>
-  <text x="250" y="442" text-anchor="middle" font-size="11" fill="#3D4F65">编排策略 = 框架</text>
+  <circle cx="110" cy="475" r="20" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="481" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">2</text>
+  <text x="145" y="470" font-size="13" fill="#1E3A5F" font-weight="600">未来可端到端训练编排</text>
+  <text x="145" y="489" font-size="12" fill="#3D4F65">orchestration 进入梯度可达区</text>
 
-  <line x1="365" y1="417" x2="435" y2="417" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <circle cx="500" cy="438" r="20" fill="#FBEFE6" stroke="#D9914B" stroke-width="2"/>
+  <text x="500" y="444" text-anchor="middle" font-size="16" font-weight="700" fill="#C77E2E">!</text>
+  <text x="535" y="420" font-size="13" fill="#1E3A5F" font-weight="600">现状：能力在，习惯没养成</text>
+  <text x="535" y="440" font-size="12" fill="#3D4F65">模型未自发产生新颖编排策略</text>
+  <text x="535" y="458" font-size="12" fill="#3D4F65">需要为 Spell 专门训练的模型</text>
 
-  <rect x="440" y="375" width="220" height="85" rx="8" fill="#fff" stroke="#4B8BDA"/>
-  <text x="550" y="400" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SPE 范式</text>
-  <text x="550" y="422" text-anchor="middle" font-size="11" fill="#3D4F65">模型补全 = 编排程序</text>
-  <text x="550" y="442" text-anchor="middle" font-size="11" fill="#2E7D5B">未来可端到端训练</text>
+  <!-- Arrows -->
+  <path d="M 230 285 Q 230 305 280 320" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M 650 285 Q 650 305 600 320" stroke="#D9914B" stroke-width="2" fill="none" marker-end="url(#a2)"/>
 </svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAF7F2"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">DigiWorld：一个场景 → 320 万种配置</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">每次评测随机抽一种，记忆型重放彻底失效</text>
+
+  <!-- Scenario box -->
+  <rect x="60" y="110" width="220" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="170" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">场景</text>
+  <text x="170" y="168" text-anchor="middle" font-size="13" fill="#3D4F65">"给联系人 X</text>
+  <text x="170" y="186" text-anchor="middle" font-size="13" fill="#3D4F65">转账 Y 元"</text>
+
+  <!-- 4 axes -->
+  <g>
+    <rect x="340" y="100" width="200" height="60" rx="8" fill="#FFF1E6" stroke="#E8A977" stroke-width="1.8"/>
+    <text x="355" y="125" font-size="13" font-weight="700" fill="#1E3A5F">参数</text>
+    <text x="355" y="146" font-size="12" fill="#3D4F65">联系人 / 金额…</text>
+
+    <rect x="340" y="170" width="200" height="60" rx="8" fill="#FFF1E6" stroke="#E8A977" stroke-width="1.8"/>
+    <text x="355" y="195" font-size="13" font-weight="700" fill="#1E3A5F">数据 profile  ×10</text>
+    <text x="355" y="216" font-size="12" fill="#3D4F65">不同通讯录与余额</text>
+
+    <rect x="340" y="240" width="200" height="60" rx="8" fill="#FFF1E6" stroke="#E8A977" stroke-width="1.8"/>
+    <text x="355" y="265" font-size="13" font-weight="700" fill="#1E3A5F">UI 主题  ×10</text>
+    <text x="355" y="286" font-size="12" fill="#3D4F65">深色 / 浅色 / 配色</text>
+
+    <rect x="340" y="310" width="200" height="60" rx="8" fill="#FFF1E6" stroke="#E8A977" stroke-width="1.8"/>
+    <text x="355" y="335" font-size="13" font-weight="700" fill="#1E3A5F">初始 UI 状态  ×10</text>
+    <text x="355" y="356" font-size="12" fill="#3D4F65">首页 / 历史 / 设置</text>
+  </g>
+
+  <!-- arrows scenario -> axes -->
+  <line x1="280" y1="160" x2="338" y2="130" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="280" y1="160" x2="338" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="280" y1="160" x2="338" y2="270" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="280" y1="160" x2="338" y2="340" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- combined -->
+  <rect x="620" y="180" width="220" height="130" rx="12" fill="#1E3A5F"/>
+  <text x="730" y="215" text-anchor="middle" font-size="15" fill="#EFF6FF">组合后</text>
+  <text x="730" y="258" text-anchor="middle" font-size="30" font-weight="800" fill="#FFD8A8">3,200,000+</text>
+  <text x="730" y="288" text-anchor="middle" font-size="13" fill="#EFF6FF">可验证配置 / 场景</text>
+
+  <line x1="540" y1="245" x2="618" y2="245" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- Verification -->
+  <rect x="340" y="400" width="500" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="590" y="428" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">验证：直接 SQL 查应用数据库</text>
+  <text x="590" y="452" text-anchor="middle" font-size="12" fill="#3D4F65">不看截图 · 不靠 LLM 评判 · 结果可复现</text>
+
+  <line x1="700" y1="312" x2="640" y2="398" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- bottom contrast -->
+  <rect x="60" y="500" width="370" height="80" rx="10" fill="#FFE8E8" stroke="#D77272" stroke-width="1.8"/>
+  <text x="245" y="528" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">1MB 重放脚本（记忆作弊）</text>
+  <text x="245" y="552" text-anchor="middle" font-size="13" fill="#3D4F65">其它基准 70%  →  DigiWorld 6.9%</text>
+  <text x="245" y="572" text-anchor="middle" font-size="11" fill="#8a4a4a">每次配置都不同，按钮位置全变了</text>
+
+  <rect x="470" y="500" width="370" height="80" rx="10" fill="#E8F5E9" stroke="#6FA873" stroke-width="1.8"/>
+  <text x="655" y="528" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">15 个 React Native 自研 App</text>
+  <text x="655" y="552" text-anchor="middle" font-size="12" fill="#3D4F65">7 大领域 · 387 场景 · 4300+ 任务</text>
+  <text x="655" y="572" text-anchor="middle" font-size="11" fill="#3D4F65">完全沙箱，无活线服务漂移</text>
+</svg>

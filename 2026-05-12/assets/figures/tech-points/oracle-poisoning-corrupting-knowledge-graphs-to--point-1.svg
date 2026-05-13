@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#FBF7F2"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Oracle Poisoning：不骗 Agent，骗它看到的"事实"</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">仅污染数据平面 · 4200 万节点中改 3 个 (0.000007%)</text>
+
+  <!-- Attacker -->
+  <g>
+    <circle cx="80" cy="220" r="42" fill="#FCE8E6" stroke="#C0392B" stroke-width="2"/>
+    <text x="80" y="216" text-anchor="middle" font-size="13" font-weight="700" fill="#C0392B">攻击者</text>
+    <text x="80" y="234" text-anchor="middle" font-size="11" fill="#C0392B">只动数据</text>
+  </g>
+
+  <!-- Knowledge Graph (poisoned) -->
+  <g>
+    <rect x="190" y="130" width="270" height="190" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="325" y="155" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">知识图谱 (被污染)</text>
+
+    <!-- nodes -->
+    <line x1="254" y1="205" x2="311" y2="232" stroke="#3D4F65" stroke-width="1.3"/>
+    <line x1="339" y1="232" x2="396" y2="205" stroke="#3D4F65" stroke-width="1.3"/>
+
+    <circle cx="240" cy="200" r="18" fill="#fff" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="240" y="204" text-anchor="middle" font-size="10" fill="#3D4F65">handler</text>
+
+    <circle cx="325" cy="240" r="20" fill="#FCE8E6" stroke="#C0392B" stroke-width="2.5" stroke-dasharray="3,2"/>
+    <text x="325" y="244" text-anchor="middle" font-size="10" font-weight="700" fill="#C0392B">伪造</text>
+
+    <circle cx="410" cy="200" r="18" fill="#fff" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="410" y="204" text-anchor="middle" font-size="10" fill="#3D4F65">DB query</text>
+
+    <text x="325" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">插入 3 个虚假 sanitizer 节点</text>
+    <text x="325" y="308" text-anchor="middle" font-size="10" fill="#7A8A9C">权重 / Prompt / 工具定义都没动</text>
+  </g>
+
+  <!-- Arrow attacker -> KG -->
+  <path d="M118 195 Q 160 150 215 145" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#arRed)"/>
+  <text x="135" y="135" font-size="11" fill="#C0392B">改"墙上的影子"</text>
+
+  <!-- MCP channel -->
+  <g>
+    <rect x="500" y="195" width="90" height="50" rx="6" fill="#FFF4E0" stroke="#D89B3C" stroke-width="2"/>
+    <text x="545" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#8A5A1A">MCP</text>
+    <text x="545" y="234" text-anchor="middle" font-size="10" fill="#8A5A1A">工具调用</text>
+  </g>
+  <line x1="462" y1="220" x2="498" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Agent -->
+  <g>
+    <rect x="630" y="160" width="220" height="120" rx="10" fill="#EAF4EC" stroke="#3F8C5C" stroke-width="2"/>
+    <text x="740" y="187" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">AI Agent</text>
+    <text x="740" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">推理链完全自洽</text>
+    <text x="740" y="232" text-anchor="middle" font-size="11" fill="#3D4F65">把图谱当作"权威事实"</text>
+    <text x="740" y="260" text-anchor="middle" font-size="12" font-weight="700" fill="#C0392B">→ 输出："已缓解 ✓"</text>
+  </g>
+  <line x1="590" y1="220" x2="628" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Comparison panel -->
+  <g>
+    <rect x="60" y="360" width="780" height="200" rx="10" fill="#F2EEE8" stroke="#B8A98F" stroke-width="1.5"/>
+    <text x="450" y="385" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">和已知攻击的本质区别</text>
+
+    <g font-size="12" fill="#3D4F65">
+      <rect x="85" y="402" width="170" height="140" rx="6" fill="#FFFFFF" stroke="#C9C0B0"/>
+      <text x="170" y="425" text-anchor="middle" font-weight="700" fill="#1E3A5F">Prompt Injection</text>
+      <text x="170" y="450" text-anchor="middle">改 指令</text>
+      <line x1="105" y1="500" x2="235" y2="520" stroke="#C0392B" stroke-width="2"/>
+
+      <rect x="275" y="402" width="170" height="140" rx="6" fill="#FFFFFF" stroke="#C9C0B0"/>
+      <text x="360" y="425" text-anchor="middle" font-weight="700" fill="#1E3A5F">RAG 投毒</text>
+      <text x="360" y="450" text-anchor="middle">改 检索文本</text>
+      <line x1="295" y1="500" x2="425" y2="520" stroke="#C0392B" stroke-width="2"/>
+
+      <rect x="465" y="402" width="170" height="140" rx="6" fill="#FFFFFF" stroke="#C9C0B0"/>
+      <text x="550" y="425" text-anchor="middle" font-weight="700" fill="#1E3A5F">Tool Poisoning</text>
+      <text x="550" y="450" text-anchor="middle">改 工具描述</text>
+      <line x1="485" y1="500" x2="615" y2="520" stroke="#C0392B" stroke-width="2"/>
+
+      <rect x="655" y="402" width="170" height="140" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+      <text x="740" y="425" text-anchor="middle" font-weight="700" fill="#1E3A5F">Oracle Poisoning</text>
+      <text x="740" y="450" text-anchor="middle" fill="#1E3A5F">只改 图谱数据</text>
+      <text x="740" y="490" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="700">9 个主流模型 100% 上当</text>
+      <text x="740" y="515" text-anchor="middle" font-size="11" fill="#3D4F65">本文新定义</text>
+    </g>
+  </g>
+</svg>

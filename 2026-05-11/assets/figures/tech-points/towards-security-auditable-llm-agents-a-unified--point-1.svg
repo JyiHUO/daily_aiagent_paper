@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2410C"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FBF8F3"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Agent-BOM：把一次 Agent 执行拼成可审计的属性图</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">两层节点 + 跨层边 + 安全属性 → 让“为什么删了文件”可被查询</text>
+
+  <!-- Static capability layer -->
+  <rect x="50" y="95" width="370" height="320" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="70" y="120" font-size="15" font-weight="700" fill="#1E3A5F">静态能力层  Static</text>
+  <text x="70" y="138" font-size="11" fill="#3D4F65">Agent 天生具备的能力基座</text>
+
+  <rect x="75" y="155" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="125" y="180" text-anchor="middle" font-size="12" fill="#1E3A5F">LLM</text>
+
+  <rect x="185" y="155" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="235" y="180" text-anchor="middle" font-size="12" fill="#1E3A5F">Tool: delete-file</text>
+
+  <rect x="295" y="155" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="345" y="180" text-anchor="middle" font-size="12" fill="#1E3A5F">Prompt / Skill</text>
+
+  <rect x="130" y="225" width="210" height="60" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="235" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">LongTermMemory</text>
+  <text x="235" y="268" text-anchor="middle" font-size="10.5" fill="#92400E">trust-level: low · 被投毒</text>
+
+  <rect x="75" y="320" width="320" height="78" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-dasharray="4,3"/>
+  <text x="235" y="342" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">结构依赖边</text>
+  <text x="235" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">Agent 拥有哪些 LLM / 工具 / 记忆 / 技能</text>
+  <text x="235" y="382" text-anchor="middle" font-size="11" fill="#3D4F65">来源相对静态，可由 SBOM 类信息生成</text>
+
+  <!-- Runtime semantic layer -->
+  <rect x="480" y="95" width="370" height="420" rx="14" fill="#FFF1E6" stroke="#C2410C" stroke-width="2"/>
+  <text x="500" y="120" font-size="15" font-weight="700" fill="#7C2D12">运行时语义层  Runtime</text>
+  <text x="500" y="138" font-size="11" fill="#7C2D12">这次任务里 Agent 脑子里发生了什么</text>
+
+  <rect x="560" y="155" width="240" height="38" rx="6" fill="#FFFFFF" stroke="#C2410C"/>
+  <text x="680" y="178" text-anchor="middle" font-size="12" fill="#7C2D12">Context  (读到不可信记忆)</text>
+
+  <rect x="560" y="210" width="240" height="38" rx="6" fill="#FFFFFF" stroke="#C2410C"/>
+  <text x="680" y="233" text-anchor="middle" font-size="12" fill="#7C2D12">Reasoning</text>
+
+  <rect x="560" y="265" width="240" height="38" rx="6" fill="#FFFFFF" stroke="#C2410C"/>
+  <text x="680" y="288" text-anchor="middle" font-size="12" fill="#7C2D12">Decision</text>
+
+  <rect x="560" y="320" width="240" height="38" rx="6" fill="#FFFFFF" stroke="#C2410C"/>
+  <text x="680" y="343" text-anchor="middle" font-size="12" fill="#7C2D12">Action  (selects delete-file)</text>
+
+  <rect x="560" y="385" width="240" height="60" rx="6" fill="#FECACA" stroke="#B91C1C" stroke-width="2"/>
+  <text x="680" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#7F1D1D">Observation: 文件被删除</text>
+  <text x="680" y="428" text-anchor="middle" font-size="10.5" fill="#7F1D1D">confirmation: none · 高风险</text>
+
+  <!-- Runtime arrows -->
+  <line x1="680" y1="193" x2="680" y2="208" stroke="#C2410C" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="680" y1="248" x2="680" y2="263" stroke="#C2410C" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="680" y1="303" x2="680" y2="318" stroke="#C2410C" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="680" y1="358" x2="680" y2="383" stroke="#C2410C" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Cross-layer bindings -->
+  <path d="M340 250 C 450 250, 470 174, 558 174" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="420" y="200" font-size="11" fill="#1E3A5F">reads-from</text>
+
+  <path d="M285 178 C 380 178, 430 340, 558 340" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="430" y="335" font-size="11" fill="#1E3A5F">invokes</text>
+
+  <!-- Bottom: security attributes -->
+  <rect x="50" y="535" width="800" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="70" y="558" font-size="13" font-weight="700" fill="#1E3A5F">α: 给每个节点 / 边贴安全标签</text>
+  <text x="70" y="578" font-size="11.5" fill="#3D4F65">source · trust-level · integrity · confirmation · environment-change</text>
+  <text x="70" y="596" font-size="11.5" fill="#7C2D12">→ 审计可回溯：这次删除是被一条 low-trust 记忆驱动的</text>
+</svg>

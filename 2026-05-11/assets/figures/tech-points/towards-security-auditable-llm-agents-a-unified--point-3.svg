@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#F7FAFC"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">OWASP Agentic Top 10 → 一条图查询规则</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">每个风险都映射为 Agent-BOM 上的 ventry + Pback + Pfwd</text>
+
+  <!-- Left: risk list -->
+  <rect x="40" y="95" width="225" height="380" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="152" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">ASI01 – ASI10</text>
+  <text x="60" y="152" font-size="12.5" fill="#3D4F65">• Goal Hijack</text>
+  <text x="60" y="178" font-size="12.5" fill="#3D4F65">• Tool Misuse</text>
+  <text x="60" y="204" font-size="12.5" fill="#3D4F65">• Identity / Privilege Abuse</text>
+  <text x="60" y="230" font-size="12.5" fill="#3D4F65">• Supply Chain</text>
+  <text x="60" y="256" font-size="12.5" fill="#3D4F65">• Unexpected Code Exec</text>
+  <text x="60" y="282" font-size="12.5" font-weight="700" fill="#B45309">• Memory / Context Poison</text>
+  <text x="60" y="308" font-size="12.5" fill="#3D4F65">• Insecure Inter-Agent Comm</text>
+  <text x="60" y="334" font-size="12.5" fill="#3D4F65">• Cascading Failures</text>
+  <text x="60" y="360" font-size="12.5" fill="#3D4F65">• Human-Agent Trust Exploit</text>
+  <text x="60" y="386" font-size="12.5" fill="#3D4F65">• Rogue Agents</text>
+  <text x="152" y="450" text-anchor="middle" font-size="11" fill="#6B7280">新攻击能描述为路径即可加入</text>
+
+  <!-- Arrow -->
+  <line x1="270" y1="285" x2="345" y2="285" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="307" y="278" text-anchor="middle" font-size="11" fill="#4B8BDA">翻译为</text>
+
+  <!-- Right: rule card example -->
+  <rect x="350" y="95" width="490" height="380" rx="10" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="595" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">例：Memory &amp; Context Poisoning</text>
+
+  <!-- ventry -->
+  <rect x="375" y="150" width="440" height="70" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="395" y="175" font-size="13" font-weight="700" fill="#92400E">ventry</text>
+  <text x="395" y="200" font-size="12" fill="#3D4F65">写入记忆的 ToolNode  /  被污染的 ContextNode</text>
+
+  <!-- Pback -->
+  <rect x="375" y="240" width="440" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="395" y="265" font-size="13" font-weight="700" fill="#1E3A5F">Pback ← 反向追溯</text>
+  <text x="395" y="290" font-size="12" fill="#3D4F65">source 是否回到不可信外部内容? (integrity-status = tainted)</text>
+
+  <!-- Pfwd -->
+  <rect x="375" y="340" width="440" height="80" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="395" y="365" font-size="13" font-weight="700" fill="#065F46">Pfwd → 正向影响</text>
+  <text x="395" y="390" font-size="12" fill="#3D4F65">后续 ReasoningNode.basis 是否引用此记忆?</text>
+  <text x="395" y="410" font-size="11.5" fill="#6B7280">→ 判定跨会话投毒是否真正生效</text>
+
+  <!-- vertical arrows linking the three -->
+  <line x1="595" y1="220" x2="595" y2="238" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="595" y1="320" x2="595" y2="338" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Bottom verdict -->
+  <rect x="375" y="438" width="440" height="28" rx="6" fill="#1E3A5F"/>
+  <text x="595" y="457" text-anchor="middle" font-size="12.5" font-weight="700" fill="#FFFFFF">一条图查询 = 一条可审计的安全规则</text>
+
+  <text x="440" y="510" text-anchor="middle" font-size="12" fill="#6B7280">日志看顺序，SBOM 看依赖；Agent-BOM 让"语义意图"也能被查询。</text>
+</svg>

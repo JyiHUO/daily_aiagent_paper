@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0511：把隐性结构变成一等对象",
+  "shownotes_html": "<p>今天三篇论文不约而同地在做同一件事：把 Agent 里藏在框架代码、prompt 模板和日志碎片里的隐性结构，翻出来变成可操纵、可查询、可修复的一等公民。Agent 要从 demo 走向长生命周期生产，必须先有可治理的内部表示——这期值得每一个做 Agent 产品的人听。</p><p><strong>本期重点</strong></p><ul><li><strong>自编程执行（Self-Programmed Execution）</strong>：直接挑战所有 Agent 框架的核心假设——harness 必须控制编排。作者设计了一门 Lisp（Spell），让模型补全本身就是下一轮的编排程序，harness 退化为纯解释器。GPT-5.4 零训练就能用，token 消耗比 Codex CLI 少约 4 倍，但模型拿到自由后最爱干的事只是精细管上下文和批量调工具——更高级的多 Agent 编排还用不起来。</li><li><strong>Agent-BOM：面向安全审计的统一图表示（Towards Security-Auditable LLM Agents）</strong>：把 Agent 一次执行建模成分层属性图，上层是静态能力、下层是运行时语义状态，每个节点贴安全标签。所有审计规则统一为「入口定位→反向溯源→正向追踪→属性裁定」四步模板，OWASP Agentic Top 10 全部覆盖，还在真实框架上跑通了攻击链重构。</li><li><strong>MemoRepair：Agent 记忆的级联修复（Barrier-First Cascade Repair in Agentic Memory）</strong>：实测发现主流记忆系统删一条记录后，超过 92% 的后续动作仍在用陈旧派生信息。论文把记忆建成血缘 DAG，先 barrier 下架整片受影响后代，再用 min-cut 精确选择哪些值得重建发布，陈旧曝光从 90%+ 直降到零。代价是血缘必须从一开始就记全。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 的控制流和安全语义正在集体脱离隐式实现：编排从 harness 移到模型补全、执行语义从日志移到属性图、派生记忆从平铺存储移到血缘 DAG——方向相同，切入面不同。</li><li>评测侧持续在证伪 Agent「看起来能干」的假象：真实运维故障、OS 级角色隔离、行动偏置等压力测试揭示，可靠性还远未达成。</li></ul><p><em>本期内容由 AI 基于当日论文自动生成，如有疏漏欢迎留言指正。我们明天见。</em></p>",
+  "report_date": "2026-05-11",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-12T19:37:06Z"
+}

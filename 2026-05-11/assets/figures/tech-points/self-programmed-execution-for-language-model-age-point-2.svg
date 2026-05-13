@@ -1,75 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580" font-family="'Helvetica Neue',Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
   <defs>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <rect width="880" height="580" fill="#FAF7F2"/>
+  <rect width="900" height="580" fill="#F7FAFC"/>
 
-  <text x="440" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1E3A5F">
-    Spell 的窍门：把副作用塞进"最后一行"
-  </text>
-  <text x="440" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">
-    旧轮代码自动降级为惰性字符串，不会被重放
-  </text>
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Spell 的关键技巧：只 eval 最后一行</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">让模型自己写编排程序，又不会重放上一轮的副作用</text>
 
   <!-- Turn 1 -->
   <g>
-    <rect x="40" y="90" width="360" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-    <text x="60" y="118" font-size="15" font-weight="700" fill="#1E3A5F">Turn 1 程序</text>
+    <rect x="40" y="95" width="380" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="60" y="122" font-size="15" font-weight="700" fill="#1E3A5F">Turn 1 程序</text>
 
-    <rect x="60" y="135" width="320" height="36" rx="5" fill="#FFFFFF" stroke="#B8CDE5"/>
-    <text x="72" y="158" font-size="12" fill="#3D4F65" font-family="monospace">(do  ...local computation...</text>
+    <rect x="60" y="138" width="340" height="40" rx="5" fill="#FFFFFF" stroke="#B8CCE0"/>
+    <text x="72" y="163" font-size="13" fill="#3D4F65">(do  ...本地计算...</text>
 
-    <rect x="60" y="180" width="320" height="44" rx="5" fill="#FFE8C2" stroke="#E89A3C" stroke-width="2"/>
-    <text x="72" y="198" font-size="12" font-family="monospace" fill="#8C4A0F">'(read-file ...)</text>
-    <text x="72" y="216" font-size="12" font-family="monospace" fill="#8C4A0F">  (self-call ...))</text>
+    <rect x="60" y="188" width="340" height="56" rx="5" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+    <text x="72" y="210" font-size="13" font-weight="700" fill="#1E3A5F">'(read-file &amp; self-call)</text>
+    <text x="72" y="230" font-size="11" fill="#92400E">↑ 尾表达式（被 eval，触发副作用）</text>
 
-    <text x="220" y="252" text-anchor="middle" font-size="12" fill="#8C4A0F" font-weight="600">↑ 尾表达式：被 eval 触发副作用</text>
-    <text x="220" y="282" text-anchor="middle" font-size="12" fill="#3D4F65">工具被真的调用了一次</text>
+    <text x="60" y="270" font-size="11" fill="#3D4F65">外层 wrapper 只 eval 这一行</text>
+    <text x="60" y="288" font-size="11" fill="#3D4F65">→ 调用工具，进入下一轮</text>
   </g>
 
   <!-- arrow -->
-  <line x1="405" y1="200" x2="475" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
-  <text x="440" y="190" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">下一轮</text>
+  <text x="450" y="195" text-anchor="middle" font-size="12" fill="#1E3A5F">追加</text>
+  <line x1="425" y1="210" x2="475" y2="210" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
 
   <!-- Turn 2 -->
   <g>
-    <rect x="480" y="90" width="360" height="310" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-    <text x="500" y="118" font-size="15" font-weight="700" fill="#1E3A5F">Turn 2 程序</text>
+    <rect x="480" y="95" width="380" height="295" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="500" y="122" font-size="15" font-weight="700" fill="#1E3A5F">Turn 2 程序</text>
 
-    <rect x="500" y="135" width="320" height="36" rx="5" fill="#FFFFFF" stroke="#B8CDE5"/>
-    <text x="512" y="158" font-size="12" fill="#3D4F65" font-family="monospace">(do  ...local computation...</text>
+    <rect x="500" y="138" width="340" height="40" rx="5" fill="#FFFFFF" stroke="#B8CCE0"/>
+    <text x="512" y="163" font-size="13" fill="#3D4F65">(do  ...本地计算...</text>
 
-    <rect x="500" y="180" width="320" height="44" rx="5" fill="#E8E8EC" stroke="#9AA3B2" stroke-dasharray="4 3"/>
-    <text x="512" y="198" font-size="12" font-family="monospace" fill="#6B7280">'(read-file ...)</text>
-    <text x="512" y="216" font-size="12" font-family="monospace" fill="#6B7280">  (self-call ...))</text>
+    <rect x="500" y="188" width="340" height="40" rx="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-dasharray="4 3"/>
+    <text x="512" y="213" font-size="13" fill="#6B7280">'(read-file &amp; self-call)  ← 旧</text>
 
-    <rect x="500" y="232" width="320" height="44" rx="5" fill="#FFE8C2" stroke="#E89A3C" stroke-width="2"/>
-    <text x="512" y="250" font-size="12" font-family="monospace" fill="#8C4A0F">'(write-file ...)</text>
-    <text x="512" y="268" font-size="12" font-family="monospace" fill="#8C4A0F">  (self-call ...))</text>
+    <rect x="500" y="238" width="340" height="56" rx="5" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+    <text x="512" y="260" font-size="13" font-weight="700" fill="#1E3A5F">'(write-file &amp; self-call)</text>
+    <text x="512" y="280" font-size="11" fill="#92400E">↑ 新尾表达式（这次才被 eval）</text>
 
-    <text x="660" y="304" text-anchor="middle" font-size="12" fill="#6B7280">旧尾表达式 → 惰性数据</text>
-    <text x="660" y="326" text-anchor="middle" font-size="12" fill="#8C4A0F" font-weight="600">新尾表达式 → 仅它被 eval</text>
-    <text x="660" y="358" text-anchor="middle" font-size="11" fill="#3D4F65">read-file 不会重放，但模型仍能读到全文</text>
+    <text x="500" y="320" font-size="11" fill="#3D4F65">旧的那行不再是最后一行</text>
+    <text x="500" y="338" font-size="11" fill="#3D4F65">→ 自动降级为惰性字面数据</text>
+    <text x="500" y="356" font-size="11" fill="#3D4F65">→ 工具不会被重复调用 ✓</text>
+    <text x="500" y="374" font-size="11" fill="#3D4F65">→ 仍可作为历史被模型读取 ✓</text>
   </g>
 
-  <!-- bottom summary -->
+  <!-- bottom insight -->
   <g>
-    <rect x="40" y="430" width="800" height="130" rx="10" fill="#1E3A5F"/>
-    <text x="440" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#FFE8C2">三大挑战，一招化解</text>
-
-    <text x="170" y="492" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">① 上下文即代码</text>
-    <text x="170" y="514" text-anchor="middle" font-size="11" fill="#B8CDE5">quine：拿到自身源码作为数据</text>
-    <text x="170" y="534" text-anchor="middle" font-size="11" fill="#B8CDE5">来编辑</text>
-
-    <text x="440" y="492" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">② 不重放副作用</text>
-    <text x="440" y="514" text-anchor="middle" font-size="11" fill="#B8CDE5">只 eval 最末尾一项</text>
-    <text x="440" y="534" text-anchor="middle" font-size="11" fill="#B8CDE5">旧代码沦为字面字符串</text>
-
-    <text x="710" y="492" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">③ 不跨轮污染</text>
-    <text x="710" y="514" text-anchor="middle" font-size="11" fill="#B8CDE5">self-call 进入全新环境</text>
-    <text x="710" y="534" text-anchor="middle" font-size="11" fill="#B8CDE5">绑定不会泄漏</text>
+    <rect x="80" y="420" width="740" height="140" rx="10" fill="#1E3A5F"/>
+    <text x="450" y="455" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">核心洞察：用 quote 把过去封冻成数据</text>
+    <text x="450" y="485" text-anchor="middle" font-size="13" fill="#CBD5E0">上一轮的副作用代码 = 引号内的字符串 = 不会被执行</text>
+    <text x="450" y="510" text-anchor="middle" font-size="13" fill="#CBD5E0">本轮新代码追加在末尾 = 唯一被 eval 的尾表达式</text>
+    <text x="450" y="538" text-anchor="middle" font-size="12" fill="#93C5FD">上下文即代码，但只有最新一行真正运行</text>
   </g>
 </svg>

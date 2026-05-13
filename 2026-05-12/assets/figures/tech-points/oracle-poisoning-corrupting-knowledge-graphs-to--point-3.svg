@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">同一份毒数据，两种通道，结果天差地别</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">GPT-5.1 对工具调用通道的怀疑阈值显著降低</text>
+
+  <!-- Poisoned data box (shared source) -->
+  <rect x="350" y="85" width="200" height="60" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="450" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#92400E">伪造的 sanitizer 信息</text>
+  <text x="450" y="130" text-anchor="middle" font-size="12" fill="#92400E">（同一份毒数据）</text>
+
+  <!-- Left path arrow -->
+  <line x1="390" y1="145" x2="260" y2="210" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="245" y="180" font-size="12" fill="#3D4F65">贴进 user message</text>
+
+  <!-- Right path arrow -->
+  <line x1="510" y1="145" x2="640" y2="210" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="585" y="180" font-size="12" fill="#3D4F65">SDK tool result</text>
+
+  <!-- Left scene: inline -->
+  <rect x="60" y="215" width="340" height="290" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Inline 文本注入</text>
+
+  <rect x="120" y="265" width="220" height="55" rx="8" fill="#DBEAFE" stroke="#1E3A5F"/>
+  <text x="230" y="289" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">GPT-5.1：这数据看起来可疑</text>
+  <text x="230" y="308" text-anchor="middle" font-size="12" fill="#3D4F65">→ 触发怀疑，拒绝采信</text>
+
+  <rect x="100" y="345" width="260" height="80" rx="8" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+  <text x="230" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#15803D">✓ 识破伪造</text>
+  <text x="230" y="408" text-anchor="middle" font-size="28" font-weight="800" fill="#15803D">0% 信任 (0/30)</text>
+
+  <text x="230" y="465" text-anchor="middle" font-size="12" fill="#3D4F65">→ 安全评测显示“模型很稳”（假阴性）</text>
+
+  <!-- Right scene: tool -->
+  <rect x="500" y="215" width="340" height="290" rx="10" fill="#FEF2F2" stroke="#C2410C" stroke-width="2"/>
+  <text x="670" y="245" text-anchor="middle" font-size="16" font-weight="700" fill="#7C2D12">真实 SDK 工具调用</text>
+
+  <rect x="560" y="265" width="220" height="55" rx="8" fill="#FEE2E2" stroke="#7C2D12"/>
+  <text x="670" y="289" text-anchor="middle" font-size="13" font-weight="600" fill="#7C2D12">GPT-5.1：工具说的，那就信</text>
+  <text x="670" y="308" text-anchor="middle" font-size="12" fill="#7C2D12">→ 工具通道被视作高可信源</text>
+
+  <rect x="540" y="345" width="260" height="80" rx="8" fill="#FECACA" stroke="#B91C1C" stroke-width="2"/>
+  <text x="670" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="#B91C1C">✗ 全盘接受</text>
+  <text x="670" y="408" text-anchor="middle" font-size="28" font-weight="800" fill="#B91C1C">100% 信任 (30/30)</text>
+
+  <text x="670" y="465" text-anchor="middle" font-size="12" fill="#3D4F65">→ 真实部署里被完全攻破</text>
+
+  <!-- Bottom warning -->
+  <rect x="120" y="520" width="660" height="30" rx="6" fill="#1E3A5F"/>
+  <text x="450" y="540" text-anchor="middle" font-size="13" font-weight="600" fill="#FEF3C7">⚠ 用 inline 评测 Agent 安全 = 假阴性，工具通道才是真战场</text>
+</svg>

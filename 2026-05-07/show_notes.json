@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0507：安全红队沙箱、上下文策略化与80小时造芯片",
+  "shownotes_html": "<p>这期聊的是 Agent 最薄弱的三个环节——安全、记忆、工具协议——如何从外挂 trick 升级为系统级一等公民。三篇论文分别给出了红队评测基础设施、上下文弹性管理、以及超长程硬件设计的前沿方案，值得所有在做 Agent 产品的人花时间看看。</p><br/><p><strong>本期重点</strong></p><ul><li><strong>DTap：可控交互式 AI Agent 红队平台（DecodingTrust-Agent Platform）</strong>——首个面向 Agent 的大规模红队基础设施，把 Gmail、PayPal、Slack 等 50+ 真实系统 1:1 仿真成可重置沙箱，配套自主红队 Agent 和 6682 个任务基准。最扎心的发现：没有主流 Agent 框架是安全的，Claude Code 攻击成功率仍超 25%，Google ADK 间接注入下被攻破过半。「先执行再拒绝」的批量工具调用模式是系统性漏洞。</li><li><strong>Design Conductor 2.0：Agent 用 80 小时从论文造出推理加速器</strong>——给多 Agent 系统喂一篇 arXiv 论文加一页自然语言需求，它自主完成架构决策、RTL 编写、验证、综合到 FPGA 映射全流程，产出 5129 个浮点单元的加速器设计。Code Agent 的能力边界从软件被推到了芯片级长程任务，新瓶颈已经转移到人类如何高效验收。</li><li><strong>LongSeeker：弹性上下文编排（Elastic Context Orchestration）</strong>——把「整理上下文」拆成 Skip/Compress/Rollback/Snippet/Delete 五个可学习的原子操作，和工具调用并列为 Agent 的策略动作。30B 模型在 BrowseComp 上拿到 61.5%，显著超过通义 DeepResearch 的 43.2%。Snippet 操作尤其关键——用锚点无损复制原文，避免摘要幻觉吃掉关键数字和人名。</li></ul><br/><p><strong>今日趋势</strong></p><ul><li>Agent 安全正在从「prompt 里写几条禁令」下沉到工具协议层的运行时拦截和状态级红队评测，单轮对齐已不是主战场。</li><li>上下文/记忆管理和工具调用开始被放到同等地位联合训练，「滑窗+阈值总结」的固定规则正在被多分辨率、可验证的策略化方案替代。</li></ul><br/><p><em>本期内容由 AI 基于当日论文自动生成，如有疏漏欢迎留言指正。觉得有用的话，订阅和评论都是对我们最大的支持 :)</em></p>",
+  "report_date": "2026-05-07",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-08T00:11:45Z"
+}

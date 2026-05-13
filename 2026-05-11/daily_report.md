@@ -5,25 +5,25 @@
 
 ## 一、初筛每日趋势
 
-- Agent runtime 范式被重新审视：编排权下沉到模型补全
-- MCP/记忆/多智能体协议层安全成为新主战场
-- Web、SRE、Phone-Use 评测集体转向高保真可复现环境
-- Agent 架构层出现范式松动：SPE 把 agent loop 写进模型补全、SARC 把约束编入 runtime 四个执行点，固定 harness 的'编排即代码'正被'编排即模型 action'挑战。
-- 安全议题从 prompt 注入彻底下沉到协议与状态层：MCP 双向数据流、长期记忆状态污染、Agent-BOM 审计图谱共同指向'跨信任边界的数据流治理'。
-- Agent 评测在向真实环境与可执行验证靠拢：Weblica 把网站冻结成可重放副本、SREGym 注入云原生故障、TeamBench 用 OS 访问控制强制角色分离，揭穿 prompt-only 协作的虚假成功。
-- 多智能体协调开始引入形式化方法：TraceFix 用 TLA+ 反例修复协议，与 POMDP 形式化的 agentic search 一道，把 Agent 系统设计推向可验证工程。
+- Agent架构松动：编排权从harness让渡给模型自身
+- 运行时治理成主线：图审计、约束Gate、记忆级联修复同时落地
+- 评测向真实运维和角色边界下沉，揭穿prompt层假协作
+- Agent架构层出现范式松动：SPE把agent loop写进模型补全、SARC把约束编入运行时Gate，编排与治理都在脱离硬编码harness、变成可被模型或规则操纵的一等对象。
+- Agent运行时治理研究集中爆发：Agent-BOM做统一图审计、MemoRepair形式化记忆级联修复、StateGuard防长期状态投毒，三者从可观测、可修复、可防御三个面向同时补长生命周期Agent的治理短板。
+- 评测继续向真实环境与边界场景下沉：SREGym搭高保真云原生故障、TeamBench用OS级角色隔离揭穿prompt-only协作、FixedBench暴露coding agent的action bias，评测越来越像在做'压力测试+缺陷诊断'。
+- 可解释性开始切入Agent决策内部：用SAE和线性探针在工具调用前读取模型状态预测调用与后果，机理可解释正成为Agent安全可观测的新一层。
 
 ### 跨论文综合观察
 
-- SPE、SARC、TraceFix 看似分别讨论编排、治理与协议修复，其实都在回答同一个问题：Agent 的控制流应该写在哪里、由谁验证——SPE 把它推进模型补全，SARC 把它显式编进四个执行点，TraceFix 用 TLA+ 反例反向修复，三者拼出一张'可编程+可审计+可验证'的 runtime 设计谱。
-- Unsafe by Flow、Long-Term State Poisoning、Agent-BOM 在不同层面盯同一件事：Agent 的风险已经不在单轮 prompt，而在跨工具、跨记忆、跨智能体的数据流，安全研究正集体转向'流图 + 边界 + 审计'范式。
-- Weblica、SREGym、TeamBench、Phone-Use Safety 评测论文方法论高度一致：用真实/高保真环境 + 强制约束（断网重放、故障注入、OS 隔离、能力区分）来戳破 prompt 层面的假性成功，标志 Agent 评测正式进入'环境工程'时代。
+- SPE、SARC、Agent-BOM其实在同一条轴上从不同方向切入：SPE把编排策略从harness挪到模型补全，SARC把约束从prompt挪到运行时Gate，Agent-BOM把执行语义从日志挪到属性图——共同趋势是Agent的控制流和安全语义都在脱离隐式实现、变成显式可操纵对象。
+- MemoRepair与'长期状态投毒'(ULSPB)形成攻防对照：前者从provenance血缘视角解决合法更新引发的级联陈旧，后者揭示日常对话也能悄悄改写授权与工具默认值，两篇合起来说明长期记忆既要有修复契约也要有writeback边界审计。
+- SREGym、TeamBench、FixedBench、EnvSimBench四个评测共同指向'Agent在受控demo里看起来能干，但在真实/受限/边界场景里频繁失败'，且失败模式越来越具体：故障定位、角色越权、行动偏置、多状态同步——评测正从总分制走向缺陷诊断学。
 
 ## 二、重点论文精读
 
 ### 1. Self-Programmed Execution for Language-Model Agents
 - **方向：** general\_agent
-- **评分：** 相关性 92 | 价值 80 | 有趣性 88 | 创新性 90 | 开拓性 85
+- **评分：** 相关性 92 | 价值 85 | 有趣性 90 | 创新性 90 | 开拓性 88
 - **为什么入选：** 把编排程序交给模型本身写，挑战 Agent 框架的固定 harness 范式
 - **快速背景：** 现有 Agent 都靠固定 harness 控制多轮编排，作者想把这个权力还给模型
 ![Self-Programmed Execution for Language-Model Agents 论文主图](assets/figures/overview/self-programmed-execution-for-language-model-agents-hero.svg)
@@ -87,123 +87,123 @@
 - **对 Agent 产品/系统的启发：** 把 agent loop 当成模型 action space，未来可端到端训练编排策略
 - **详细启发：** 产品侧：对做 Agent 平台的团队，这提示了一种极简 runtime 形态：不再维护 agent loop 与 conversation history，只提供一个能 eval 模型代码的沙箱与若干 effect 命名空间，把上下文管理、子 Agent 调度、工具批处理全部交给模型生成的代码完成，可显著降低 token 成本。；系统侧：系统层面要解决三个工程问题：1) 让代码与上下文同体不互相干扰（quine + 尾表达式模式）；2) 副作用不可重放（旧 effect 表达式自动惰性化）；3) 子调用环境隔离避免父子绑定污染。这些是任何 SPE 实现都绕不开的设计约束。；风险：目前模型并未训练适配这种范式，弱模型会写出无效程序导致 fatal error；多 Agent 编排尚不可靠（论文中两次尝试都被判可能有害）；非编码任务（LongBench、AppWorld）下表现不如成熟 harness。生产环境短期仍需配合 effect 命名空间白名单做兜底。
 
-### 2. Weblica: Scalable and Reproducible Training Environments for Visual Web Agents
-- **方向：** web\_agent
-- **评分：** 相关性 93 | 价值 88 | 有趣性 82 | 创新性 82 | 开拓性 85
-- **为什么入选：** 用 HTTP 缓存+LLM 合成造出几千个可复现网页环境，把 web agent 的 RL 训练规模化
-- **快速背景：** Web agent 训练长期卡在'没有可复现可扩展的交互环境'这道坎上
-![Weblica: Scalable and Reproducible Training Environments for Visual Web Agents 论文主图](assets/figures/overview/weblica-scalable-and-reproducible-training-environments-for-visual-web-agents-hero.svg)
-*图示：Web agent 难做的核心瓶颈是训练环境——真实网站不稳定、模拟环境太少。这篇 Apple 的工作直接把网页环境'量产'出来：一边用 HTTP 缓存把真实网站冻结成可重放副本，一边用 Claude Code 合成几千个带任务的网站，从而支撑大规模 RL 训练，并训出在多项 web 导航 benchmark 超过同尺寸开源模型的 8B 模型。*
-
-- **详细背景：** 现有 web agent 训练数据要么是离线轨迹做 SFT、缺乏交互；要么是 WebArena 这类只覆盖少数域的手工模拟环境；直接在真网上训又会被超时、反爬和页面变化搞得不可复现。这篇论文要解决的就是：怎么造出既多样、又能稳定 RL 训练的网页环境。这对所有想做视觉 web agent 的团队都是必经之路。
-- **详细入选理由：** Web agent 难做的核心瓶颈是训练环境——真实网站不稳定、模拟环境太少。这篇 Apple 的工作直接把网页环境'量产'出来：一边用 HTTP 缓存把真实网站冻结成可重放副本，一边用 Claude Code 合成几千个带任务的网站，从而支撑大规模 RL 训练，并训出在多项 web 导航 benchmark 超过同尺寸开源模型的 8B 模型。
-
-**核心技术点速览：**
-
-#### 技术点 1：HTTP 缓存做网站快照
-- 快速理解：记录并重放真实网站的 HTTP 流量，得到可离线复现的'网站副本'
-
-![HTTP 缓存做网站快照 理解图](assets/figures/tech-points/weblica-scalable-and-reproducible-training-envir-point-1.svg)
-*图示：可以把它想成给真实网站拍一张'可交互的快照'：先让一个 agent 把网站逛一遍，全部网络请求都录下来；然后回放时发现哪些参数每次都不一样（这些就是噪声），把它们从匹配规则里去掉，于是同一个 URL 在断网情况下也能稳定吐出当时记录的页面。这样训练时就不会被超时、反爬和网站改版打断。*
-
-- 技术细节：Weblica-Cache 用 Playwright 录制一次浏览会话中的所有 HTTP 请求与响应，再通过回放识别出导致 cache miss 的'易变参数'（时间戳、session token 等），自动生成站点级的归一化规则，把这些参数从 cache key 里剥掉，并对分析类等非关键端点合成假响应，最终在完全断网的条件下确定性重放。只有在断网回放下能完成任务的会话才会保留进训练集。
-- 通俗讲解：可以把它想成给真实网站拍一张'可交互的快照'：先让一个 agent 把网站逛一遍，全部网络请求都录下来；然后回放时发现哪些参数每次都不一样（这些就是噪声），把它们从匹配规则里去掉，于是同一个 URL 在断网情况下也能稳定吐出当时记录的页面。这样训练时就不会被超时、反爬和网站改版打断。
-- 例子：比如录制时请求是 /search?q=cats&-t=111&sess=abc，回放时变成 /search?q=cats&-t=999&sess=xyz。系统比对后判定 q 稳定、-t 和 sess 易变，于是生成规则 exclude-params=（'-t','sess'），之后只要 q=cats 就能命中缓存，返回当时录下的搜索结果页。基于此他们从 InstaV3 任务池中筛出 15.6K 个可在缓存条件下完成的环境与任务。
-
-#### 技术点 2：用编码 Agent 合成网站
-- 快速理解：让 Claude Code 按能力/品类/视觉风格三维度量产带任务的网站
-
-![用编码 Agent 合成网站 理解图](assets/figures/tech-points/weblica-scalable-and-reproducible-training-envir-point-2.svg)
-*图示：缓存解决不了'需要真正改状态'的任务（比如填表、加购物车），所以他们干脆让一个编码 agent 当外包，按'我要练 X 能力 + 这是 Y 行业 + 用 Z 视觉风格'下单，生成一整个能跑、能交互、还自带任务的小网站。三维采样是为了避免所有生成站长得一模一样，保证多样性。*
-
-- 技术细节：Weblica-Synth 把 web 导航能力（如表单填写、下拉选择、日期选择、地图交互等）拆成 144 个高层能力组，再叉乘 1160 个网站品类和 961 种视觉风格，作为种子让 Claude Code (Opus 4.5) 生成纯静态 HTML/JS/CSS 网站，无后端、用 localStorage 保存状态。生成时会调用 Z-Image-Turbo 出图、用 Playwright 自截图自检，迭代直到功能和样式都过关，每个站再配至少 10 个不同难度的任务。
-- 通俗讲解：缓存解决不了'需要真正改状态'的任务（比如填表、加购物车），所以他们干脆让一个编码 agent 当外包，按'我要练 X 能力 + 这是 Y 行业 + 用 Z 视觉风格'下单，生成一整个能跑、能交互、还自带任务的小网站。三维采样是为了避免所有生成站长得一模一样，保证多样性。
-- 例子：一次输入可能是：能力=表单填写、品类=越野摩托社区、风格=Skeuomorphic。Claude Code 就吐出一个带 'My Profile' 页面的网站，并配套任务'把 rider number 从 42 改成 77，team name 改成 Desert Racing Team 并保存'，配 5 条评判标准给 LLM judge 打分。最终他们留了 2560 个站、44227 个任务作训练集。
-
-#### 技术点 3：本地化高速 RL 训练
-- 快速理解：环境全本地化让单步交互降到 50–150ms，端到端 RL 训练快 30–40%
-
-![本地化高速 RL 训练 理解图](assets/figures/tech-points/weblica-scalable-and-reproducible-training-envir-point-3.svg)
-*图示：RL 训练的瓶颈往往不是算法而是环境吞吐：真网每点一下都要等好几秒。把网页全搬到本地、关掉花哨动画后，agent 一秒能踩十几步，RL rollout 就快得多，规模化才有意义。结果就是 8B 模型用更少步数超过同量级开源 baseline，而且测试期增加采样还能继续涨。*
-
-- 技术细节：所有缓存站点和合成站点都在本地 serve，省掉网络往返，同时打开 Playwright 的动画跳过特性，把每个 action变成screenshot 的耗时从约 1.5 秒压到 50–150ms。Agent 用纯截图 + URL 作观测，输出像素坐标动作，基于 Qwen3-VL Instruct 在数千个环境、上万任务上做 RL，最终 Weblica-8B 在 Online-Mind2Web 上 30 步达到 39.2% pass@1。
-- 通俗讲解：RL 训练的瓶颈往往不是算法而是环境吞吐：真网每点一下都要等好几秒。把网页全搬到本地、关掉花哨动画后，agent 一秒能踩十几步，RL rollout 就快得多，规模化才有意义。结果就是 8B 模型用更少步数超过同量级开源 baseline，而且测试期增加采样还能继续涨。
-- 例子：在 Online-Mind2Web 上，Qwen3-VL-8B 基线 pass@1 为 28.6%，Weblica-8B 提升到 39.2%；并且把推理尝试数 k 从 1 提到 8 时准确率持续走高，说明该训练方式让模型对 test-time compute 的扩展更友好。
-
-- **对 Agent 产品/系统的启发：** 想训练或评测 web agent，先把'造可复现环境'当成一等公民工程
-- **详细启发：** 产品侧：对做浏览器型 agent 的产品团队，这套思路意味着可以围绕真实业务场景建一组'缓存副本 + 合成网站'的私有训练/评测沙盒，避开线上反爬和不可复现，让回归测试和能力专项练习变得可控。；系统侧：系统层面提示：HTTP 录制+易变参数自动剥离是一个可复用的基础设施模式；同时，用编码 agent（Claude Code 类）按'能力×品类×风格'参数化生产环境，是一种比手写模拟器更可扩展的环境工厂思路；本地 serve + 跳过动画带来的 10× 加速对任何 GUI RL 训练都适用。；风险：缓存只能覆盖能稳定录到的页面，对登录态、强后端逻辑无能为力；合成网站存在 sim-to-real gap，靠 LLM judge 打分也可能高估真实任务完成率；以及训练数据被合成站风格带偏，可能在真实长尾网站上掉点。
-
-### 3. Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem
+### 2. Towards Security-Auditable LLM Agents: A Unified Graph Representation
 - **方向：** agent\_safety
-- **评分：** 相关性 92 | 价值 88 | 有趣性 85 | 创新性 80 | 开拓性 85
-- **为什么入选：** 首个面向 MCP 协议双向数据流的静态分析框架，扫出 118 个真实漏洞
-- **快速背景：** MCP 服务器爆发式增长，但通用静态分析器无法识别其工具注册和双向数据流，漏洞频出。
-![Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem 关键架构图](assets/figures/overview/unsafe-by-flow-uncovering-bidirectional-data-flow-risks-in-mcp-ecosystem-hero.png)
-*图示：这张图是论文方法本体的总览图，直接展示了 MCP-BiFlow 的三大核心阶段：MCP 入口点恢复、MCP 专属污点规范、双向污点分析，并明确了前向/后向传播与路径精化等关键机制，最能一眼解释论文如何工作。相比之下，Figure 1 更偏威胁模型与生态数据流背景，不如该图能代表具体方法。*
+- **评分：** 相关性 92 | 价值 88 | 有趣性 85 | 创新性 85 | 开拓性 85
+- **为什么入选：** 首个为Agent设计的BOM式审计图，把记忆投毒、工具误用等隐蔽攻击链结构化还原
+- **快速背景：** Agent 风险横跨语义状态、记忆和多 Agent 传播，传统日志/SBOM 看不懂
+![Towards Security-Auditable LLM Agents: A Unified Graph Representation 关键架构图](assets/figures/overview/towards-security-auditable-llm-agents-a-unified-graph-representation-hero.png)
+*图示：这张图是论文的主方法总览图，直接展示了 Agent-BOM 的核心分层结构：静态子图、动态子图、内部图模式，以及跨 Agent 传播边和安全属性，能一眼看出作者如何把能力基座、运行时语义状态和多 Agent 交互统一到同一可审计图表示中。相比后面的 Fig.2/Fig.4 攻击案例子图，它更能代表论文的通用方法与系统框架，适合作为日报首图。*
 
-- **详细背景：** Anthropic 在 2024 年底推出 MCP 后，16 个月内 MCP 服务器数量已接近 6 万，成为 LLM Agent 调用外部工具的统一接口。但 MCP 涉及 host-client-server 三方信任边界：请求侧用户输入可能流入 shell、文件、数据库等敏感操作；返回侧外部抓取或敏感内部数据可能反向回流到模型推理。CodeQL、Semgrep、Snyk Code 等通用分析器不理解 MCP 的工具注册和分发模式，MCPScan 等专用工具也仅做局部规则匹配，无法跟踪完整工具作用域内的传播路径。
-- **详细入选理由：** MCP 已成为 LLM Agent 调用工具的事实标准接口，但其host-client-server的链路天然横跨多个信任边界。这篇论文不是停留在概念讨论，而是构建了静态分析工具 MCP-BiFlow，在 32 个已确认 CVE 上达到 93.8% 召回，并在 15,452 个真实 MCP 仓库中确认了 87 个服务、118 条漏洞路径，对 Agent 协议层安全治理有直接系统性贡献。
+- **详细背景：** LLM Agent 通过动态工具调用、长期记忆和多 Agent 协作完成任务，导致底层物理事件和高层语义意图之间出现严重的 'semantic gap'：同一次文件删除可能是合法指令，也可能是被投毒记忆诱导的攻击。现有的 SBOM、日志、tracing、通用 provenance 图只能记录调用顺序或静态依赖，无法表达目标如何形成、上下文如何被污染、风险如何跨会话和跨 Agent 传播。作者认为 Agent 安全审计需要一个统一的、可查询的结构化表示，这正是 Agent-BOM 想填补的空白。
+- **详细入选理由：** Agent 安全可观测性目前最大的痛点就是日志和 SBOM 都只能看到碎片，看不懂语义意图。这篇论文直接把 Agent 执行建模成一张可查询的属性图，并落到 OWASP Agentic Top 10 上做规则化审计，对做 Agent 平台、MCP 工具市场和企业部署的人都有实操价值。
 
 **核心技术点速览：**
 
-#### 技术点 1：双向数据流威胁模型
-- 快速理解：把 MCP 安全问题统一建模为请求侧与返回侧两类跨信任边界传播
+#### 技术点 1：Agent-BOM 分层属性图
+- 快速理解：把静态能力库和动态语义状态拆成两层图，再用语义边和安全属性串起来
 
-![双向数据流威胁模型 理解图](assets/figures/tech-points/unsafe-by-flow-uncovering-bidirectional-data-flo-point-1.svg)
-*图示：传统 Web 安全只关心'用户输入到危险函数'这一条线。但 MCP 多了一条反向通路：工具返回值会被 LLM 再读一遍，可能再次触发工具调用。所以必须同时盯进口和出口。论文用这套视角重新定义了源、汇和它们之间的关系。*
+![Agent-BOM 分层属性图 理解图](assets/figures/tech-points/towards-security-auditable-llm-agents-a-unified--point-1.svg)
+*图示：可以理解成把 Agent 的一次执行画成一张图：上层是它'天生具备的能力'（模型、工具、记忆），下层是'这次任务里它脑子里发生了什么'（目标变成上下文变成推理变成决策变成动作）。每个节点和边再贴上一组安全标签，比如这条上下文是从哪来的、可不可信、有没有人确认过。这样原本散落在日志里的碎片就被拼成了一条能查询的审计路径。*
 
-- 技术细节：论文将 MCP 服务器漏洞重构为双向 trust-boundary 数据流问题：请求侧（S-req 变成 K-op）是请求方可控参数流向命令执行、文件访问、SSRF 等敏感 sink；返回侧（S-ext 变成 K-ret）是外部抓取或敏感内部数据通过协议可见返回值跨出服务器边界，进而影响 host、client 或后续模型推理，形成 mixed chain。
-- 通俗讲解：传统 Web 安全只关心'用户输入到危险函数'这一条线。但 MCP 多了一条反向通路：工具返回值会被 LLM 再读一遍，可能再次触发工具调用。所以必须同时盯进口和出口。论文用这套视角重新定义了源、汇和它们之间的关系。
-- 例子：CVE-2025-53355 中，mcp-server-kubernetes 的 pod log 内容作为外部源 S-ext 通过工具返回流出，之后这段日志又被模型读到并影响下一次工具调用，正是返回侧传播触发的 mixed chain。
+- 技术细节：Agent-BOM 形式化为 B=(A,V,E,α)：V 分为静态能力层（Agent、LLM、Prompt、Tool、Skill、长期记忆、代码等节点）和运行时语义层（External、Goal、Context、Reasoning、Decision、Action、Observation 节点）；E 分为结构依赖、运行时演化、跨层绑定、跨 Agent 传播四类边；α 给节点边附加 source、trust-level、integrity-status、confirmation-status、environment-change 等安全属性。
+- 通俗讲解：可以理解成把 Agent 的一次执行画成一张图：上层是它'天生具备的能力'（模型、工具、记忆），下层是'这次任务里它脑子里发生了什么'（目标变成上下文变成推理变成决策变成动作）。每个节点和边再贴上一组安全标签，比如这条上下文是从哪来的、可不可信、有没有人确认过。这样原本散落在日志里的碎片就被拼成了一条能查询的审计路径。
+- 例子：比如 Agent 调用 delete-file 工具：图里会出现 ToolNode(delete-file) ← invokes ← ActionNode ← selects ← DecisionNode ← influences ← ReasoningNode ← reads-from ← ContextNode ← LongTermMemoryNode，每个节点都带 source 和 trust-level 属性，审计员一眼就能看出这次删除其实是被一条不可信的记忆驱动的。
 
-#### 技术点 2：MCP 入口点恢复
-- 快速理解：通过注册解析+分发解析+特化，把工具具体处理函数还原出来
+#### 技术点 2：4 步路径化审计范式
+- 快速理解：把所有审计规则统一成'入口定位-反向溯源-正向追踪-属性裁定'四元组
 
-![MCP 入口点恢复 理解图](assets/figures/tech-points/unsafe-by-flow-uncovering-bidirectional-data-flo-point-2.svg)
-*图示：MCP 服务器没有 Flask 那种清晰的路由装饰器，工具往往在一个通用 handler 里通过 name 字符串分发。如果分析器只看到通用入口，就会把所有工具糊在一起分析，误报炸裂。论文先把'哪个工具走哪条代码'恢复出来，再做污点分析。*
+![4 步路径化审计范式 理解图](assets/figures/tech-points/towards-security-auditable-llm-agents-a-unified--point-2.svg)
+*图示：传统安全规则常常是一类风险一套检测逻辑，很难复用。这里把它统一成图查询：先锁定可疑节点，再往上游查 '这个东西从哪来'，再往下游查 '它是不是真的引发了坏后果'，最后用属性条件判一个是否违规。等于给所有 Agent 风险写出了一种通用 SQL。*
 
-- 技术细节：MCP-BiFlow 分三步恢复入口：Registration Resolution 识别 10 种发布模式（FastMCP 装饰器、registerTool、tool 对象等）；Dispatcher Resolution 处理 16 种分发模式（setRequestHandler 协议分发、if/switch 分支、注册表 map、反射 getattr 等）；Entrypoint Specialization 把 ⟨tool, handler, branch⟩ 三元组绑定，避免一个 tool 的污点跨入另一个 tool。
-- 通俗讲解：MCP 服务器没有 Flask 那种清晰的路由装饰器，工具往往在一个通用 handler 里通过 name 字符串分发。如果分析器只看到通用入口，就会把所有工具糊在一起分析，误报炸裂。论文先把'哪个工具走哪条代码'恢复出来，再做污点分析。
-- 例子：在 fetch-mcp 案例中，setRequestHandler(CallToolRequestSchema, ...) 是通用 handler，论文先识别 request.params.name == 'fetch-html' 这条分支，再把它和 Fetcher.html(validatedArgs) 这个具体处理函数绑定，作为该工具的专属入口。
+- 技术细节：作者把审计规则定义为 R=⟨ventry, Pback, Pfwd, C⟩：ventry 是风险首次表现的节点/边；Pback 沿依赖和演化边回溯找污染源；Pfwd 沿绑定和传播边看是否真的影响了下游决策、动作或其他 Agent；C 是基于节点/边属性的逻辑判定条件。所有 OWASP Agentic Top 10 风险都按这个模板写。
+- 通俗讲解：传统安全规则常常是一类风险一套检测逻辑，很难复用。这里把它统一成图查询：先锁定可疑节点，再往上游查 '这个东西从哪来'，再往下游查 '它是不是真的引发了坏后果'，最后用属性条件判一个是否违规。等于给所有 Agent 风险写出了一种通用 SQL。
+- 例子：判 Goal Hijack：ventry=GoalNode；Pback 看 GoalNode 的入边是否回到不可信的 ExternalNode 或被污染的 Memory；Pfwd 看是否经 Context变成Reasoning变成Decision变成Action 真的执行了；C 要求三者同时成立才判定为目标劫持。
 
-#### 技术点 3：MCP 专属污点语义
-- 快速理解：为请求边界、外部内容、敏感操作、协议返回分别定义源汇
+#### 技术点 3：覆盖 OWASP Agentic Top 10
+- 快速理解：用同一套图模板实例化 10 类 Agent 风险，覆盖供应链、记忆投毒、跨 Agent 传播
 
-![MCP 专属污点语义 理解图](assets/figures/tech-points/unsafe-by-flow-uncovering-bidirectional-data-flo-point-3.svg)
-*图示：通用工具把所有函数参数都当源、所有返回值都当汇，会被淹没在噪声里。论文专门挑出 MCP 协议边界上真正跨信任域的位置作为源汇，并且只在'这个值经过校验后还可控吗'这种语义判断上才调用 LLM 兜底，主流程依然是确定性的。*
+![覆盖 OWASP Agentic Top 10 理解图](assets/figures/tech-points/towards-security-auditable-llm-agents-a-unified--point-3.svg)
+*图示：这部分相当于把业界正在讨论的 Agent 安全清单'翻译成图查询语言'。无论是工具被恶意参数滥用、prompt 模板被供应链污染，还是某个 Agent 在多 Agent 群里持续传播错误目标，都能在同一张图上写一条规则查出来。新出现的攻击只要能描述成路径，就能加进来。*
 
-- 技术细节：定义四类对象：S-req（解码后的请求参数，如 request.params.arguments 及其结构化解包）、K-op（命令执行、文件、网络、DB 等敏感操作 sink，论文实现 Py 317、JS/TS 112 条规则）、S-ext（HTTP response、文件内容、subprocess stdout、git log、pod log 等外部内容）、K-ret（recovered handler 的协议可见返回值）。语义模糊处用 LLM 仅做 source 可控性和 guard 有效性判定。
-- 通俗讲解：通用工具把所有函数参数都当源、所有返回值都当汇，会被淹没在噪声里。论文专门挑出 MCP 协议边界上真正跨信任域的位置作为源汇，并且只在'这个值经过校验后还可控吗'这种语义判断上才调用 LLM 兜底，主流程依然是确定性的。
-- 例子：fetch-mcp 中，request.params.arguments 标为 S-req，schema 校验后的 validatedArgs.url 仍保留请求边界污点；fetch(url, ...) 是 K-op；response.text() 是 S-ext；最终 return ( content: （( text: html )） ) 是 K-ret。
+- 技术细节：论文将 ASI01–ASI10 全部转成 Agent-BOM 上的规则，包括 Goal Hijack、Tool Misuse、Identity & Privilege Abuse、Supply Chain、Unexpected Code Execution、Memory & Context Poisoning、Insecure Inter-Agent Comm、Cascading Failures、Human-Agent Trust Exploitation、Rogue Agents。每类风险明确给出 ventry 类型、Pback/Pfwd 路径方向以及关键属性条件（如 integrity-status、confirmation-status、environment-change）。
+- 通俗讲解：这部分相当于把业界正在讨论的 Agent 安全清单'翻译成图查询语言'。无论是工具被恶意参数滥用、prompt 模板被供应链污染，还是某个 Agent 在多 Agent 群里持续传播错误目标，都能在同一张图上写一条规则查出来。新出现的攻击只要能描述成路径，就能加进来。
+- 例子：对 Memory & Context Poisoning：ventry 是写入记忆的 ToolNode 或被污染的 ContextNode；Pback 检查 source 属性是否回到不可信外部内容；Pfwd 看后续 ReasoningNode 的 basis 是否引用了这条记忆，从而判定一次跨会话记忆投毒是否真正影响了后续行为。
 
-#### 技术点 4：双向跨过程污点分析
-- 快速理解：前向追请求侧 sink，后向回溯返回侧 source，再做交集与 guard 精炼
+#### 技术点 4：OpenClaw 上的实测
+- 快速理解：在真实 Agent 运行时落地插件，重构出多种隐蔽攻击链
 
-![双向跨过程污点分析 理解图](assets/figures/tech-points/unsafe-by-flow-uncovering-bidirectional-data-flo-point-4.svg)
-*图示：MCP 漏洞往往不是一行内的源到汇，而是参数被解包变成helper 转发变成拼装返回对象这种长链路。论文同时从两端往中间走，确保整条路径在调用图上真的连得通，再用 guard 信息把已经被防御掉的路径剪掉。*
+![OpenClaw 上的实测 理解图](assets/figures/tech-points/towards-security-auditable-llm-agents-a-unified--point-4.svg)
+*图示：他们没停在概念图，而是真的做了一个能挂在 Agent 框架上的采集器，把每次执行变成 Agent-BOM 图，然后跑攻击场景看能否事后重建攻击链。这种 '可观测—可追溯—可裁定' 的闭环正是 Agent 安全工程化最缺的一环。*
 
-- 技术细节：前向传播从 S-req 沿调用图传到 K-op，得到 R-f(S-req)；后向传播从 K-ret 回溯到 S-ext，得到 R-b(K-ret)；最终 I-op = R-f(S-req) ∩ R-b(K-op)、I-ret = R-f(S-ext) ∩ R-b(K-ret) 才作为候选路径。Path Refinement 阶段识别 allowlist、路径规范化+根目录检查、参数化查询等有效 guard，对模糊 guard 才交给 LLM 仲裁，并合并等价路径。
-- 通俗讲解：MCP 漏洞往往不是一行内的源到汇，而是参数被解包变成helper 转发变成拼装返回对象这种长链路。论文同时从两端往中间走，确保整条路径在调用图上真的连得通，再用 guard 信息把已经被防御掉的路径剪掉。
-- 例子：fetch-mcp 的请求侧路径：request.params.arguments 变成 validatedArgs.url 变成 Fetcher.html 变成 -fetch 变成 fetch(url, headers)；private-IP guard 被识别为不能消除请求边界污点的 guard，路径保留为有效候选并被报告。
+- 技术细节：作者把 Agent-BOM 实现为 OpenClaw（V2026.2.6）中的审计插件，从真实执行中采集证据并归一化到 schema。评估覆盖四类组合攻击：跨会话记忆投毒+工具误用、能力供应链劫持+意外代码执行、多 Agent 生态劫持、信任滥用导致的权限滥用，共触及 10 类高风险。结果显示 Agent-BOM 能把风险入口、语义状态演化、能力调用、传播路径和实际影响连起来还原。
+- 通俗讲解：他们没停在概念图，而是真的做了一个能挂在 Agent 框架上的采集器，把每次执行变成 Agent-BOM 图，然后跑攻击场景看能否事后重建攻击链。这种 '可观测—可追溯—可裁定' 的闭环正是 Agent 安全工程化最缺的一环。
+- 例子：在多 Agent 生态劫持场景中：插件捕获跨 Agent 消息边，沿 trace-id 和 timestamp 反向回溯到最初被注入恶意目标的 Agent，再正向追踪同一 'goal drift' 语义如何在多个 Agent 间反复 sends-to/delegates-to，最终判定为 ASI08 Cascading Failures。
 
-#### 技术点 5：大规模实测与基线对比
-- 快速理解：32 CVE 召回 93.8%，1.5 万真实仓库确认 118 条漏洞路径
+- **对 Agent 产品/系统的启发：** Agent 平台需要一层原生审计图，而不是堆日志和 SBOM
+- **详细启发：** 产品侧：做 Agent 平台或 Copilot 产品时，可以借鉴 Agent-BOM 的双层节点设计，在控制台为每次会话生成可视化的'执行图+安全属性'，让企业客户能事后追溯一次危险动作究竟来自哪条上下文、哪段记忆或哪条跨 Agent 消息，这是合规和企业落地的硬需求。；系统侧：在 Agent runtime 层面，建议把 trace\_id、source、trust\_level、integrity\_status、confirmation\_status 等属性作为一等公民贯穿 prompt、记忆、工具调用、跨 Agent 消息，并把日志归一化到类似 Agent-BOM 的图 schema，便于用图查询写检测规则，而不是事后从 JSON 日志里 grep。；风险：这套表示假设底层模型、内核、采集探针都可信；如果攻击者能篡改采集 hook 或污染 telemetry，审计图本身就不再可靠。另外对 LLM 内部幻觉、推理是否'语义正确'它并不裁定，仍需配合 sandbox、权限控制等主动防御。
 
-![大规模实测与基线对比 理解图](assets/figures/tech-points/unsafe-by-flow-uncovering-bidirectional-data-flo-point-5.svg)
-*图示：数字本身就是最强论据：通用 SAST 在 MCP 上几乎瞎；连专用的 MCPScan 也只能抓三分之一。而且这 118 条不是实验室构造的，是真实开源项目里在跑的代码，多数最终落到 child-process.exec 或 eval 这种致命 sink。*
+### 3. MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory
+- **方向：** memory
+- **评分：** 相关性 92 | 价值 85 | 有趣性 85 | 创新性 85 | 开拓性 82
+- **为什么入选：** 首次把Agent记忆的级联失效形式化，并给出可证最优的修复算法
+- **快速背景：** Agent记忆里summary、缓存、技能会从源头派生，源头一变，下游还在悄悄用旧信息。
+![MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory 关键架构图](assets/figures/overview/memorepair-barrier-first-cascade-repair-in-agentic-memory-hero.png)
+*图示：该图是论文的Figure 1，完整展示了MemoRepair的核心机制与信息流：从持久化agent记忆中的影响传播，到barrier-first撤回受影响后代，再到候选后继构造、基于成本的发布选择，以及最终验证后重发布。它直接解释了论文的方法总览、模块关系和修复工作流，明显优于其余仅展示实验结果或消融的图。*
 
-- 技术细节：在 32 个 CVE 基准上 MCP-BiFlow 检出 30 个（93.8%），CodeQL 1、Semgrep 8、Snyk Code 10、MCPScan 11。在 15,452 个 Python/JS/TS MCP 仓库上产出 549 个去重候选簇（覆盖 424 个服务器），经人工披露级评审确认 87 个服务器、118 条漏洞路径，其中 111 条代码执行、5 条 query execution、2 条 SSRF；主要 sink 为 execAsync(60)、execSync(28)、exec(9)、eval(5) 等。
-- 通俗讲解：数字本身就是最强论据：通用 SAST 在 MCP 上几乎瞎；连专用的 MCPScan 也只能抓三分之一。而且这 118 条不是实验室构造的，是真实开源项目里在跑的代码，多数最终落到 child-process.exec 或 eval 这种致命 sink。
-- 例子：案例 bhouston/mcp-server-text-editor：path 参数仅校验是否绝对路径就拼进 execSync，攻击者用带 shell 元字符的绝对路径即可在 MCP host 上任意命令执行——一个看似只读的'文本编辑器'工具被劫持为 RCE。
+- **详细背景：** 随着Agent跨任务积累记忆，原始记录会演化为summary、缓存输出、可执行流程、神经技能等派生artifact。当源头被删除、修正或随API迁移失效时，这些下游派生物常常仍可见、继续推动后续决策，造成'用着过期支撑'的隐性故障。已有工作覆盖记忆构造、检索、unlearning和数据库provenance，但缺一个事后过渡机制：哪些派生物要先下架、哪些可以重建、哪些可以重新发布。MemoRepair正是要补这一层。
+- **详细入选理由：** 长生命周期Agent会把记忆沉淀成summary、缓存、技能、API流程，一旦源头被删/改/迁移，下游派生物会继续以陈旧支撑误导决策。这篇论文第一次把这件事形式化成'级联更新问题'，并给出barrier-first契约+min-cut精确求解，对做长期记忆Agent的人是治理层的重要参考。
 
-- **对 Agent 产品/系统的启发：** Agent 接 MCP 工具时必须把工具入参和返回值都当作潜在攻击面，做协议级污点治理
-- **详细启发：** 产品侧：做 Agent 平台或 MCP 网关的团队应在工具注册环节就要求声明参数 schema 和返回内容来源，并在网关层对工具返回内容做隔离标记，避免被 LLM 当作可信指令二次消费；对接受 URL、path、命令片段的工具应强制 allowlist 而非自检。；系统侧：MCP 服务器实现方需要把 request.params.arguments 视为不可信源，对 exec/eval/fetch/file 等 sink 做参数化或严格规范化；同时审视外部抓取内容（HTTP、git log、pod log）在返回前是否经过结构化封装，防止 mixed chain 把外部内容回灌进模型推理。；风险：MCP 生态扩张速度远超安全工具配套，社区中相当比例的服务器存在请求侧 RCE 或返回侧注入路径；通用 SAST 在 MCP 上召回严重不足，仅靠现有 CI 安全扫描会漏掉大多数协议层漏洞。
+**核心技术点速览：**
+
+#### 技术点 1：形式化级联更新问题
+- 快速理解：把'源头一变下游记忆全失效'这件事建模成可计算的修复问题
+
+![形式化级联更新问题 理解图](assets/figures/tech-points/memorepair-barrier-first-cascade-repair-in-agent-point-1.svg)
+*图示：想象Agent的记忆是一棵棵'信息族谱'：一条原始记录被改/删后，由它衍生出的summary、缓存、技能其实都该跟着动，但传统系统只会改源头。论文先把这棵族谱明确画出来，并规定修复的真正目标是这些'后代'，而不是只盯根节点。*
+
+- 技术细节：作者用一个有向provenance图G=(V, E-inf, E-sem)来表示持久记忆，influence边表示'v由u派生'，并给artifact打kind标签(record/cache/summary/skill)。一次修复事件e=(F, τ, ∆)中τ属于(delete, correct, migrate)，受影响级联C(F)=Reach(F; E-inf)，需要修复的对象是可见派生状态D(F)=C(F)，而不仅仅是被改动的源头。
+- 通俗讲解：想象Agent的记忆是一棵棵'信息族谱'：一条原始记录被改/删后，由它衍生出的summary、缓存、技能其实都该跟着动，但传统系统只会改源头。论文先把这棵族谱明确画出来，并规定修复的真正目标是这些'后代'，而不是只盯根节点。
+- 例子：比如用户偏好记录R1被删除，但基于R1生成的summary S1、缓存C2、技能K3仍可见；论文会沿influence边算出C(F)=(R1,S1,C2,K3)，把整片受影响后代都纳入修复范围。
+
+#### 技术点 2：Barrier-first修复契约
+- 快速理解：先把整片受影响记忆下架，再重建并只发布通过校验的后继
+
+![Barrier-first修复契约 理解图](assets/figures/tech-points/memorepair-barrier-first-cascade-repair-in-agent-point-2.svg)
+*图示：做法很像数据库事务：先'封锁'所有可能受影响的派生物，谁也别再用；然后挨个尝试重新生成新版本——能replay就replay，能regen就regen，神经技能则做参数级修复；最后只有通过自动校验、且它依赖的前驱也修好的后继才被放回服务。这样修复期间不会有stale信息漏出。*
+
+- 技术细节：MemoRepair定义一个三步契约：(1)Withdrawal Barrier：把C(F)整体置为不可服务；(2)候选构造：对每个后代i分配模式µ-i属于(remove, recompute, regen, param)，从保留支撑Ret(e)和已暂存的修复前驱出发，按当前接口κ-e生成后继；(3)只有通过Validate-i且其依赖前驱也已修复的后继才能重新发布(predecessor-closed)。
+- 通俗讲解：做法很像数据库事务：先'封锁'所有可能受影响的派生物，谁也别再用；然后挨个尝试重新生成新版本——能replay就replay，能regen就regen，神经技能则做参数级修复；最后只有通过自动校验、且它依赖的前驱也修好的后继才被放回服务。这样修复期间不会有stale信息漏出。
+- 例子：处理删除事件时，系统先把S1、C2、K3全部下架；C2若是确定性缓存就replay重算，S1是summary就regen，K3是神经技能则用LUNE等算子做forget/reference参数修复，每个新版本通过schema+任务回归校验后再republish。
+
+#### 技术点 3：min-cut精确求解发布选择
+- 快速理解：把'修哪些值得'转化为最大权前驱闭包，用一次s-t min-cut精确解
+
+![min-cut精确求解发布选择 理解图](assets/figures/tech-points/memorepair-barrier-first-cascade-repair-in-agent-point-3.svg)
+*图示：不是所有派生物都值得修——有的修起来贵、收益小，有的依赖了修不动的前驱。论文把这事建成图论里的经典问题：要选一个候选就必须连带选其所有前驱，再求总价值减总成本最大的子集。这正好等价于一次最大权闭包/最小割，能精确解，不用启发式。*
+
+- 技术细节：对每个候选i赋值价值w-i和成本c-i，引入λ权衡，目标max 求和w-i x-i − λ求和c-i x-i，受可执行性x-i\<=v-i和前驱闭包x-i\<=x-j (j属于P̄-i)约束。论文证明令p-i=w-i−λc-i即化为最大权闭包问题，可由单次s-t min-cut精确求解(Theorem 1)。
+- 通俗讲解：不是所有派生物都值得修——有的修起来贵、收益小，有的依赖了修不动的前驱。论文把这事建成图论里的经典问题：要选一个候选就必须连带选其所有前驱，再求总价值减总成本最大的子集。这正好等价于一次最大权闭包/最小割，能精确解，不用启发式。
+- 例子：在ToolBench correction事件下，扫描λ会得到一条修复-成本前沿曲线；λ=0.3时min-cut选出45.1%的候选republish，恢复了Repair-all 92%以上的发布量，但归一化成本只有0.57，明显优于greedy基线。
+
+#### 技术点 4：实验验证级联治理价值
+- 快速理解：无级联修复的系统92-99%动作仍踩到陈旧记忆，MemoRepair把曝光降到0
+
+![实验验证级联治理价值 理解图](assets/figures/tech-points/memorepair-barrier-first-cascade-repair-in-agent-point-4.svg)
+*图示：现有'看起来很先进'的Agent记忆系统其实并不会真正下架受影响内容，事件后绝大多数动作还在用旧信息。MemoRepair用一次先下架再republish的契约把陈旧曝光彻底消除，同时只做大约六七成的修复工作就拿到接近全量修复的效果。但前提是provenance血缘记得全，丢边会按比例放大泄漏。*
+
+- 技术细节：在ToolBench和MemoryArena上测试delete/correct/migrate三类事件。Mem0、Zep/Graphiti、A-MEM等6个不带级联修复的记忆系统Leak%在69.8-94.3%、Stale-use%在92.4-99.7%。MemoRepair在完整provenance下Leak/Stale都为0，validated republish达到Repair-all上限的91.1-94.3%，归一化成本仅0.57-0.76。消融显示provenance完整性是关键不变量(丢1%边Leak升到17.7%)。
+- 通俗讲解：现有'看起来很先进'的Agent记忆系统其实并不会真正下架受影响内容，事件后绝大多数动作还在用旧信息。MemoRepair用一次先下架再republish的契约把陈旧曝光彻底消除，同时只做大约六七成的修复工作就拿到接近全量修复的效果。但前提是provenance血缘记得全，丢边会按比例放大泄漏。
+- 例子：在ToolBench删除事件中，No-action下100%动作仍用旧信息；Mem0、A-MEM等仍有92-99%的stale-use；切到MemoRepair后Leak=Stale=0，republish 22.4%候选，∆Task仅比Repair-all低0.08点，但成本从1.00降到0.61。
+
+- **对 Agent 产品/系统的启发：** 做长期记忆Agent别只更源头，要给派生物建血缘并设计'下架-重建-校验-发布'流程
+- **详细启发：** 产品侧：面向长生命周期Agent产品(个人助理、自演化工具Agent)，删除偏好、修正事实或迁移API时不能只改源头记录，必须把summary、缓存、技能、流程一并治理，否则用户会持续被旧信息影响而难以察觉。；系统侧：记忆系统应内建influence provenance血缘和withdrawal barrier：每条派生artifact记录其依赖来源，更新事件触发级联下架→候选重建→自动校验→predecessor-closed republish；选择哪些值得修可用min-cut按价值/成本求解，并与参数级unlearning组合处理神经技能。；风险：整套保证强依赖provenance完整性(丢1%边泄漏放大18倍)和校验oracle覆盖度；schema-only或单一回归校验都会漏检；神经技能修复仍受底层unlearning算子局限，不等于精确擦除。
 
 
 ## 三、总结
 
-- 今天的关键词是'编排下沉与协议治理'：把 loop 交给模型，把安全交给数据流。
-- 今天 56 篇 must\_read 中
-- 今天 56 篇 must\_read 中，general\_agent、agent\_eval、agent\_safety、multi\_agent 四条线交汇出一个共同信号：Agent 系统设计正在从'调 prompt、堆 harness'转向'形式化 runtime + 跨边界数据流治理'。
-- Self-Programmed Execution 把编排权交还给模型，Weblica 把训练环境量产化，MCP-BiFlow 把协议安全做成静态分析工具——三者从架构、数据、安全三个面同时给 Agent 工程化补底。
-- 如果说前几天的趋势是'安全从 prompt 下沉到 runtime'，今天则进一步显示：runtime 本身也开始被重新定义，可审计、可验证、可重放成为新的设计准绳。
+- 今天的关键词是'把Agent的隐性结构变成一等对象'——编排、约束、记忆血缘都被显式化。
+- 今天的论文集体在做一件事
+- 今天的论文集体在做一件事：把Agent里那些原本藏在harness、prompt和日志里的隐性结构，显式化为可被操纵、查询、修复的一等对象。
+- 无论是SPE让模型自己写编排程序，还是Agent-BOM把执行画成可审计图、MemoRepair把派生记忆建成血缘DAG，都指向同一种工程哲学——Agent要进入长生命周期生产，必须先有可治理的内部表示。
+- 评测侧则在不断证伪现有Agent的'看起来在协作/在思考/在守规矩'，提醒研究者真实可靠性还远未达成。

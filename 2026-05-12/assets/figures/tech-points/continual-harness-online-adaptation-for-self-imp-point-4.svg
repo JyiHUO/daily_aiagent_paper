@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#F0EDE6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">导航技能不断逼近最优解 (Dijkstra)</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">Refiner 每次失败就改一版代码，同一局内越用越准</text>
+
+  <!-- Left: chart panel -->
+  <rect x="40" y="95" width="510" height="380" rx="10" fill="#EFF6FF" stroke="#B7D2EF"/>
+  <text x="295" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">路径代价 vs Oracle 最短路</text>
+
+  <!-- axes -->
+  <line x1="95" y1="430" x2="520" y2="430" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="95" y1="150" x2="95" y2="430" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="515" y="450" font-size="11" fill="#3D4F65" text-anchor="end">技能调用次数 →</text>
+  <text x="88" y="148" font-size="11" fill="#3D4F65" text-anchor="end">cost</text>
+
+  <!-- Oracle baseline -->
+  <line x1="95" y1="410" x2="445" y2="410" stroke="#2BA678" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="450" y="414" font-size="12" fill="#2BA678" font-weight="700">Oracle (0%)</text>
+
+  <!-- Hmin flat top -->
+  <line x1="95" y1="175" x2="445" y2="175" stroke="#C0392B" stroke-width="2.5" stroke-dasharray="2 3"/>
+  <text x="450" y="179" font-size="12" fill="#C0392B" font-weight="700">Hmin 不调用</text>
+
+  <!-- CH from-scratch curve -->
+  <path d="M105,200 C160,210 200,260 240,310 C290,370 360,395 440,403 C475,406 500,407 515,408"
+        fill="none" stroke="#4B8BDA" stroke-width="3"/>
+  <circle cx="105" cy="200" r="5" fill="#4B8BDA"/>
+  <circle cx="240" cy="310" r="4" fill="#4B8BDA"/>
+  <circle cx="440" cy="403" r="4" fill="#4B8BDA"/>
+  <circle cx="515" cy="408" r="5" fill="#4B8BDA"/>
+
+  <text x="115" y="195" font-size="11" fill="#1E3A5F">≈50% 慢</text>
+  <text x="300" y="340" font-size="12" font-weight="700" fill="#4B8BDA">CH from-scratch</text>
+
+  <!-- bootstrap curve -->
+  <path d="M105,360 C200,385 320,400 515,406" fill="none" stroke="#E08A3C" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <text x="200" y="378" font-size="11" fill="#E08A3C" font-weight="700">bootstrap (继承后再优化)</text>
+
+  <!-- Right: loop -->
+  <g transform="translate(590,120)">
+    <text x="130" y="0" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Refiner 在线进化</text>
+
+    <rect x="30" y="25" width="200" height="55" rx="8" fill="#FFF3E0" stroke="#E08A3C"/>
+    <text x="130" y="48" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">调用导航技能 v_n</text>
+    <text x="130" y="68" text-anchor="middle" font-size="11" fill="#3D4F65">撞墙 / 绕远</text>
+
+    <rect x="30" y="135" width="200" height="55" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="130" y="158" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">Refiner 改写代码</text>
+    <text x="130" y="176" text-anchor="middle" font-size="11" fill="#3D4F65">不重置环境</text>
+
+    <rect x="30" y="245" width="200" height="55" rx="8" fill="#E9F7EE" stroke="#2BA678"/>
+    <text x="130" y="268" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">v_n+1 更接近 Dijkstra</text>
+    <text x="130" y="286" text-anchor="middle" font-size="11" fill="#3D4F65">同局内立即生效</text>
+
+    <line x1="130" y1="80" x2="130" y2="131" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="130" y1="190" x2="130" y2="241" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+    <!-- loop back -->
+    <path d="M30,272 C -5,272 -5,52 27,52" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="-12" y="165" text-anchor="middle" font-size="10" fill="#4B8BDA" transform="rotate(-90,-12,165)">下一次调用</text>
+  </g>
+
+  <!-- bottom note -->
+  <rect x="50" y="495" width="800" height="45" rx="8" fill="#FFFFFF" stroke="#B7D2EF"/>
+  <text x="450" y="521" text-anchor="middle" font-size="13" fill="#1E3A5F">脱开通关效率，单测 agent 写出的寻路代码：24h 内从近一倍 Oracle 慢，压到个位数百分比</text>
+</svg>

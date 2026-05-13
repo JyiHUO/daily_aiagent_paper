@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75D5D"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">源头变更后，下游派生物还在误导 Agent 吗？</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">delete / correct / migrate 事件下的对照实验</text>
+
+  <!-- Source event box -->
+  <rect x="340" y="88" width="220" height="48" rx="8" fill="#FFF3E0" stroke="#E0A458" stroke-width="1.8"/>
+  <text x="450" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">源记忆被删/改/迁移</text>
+  <text x="450" y="126" text-anchor="middle" font-size="12" fill="#3D4F65">summary · cache · skill 仍残留</text>
+
+  <!-- Left: existing systems -->
+  <rect x="60" y="180" width="360" height="320" rx="12" fill="#FBEEEE" stroke="#C75D5D" stroke-width="2"/>
+  <text x="240" y="208" text-anchor="middle" font-size="16" font-weight="bold" fill="#8B2E2E">现有记忆系统（无级联修复）</text>
+  <text x="240" y="228" text-anchor="middle" font-size="12" fill="#3D4F65">Mem0 · Zep · Graphiti · A-MEM ...</text>
+
+  <!-- Leak bar -->
+  <text x="90" y="270" font-size="13" fill="#1E3A5F" font-weight="bold">Leak%</text>
+  <rect x="90" y="278" width="280" height="22" fill="#F5DCDC" stroke="#C75D5D"/>
+  <rect x="90" y="278" width="252" height="22" fill="#C75D5D"/>
+  <text x="355" y="294" text-anchor="end" font-size="12" fill="#FFFFFF" font-weight="bold">69.8 – 94.3%</text>
+
+  <!-- Stale bar -->
+  <text x="90" y="330" font-size="13" fill="#1E3A5F" font-weight="bold">Stale-use%</text>
+  <rect x="90" y="338" width="280" height="22" fill="#F5DCDC" stroke="#C75D5D"/>
+  <rect x="90" y="338" width="278" height="22" fill="#C75D5D"/>
+  <text x="355" y="354" text-anchor="end" font-size="12" fill="#FFFFFF" font-weight="bold">92.4 – 99.7%</text>
+
+  <!-- Illustration -->
+  <text x="240" y="418" text-anchor="middle" font-size="13" fill="#8B2E2E">几乎全部决策仍在“用着过期支撑”</text>
+  <text x="240" y="468" text-anchor="middle" font-size="26" fill="#8B2E2E">⚠ 隐性故障</text>
+
+  <!-- Right: MemoRepair -->
+  <rect x="480" y="180" width="360" height="320" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="660" y="208" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">MemoRepair（barrier-first 契约）</text>
+  <text x="660" y="228" text-anchor="middle" font-size="12" fill="#3D4F65">先撤回 → 重建 → 验证后 republish</text>
+
+  <!-- Leak/Stale bar -->
+  <text x="510" y="270" font-size="13" fill="#1E3A5F" font-weight="bold">Leak% / Stale%</text>
+  <rect x="510" y="278" width="280" height="22" fill="#DCEAF7" stroke="#4B8BDA"/>
+  <rect x="510" y="278" width="4" height="22" fill="#4B8BDA"/>
+  <text x="785" y="294" text-anchor="end" font-size="12" fill="#1E3A5F" font-weight="bold">0%</text>
+
+  <!-- Cost bar -->
+  <text x="510" y="330" font-size="13" fill="#1E3A5F" font-weight="bold">归一化成本</text>
+  <rect x="510" y="338" width="280" height="22" fill="#DCEAF7" stroke="#4B8BDA"/>
+  <rect x="510" y="338" width="190" height="22" fill="#4B8BDA"/>
+  <text x="785" y="354" text-anchor="end" font-size="12" fill="#FFFFFF" font-weight="bold">0.57 – 0.76</text>
+
+  <!-- Republish quality -->
+  <rect x="510" y="385" width="280" height="95" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-dasharray="4 3"/>
+  <text x="650" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">达到 Repair-all 上限的</text>
+  <text x="650" y="448" text-anchor="middle" font-size="32" font-weight="bold" fill="#2E7D5B">91 – 94%</text>
+  <text x="650" y="470" text-anchor="middle" font-size="11" fill="#3D4F65">只做约 7 成工作 ≈ 全量修复效果</text>
+
+  <!-- Arrows from event -->
+  <line x1="400" y1="136" x2="280" y2="178" stroke="#C75D5D" stroke-width="2" marker-end="url(#arrRed)"/>
+  <line x1="500" y1="136" x2="620" y2="178" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Footnote -->
+  <text x="450" y="535" text-anchor="middle" font-size="12" fill="#8B2E2E" font-style="italic">前提：provenance 血缘要完整 — 丢 1% 边，Leak 飙到 17.7%</text>
+</svg>

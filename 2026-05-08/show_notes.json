@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0508：可靠性下沉到激活层与运行时监控",
+  "shownotes_html": "<p>这期聚焦一个清晰的方向转变：Agent 的可靠性问题正在从 prompt 层彻底下沉——深入模型内部激活空间做实时纠偏、用形式化求解器重塑评测基准、从执行轨迹合成在线失败预警。未来 Agent 护栏的形态，可能不再是更长的 system prompt，而是可审计的监控器加激活层钩子。</p><p><strong>本期重点</strong></p><ul><li><strong>TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering</strong>——在残差流里发现 overthinking/overacting 两条线性可分的漂移轴（AUC≈0.9），运行时挂 forward hook 就能把长程 Coding Agent 拉回正轨：SWE-bench 上解题率涨 6pp、步数省近四分之一，零重训零改 prompt。</li><li><strong>MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents</strong>——让 LLM 用两种方式独立描述同一段 SOP 手册，再用 Z3 求解器自动找矛盾并修复，最终产出 285 个确定性评分的合规任务。不靠 LLM 裁判、不靠人工造题，Agent 合规评测终于有了可机器检查的路径。</li><li><strong>PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors</strong>——从历史 trace 自动合成轻量在线监控器，关键洞察是高 AUPRC 不等于能部署：WebArena 排序漂亮但在低误报率下几乎无法提前预警，反而 TerminalBench 能在剩余 21.5% 步数时给出可信告警，真正留出干预窗口。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 可靠性研究明显从\"行为层打补丁\"转向\"runtime 信号处理\"：激活空间纠偏、trace 流前缀预警、SMT 确定性评分三条线同时推进。</li><li>评测范式正在从\"人工造题 + LLM 裁判\"走向\"可执行验证 + 确定性评分\"，形式化方法开始成为 Agent benchmark 的新默认工具。</li></ul><p>欢迎在评论区留言交流你对 Agent runtime 护栏的看法。本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-05-08",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-09T04:46:34Z"
+}

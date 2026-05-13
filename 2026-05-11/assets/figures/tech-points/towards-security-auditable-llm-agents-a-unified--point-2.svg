@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">把所有 Agent 风险写成同一条"图查询"</text>
+  <text x="450" y="66" text-anchor="middle" font-size="15" fill="#3D4F65">R = ⟨ v_entry , P_back , P_fwd , C ⟩  —— 4 步路径化审计</text>
+
+  <!-- Center: v_entry -->
+  <circle cx="450" cy="290" r="64" fill="#FFE8DC" stroke="#D97757" stroke-width="2.5"/>
+  <text x="450" y="284" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">v_entry</text>
+  <text x="450" y="306" text-anchor="middle" font-size="12" fill="#3D4F65">可疑节点 (GoalNode)</text>
+
+  <!-- Left: P_back -->
+  <rect x="60" y="220" width="220" height="140" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="170" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">① P_back  回溯</text>
+  <text x="170" y="282" text-anchor="middle" font-size="13" fill="#3D4F65">这东西从哪来？</text>
+  <text x="170" y="310" text-anchor="middle" font-size="12" fill="#3D4F65">External / Memory 是否被污染</text>
+  <text x="170" y="340" text-anchor="middle" font-size="11" fill="#8C5340" font-style="italic">沿依赖 &amp; 演化边</text>
+
+  <!-- Right: P_fwd -->
+  <rect x="620" y="220" width="220" height="140" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="730" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">② P_fwd  前向</text>
+  <text x="730" y="282" text-anchor="middle" font-size="13" fill="#3D4F65">真的造成后果了吗？</text>
+  <text x="730" y="310" text-anchor="middle" font-size="12" fill="#3D4F65">Reasoning → Decision → Action</text>
+  <text x="730" y="340" text-anchor="middle" font-size="11" fill="#8C5340" font-style="italic">沿绑定 &amp; 传播边</text>
+
+  <!-- Arrows back -->
+  <path d="M 386 290 L 286 290" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="336" y="282" text-anchor="middle" font-size="11" fill="#4B8BDA">回溯污染源</text>
+
+  <!-- Arrow fwd -->
+  <path d="M 514 290 L 614 290" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="564" y="282" text-anchor="middle" font-size="11" fill="#4B8BDA">追踪下游影响</text>
+
+  <!-- Bottom: C condition -->
+  <rect x="280" y="430" width="340" height="90" rx="12" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="450" y="460" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">③ C  逻辑判定</text>
+  <text x="450" y="484" text-anchor="middle" font-size="13" fill="#3D4F65">P_back ✓  ∧  P_fwd ✓  ∧  属性条件 ✓</text>
+  <text x="450" y="505" text-anchor="middle" font-size="12" fill="#8C5340">→ 判定为风险（如 Goal Hijack）</text>
+
+  <path d="M 450 356 L 450 426" stroke="#D97757" stroke-width="2.5" fill="none" marker-end="url(#arR)" stroke-dasharray="5,4"/>
+
+  <!-- footer -->
+  <text x="450" y="548" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">同一模板覆盖 OWASP Agentic Top 10 —— 一套查询，万种风险</text>
+</svg>

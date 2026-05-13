@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A5F"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#FAF7F2"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">Continual Harness：边玩边改自己的脚手架</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">不重置 episode，每 F 步由 Refiner 对四件套做 CRUD</text>
+
+  <!-- Agent playing -->
+  <rect x="40" y="110" width="200" height="130" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Agent 正在打 Pokémon</text>
+  <text x="140" y="165" text-anchor="middle" font-size="12" fill="#3D4F65">长程 episode 持续推进</text>
+  <text x="140" y="185" text-anchor="middle" font-size="12" fill="#3D4F65">在 Goldenrod 卡住转圈…</text>
+  <text x="140" y="220" text-anchor="middle" font-size="22">🎮</text>
+
+  <!-- Refiner -->
+  <rect x="340" y="110" width="200" height="130" rx="12" fill="#FFF1E6" stroke="#E08A5F" stroke-width="2"/>
+  <text x="440" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#8A4A2B">Refiner（同模型）</text>
+  <text x="440" y="165" text-anchor="middle" font-size="12" fill="#5C3A28">读取最近轨迹窗口</text>
+  <text x="440" y="185" text-anchor="middle" font-size="12" fill="#5C3A28">定位失败模式</text>
+  <text x="440" y="220" text-anchor="middle" font-size="22">🔧</text>
+
+  <!-- Arrow agent -> refiner -->
+  <line x1="240" y1="175" x2="335" y2="175" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="287" y="165" text-anchor="middle" font-size="11" fill="#1E3A5F">每 F 步轨迹</text>
+
+  <!-- Harness 4 components -->
+  <rect x="640" y="90" width="200" height="170" rx="12" fill="#F4ECDD" stroke="#A88A5A" stroke-width="2"/>
+  <text x="740" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Harness 四件套</text>
+
+  <rect x="655" y="128" width="80" height="50" rx="6" fill="#FFFFFF" stroke="#A88A5A"/>
+  <text x="695" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">p · 系统提示</text>
+  <text x="695" y="167" text-anchor="middle" font-size="10" fill="#3D4F65">prompt</text>
+
+  <rect x="745" y="128" width="80" height="50" rx="6" fill="#FFFFFF" stroke="#A88A5A"/>
+  <text x="785" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">G · 子代理</text>
+  <text x="785" y="167" text-anchor="middle" font-size="10" fill="#3D4F65">sub-agents</text>
+
+  <rect x="655" y="188" width="80" height="50" rx="6" fill="#FFFFFF" stroke="#A88A5A"/>
+  <text x="695" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">K · 技能</text>
+  <text x="695" y="227" text-anchor="middle" font-size="10" fill="#3D4F65">skills</text>
+
+  <rect x="745" y="188" width="80" height="50" rx="6" fill="#FFFFFF" stroke="#A88A5A"/>
+  <text x="785" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">M · 记忆</text>
+  <text x="785" y="227" text-anchor="middle" font-size="10" fill="#3D4F65">memory</text>
+
+  <!-- Refiner -> harness CRUD -->
+  <line x1="540" y1="175" x2="635" y2="175" stroke="#E08A5F" stroke-width="2.2" marker-end="url(#ar2)"/>
+  <text x="588" y="165" text-anchor="middle" font-size="11" fill="#8A4A2B">CRUD 编辑</text>
+
+  <!-- H update formula -->
+  <rect x="640" y="278" width="200" height="36" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="740" y="302" text-anchor="middle" font-size="13" fill="#1E3A5F">H(t+1) = H(t) ⊕ Δ  立即生效</text>
+
+  <!-- Loop arrow back to agent (no reset) -->
+  <path d="M 740 314 Q 740 380 440 380 Q 140 380 140 242" fill="none" stroke="#4B8BDA" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#ar)"/>
+  <text x="440" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">不重置环境，继续这一局</text>
+
+  <!-- Bottom: examples -->
+  <rect x="40" y="420" width="800" height="110" rx="12" fill="#FFFFFF" stroke="#C7B58F" stroke-width="1.5"/>
+  <text x="60" y="445" font-size="13" font-weight="bold" fill="#1E3A5F">Refiner 在同一局里追加的真实成果：</text>
+
+  <text x="70" y="475" font-size="12" fill="#3D4F65">K：把漏洞包成 press-sequence 通用技能</text>
+  <text x="70" y="498" font-size="12" fill="#3D4F65">M：Goldenrod 开关谜题 → 真值表存入 notepad</text>
+  <text x="460" y="475" font-size="12" fill="#3D4F65">G：新建寻路子代理破解地图死循环</text>
+  <text x="460" y="498" font-size="12" fill="#3D4F65">p：Red 战命名 "Operation Zombie Phoenix"</text>
+
+  <text x="440" y="522" text-anchor="middle" font-size="11" fill="#8A4A2B" font-style="italic">vs GEPA：跑完整局再重置  ✗    Continual Harness：边打边进化  ✓</text>
+</svg>

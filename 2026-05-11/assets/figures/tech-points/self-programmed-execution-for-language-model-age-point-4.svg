@@ -1,63 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system, 'Segoe UI', sans-serif">
   <defs>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <!-- Title -->
-  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">把编排交给模型后，它最爱用的是「上下文瘦身」</text>
-  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#3D4F65">实测：自编排 Agent 的 token 用量 ≈ Codex CLI 的 1/4</text>
+  <rect width="880" height="560" fill="#FAF7F2"/>
 
-  <!-- LEFT: Traditional harness -->
-  <rect x="50" y="100" width="360" height="220" rx="10" fill="#FBEFE9" stroke="#C97064" stroke-width="1.5"/>
-  <text x="230" y="127" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">传统 harness：上下文越塞越胖</text>
+  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">
+    模型自己接管"上下文管理"，省下 ~4× tokens
+  </text>
+  <text x="440" y="65" text-anchor="middle" font-size="13" fill="#3D4F65">
+    把编排权交给 LM 后，它最爱用的两招
+  </text>
 
-  <rect x="75" y="148" width="310" height="34" rx="4" fill="#F5D9CF"/>
-  <text x="85" y="170" font-size="12" fill="#3D4F65">turn1: ls → 3000 行输出全留下</text>
+  <!-- LEFT: traditional harness -->
+  <g>
+    <rect x="40" y="100" width="340" height="180" rx="10" fill="#F3E9DC" stroke="#C9A87A" stroke-width="1.5"/>
+    <text x="210" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#8B5A2B">传统 Harness（如 Codex CLI）</text>
 
-  <rect x="75" y="190" width="310" height="34" rx="4" fill="#F2C9BC"/>
-  <text x="85" y="212" font-size="12" fill="#3D4F65">turn2: grep → 又一大段塞入上下文</text>
+    <rect x="65" y="145" width="290" height="28" rx="4" fill="#FFFFFF" stroke="#C9A87A"/>
+    <text x="75" y="164" font-size="12" fill="#3D4F65">turn 1: ls /repo  → 长输出全部留下</text>
 
-  <rect x="75" y="232" width="310" height="34" rx="4" fill="#EFB9A9"/>
-  <text x="85" y="254" font-size="12" fill="#3D4F65">turn3: cat file → 上下文继续膨胀…</text>
+    <rect x="65" y="180" width="290" height="28" rx="4" fill="#FFFFFF" stroke="#C9A87A"/>
+    <text x="75" y="199" font-size="12" fill="#3D4F65">turn 2: grep TODO → 又一段长输出</text>
 
-  <rect x="75" y="274" width="310" height="34" rx="4" fill="#EBA796"/>
-  <text x="85" y="296" font-size="12" fill="#7A3F38" font-weight="600">turn4: 窗口爆炸，token 飙升 4×</text>
+    <rect x="65" y="215" width="290" height="28" rx="4" fill="#FFFFFF" stroke="#C9A87A"/>
+    <text x="75" y="234" font-size="12" fill="#3D4F65">turn 3: cat a.py → 上下文越堆越胖</text>
 
-  <!-- RIGHT: Self-programmed with !peek -->
-  <rect x="490" y="100" width="360" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-  <text x="670" y="127" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">自编排：用 !peek 看一眼就丢</text>
+    <text x="210" y="265" text-anchor="middle" font-size="13" font-weight="700" fill="#B5651D">每轮一调用 · 全部保留</text>
+  </g>
 
-  <rect x="515" y="148" width="310" height="56" rx="4" fill="#DCE9F8"/>
-  <text x="525" y="170" font-size="12" fill="#1E3A5F" font-weight="600">!peek( ls; grep TODO; cat README )</text>
-  <text x="525" y="190" font-size="11" fill="#3D4F65">→ 结果只在本轮可见，不进后续上下文</text>
+  <!-- RIGHT: self-programmed -->
+  <g>
+    <rect x="500" y="100" width="340" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="670" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">自编排（Spell）</text>
 
-  <rect x="515" y="214" width="310" height="56" rx="4" fill="#DCE9F8"/>
-  <text x="525" y="236" font-size="12" fill="#1E3A5F" font-weight="600">批量并行：一次写多个工具调用</text>
-  <text x="525" y="256" font-size="11" fill="#3D4F65">→ 减少轮次，按上一步结果自动分支</text>
+    <rect x="525" y="145" width="290" height="42" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="535" y="163" font-size="12" fill="#1E3A5F" font-weight="700">!peek( ls; grep TODO )</text>
+    <text x="535" y="180" font-size="11" fill="#3D4F65">→ 看一眼，结果不进入后续上下文</text>
 
-  <text x="670" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#2E6BB8">token 用量 ↓ ≈ 4×</text>
+    <rect x="525" y="195" width="290" height="42" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="535" y="213" font-size="12" fill="#1E3A5F" font-weight="700">batch: read(a.py, b.py, c.py)</text>
+    <text x="535" y="230" font-size="11" fill="#3D4F65">→ 一回合串联多次调用</text>
 
-  <!-- Arrow showing key contrast -->
-  <line x1="412" y1="210" x2="486" y2="210" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
-  <text x="449" y="202" text-anchor="middle" font-size="11" fill="#2E6BB8" font-weight="600">交给模型</text>
+    <text x="670" y="265" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">精控保留 · 减少轮次</text>
+  </g>
 
-  <!-- Bottom finding -->
-  <rect x="50" y="360" width="800" height="100" rx="10" fill="#F4F1EA" stroke="#B8A88A" stroke-width="1.2"/>
-  <text x="450" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">模型真正学会的，只是 harness 工程师最头疼的那件事</text>
+  <!-- arrow comparison -->
+  <line x1="385" y1="190" x2="495" y2="190" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="440" y="183" text-anchor="middle" font-size="11" fill="#1E3A5F">交给模型</text>
 
-  <rect x="80" y="405" width="240" height="40" rx="6" fill="#DDEBF8"/>
-  <text x="200" y="430" text-anchor="middle" font-size="13" fill="#1E3A5F">✓ 上下文裁剪 (!peek)</text>
+  <!-- Bottom: token bars -->
+  <g>
+    <text x="440" y="335" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">同任务总 Token 消耗</text>
 
-  <rect x="335" y="405" width="240" height="40" rx="6" fill="#DDEBF8"/>
-  <text x="455" y="430" text-anchor="middle" font-size="13" fill="#1E3A5F">✓ 多调用串联 / 批处理</text>
+    <text x="80" y="378" font-size="12" fill="#3D4F65">Codex CLI</text>
+    <rect x="160" y="362" width="500" height="22" fill="#C9A87A"/>
+    <text x="670" y="378" font-size="12" fill="#1E3A5F" font-weight="700">4×</text>
 
-  <rect x="590" y="405" width="240" height="40" rx="6" fill="#F5D9CF"/>
-  <text x="710" y="430" text-anchor="middle" font-size="13" fill="#7A3F38">✗ 子 Agent 委派（几乎不用）</text>
+    <text x="80" y="418" font-size="12" fill="#3D4F65">GPT-5 + Spell</text>
+    <rect x="160" y="402" width="125" height="22" fill="#4B8BDA"/>
+    <text x="295" y="418" font-size="12" fill="#1E3A5F" font-weight="700">1×</text>
+  </g>
 
-  <!-- Footer -->
-  <text x="450" y="495" text-anchor="middle" font-size="13" fill="#3D4F65">编排权下放后，模型自发解决了「上下文窗口管理」——</text>
-  <text x="450" y="515" text-anchor="middle" font-size="13" fill="#3D4F65">这正是当前 Agent 框架最大的人工调优痛点</text>
-  <text x="450" y="545" text-anchor="middle" font-size="12" font-style="italic" fill="#7A8595">而更高阶的多 Agent 自委派？目前模型还不会主动用，需要专门训练</text>
+  <!-- Bottom note: multi-agent -->
+  <g>
+    <rect x="120" y="460" width="640" height="70" rx="8" fill="#FFF4E6" stroke="#D9A066" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <text x="440" y="485" text-anchor="middle" font-size="13" font-weight="700" fill="#8B5A2B">⚠ 模型不会主动派"子 Agent"，显式提示也基本无效</text>
+    <text x="440" y="510" text-anchor="middle" font-size="12" fill="#3D4F65">真正的红利在上下文管理，不在任务委派 —— 多 Agent 需专门训练</text>
+  </g>
 </svg>

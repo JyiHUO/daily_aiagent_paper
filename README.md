@@ -4,22 +4,25 @@
 
 ## 最新日报
 
-- **日期**：2026-05-11
+- **日期**：2026-05-12
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Self-Programmed Execution for Language-Model Agents
-  - Weblica: Scalable and Reproducible Training Environments for Visual Web Agents
-  - Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem
-- **日报路径**：[2026-05-11/daily_report.md](2026-05-11/daily_report.md)
+  - Computer Use at the Edge of the Statistical Precipice
+  - Continual Harness: Online Adaptation for Self-Improving Foundation Agents
+  - Can Agent Benchmarks Support Their Scores? Evidence-Supported Bounds for Interactive-Agent Evaluation
+- **日报路径**：[2026-05-12/daily_report.md](2026-05-12/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-12 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Computer Use at the Edge of the Statistical Precipice | [2026-05-12/daily_report.md](2026-05-12/daily_report.md) |
+|  |  |  | 2 | Continual Harness: Online Adaptation for Self-Improving Foundation Agents |  |
+|  |  |  | 3 | Can Agent Benchmarks Support Their Scores? Evidence-Supported Bounds for Interactive-Agent Evaluation |  |
 | 2026-05-11 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Self-Programmed Execution for Language-Model Agents | [2026-05-11/daily_report.md](2026-05-11/daily_report.md) |
-|  |  |  | 2 | Weblica: Scalable and Reproducible Training Environments for Visual Web Agents |  |
-|  |  |  | 3 | Unsafe by Flow: Uncovering Bidirectional Data-Flow Risks in MCP Ecosystem |  |
+|  |  |  | 2 | Towards Security-Auditable LLM Agents: A Unified Graph Representation |  |
+|  |  |  | 3 | MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory |  |
 | 2026-05-08 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | TACT: Mitigating Overthinking and Overacting in Coding Agents via Activation Steering | [2026-05-08/daily_report.md](2026-05-08/daily_report.md) |
 |  |  |  | 2 | MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents |  |
 |  |  |  | 3 | PrefixGuard: From LLM-Agent Traces to Online Failure-Warning Monitors |  |

@@ -1,70 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
   <defs>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <rect width="900" height="560" fill="#F7FAFC"/>
+  <rect width="900" height="560" fill="#FAF7F2"/>
 
-  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">SPE：让"补全"自己当编排程序</text>
-  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">harness 退化为解释器，agent loop 写在模型输出里</text>
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">SPE：让模型补全自己写 Agent 循环</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">harness 退化为解释器，编排逻辑搬进 LM 输出</text>
 
   <!-- LEFT: Traditional -->
   <g>
-    <rect x="50" y="100" width="360" height="400" rx="12" fill="#FFF5EC" stroke="#E0A878" stroke-width="1.5"/>
-    <text x="230" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">传统 Agent</text>
-    <text x="230" y="148" text-anchor="middle" font-size="12" fill="#8A5A2B">harness 写死 while 循环</text>
+    <text x="220" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#8B5A3C">传统 Agent</text>
+    <rect x="60" y="125" width="320" height="370" rx="14" fill="#FBEFE4" stroke="#D9A982" stroke-width="1.5"/>
 
-    <rect x="90" y="175" width="280" height="230" rx="10" fill="#FFE7CE" stroke="#C8854A" stroke-width="1.5"/>
-    <text x="230" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#7A4A1A">Harness (固定代码)</text>
+    <rect x="90" y="155" width="260" height="200" rx="10" fill="#fff" stroke="#C68B5C" stroke-width="2"/>
+    <text x="220" y="180" text-anchor="middle" font-size="13" font-weight="700" fill="#8B5A3C">Harness（固定 while 循环）</text>
 
-    <text x="110" y="230" font-size="13" fill="#3D4F65" font-family="monospace">while not done:</text>
-    <text x="125" y="252" font-size="13" fill="#3D4F65" font-family="monospace">ctx = build(history)</text>
-    <text x="125" y="274" font-size="13" fill="#3D4F65" font-family="monospace">y   = LM(ctx)</text>
-    <text x="125" y="296" font-size="13" fill="#3D4F65" font-family="monospace">obs = run(parse(y))</text>
-    <text x="125" y="318" font-size="13" fill="#3D4F65" font-family="monospace">history.append(...)</text>
+    <text x="110" y="210" font-size="13" fill="#3D4F65" font-family="monospace">while not done:</text>
+    <text x="130" y="232" font-size="13" fill="#3D4F65" font-family="monospace">ctx = build(...)</text>
+    <text x="130" y="254" font-size="13" fill="#3D4F65" font-family="monospace">out = LM(ctx)</text>
+    <text x="130" y="276" font-size="13" fill="#3D4F65" font-family="monospace">run(parse(out))</text>
+    <text x="130" y="320" font-size="13" fill="#C26B3C" font-family="monospace">← 编排靠人工调</text>
 
-    <rect x="125" y="340" width="210" height="48" rx="8" fill="#FFFFFF" stroke="#C8854A"/>
-    <text x="230" y="360" text-anchor="middle" font-size="12" fill="#1E3A5F">LM 只是被调用</text>
-    <text x="230" y="378" text-anchor="middle" font-size="12" fill="#8A5A2B">控制权在框架</text>
-
-    <text x="230" y="438" text-anchor="middle" font-size="12" fill="#8A5A2B">上下文 / 工具 / 终止 全靠人调</text>
-    <text x="230" y="458" text-anchor="middle" font-size="12" fill="#8A5A2B">harness 越来越复杂</text>
+    <rect x="120" y="395" width="200" height="60" rx="8" fill="#FFE3CC" stroke="#C68B5C"/>
+    <text x="220" y="420" text-anchor="middle" font-size="13" fill="#8B5A3C">LM 只是被调用</text>
+    <text x="220" y="440" text-anchor="middle" font-size="13" fill="#8B5A3C">控制权在框架</text>
   </g>
+
+  <!-- arrow between -->
+  <path d="M395,310 L505,310" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="450" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">翻转</text>
 
   <!-- RIGHT: SPE -->
   <g>
-    <rect x="490" y="100" width="360" height="400" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="670" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">SPE：补全即程序</text>
-    <text x="670" y="148" text-anchor="middle" font-size="12" fill="#2A5C9A">harness 只是 eval()</text>
+    <text x="700" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">SPE</text>
+    <rect x="520" y="125" width="320" height="370" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
 
-    <!-- tiny harness -->
-    <rect x="520" y="175" width="280" height="60" rx="8" fill="#DCEBFB" stroke="#4B8BDA"/>
-    <text x="660" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Harness (种子程序)</text>
-    <text x="660" y="222" text-anchor="middle" font-size="13" fill="#2A5C9A" font-family="monospace">let y = lm q in eval(y)</text>
+    <rect x="550" y="150" width="260" height="70" rx="10" fill="#fff" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="680" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Harness = eval 解释器</text>
+    <text x="680" y="202" text-anchor="middle" font-size="13" fill="#3D4F65" font-family="monospace">let y = lm q in eval(y)</text>
 
-    <!-- arrow down -->
-    <line x1="660" y1="237" x2="660" y2="270" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <rect x="550" y="248" width="260" height="160" rx="10" fill="#DCEBFB" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="680" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">LM 补全 = 编排程序</text>
 
-    <!-- LM completion box -->
-    <rect x="520" y="275" width="280" height="190" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.8"/>
-    <text x="660" y="298" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">模型补全 = 一段程序</text>
+    <text x="568" y="300" font-size="13" fill="#1E3A5F" font-family="monospace">(do</text>
+    <text x="588" y="322" font-size="13" fill="#3D4F65" font-family="monospace">(read-file "README")</text>
+    <text x="588" y="344" font-size="13" fill="#3D4F65" font-family="monospace">(append-to-self ...)</text>
+    <text x="588" y="366" font-size="13" fill="#C2562B" font-family="monospace">(self-call new-prefix))</text>
+    <text x="568" y="388" font-size="13" fill="#1E3A5F" font-family="monospace">)</text>
 
-    <text x="540" y="324" font-size="12" fill="#3D4F65" font-family="monospace">read-file("README")</text>
-    <text x="540" y="346" font-size="12" fill="#3D4F65" font-family="monospace">ctx' = my-source ++ obs</text>
-    <text x="540" y="368" font-size="12" fill="#3D4F65" font-family="monospace">self-call(ctx')</text>
-
-    <rect x="540" y="386" width="240" height="60" rx="8" fill="#FFF5EC" stroke="#E0A878"/>
-    <text x="660" y="408" text-anchor="middle" font-size="12" fill="#1E3A5F">模型自己决定：</text>
-    <text x="660" y="428" text-anchor="middle" font-size="12" fill="#8A5A2B">保留什么 · 调什么 · 何时停</text>
-
-    <!-- self loop arrow: from completion box back to harness eval -->
-    <path d="M 805 370 Q 840 370 840 250 Q 840 205 802 205" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
-    <text x="828" y="300" font-size="11" fill="#2A5C9A" transform="rotate(90 828 300)">self-call 回到 eval</text>
+    <rect x="550" y="424" width="260" height="56" rx="8" fill="#fff" stroke="#4B8BDA"/>
+    <text x="680" y="446" text-anchor="middle" font-size="12" fill="#1E3A5F">模型自己决定：保留什么上下文</text>
+    <text x="680" y="466" text-anchor="middle" font-size="12" fill="#3D4F65">调哪些工具 · 何时再发起下一轮</text>
   </g>
 
-  <!-- bottom takeaway -->
-  <rect x="120" y="515" width="660" height="34" rx="6" fill="#1E3A5F"/>
-  <text x="450" y="537" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="600">把 agent loop 从框架代码搬进了 prompt/补全</text>
+  <!-- self-loop arrow: from self-call line back up to harness eval -->
+  <path d="M810,360 C 870,360 870,205 815,200" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="878" y="285" text-anchor="middle" font-size="11" fill="#4B8BDA" transform="rotate(90 878 285)">self-call 回到 eval</text>
+
+  <text x="450" y="535" text-anchor="middle" font-size="13" fill="#3D4F65">Agent loop 从框架代码搬进了 prompt/补全里</text>
 </svg>

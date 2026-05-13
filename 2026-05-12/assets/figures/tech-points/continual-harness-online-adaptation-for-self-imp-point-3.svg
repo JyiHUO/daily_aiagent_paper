@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="520" fill="#FAF7F2"/>
+
+  <text x="410" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">自我精修 harness 有「能力地板」</text>
+  <text x="410" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">同一套 Continual Harness，模型越弱越拉胯</text>
+
+  <!-- Strong model -->
+  <rect x="50" y="100" width="230" height="360" rx="14" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="165" y="135" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Gemini 3 Pro</text>
+  <text x="165" y="156" text-anchor="middle" font-size="12" fill="#3D4F65">强模型 · 用得起脚手架</text>
+
+  <rect x="80" y="180" width="170" height="70" rx="8" fill="#ffffff" stroke="#4B8BDA"/>
+  <text x="165" y="207" text-anchor="middle" font-size="13" fill="#1E3A5F">完成里程碑</text>
+  <text x="165" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#2E7D4F">100%</text>
+
+  <rect x="80" y="270" width="170" height="70" rx="8" fill="#ffffff" stroke="#4B8BDA"/>
+  <text x="165" y="297" text-anchor="middle" font-size="13" fill="#1E3A5F">中位成本 ~130</text>
+  <text x="165" y="324" text-anchor="middle" font-size="16" font-weight="700" fill="#2E7D4F">↓ 约 40%（vs 215）</text>
+
+  <text x="165" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D4F">CH 真能省钱又通关</text>
+  <text x="165" y="420" text-anchor="middle" font-size="11" fill="#3D4F65">基线 Hmin: 215 / 98%</text>
+
+  <!-- Mid -->
+  <rect x="295" y="100" width="230" height="360" rx="14" fill="#FFF4E6" stroke="#E8A23C" stroke-width="2"/>
+  <text x="410" y="135" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Flash</text>
+  <text x="410" y="156" text-anchor="middle" font-size="12" fill="#3D4F65">中等模型 · 高方差</text>
+
+  <rect x="325" y="180" width="170" height="240" rx="8" fill="#ffffff" stroke="#E8A23C"/>
+  <text x="410" y="205" text-anchor="middle" font-size="12" fill="#3D4F65">运行间表现波动大</text>
+  <polyline points="345,395 375,325 405,365 435,255 465,305 480,225"
+            fill="none" stroke="#E8A23C" stroke-width="2.5"/>
+  <circle cx="345" cy="395" r="4" fill="#E8A23C"/>
+  <circle cx="375" cy="325" r="4" fill="#E8A23C"/>
+  <circle cx="405" cy="365" r="4" fill="#E8A23C"/>
+  <circle cx="435" cy="255" r="4" fill="#E8A23C"/>
+  <circle cx="465" cy="305" r="4" fill="#E8A23C"/>
+  <circle cx="480" cy="225" r="4" fill="#E8A23C"/>
+  <text x="410" y="410" text-anchor="middle" font-size="11" fill="#3D4F65">有时赚 · 有时亏</text>
+
+  <!-- Weak -->
+  <rect x="540" y="100" width="230" height="360" rx="14" fill="#FBEAEA" stroke="#C8553D" stroke-width="2"/>
+  <text x="655" y="135" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Flash-Lite</text>
+  <text x="655" y="156" text-anchor="middle" font-size="12" fill="#3D4F65">弱模型 · 越改越糟</text>
+
+  <rect x="570" y="180" width="170" height="60" rx="8" fill="#ffffff" stroke="#C8553D"/>
+  <text x="655" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">最小 harness</text>
+  <text x="655" y="226" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">20%</text>
+
+  <line x1="655" y1="248" x2="655" y2="278" stroke="#C8553D" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <rect x="570" y="285" width="170" height="60" rx="8" fill="#ffffff" stroke="#C8553D"/>
+  <text x="655" y="307" text-anchor="middle" font-size="12" fill="#3D4F65">所有 CH 变体</text>
+  <text x="655" y="331" text-anchor="middle" font-size="20" font-weight="700" fill="#C8553D">3 – 13%</text>
+
+  <text x="655" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#C8553D">自我精修反而拖累</text>
+  <text x="655" y="415" text-anchor="middle" font-size="11" fill="#3D4F65">调不动自己写的工具</text>
+
+  <text x="410" y="492" text-anchor="middle" font-size="13" font-style="italic" fill="#1E3A5F">结论：别指望小模型靠 agent 框架补智商差距</text>
+</svg>

@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="-apple-system, 'Helvetica Neue', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EDF2F8"/>
+    </linearGradient>
+    <linearGradient id="passG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D6EBDC"/>
+      <stop offset="1" stop-color="#B6DCC2"/>
+    </linearGradient>
+    <linearGradient id="failG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4D3D0"/>
+      <stop offset="1" stop-color="#E8B5B0"/>
+    </linearGradient>
+    <linearGradient id="unkG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F2E4C2"/>
+      <stop offset="1" stop-color="#E6D097"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arDk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">Agent 评测分数到底支不支持？</text>
+  <text x="640" y="78" text-anchor="middle" font-size="15" fill="#3D4F65">在不改任务/Agent/评测器的前提下，加一层证据审计，把 Unknown 显式保留并给出分数上下界</text>
+
+  <!-- LEFT: Naive scoring -->
+  <g>
+    <rect x="40" y="110" width="380" height="200" rx="12" fill="#FFFFFF" stroke="#C9D5E3" stroke-width="1.2"/>
+    <text x="60" y="140" font-size="14" font-weight="700" fill="#1E3A5F">原始评测：表层信号→二元打分</text>
+    <text x="60" y="162" font-size="12" fill="#3D4F65">任务：把 Alice 的收货地址改成 X</text>
+
+    <!-- run trace -->
+    <g transform="translate(60,180)">
+      <rect width="80" height="34" rx="6" fill="#EFF6FF" stroke="#9EBBDB"/>
+      <text x="40" y="22" text-anchor="middle" font-size="11" fill="#1E3A5F">点击 Save</text>
+    </g>
+    <line x1="140" y1="197" x2="178" y2="197" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+    <g transform="translate(180,180)">
+      <rect width="120" height="34" rx="6" fill="#FBEAE8" stroke="#D88B83"/>
+      <text x="60" y="16" text-anchor="middle" font-size="10" fill="#7A2E26">改成了错误用户</text>
+      <text x="60" y="29" text-anchor="middle" font-size="10" fill="#7A2E26">/ 状态未变</text>
+    </g>
+    <line x1="300" y1="197" x2="338" y2="197" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+    <g transform="translate(340,180)">
+      <rect width="60" height="34" rx="6" fill="#D6EBDC" stroke="#6FAE85"/>
+      <text x="30" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#2E5E3E">✓ 通过</text>
+    </g>
+
+    <text x="60" y="248" font-size="11.5" fill="#A24B40">⚠ 评测器只看到 "Save 已点击"，</text>
+    <text x="60" y="265" font-size="11.5" fill="#A24B40">没人检查最终数据库状态</text>
+    <text x="60" y="290" font-size="13" font-weight="700" fill="#1E3A5F">报出一个点分数 93%</text>
+  </g>
+
+  <!-- Center arrow -->
+  <g>
+    <line x1="425" y1="210" x2="465" y2="210" stroke="#1E3A5F" stroke-width="2" marker-end="url(#arDk)" stroke-dasharray="4 3"/>
+    <text x="445" y="200" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">加一层</text>
+  </g>
+
+  <!-- RIGHT: Evidence layer pipeline -->
+  <g>
+    <rect x="470" y="110" width="770" height="200" rx="12" fill="#FFFFFF" stroke="#9EBBDB" stroke-width="1.4"/>
+    <text x="490" y="138" font-size="15" font-weight="700" fill="#1E3A5F">证据审计层（Outcome Evidence Layer）</text>
+    <text x="490" y="158" font-size="11.5" fill="#3D4F65">不动任务、不动 Agent、不动原评测器，只在打分前后插一道证据检查</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(490,178)">
+      <rect width="220" height="115" rx="10" fill="#EFF6FF" stroke="#9EBBDB"/>
+      <text x="110" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">① 锁定证据清单</text>
+      <text x="14" y="44" font-size="11" fill="#3D4F65">评分前为每个 case 指定</text>
+      <text x="14" y="60" font-size="11" fill="#3D4F65">必须出现的 artifact：</text>
+      <text x="14" y="80" font-size="10.5" fill="#1E3A5F">• post-state 数据库快照</text>
+      <text x="14" y="95" font-size="10.5" fill="#1E3A5F">• receipts / paired-arm</text>
+      <text x="14" y="108" font-size="10.5" fill="#1E3A5F">• 判断都带 source pointer</text>
+    </g>
+
+    <line x1="712" y1="235" x2="743" y2="235" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <!-- Step 2 -->
+    <g transform="translate(745,178)">
+      <rect width="220" height="115" rx="10" fill="#EFF6FF" stroke="#9EBBDB"/>
+      <text x="110" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">② 三态打标</text>
+      <g transform="translate(14,38)">
+        <rect width="190" height="22" rx="4" fill="url(#passG)"/>
+        <text x="10" y="15" font-size="11" fill="#2E5E3E" font-weight="600">Evidence Pass — 证据齐全且正确</text>
+      </g>
+      <g transform="translate(14,64)">
+        <rect width="190" height="22" rx="4" fill="url(#failG)"/>
+        <text x="10" y="15" font-size="11" fill="#7A2E26" font-weight="600">Evidence Fail — 证据反驳成功</text>
+      </g>
+      <g transform="translate(14,90)">
+        <rect width="190" height="22" rx="4" fill="url(#unkG)"/>
+        <text x="10" y="15" font-size="11" fill="#6B5318" font-weight="600">Unknown — 证据不足，不替它猜</text>
+      </g>
+    </g>
+
+    <line x1="967" y1="235" x2="998" y2="235" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <!-- Step 3 -->
+    <g transform="translate(1000,178)">
+      <rect width="222" height="115" rx="10" fill="#EFF6FF" stroke="#9EBBDB"/>
+      <text x="111" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">③ 报上下界</text>
+      <text x="111" y="50" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">Perf ∈ [ P/N , (P+U)/N ]</text>
+      <text x="14" y="74" font-size="10.5" fill="#3D4F65">下界：Unknown 全算错</text>
+      <text x="14" y="90" font-size="10.5" fill="#3D4F65">上界：Unknown 全算对</text>
+      <text x="14" y="106" font-size="10.5" fill="#A24B40">区间宽度 U/N = 证据缺口</text>
+    </g>
+  </g>
+
+  <!-- Lower section: case demonstration -->
+  <text x="60" y="355" font-size="15" font-weight="700" fill="#1E3A5F">同一榜单，证据视角下的真实样貌</text>
+  <text x="60" y="375" font-size="11.5" fill="#3D4F65">AgentDojo · Claude 4.7 · N = 100</text>
+
+  <!-- Score bar comparison -->
+  <g transform="translate(60,395)">
+    <text x="0" y="14" font-size="11.5" font-weight="600" fill="#3D4F65">原始分数</text>
+    <rect x="100" y="0" width="600" height="22" rx="4" fill="#EAF0F7" stroke="#C9D5E3"/>
+    <rect x="100" y="0" width="558" height="22" rx="4" fill="#4B8BDA"/>
+    <text x="670" y="16" font-size="12" font-weight="700" fill="#1E3A5F">93%</text>
+    <text x="708" y="16" font-size="11" fill="#3D4F65">（点估计，看着很高）</text>
+  </g>
+
+  <g transform="translate(60,438)">
+    <text x="0" y="14" font-size="11.5" font-weight="600" fill="#3D4F65">证据视角</text>
+    <rect x="100" y="0" width="600" height="22" rx="4" fill="#EAF0F7" stroke="#C9D5E3"/>
+    <rect x="100" y="0" width="426" height="22" fill="url(#passG)"/>
+    <rect x="526" y="0" width="48" height="22" fill="url(#failG)"/>
+    <rect x="574" y="0" width="126" height="22" fill="url(#unkG)"/>
+    <text x="313" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#2E5E3E">P = 71</text>
+    <text x="550" y="16" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A2E26">F=8</text>
+    <text x="637" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#6B5318">U = 21</text>
+
+    <line x1="526" y1="-6" x2="526" y2="32" stroke="#1E3A5F" stroke-width="1.5"/>
+    <line x1="700" y1="-6" x2="700" y2="32" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="708" y="16" font-size="12" font-weight="700" fill="#1E3A5F">71% — 92%</text>
+  </g>
+
+  <text x="100" y="488" font-size="11" fill="#A24B40">21% Unknown 主要来自缺失 paired-arm 最终状态与持久 receipt → 该补的是 artifact 留存</text>
+
+  <!-- Bottom-left: leaderboard identifiability -->
+  <g transform="translate(40,510)">
+    <rect width="600" height="220" rx="12" fill="#FFFFFF" stroke="#C9D5E3"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1E3A5F">排行榜可识别性：区间叠了，就别声称谁更强</text>
+
+    <g transform="translate(30,52)">
+      <text x="0" y="14" font-size="11.5" fill="#3D4F65">模型 C</text>
+      <rect x="60" y="4" width="380" height="14" rx="3" fill="#EAF0F7"/>
+      <rect x="170" y="4" width="220" height="14" rx="3" fill="#9EBBDB"/>
+      <text x="448" y="15" font-size="10.5" fill="#1E3A5F">68 — 89</text>
+    </g>
+    <g transform="translate(30,82)">
+      <text x="0" y="14" font-size="11.5" fill="#3D4F65">模型 D</text>
+      <rect x="60" y="4" width="380" height="14" rx="3" fill="#EAF0F7"/>
+      <rect x="200" y="4" width="200" height="14" rx="3" fill="#B0C4DC"/>
+      <text x="448" y="15" font-size="10.5" fill="#1E3A5F">66 — 86</text>
+    </g>
+    <g transform="translate(30,112)">
+      <text x="0" y="14" font-size="11.5" fill="#3D4F65">模型 G</text>
+      <rect x="60" y="4" width="380" height="14" rx="3" fill="#EAF0F7"/>
+      <rect x="155" y="4" width="225" height="14" rx="3" fill="#C2D0E0"/>
+      <text x="448" y="15" font-size="10.5" fill="#1E3A5F">62 — 85</text>
+    </g>
+
+    <text x="30" y="170" font-size="11.5" fill="#3D4F65">原始顺序  C ≻ D ≻ G  →</text>
+    <rect x="195" y="158" width="180" height="20" rx="4" fill="#FBEAE8" stroke="#D88B83"/>
+    <text x="285" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7A2E26">三对全部不可识别</text>
+    <text x="30" y="200" font-size="10.5" fill="#A24B40">规则：仅当 LB-i &gt; UB-j 时才能声称 i ≻ j</text>
+  </g>
+
+  <!-- Bottom-right: two-axis diagnosis -->
+  <g transform="translate(660,510)">
+    <rect width="580" height="220" rx="12" fill="#FFFFFF" stroke="#C9D5E3"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1E3A5F">两轴诊断：分数不可信，原因各不相同</text>
+
+    <g transform="translate(50,50)">
+      <line x1="0" y1="130" x2="480" y2="130" stroke="#1E3A5F" stroke-width="1.2" marker-end="url(#arDk)"/>
+      <line x1="0" y1="130" x2="0" y2="6" stroke="#1E3A5F" stroke-width="1.2" marker-end="url(#arDk)"/>
+      <text x="478" y="148" text-anchor="end" font-size="10.5" fill="#1E3A5F">Benchmark 冲突 →（评测器在算错事）</text>
+      <text x="-10" y="70" text-anchor="middle" font-size="10.5" fill="#1E3A5F" transform="rotate(-90 -10 70)">Unknown 比例 ↑</text>
+
+      <circle cx="60" cy="110" r="9" fill="#B6DCC2" stroke="#2E5E3E"/>
+      <text x="74" y="114" font-size="10.5" fill="#1E3A5F">AppWorld · 双低</text>
+
+      <circle cx="330" cy="100" r="9" fill="#E8B5B0" stroke="#7A2E26"/>
+      <text x="344" y="104" font-size="10.5" fill="#1E3A5F">τ3-retail · reward 冲突</text>
+
+      <circle cx="290" cy="40" r="11" fill="#E6D097" stroke="#6B5318"/>
+      <text x="304" y="44" font-size="10.5" fill="#1E3A5F">AgentDojo · 两类毛病都有</text>
+
+      <circle cx="120" cy="30" r="10" fill="#E6D097" stroke="#6B5318"/>
+      <text x="136" y="34" font-size="10.5" fill="#1E3A5F">AndroidWorld · 缺 post-state</text>
+
+      <circle cx="200" cy="115" r="8" fill="#F2C49C" stroke="#8C5022"/>
+      <text x="212" y="120" font-size="10.5" fill="#1E3A5F">MiniWoB · shortcut/proxy</text>
+    </g>
+
+    <text x="20" y="208" font-size="10.5" fill="#A24B40">→ 高 Unknown：补 artifact 留存　→ 高冲突：修任务/评测器</text>
+  </g>
+</svg>

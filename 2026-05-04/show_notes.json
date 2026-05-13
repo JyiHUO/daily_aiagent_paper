@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜0504：调度、调用税与 Skill 审计，瓶颈在模型之外",
+  "shownotes_html": "<p>Agent 跑得慢，不是模型不够强，是底下那层调度压根没把它当 Agent 看。今天三篇重点论文分别从 GPU 调度、工具调用决策、Skill 安全审计三个方向，指向同一个判断：Agent 的瓶颈正在从模型内部移到运行时和治理层。</p><p><strong>本期重点</strong></p><ul><li><strong>SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters</strong> — 把调度单位从\"一次请求\"升级到\"整个 Agent workflow\"，在 64 卡 A100 集群上实测任务完成时间提升 1.64×，KV 重算时间从 38% 降到 8%。代价是峰值吞吐下降约 30%，论文很坦白地说了 tradeoff，对做推理网关的团队直接可用。</li><li><strong>To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling</strong> — 把\"要不要调工具\"拆成必要性、效用、可负担性三个维度，发现模型嘴上判断不准但隐藏层已经\"知道\"。用一个轻量 MLP 读隐状态做外挂控制器，6 个模型 3 个任务上同时提升准确率、降低调用次数，省 API 钱是实打实的。</li><li><strong>Semia: Auditing Agent Skills via Constraint-Guided Representation Synthesis</strong> — 把 Agent Skill 的英文策略\"编译\"成 Datalog 事实库做静态审计，在 13,000+ 真实 skill 上 F1 达 90.6%，挖出 17 个零日漏洞，其中有社区评审、VirusTotal、LLM 直接判三种方式都漏掉的。核心启发：LLM 适合做翻译，判断该交给确定性推理引擎。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全方向从\"模型越狱\"明显转向运行时治理，开始用可验证工件和约束图覆盖 prose 策略的模糊地带。</li><li>Tool use 研究重心下沉到\"该不该调、调得值不值\"，社区在追求调用效率而非盲目堆次数。</li></ul><p><strong>知识点：Harness 是什么</strong></p><p>Harness 是把任务定义、运行环境、工具接口、评测脚本和日志采集打包起来的 Agent 实验底座。今天三篇论文都踩在这一层——做得好的 harness 往往比换模型更决定团队能不能持续迭代。</p><p>以上内容由 AI 自动生成，如有事实性问题欢迎留言指正。期待你的评论和讨论 👇</p>",
+  "report_date": "2026-05-04",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-05-04T23:53:35Z"
+}
