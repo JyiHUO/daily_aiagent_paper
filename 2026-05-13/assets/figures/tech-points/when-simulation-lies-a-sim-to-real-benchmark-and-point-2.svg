@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">参数越大 ≠ 越鲁棒</text>
+  <text x="400" y="64" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">三类扰动下的准确率下降</text>
+
+  <!-- Agent in middle -->
+  <circle cx="400" cy="270" r="54" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="400" y="266" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Tool-use</text>
+  <text x="400" y="284" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Agent</text>
+
+  <!-- Observation: small drop -->
+  <g>
+    <rect x="60" y="210" width="170" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="145" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Observation 扰动</text>
+    <text x="145" y="260" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">用户 typo / 改写</text>
+    <text x="145" y="300" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#4B8BDA">−5% (几乎不掉)</text>
+  </g>
+  <line x1="230" y1="270" x2="344" y2="270" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Reward: big drop, with bait tool -->
+  <g>
+    <rect x="575" y="120" width="190" height="120" rx="10" fill="#FDF2EC" stroke="#D97757" stroke-width="1.5"/>
+    <text x="670" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Reward 扰动</text>
+    <text x="670" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">"-Fast" / "-Budget" 诱饵命名</text>
+    <text x="670" y="210" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#D97757">−40pp</text>
+    <text x="670" y="228" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">被诱饵命名带偏选错</text>
+  </g>
+  <line x1="445" y1="232" x2="578" y2="188" stroke="#D97757" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Transition: API fail -->
+  <g>
+    <rect x="575" y="300" width="190" height="120" rx="10" fill="#FDF2EC" stroke="#D97757" stroke-width="1.5"/>
+    <text x="670" y="330" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Transition 扰动</text>
+    <text x="670" y="350" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">首次调用报错</text>
+    <text x="670" y="390" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#D97757">−30pp</text>
+    <text x="670" y="408" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">~47% 模型直接放弃</text>
+  </g>
+  <line x1="445" y1="308" x2="578" y2="352" stroke="#D97757" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- bottom note -->
+  <text x="400" y="466" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">32B 在 Reward / Transition 上并不比 8B 更稳 —— 堆参数无效</text>
+</svg>

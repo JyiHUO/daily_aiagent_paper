@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-12
+- **日期**：2026-05-13
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Computer Use at the Edge of the Statistical Precipice
-  - Continual Harness: Online Adaptation for Self-Improving Foundation Agents
-  - Can Agent Benchmarks Support Their Scores? Evidence-Supported Bounds for Interactive-Agent Evaluation
-- **日报路径**：[2026-05-12/daily_report.md](2026-05-12/daily_report.md)
+  - When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents
+  - LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues
+  - MEME: Multi-entity & Evolving Memory Evaluation
+- **日报路径**：[2026-05-13/daily_report.md](2026-05-13/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-13 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents | [2026-05-13/daily_report.md](2026-05-13/daily_report.md) |
+|  |  |  | 2 | LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues |  |
+|  |  |  | 3 | MEME: Multi-entity & Evolving Memory Evaluation |  |
 | 2026-05-12 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Computer Use at the Edge of the Statistical Precipice | [2026-05-12/daily_report.md](2026-05-12/daily_report.md) |
 |  |  |  | 2 | Continual Harness: Online Adaptation for Self-Improving Foundation Agents |  |
 |  |  |  | 3 | Can Agent Benchmarks Support Their Scores? Evidence-Supported Bounds for Interactive-Agent Evaluation |  |

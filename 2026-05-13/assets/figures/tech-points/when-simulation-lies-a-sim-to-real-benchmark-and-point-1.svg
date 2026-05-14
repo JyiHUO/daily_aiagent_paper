@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="-apple-system, Segoe UI, sans-serif">
+  <rect width="800" height="560" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">Four Leaky Channels of a Tool-Use Agent</text>
+  <text x="400" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">POMDP perturbation taxonomy</text>
+
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D89B4A"/>
+    </marker>
+  </defs>
+
+  <!-- Center Agent -->
+  <circle cx="400" cy="300" r="60" fill="#FFF4E0" stroke="#D89B4A" stroke-width="2"/>
+  <text x="400" y="295" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="400" y="315" text-anchor="middle" font-size="11" fill="#3D4F65">(POMDP)</text>
+
+  <!-- Observation: top-left -->
+  <g>
+    <rect x="60" y="120" width="220" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="148" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Observation</text>
+    <text x="170" y="172" text-anchor="middle" font-size="12" fill="#3D4F65">dirty input</text>
+    <text x="170" y="194" text-anchor="middle" font-size="11" fill="#7A5A2E" font-style="italic">"occcra-information"</text>
+    <line x1="275" y1="218" x2="354" y2="272" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arB)"/>
+  </g>
+
+  <!-- Action: top-right -->
+  <g>
+    <rect x="520" y="120" width="220" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="630" y="148" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Action</text>
+    <text x="630" y="172" text-anchor="middle" font-size="12" fill="#3D4F65">duplicate / fake tools</text>
+    <text x="630" y="194" text-anchor="middle" font-size="11" fill="#7A5A2E" font-style="italic">same-name MCP clash</text>
+    <line x1="525" y1="218" x2="446" y2="272" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arB)"/>
+  </g>
+
+  <!-- Reward: bottom-left -->
+  <g>
+    <rect x="60" y="390" width="220" height="100" rx="10" fill="#FDEEE4" stroke="#D89B4A" stroke-width="1.5"/>
+    <text x="170" y="418" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Reward</text>
+    <text x="170" y="442" text-anchor="middle" font-size="12" fill="#3D4F65">misleading metadata</text>
+    <text x="170" y="464" text-anchor="middle" font-size="11" fill="#7A5A2E" font-style="italic">"-Fast" decoy suffix</text>
+    <line x1="275" y1="392" x2="354" y2="338" stroke="#D89B4A" stroke-width="1.8" marker-end="url(#arO)"/>
+  </g>
+
+  <!-- Transition: bottom-right -->
+  <g>
+    <rect x="520" y="390" width="220" height="100" rx="10" fill="#FDEEE4" stroke="#D89B4A" stroke-width="1.5"/>
+    <text x="630" y="418" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Transition</text>
+    <text x="630" y="442" text-anchor="middle" font-size="12" fill="#3D4F65">runtime breakage</text>
+    <text x="630" y="464" text-anchor="middle" font-size="11" fill="#7A5A2E" font-style="italic">429 / timeout / 5xx</text>
+    <line x1="525" y1="392" x2="446" y2="338" stroke="#D89B4A" stroke-width="1.8" marker-end="url(#arO)"/>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="528" text-anchor="middle" font-size="11" fill="#7A8694">each channel grounded in real GitHub issues</text>
+</svg>

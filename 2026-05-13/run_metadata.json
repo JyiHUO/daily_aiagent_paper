@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-13",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 567,
+  "selected_count": 3,
+  "focus_titles": [
+    "When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents",
+    "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
+    "MEME: Multi-entity & Evolving Memory Evaluation"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-13/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-13/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

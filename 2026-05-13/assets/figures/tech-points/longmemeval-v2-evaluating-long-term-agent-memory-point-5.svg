@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Accuracy–Latency Frontier</text>
+  <text x="300" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">higher &amp; faster is better ↗</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="360" x2="540" y2="360" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="80" y1="360" x2="80" y2="90" stroke="#1E3A5F" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <text x="310" y="390" text-anchor="middle" font-size="12" fill="#3D4F65">latency (slower →)</text>
+  <text x="50" y="225" text-anchor="middle" font-size="12" fill="#3D4F65" transform="rotate(-90 50 225)">accuracy ↑</text>
+
+  <!-- Pareto frontier curve -->
+  <path d="M 110 350 Q 220 320 310 220 T 510 110" stroke="#C9D6E8" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+  <text x="478" y="128" font-size="10" fill="#8AA0BD">frontier</text>
+
+  <!-- No retrieval ~0% -->
+  <circle cx="110" cy="345" r="6" fill="#9FB3CC"/>
+  <text x="120" y="349" font-size="11" fill="#3D4F65">no retrieval ~0%</text>
+
+  <!-- slice RAG 40% -->
+  <circle cx="170" cy="280" r="6" fill="#9FB3CC"/>
+  <text x="180" y="284" font-size="11" fill="#3D4F65">slice RAG 40%</text>
+
+  <!-- notes 46-51% -->
+  <circle cx="220" cy="245" r="6" fill="#9FB3CC"/>
+  <text x="230" y="249" font-size="11" fill="#3D4F65">+ notes ~50%</text>
+
+  <!-- Runbook-R 57-58% -->
+  <circle cx="290" cy="210" r="6" fill="#9FB3CC"/>
+  <text x="300" y="214" font-size="11" fill="#3D4F65">Runbook-R 58%</text>
+
+  <!-- Codex 69.3% slow -->
+  <circle cx="445" cy="170" r="8" fill="#E8A85C" stroke="#B8731F" stroke-width="1"/>
+  <text x="457" y="167" font-size="11" fill="#3D4F65">Codex 69.3% / 177s</text>
+
+  <!-- AgentRunbook-C: faster + higher -->
+  <circle cx="335" cy="120" r="9" fill="#4B8BDA" stroke="#1E3A5F" stroke-width="1.2"/>
+  <text x="348" y="117" font-size="12" font-weight="700" fill="#1E3A5F">AgentRunbook-C</text>
+  <text x="348" y="132" font-size="10" fill="#3D4F65">72.5% / 108s</text>
+
+  <!-- Arrow showing improvement: Codex -> Runbook-C (up-left) -->
+  <path d="M 438 165 Q 390 130 345 122" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <text x="380" y="155" font-size="10" font-style="italic" fill="#4B8BDA">faster &amp; better</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="410" text-anchor="middle" font-size="10" fill="#8AA0BD">scaffold (workflow doc + manifest + helpers) pushes the frontier</text>
+</svg>

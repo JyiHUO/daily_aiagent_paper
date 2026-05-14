@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">MEME: Two Evaluation Axes</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">entity scope × temporal dynamics</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#E8833A"/>
+    </marker>
+  </defs>
+
+  <!-- Axes -->
+  <line x1="300" y1="90" x2="300" y2="430" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="90" y1="260" x2="540" y2="260" stroke="#1E3A5F" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <text x="306" y="84" font-size="11" fill="#1E3A5F" font-weight="600">↑ evolving</text>
+  <text x="306" y="446" font-size="11" fill="#1E3A5F" font-weight="600">↓ static</text>
+  <text x="86" y="254" text-anchor="end" font-size="11" fill="#1E3A5F" font-weight="600">single ←</text>
+  <text x="544" y="254" text-anchor="start" font-size="11" fill="#1E3A5F" font-weight="600">→ multi</text>
+
+  <!-- Q2: single + evolving -->
+  <rect x="100" y="100" width="190" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="195" y="170" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Tracking · Deletion</text>
+
+  <!-- Q1: multi + evolving (HIGHLIGHT, new territory) -->
+  <rect x="310" y="100" width="190" height="150" rx="10" fill="#FFF1E6" stroke="#E8833A" stroke-width="2"/>
+  <text x="405" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#B8541A">Cascade · Absence</text>
+  <text x="405" y="170" text-anchor="middle" font-size="10" fill="#3D4F65">ripple across entities</text>
+  <text x="405" y="186" text-anchor="middle" font-size="10" fill="#3D4F65">when upstream changes</text>
+  <text x="405" y="220" text-anchor="middle" font-size="11" font-style="italic" font-weight="600" fill="#B8541A">SOTA ≈ 1–3%</text>
+
+  <!-- Q3: single + static -->
+  <rect x="100" y="270" width="190" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="195" y="350" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Exact Recall</text>
+
+  <!-- Q4: multi + static -->
+  <rect x="310" y="270" width="190" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="405" y="350" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Aggregation</text>
+
+  <!-- Pointer arrow toward the new quadrant -->
+  <text x="555" y="78" text-anchor="end" font-size="11" font-weight="700" fill="#B8541A">new territory</text>
+  <line x1="505" y1="84" x2="470" y2="105" stroke="#E8833A" stroke-width="1.8" marker-end="url(#ar)"/>
+</svg>

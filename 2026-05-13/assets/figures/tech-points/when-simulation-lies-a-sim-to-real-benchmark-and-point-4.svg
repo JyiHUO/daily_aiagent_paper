@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <rect width="600" height="420" fill="#FAF7F2"/>
+  
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">描述即诱饵：模型被"文案"骗</text>
+  
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D77A4A"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B0B0B0"/>
+    </marker>
+  </defs>
+  
+  <!-- Agent -->
+  <circle cx="300" cy="150" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="300" y="148" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="300" y="166" text-anchor="middle" font-size="11" fill="#3D4F65">选哪个?</text>
+  
+  <!-- Ground truth tool -->
+  <rect x="55" y="240" width="200" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="155" y="268" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">✓ 正确工具</text>
+  <text x="155" y="297" text-anchor="middle" font-size="11" fill="#3D4F65">实际 response: 0.5s</text>
+  <text x="155" y="328" text-anchor="middle" font-size="11" fill="#9A6B3F">却被标注"高延迟"</text>
+  <text x="155" y="354" text-anchor="middle" font-size="11" fill="#9A6B3F">朴素 / 不会包装</text>
+  
+  <!-- Distractor tool -->
+  <rect x="345" y="240" width="200" height="130" rx="10" fill="#FCEEE6" stroke="#D77A4A" stroke-width="1.8"/>
+  <text x="445" y="268" text-anchor="middle" font-size="13" font-weight="600" fill="#8B3A1A">✗ 干扰工具</text>
+  <text x="445" y="297" text-anchor="middle" font-size="11" fill="#3D4F65">名字: API-Fast</text>
+  <text x="445" y="328" text-anchor="middle" font-size="11" fill="#8B3A1A">标注"快速 / 低成本"</text>
+  <text x="445" y="354" text-anchor="middle" font-size="11" fill="#8B3A1A">华丽营销文案</text>
+  
+  <!-- weak path to truth -->
+  <path d="M 278 178 Q 230 210 185 240" stroke="#B0B0B0" stroke-width="1.5" fill="none" stroke-dasharray="4,4" marker-end="url(#ag)"/>
+  <text x="205" y="208" text-anchor="middle" font-size="10" fill="#8A8A8A">弱倾向</text>
+  
+  <!-- strong path to distractor -->
+  <path d="M 322 178 Q 380 210 415 240" stroke="#D77A4A" stroke-width="2.8" fill="none" marker-end="url(#ar)"/>
+  <text x="395" y="208" text-anchor="middle" font-size="10" font-weight="600" fill="#8B3A1A">强倾向</text>
+  
+  <!-- Bottom takeaway -->
+  <text x="300" y="402" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">工具的"自我描述"成为新的对齐攻击面</text>
+</svg>

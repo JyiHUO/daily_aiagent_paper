@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Caption -->
+  <text x="360" y="28" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" font-weight="bold" fill="#1E3A5F">评测 = 上下文采集能力</text>
+
+  <!-- Haystack -->
+  <g>
+    <text x="130" y="58" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">Haystack：500 条轨迹 · 115M token</text>
+    <rect x="30" y="70" width="200" height="300" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <g fill="#C9D6E4">
+      <circle cx="60" cy="100" r="4"/><circle cx="90" cy="115" r="4"/><circle cx="125" cy="95" r="4"/>
+      <circle cx="170" cy="110" r="4"/><circle cx="200" cy="130" r="4"/><circle cx="55" cy="140" r="4"/>
+      <circle cx="100" cy="155" r="4"/><circle cx="145" cy="135" r="4"/><circle cx="190" cy="170" r="4"/>
+      <circle cx="70" cy="185" r="4"/><circle cx="115" cy="200" r="4"/><circle cx="160" cy="215" r="4"/>
+      <circle cx="200" cy="240" r="4"/><circle cx="55" cy="225" r="4"/><circle cx="95" cy="250" r="4"/>
+      <circle cx="135" cy="270" r="4"/><circle cx="180" cy="285" r="4"/><circle cx="65" cy="295" r="4"/>
+      <circle cx="110" cy="320" r="4"/><circle cx="155" cy="340" r="4"/><circle cx="195" cy="355" r="4"/>
+      <circle cx="80" cy="355" r="4"/><circle cx="60" cy="265" r="4"/><circle cx="155" cy="175" r="4"/>
+    </g>
+    <circle cx="120" cy="180" r="6" fill="#E8924A"/>
+    <circle cx="170" cy="295" r="6" fill="#E8924A"/>
+    <circle cx="85" cy="245" r="6" fill="#E8924A"/>
+    <text x="130" y="390" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">橙点 = 稀疏的关键证据</text>
+  </g>
+
+  <!-- Memory funnel -->
+  <g>
+    <polygon points="290,130 440,130 410,230 320,230" fill="#FFF4E6" stroke="#E8924A" stroke-width="1.8"/>
+    <text x="365" y="175" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#1E3A5F">记忆系统</text>
+    <text x="365" y="195" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">Insert / Query</text>
+
+    <rect x="315" y="250" width="100" height="50" rx="6" fill="#FFE3C9" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="365" y="272" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="bold" fill="#1E3A5F">≤ 200K token</text>
+    <text x="365" y="289" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">多模态证据</text>
+  </g>
+
+  <!-- Fixed reader -->
+  <g>
+    <rect x="500" y="180" width="180" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="590" y="210" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#1E3A5F">固定 Reader (不变量)</text>
+    <text x="590" y="232" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">Qwen3.5-9B</text>
+    <text x="590" y="250" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">输出答案</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="232" y1="180" x2="288" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="418" y1="270" x2="498" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Footer -->
+  <text x="360" y="425" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">reader 固定 → 比拼记忆系统从噪声中筛出证据的能力</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C26B5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">五种修复方案 vs. Cascade 之墙</text>
+
+  <!-- The Wall -->
+  <rect x="305" y="80" width="110" height="280" fill="#E8DCD4" stroke="#8B6F5C" stroke-width="2"/>
+  <line x1="305" y1="130" x2="415" y2="130" stroke="#8B6F5C"/>
+  <line x1="305" y1="180" x2="415" y2="180" stroke="#8B6F5C"/>
+  <line x1="305" y1="230" x2="415" y2="230" stroke="#8B6F5C"/>
+  <line x1="305" y1="280" x2="415" y2="280" stroke="#8B6F5C"/>
+  <line x1="305" y1="330" x2="415" y2="330" stroke="#8B6F5C"/>
+  <line x1="360" y1="80" x2="360" y2="130" stroke="#8B6F5C"/>
+  <line x1="335" y1="130" x2="335" y2="180" stroke="#8B6F5C"/>
+  <line x1="385" y1="130" x2="385" y2="180" stroke="#8B6F5C"/>
+  <line x1="360" y1="180" x2="360" y2="230" stroke="#8B6F5C"/>
+  <line x1="335" y1="230" x2="335" y2="280" stroke="#8B6F5C"/>
+  <line x1="385" y1="230" x2="385" y2="280" stroke="#8B6F5C"/>
+  <line x1="360" y1="280" x2="360" y2="330" stroke="#8B6F5C"/>
+
+  <text x="360" y="380" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Cascade ≈ 3%</text>
+
+  <!-- Five failed attempts (left) -->
+  <g font-size="12" fill="#3D4F65">
+    <rect x="30" y="75" width="170" height="32" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="115" y="96" text-anchor="middle">DSPy 提示优化</text>
+
+    <rect x="30" y="130" width="170" height="32" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="115" y="151" text-anchor="middle">top-k: 5 → 40</text>
+
+    <rect x="30" y="185" width="170" height="32" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="115" y="206" text-anchor="middle">换 Sonnet 4 答题</text>
+
+    <rect x="30" y="240" width="170" height="32" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="115" y="261" text-anchor="middle">去除 filler 噪声</text>
+
+    <rect x="30" y="295" width="170" height="32" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="115" y="316" text-anchor="middle">更强 internal LLM</text>
+  </g>
+
+  <!-- arrows bouncing off wall -->
+  <g stroke="#C26B5C" stroke-width="1.6" fill="none">
+    <path d="M200,91 L300,100" marker-end="url(#arRed)"/>
+    <path d="M200,146 L300,150" marker-end="url(#arRed)"/>
+    <path d="M200,201 L300,205" marker-end="url(#arRed)"/>
+    <path d="M200,256 L300,255" marker-end="url(#arRed)"/>
+    <path d="M200,311 L300,305" marker-end="url(#arRed)"/>
+  </g>
+
+  <!-- The one that worked -->
+  <rect x="470" y="155" width="225" height="90" rx="6" fill="#FFF4E6" stroke="#D89B4A" stroke-width="2"/>
+  <text x="582" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">MD-flat × Opus 4.7</text>
+  <text x="582" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">写入时预埋 contingency 条目</text>
+  <text x="582" y="220" text-anchor="middle" font-size="12" fill="#3D4F65">Cascade 0.32 / Absence 0.59</text>
+  <text x="582" y="237" text-anchor="middle" font-size="11" fill="#A05A3C">代价：约 70× baseline 成本</text>
+
+  <!-- arrow that breaks through -->
+  <path d="M470,200 L418,200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <text x="444" y="192" text-anchor="middle" font-size="11" fill="#8B6F5C" font-style="italic">推理前置到写入</text>
+
+  <text x="582" y="275" text-anchor="middle" font-size="11" fill="#8B6F5C">唯一能凿穿 Cascade 之墙的组合</text>
+</svg>

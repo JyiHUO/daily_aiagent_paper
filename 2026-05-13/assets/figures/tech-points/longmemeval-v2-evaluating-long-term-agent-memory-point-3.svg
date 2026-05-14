@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9685F"/>
+    </marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B7AB8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">分粒度存 · 分粒度查</text>
+
+  <!-- Question -->
+  <rect x="30" y="180" width="120" height="70" rx="10" fill="#FFF4E6" stroke="#E8A765" stroke-width="1.5"/>
+  <text x="90" y="210" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">Question</text>
+  <text x="90" y="232" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">问什么粒度?</text>
+
+  <!-- Controller -->
+  <circle cx="240" cy="215" r="44" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="240" y="212" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">LLM 控制器</text>
+  <text x="240" y="230" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">分流检索</text>
+
+  <!-- Pool 1: UI slices -->
+  <rect x="380" y="55" width="180" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="470" y="85" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">原始 UI 切片池</text>
+  <text x="470" y="107" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">静态题 · 看界面快照</text>
+
+  <!-- Pool 2: Transitions -->
+  <rect x="380" y="175" width="180" height="80" rx="8" fill="#FDECEC" stroke="#D9685F" stroke-width="1.5"/>
+  <text x="470" y="205" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">状态转移事件池</text>
+  <text x="470" y="227" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">动态题 · 看 A → B</text>
+
+  <!-- Pool 3: Notes -->
+  <rect x="380" y="295" width="180" height="80" rx="8" fill="#F3EEFA" stroke="#8B7AB8" stroke-width="1.5"/>
+  <text x="470" y="325" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">工作流 / 坑点笔记池</text>
+  <text x="470" y="347" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">高层题 · 看经验沉淀</text>
+
+  <!-- Arrows from Q to controller -->
+  <path d="M150 215 L194 215" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- Three differentiated arrows -->
+  <path d="M272 188 Q325 140 378 100" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M284 215 L378 215" stroke="#D9685F" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <path d="M272 242 Q325 295 378 330" stroke="#8B7AB8" stroke-width="2" fill="none" marker-end="url(#c)"/>
+
+  <!-- Bottom note -->
+  <text x="300" y="415" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65" font-style="italic">不同问题 → 不同记忆池</text>
+</svg>

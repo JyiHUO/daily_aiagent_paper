@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">ToolRL-DR · 训练时见脏，部署时不慌</text>
+
+  <!-- LEFT: training storm -->
+  <g>
+    <rect x="50" y="80" width="260" height="240" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="180" y="108" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">训练：扰动风暴</text>
+
+    <g font-size="11" fill="#1E3A5F">
+      <rect x="78"  y="130" width="92" height="26" rx="13" fill="#FFE4D6" stroke="#E8956B"/>
+      <text x="124" y="147" text-anchor="middle">typo query</text>
+
+      <rect x="190" y="130" width="92" height="26" rx="13" fill="#FFE4D6" stroke="#E8956B"/>
+      <text x="236" y="147" text-anchor="middle">同名工具</text>
+
+      <rect x="78"  y="170" width="92" height="26" rx="13" fill="#FFE4D6" stroke="#E8956B"/>
+      <text x="124" y="187" text-anchor="middle">误导描述</text>
+
+      <rect x="190" y="170" width="92" height="26" rx="13" fill="#FFE4D6" stroke="#E8956B"/>
+      <text x="236" y="187" text-anchor="middle">伪奖励</text>
+
+      <rect x="78"  y="210" width="92" height="26" rx="13" fill="#FFE4D6" stroke="#E8956B"/>
+      <text x="124" y="227" text-anchor="middle">脏参数</text>
+
+      <rect x="190" y="210" width="92" height="26" rx="13" fill="#DCE7F5" stroke="#9CB4D4" stroke-dasharray="3 3"/>
+      <text x="236" y="227" text-anchor="middle" fill="#3D4F65">Transition ✗</text>
+    </g>
+
+    <text x="180" y="270" text-anchor="middle" font-size="11" fill="#3D4F65">16 种扰动均匀采样（Transition 不训练）</text>
+    <text x="180" y="296" text-anchor="middle" font-size="11" fill="#3D4F65">Qwen2.5-3B-Instruct + GRPO</text>
+  </g>
+
+  <!-- arrow -->
+  <line x1="315" y1="200" x2="405" y2="200" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#a)"/>
+  <text x="360" y="190" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">GRPO</text>
+
+  <!-- RIGHT: stubborn agent -->
+  <g>
+    <rect x="410" y="80" width="260" height="240" rx="14" fill="#FFF6E8" stroke="#E8B26B" stroke-width="1.6"/>
+    <text x="540" y="108" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">部署：顽固的 Agent</text>
+
+    <path d="M540 130 L585 148 L585 205 Q585 240 540 262 Q495 240 495 205 L495 148 Z"
+          fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="540" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">retry</text>
+    <text x="540" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">不轻易放弃</text>
+
+    <text x="540" y="288" text-anchor="middle" font-size="11" fill="#3D4F65">未训过的 Transition gap 闭合 27%</text>
+    <text x="540" y="306" text-anchor="middle" font-size="11" fill="#3D4F65">omitted-call 47% → 34.2%</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <rect x="120" y="355" width="480" height="64" rx="10" fill="#F4F1FF" stroke="#7A6FCC" stroke-width="1.4"/>
+  <text x="360" y="380" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">Domain Randomization：训练多样性 → 涌现重试习惯</text>
+  <text x="360" y="402" text-anchor="middle" font-size="12" fill="#3D4F65">3B 抗扰动 ≈ 开源 14B function-calling</text>
+</svg>
