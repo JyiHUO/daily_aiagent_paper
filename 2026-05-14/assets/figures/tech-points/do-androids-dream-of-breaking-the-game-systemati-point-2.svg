@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">BenchJack: auto pentest on a benchmark</text>
+
+  <!-- Target: benchmark as a building -->
+  <g>
+    <rect x="600" y="150" width="150" height="180" rx="6" fill="#FFF3E0" stroke="#D89A4E" stroke-width="2"/>
+    <rect x="660" y="260" width="30" height="70" fill="#D89A4E"/>
+    <text x="675" y="300" text-anchor="middle" font-size="11" fill="#FFF3E0" font-weight="700">entry</text>
+    <rect x="620" y="180" width="25" height="25" fill="#fff" stroke="#D89A4E"/>
+    <rect x="660" y="180" width="25" height="25" fill="#fff" stroke="#D89A4E"/>
+    <rect x="700" y="180" width="25" height="25" fill="#fff" stroke="#D89A4E"/>
+    <rect x="620" y="220" width="25" height="25" fill="#fff" stroke="#D89A4E"/>
+    <rect x="700" y="220" width="25" height="25" fill="#fff" stroke="#D89A4E"/>
+    <text x="675" y="352" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">Benchmark</text>
+  </g>
+
+  <!-- Stage 1: recon -->
+  <g>
+    <rect x="50" y="120" width="170" height="130" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="75" y="145" width="80" height="60" fill="#fff" stroke="#4B8BDA"/>
+    <line x1="80" y1="158" x2="145" y2="158" stroke="#4B8BDA"/>
+    <line x1="80" y1="170" x2="130" y2="170" stroke="#4B8BDA"/>
+    <line x1="80" y1="182" x2="145" y2="182" stroke="#4B8BDA"/>
+    <circle cx="160" cy="195" r="18" fill="none" stroke="#1E3A5F" stroke-width="3"/>
+    <line x1="173" y1="208" x2="190" y2="225" stroke="#1E3A5F" stroke-width="3"/>
+    <text x="135" y="240" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">1. Recon — map entry &amp; scoring</text>
+  </g>
+
+  <!-- Stage 2: checklist -->
+  <g>
+    <rect x="280" y="120" width="170" height="130" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="305" y="135" width="120" height="80" fill="#fff" stroke="#4B8BDA"/>
+    <text x="318" y="155" font-size="13" fill="#2E7D55">✓</text><line x1="332" y1="152" x2="415" y2="152" stroke="#cbd5e0"/>
+    <text x="318" y="173" font-size="13" fill="#C0392B">✗</text><line x1="332" y1="170" x2="415" y2="170" stroke="#cbd5e0"/>
+    <text x="318" y="191" font-size="13" fill="#C0392B">✗</text><line x1="332" y1="188" x2="415" y2="188" stroke="#cbd5e0"/>
+    <text x="318" y="209" font-size="13" fill="#2E7D55">✓</text><line x1="332" y1="206" x2="415" y2="206" stroke="#cbd5e0"/>
+    <text x="365" y="240" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">2. Flaw scan — 8-flaw taxonomy</text>
+  </g>
+
+  <!-- Stage 3: exploit -->
+  <g>
+    <rect x="280" y="370" width="200" height="60" rx="8" fill="#FFEBEE" stroke="#C0392B" stroke-width="1.5"/>
+    <circle cx="305" cy="400" r="10" fill="none" stroke="#C0392B" stroke-width="2.5"/>
+    <line x1="314" y1="400" x2="345" y2="400" stroke="#C0392B" stroke-width="2.5"/>
+    <line x1="335" y1="400" x2="335" y2="408" stroke="#C0392B" stroke-width="2.5"/>
+    <line x1="342" y1="400" x2="342" y2="410" stroke="#C0392B" stroke-width="2.5"/>
+    <text x="410" y="396" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">3. Exploit</text>
+    <text x="410" y="414" text-anchor="middle" font-size="11" fill="#3D4F65">run.sh → ~100%</text>
+  </g>
+
+  <!-- arrows between stages -->
+  <line x1="220" y1="185" x2="278" y2="185" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="450" y1="185" x2="598" y2="185" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- arrow from scan down to exploit -->
+  <path d="M 365 252 L 365 368" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+
+  <!-- exploit unlocks the door -->
+  <path d="M 480 400 Q 580 400 655 332" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#arRed)"/>
+</svg>

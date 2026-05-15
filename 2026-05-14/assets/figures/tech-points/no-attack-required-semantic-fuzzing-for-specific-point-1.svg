@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0584A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">Guardrail → Reachability Query</text>
+  <text x="300" y="56" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">source → sink without passing the gate = violation</text>
+
+  <!-- Source node -->
+  <circle cx="90" cy="220" r="44" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="90" y="217" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">source</text>
+  <text x="90" y="234" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">tainted</text>
+
+  <!-- Gate node -->
+  <rect x="248" y="118" width="104" height="64" rx="8" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="300" y="146" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">gate</text>
+  <text x="300" y="164" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">ask / confirm</text>
+
+  <!-- Sink node -->
+  <circle cx="510" cy="220" r="44" fill="#FCEBE8" stroke="#C0584A" stroke-width="2"/>
+  <text x="510" y="217" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">sink</text>
+  <text x="510" y="234" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">exec-delete</text>
+
+  <!-- Compliant path through gate -->
+  <path d="M 124 196 Q 190 130 248 150" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M 352 150 Q 410 130 476 196" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="104" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#4B8BDA">compliant: passes gate</text>
+
+  <!-- Violating direct path -->
+  <path d="M 134 230 L 464 230" fill="none" stroke="#C0584A" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#arRed)"/>
+  <text x="300" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#C0584A">violation: --force bypasses gate</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="338" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">deterministic graph traversal, not LLM judgment</text>
+  <text x="300" y="358" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">node predicates: tainted · sens · ask · exec · cred</text>
+</svg>

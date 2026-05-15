@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">约束骨架：把 LLM 的不确定性收窄到一个接口</text>
+
+  <!-- Left: natural language rule -->
+  <g>
+    <rect x="40" y="90" width="180" height="110" rx="10" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="130" y="116" text-anchor="middle" font-size="12" fill="#3D4F65">自然语言 guardrail（模糊）</text>
+    <text x="130" y="148" text-anchor="middle" font-size="13" fill="#1E3A5F" font-style="italic">"Deletes require</text>
+    <text x="130" y="168" text-anchor="middle" font-size="13" fill="#1E3A5F" font-style="italic">user confirmation"</text>
+  </g>
+
+  <!-- Middle: skeleton (the narrow interface) -->
+  <g>
+    <rect x="270" y="70" width="180" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="92" text-anchor="middle" font-size="12" fill="#3D4F65">约束骨架（LLM 仅做这步）</text>
+    <line x1="290" y1="102" x2="430" y2="102" stroke="#4B8BDA" stroke-opacity="0.3"/>
+    <text x="290" y="128" font-size="13" fill="#1E3A5F">trigger :</text>
+    <text x="440" y="128" text-anchor="end" font-size="13" fill="#1E3A5F" font-weight="600">destructive</text>
+    <text x="290" y="153" font-size="13" fill="#1E3A5F">role :</text>
+    <text x="440" y="153" text-anchor="end" font-size="13" fill="#1E3A5F" font-weight="600">sink</text>
+    <text x="290" y="178" font-size="13" fill="#1E3A5F">gate :</text>
+    <text x="440" y="178" text-anchor="end" font-size="13" fill="#1E3A5F" font-weight="600">ask</text>
+    <text x="290" y="203" font-size="13" fill="#1E3A5F">params :</text>
+    <text x="440" y="203" text-anchor="end" font-size="13" fill="#1E3A5F" font-weight="600">exec-delete</text>
+  </g>
+
+  <!-- Right: deterministic templates -->
+  <g>
+    <rect x="510" y="70" width="170" height="44" rx="6" fill="#E7F0E4" stroke="#6FA85B" stroke-width="1.5"/>
+    <text x="595" y="97" text-anchor="middle" font-size="13" fill="#1E3A5F">ϕu  unconfirmed</text>
+
+    <rect x="510" y="128" width="170" height="44" rx="6" fill="#E7F0E4" stroke="#6FA85B" stroke-width="1.5"/>
+    <text x="595" y="155" text-anchor="middle" font-size="13" fill="#1E3A5F">ϕe  exfiltration</text>
+
+    <rect x="510" y="186" width="170" height="44" rx="6" fill="#E7F0E4" stroke="#6FA85B" stroke-width="1.5"/>
+    <text x="595" y="213" text-anchor="middle" font-size="13" fill="#1E3A5F">ϕp  privilege esc.</text>
+
+    <text x="595" y="252" text-anchor="middle" font-size="11" fill="#3D4F65">确定性规则填槽 → 机器可检查目标</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="222" y1="145" x2="266" y2="145" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="244" y="136" text-anchor="middle" font-size="10" fill="#3D4F65">LLM 抽取</text>
+
+  <line x1="452" y1="125" x2="506" y2="95" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="452" y1="150" x2="506" y2="150" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="452" y1="178" x2="506" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="478" y="140" text-anchor="middle" font-size="10" fill="#3D4F65">规则映射</text>
+
+  <!-- Bottom note -->
+  <g>
+    <line x1="270" y1="300" x2="450" y2="300" stroke="#4B8BDA" stroke-dasharray="3,3" opacity="0.6"/>
+    <text x="360" y="330" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">不确定性被压缩在这条窄接口上</text>
+    <text x="360" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">LLM 不直接生成可达性目标，避免歧义污染整条流水线</text>
+  </g>
+</svg>

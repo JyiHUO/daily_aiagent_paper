@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">
+    Claim to Evidence: Verification &amp; Entropy in Runtime
+  </text>
+
+  <!-- Left: agent claim -->
+  <g>
+    <rect x="40" y="90" width="170" height="90" rx="10" fill="#FFF4E6" stroke="#E0A85C" stroke-width="1.5"/>
+    <text x="125" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Agent says</text>
+    <text x="125" y="148" text-anchor="middle" font-size="13" fill="#3D4F65">"Done"</text>
+    <text x="125" y="168" text-anchor="middle" font-size="11" fill="#8a6a3a">(unverified)</text>
+  </g>
+
+  <!-- Center: Verification gate (shield) -->
+  <g>
+    <path d="M360 80 L430 105 L430 175 Q430 220 360 245 Q290 220 290 175 L290 105 Z"
+          fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Verification</text>
+    <text x="360" y="140" text-anchor="middle" font-size="11" fill="#3D4F65">reproduce</text>
+    <text x="360" y="158" text-anchor="middle" font-size="11" fill="#3D4F65">attribute</text>
+    <text x="360" y="176" text-anchor="middle" font-size="11" fill="#3D4F65">fix · re-check</text>
+    <text x="360" y="210" text-anchor="middle" font-size="11" font-style="italic" fill="#4B8BDA">report</text>
+  </g>
+
+  <!-- Loop back arrow on shield (verify fail → attribute) -->
+  <path d="M295 195 Q250 195 255 155 Q260 120 290 120" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <text x="228" y="160" font-size="10" fill="#4B8BDA">retry</text>
+
+  <!-- Right: evidence -->
+  <g>
+    <rect x="510" y="90" width="170" height="90" rx="10" fill="#E8F4EC" stroke="#4FA37A" stroke-width="1.5"/>
+    <text x="595" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Evidence</text>
+    <text x="595" y="148" text-anchor="middle" font-size="12" fill="#3D4F65">patch + report</text>
+    <text x="595" y="166" text-anchor="middle" font-size="11" fill="#3D4F65">probes passed</text>
+  </g>
+
+  <!-- Arrows top row -->
+  <line x1="212" y1="135" x2="286" y2="135" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="432" y1="135" x2="508" y2="135" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Bottom: Entropy audit -->
+  <g>
+    <rect x="100" y="300" width="520" height="120" rx="12" fill="#F5F0FA" stroke="#8B6CB8" stroke-width="1.5"/>
+    <text x="360" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">
+      Entropy Audit · severity 0–3
+    </text>
+
+    <g font-size="10" fill="#3D4F65">
+      <circle cx="148" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="148" y="378" text-anchor="middle">code</text>
+      <circle cx="218" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="218" y="378" text-anchor="middle">doc</text>
+      <circle cx="288" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="288" y="378" text-anchor="middle">deps</text>
+      <circle cx="358" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="358" y="378" text-anchor="middle">test</text>
+      <circle cx="428" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="428" y="378" text-anchor="middle">files</text>
+      <circle cx="498" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="498" y="378" text-anchor="middle">arch</text>
+      <circle cx="568" cy="375" r="16" fill="#FFFFFF" stroke="#8B6CB8"/>
+      <text x="568" y="378" text-anchor="middle">flow</text>
+    </g>
+    <text x="360" y="410" text-anchor="middle" font-size="11" font-style="italic" fill="#8B6CB8">
+      maintenance burden becomes the agent's responsibility
+    </text>
+  </g>
+
+  <!-- Arrow from shield to entropy audit -->
+  <line x1="360" y1="246" x2="360" y2="298" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="368" y="276" font-size="10" fill="#3D4F65">end of episode</text>
+</svg>

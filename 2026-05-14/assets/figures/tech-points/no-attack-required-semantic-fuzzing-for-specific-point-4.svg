@@ -1,0 +1,46 @@
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">真实 Skill 市场审计</text>
+
+  <!-- 13433 -->
+  <circle cx="105" cy="215" r="75" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="105" y="208" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">13,433</text>
+  <text x="105" y="230" text-anchor="middle" font-size="12" fill="#3D4F65">市场 skill</text>
+
+  <!-- 402 -->
+  <circle cx="290" cy="215" r="52" fill="#FEF3E2" stroke="#E8A857" stroke-width="1.5"/>
+  <text x="290" y="210" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">402</text>
+  <text x="290" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">含安全约束</text>
+
+  <!-- 120 -->
+  <circle cx="455" cy="160" r="46" fill="#FCE4E4" stroke="#D9534F" stroke-width="1.5"/>
+  <text x="455" y="158" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">120</text>
+  <text x="455" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">违规 (29.9%)</text>
+
+  <!-- 26 -->
+  <circle cx="490" cy="290" r="38" fill="#1E3A5F" stroke="#1E3A5F"/>
+  <text x="490" y="289" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">26</text>
+  <text x="490" y="307" text-anchor="middle" font-size="10" fill="#EFF6FF">0-day</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="215" x2="236" y2="215" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="208" y="208" text-anchor="middle" font-size="10" fill="#3D4F65">筛选</text>
+
+  <line x1="328" y1="188" x2="410" y2="168" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="370" y="172" text-anchor="middle" font-size="10" fill="#3D4F65">SEFZ 探测</text>
+
+  <line x1="470" y1="204" x2="487" y2="250" stroke="#D9534F" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="535" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">未知可利用</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="378" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">良性输入下，skill 自己违反自己的规范</text>
+  <text x="300" y="398" text-anchor="middle" font-size="10.5" fill="#3D4F65" font-style="italic">例：--confirm-publish 被静默绕过，改走 curl REST</text>
+</svg>

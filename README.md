@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-13
+- **日期**：2026-05-14
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents
-  - LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues
-  - MEME: Multi-entity & Evolving Memory Evaluation
-- **日报路径**：[2026-05-13/daily_report.md](2026-05-13/daily_report.md)
+  - Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack
+  - No Attack Required: Semantic Fuzzing for Specification Violations in Agent Skills
+  - AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents
+- **日报路径**：[2026-05-14/daily_report.md](2026-05-14/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-14 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |
+|  |  |  | 2 | No Attack Required: Semantic Fuzzing for Specification Violations in Agent Skills |  |
+|  |  |  | 3 | AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents |  |
 | 2026-05-13 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | When Simulation Lies: A Sim-to-Real Benchmark and Domain-Randomized RL Recipe for Tool-Use Agents | [2026-05-13/daily_report.md](2026-05-13/daily_report.md) |
 |  |  |  | 2 | LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues |  |
 |  |  |  | 3 | MEME: Multi-entity & Evolving Memory Evaluation |  |

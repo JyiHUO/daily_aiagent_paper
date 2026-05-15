@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="480" fill="#FAF7F2"/>
+  
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">同一模型，外骨骼厚度递增</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">H0 → H3：harness 可见性单调增加</text>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- H0 -->
+  <g transform="translate(80,140)">
+    <circle cx="50" cy="60" r="32" fill="#FFE8D6" stroke="#C97B4A" stroke-width="2"/>
+    <text x="50" y="65" text-anchor="middle" font-size="13" fill="#1E3A5F">Agent</text>
+    <text x="50" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">H0  裸任务</text>
+  </g>
+
+  <!-- H1 -->
+  <g transform="translate(240,140)">
+    <circle cx="50" cy="60" r="44" fill="none" stroke="#9CC4E8" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="32" fill="#FFE8D6" stroke="#C97B4A" stroke-width="2"/>
+    <text x="50" y="65" text-anchor="middle" font-size="13" fill="#1E3A5F">Agent</text>
+    <text x="50" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">H1  + 工具注册表</text>
+  </g>
+
+  <!-- H2 -->
+  <g transform="translate(400,140)">
+    <circle cx="50" cy="60" r="56" fill="none" stroke="#6BA3D6" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="44" fill="none" stroke="#9CC4E8" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="32" fill="#FFE8D6" stroke="#C97B4A" stroke-width="2"/>
+    <text x="50" y="65" text-anchor="middle" font-size="13" fill="#1E3A5F">Agent</text>
+    <text x="50" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">H2  + 仓库指南</text>
+  </g>
+
+  <!-- H3 -->
+  <g transform="translate(580,140)">
+    <circle cx="50" cy="60" r="68" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="56" fill="none" stroke="#6BA3D6" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="44" fill="none" stroke="#9CC4E8" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="50" cy="60" r="32" fill="#FFE8D6" stroke="#C97B4A" stroke-width="2"/>
+    <text x="50" y="65" text-anchor="middle" font-size="13" fill="#1E3A5F">Agent</text>
+    <text x="50" y="125" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">H3  + 验证 / 归因</text>
+  </g>
+
+  <!-- progression arrow -->
+  <line x1="70" y1="360" x2="730" y2="360" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- output contrast -->
+  <text x="130" y="395" text-anchor="middle" font-size="12" fill="#3D4F65">输出：仅一个 patch</text>
+  <text x="660" y="395" text-anchor="middle" font-size="12" fill="#3D4F65">输出：复现 + 归因 + 验证报告</text>
+
+  <text x="400" y="445" text-anchor="middle" font-size="13" font-style="italic" fill="#1E3A5F">是模型不行，还是 harness 没给够？</text>
+</svg>
