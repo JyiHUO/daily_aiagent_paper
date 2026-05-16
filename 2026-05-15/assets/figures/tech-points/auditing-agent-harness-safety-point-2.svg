@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">三层安全门 · 任一不过则塌</text>
+
+  <!-- L1: boundary -->
+  <g>
+    <rect x="60" y="90" width="140" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="130" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">L1 边界</text>
+    <line x1="80" y1="200" x2="180" y2="200" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="90" y1="145" x2="90" y2="210" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="110" y1="145" x2="110" y2="210" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="130" y1="145" x2="130" y2="210" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="150" y1="145" x2="150" y2="210" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="170" y1="145" x2="170" y2="210" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="80" y1="160" x2="180" y2="160" stroke="#3D4F65" stroke-width="2"/>
+    <line x1="80" y1="180" x2="180" y2="180" stroke="#3D4F65" stroke-width="2"/>
+    <text x="130" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">没越界？</text>
+  </g>
+
+  <!-- L2: fidelity -->
+  <g>
+    <rect x="230" y="90" width="140" height="140" rx="10" fill="#FFF4E6" stroke="#E89A4B" stroke-width="2"/>
+    <text x="300" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">L2 保真</text>
+    <path d="M 260 180 L 290 205 L 340 155" fill="none" stroke="#E89A4B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="300" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">真做完？</text>
+  </g>
+
+  <!-- L3: stability -->
+  <g>
+    <rect x="400" y="90" width="140" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="470" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">L3 稳定</text>
+    <path d="M 470 145 L 500 158 L 500 185 Q 500 205 470 215 Q 440 205 440 185 L 440 158 Z" fill="none" stroke="#4B8BDA" stroke-width="2.5"/>
+    <line x1="425" y1="155" x2="442" y2="170" stroke="#C0533A" stroke-width="1.5"/>
+    <line x1="515" y1="155" x2="498" y2="170" stroke="#C0533A" stroke-width="1.5"/>
+    <text x="470" y="225" text-anchor="middle" font-size="11" fill="#3D4F65">扛骚扰？</text>
+  </g>
+
+  <!-- Multiplication signs -->
+  <text x="215" y="170" text-anchor="middle" font-size="22" font-weight="bold" fill="#4B8BDA">×</text>
+  <text x="385" y="170" text-anchor="middle" font-size="22" font-weight="bold" fill="#4B8BDA">×</text>
+
+  <!-- Arrows down to score -->
+  <line x1="130" y1="240" x2="240" y2="325" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="300" y1="240" x2="300" y2="325" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="470" y1="240" x2="360" y2="325" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Final score box -->
+  <rect x="160" y="330" width="280" height="80" rx="10" fill="#1E3A5F"/>
+  <text x="300" y="360" text-anchor="middle" font-size="13" fill="#EFF6FF">综合分 = SAR × (αTCR + βAVS + γPB)</text>
+  <text x="300" y="388" text-anchor="middle" font-size="12" fill="#FFD08A">SAR 为乘性门：一票否决</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="438" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">任务完成 ≠ 安全合格</text>
+</svg>

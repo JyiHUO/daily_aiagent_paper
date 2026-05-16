@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-14
+- **日期**：2026-05-15
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack
-  - No Attack Required: Semantic Fuzzing for Specification Violations in Agent Skills
-  - AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents
-- **日报路径**：[2026-05-14/daily_report.md](2026-05-14/daily_report.md)
+  - Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining
+  - Auditing Agent Harness Safety
+  - SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades
+- **日报路径**：[2026-05-15/daily_report.md](2026-05-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining | [2026-05-15/daily_report.md](2026-05-15/daily_report.md) |
+|  |  |  | 2 | Auditing Agent Harness Safety |  |
+|  |  |  | 3 | SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades |  |
 | 2026-05-14 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |
 |  |  |  | 2 | No Attack Required: Semantic Fuzzing for Specification Violations in Agent Skills |  |
 |  |  |  | 3 | AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents |  |

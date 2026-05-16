@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">Harness 作为审计单元</text>
+  <text x="300" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">从"看答案"到"看全程轨迹"</text>
+
+  <!-- Old way: only final answer -->
+  <g>
+    <text x="135" y="100" text-anchor="middle" font-size="11" fill="#A07050">传统：仅看终点</text>
+    <circle cx="80" cy="150" r="16" fill="#FFF4E6" stroke="#C99060" stroke-width="1.5"/>
+    <text x="80" y="154" text-anchor="middle" font-size="10" fill="#3D4F65">Agent</text>
+    <line x1="98" y1="150" x2="170" y2="150" stroke="#C99060" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <polygon points="178,150 168,146 168,154" fill="#C99060"/>
+    <rect x="178" y="135" width="50" height="30" rx="4" fill="#FFF4E6" stroke="#C99060" stroke-width="1.5"/>
+    <text x="203" y="154" text-anchor="middle" font-size="10" fill="#3D4F65">答案 y</text>
+    <text x="135" y="195" text-anchor="middle" font-size="10" fill="#A07050">中途越权 → 不可见</text>
+  </g>
+
+  <!-- New way: audit the harness trajectory -->
+  <g>
+    <text x="430" y="100" text-anchor="middle" font-size="11" fill="#1E3A5F">HarnessAudit：以轨迹 τ 为证据</text>
+
+    <!-- Harness boundary -->
+    <rect x="305" y="115" width="250" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="430" y="134" text-anchor="middle" font-size="10" fill="#4B8BDA" font-style="italic">Harness  H = (A, T, R, Π, Φ)</text>
+
+    <!-- Agent inside -->
+    <circle cx="340" cy="180" r="14" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="340" y="184" text-anchor="middle" font-size="10" fill="#1E3A5F">A</text>
+
+    <!-- Tool -->
+    <rect x="395" y="166" width="44" height="28" rx="3" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="417" y="184" text-anchor="middle" font-size="10" fill="#1E3A5F">Tool</text>
+
+    <!-- Resource -->
+    <rect x="460" y="166" width="64" height="28" rx="3" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="492" y="184" text-anchor="middle" font-size="10" fill="#1E3A5F">Resource</text>
+
+    <!-- Trajectory arrows recorded -->
+    <line x1="354" y1="180" x2="387" y2="180" stroke="#4B8BDA" stroke-width="1.5"/>
+    <polygon points="395,180 385,176 385,184" fill="#4B8BDA"/>
+    <line x1="439" y1="180" x2="452" y2="180" stroke="#4B8BDA" stroke-width="1.5"/>
+    <polygon points="460,180 450,176 450,184" fill="#4B8BDA"/>
+
+    <!-- Log indicator -->
+    <text x="430" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">每一步皆为可观测证据 τ</text>
+
+    <!-- Three audit layers -->
+    <line x1="318" y1="240" x2="542" y2="240" stroke="#4B8BDA" stroke-width="1"/>
+    <text x="345" y="258" text-anchor="middle" font-size="10" fill="#1E3A5F">边界合规</text>
+    <text x="430" y="258" text-anchor="middle" font-size="10" fill="#1E3A5F">执行保真</text>
+    <text x="515" y="258" text-anchor="middle" font-size="10" fill="#1E3A5F">系统稳定</text>
+  </g>
+
+  <!-- Bottom example -->
+  <g>
+    <rect x="60" y="315" width="480" height="80" rx="8" fill="#F5F7FA" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="300" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">退款任务示例</text>
+    <text x="300" y="358" text-anchor="middle" font-size="10.5" fill="#3D4F65">答案正确 ✓   但中途读取了无关客户档案 ✗</text>
+    <text x="300" y="378" text-anchor="middle" font-size="10.5" fill="#A05050">旧评测判为成功，HarnessAudit 判为安全失败</text>
+  </g>
+</svg>

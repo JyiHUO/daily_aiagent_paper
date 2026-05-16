@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" font-weight="700" fill="#1E3A5F">VLM 像人一样"看"教程视频</text>
+
+  <!-- Long video strip with sliding windows -->
+  <text x="300" y="60" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">YouTube 教程视频 · 滑动窗口分段</text>
+  <rect x="50" y="70" width="500" height="60" rx="6" fill="#FFF4E6" stroke="#E0A86B" stroke-width="1.5"/>
+
+  <rect x="60" y="78" width="150" height="44" rx="4" fill="#FFE4B8" stroke="#C97D2E" stroke-width="1.2"/>
+  <text x="135" y="105" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F">4 min 段 ①</text>
+
+  <rect x="225" y="78" width="150" height="44" rx="4" fill="#FFE4B8" stroke="#C97D2E" stroke-width="1.2"/>
+  <text x="300" y="105" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F">4 min 段 ②</text>
+
+  <rect x="390" y="78" width="150" height="44" rx="4" fill="#FFE4B8" stroke="#C97D2E" stroke-width="1.2"/>
+  <text x="465" y="105" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F">4 min 段 ③</text>
+
+  <!-- memory carry-over arcs -->
+  <path d="M 200 122 Q 217 155 240 122" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ah)"/>
+  <path d="M 365 122 Q 382 155 405 122" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ah)"/>
+  <text x="300" y="162" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65" font-style="italic">前段轨迹作为长程记忆传递</text>
+
+  <!-- VLM as eye -->
+  <ellipse cx="300" cy="220" rx="90" ry="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <circle cx="300" cy="220" r="14" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+  <circle cx="300" cy="220" r="6" fill="#1E3A5F"/>
+  <text x="300" y="225" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="600" fill="#1E3A5F" dx="30">VLM 观察+讲解</text>
+
+  <!-- arrows from segments to VLM -->
+  <line x1="135" y1="122" x2="240" y2="195" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="300" y1="122" x2="300" y2="187" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="465" y1="122" x2="360" y2="195" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Output trajectory -->
+  <line x1="300" y1="252" x2="300" y2="295" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <rect x="80" y="302" width="440" height="100" rx="8" fill="#F0F7FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="300" y="322" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="700" fill="#1E3A5F">结构化轨迹（可直接当训练标签）</text>
+
+  <text x="100" y="346" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">任务 u：在 Amazon 买运动鞋</text>
+  <text x="100" y="366" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">0:02 click(搜索框) → 0:05 type("running shoes") → 0:10 click("Shoes for men")</text>
+  <text x="100" y="386" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">每步附 low-level 指令 + 理由</text>
+</svg>

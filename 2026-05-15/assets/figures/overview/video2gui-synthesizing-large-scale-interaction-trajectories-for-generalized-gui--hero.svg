@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89A3C"/>
+    </marker>
+    <linearGradient id="funnel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DCEAFB"/>
+      <stop offset="1" stop-color="#4B8BDA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="640" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Video2GUI：把 YouTube 教程视频炼成 GUI Agent 训练燃料</text>
+  <text x="500" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">5 亿视频 → 1270 万条带坐标的真实交互轨迹</text>
+
+  <!-- ============ LEFT: YouTube source ============ -->
+  <g transform="translate(40,140)">
+    <rect width="150" height="120" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="30" y="20" width="90" height="56" rx="10" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <polygon points="65,36 65,60 88,48" fill="#E89A3C"/>
+    <text x="75" y="96" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">YouTube 视频</text>
+    <text x="75" y="112" text-anchor="middle" font-size="11" fill="#3D4F65">5 亿条 · 教程为主</text>
+  </g>
+
+  <!-- ============ Funnel: coarse-to-fine filtering ============ -->
+  <g transform="translate(220,140)">
+    <polygon points="0,10 240,10 200,110 40,110" fill="url(#funnel)" opacity="0.85"/>
+    <text x="120" y="36" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">① 元数据粗筛</text>
+    <text x="120" y="52" text-anchor="middle" font-size="10" fill="#1E3A5F">Qwen2.5-7B · 标题/描述</text>
+    <line x1="30" y1="62" x2="210" y2="62" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+    <text x="120" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">② 内容质量精筛</text>
+    <text x="120" y="94" text-anchor="middle" font-size="10" fill="#FFFFFF">Gemini-3 · 主题/讲解/录屏</text>
+    <text x="120" y="130" text-anchor="middle" font-size="11" fill="#3D4F65">5 亿 → 2000 万 → 416 万</text>
+  </g>
+
+  <!-- arrow source -> funnel -->
+  <line x1="192" y1="200" x2="218" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ============ RIGHT TOP: VLM trajectory extraction ============ -->
+  <g transform="translate(530,108)">
+    <rect width="430" height="180" rx="14" fill="#FFF6EA" stroke="#E89A3C" stroke-width="1.5"/>
+    <text x="215" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">③ VLM 轨迹抽取（Gemini-3-Pro）</text>
+
+    <!-- sliding windows -->
+    <g transform="translate(20,42)">
+      <rect x="0" y="0" width="64" height="32" rx="4" fill="#FFFFFF" stroke="#E89A3C"/>
+      <text x="32" y="20" text-anchor="middle" font-size="10" fill="#3D4F65">4 min 段</text>
+      <rect x="72" y="0" width="64" height="32" rx="4" fill="#FFFFFF" stroke="#E89A3C"/>
+      <text x="104" y="20" text-anchor="middle" font-size="10" fill="#3D4F65">4 min 段</text>
+      <rect x="144" y="0" width="64" height="32" rx="4" fill="#FFFFFF" stroke="#E89A3C"/>
+      <text x="176" y="20" text-anchor="middle" font-size="10" fill="#3D4F65">4 min 段</text>
+      <path d="M64,16 Q68,2 72,16" fill="none" stroke="#E89A3C" stroke-width="1.2" marker-end="url(#ahO)"/>
+      <path d="M136,16 Q140,2 144,16" fill="none" stroke="#E89A3C" stroke-width="1.2" marker-end="url(#ahO)"/>
+      <text x="216" y="20" font-size="10" fill="#3D4F65">+ 历史摘要</text>
+    </g>
+
+    <!-- trajectory output -->
+    <g transform="translate(20,98)" font-size="11" fill="#1E3A5F">
+      <text x="0" y="0" font-weight="600">u = "在 Amazon 买双运动鞋"</text>
+      <text x="0" y="18">0:02 click(搜索框) → 0:05 type(...) → 0:10 click(Shoes)</text>
+      <text x="0" y="36" fill="#3D4F65">每步附 low-level 指令 + 理由</text>
+    </g>
+
+    <!-- 3-frame grounding -->
+    <g transform="translate(290,46)">
+      <text x="60" y="0" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">④ 三帧高清定位</text>
+      <rect x="4" y="10" width="32" height="24" fill="#FFFFFF" stroke="#3D4F65"/>
+      <rect x="44" y="10" width="32" height="24" fill="#FFFFFF" stroke="#E89A3C" stroke-width="2"/>
+      <rect x="84" y="10" width="32" height="24" fill="#FFFFFF" stroke="#3D4F65"/>
+      <rect x="50" y="16" width="10" height="6" fill="none" stroke="#E89A3C" stroke-width="1.2"/>
+      <text x="20" y="48" text-anchor="middle" font-size="9" fill="#3D4F65">t-0.5s</text>
+      <text x="60" y="48" text-anchor="middle" font-size="9" fill="#E89A3C" font-weight="700">t</text>
+      <text x="100" y="48" text-anchor="middle" font-size="9" fill="#3D4F65">t+0.5s</text>
+      <text x="60" y="66" text-anchor="middle" font-size="10" fill="#3D4F65">输出 bbox · &gt;95% 准确</text>
+    </g>
+  </g>
+
+  <!-- arrow funnel -> extractor -->
+  <line x1="465" y1="200" x2="528" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ============ MIDDLE: WildGUI dataset ============ -->
+  <g transform="translate(180,318)">
+    <rect width="640" height="78" rx="14" fill="#1E3A5F"/>
+    <text x="28" y="34" font-size="18" font-weight="700" fill="#FFFFFF">WildGUI</text>
+    <text x="28" y="56" font-size="11" fill="#DCEAFB">大规模 GUI 交互轨迹</text>
+
+    <line x1="155" y1="18" x2="155" y2="60" stroke="#4B8BDA" stroke-width="1"/>
+    <text x="190" y="32" font-size="14" font-weight="700" fill="#FFFFFF">12.7 M</text>
+    <text x="190" y="50" font-size="10" fill="#DCEAFB">轨迹</text>
+
+    <text x="290" y="32" font-size="14" font-weight="700" fill="#FFFFFF">124.5 M</text>
+    <text x="290" y="50" font-size="10" fill="#DCEAFB">截图</text>
+
+    <text x="395" y="32" font-size="14" font-weight="700" fill="#FFFFFF">1500+</text>
+    <text x="395" y="50" font-size="10" fill="#DCEAFB">应用</text>
+
+    <text x="485" y="32" font-size="14" font-weight="700" fill="#E89A3C">网页 / 桌面 / 移动</text>
+    <text x="485" y="50" font-size="10" fill="#DCEAFB">三平台覆盖</text>
+  </g>
+
+  <!-- arrows -> dataset -->
+  <line x1="340" y1="263" x2="360" y2="316" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="700" y1="290" x2="660" y2="316" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ============ Two-stage training ============ -->
+  <g transform="translate(40,432)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#1E3A5F">⑤ 两阶段训练 Qwen2.5-VL · Mimo-VL</text>
+
+    <!-- Stage 1 -->
+    <rect x="0" y="12" width="450" height="86" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="14" y="32" font-size="12" font-weight="700" fill="#1E3A5F">Stage 1 · 持续预训练（~200B token）</text>
+    <g font-size="10" fill="#3D4F65">
+      <rect x="14" y="42" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="79" y="60" text-anchor="middle" font-weight="600" fill="#1E3A5F">视觉 grounding</text>
+      <text x="79" y="76" text-anchor="middle">看图找控件</text>
+
+      <rect x="154" y="42" width="130" height="44" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="219" y="60" text-anchor="middle" font-weight="600" fill="#1E3A5F">单步 action</text>
+      <text x="219" y="76" text-anchor="middle">看图选动作</text>
+
+      <rect x="294" y="42" width="146" height="44" rx="6" fill="#FFFFFF" stroke="#E89A3C" stroke-width="1.5"/>
+      <text x="367" y="60" text-anchor="middle" font-weight="600" fill="#1E3A5F">长程 trajectory</text>
+      <text x="367" y="76" text-anchor="middle">看历史预测下一步</text>
+    </g>
+
+    <!-- Stage 2 -->
+    <rect x="476" y="12" width="170" height="86" rx="10" fill="#FFF6EA" stroke="#E89A3C"/>
+    <text x="561" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Stage 2 · 微调</text>
+    <text x="561" y="58" text-anchor="middle" font-size="10" fill="#3D4F65">精选开源数据</text>
+    <text x="561" y="76" text-anchor="middle" font-size="10" fill="#3D4F65">3 epoch</text>
+
+    <line x1="450" y1="55" x2="476" y2="55" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- arrow dataset -> training -->
+  <line x1="430" y1="398" x2="280" y2="442" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- ============ Results ============ -->
+  <g transform="translate(700,448)">
+    <rect width="260" height="142" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="130" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">真实任务可靠性提升</text>
+
+    <g font-size="11" fill="#3D4F65">
+      <text x="16" y="50">ScreenSpot-Pro</text>
+      <text x="244" y="50" text-anchor="end" fill="#1E3A5F" font-weight="700">41.2 → 56.9</text>
+
+      <text x="16" y="78">OSWorld-G</text>
+      <text x="244" y="78" text-anchor="end" fill="#1E3A5F" font-weight="700">54.7 → 67.6</text>
+
+      <text x="16" y="106">AndroidWorld 在线</text>
+      <text x="244" y="106" text-anchor="end" fill="#E89A3C" font-weight="700">16.4 → 31.9</text>
+    </g>
+    <text x="130" y="130" text-anchor="middle" font-size="9" fill="#3D4F65">200B token 仍未饱和</text>
+  </g>
+
+  <line x1="686" y1="496" x2="698" y2="500" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

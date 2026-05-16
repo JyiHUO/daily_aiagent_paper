@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">捕捉“按钮被点中的那一刻”</text>
+
+  <!-- three frames -->
+  <g>
+    <rect x="60"  y="90" width="160" height="110" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="280" y="90" width="160" height="110" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="500" y="90" width="160" height="110" rx="6" fill="#FFF4E6" stroke="#E89B3C" stroke-width="2"/>
+
+    <!-- frame 1: cursor approaching -->
+    <rect x="100" y="110" width="80" height="22" rx="3" fill="#fff" stroke="#3D4F65"/>
+    <text x="140" y="125" text-anchor="middle" font-size="10" fill="#3D4F65">Shoes</text>
+    <path d="M195,170 l10,4 l-4,3 l4,8 l-4,2 l-4,-8 l-6,3 z" fill="#1E3A5F"/>
+
+    <!-- frame 2: cursor on, but occluded -->
+    <rect x="320" y="110" width="80" height="22" rx="3" fill="#cfe1f7" stroke="#3D4F65"/>
+    <text x="360" y="125" text-anchor="middle" font-size="10" fill="#3D4F65">Shoes</text>
+    <path d="M365,128 l10,4 l-4,3 l4,8 l-4,2 l-4,-8 l-6,3 z" fill="#1E3A5F"/>
+    <rect x="315" y="105" width="90" height="32" fill="#1E3A5F" opacity="0.25"/>
+
+    <!-- frame 3: clear, bbox drawn -->
+    <rect x="540" y="110" width="80" height="22" rx="3" fill="#fff" stroke="#3D4F65"/>
+    <text x="580" y="125" text-anchor="middle" font-size="10" fill="#3D4F65">Shoes</text>
+    <rect x="536" y="106" width="88" height="30" fill="none" stroke="#E14B4B" stroke-width="2" stroke-dasharray="4 2"/>
+  </g>
+
+  <text x="140" y="222" text-anchor="middle" font-size="13" fill="#3D4F65">t − 0.5s</text>
+  <text x="360" y="222" text-anchor="middle" font-size="13" fill="#3D4F65">t  (模糊/遮挡)</text>
+  <text x="580" y="222" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">t + 0.5s  ✓ 选中</text>
+
+  <!-- timeline -->
+  <line x1="80" y1="252" x2="660" y2="252" stroke="#9DB4CC" stroke-width="1.5"/>
+  <circle cx="140" cy="252" r="4" fill="#4B8BDA"/>
+  <circle cx="360" cy="252" r="4" fill="#4B8BDA"/>
+  <circle cx="580" cy="252" r="5" fill="#E89B3C"/>
+
+  <!-- pick arrow from chosen frame down to the triple box -->
+  <path d="M580,260 C 580,295 540,305 500,312" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- output triple -->
+  <rect x="120" y="312" width="380" height="68" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="310" y="338" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">可训练三元组</text>
+  <text x="310" y="362" text-anchor="middle" font-size="12" fill="#3D4F65">(screenshot, "click Shoes for men", bbox)</text>
+
+  <text x="360" y="402" text-anchor="middle" font-size="11" fill="#3D4F65">前后半秒三帧 → Gemini 选出最清晰的一帧并输出坐标</text>
+</svg>

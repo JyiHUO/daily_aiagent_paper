@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">规格粒度 = 给 Agent 的边界条款</text>
+
+  <!-- L1/L2: messy issue -->
+  <g>
+    <rect x="50" y="90" width="180" height="180" rx="10" fill="#FBE9E7" stroke="#D9755A" stroke-width="1.5"/>
+    <text x="140" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L1 / L2</text>
+    <text x="140" y="133" text-anchor="middle" font-size="11" fill="#3D4F65">原始 issue · 一句话</text>
+
+    <g stroke="#D9755A" stroke-width="1.4" fill="none" opacity="0.75">
+      <path d="M75 165 q15 -12 30 0 t30 0 t30 0 t30 0"/>
+      <path d="M75 190 q15 12 30 0 t30 0 t30 0 t30 0"/>
+    </g>
+    <text x="140" y="230" text-anchor="middle" font-size="12" fill="#1E3A5F">无边界 → 误伤四起</text>
+    <text x="140" y="255" text-anchor="middle" font-size="12" font-weight="600" fill="#B14A30">F1 ≈ 14%</text>
+  </g>
+
+  <!-- L3: fence -->
+  <g>
+    <rect x="270" y="90" width="180" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="360" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L3  概念边界</text>
+    <text x="360" y="133" text-anchor="middle" font-size="11" fill="#3D4F65">期望 + 约束（默认）</text>
+
+    <g stroke="#4B8BDA" stroke-width="2" fill="none">
+      <line x1="295" y1="195" x2="425" y2="195"/>
+      <line x1="295" y1="215" x2="425" y2="215"/>
+      <line x1="310" y1="175" x2="310" y2="230"/>
+      <line x1="340" y1="175" x2="340" y2="230"/>
+      <line x1="370" y1="175" x2="370" y2="230"/>
+      <line x1="400" y1="175" x2="400" y2="230"/>
+    </g>
+    <text x="360" y="168" text-anchor="middle" font-size="11" fill="#3D4F65">别动 X 接口</text>
+    <text x="360" y="255" text-anchor="middle" font-size="12" font-weight="600" fill="#1E5BA8">F1 ≈ 76%</text>
+  </g>
+
+  <!-- L5: oracle -->
+  <g>
+    <rect x="490" y="90" width="180" height="180" rx="10" fill="#F3F4DC" stroke="#A89F4A" stroke-width="1.5"/>
+    <text x="580" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L5  接近答案</text>
+    <text x="580" y="133" text-anchor="middle" font-size="11" fill="#3D4F65">行为 + 验收标准</text>
+
+    <circle cx="580" cy="200" r="34" fill="none" stroke="#A89F4A" stroke-width="1.5"/>
+    <circle cx="580" cy="200" r="20" fill="none" stroke="#A89F4A" stroke-width="1.5"/>
+    <circle cx="580" cy="200" r="7" fill="#A89F4A"/>
+    <text x="580" y="255" text-anchor="middle" font-size="12" font-weight="600" fill="#7A6E20">F1 ≈ 83%（疑似泄漏）</text>
+  </g>
+
+  <!-- arrows between -->
+  <line x1="232" y1="180" x2="266" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="452" y1="180" x2="486" y2="180" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ah)"/>
+
+  <!-- bottom takeaway -->
+  <text x="360" y="335" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">关键跃迁：从“更多信息”到“明确边界”</text>
+  <text x="360" y="362" text-anchor="middle" font-size="12" fill="#3D4F65">Agent 需要的不是更多八卦，而是“哪里不能动”</text>
+  <text x="360" y="392" text-anchor="middle" font-size="11" fill="#7A6E20" font-style="italic">再堆 API 细节更像 oracle，而非真实能力</text>
+</svg>

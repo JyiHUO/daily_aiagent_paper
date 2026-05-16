@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Coarse-to-Fine Video Filtering</text>
+
+  <!-- Big pile: 500M -->
+  <g>
+    <circle cx="130" cy="220" r="95" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="130" y="212" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">500M</text>
+    <text x="130" y="236" text-anchor="middle" font-size="12" fill="#3D4F65">raw videos</text>
+  </g>
+
+  <!-- Sieve 1: text/metadata -->
+  <g>
+    <circle cx="370" cy="220" r="62" fill="#FFF4E6" stroke="#E89B4C" stroke-width="1.5"/>
+    <text x="370" y="214" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">20M</text>
+    <text x="370" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">title / desc</text>
+  </g>
+  <text x="370" y="140" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">read the blurb</text>
+
+  <!-- Sieve 2: 1-min preview -->
+  <g>
+    <circle cx="590" cy="220" r="42" fill="#E8F5E9" stroke="#5BA66B" stroke-width="1.5"/>
+    <text x="590" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">4.16M</text>
+    <text x="590" y="234" text-anchor="middle" font-size="10" fill="#3D4F65">1-min preview</text>
+  </g>
+  <text x="590" y="164" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">watch the trailer</text>
+
+  <!-- Arrows -->
+  <path d="M227 220 L304 220" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <path d="M434 220 L544 220" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- Labels under arrows -->
+  <text x="265" y="210" text-anchor="middle" font-size="10" fill="#4B8BDA">cheap text  ×25</text>
+  <text x="489" y="210" text-anchor="middle" font-size="10" fill="#4B8BDA">visual quality  ×5</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="375" text-anchor="middle" font-size="12" fill="#1E3A5F">spend compute only on what survives  →  300K hours of GUI tutorials</text>
+</svg>

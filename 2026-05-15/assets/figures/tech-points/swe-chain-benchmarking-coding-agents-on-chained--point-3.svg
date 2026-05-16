@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B63"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-family="Helvetica, Arial" font-size="19" font-weight="bold" fill="#1E3A5F">Build + Fix: a second chance</text>
+
+  <!-- Patch -->
+  <rect x="40" y="170" width="110" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text x="95" y="198" text-anchor="middle" font-family="Helvetica, Arial" font-size="14" fill="#1E3A5F">Agent patch</text>
+  <text x="95" y="216" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">v → v+1</text>
+
+  <!-- Test run -->
+  <rect x="220" y="150" width="160" height="100" rx="8" fill="#FFF4EC" stroke="#C97B63" stroke-width="1.6"/>
+  <text x="300" y="180" text-anchor="middle" font-family="Helvetica, Arial" font-size="14" fill="#1E3A5F">Test run</text>
+  <text x="300" y="210" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">ImportError / setup failure</text>
+  <text x="300" y="230" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">vs. real logic bug</text>
+
+  <!-- Verdict -->
+  <rect x="450" y="170" width="110" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text x="505" y="198" text-anchor="middle" font-family="Helvetica, Arial" font-size="14" fill="#1E3A5F">Verdict</text>
+  <text x="505" y="216" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">pass / fail</text>
+
+  <!-- Forward arrows -->
+  <line x1="150" y1="200" x2="218" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="380" y1="200" x2="448" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Feedback loop -->
+  <path d="M300 150 Q300 95 180 95 Q95 95 95 130 L95 168" stroke="#C97B63" stroke-width="1.8" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowRed)"/>
+  <text x="300" y="86" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#C97B63" font-style="italic">one peek at the error, one fix</text>
+
+  <!-- Bottom takeaway -->
+  <line x1="80" y1="295" x2="520" y2="295" stroke="#D6DEE8" stroke-width="1"/>
+  <text x="300" y="323" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" fill="#1E3A5F">rescues setup noise — not real upgrade logic</text>
+  <text x="180" y="355" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#3D4F65">precision  54% → 65%</text>
+  <text x="420" y="355" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#3D4F65">resolving  40% → 45%</text>
+</svg>
