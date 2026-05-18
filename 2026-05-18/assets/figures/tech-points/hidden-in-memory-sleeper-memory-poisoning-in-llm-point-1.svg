@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Sleeper Memory Poisoning</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">one document — three delayed stages</text>
+
+  <!-- Stage 1: Document with hidden payload -->
+  <g>
+    <rect x="50" y="120" width="150" height="170" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="65" y1="150" x2="185" y2="150" stroke="#B8CCE0"/>
+    <line x1="65" y1="170" x2="185" y2="170" stroke="#B8CCE0"/>
+    <line x1="65" y1="190" x2="185" y2="190" stroke="#B8CCE0"/>
+    <rect x="75" y="205" width="100" height="40" rx="3" fill="#FBE3D6" stroke="#D9764A" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="125" y="230" text-anchor="middle" font-size="11" fill="#A04A1F">hidden payload</text>
+    <text x="125" y="312" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">① Injection</text>
+    <text x="125" y="328" text-anchor="middle" font-size="10" fill="#3D4F65">poisoned document</text>
+  </g>
+
+  <!-- Stage 2: Memory vault with sleeping note -->
+  <g>
+    <rect x="285" y="120" width="150" height="170" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="360" y="148" text-anchor="middle" font-size="11" fill="#3D4F65">long-term memory</text>
+    <path d="M 350 220 a 28 28 0 1 0 22 -45 a 22 22 0 1 1 -22 45 z" fill="#FBE3D6" stroke="#D9764A" stroke-width="1.5"/>
+    <text x="360" y="312" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">② Dormant</text>
+    <text x="360" y="328" text-anchor="middle" font-size="10" fill="#3D4F65">stored as fake user fact</text>
+  </g>
+
+  <!-- Stage 3: Future conversation triggered -->
+  <g>
+    <rect x="520" y="120" width="150" height="170" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="595" y="148" text-anchor="middle" font-size="11" fill="#3D4F65">future chat</text>
+    <path d="M 545 165 h 100 v 50 h -60 l -10 12 v -12 h -30 z" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="595" y="186" text-anchor="middle" font-size="10" fill="#3D4F65">"export the</text>
+    <text x="595" y="200" text-anchor="middle" font-size="10" fill="#3D4F65">report…"</text>
+    <g transform="translate(595,250)">
+      <path d="M0,-12 L3,-3 L12,0 L3,3 L0,12 L-3,3 L-12,0 L-3,-3 z" fill="#D9764A"/>
+    </g>
+    <text x="595" y="312" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">③ Adversarial Use</text>
+    <text x="595" y="328" text-anchor="middle" font-size="10" fill="#3D4F65">retrieved &amp; obeyed</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="200" y1="205" x2="282" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="435" y1="205" x2="517" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="241" y="197" text-anchor="middle" font-size="10" fill="#4B8BDA">write</text>
+  <text x="476" y="197" text-anchor="middle" font-size="10" fill="#4B8BDA">recall</text>
+
+  <text x="360" y="385" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">attacker never sees the model, the memory, or the future user</text>
+</svg>

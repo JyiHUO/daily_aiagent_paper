@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="44" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">23 Real SaaS as Testbed</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">production-grade systems in containers, not toy websites</text>
+
+  <!-- Left: toy site (crossed out) -->
+  <g>
+    <rect x="60" y="120" width="180" height="120" rx="10" fill="#F5F1EA" stroke="#C9B79C" stroke-width="1.5"/>
+    <rect x="78" y="140" width="60" height="8" fill="#C9B79C"/>
+    <rect x="78" y="158" width="100" height="6" fill="#E0D4BD"/>
+    <rect x="78" y="172" width="80" height="6" fill="#E0D4BD"/>
+    <rect x="78" y="186" width="90" height="6" fill="#E0D4BD"/>
+    <line x1="70" y1="130" x2="230" y2="230" stroke="#B9522F" stroke-width="3" opacity="0.75"/>
+    <text x="150" y="265" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">simplified mock site</text>
+  </g>
+
+  <!-- Right: 6 domains as small SaaS tiles -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F">
+    <rect x="380" y="100" width="120" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="440" y="122" text-anchor="middle" font-weight="700">Engineering</text>
+    <text x="440" y="142" text-anchor="middle" font-size="10" fill="#3D4F65">OpenProject</text>
+
+    <rect x="510" y="100" width="120" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="570" y="122" text-anchor="middle" font-weight="700">Finance</text>
+    <text x="570" y="142" text-anchor="middle" font-size="10" fill="#3D4F65">BigCapital</text>
+
+    <rect x="640" y="100" width="120" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="700" y="122" text-anchor="middle" font-weight="700">Healthcare</text>
+    <text x="700" y="142" text-anchor="middle" font-size="10" fill="#3D4F65">OpenEMR</text>
+
+    <rect x="380" y="172" width="120" height="56" rx="8" fill="#FFF4E6" stroke="#E2A24A" stroke-width="1.5"/>
+    <text x="440" y="194" text-anchor="middle" font-weight="700">Collab Docs</text>
+    <text x="440" y="214" text-anchor="middle" font-size="10" fill="#3D4F65">OnlyOffice</text>
+
+    <rect x="510" y="172" width="120" height="56" rx="8" fill="#FFF4E6" stroke="#E2A24A" stroke-width="1.5"/>
+    <text x="570" y="194" text-anchor="middle" font-weight="700">Agri Supply</text>
+    <text x="570" y="214" text-anchor="middle" font-size="10" fill="#3D4F65">supply chain</text>
+
+    <rect x="640" y="172" width="120" height="56" rx="8" fill="#FFF4E6" stroke="#E2A24A" stroke-width="1.5"/>
+    <text x="700" y="194" text-anchor="middle" font-weight="700">Indie Media</text>
+    <text x="700" y="214" text-anchor="middle" font-size="10" fill="#3D4F65">Twenty CRM</text>
+  </g>
+
+  <text x="570" y="258" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">6 domains · 23 real SaaS</text>
+
+  <!-- Arrow from toy to real -->
+  <path d="M 245 180 L 372 180" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Container box wrapping real SaaS implication -->
+  <g>
+    <rect x="120" y="310" width="560" height="170" rx="12" fill="#FAFBFD" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="400" y="338" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Dockerized · full stack · resettable state</text>
+
+    <!-- agent icon -->
+    <circle cx="200" cy="410" r="28" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="200" y="415" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">CUA</text>
+
+    <path d="M 232 410 L 338 410" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+
+    <!-- features -->
+    <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">
+      <text x="355" y="378">real auth &amp; real DB</text>
+      <text x="355" y="400">cross-app workflows</text>
+      <text x="355" y="422">long-horizon (100+ steps)</text>
+      <text x="355" y="444">reproducible reset before each task</text>
+    </g>
+  </g>
+</svg>

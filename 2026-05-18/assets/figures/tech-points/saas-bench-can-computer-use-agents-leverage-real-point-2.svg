@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">一条任务，跨越多个真实SaaS系统</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">平均 100+ 步 · 一步错，下游全错</text>
+
+  <!-- Role figure (left) -->
+  <g>
+    <circle cx="70" cy="220" r="20" fill="#FCE9D6" stroke="#D89B6A" stroke-width="1.5"/>
+    <rect x="52" y="242" width="36" height="38" rx="6" fill="#FCE9D6" stroke="#D89B6A" stroke-width="1.5"/>
+    <text x="70" y="300" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">职业角色</text>
+    <text x="70" y="316" text-anchor="middle" font-size="11" fill="#3D4F65">HR / 财务 / PM</text>
+  </g>
+
+  <!-- App 1: HR -->
+  <g>
+    <rect x="160" y="180" width="130" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <rect x="160" y="180" width="130" height="22" rx="8" fill="#4B8BDA"/>
+    <text x="225" y="196" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">HR 系统</text>
+    <line x1="172" y1="220" x2="278" y2="220" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="172" y1="234" x2="260" y2="234" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="172" y1="248" x2="270" y2="248" stroke="#B8CFE5" stroke-width="1"/>
+    <text x="225" y="270" text-anchor="middle" font-size="11" fill="#1E3A5F">办理离职手续</text>
+  </g>
+
+  <!-- App 2: Payroll -->
+  <g>
+    <rect x="320" y="180" width="130" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <rect x="320" y="180" width="130" height="22" rx="8" fill="#4B8BDA"/>
+    <text x="385" y="196" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">薪资 / 会计</text>
+    <line x1="332" y1="220" x2="438" y2="220" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="332" y1="234" x2="420" y2="234" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="332" y1="248" x2="430" y2="248" stroke="#B8CFE5" stroke-width="1"/>
+    <text x="385" y="270" text-anchor="middle" font-size="11" fill="#1E3A5F">结算薪资 / 记账</text>
+  </g>
+
+  <!-- App 3: CRM -->
+  <g>
+    <rect x="480" y="180" width="130" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <rect x="480" y="180" width="130" height="22" rx="8" fill="#4B8BDA"/>
+    <text x="545" y="196" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">CRM 系统</text>
+    <line x1="492" y1="220" x2="598" y2="220" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="492" y1="234" x2="580" y2="234" stroke="#B8CFE5" stroke-width="1"/>
+    <line x1="492" y1="248" x2="590" y2="248" stroke="#B8CFE5" stroke-width="1"/>
+    <text x="545" y="270" text-anchor="middle" font-size="11" fill="#1E3A5F">转交跟进任务</text>
+  </g>
+
+  <!-- role -> app1 -->
+  <line x1="100" y1="225" x2="156" y2="228" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- app1 -> app2 -->
+  <line x1="290" y1="230" x2="316" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="303" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">状态传递</text>
+
+  <!-- app2 -> app3 -->
+  <line x1="450" y1="230" x2="476" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="463" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">状态传递</text>
+
+  <!-- connector down -->
+  <line x1="385" y1="290" x2="385" y2="368" stroke="#D89B6A" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Bottom: long horizon indicator -->
+  <g>
+    <rect x="135" y="370" width="500" height="44" rx="22" fill="#FFF4E6" stroke="#D89B6A" stroke-width="1.5"/>
+    <text x="385" y="388" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">106 个任务 · 99/106 跨应用 · 50% 涉及 3 个系统</text>
+    <text x="385" y="404" text-anchor="middle" font-size="11" fill="#3D4F65">97.3% 文本任务执行轨迹超过 100 步</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9A441"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C5705D"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">Progressive Disclosure + Guarded Runtime</text>
+
+  <!-- Skill card (handle) -->
+  <g>
+    <rect x="60" y="170" width="170" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="145" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">skill handle</text>
+    <text x="145" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">name + boundary</text>
+    <line x1="80" y1="240" x2="210" y2="240" stroke="#A8C5E8" stroke-width="1"/>
+    <line x1="80" y1="254" x2="180" y2="254" stroke="#A8C5E8" stroke-width="1"/>
+    <line x1="80" y1="268" x2="195" y2="268" stroke="#A8C5E8" stroke-width="1"/>
+  </g>
+  <text x="145" y="310" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65" font-style="italic">first: only the card</text>
+
+  <!-- Guard gate -->
+  <g>
+    <rect x="320" y="170" width="160" height="120" rx="10" fill="#FFF4E0" stroke="#D9A441" stroke-width="1.8"/>
+    <path d="M400 192 L420 202 L420 222 Q420 242 400 252 Q380 242 380 222 L380 202 Z" fill="none" stroke="#D9A441" stroke-width="2"/>
+    <text x="400" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">policy</text>
+    <text x="400" y="278" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">guard check</text>
+  </g>
+  <text x="400" y="310" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65" font-style="italic">on call: reveal operator</text>
+
+  <!-- Three outcomes -->
+  <g>
+    <rect x="580" y="80" width="170" height="70" rx="8" fill="#E8F3EC" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="665" y="110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">execute</text>
+    <text x="665" y="130" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">run operator</text>
+  </g>
+
+  <g>
+    <rect x="580" y="215" width="170" height="70" rx="8" fill="#FFF4E0" stroke="#D9A441" stroke-width="1.5"/>
+    <text x="665" y="245" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">guidance</text>
+    <text x="665" y="265" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">hint, keep reasoning</text>
+  </g>
+
+  <g>
+    <rect x="580" y="350" width="170" height="70" rx="8" fill="#FBEAE5" stroke="#C5705D" stroke-width="1.5"/>
+    <text x="665" y="380" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">blocked</text>
+    <text x="665" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">deopt, no silent fail</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="230" y1="225" x2="318" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="274" y="216" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">selected</text>
+
+  <path d="M 482 200 Q 530 160 575 120" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 482 230 L 575 248" stroke="#D9A441" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M 482 260 Q 530 320 575 378" stroke="#C5705D" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+
+  <text x="400" y="460" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65" font-style="italic">reveal on demand · every call passes the guard</text>
+</svg>

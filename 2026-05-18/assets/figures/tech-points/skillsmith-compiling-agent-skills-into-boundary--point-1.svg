@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">边界优先的 Skill 编译</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">把说明书编译成可调用接口契约</text>
+
+  <!-- LEFT: SKILL.md as a thick book -->
+  <g>
+    <rect x="60" y="130" width="150" height="190" rx="4" fill="#FBE9D8" stroke="#C97A3F" stroke-width="1.5"/>
+    <line x1="80" y1="170" x2="195" y2="170" stroke="#C97A3F" stroke-width="0.8"/>
+    <line x1="80" y1="195" x2="195" y2="195" stroke="#C97A3F" stroke-width="0.8"/>
+    <line x1="80" y1="220" x2="195" y2="220" stroke="#C97A3F" stroke-width="0.8"/>
+    <line x1="80" y1="245" x2="195" y2="245" stroke="#C97A3F" stroke-width="0.8"/>
+    <line x1="80" y1="270" x2="195" y2="270" stroke="#C97A3F" stroke-width="0.8"/>
+    <line x1="80" y1="295" x2="170" y2="295" stroke="#C97A3F" stroke-width="0.8"/>
+    <text x="135" y="155" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">SKILL.md</text>
+    <text x="135" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">整本说明书 · 每次重读</text>
+  </g>
+
+  <!-- COMPILER (hexagon) -->
+  <g transform="translate(360,225)">
+    <polygon points="-46,-26 0,-52 46,-26 46,26 0,52 -46,26" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">编译</text>
+    <text x="0" y="14" text-anchor="middle" font-size="11" fill="#3D4F65">Compile</text>
+  </g>
+
+  <!-- RIGHT: Boundary Contract -->
+  <g>
+    <rect x="510" y="130" width="160" height="190" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="590" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Boundary Contract</text>
+    <line x1="525" y1="166" x2="655" y2="166" stroke="#1E3A5F" stroke-width="0.6" opacity="0.4"/>
+
+    <text x="525" y="188" font-size="11" fill="#3D4F65">▸ 算子 ops</text>
+    <text x="525" y="210" font-size="11" fill="#3D4F65">▸ 输入/输出 schema</text>
+    <text x="525" y="232" font-size="11" fill="#3D4F65">▸ 风险 · 校验</text>
+    <text x="525" y="254" font-size="11" fill="#3D4F65">▸ 选择策略</text>
+    <text x="525" y="276" font-size="11" fill="#3D4F65">▸ Fallback</text>
+
+    <rect x="540" y="290" width="100" height="20" rx="3" fill="#1E3A5F"/>
+    <text x="590" y="304" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">唯一 ABI</text>
+
+    <text x="590" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">运行时只看接口 · token −57%</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="212" y1="225" x2="312" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="408" y1="225" x2="508" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="262" y="218" font-size="10" fill="#4B8BDA">一次性</text>
+  <text x="450" y="218" font-size="10" fill="#4B8BDA">薄接口</text>
+
+  <!-- bottom hint -->
+  <text x="360" y="405" text-anchor="middle" font-size="10.5" fill="#8A95A5" font-style="italic">工作流图 · dispatcher · 索引 → 仅作内部 lowering，不暴露</text>
+</svg>

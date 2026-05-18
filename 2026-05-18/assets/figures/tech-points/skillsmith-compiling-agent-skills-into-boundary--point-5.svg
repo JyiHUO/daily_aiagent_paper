@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">编译一次 · 反复摊销</text>
+  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#3D4F65">省去反复读 skill 与反复规划的推理开销</text>
+
+  <!-- Left: Raw skill (heavy) -->
+  <g>
+    <rect x="40" y="90" width="220" height="200" rx="10" fill="#FBE9E0" stroke="#D98B6B" stroke-width="1.5"/>
+    <text x="150" y="114" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Raw-Skills</text>
+    <text x="150" y="132" text-anchor="middle" font-size="11" fill="#3D4F65">每次重读 SKILL.md</text>
+
+    <rect x="65" y="150" width="170" height="20" rx="3" fill="#D98B6B" opacity="0.85"/>
+    <rect x="65" y="180" width="170" height="20" rx="3" fill="#D98B6B" opacity="0.85"/>
+    <rect x="65" y="210" width="170" height="20" rx="3" fill="#D98B6B" opacity="0.85"/>
+    <rect x="65" y="240" width="170" height="20" rx="3" fill="#D98B6B" opacity="0.85"/>
+
+    <text x="150" y="275" text-anchor="middle" font-size="11" fill="#3D4F65">1.5M token · 999 秒 · 107 次思考</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="265" y1="190" x2="335" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="180" text-anchor="middle" font-size="11" fill="#1E3A5F">编译</text>
+
+  <!-- Right: SkillSmith (thin) -->
+  <g>
+    <rect x="340" y="90" width="220" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="114" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">SkillSmith</text>
+    <text x="450" y="132" text-anchor="middle" font-size="11" fill="#3D4F65">边界化接口</text>
+
+    <rect x="385" y="180" width="130" height="20" rx="3" fill="#4B8BDA" opacity="0.85"/>
+    <rect x="385" y="210" width="130" height="20" rx="3" fill="#4B8BDA" opacity="0.85"/>
+
+    <text x="450" y="275" text-anchor="middle" font-size="11" fill="#3D4F65">620K token · 494 秒 · 61 次思考</text>
+  </g>
+
+  <!-- Bottom comparison row -->
+  <g transform="translate(0,320)">
+    <text x="300" y="0" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">相对 Raw-Skills</text>
+    <g font-size="13" font-weight="600" fill="#1E3A5F">
+      <text x="130" y="28" text-anchor="middle">token −57%</text>
+      <text x="300" y="28" text-anchor="middle">耗时 −51%</text>
+      <text x="470" y="28" text-anchor="middle">迭代 −43%</text>
+    </g>
+    <text x="300" y="52" text-anchor="middle" font-size="10.5" fill="#3D4F65">编译开销 ≈ 3.1K token / 13 秒，几次调用即回本</text>
+  </g>
+</svg>

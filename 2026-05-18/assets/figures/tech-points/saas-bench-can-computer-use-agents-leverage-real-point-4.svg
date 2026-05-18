@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75C5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">长程任务：走得到一半，走不到终点</text>
+
+  <!-- Path of checkpoints -->
+  <line x1="100" y1="180" x2="700" y2="180" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Checkpoints -->
+  <circle cx="120" cy="180" r="18" fill="#86C28C" stroke="#3F8F4D" stroke-width="2"/>
+  <text x="120" y="185" text-anchor="middle" font-size="13" fill="#1E3A5F">✓</text>
+  <text x="120" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">早期</text>
+
+  <circle cx="260" cy="180" r="18" fill="#B7D8B0" stroke="#3F8F4D" stroke-width="2"/>
+  <text x="260" y="185" text-anchor="middle" font-size="13" fill="#1E3A5F">✓</text>
+
+  <circle cx="400" cy="180" r="18" fill="#F1D17A" stroke="#B8860B" stroke-width="2"/>
+  <text x="400" y="186" text-anchor="middle" font-size="14" fill="#1E3A5F">!</text>
+  <text x="400" y="148" text-anchor="middle" font-size="11" fill="#C75C5C">客户类型填错</text>
+
+  <circle cx="540" cy="180" r="18" fill="#F2B5B5" stroke="#C75C5C" stroke-width="2"/>
+  <text x="540" y="185" text-anchor="middle" font-size="13" fill="#7A1F1F">✗</text>
+
+  <circle cx="680" cy="180" r="18" fill="#F2B5B5" stroke="#C75C5C" stroke-width="2"/>
+  <text x="680" y="185" text-anchor="middle" font-size="13" fill="#7A1F1F">✗</text>
+  <text x="680" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">后期</text>
+
+  <!-- Cascade arrows -->
+  <path d="M 415 172 Q 480 125 525 168" fill="none" stroke="#C75C5C" stroke-width="1.8" marker-end="url(#arrR)"/>
+  <path d="M 555 172 Q 615 125 665 168" fill="none" stroke="#C75C5C" stroke-width="1.8" marker-end="url(#arrR)"/>
+  <text x="585" y="110" text-anchor="middle" font-size="11" fill="#C75C5C" font-style="italic">错误级联</text>
+
+  <!-- Bottom: results panels -->
+  <rect x="90" y="290" width="280" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="230" y="318" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">Checkpoint 分</text>
+  <text x="230" y="362" text-anchor="middle" font-size="34" fill="#3F8F4D" font-weight="bold">43%</text>
+  <text x="230" y="390" text-anchor="middle" font-size="12" fill="#3D4F65">看起来做了不少</text>
+  <text x="230" y="422" text-anchor="middle" font-size="11" fill="#64748B">Claude Opus 4.6</text>
+
+  <rect x="430" y="290" width="280" height="150" rx="10" fill="#FDECEC" stroke="#C75C5C" stroke-width="1.5"/>
+  <text x="570" y="318" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">端到端通过率</text>
+  <text x="570" y="362" text-anchor="middle" font-size="34" fill="#C75C5C" font-weight="bold">1.9%</text>
+  <text x="570" y="390" text-anchor="middle" font-size="12" fill="#3D4F65">几乎走不完整流程</text>
+  <text x="570" y="422" text-anchor="middle" font-size="11" fill="#64748B">Entity Missing 占失败 71%</text>
+
+  <!-- gap arrow between two panels -->
+  <line x1="372" y1="362" x2="426" y2="362" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="399" y="352" text-anchor="middle" font-size="11" fill="#1E3A5F">巨大落差</text>
+</svg>

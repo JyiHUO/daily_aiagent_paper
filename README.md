@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-15
+- **日期**：2026-05-18
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining
-  - Auditing Agent Harness Safety
-  - SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades
-- **日报路径**：[2026-05-15/daily_report.md](2026-05-15/daily_report.md)
+  - Hidden in Memory: Sleeper Memory Poisoning in LLM Agents
+  - SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?
+  - SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces
+- **日报路径**：[2026-05-18/daily_report.md](2026-05-18/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-18 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Hidden in Memory: Sleeper Memory Poisoning in LLM Agents | [2026-05-18/daily_report.md](2026-05-18/daily_report.md) |
+|  |  |  | 2 | SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows? |  |
+|  |  |  | 3 | SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces |  |
 | 2026-05-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized GUI Agent Pretraining | [2026-05-15/daily_report.md](2026-05-15/daily_report.md) |
 |  |  |  | 2 | Auditing Agent Harness Safety |  |
 |  |  |  | 3 | SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades |  |

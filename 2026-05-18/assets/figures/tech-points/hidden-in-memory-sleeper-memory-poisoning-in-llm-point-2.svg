@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A5C"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5A8A6B"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="600" fill="#1E3A5F">Actor–Critic Search for a Universal Payload</text>
+
+  <!-- Actor -->
+  <circle cx="140" cy="200" r="64" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Actor</text>
+  <text x="140" y="216" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">drafts payload</text>
+
+  <!-- Critic -->
+  <circle cx="460" cy="200" r="64" fill="#FBEFE6" stroke="#C97A5C" stroke-width="2"/>
+  <text x="460" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Critic</text>
+  <text x="460" y="216" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">why it failed</text>
+
+  <!-- Top arrow: Actor -> Critic -->
+  <path d="M198,178 Q300,128 402,178" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ah)"/>
+  <text x="300" y="138" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">candidate template</text>
+
+  <!-- Bottom arrow: Critic -> Actor -->
+  <path d="M402,222 Q300,272 198,222" fill="none" stroke="#C97A5C" stroke-width="2.2" marker-end="url(#ahr)"/>
+  <text x="300" y="268" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">failure feedback (K rounds)</text>
+
+  <!-- Output box -->
+  <rect x="200" y="330" width="200" height="62" rx="8" fill="#E8F0E8" stroke="#5A8A6B" stroke-width="2"/>
+  <text x="300" y="356" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Universal Template</text>
+  <text x="300" y="376" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">reusable across documents</text>
+
+  <!-- Converged arrow to output -->
+  <path d="M300,255 L300,328" fill="none" stroke="#5A8A6B" stroke-width="2.2" marker-end="url(#ahg)"/>
+  <text x="310" y="295" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#5A8A6B">converged</text>
+</svg>

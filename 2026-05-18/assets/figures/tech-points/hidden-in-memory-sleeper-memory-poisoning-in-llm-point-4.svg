@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">Defense holds — until the attacker reads it</text>
+
+  <!-- Shield -->
+  <g>
+    <path d="M150 120 L150 215 Q150 265 215 290 Q280 265 280 215 L280 120 Z"
+          fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.2"/>
+    <text x="215" y="175" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Prompt Hardening</text>
+    <text x="215" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">(GEPA)</text>
+    <text x="215" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">IR: 96% → 0.4%</text>
+  </g>
+
+  <!-- Base attack arrow (blocked at shield) -->
+  <line x1="60" y1="160" x2="143" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="62" y="148" font-size="11" fill="#3D4F65">base attack (blocked)</text>
+
+  <!-- Adaptive attacker -->
+  <g>
+    <circle cx="55" cy="320" r="24" fill="#FFF4E6" stroke="#C0392B" stroke-width="2"/>
+    <text x="55" y="326" text-anchor="middle" font-size="16">👁</text>
+    <text x="55" y="365" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">AC+ attacker</text>
+    <text x="55" y="380" text-anchor="middle" font-size="10" fill="#3D4F65">reads the defense</text>
+  </g>
+
+  <!-- Curved adaptive arrow bypassing shield to memory -->
+  <path d="M80 320 Q200 370 330 330 Q380 310 388 262"
+        fill="none" stroke="#C0392B" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#r)"/>
+
+  <!-- Compromised memory -->
+  <g>
+    <rect x="370" y="175" width="180" height="85" rx="10" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+    <text x="460" y="207" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Poisoned Memory</text>
+    <text x="460" y="235" text-anchor="middle" font-size="12" fill="#C0392B">IR rebounds → 64.6%</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="300" y="400" text-anchor="middle" font-size="11.5" fill="#3D4F65" font-style="italic">Static prompts can't defend what adaptive payloads can probe.</text>
+</svg>
