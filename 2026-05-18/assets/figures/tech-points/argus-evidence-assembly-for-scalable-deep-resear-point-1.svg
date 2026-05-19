@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6BA46B"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C45B5B"/>
+    </marker>
+  </defs>
+
+  <text x="320" y="30" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="17" font-weight="600" fill="#1E3A5F">Searcher · Navigator · Evidence Graph</text>
+  <text x="320" y="50" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">interns fetch · manager assembles the puzzle</text>
+
+  <!-- Searchers (left) -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">
+    <circle cx="80" cy="140" r="30" fill="#FFF1E6" stroke="#E89B5A" stroke-width="1.6"/>
+    <text x="80" y="144" text-anchor="middle">Searcher</text>
+    <circle cx="80" cy="225" r="30" fill="#FFF1E6" stroke="#E89B5A" stroke-width="1.6"/>
+    <text x="80" y="229" text-anchor="middle">Searcher</text>
+    <circle cx="80" cy="310" r="30" fill="#FFF1E6" stroke="#E89B5A" stroke-width="1.6"/>
+    <text x="80" y="314" text-anchor="middle">Searcher</text>
+  </g>
+  <text x="80" y="365" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65" font-style="italic">stateless ReAct</text>
+
+  <!-- Navigator (center) -->
+  <rect x="230" y="175" width="170" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="315" y="210" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Navigator</text>
+  <text x="315" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">dispatch · verify</text>
+  <text x="315" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">dedup · label</text>
+
+  <!-- Arrows: Searchers -> Navigator -->
+  <line x1="110" y1="140" x2="228" y2="195" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="110" y1="225" x2="228" y2="225" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="110" y1="310" x2="228" y2="255" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="170" y="170" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65" font-style="italic">trajectories</text>
+
+  <!-- Navigator -> Graph -->
+  <line x1="400" y1="225" x2="448" y2="225" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="412" y="218" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65" font-style="italic">assemble</text>
+
+  <!-- Evidence Graph (right) -->
+  <text x="530" y="90" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">Evidence Graph</text>
+
+  <!-- support edges (+) -->
+  <line x1="495" y1="148" x2="520" y2="210" stroke="#6BA46B" stroke-width="1.6" marker-end="url(#g)"/>
+  <text x="498" y="185" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6BA46B" font-weight="700">+</text>
+  <line x1="563" y1="178" x2="542" y2="212" stroke="#6BA46B" stroke-width="1.6" marker-end="url(#g)"/>
+  <text x="560" y="200" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6BA46B" font-weight="700">+</text>
+
+  <!-- contradict edge (−) between two claims -->
+  <line x1="552" y1="247" x2="572" y2="298" stroke="#C45B5B" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#r)"/>
+  <text x="568" y="278" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#C45B5B" font-weight="700">−</text>
+
+  <!-- support: e3 -> claim2 -->
+  <line x1="478" y1="310" x2="558" y2="318" stroke="#6BA46B" stroke-width="1.6" marker-end="url(#g)"/>
+  <text x="510" y="305" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#6BA46B" font-weight="700">+</text>
+
+  <!-- nodes (drawn after edges so they sit on top) -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#1E3A5F">
+    <circle cx="490" cy="130" r="20" fill="#E8F0E5" stroke="#6BA46B" stroke-width="1.5"/>
+    <text x="490" y="133" text-anchor="middle">e1</text>
+    <circle cx="570" cy="160" r="20" fill="#E8F0E5" stroke="#6BA46B" stroke-width="1.5"/>
+    <text x="570" y="163" text-anchor="middle">e2</text>
+    <circle cx="530" cy="230" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="530" y="233" text-anchor="middle">claim</text>
+    <circle cx="458" cy="310" r="20" fill="#E8F0E5" stroke="#6BA46B" stroke-width="1.5"/>
+    <text x="458" y="313" text-anchor="middle">e3</text>
+    <circle cx="580" cy="320" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="580" y="323" text-anchor="middle">claim</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">
+    <circle cx="200" cy="402" r="6" fill="#E8F0E5" stroke="#6BA46B"/>
+    <text x="212" y="405">evidence</text>
+    <circle cx="278" cy="402" r="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="290" y="405">claim</text>
+    <text x="338" y="405" fill="#6BA46B" font-weight="600">+ support</text>
+    <text x="412" y="405" fill="#C45B5B" font-weight="600">− contradict</text>
+  </g>
+</svg>

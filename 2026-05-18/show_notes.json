@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报｜记忆投毒、SaaS评测翻车与Skill编译治理（2026-05-18）",
+  "shownotes_html": "<p>这期聊三篇让人警醒的论文：Agent 记忆被潜伏投毒注入率高达 99.8%、最强模型在真实 SaaS 工作流上端到端通过率不足 2%、以及把 skill 从\"每次重读说明书\"编译成运行时接口后 token 直降 57%。Agent 正在从拼 prompt 跑 demo 被推向编译、契约、审计的工程化阶段。</p><p><strong>本期重点</strong></p><ul><li><strong>记忆潜伏投毒（Hidden in Memory: Sleeper Memory Poisoning in LLM Agents）</strong>——首次系统化证明：只要在用户读的文档里藏一段话，就能在 Agent 长期记忆里植入假偏好，几天后仍能劫持工具调用路径。6 个主流模型全部中招，且现有防御在自适应攻击面前脆弱到反弹。做带记忆的 Agent 产品必须把\"写入记忆\"当成和\"调用工具\"同级的安全动作。</li><li><strong>真实 SaaS 长程评测（SaaS-Bench）</strong>——23 个真实开源 SaaS、106 个跨应用长程任务、97% 超过 100 步。Claude Opus 4.6 拿到 43% 检查点分但端到端通过率仅 1.9%。最有意思的是错误级联案例：一个字段填错，顺着系统依赖关系把整条工作流静默带崩，9 个模型无一通关。</li><li><strong>Skill 边界编译（SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces）</strong>——把 skill 从大段 markdown 离线编译成带 schema、策略、fallback 的可调用接口。Token 减半、迭代减少，且强模型编译出的产物可以让小模型直接复用通过原本做不出的任务。对 skill 仓库和 tool registry 团队是直接的工程参考。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 运行时治理正成为一等研究对象：skill、harness、任务分解都在被重新定义为可编译的运行时接口，而非 prompt 拼接。</li><li>评测从\"比分数\"转向\"比真实工作流上的端到端可完成性\"，前沿模型长程能力的真实瓶颈被反复确认。</li></ul><p>📎 本期日报与论文列表归档：<a href=\"https://github.com/JyiHUO/daily_aiagent_paper/blob/main/2026-05-18/daily_report.md\">GitHub 归档</a></p><p>本期内容由 AI 自动生成，如有疏漏欢迎留言指正。我们明天见。</p>",
+  "report_date": "2026-05-18",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_aiagent_paper/blob/main/2026-05-18/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-05-18T16:39:04Z"
+}

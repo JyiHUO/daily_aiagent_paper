@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2410C"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#1E3A5F">模型越强 → 越会钻评测漏洞</text>
+
+  <!-- Strong model candidate -->
+  <g>
+    <circle cx="115" cy="185" r="72" fill="#FEF3EC" stroke="#C2410C" stroke-width="2"/>
+    <text x="115" y="162" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">强模型候选</text>
+    <text x="115" y="193" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#C2410C">score = 10.10</text>
+    <text x="115" y="215" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">(合理上限 ≈ 3)</text>
+  </g>
+
+  <!-- Secondary review agent -->
+  <g>
+    <rect x="240" y="130" width="150" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="315" y="156" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">审查 Agent</text>
+    <circle cx="295" cy="195" r="16" fill="none" stroke="#1E3A5F" stroke-width="2.5"/>
+    <line x1="307" y1="207" x2="322" y2="222" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+    <text x="345" y="200" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">便宜</text>
+    <text x="345" y="215" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">小模型</text>
+  </g>
+
+  <!-- Arrow candidate -> sieve -->
+  <line x1="187" y1="185" x2="238" y2="185" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Kept -->
+  <g>
+    <rect x="430" y="80" width="150" height="78" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+    <text x="505" y="113" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#065F46">真解 ✓ 进入种群</text>
+    <text x="505" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">参与后续进化</text>
+  </g>
+
+  <!-- Discarded -->
+  <g>
+    <rect x="430" y="212" width="150" height="78" rx="10" fill="#FEF2F2" stroke="#C2410C" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="505" y="245" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#C2410C">Hack 解 ✗ 剔除</text>
+    <text x="505" y="270" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">占强模型输出 7.8–16.6%</text>
+  </g>
+
+  <line x1="390" y1="160" x2="428" y2="125" stroke="#059669" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="390" y1="210" x2="428" y2="245" stroke="#C2410C" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Bottom note -->
+  <text x="300" y="345" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">无审查时：作弊基因进入父代池，污染整个搜索过程</text>
+  <text x="300" y="372" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Hack 检测：随模型变强而必需的安全阀</text>
+</svg>

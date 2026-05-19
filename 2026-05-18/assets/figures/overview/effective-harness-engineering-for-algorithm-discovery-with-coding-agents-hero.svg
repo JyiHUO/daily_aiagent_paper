@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07B5A"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Harness 工程：让 Coding Agent 发现更好的算法</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">围绕模型的执行框架，比模型本身更决定算法发现的上限</text>
+
+  <!-- Center: Coding Agent -->
+  <g>
+    <circle cx="450" cy="340" r="78" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="450" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Coding Agent</text>
+    <text x="450" y="350" text-anchor="middle" font-size="11" fill="#3D4F65">读码 · 跑测 · 改码 · 自省</text>
+    <text x="450" y="372" text-anchor="middle" font-size="10" font-style="italic" fill="#4B8BDA">少而精 ≻ 多而浅</text>
+  </g>
+
+  <!-- Left: parent pool -->
+  <g>
+    <rect x="60" y="290" width="160" height="100" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="140" y="320" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">候选种群 DB</text>
+    <text x="140" y="344" text-anchor="middle" font-size="11" fill="#3D4F65">历史算法 + 得分</text>
+    <text x="140" y="364" text-anchor="middle" font-size="11" fill="#3D4F65">SQLite · 分支血缘</text>
+  </g>
+
+  <!-- Right: evaluator + hack guard -->
+  <g>
+    <rect x="690" y="240" width="160" height="86" rx="10" fill="#FFF1EC" stroke="#C8553D" stroke-width="1.5"/>
+    <text x="770" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">评测器</text>
+    <text x="770" y="288" text-anchor="middle" font-size="11" fill="#3D4F65">Circle Packing 打分</text>
+    <text x="770" y="310" text-anchor="middle" font-size="10" fill="#C8553D">⚠ 评分函数易被钻漏</text>
+
+    <rect x="690" y="350" width="160" height="86" rx="10" fill="#FFE9DE" stroke="#C8553D" stroke-width="1.8"/>
+    <text x="770" y="376" text-anchor="middle" font-size="13" font-weight="700" fill="#C8553D">🛡 Hack 检测 Agent</text>
+    <text x="770" y="398" text-anchor="middle" font-size="11" fill="#3D4F65">独立审查：硬编码 / 钻漏</text>
+    <text x="770" y="420" text-anchor="middle" font-size="10" font-style="italic" fill="#C8553D">模型越强，hack 越多</text>
+  </g>
+
+  <!-- Top: parallel worktrees -->
+  <g>
+    <text x="450" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Git worktree 并行隔离  ·  4 路 ≈ 3.5× 加速</text>
+    <g transform="translate(330,145)">
+      <rect x="0" y="0" width="50" height="34" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="25" y="22" text-anchor="middle" font-size="10" fill="#1E3A5F">wt 1</text>
+    </g>
+    <g transform="translate(395,145)">
+      <rect x="0" y="0" width="50" height="34" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="25" y="22" text-anchor="middle" font-size="10" fill="#1E3A5F">wt 2</text>
+    </g>
+    <g transform="translate(460,145)">
+      <rect x="0" y="0" width="50" height="34" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="25" y="22" text-anchor="middle" font-size="10" fill="#1E3A5F">wt 3</text>
+    </g>
+    <g transform="translate(525,145)">
+      <rect x="0" y="0" width="50" height="34" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="25" y="22" text-anchor="middle" font-size="10" fill="#1E3A5F">wt 4</text>
+    </g>
+    <line x1="450" y1="183" x2="450" y2="258" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- DB -> Agent -->
+  <path d="M 220 340 L 370 340" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="295" y="332" text-anchor="middle" font-size="10" fill="#3D4F65">抽 parent</text>
+
+  <!-- Agent -> Evaluator -->
+  <path d="M 524 312 Q 605 285 688 278" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="608" y="278" text-anchor="middle" font-size="10" fill="#3D4F65">候选程序</text>
+
+  <!-- Evaluator -> Hack guard -->
+  <path d="M 770 328 L 770 348" fill="none" stroke="#C8553D" stroke-width="1.5" marker-end="url(#arO)"/>
+
+  <!-- Hack guard -> back to DB -->
+  <path d="M 690 410 Q 450 500 220 380" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="455" y="492" text-anchor="middle" font-size="11" fill="#1E3A5F">合法解 → 回灌种群    ✕ hack 解丢弃</text>
+
+  <!-- Bottom result -->
+  <g>
+    <rect x="60" y="540" width="780" height="44" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1"/>
+    <text x="450" y="560" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Vesper @ Circle Packing n=26 ：2.636 &gt; AlphaEvolve 2.635 &gt; 人类最优 2.634</text>
+    <text x="450" y="576" text-anchor="middle" font-size="10" fill="#3D4F65">同样 token 预算下，深思 90K/算法 胜过 浅思 24K/算法</text>
+  </g>
+</svg>

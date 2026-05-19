@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="18" font-weight="bold" fill="#1E3A5F">Verify-and-Dispatch: 看图补缺</text>
+
+  <!-- Evidence graph (puzzle) -->
+  <g transform="translate(40,80)">
+    <rect x="0" y="0" width="240" height="260" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="120" y="24" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">Evidence Graph</text>
+
+    <!-- verified node -->
+    <circle cx="65" cy="85" r="26" fill="#A8D5A2" stroke="#3D8A4A" stroke-width="1.5"/>
+    <text x="65" y="89" text-anchor="middle" font-size="11" fill="#1E3A5F">verified</text>
+
+    <!-- contradicted node -->
+    <circle cx="175" cy="100" r="26" fill="#F4B8B8" stroke="#B85450" stroke-width="1.5"/>
+    <text x="175" y="104" text-anchor="middle" font-size="11" fill="#1E3A5F">conflict</text>
+
+    <!-- gap (dashed) -->
+    <circle cx="115" cy="190" r="28" fill="#FFFFFF" stroke="#B0843A" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="115" y="187" text-anchor="middle" font-size="10" fill="#3D4F65">missing</text>
+    <text x="115" y="200" text-anchor="middle" font-size="10" fill="#3D4F65">aspect</text>
+
+    <line x1="89" y1="95" x2="151" y2="100" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="75" y1="108" x2="105" y2="165" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="165" y1="122" x2="130" y2="165" stroke="#3D4F65" stroke-width="1"/>
+
+    <text x="120" y="245" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">green=ok · red=conflict · dashed=gap</text>
+  </g>
+
+  <!-- Navigator -->
+  <g transform="translate(340,110)">
+    <rect x="0" y="0" width="220" height="80" rx="8" fill="#FFF4E0" stroke="#B0843A" stroke-width="1.5"/>
+    <text x="110" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#1E3A5F">Navigator</text>
+    <text x="110" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">spot gaps, dispatch queries</text>
+  </g>
+
+  <!-- Targeted searchers -->
+  <g transform="translate(340,240)">
+    <rect x="0" y="0" width="220" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="110" y="30" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">Targeted Searchers</text>
+    <text x="110" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">corroborate · adjudicate</text>
+    <text x="110" y="72" text-anchor="middle" font-size="11" fill="#3D4F65">probe missing aspect</text>
+  </g>
+
+  <!-- Arrows: graph -> navigator (observe) -->
+  <path d="M280,150 L340,150" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="310" y="142" text-anchor="middle" font-size="10" fill="#3D4F65">observe</text>
+
+  <!-- Navigator -> searchers (verify queries) -->
+  <path d="M450,190 L450,240" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="455" y="218" text-anchor="start" font-size="10" fill="#3D4F65">verify queries</text>
+
+  <!-- Searchers -> graph (write back) -->
+  <path d="M340,300 Q200,340 160,322" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="260" y="335" text-anchor="middle" font-size="10" fill="#3D4F65">write evidence back</text>
+
+  <!-- caption -->
+  <text x="300" y="400" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65" font-style="italic">fill the puzzle, not redo the task</text>
+</svg>

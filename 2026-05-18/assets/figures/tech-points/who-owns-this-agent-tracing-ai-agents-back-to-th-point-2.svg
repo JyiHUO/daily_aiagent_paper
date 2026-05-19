@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Canary Trap for Agent Attribution</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">plant a marker · narrow the search window · trace the account</text>
+
+  <!-- Step 1: Authority plants canary -->
+  <g>
+    <circle cx="120" cy="180" r="58" fill="#FEF3E2" stroke="#E5A24B" stroke-width="2"/>
+    <circle cx="120" cy="172" r="14" fill="#E5A24B"/>
+    <circle cx="125" cy="169" r="2" fill="#1E3A5F"/>
+    <path d="M133 174 L143 172 L133 178 z" fill="#E5A24B"/>
+    <path d="M108 184 Q120 200 132 184" fill="none" stroke="#E5A24B" stroke-width="2"/>
+    <text x="120" y="218" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">"Meridian-47"</text>
+    <text x="120" y="258" text-anchor="middle" font-size="11" fill="#3D4F65">Authority injects at time τ</text>
+  </g>
+
+  <!-- Step 2: Agent -->
+  <g>
+    <rect x="290" y="135" width="140" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="172" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">AI Agent</text>
+    <text x="360" y="195" text-anchor="middle" font-size="11" fill="#3D4F65">swallows canary,</text>
+    <text x="360" y="211" text-anchor="middle" font-size="11" fill="#3D4F65">calls hosted LLM</text>
+  </g>
+
+  <!-- Step 3: Vendor -->
+  <g>
+    <rect x="540" y="115" width="150" height="130" rx="10" fill="#E8F0F8" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="615" y="138" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Vendor logs</text>
+    <rect x="555" y="150" width="120" height="10" fill="#CFDCEA"/>
+    <rect x="555" y="164" width="120" height="10" fill="#CFDCEA"/>
+    <rect x="555" y="178" width="120" height="10" fill="#E5A24B"/>
+    <rect x="555" y="192" width="120" height="10" fill="#CFDCEA"/>
+    <rect x="555" y="206" width="120" height="10" fill="#CFDCEA"/>
+    <text x="615" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">scan window ≈ τ</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="180" y1="180" x2="287" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="233" y="172" text-anchor="middle" font-size="10" fill="#3D4F65">① plant</text>
+
+  <line x1="432" y1="180" x2="537" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="484" y="172" text-anchor="middle" font-size="10" fill="#3D4F65">② leak</text>
+
+  <!-- Operator -->
+  <g>
+    <rect x="540" y="340" width="150" height="70" rx="10" fill="#FBE9E7" stroke="#C0504D" stroke-width="2"/>
+    <text x="615" y="370" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Operator account</text>
+    <text x="615" y="390" text-anchor="middle" font-size="11" fill="#3D4F65">unmasked</text>
+  </g>
+  <line x1="615" y1="246" x2="615" y2="338" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="625" y="295" font-size="10" fill="#3D4F65">③ match → ④ attribute</text>
+
+  <text x="360" y="438" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">A small marker at time τ shrinks vendor's haystack to a tiny window.</text>
+</svg>

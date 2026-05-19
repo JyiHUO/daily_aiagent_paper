@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C77B5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">Who deployed this agent?</text>
+
+  <!-- Observer -->
+  <g>
+    <ellipse cx="130" cy="230" rx="60" ry="34" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="130" cy="230" r="14" fill="#4B8BDA"/>
+    <circle cx="130" cy="230" r="5" fill="#1E3A5F"/>
+    <text x="130" y="300" text-anchor="middle" font-size="14" fill="#3D4F65">Observer (sees behavior)</text>
+  </g>
+
+  <!-- Agent -->
+  <g>
+    <circle cx="400" cy="230" r="55" fill="#FDF1E8" stroke="#C77B5C" stroke-width="2"/>
+    <path d="M370 220 Q400 200 430 220 Q430 245 400 250 Q370 245 370 220 Z" fill="#C77B5C"/>
+    <circle cx="385" cy="228" r="3" fill="#FDF1E8"/>
+    <circle cx="415" cy="228" r="3" fill="#FDF1E8"/>
+    <text x="400" y="310" text-anchor="middle" font-size="14" fill="#3D4F65">AI Agent (anonymous)</text>
+  </g>
+
+  <!-- Vendor ledger -->
+  <g>
+    <rect x="610" y="185" width="120" height="100" rx="6" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <line x1="625" y1="210" x2="715" y2="210" stroke="#1E3A5F" stroke-width="1"/>
+    <line x1="625" y1="230" x2="715" y2="230" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="625" y1="248" x2="700" y2="248" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="625" y1="266" x2="710" y2="266" stroke="#3D4F65" stroke-width="1"/>
+    <text x="670" y="205" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">acct_logs</text>
+    <text x="670" y="310" text-anchor="middle" font-size="14" fill="#3D4F65">Vendor (holds identity)</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="345" y1="230" x2="195" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="270" y="220" text-anchor="middle" font-size="12" fill="#3D4F65">interaction</text>
+
+  <line x1="455" y1="230" x2="605" y2="230" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="530" y="220" text-anchor="middle" font-size="12" fill="#3D4F65">model calls</text>
+
+  <!-- attribution question arrow: from Observer down and across to Vendor -->
+  <path d="M 130 265 Q 130 400 670 400 L 670 295" fill="none" stroke="#C77B5C" stroke-width="2.2" marker-end="url(#arq)"/>
+  <text x="400" y="440" text-anchor="middle" font-size="14" font-weight="600" fill="#C77B5C">Trace behavior → responsible account</text>
+</svg>

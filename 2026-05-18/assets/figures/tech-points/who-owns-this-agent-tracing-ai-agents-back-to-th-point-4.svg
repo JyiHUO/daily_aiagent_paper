@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">
+    Sample k of N · Hit ≥ m to attribute
+  </text>
+
+  <!-- Canary universe (left): pool of dots -->
+  <g>
+    <circle cx="130" cy="230" r="100" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="130" y="135" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">canary universe N</text>
+    <g fill="#9DB8D6">
+      <circle cx="90" cy="200" r="4"/>
+      <circle cx="115" cy="180" r="4"/>
+      <circle cx="155" cy="190" r="4"/>
+      <circle cx="180" cy="220" r="4"/>
+      <circle cx="100" cy="245" r="4"/>
+      <circle cx="170" cy="260" r="4"/>
+      <circle cx="135" cy="280" r="4"/>
+      <circle cx="85" cy="265" r="4"/>
+      <circle cx="190" cy="245" r="4"/>
+      <circle cx="120" cy="220" r="4"/>
+    </g>
+    <g fill="#E8833A" stroke="#1E3A5F" stroke-width="1">
+      <circle cx="115" cy="180" r="6"/>
+      <circle cx="180" cy="220" r="6"/>
+      <circle cx="135" cy="280" r="6"/>
+      <circle cx="170" cy="260" r="6"/>
+      <circle cx="90" cy="200" r="6"/>
+    </g>
+    <text x="130" y="350" text-anchor="middle" font-size="12" fill="#3D4F65">random subset K (k chosen)</text>
+  </g>
+
+  <!-- arrow injection -->
+  <line x1="235" y1="230" x2="320" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="277" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">inject</text>
+
+  <!-- sessions stream (middle) -->
+  <g>
+    <rect x="325" y="150" width="150" height="170" rx="8" fill="#F5F0E8" stroke="#C9A876" stroke-width="1.5"/>
+    <text x="400" y="172" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">sessions</text>
+
+    <g font-size="11" fill="#3D4F65">
+      <text x="338" y="202">S1</text>
+      <g fill="#9DB8D6"><circle cx="370" cy="198" r="3"/><circle cx="385" cy="198" r="3"/></g>
+      <text x="438" y="202" fill="#9DB8D6">1 hit</text>
+
+      <text x="338" y="227">S2</text>
+      <g fill="#9DB8D6"><circle cx="370" cy="223" r="3"/></g>
+      <text x="438" y="227" fill="#9DB8D6">0 hit</text>
+
+      <text x="338" y="252">S3</text>
+      <g fill="#9DB8D6"><circle cx="370" cy="248" r="3"/><circle cx="385" cy="248" r="3"/></g>
+      <text x="438" y="252" fill="#9DB8D6">2 hit</text>
+
+      <text x="338" y="284" font-weight="700" fill="#1E3A5F">S*</text>
+      <g fill="#E8833A" stroke="#1E3A5F" stroke-width="0.8">
+        <circle cx="370" cy="280" r="4"/>
+        <circle cx="385" cy="280" r="4"/>
+        <circle cx="400" cy="280" r="4"/>
+        <circle cx="415" cy="280" r="4"/>
+      </g>
+      <text x="438" y="284" fill="#E8833A" font-weight="700">≥ m</text>
+    </g>
+  </g>
+
+  <!-- arrow to attribution -->
+  <line x1="478" y1="280" x2="555" y2="280" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="516" y="270" text-anchor="middle" font-size="11" fill="#3D4F65">m-of-k</text>
+
+  <!-- shortlist / operator -->
+  <g>
+    <rect x="560" y="230" width="140" height="100" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="630" y="255" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">shortlist (ranked)</text>
+    <text x="630" y="280" text-anchor="middle" font-size="11" fill="#3D4F65">by match score</text>
+    <text x="630" y="310" text-anchor="middle" font-size="11" fill="#E8833A" font-weight="600">→ operator account</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="360" y="420" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">
+    attacker sees N, not which k — can't filter; innocent sessions rarely hit m
+  </text>
+</svg>

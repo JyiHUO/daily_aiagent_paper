@@ -9,12 +9,12 @@
     "cs.SE",
     "cs.HC"
   ],
-  "candidate_count": 303,
+  "candidate_count": 352,
   "selected_count": 3,
   "focus_titles": [
-    "Hidden in Memory: Sleeper Memory Poisoning in LLM Agents",
-    "SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?",
-    "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces"
+    "Who Owns This Agent? Tracing AI Agents Back to Their Owners",
+    "Argus: Evidence Assembly for Scalable Deep Research Agents",
+    "Effective Harness Engineering for Algorithm Discovery with Coding Agents"
   ],
   "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-18/paper_broadcast_script.txt",
   "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-18/paper_broadcast_audio.mp3",

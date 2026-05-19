@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">Vendor 端可规模化归因检测</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">用时间窗把海量日志缩成一小片</text>
+
+  <!-- Big log haystack on the left -->
+  <g>
+    <rect x="60" y="110" width="220" height="280" rx="10" fill="#EFF6FF" stroke="#A8C7E8" stroke-width="1.5"/>
+    <text x="170" y="135" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">全量调用日志</text>
+    
+    <!-- tiny dots representing massive sessions -->
+    <g fill="#C9D7E8">
+      <circle cx="90" cy="160" r="3"/><circle cx="110" cy="170" r="3"/><circle cx="130" cy="155" r="3"/>
+      <circle cx="155" cy="165" r="3"/><circle cx="180" cy="158" r="3"/><circle cx="205" cy="170" r="3"/>
+      <circle cx="230" cy="160" r="3"/><circle cx="255" cy="168" r="3"/>
+      <circle cx="95" cy="190" r="3"/><circle cx="125" cy="195" r="3"/><circle cx="150" cy="188" r="3"/>
+      <circle cx="180" cy="200" r="3"/><circle cx="210" cy="192" r="3"/><circle cx="240" cy="198" r="3"/>
+      <circle cx="100" cy="225" r="3"/><circle cx="135" cy="220" r="3"/><circle cx="165" cy="232" r="3"/>
+      <circle cx="200" cy="225" r="3"/><circle cx="225" cy="235" r="3"/><circle cx="255" cy="222" r="3"/>
+      <circle cx="90" cy="320" r="3"/><circle cx="115" cy="310" r="3"/><circle cx="140" cy="322" r="3"/>
+      <circle cx="170" cy="315" r="3"/><circle cx="200" cy="325" r="3"/><circle cx="230" cy="312" r="3"/>
+      <circle cx="105" cy="350" r="3"/><circle cx="135" cy="358" r="3"/><circle cx="165" cy="348" r="3"/>
+      <circle cx="195" cy="360" r="3"/><circle cx="225" cy="352" r="3"/><circle cx="250" cy="365" r="3"/>
+    </g>
+
+    <!-- highlighted time-window slice -->
+    <rect x="75" y="255" width="190" height="44" rx="4" fill="#FFE8C7" stroke="#E89B3C" stroke-width="1.8"/>
+    <text x="170" y="282" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">14:00 – 14:06 时间窗</text>
+    <g fill="#E89B3C">
+      <circle cx="100" cy="275" r="3.5"/><circle cx="135" cy="278" r="3.5"/>
+      <circle cx="170" cy="272" r="3.5"/><circle cx="205" cy="280" r="3.5"/>
+      <circle cx="240" cy="275" r="3.5"/>
+    </g>
+  </g>
+
+  <!-- Arrow: shrink -->
+  <path d="M 285 277 L 388 277" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="336" y="268" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">缩小搜索域</text>
+
+  <!-- Two cheap detectors stacked on the right -->
+  <g>
+    <rect x="395" y="170" width="335" height="90" rx="10" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="415" y="198" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">① Token 级匹配（≈2× 加速）</text>
+    <text x="415" y="222" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">复用日志已存的 token 形式，分片并行扫描</text>
+    <text x="415" y="244" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">命中后产出小候选集</text>
+
+    <rect x="395" y="290" width="335" height="90" rx="10" fill="#FDF1E6" stroke="#E89B3C" stroke-width="1.8"/>
+    <text x="415" y="318" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">② 语义分类确认</text>
+    <text x="415" y="342" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">复用安全策略已缓存的隐层激活</text>
+    <text x="415" y="364" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">只在小候选集上运行轻量分类器</text>
+  </g>
+
+  <!-- arrow between two detectors -->
+  <path d="M 562 260 L 562 288" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Bottom outcome -->
+  <rect x="240" y="425" width="320" height="48" rx="24" fill="#1E3A5F"/>
+  <text x="400" y="455" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">秒级归因 · 不影响生产服务</text>
+
+  <path d="M 562 380 Q 530 405 500 422" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+</svg>
