@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/downloaded_pdfs/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-26",
+      "page_index": 3,
+      "caption": "Figure 1: Multi-agent architecture. From top to bottom: the user interface, the orchestration layer (supervisor agent routing prompts), the specialization layer (seven domain agents), and the execution layer (external services and tools).",
+      "clip": [
+        124.20100402832031,
+        316.91229248046875,
+        487.79803466796875,
+        539.8200073242188
+      ],
+      "clip_area": 81048.58322385699,
+      "page_area": 484704.0,
+      "text_density": 0.08955718481469785,
+      "kind": "drawing_cluster_with_caption",
+      "score": 61.327108724716545,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-26",
+      "page_index": 3,
+      "caption": "Figure 1: Multi-agent architecture. From top to bottom: the user interface, the orchestration layer (supervisor agent routing prompts), the specialization layer (seven domain agents), and the execution layer (external services and tools).",
+      "clip": [
+        41.4,
+        213.99925537109374,
+        570.594140625,
+        522.7992553710938
+      ],
+      "clip_area": 163415.150625,
+      "page_area": 484704.0,
+      "text_density": 0.22128133140951944,
+      "kind": "captioned_figure",
+      "score": 40.52312011542884,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-9",
+      "page_index": 1,
+      "caption": "The source code and evaluation framework are planned for public release. A video demonstration of the system is also available.",
+      "clip": [
+        41.09100189208984,
+        113.00355834960936,
+        570.6040283203125,
+        421.8035583496094
+      ],
+      "clip_area": 163513.62256103518,
+      "page_area": 484704.0,
+      "text_density": 0.7388025693744276,
+      "kind": "captioned_figure",
+      "score": 30.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/03-p2-captioned_figure.png",
+      "filename": "03-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-10-drawing-caption-37",
+      "page_index": 10,
+      "caption": "Figure 6: Weighted RAG score contributions by prompt and LLM backend under RAG -on and Empty RAG conditions (3 runs each). RAG -off (all scores exactly 0) is omitted. RAG -on approaches 1.0 for most combinations; Empty RAG degrades substantially except for Gemini on P0, where the default volume fraction is likely memorized.",
+      "clip": [
+        77.4010009765625,
+        55.99989318847656,
+        534.6034545898438,
+        255.7559814453125
+      ],
+      "clip_area": 91328.97367521655,
+      "page_area": 484704.0,
+      "text_density": 0.20135867297849538,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.73324599545935,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/04-p11-drawing_cluster_with_caption.png",
+      "filename": "04-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-44",
+      "page_index": 9,
+      "caption": "Having established workflow performance across prompt styles and models, we next evaluate whether document retrieval improves the agent’s engineering parameter selection.",
+      "clip": [
+        41.4,
+        302.04124755859374,
+        570.6043334960938,
+        610.8412475585938
+      ],
+      "clip_area": 163418.29818359378,
+      "page_area": 484704.0,
+      "text_density": 0.19467571341798096,
+      "kind": "captioned_figure",
+      "score": 25.119457194921143,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/05-p10-captioned_figure.png",
+      "filename": "05-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-caption-27",
+      "page_index": 9,
+      "caption": "Figure 4: Combined overall score distributions for the F ULL (a) and W-C OND (b) prompt styles. F ULL establishes baseline capabilities; W-C OND reveals degradation for open-source models due to conditional reasoning demands.",
+      "clip": [
+        65.23300170898438,
+        55.998870849609375,
+        303.41357421875,
+        275.166015625
+      ],
+      "clip_area": 52201.35601793323,
+      "page_area": 484704.0,
+      "text_density": 0.10961739358119456,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.802971451994253,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/06-p10-drawing_cluster_with_caption.png",
+      "filename": "06-p10-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/engiai-a-multi-agent-framework-and-benchmark-suite-for-llm-driven-engineering-de/contact-sheet.svg"
+}

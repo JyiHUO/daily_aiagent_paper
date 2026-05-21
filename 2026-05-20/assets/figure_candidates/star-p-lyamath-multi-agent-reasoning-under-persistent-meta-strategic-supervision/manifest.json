@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/downloaded_pdfs/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision",
+  "candidates": [
+    {
+      "id": "page-11-block-7",
+      "page_index": 11,
+      "caption": "[34] Jingyuan Wu et al. Agentic reasoning: A streamlined framework for enhancing LLM reasoning with agentic tools. In Proceedings of ACL , 2025.",
+      "clip": [
+        77.39999237060547,
+        102.67247314453124,
+        534.5947814941406,
+        411.47247314453125
+      ],
+      "clip_area": 141181.7508813477,
+      "page_area": 484704.0,
+      "text_density": 0.6694959744394534,
+      "kind": "captioned_figure",
+      "score": 12.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/01-p12-captioned_figure.png",
+      "filename": "01-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-10-block-3",
+      "page_index": 10,
+      "caption": "[14] Yichen Huang and Lin F. Yang. Winning gold at IMO 2025 with a model-agnostic verification- and-refinement pipeline. arXiv preprint arXiv:2507.15855 , 2025.",
+      "clip": [
+        77.4,
+        18.0,
+        536.2519470214844,
+        191.8324737548828
+      ],
+      "clip_area": 79763.36903798908,
+      "page_area": 484704.0,
+      "text_density": 0.4752636058779774,
+      "kind": "captioned_figure",
+      "score": 10.886259655977657,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/02-p11-captioned_figure.png",
+      "filename": "02-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-15-block-7",
+      "page_index": 15,
+      "caption": "The Verifier evaluates each step report through a two-gate framework: the Goal Gate (does the step achieve its stated objective?) and the Logic Gate (is the reasoning correct?).",
+      "clip": [
+        77.09100189208985,
+        21.033587646484364,
+        534.6025329589844,
+        329.8335876464844
+      ],
+      "clip_area": 141279.56079345706,
+      "page_area": 484704.0,
+      "text_density": 0.4347560556298448,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/03-p16-captioned_figure.png",
+      "filename": "03-p16-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        99.9280776977539,
+        47.056915283203125,
+        512.0794067382812,
+        289.0009765625
+      ],
+      "clip_area": 99717.566409725,
+      "page_area": 484704.0,
+      "text_density": 0.2306703659039246,
+      "kind": "drawing_cluster",
+      "score": 2.067751005872582,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/04-p3-drawing_cluster.png",
+      "filename": "04-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.40757536070444744,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.627793486564796,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-20/assets/figure_candidates/star-p-lyamath-multi-agent-reasoning-under-persistent-meta-strategic-supervision/contact-sheet.svg"
+}
