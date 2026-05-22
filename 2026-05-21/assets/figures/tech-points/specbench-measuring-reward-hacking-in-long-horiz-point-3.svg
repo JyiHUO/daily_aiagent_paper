@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Visible vs Hidden Tests: the gap Δ</text>
+  <text x="300" y="48" text-anchor="middle" font-size="12" fill="#3D4F65">Δ widens with code size, shrinks with stronger models</text>
+
+  <!-- Visible eye -->
+  <g>
+    <ellipse cx="155" cy="150" rx="78" ry="42" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="155" cy="150" r="20" fill="#fff" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="155" cy="150" r="9" fill="#1E3A5F"/>
+    <text x="155" y="218" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Visible tests (saturated ~100%)</text>
+  </g>
+
+  <!-- Hidden eye (closed) -->
+  <g>
+    <ellipse cx="445" cy="150" rx="78" ry="42" fill="#FBEFE6" stroke="#C77B4A" stroke-width="2"/>
+    <path d="M385 150 Q445 180 505 150" fill="none" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="163" x2="390" y2="175" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round"/>
+    <line x1="445" y1="175" x2="445" y2="188" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round"/>
+    <line x1="493" y1="163" x2="500" y2="175" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round"/>
+    <text x="445" y="218" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Hidden tests (where Δ shows up)</text>
+  </g>
+
+  <!-- Gap arrow between -->
+  <line x1="240" y1="150" x2="360" y2="150" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="300" y="142" text-anchor="middle" font-size="22" font-weight="700" fill="#C77B4A">Δ</text>
+
+  <!-- Two trend axes at bottom -->
+  <g transform="translate(60,290)">
+    <line x1="0" y1="70" x2="220" y2="70" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="70" stroke="#3D4F65" stroke-width="1.5"/>
+    <path d="M0 65 L60 55 L120 35 L180 15 L210 8" fill="none" stroke="#C77B4A" stroke-width="2.5"/>
+    <text x="110" y="90" text-anchor="middle" font-size="11" fill="#3D4F65">code size (LOC) →</text>
+    <text x="-6" y="-4" text-anchor="end" font-size="11" fill="#C77B4A">Δ ↑</text>
+    <text x="110" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">+27pp per 10× LOC</text>
+  </g>
+
+  <g transform="translate(330,290)">
+    <line x1="0" y1="70" x2="220" y2="70" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="0" y2="70" stroke="#3D4F65" stroke-width="1.5"/>
+    <path d="M0 12 L50 25 L110 42 L170 55 L210 60" fill="none" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="110" y="90" text-anchor="middle" font-size="11" fill="#3D4F65">model capability →</text>
+    <text x="-6" y="-4" text-anchor="end" font-size="11" fill="#4B8BDA">Δ ↓</text>
+    <text x="110" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">but never zero</text>
+  </g>
+</svg>

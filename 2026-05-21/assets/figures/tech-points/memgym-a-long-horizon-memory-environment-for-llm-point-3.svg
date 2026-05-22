@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">MemRM: 亚秒级记忆裁判</text>
+  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#3D4F65">用一次分类调用替代一次完整 Agent 重跑</text>
+
+  <!-- LEFT: Old way - Docker rerun -->
+  <g>
+    <rect x="40" y="80" width="200" height="135" rx="10" fill="#FEF3E8" stroke="#D9956B" stroke-width="1.5"/>
+    <text x="140" y="103" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">原方案：重跑沙盒</text>
+
+    <!-- Docker container icon -->
+    <rect x="85" y="118" width="110" height="55" rx="4" fill="#FFFFFF" stroke="#D9956B"/>
+    <rect x="92" y="126" width="20" height="10" fill="#D9956B" opacity="0.5"/>
+    <rect x="115" y="126" width="20" height="10" fill="#D9956B" opacity="0.5"/>
+    <rect x="138" y="126" width="20" height="10" fill="#D9956B" opacity="0.5"/>
+    <rect x="92" y="139" width="20" height="10" fill="#D9956B" opacity="0.5"/>
+    <rect x="115" y="139" width="20" height="10" fill="#D9956B" opacity="0.5"/>
+    <text x="140" y="167" text-anchor="middle" font-size="10" fill="#3D4F65">Docker · 数十步</text>
+
+    <text x="140" y="200" text-anchor="middle" font-size="11" fill="#B85C2C" font-weight="bold">~ 数分钟 / $2</text>
+  </g>
+
+  <!-- RIGHT: New way - MemRM judge -->
+  <g>
+    <rect x="360" y="80" width="200" height="135" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="460" y="103" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">MemRM：小裁判</text>
+
+    <!-- Gavel / scale icon -->
+    <circle cx="460" cy="148" r="26" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <path d="M446 158 L460 134 L474 158" fill="none" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="460" y1="134" x2="460" y2="166" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="446" y1="166" x2="474" y2="166" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="460" y="188" text-anchor="middle" font-size="10" fill="#3D4F65">Qwen3-1.7B + QLoRA</text>
+
+    <text x="460" y="207" text-anchor="middle" font-size="11" fill="#1E66B8" font-weight="bold">&lt; 1 秒 · 一次分类</text>
+  </g>
+
+  <!-- Replacement arrow -->
+  <line x1="245" y1="148" x2="355" y2="148" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="142" text-anchor="middle" font-size="10" fill="#1E3A5F">替代</text>
+
+  <!-- BOTTOM: Inputs and outputs -->
+  <text x="300" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">输入三元组 → SAFE / HARMFUL 门控</text>
+
+  <!-- Three input bubbles -->
+  <g font-size="10" fill="#1E3A5F">
+    <rect x="80" y="265" width="120" height="34" rx="17" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="287" text-anchor="middle">压缩前 context</text>
+
+    <rect x="240" y="265" width="120" height="34" rx="17" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="300" y="287" text-anchor="middle">summary</text>
+
+    <rect x="400" y="265" width="120" height="34" rx="17" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="460" y="287" text-anchor="middle">下一步 action</text>
+  </g>
+
+  <!-- Arrows down to verdict box -->
+  <line x1="140" y1="299" x2="270" y2="345" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="300" y1="299" x2="300" y2="345" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="460" y1="299" x2="330" y2="345" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Verdict -->
+  <g>
+    <rect x="200" y="350" width="90" height="34" rx="6" fill="#E8F4EC" stroke="#4A9B6E"/>
+    <text x="245" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D7A4D">SAFE ✓</text>
+
+    <rect x="310" y="350" width="100" height="34" rx="6" fill="#FBEAEA" stroke="#C36363"/>
+    <text x="360" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#A03A3A">HARMFUL ✗</text>
+
+    <text x="300" y="402" text-anchor="middle" font-size="10" fill="#3D4F65">Pr(behavior unchanged) 作为标量门控</text>
+  </g>
+</svg>

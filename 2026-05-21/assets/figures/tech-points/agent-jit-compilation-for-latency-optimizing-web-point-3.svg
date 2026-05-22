@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E8B6F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Monte Carlo Cost Scheduling</text>
+  <text x="360" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">simulate three strategies, pick the fastest on average</text>
+
+  <!-- Latency distributions -->
+  <g>
+    <rect x="30" y="120" width="180" height="220" rx="10" fill="#FFF6E8" stroke="#D9A55C" stroke-width="1.5"/>
+    <text x="120" y="145" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Element Latency Distributions</text>
+
+    <g transform="translate(65,180)" fill="#D9A55C">
+      <rect x="0" y="20" width="8" height="10"/>
+      <rect x="10" y="10" width="8" height="20"/>
+      <rect x="20" y="2" width="8" height="28"/>
+      <rect x="30" y="14" width="8" height="16"/>
+      <rect x="40" y="22" width="8" height="8"/>
+    </g>
+    <text x="120" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">OrderBtn  15.3 ± 2.9s</text>
+
+    <g transform="translate(65,255)" fill="#D9A55C">
+      <rect x="0" y="18" width="8" height="12"/>
+      <rect x="10" y="6" width="8" height="24"/>
+      <rect x="20" y="10" width="8" height="20"/>
+      <rect x="30" y="20" width="8" height="10"/>
+      <rect x="40" y="24" width="8" height="6"/>
+    </g>
+    <text x="120" y="305" text-anchor="middle" font-size="10" fill="#3D4F65">DetailPage  4.1 ± 0.6s</text>
+  </g>
+
+  <!-- arrow: sample -->
+  <line x1="210" y1="230" x2="270" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="240" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">sample</text>
+
+  <!-- Three strategy simulations -->
+  <g>
+    <rect x="275" y="110" width="200" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="290" y="132" font-size="12" font-weight="600" fill="#1E3A5F">Serial</text>
+    <g transform="translate(290,144)">
+      <circle cx="0" cy="6" r="5" fill="#4B8BDA"/>
+      <circle cx="16" cy="6" r="5" fill="#4B8BDA"/>
+      <circle cx="32" cy="6" r="5" fill="#4B8BDA"/>
+      <circle cx="48" cy="6" r="5" fill="#4B8BDA"/>
+    </g>
+    <text x="460" y="148" text-anchor="end" font-size="13" font-weight="600" fill="#3D4F65">≈ 103s</text>
+
+    <rect x="275" y="200" width="200" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="290" y="222" font-size="12" font-weight="600" fill="#1E3A5F">Parallel(8)</text>
+    <g transform="translate(290,232)" fill="#4B8BDA">
+      <circle cx="0" cy="6" r="4"/><circle cx="0" cy="18" r="4"/>
+      <circle cx="14" cy="6" r="4"/><circle cx="14" cy="18" r="4"/>
+      <circle cx="28" cy="6" r="4"/><circle cx="28" cy="18" r="4"/>
+      <circle cx="42" cy="6" r="4"/><circle cx="42" cy="18" r="4"/>
+    </g>
+    <text x="460" y="238" text-anchor="end" font-size="13" font-weight="600" fill="#3D4F65">≈ 76s</text>
+
+    <rect x="275" y="290" width="200" height="60" rx="8" fill="#E6F4EE" stroke="#2E8B6F" stroke-width="2.2"/>
+    <text x="290" y="312" font-size="12" font-weight="600" fill="#1E3A5F">Hedge(8)</text>
+    <g transform="translate(290,322)" fill="#2E8B6F">
+      <circle cx="0" cy="6" r="4"/><circle cx="14" cy="6" r="4"/>
+      <circle cx="28" cy="6" r="4"/><circle cx="42" cy="6" r="4"/>
+      <polygon points="56,2 64,6 56,10" fill="#D9534F"/>
+    </g>
+    <text x="460" y="328" text-anchor="end" font-size="13" font-weight="700" fill="#2E8B6F">≈ 67s ★</text>
+  </g>
+
+  <!-- arrow to chosen -->
+  <line x1="480" y1="320" x2="585" y2="320" stroke="#2E8B6F" stroke-width="2.2" marker-end="url(#g)"/>
+
+  <rect x="590" y="290" width="100" height="60" rx="8" fill="#E6F4EE" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="640" y="318" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Execute</text>
+  <text x="640" y="335" text-anchor="middle" font-size="11" fill="#3D4F65">min avg</text>
+
+  <text x="360" y="395" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">N Monte Carlo rollouts per strategy → choose lowest expected latency</text>
+</svg>

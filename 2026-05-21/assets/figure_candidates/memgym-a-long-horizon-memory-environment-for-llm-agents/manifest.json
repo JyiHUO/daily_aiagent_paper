@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/downloaded_pdfs/memgym-a-long-horizon-memory-environment-for-llm-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-79",
+      "page_index": 3,
+      "caption": "Figure 2: M EM G YM architecture. Five environments share a memory module that wraps the prompt to the policy LLM, so the same strategy runs on any environment unchanged. Trajectories feed a replay-augmentation pipeline producing SAFE / HARMFUL labels for M EM RM; M EM G YM -DR and M EM G YM -C ODE QA come from in-house pipelines ( Section 3.4 ).",
+      "clip": [
+        109.8010025024414,
+        56.00187683105469,
+        502.1537780761719,
+        260.4926300048828
+      ],
+      "clip_area": 80232.5145869141,
+      "page_area": 484704.0,
+      "text_density": 0.24135178423795658,
+      "kind": "drawing_cluster_with_caption",
+      "score": 58.21036533002165,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-caption-42",
+      "page_index": 1,
+      "caption": "Figure 1: M EM G YM unifies five evaluation tracks across four agentic regimes (tool-use dialogue, multi-turn search, coding, computer use) behind a shared interface that separates memory from reasoning and supports memory-isolated scoring with explicit memory rewards.",
+      "clip": [
+        109.8010025024414,
+        56.000946044921875,
+        502.1392822265625,
+        246.9639892578125
+      ],
+      "clip_area": 74922.1118650285,
+      "page_area": 484704.0,
+      "text_density": 0.18482766439804016,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.54280804572902,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-36",
+      "page_index": 8,
+      "caption": "Figure 4: M EM RM training dynamics on SWE-Gym compression events (Qwen3-1.7B-Base + QLoRA, 32 K context, 600 steps, 8 × A100-40GB).",
+      "clip": [
+        90.0,
+        167.05970764160156,
+        521.9961853027344,
+        323.3429870605469
+      ],
+      "clip_area": 67513.78053558571,
+      "page_area": 484704.0,
+      "text_density": 0.18025376599755455,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.73492715720879,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-13-block-3",
+      "page_index": 13,
+      "caption": "3 M EM G YM : A Memory-Centric Evaluation and Training Framework 3",
+      "clip": [
+        77.4,
+        18.0,
+        534.60341796875,
+        147.35260009765625
+      ],
+      "clip_area": 59140.45088779331,
+      "page_area": 484704.0,
+      "text_density": 0.14268213326673004,
+      "kind": "captioned_figure",
+      "score": 19.89618812497168,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/04-p14-captioned_figure.png",
+      "filename": "04-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-13-block-4",
+      "page_index": 13,
+      "caption": "3.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3",
+      "clip": [
+        92.34400024414063,
+        18.0,
+        534.6035095214844,
+        163.9635772705078
+      ],
+      "clip_area": 64553.78005602044,
+      "page_area": 484704.0,
+      "text_density": 0.18354094953455377,
+      "kind": "captioned_figure",
+      "score": 10.504807250771446,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/05-p14-captioned_figure.png",
+      "filename": "05-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        111.8010025024414,
+        58.000946044921875,
+        500.1392822265625,
+        244.9639892578125
+      ],
+      "clip_area": 72604.90657328046,
+      "page_area": 484704.0,
+      "text_density": 0.17953221232280325,
+      "kind": "drawing_cluster",
+      "score": 8.834788444779367,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/06-p2-drawing_cluster.png",
+      "filename": "06-p2-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/memgym-a-long-horizon-memory-environment-for-llm-agents/contact-sheet.svg"
+}

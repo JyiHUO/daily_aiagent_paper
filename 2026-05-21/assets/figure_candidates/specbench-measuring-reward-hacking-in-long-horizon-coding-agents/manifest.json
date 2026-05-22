@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/downloaded_pdfs/specbench-measuring-reward-hacking-in-long-horizon-coding-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-52",
+      "page_index": 9,
+      "caption": "Figure 9 | Distribution of qualitative outcome categories. We classify generated systems into genuine solutions, feature-isolation failures, edge-case gaps, and deliberate exploits. The pie charts show the fraction of each category across coding agents and across stronger versus weaker models, using SWE-Bench score to separate the two capability groups.",
+      "clip": [
+        30.404998779296875,
+        54.9620361328125,
+        565.5377807617188,
+        496.8500061035156
+      ],
+      "clip_area": 236468.73869498726,
+      "page_area": 501156.9211820215,
+      "text_density": 0.37160169625282585,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.23007019210525,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-52",
+      "page_index": 9,
+      "caption": "Figure 9 | Distribution of qualitative outcome categories. We classify generated systems into genuine solutions, feature-isolation failures, edge-case gaps, and deliberate exploits. The pie charts show the fraction of each category across coding agents and across stronger versus weaker models, using SWE-Bench score to separate the two capability groups.",
+      "clip": [
+        32.59819946289062,
+        143.7742980957031,
+        562.6799987792969,
+        472.5303039550781
+      ],
+      "clip_area": 174267.5751220125,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3826240914361549,
+      "kind": "captioned_figure",
+      "score": 27.6907777379598,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/02-p10-captioned_figure.png",
+      "filename": "02-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-caption-31",
+      "page_index": 2,
+      "caption": "Figure 2 | Reward Hacking Gap vs. Reference Implementation Size . Each dot is one experiment run. This plot demonstrates that the upper bound (90th-percentile) of the reward hacking gap scales predictably, increasing by 27 percentage points for every tenfold increase in lines of code.",
+      "clip": [
+        44.36199951171875,
+        59.78863525390625,
+        550.9114990234375,
+        403.73883056640625
+      ],
+      "clip_area": 174227.7992925048,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2812067805239376,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.62154562708124,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/03-p3-drawing_cluster_with_caption.png",
+      "filename": "03-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-31",
+      "page_index": 2,
+      "caption": "Figure 2 | Reward Hacking Gap vs. Reference Implementation Size . Each dot is one experiment run. This plot demonstrates that the upper bound (90th-percentile) of the reward hacking gap scales predictably, increasing by 27 percentage points for every tenfold increase in lines of code.",
+      "clip": [
+        32.299199676513666,
+        52.37131347656248,
+        564.3414367675781,
+        381.1273193359375
+      ],
+      "clip_area": 174912.08081454496,
+      "page_area": 501156.9211820215,
+      "text_density": 0.23393372037830548,
+      "kind": "captioned_figure",
+      "score": 14.403313087214356,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-21",
+      "page_index": 8,
+      "caption": "Figure 7 | Reward hacking gap under three levels of validation test coverage.",
+      "clip": [
+        279.63800048828125,
+        134.8184814453125,
+        550.9146728515625,
+        327.18304443359375
+      ],
+      "clip_area": 52184.01852807775,
+      "page_area": 501156.9211820215,
+      "text_density": 1.0,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.579822428089752,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/05-p9-drawing_cluster_with_caption.png",
+      "filename": "05-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        46.36199951171875,
+        71.03569030761719,
+        548.9104614257812,
+        255.384033203125
+      ],
+      "clip_area": 92643.97617854364,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20029367137735848,
+      "kind": "drawing_cluster",
+      "score": 1.81175723045342,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/06-p6-drawing_cluster.png",
+      "filename": "06-p6-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/specbench-measuring-reward-hacking-in-long-horizon-coding-agents/contact-sheet.svg"
+}

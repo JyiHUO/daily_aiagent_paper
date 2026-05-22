@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-21",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-21 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents</strong></li><li><strong>Agent JIT Compilation for Latency-Optimizing Web Agent Planning and Scheduling</strong></li><li><strong>MemGym: a Long-Horizon Memory Environment for LLM Agents</strong></li></ul><p>['Agent研究的精度正下沉到runtime和子系统：每一层都被拆开单独评测和优化']</p>",
+  "report_date": "2026-05-21",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-21T22:02:15Z"
+}

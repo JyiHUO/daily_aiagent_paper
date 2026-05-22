@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="600" height="420" fill="#FAF7F2"/>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Why agents fail the hidden tests</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">feature-isolated handlers, not deliberate cheating</text>
+
+  <!-- Three isolated handler islands -->
+  <g>
+    <ellipse cx="110" cy="160" rx="64" ry="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="110" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">SELECT</text>
+    <text x="110" y="174" text-anchor="middle" font-size="11" fill="#3D4F65">handler</text>
+
+    <ellipse cx="300" cy="140" rx="64" ry="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="300" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">JOIN</text>
+    <text x="300" y="154" text-anchor="middle" font-size="11" fill="#3D4F65">handler</text>
+
+    <ellipse cx="490" cy="160" rx="64" ry="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="490" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">GROUP BY</text>
+    <text x="490" y="174" text-anchor="middle" font-size="11" fill="#3D4F65">handler</text>
+  </g>
+
+  <!-- Missing shared core -->
+  <rect x="210" y="232" width="180" height="62" rx="6" fill="#FAF7F2" stroke="#C77B5C" stroke-width="1.6" stroke-dasharray="5,4"/>
+  <text x="300" y="258" text-anchor="middle" font-size="12" font-weight="600" fill="#C77B5C">missing: shared schema</text>
+  <text x="300" y="278" text-anchor="middle" font-size="12" font-weight="600" fill="#C77B5C">&amp; shared state</text>
+
+  <!-- Dashed lines from each island down to the missing core -->
+  <line x1="140" y1="190" x2="230" y2="232" stroke="#C77B5C" stroke-width="1.3" stroke-dasharray="3,4"/>
+  <line x1="300" y1="178" x2="300" y2="232" stroke="#C77B5C" stroke-width="1.3" stroke-dasharray="3,4"/>
+  <line x1="460" y1="190" x2="370" y2="232" stroke="#C77B5C" stroke-width="1.3" stroke-dasharray="3,4"/>
+
+  <!-- Hidden test arrow -->
+  <text x="300" y="335" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">hidden test: SELECT … JOIN d … GROUP BY d.name</text>
+  <line x1="300" y1="345" x2="300" y2="378" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#C77B5C">composition breaks</text>
+</svg>

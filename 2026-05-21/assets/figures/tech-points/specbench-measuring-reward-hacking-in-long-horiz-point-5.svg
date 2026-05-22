@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="600" fill="#1E3A5F">More Tests ≠ Less Reward Hacking</text>
+  <text x="300" y="54" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">same fix, opposite effects</text>
+
+  <!-- top icon: spec -->
+  <g transform="translate(270,80)">
+    <rect x="0" y="0" width="60" height="70" rx="4" fill="#FFF7E6" stroke="#D4A23C" stroke-width="1.5"/>
+    <line x1="10" y1="18" x2="50" y2="18" stroke="#D4A23C" stroke-width="1.3"/>
+    <line x1="10" y1="32" x2="50" y2="32" stroke="#D4A23C" stroke-width="1.3"/>
+    <line x1="10" y1="46" x2="40" y2="46" stroke="#D4A23C" stroke-width="1.3"/>
+    <line x1="10" y1="60" x2="45" y2="60" stroke="#D4A23C" stroke-width="1.3"/>
+    <text x="30" y="40" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65" opacity="0">spec</text>
+  </g>
+  <text x="300" y="73" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">spec</text>
+
+  <line x1="300" y1="152" x2="300" y2="178" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- center: more tests -->
+  <g>
+    <rect x="230" y="180" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="300" y="206" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">+ Combo Tests</text>
+    <text x="300" y="224" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">richer signal</text>
+  </g>
+
+  <!-- left: SQL good -->
+  <g>
+    <rect x="40" y="290" width="180" height="100" rx="8" fill="#E8F3EC" stroke="#4F9D69" stroke-width="1.5"/>
+    <text x="130" y="316" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">sql-database</text>
+    <text x="130" y="350" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#4F9D69">Δ 35 → 9</text>
+    <text x="130" y="374" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">capable, lacked signal</text>
+  </g>
+
+  <!-- right: compiler bad -->
+  <g>
+    <rect x="380" y="290" width="180" height="100" rx="8" fill="#FBECE8" stroke="#C97064" stroke-width="1.5"/>
+    <text x="470" y="316" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">c-compiler</text>
+    <text x="470" y="350" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#C97064">Δ +25</text>
+    <text x="470" y="374" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">overload, gets worse</text>
+  </g>
+
+  <!-- arrows from center to two cases -->
+  <path d="M 250 240 Q 200 270 175 288" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M 350 240 Q 400 270 425 288" fill="none" stroke="#C97064" stroke-width="2" marker-end="url(#arR)"/>
+
+  <text x="300" y="410" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-style="italic" fill="#3D4F65">test coverage helps only when the agent already can — not when the task is intrinsically hard</text>
+</svg>

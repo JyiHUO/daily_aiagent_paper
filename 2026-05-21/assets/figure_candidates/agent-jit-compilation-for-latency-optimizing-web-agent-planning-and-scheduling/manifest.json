@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/downloaded_pdfs/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-41",
+      "page_index": 0,
+      "caption": "Figure 1. Competing Approaches to Computer-Use Agents. Au- tomation of web-based tasks has relied on static scripts (RPA; Bar- man et al. , 2016 ) and static tool sets (CUA; Wang et al. , 2025 ). Our work introduces dynamic cost-optimizing planning and scheduling with cached, reusable tools.",
+      "clip": [
+        297.52947998046875,
+        177.64283752441406,
+        551.307861328125,
+        349.9564208984375
+      ],
+      "clip_area": 43729.46227287408,
+      "page_area": 484704.0,
+      "text_density": 0.1959910356265382,
+      "kind": "drawing_cluster_with_caption",
+      "score": 93.52642077655075,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-caption-35",
+      "page_index": 1,
+      "caption": "Figure 2. Agent JIT Architecture. Optimizing scheduling and planning for computer-use agents with caching of code and latency distributions.",
+      "clip": [
+        105.40477752685547,
+        51.523826599121094,
+        491.5367431640625,
+        266.3360900878906
+      ],
+      "clip_area": 82945.88154389622,
+      "page_area": 484704.0,
+      "text_density": 0.1351389686716229,
+      "kind": "drawing_cluster_with_caption",
+      "score": 91.61328278574591,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-block-41",
+      "page_index": 0,
+      "caption": "Figure 1. Competing Approaches to Computer-Use Agents. Au- tomation of web-based tasks has relied on static scripts (RPA; Bar- man et al. , 2016 ) and static tool sets (CUA; Wang et al. , 2025 ). Our work introduces dynamic cost-optimizing planning and scheduling with cached, reusable tools.",
+      "clip": [
+        276.2930053710937,
+        25.221392822265614,
+        573.5313354492188,
+        334.0213928222656
+      ],
+      "clip_area": 91787.19632812502,
+      "page_area": 484704.0,
+      "text_density": 0.1601162327220613,
+      "kind": "captioned_figure",
+      "score": 84.21288377365548,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/03-p1-captioned_figure.png",
+      "filename": "03-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-35",
+      "page_index": 1,
+      "caption": "Figure 2. Agent JIT Architecture. Optimizing scheduling and planning for computer-use agents with caching of code and latency distributions.",
+      "clip": [
+        24.293001556396483,
+        18.0,
+        572.3569580078125,
+        252.68026733398438
+      ],
+      "clip_area": 128619.79581613949,
+      "page_area": 484704.0,
+      "text_density": 0.07521054674632986,
+      "kind": "captioned_figure",
+      "score": 82.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-caption-31",
+      "page_index": 2,
+      "caption": "Figure 3. Example with scheduler. Three strategies are evalu- ated for each given task: serial execution, task-parallelism, and request hedging. Monte Carlo sampling from learned latency dis- tributions for different elements in the web browser environment yields request hedging as optimal given the high latency variance of interaction with the order button.",
+      "clip": [
+        325.1809387207031,
+        51.6416015625,
+        524.3729858398438,
+        281.8033752441406
+      ],
+      "clip_area": 45846.39486821834,
+      "page_area": 484704.0,
+      "text_density": 0.18506840225505786,
+      "kind": "drawing_cluster_with_caption",
+      "score": 33.20530025212118,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/05-p3-drawing_cluster_with_caption.png",
+      "filename": "05-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-31",
+      "page_index": 2,
+      "caption": "Figure 3. Example with scheduler. Three strategies are evalu- ated for each given task: serial execution, task-parallelism, and request hedging. Monte Carlo sampling from learned latency dis- tributions for different elements in the web browser environment yields request hedging as optimal given the high latency variance of interaction with the order button.",
+      "clip": [
+        276.2930053710937,
+        18.0,
+        573.5295654296875,
+        265.6432800292969
+      ],
+      "clip_area": 73608.63667753527,
+      "page_area": 484704.0,
+      "text_density": 0.1339596508098134,
+      "kind": "captioned_figure",
+      "score": 24.5802946922727,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/06-p3-captioned_figure.png",
+      "filename": "06-p3-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-21/assets/figure_candidates/agent-jit-compilation-for-latency-optimizing-web-agent-planning-and-scheduling/contact-sheet.svg"
+}

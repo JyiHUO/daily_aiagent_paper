@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5A8C4A"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9656A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Task → JIT-Compiled Code</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">sample n candidate plans, pick the cheapest valid one</text>
+
+  <!-- Task -->
+  <rect x="30" y="200" width="130" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="95" y="230" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Task</text>
+  <text x="95" y="252" text-anchor="middle" font-size="11" fill="#3D4F65">"cheapest Taco Bell item"</text>
+
+  <!-- Plan A -->
+  <g>
+    <rect x="230" y="90" width="240" height="70" rx="8" fill="#F4F8FD" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="246" y="112" font-size="12" font-weight="600" fill="#1E3A5F">Plan A</text>
+    <text x="246" y="132" font-size="11" fill="#3D4F65">list_items() → ai_eval(min)</text>
+    <text x="246" y="150" font-size="11" fill="#C9656A">cost: +1 LLM call (costly)</text>
+  </g>
+
+  <!-- Plan B -->
+  <g>
+    <rect x="230" y="190" width="240" height="70" rx="8" fill="#FBEFEF" stroke="#C9656A" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="246" y="212" font-size="12" font-weight="600" fill="#1E3A5F">Plan B</text>
+    <text x="246" y="232" font-size="11" fill="#3D4F65">skip goto → list_items()</text>
+    <text x="246" y="250" font-size="11" fill="#C9656A">CFG check: invalid</text>
+  </g>
+
+  <!-- Plan C -->
+  <g>
+    <rect x="230" y="290" width="240" height="70" rx="8" fill="#E8F1E5" stroke="#5A8C4A" stroke-width="2"/>
+    <text x="246" y="312" font-size="12" font-weight="600" fill="#1E3A5F">Plan C  ✓</text>
+    <text x="246" y="332" font-size="11" fill="#3D4F65">list_items() → min(price)</text>
+    <text x="246" y="350" font-size="11" fill="#5A8C4A">cost: 0 extra LLM</text>
+  </g>
+
+  <!-- Arrows from Task to plans -->
+  <path d="M160,225 C195,130 210,128 230,125" fill="none" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#a)"/>
+  <path d="M160,235 L230,225" fill="none" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#a)"/>
+  <path d="M160,245 C195,322 210,325 230,325" fill="none" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- Executor -->
+  <rect x="560" y="290" width="130" height="70" rx="10" fill="#1E3A5F"/>
+  <text x="625" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#EFF6FF">Execute</text>
+  <text x="625" y="342" text-anchor="middle" font-size="11" fill="#A9C6E8">cheapest plan</text>
+
+  <!-- Plan A rejected (costly) -->
+  <path d="M470,125 L555,290" fill="none" stroke="#C9656A" stroke-width="1.2" stroke-dasharray="3 3" marker-end="url(#r)"/>
+  <text x="528" y="180" text-anchor="middle" font-size="10" fill="#C9656A">reject: costly</text>
+
+  <!-- Plan B rejected (invalid) -->
+  <path d="M470,225 L555,300" fill="none" stroke="#C9656A" stroke-width="1.2" stroke-dasharray="3 3" marker-end="url(#r)"/>
+  <text x="520" y="248" text-anchor="middle" font-size="10" fill="#C9656A">reject: invalid</text>
+
+  <!-- Plan C accepted -->
+  <path d="M470,325 L560,325" fill="none" stroke="#5A8C4A" stroke-width="2" marker-end="url(#g)"/>
+  <text x="515" y="318" text-anchor="middle" font-size="10" fill="#5A8C4A">selected</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">CFG static check + cost (C_tool·γᵈ + C_eval·γᵈ) → select min</text>
+  <text x="360" y="426" text-anchor="middle" font-size="10" fill="#7A8AA0">replace per-step LLM loop with compiled code</text>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">SpecBench：度量长程编码 Agent 的奖励黑客</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">可见测试 vs 隐藏测试的差值 Δ，就是 Agent 的投机指数</text>
+
+  <!-- Spec source -->
+  <g>
+    <rect x="50" y="130" width="170" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="135" y="160" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">自然语言规范 S</text>
+    <text x="135" y="182" text-anchor="middle" font-size="11" fill="#3D4F65">JSON parser → OS kernel</text>
+    <text x="135" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">1.5K – 110K LOC</text>
+  </g>
+
+  <!-- Agent (center) -->
+  <g>
+    <circle cx="440" cy="240" r="72" fill="#FFF4ED" stroke="#D97757" stroke-width="2"/>
+    <text x="440" y="236" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">Coding Agent</text>
+    <text x="440" y="258" text-anchor="middle" font-size="11" fill="#3D4F65">写码 → 跑测试 → 改</text>
+  </g>
+
+  <!-- Arrow spec -> agent -->
+  <line x1="220" y1="180" x2="370" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- T-val (visible, top right) -->
+  <g>
+    <rect x="660" y="130" width="200" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="760" y="158" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">T-val · 可见测试</text>
+    <text x="760" y="180" text-anchor="middle" font-size="11" fill="#3D4F65">单一特性的单测</text>
+    <text x="760" y="198" text-anchor="middle" font-size="11" fill="#3D4F65">SELECT · JOIN · GROUP BY</text>
+    <text x="760" y="220" text-anchor="middle" font-size="13" font-weight="700" fill="#4B8BDA">s-val ≈ 100%</text>
+  </g>
+
+  <!-- T-test (hidden, bottom right) -->
+  <g>
+    <rect x="660" y="270" width="200" height="100" rx="10" fill="#FDECE3" stroke="#D97757" stroke-width="1.5"/>
+    <text x="760" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">T-test · 隐藏测试</text>
+    <text x="760" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">特性组合的真实场景</text>
+    <text x="760" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">综合查询 / 端到端编译</text>
+    <text x="760" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#D97757">s-test 暴跌</text>
+  </g>
+
+  <!-- Agent -> T-val (optimize target) -->
+  <path d="M 510 215 Q 590 185 660 170" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="570" y="180" font-size="10" fill="#4B8BDA" font-style="italic">优化目标</text>
+
+  <!-- T-val -> Agent (feedback) -->
+  <path d="M 660 200 Q 590 230 512 235" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <text x="565" y="225" font-size="10" fill="#4B8BDA" font-style="italic">通过/失败反馈</text>
+
+  <!-- Agent -> T-test (one-way evaluation) -->
+  <path d="M 510 270 Q 590 305 660 315" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="555" y="305" font-size="10" fill="#D97757" font-style="italic">仅评测，不可见</text>
+
+  <!-- Delta gauge bottom -->
+  <g transform="translate(50,410)">
+    <rect x="0" y="0" width="500" height="140" rx="10" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1E3A5F">投机指数  Δ = s-val − s-test</text>
+
+    <!-- bar -->
+    <rect x="20" y="50" width="460" height="16" rx="8" fill="#EFF6FF"/>
+    <rect x="20" y="50" width="310" height="16" rx="8" fill="#D97757"/>
+    <line x1="20" y1="44" x2="20" y2="72" stroke="#1E3A5F" stroke-width="1"/>
+    <line x1="480" y1="44" x2="480" y2="72" stroke="#1E3A5F" stroke-width="1"/>
+    <text x="20" y="88" font-size="10" fill="#3D4F65">Δ = 0 真正实现规范</text>
+    <text x="480" y="88" text-anchor="end" font-size="10" fill="#3D4F65">Δ 越大越投机</text>
+
+    <text x="20" y="115" font-size="11" fill="#3D4F65">代码量 ×10  →  P90 Δ 上升 27pp</text>
+    <text x="20" y="132" font-size="11" fill="#3D4F65">即使最强模型，Δ 仍显著大于 0</text>
+  </g>
+
+  <!-- Failure modes callout -->
+  <g transform="translate(580,430)">
+    <rect x="0" y="0" width="280" height="120" rx="10" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+    <text x="16" y="26" font-size="12" font-weight="700" fill="#1E3A5F">主流失败模式</text>
+    <text x="16" y="50" font-size="11" fill="#3D4F65">• 特性孤立：handler 各写各的</text>
+    <text x="16" y="72" font-size="11" fill="#3D4F65">• 路径硬编码：照测试改实现</text>
+    <text x="16" y="94" font-size="11" fill="#3D4F65">• 刻意作弊：哈希查表伪装编译器</text>
+  </g>
+</svg>

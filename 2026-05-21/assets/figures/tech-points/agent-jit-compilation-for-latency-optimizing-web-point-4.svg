@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">Agent JIT：把"每步都问 LLM"压成代码</text>
+
+  <!-- Left: Browser-Use slow loop -->
+  <g>
+    <rect x="50" y="80" width="240" height="240" rx="14" fill="#FEF3EC" stroke="#E5A77A" stroke-width="1.5"/>
+    <text x="170" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Browser-Use 循环</text>
+
+    <!-- circular loop with arrows -->
+    <circle cx="170" cy="200" r="70" fill="none" stroke="#E5A77A" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+    <circle cx="170" cy="140" r="20" fill="#FFFFFF" stroke="#E5A77A"/>
+    <text x="170" y="144" text-anchor="middle" font-size="11" fill="#3D4F65">LLM</text>
+
+    <circle cx="230" cy="200" r="20" fill="#FFFFFF" stroke="#E5A77A"/>
+    <text x="230" y="204" text-anchor="middle" font-size="11" fill="#3D4F65">LLM</text>
+
+    <circle cx="170" cy="260" r="20" fill="#FFFFFF" stroke="#E5A77A"/>
+    <text x="170" y="264" text-anchor="middle" font-size="11" fill="#3D4F65">LLM</text>
+
+    <circle cx="110" cy="200" r="20" fill="#FFFFFF" stroke="#E5A77A"/>
+    <text x="110" y="204" text-anchor="middle" font-size="11" fill="#3D4F65">LLM</text>
+
+    <text x="170" y="305" text-anchor="middle" font-size="12" fill="#3D4F65">每步都决策 · 串行 · 慢</text>
+  </g>
+
+  <!-- Arrow compile -->
+  <line x1="300" y1="200" x2="420" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="360" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">JIT 编译</text>
+
+  <!-- Right: compiled code block -->
+  <g>
+    <rect x="430" y="80" width="240" height="240" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="550" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">编译后的执行计划</text>
+
+    <rect x="455" y="125" width="190" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="465" y="141" font-size="11" fill="#3D4F65" font-family="monospace">click(...)  // tool</text>
+
+    <rect x="455" y="153" width="190" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="465" y="169" font-size="11" fill="#3D4F65" font-family="monospace">parallel { a, b }</text>
+
+    <rect x="455" y="181" width="190" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="465" y="197" font-size="11" fill="#3D4F65" font-family="monospace">llm(...)  // if needed</text>
+
+    <rect x="455" y="209" width="190" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="465" y="225" font-size="11" fill="#3D4F65" font-family="monospace">type(...)</text>
+
+    <text x="550" y="262" text-anchor="middle" font-size="12" fill="#3D4F65">代码 + 并行 · 成本最优</text>
+    <text x="550" y="282" text-anchor="middle" font-size="12" fill="#3D4F65">极少 LLM 调用</text>
+  </g>
+
+  <!-- Bottom result strip -->
+  <g>
+    <rect x="50" y="355" width="620" height="70" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+
+    <text x="140" y="385" text-anchor="middle" font-size="22" font-weight="800" fill="#1E3A5F">10.4×</text>
+    <text x="140" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">加速 vs Browser-Use</text>
+
+    <text x="310" y="385" text-anchor="middle" font-size="22" font-weight="800" fill="#1E3A5F">+28%</text>
+    <text x="310" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">准确率提升</text>
+
+    <text x="470" y="385" text-anchor="middle" font-size="22" font-weight="800" fill="#1E3A5F">2.4×</text>
+    <text x="470" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">加速 vs OpenAI CUA</text>
+
+    <text x="610" y="385" text-anchor="middle" font-size="22" font-weight="800" fill="#1E3A5F">5.3×</text>
+    <text x="610" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">最优 vs 最差计划</text>
+  </g>
+</svg>

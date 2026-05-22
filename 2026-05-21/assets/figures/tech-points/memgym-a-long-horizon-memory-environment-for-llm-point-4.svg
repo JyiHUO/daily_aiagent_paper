@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">把答案藏进记忆里</text>
+  <text x="300" y="50" text-anchor="middle" font-size="11" fill="#3D4F65">让模型不靠预训练或检索捷径作答</text>
+
+  <!-- Left: real entity, model knows -->
+  <g>
+    <rect x="50" y="80" width="200" height="110" rx="10" fill="#FFF4E6" stroke="#E5A86B" stroke-width="1.5"/>
+    <text x="150" y="105" text-anchor="middle" font-size="12" fill="#3D4F65">原始题目</text>
+    <text x="150" y="135" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">"Apple 的 CEO?"</text>
+    <text x="150" y="165" text-anchor="middle" font-size="11" fill="#3D4F65">no-memory ≈ 0.80</text>
+    <text x="150" y="181" text-anchor="middle" font-size="10" fill="#9B6B3A">(预训练就能答)</text>
+  </g>
+
+  <!-- Arrow with label -->
+  <line x1="255" y1="135" x2="345" y2="135" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="123" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">虚构化</text>
+  <text x="300" y="154" text-anchor="middle" font-size="10" fill="#3D4F65">假名 + 干扰项</text>
+
+  <!-- Right: fictional entity -->
+  <g>
+    <rect x="350" y="80" width="200" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="105" text-anchor="middle" font-size="12" fill="#3D4F65">改造后</text>
+    <text x="450" y="135" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">"Zorvix 的 CEO?"</text>
+    <text x="450" y="165" text-anchor="middle" font-size="11" fill="#3D4F65">no-memory ≈ 0.00</text>
+    <text x="450" y="181" text-anchor="middle" font-size="10" fill="#2A6FB5">(必须翻记忆)</text>
+  </g>
+
+  <!-- Bottom: comparison bars -->
+  <text x="300" y="232" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">扁平检索 vs 记忆策略 (跳数 ↑)</text>
+
+  <g transform="translate(110,250)">
+    <text x="0" y="14" font-size="10" fill="#3D4F65">BM25 3-hop</text>
+    <rect x="70" y="4" width="170" height="14" fill="#F0E4D0" stroke="#C9A86B"/>
+    <rect x="70" y="4" width="138" height="14" fill="#E5A86B"/>
+    <text x="248" y="14" font-size="10" fill="#3D4F65">0.81</text>
+
+    <text x="0" y="44" font-size="10" fill="#3D4F65">BM25 5/6-hop</text>
+    <rect x="70" y="34" width="170" height="14" fill="#F0E4D0" stroke="#C9A86B"/>
+    <rect x="70" y="34" width="73" height="14" fill="#E5A86B"/>
+    <text x="248" y="44" font-size="10" fill="#3D4F65">0.43  ↓ 跨跳失败</text>
+
+    <text x="0" y="74" font-size="10" fill="#3D4F65">A-Mem 5/6-hop</text>
+    <rect x="70" y="64" width="170" height="14" fill="#E1ECFB" stroke="#4B8BDA"/>
+    <rect x="70" y="64" width="88" height="14" fill="#4B8BDA"/>
+    <text x="248" y="74" font-size="10" fill="#2A6FB5">0.52  ↑ 真在记</text>
+
+    <text x="0" y="104" font-size="10" fill="#3D4F65">no-memory</text>
+    <rect x="70" y="94" width="170" height="14" fill="#F4F4F4" stroke="#B0B0B0"/>
+    <rect x="70" y="94" width="2" height="14" fill="#888"/>
+    <text x="248" y="104" font-size="10" fill="#3D4F65">0.009 (瞎猜)</text>
+  </g>
+
+  <text x="300" y="408" text-anchor="middle" font-size="10" fill="#6B7B8F">跳数越多，扁平检索越难串桥接事实；真正的记忆策略才能撑住</text>
+</svg>
