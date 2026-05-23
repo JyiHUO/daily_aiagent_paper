@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="18" font-weight="700" fill="#1E3A5F">Bounded Capacity → Bounded Floor</text>
+
+  <!-- Left: bounded shelf -->
+  <g>
+    <text x="150" y="74" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">Active-cap C = 50</text>
+    <rect x="60" y="90" width="180" height="170" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="60" y1="146" x2="240" y2="146" stroke="#4B8BDA" stroke-width="1" opacity="0.5"/>
+    <line x1="60" y1="202" x2="240" y2="202" stroke="#4B8BDA" stroke-width="1" opacity="0.5"/>
+
+    <circle cx="90" cy="118" r="10" fill="#4B8BDA"/>
+    <circle cx="130" cy="118" r="10" fill="#4B8BDA"/>
+    <circle cx="170" cy="118" r="10" fill="#4B8BDA"/>
+    <circle cx="210" cy="118" r="10" fill="#4B8BDA"/>
+    <circle cx="90" cy="174" r="10" fill="#4B8BDA"/>
+    <circle cx="130" cy="174" r="10" fill="#4B8BDA"/>
+    <circle cx="170" cy="174" r="10" fill="#4B8BDA"/>
+    <circle cx="210" cy="174" r="10" fill="#4B8BDA"/>
+    <circle cx="90" cy="230" r="10" fill="#4B8BDA"/>
+    <circle cx="130" cy="230" r="10" fill="#4B8BDA"/>
+    <circle cx="170" cy="230" r="10" fill="#D97757" opacity="0.55"/>
+    <circle cx="210" cy="230" r="10" fill="#D97757" opacity="0.55"/>
+
+    <path d="M222,236 Q260,260 285,278" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#aro)"/>
+    <text x="300" y="270" font-family="Helvetica,Arial" font-size="11" fill="#D97757">evict lowest contribution</text>
+    <text x="300" y="284" font-family="Helvetica,Arial" font-size="11" fill="#D97757">(score &lt; τ)</text>
+  </g>
+
+  <!-- Right: floor -->
+  <g>
+    <text x="460" y="74" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">Guaranteed Floor</text>
+
+    <line x1="340" y1="120" x2="555" y2="120" stroke="#3D4F65" stroke-dasharray="4,3" stroke-width="1.5"/>
+    <text x="560" y="124" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">p₀</text>
+
+    <line x1="340" y1="210" x2="555" y2="210" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="560" y="214" font-family="Helvetica,Arial" font-size="11" fill="#4B8BDA">floor</text>
+
+    <line x1="370" y1="124" x2="370" y2="206" stroke="#1E3A5F" stroke-width="1.5" marker-end="url(#ard)"/>
+    <text x="380" y="170" font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F">gap = τ + ε + Cδ</text>
+
+    <path d="M340,150 Q400,138 440,148 T540,142" stroke="#D97757" stroke-width="2" fill="none"/>
+    <text x="450" y="245" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">pass@1 stays above floor</text>
+  </g>
+
+  <!-- Bottom contrast -->
+  <g>
+    <rect x="60" y="335" width="480" height="65" rx="6" fill="#FFF5F0" stroke="#D97757" stroke-width="1.5"/>
+    <text x="300" y="360" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="600" fill="#1E3A5F">Voyager: unbounded C, no τ  →  floor collapses, library drifts</text>
+    <text x="300" y="382" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#D97757">finite C and τ are what keep the lower bound finite</text>
+  </g>
+</svg>

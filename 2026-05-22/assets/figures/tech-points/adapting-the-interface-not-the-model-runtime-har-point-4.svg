@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">只改提示词 vs 改整条接口</text>
+
+  <!-- LEFT: Prompt-only -->
+  <g>
+    <text x="150" y="70" text-anchor="middle" font-size="13" fill="#3D4F65">Prompt-only</text>
+
+    <rect x="60" y="95" width="180" height="70" rx="8" fill="#FEF3E8" stroke="#E0A872" stroke-width="1.5"/>
+    <text x="150" y="125" text-anchor="middle" font-size="13" fill="#1E3A5F">仅改开场白</text>
+    <text x="150" y="148" text-anchor="middle" font-size="11" fill="#3D4F65">模型可见文本</text>
+
+    <text x="150" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">执行期失控</text>
+
+    <g stroke="#C97B5C" stroke-width="1.6" fill="none">
+      <path d="M70 235 L100 235 L100 260 L130 260 L130 235 L160 235 L160 260 L190 260 L190 235 L220 235"/>
+    </g>
+    <text x="150" y="290" text-anchor="middle" font-size="10" fill="#C97B5C">无限 look / 自由文本命令</text>
+
+    <text x="150" y="345" text-anchor="middle" font-size="12" fill="#3D4F65">pass@1</text>
+    <text x="150" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#C97B5C">×1.0</text>
+  </g>
+
+  <line x1="300" y1="80" x2="300" y2="390" stroke="#D5DEE8" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- RIGHT: Life-Harness -->
+  <g>
+    <text x="450" y="70" text-anchor="middle" font-size="13" fill="#3D4F65">Life-Harness</text>
+
+    <rect x="340" y="95" width="220" height="195" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+
+    <text x="450" y="118" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">四层接口护栏</text>
+
+    <g font-size="11" fill="#1E3A5F">
+      <rect x="358" y="135" width="86" height="28" rx="14" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="401" y="153" text-anchor="middle">环境契约</text>
+
+      <rect x="456" y="135" width="86" height="28" rx="14" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="499" y="153" text-anchor="middle">过程技能</text>
+
+      <rect x="358" y="175" width="86" height="28" rx="14" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="401" y="193" text-anchor="middle">动作校验</text>
+
+      <rect x="456" y="175" width="86" height="28" rx="14" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="499" y="193" text-anchor="middle">轨迹监控</text>
+    </g>
+
+    <line x1="360" y1="245" x2="532" y2="245" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+    <text x="450" y="270" text-anchor="middle" font-size="10" fill="#3D4F65">拦截 / 纠偏 / 解释反馈</text>
+
+    <text x="450" y="345" text-anchor="middle" font-size="12" fill="#3D4F65">pass@1</text>
+    <text x="450" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">×2.2</text>
+  </g>
+
+  <text x="300" y="405" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">瓶颈在执行链路，不在开场白</text>
+</svg>

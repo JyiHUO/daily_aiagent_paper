@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/downloaded_pdfs/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi",
+  "candidates": [
+    {
+      "id": "page-1-block-31",
+      "page_index": 1,
+      "caption": "Figure 2: (a) An agent is not just an LLM: its behavior is shaped by the runtime harness that mediates observations, tools, actions, and feedback. (b) We adapt this runtime interface, rather than model parameters, yielding a fixed and reusable harness for frozen agents across deterministic environments.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        555.4198059082031,
+        190.89773559570312
+      ],
+      "clip_area": 88924.34991129878,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14508479466578653,
+      "kind": "captioned_figure",
+      "score": 79.08296065240057,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/01-p2-captioned_figure.png",
+      "filename": "01-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-19",
+      "page_index": 5,
+      "caption": "Figure 4: Overview of L IFE -H ARNESS . The harness adapts the model-environment interface through four lifecycle layers spanning before interaction, task conditioning, before environment execution, and after execution.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        554.1715148925781,
+        192.47056579589844
+      ],
+      "clip_area": 89515.49413889003,
+      "page_area": 501156.9211820215,
+      "text_density": 0.17088123226465438,
+      "kind": "captioned_figure",
+      "score": 34.54174266566396,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/02-p6-captioned_figure.png",
+      "filename": "02-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-63",
+      "page_index": 8,
+      "caption": "Figure 8: Comparison between specialized tool-use training and runtime harnessing. Harnessing can outperform tool-use training without updating model weights, remains useful after training, and mitigates the limited OOD transfer of specialized training.",
+      "clip": [
+        52.402549743652344,
+        53.847938537597656,
+        542.7927856445312,
+        201.84494018554688
+      ],
+      "clip_area": 72576.28455076058,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3223360891997105,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.266237809692488,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-63",
+      "page_index": 8,
+      "caption": "Figure 8: Comparison between specialized tool-use training and runtime harnessing. Harnessing can outperform tool-use training without updating model weights, remains useful after training, and mitigates the limited OOD transfer of specialized training.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        554.1738342285156,
+        170.50856018066406
+      ],
+      "clip_area": 78247.81662274682,
+      "page_area": 501156.9211820215,
+      "text_density": 0.16370910129367094,
+      "kind": "captioned_figure",
+      "score": 12.846874107076932,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        564.8367919921875,
+        146.36111450195312,
+        587.2760009765625,
+        602.5052490234375
+      ],
+      "clip_area": 10235.51356152445,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 480,
+      "score": 11.113727928461383,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/05-p1-embedded_image.png",
+      "filename": "05-p1-embedded_image.png"
+    },
+    {
+      "id": "page-4-drawing-caption-25",
+      "page_index": 4,
+      "caption": "Figure 3: Failure diagnosis on training tasks.",
+      "clip": [
+        73.93183135986328,
+        67.63829803466797,
+        156.75880432128906,
+        146.15953063964844
+      ],
+      "clip_area": 6503.676009870542,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19668155128757783,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.07136998952167,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/06-p5-drawing_cluster_with_caption.png",
+      "filename": "06-p5-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/adapting-the-interface-not-the-model-runtime-harness-adaptation-for-deterministi/contact-sheet.svg"
+}

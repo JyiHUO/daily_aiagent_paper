@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">一份 Harness，适配整架模型</text>
+  <text x="300" y="52" text-anchor="middle" font-size="12" fill="#3D4F65">接口属于环境，不属于模型</text>
+
+  <!-- Environment harness (key shape) -->
+  <g>
+    <rect x="60" y="150" width="170" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="145" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Environment Harness</text>
+    <text x="145" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">在 Qwen3-4B 上</text>
+    <text x="145" y="228" text-anchor="middle" font-size="11" fill="#3D4F65">演化一次，写一次</text>
+    <text x="145" y="248" text-anchor="middle" font-size="11" fill="#3D4F65">即可复用</text>
+  </g>
+
+  <!-- Model shelf -->
+  <g>
+    <rect x="380" y="90" width="170" height="50" rx="8" fill="#F5F7FB" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="465" y="120" text-anchor="middle" font-size="13" fill="#1E3A5F">Qwen2.5-32B</text>
+
+    <rect x="380" y="180" width="170" height="50" rx="8" fill="#F5F7FB" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="465" y="210" text-anchor="middle" font-size="13" fill="#1E3A5F">Llama / xLAM</text>
+
+    <rect x="380" y="270" width="170" height="50" rx="8" fill="#F5F7FB" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="465" y="300" text-anchor="middle" font-size="13" fill="#1E3A5F">+ 16 个其他骨架</text>
+  </g>
+
+  <!-- Arrows from harness to each model -->
+  <line x1="232" y1="180" x2="378" y2="115" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="232" y1="205" x2="378" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="232" y1="230" x2="378" y2="295" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Bottom result -->
+  <g>
+    <rect x="60" y="330" width="490" height="70" rx="8" fill="#FFF4E6" stroke="#E8A04A" stroke-width="1.5"/>
+    <text x="305" y="356" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">τ²-bench: 45.0%  →  79.2%（反超专训的 xLAM-2-32B 39.0%）</text>
+    <text x="305" y="384" text-anchor="middle" font-size="11" fill="#3D4F65">126 个模型-环境组合中 116 个提升，平均相对提升 88.5%</text>
+  </g>
+</svg>

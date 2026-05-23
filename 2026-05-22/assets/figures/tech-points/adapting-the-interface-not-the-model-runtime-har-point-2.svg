@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, system-ui, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">让 AI 替你写护栏</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">离线迭代演化 Harness，模型权重保持冻结</text>
+
+  <!-- Agent runs (left) -->
+  <g>
+    <rect x="60" y="170" width="180" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="200" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">跑一遍</text>
+    <text x="150" y="224" text-anchor="middle" font-size="12" fill="#3D4F65">冻结模型 + 训练任务</text>
+    <text x="150" y="244" text-anchor="middle" font-size="12" fill="#3D4F65">收集失败轨迹</text>
+    <text x="150" y="264" text-anchor="middle" font-size="11" fill="#7A6B4F" font-style="italic">反复 look / examine…</text>
+  </g>
+
+  <!-- Codex (top middle) -->
+  <g>
+    <rect x="310" y="140" width="180" height="170" rx="10" fill="#FEF3E2" stroke="#D9923A" stroke-width="1.5"/>
+    <text x="400" y="170" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">Codex 读轨迹</text>
+    <text x="400" y="190" text-anchor="middle" font-size="12" fill="#3D4F65">归类失败模式</text>
+    <g font-size="11" fill="#3D4F65">
+      <circle cx="340" cy="220" r="4" fill="#D9923A"/>
+      <text x="352" y="224">环境契约</text>
+      <circle cx="340" cy="244" r="4" fill="#D9923A"/>
+      <text x="352" y="248">过程技能</text>
+      <circle cx="340" cy="268" r="4" fill="#D9923A"/>
+      <text x="352" y="272">动作实现</text>
+      <circle cx="340" cy="292" r="4" fill="#D9923A"/>
+      <text x="352" y="296">轨迹调控</text>
+    </g>
+  </g>
+
+  <!-- Harness patch (right) -->
+  <g>
+    <rect x="560" y="170" width="180" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="650" y="200" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">补一块护栏</text>
+    <text x="650" y="224" text-anchor="middle" font-size="12" fill="#3D4F65">可审计的 harness 代码</text>
+    <text x="650" y="248" text-anchor="middle" font-size="12" fill="#3D4F65">重复检测 / 工具说明…</text>
+  </g>
+
+  <!-- Arrows: trajectories -> Codex -->
+  <path d="M 240 215 L 308 215" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="274" y="208" text-anchor="middle" font-size="10" fill="#3D4F65">轨迹</text>
+
+  <!-- Codex -> patch -->
+  <path d="M 492 225 L 558 225" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="525" y="218" text-anchor="middle" font-size="10" fill="#3D4F65">代码补丁</text>
+
+  <!-- Loop back: patch -> rerun (clean closed loop) -->
+  <path d="M 650 282 Q 650 400 400 400 Q 150 400 150 282" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="400" y="425" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">再跑一遍 · 约 5 轮收敛</text>
+
+  <!-- bottom note -->
+  <text x="400" y="470" text-anchor="middle" font-size="11" fill="#7A6B4F" font-style="italic">不改模型权重 — 失败被翻译为接口层的代码干预</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-22",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 436,
+  "selected_count": 3,
+  "focus_titles": [
+    "Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents",
+    "Ratchet: A Minimal Hygiene Recipe for Self-Evolving LLM Agents",
+    "Blind Spots in the Guard: How Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-22",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-22 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents</strong></li><li><strong>Ratchet: A Minimal Hygiene Recipe for Self-Evolving LLM Agents</strong></li><li><strong>Blind Spots in the Guard: How Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems</strong></li></ul><p>['今天的关键词是 harness：改接口、治理技能库、压测多轮安全']</p>",
+  "report_date": "2026-05-22",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-22T22:07:31Z"
+}

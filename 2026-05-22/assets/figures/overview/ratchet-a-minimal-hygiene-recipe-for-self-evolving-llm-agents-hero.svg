@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">Ratchet：自演化技能库的最小卫生配方</text>
+  <text x="450" y="72" text-anchor="middle" font-size="13" fill="#3D4F65">瓶颈不在「会写技能」，而在「管得住技能库」</text>
+
+  <!-- Central Library (Ratchet) -->
+  <g>
+    <circle cx="450" cy="340" r="115" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">技能库 · Active Cap = 50</text>
+
+    <!-- Skills as dots inside -->
+    <g fill="#4B8BDA">
+      <circle cx="410" cy="305" r="7"/>
+      <circle cx="445" cy="298" r="9"/>
+      <circle cx="485" cy="310" r="6"/>
+      <circle cx="395" cy="340" r="8"/>
+      <circle cx="430" cy="345" r="10"/>
+      <circle cx="475" cy="345" r="7"/>
+      <circle cx="500" cy="335" r="6"/>
+      <circle cx="415" cy="380" r="7"/>
+      <circle cx="455" cy="385" r="8"/>
+    </g>
+    <!-- Faded (deprecated) -->
+    <g fill="#C9D4E0">
+      <circle cx="490" cy="378" r="6"/>
+      <circle cx="380" cy="365" r="5"/>
+    </g>
+
+    <text x="450" y="430" text-anchor="middle" font-size="12" fill="#3D4F65">写入 · 检索 · 策展 · 退役</text>
+  </g>
+
+  <!-- Top: Meta-Skill (authoring prior) -->
+  <g>
+    <rect x="330" y="115" width="240" height="60" rx="10" fill="#FFF4EC" stroke="#D97757" stroke-width="1.8"/>
+    <text x="450" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Meta-Skill 写作模板</text>
+    <text x="450" y="160" text-anchor="middle" font-size="11" fill="#3D4F65">隐式去重 · schema 锁 · Do/Don't</text>
+    <path d="M450,177 L450,222" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#ahr)"/>
+    <text x="460" y="205" font-size="10" fill="#D97757">规范化生成</text>
+  </g>
+
+  <!-- Left: Failure clusters -->
+  <g>
+    <rect x="55" y="290" width="170" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">失败聚类</text>
+    <text x="140" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">Critic 标注 pattern</text>
+    <text x="140" y="356" text-anchor="middle" font-size="11" fill="#3D4F65">≥3 次同类才合成</text>
+    <text x="140" y="374" text-anchor="middle" font-size="11" fill="#3D4F65">证据驱动写入</text>
+    <path d="M225,340 L333,340" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Right: Retirement (the load-bearing mechanism) -->
+  <g>
+    <rect x="675" y="290" width="170" height="100" rx="10" fill="#FFF4EC" stroke="#D97757" stroke-width="2"/>
+    <text x="760" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">贡献分驱动退役</text>
+    <text x="760" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">ĉ = (成功−失败)/调用</text>
+    <text x="760" y="356" text-anchor="middle" font-size="11" fill="#3D4F65">n ≥ 100 且 ĉ ≤ −0.10</text>
+    <text x="760" y="374" text-anchor="middle" font-size="11" fill="#3D4F65">证据保留 · 不物理删</text>
+    <path d="M567,340 L673,340" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#ahr)"/>
+  </g>
+
+  <!-- Bottom: Floor / Result -->
+  <g>
+    <rect x="120" y="490" width="660" height="100" rx="10" fill="#F5F8FC" stroke="#4B8BDA" stroke-width="1.2"/>
+    
+    <!-- Floor proposition (left) -->
+    <g>
+      <text x="220" y="515" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">非发散保证</text>
+      <text x="220" y="535" text-anchor="middle" font-size="11" fill="#3D4F65">有界 cap C + 阈值 τ</text>
+      <text x="220" y="554" text-anchor="middle" font-size="11" fill="#3D4F65">期望表现 ≥ 无技能基线</text>
+      <text x="220" y="573" text-anchor="middle" font-size="11" fill="#7B8B9F">— 有限下界 —</text>
+    </g>
+
+    <line x1="360" y1="500" x2="360" y2="580" stroke="#C9D4E0" stroke-width="1"/>
+
+    <!-- Empirical lift (right) -->
+    <g>
+      <text x="580" y="515" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">实证收益</text>
+      <text x="580" y="538" text-anchor="middle" font-size="13" font-weight="700" fill="#D97757">MBPP+：0.258 → 0.584  (+0.33)</text>
+      <text x="580" y="558" text-anchor="middle" font-size="12" fill="#3D4F65">SWE-bench Verified：peak +0.22</text>
+      <text x="580" y="576" text-anchor="middle" font-size="10" fill="#7B8B9F">无技能控制组漂移仅 +0.002</text>
+    </g>
+  </g>
+
+  <!-- Connector central to bottom -->
+  <path d="M450,455 L450,488" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+</svg>

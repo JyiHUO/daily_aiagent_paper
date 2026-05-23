@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/downloaded_pdfs/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-16",
+      "page_index": 3,
+      "caption": "Figure 1: CDG by domain for both models. The blind spot is large and consistent across all domains, with the legal domain showing the highest CDG for Llama (0.933).",
+      "clip": [
+        326.9022521972656,
+        59.21669006347656,
+        536.3370361328125,
+        246.84030151367188
+      ],
+      "clip_area": 39294.910525278654,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1528019413613382,
+      "kind": "drawing_cluster_with_caption",
+      "score": 57.068493635267245,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-16",
+      "page_index": 3,
+      "caption": "Figure 1: CDG by domain for both models. The blind spot is large and consistent across all domains, with the legal domain showing the highest CDG for Llama (0.933).",
+      "clip": [
+        276.0491882324219,
+        18.0,
+        554.1723693847656,
+        233.74676513671875
+      ],
+      "clip_area": 60004.17664315178,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11916364021867012,
+      "kind": "captioned_figure",
+      "score": 47.3168946606926,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-caption-12",
+      "page_index": 5,
+      "caption": "Figure 2: Detection rates (IDR) before and after augmen- tation, for both payload types and both models. Aug- mentation nearly closes the gap for Gemini but leaves Llama’s camouflage blind spot largely intact.",
+      "clip": [
+        91.45951080322266,
+        59.217315673828125,
+        300.89813232421875,
+        257.9469909667969
+      ],
+      "clip_area": 41621.66924867453,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19115829242998855,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.79296544585263,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-12",
+      "page_index": 5,
+      "caption": "Figure 2: Detection rates (IDR) before and after augmen- tation, for both payload types and both models. Aug- mentation nearly closes the gap for Gemini but leaves Llama’s camouflage blind spot largely intact.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        320.55267944335935,
+        244.9973907470703
+      ],
+      "clip_area": 63434.53029735637,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11527383861093757,
+      "kind": "captioned_figure",
+      "score": 32.588397797758816,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/04-p6-captioned_figure.png",
+      "filename": "04-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-caption-23",
+      "page_index": 5,
+      "caption": "Figure 3: Confidence distribution of missed vs. caught camouflage trials. Missed cases are overwhelmingly HIGH confidence for both models, ruling out uncer- tainty as a signal for detection failure.",
+      "clip": [
+        92.64982604980469,
+        309.99908447265625,
+        302.0869140625,
+        471.4996032714844
+      ],
+      "clip_area": 33824.19836976612,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14105726804424185,
+      "kind": "drawing_cluster_with_caption",
+      "score": 31.712388343676228,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/05-p6-drawing_cluster_with_caption.png",
+      "filename": "05-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-23",
+      "page_index": 5,
+      "caption": "Figure 3: Confidence distribution of missed vs. caught camouflage trials. Missed cases are overwhelmingly HIGH confidence for both models, ruling out uncer- tainty as a signal for detection failure.",
+      "clip": [
+        41.102197265624994,
+        167.3720764160156,
+        320.55267944335935,
+        496.1280822753906
+      ],
+      "clip_area": 91871.0243562284,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3058321500162502,
+      "kind": "captioned_figure",
+      "score": 10.470860158538636,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/06-p6-captioned_figure.png",
+      "filename": "06-p6-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-22/assets/figure_candidates/blind-spots-in-the-guard-how-domain-camouflaged-injection-attacks-evade-detectio/contact-sheet.svg"
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C68A5B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">Meta-Skill as Implicit Dedup</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">writing in one style = deduplication</text>
+
+  <!-- LEFT: without template -->
+  <text x="140" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#8A6A4A">No Meta-Skill</text>
+
+  <polygon points="80,120 130,110 145,150 95,158" fill="#FBE9D8" stroke="#C68A5B" stroke-width="1.5"/>
+  <text x="112" y="138" text-anchor="middle" font-size="10" fill="#8A6A4A">skill A</text>
+
+  <ellipse cx="185" cy="135" rx="32" ry="20" fill="#FBE9D8" stroke="#C68A5B" stroke-width="1.5"/>
+  <text x="185" y="139" text-anchor="middle" font-size="10" fill="#8A6A4A">skill B</text>
+
+  <polygon points="85,180 140,175 155,215 95,225 80,205" fill="#FBE9D8" stroke="#C68A5B" stroke-width="1.5"/>
+  <text x="115" y="205" text-anchor="middle" font-size="10" fill="#8A6A4A">skill C</text>
+
+  <rect x="165" y="185" width="55" height="35" rx="4" fill="#FBE9D8" stroke="#C68A5B" stroke-width="1.5"/>
+  <text x="192" y="207" text-anchor="middle" font-size="10" fill="#8A6A4A">skill D</text>
+
+  <text x="140" y="260" text-anchor="middle" font-size="11" fill="#8A6A4A">embedding dedup fails</text>
+
+  <!-- Meta-Skill template (center mold) -->
+  <g transform="translate(260,105)">
+    <rect x="0" y="0" width="80" height="130" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="40" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">Meta-Skill</text>
+    <line x1="10" y1="28" x2="70" y2="28" stroke="#4B8BDA" stroke-width="0.8"/>
+    <text x="40" y="48" text-anchor="middle" font-size="9" fill="#3D4F65">schema lock</text>
+    <text x="40" y="68" text-anchor="middle" font-size="9" fill="#3D4F65">signals-match</text>
+    <text x="40" y="88" text-anchor="middle" font-size="9" fill="#3D4F65">do / don't</text>
+    <text x="40" y="108" text-anchor="middle" font-size="9" fill="#3D4F65">pitfalls</text>
+  </g>
+  <text x="300" y="92" text-anchor="middle" font-size="11" font-style="italic" fill="#1E3A5F">cookie-cutter mold</text>
+
+  <!-- Arrows -->
+  <line x1="340" y1="170" x2="390" y2="170" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="260" y1="170" x2="225" y2="170" stroke="#C68A5B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arOrange)" opacity="0.55"/>
+
+  <!-- RIGHT: with template — uniform shapes -->
+  <text x="470" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">With Meta-Skill</text>
+
+  <rect x="395" y="115" width="60" height="40" rx="4" fill="#DDE9F7" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="425" y="139" text-anchor="middle" font-size="10" fill="#1E3A5F">skill</text>
+
+  <rect x="475" y="115" width="60" height="40" rx="4" fill="#DDE9F7" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="505" y="139" text-anchor="middle" font-size="10" fill="#1E3A5F">skill</text>
+
+  <rect x="395" y="170" width="60" height="40" rx="4" fill="#DDE9F7" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="425" y="194" text-anchor="middle" font-size="10" fill="#1E3A5F">skill</text>
+
+  <rect x="475" y="170" width="60" height="40" rx="4" fill="#F5F5F5" stroke="#B0B0B0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="505" y="194" text-anchor="middle" font-size="10" fill="#999">dup</text>
+  <line x1="478" y1="173" x2="532" y2="207" stroke="#C25450" stroke-width="1.8"/>
+
+  <text x="465" y="260" text-anchor="middle" font-size="11" fill="#1E3A5F">cosine match → skip</text>
+
+  <!-- Bottom takeaway -->
+  <line x1="80" y1="310" x2="520" y2="310" stroke="#D0DCEA" stroke-width="1"/>
+  <text x="300" y="340" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">style uniformity ⇒ free deduplication</text>
+  <text x="300" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">explicit canonicalisation becomes redundant</text>
+  <text x="300" y="386" text-anchor="middle" font-size="10" fill="#8A6A4A">single most important component (−0.141 rolling gain when removed)</text>
+</svg>
