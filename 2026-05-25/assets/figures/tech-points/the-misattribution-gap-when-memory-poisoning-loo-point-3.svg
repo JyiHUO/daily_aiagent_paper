@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="600" fill="#1E3A5F">Three Defenses · One Poisoned Memory</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">write-time · read-time · post-hoc</text>
+
+  <!-- Poisoned doc in shared memory -->
+  <g>
+    <ellipse cx="360" cy="240" rx="82" ry="60" fill="#FFF1E6" stroke="#C97B4A" stroke-width="1.6"/>
+    <text x="360" y="230" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">shared memory</text>
+    <text x="360" y="252" text-anchor="middle" font-size="12" fill="#C97B4A">poisoned doc (fake policy)</text>
+  </g>
+
+  <!-- MP-IFC: tag at write -->
+  <g>
+    <rect x="40" y="120" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="130" y="150" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">MP-IFC (write-time)</text>
+    <text x="130" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">stamp provenance tag</text>
+    <text x="130" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">block 97.3% cross-session</text>
+  </g>
+  <line x1="220" y1="200" x2="288" y2="222" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- RCM: retrieval concentration -->
+  <g>
+    <rect x="500" y="120" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="590" y="150" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">RCM (read-time)</text>
+    <text x="590" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">concentration alarm</text>
+    <text x="590" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">AUC = 1.00</text>
+  </g>
+  <line x1="432" y1="222" x2="500" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- CCT: counterfactual at bottom -->
+  <g>
+    <rect x="270" y="350" width="180" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="360" y="378" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">CCT (post-hoc)</text>
+    <text x="360" y="400" text-anchor="middle" font-size="11" fill="#3D4F65">remove &amp; rerun · TPR 0.875</text>
+    <text x="360" y="418" text-anchor="middle" font-size="11" fill="#3D4F65">locate causal entry</text>
+  </g>
+  <line x1="360" y1="350" x2="360" y2="302" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- bottom note -->
+  <text x="360" y="448" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">memory, not model — fix the source, not retrain</text>
+</svg>

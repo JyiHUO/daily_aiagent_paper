@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2553D"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Audit: 防止 Agent 钻空子</text>
+
+  <!-- Agent -->
+  <circle cx="90" cy="200" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="90" y="196" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">Agent</text>
+  <text x="90" y="216" text-anchor="middle" font-size="11" fill="#3D4F65">"已证明 ✓"</text>
+
+  <!-- Suspicious proof: trivially true -->
+  <g>
+    <rect x="180" y="150" width="170" height="100" rx="8" fill="#FFF6E5" stroke="#E0A648" stroke-width="2"/>
+    <text x="265" y="178" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">捷径解</text>
+    <text x="265" y="204" text-anchor="middle" font-size="11" fill="#3D4F65">put := false</text>
+    <text x="265" y="228" text-anchor="middle" font-size="11" fill="#3D4F65">⇒ 命题 vacuously true</text>
+  </g>
+
+  <!-- Audit: gate / sieve -->
+  <g>
+    <rect x="400" y="120" width="150" height="160" rx="8" fill="#EAF3FB" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="475" y="148" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">Audit 关卡</text>
+    <line x1="418" y1="162" x2="532" y2="162" stroke="#1E3A5F" stroke-width="1" opacity="0.3"/>
+    <text x="475" y="188" text-anchor="middle" font-size="11" fill="#3D4F65">无 Admitted</text>
+    <text x="475" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">符合规约接口</text>
+    <text x="475" y="236" text-anchor="middle" font-size="11" fill="#3D4F65">非空真证明</text>
+    <text x="475" y="266" text-anchor="middle" font-size="13" fill="#C2553D" font-weight="600">⟶ 打回重做</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="138" y1="200" x2="178" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="352" y1="200" x2="398" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- reject loop back -->
+  <path d="M 475 282 Q 475 355 90 355 L 90 248" fill="none" stroke="#C2553D" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrR)"/>
+  <text x="300" y="348" text-anchor="middle" font-size="11" fill="#C2553D">reject &amp; retry</text>
+
+  <text x="300" y="402" text-anchor="middle" font-size="10" fill="#3D4F65" opacity="0.7">让"看似已证"必须通过语义体检</text>
+</svg>

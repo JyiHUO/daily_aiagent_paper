@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3F8A5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Same failure on LangGraph · three recoveries</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">commit-sensitive case · replay steps to recover</text>
+
+  <!-- failure point -->
+  <circle cx="360" cy="115" r="14" fill="#C8553D"/>
+  <text x="360" y="120" text-anchor="middle" font-size="14" fill="#fff" font-weight="600">✗</text>
+  <text x="360" y="148" text-anchor="middle" font-size="12" fill="#3D4F65">failure with committed downstream</text>
+
+  <!-- Retry-only -->
+  <rect x="50" y="195" width="180" height="155" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="140" y="222" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">RETRY-ONLY</text>
+  <text x="140" y="270" text-anchor="middle" font-size="28" font-weight="700" fill="#1E3A5F">25.5</text>
+  <text x="140" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">replay steps · success</text>
+  <text x="140" y="325" text-anchor="middle" font-size="11" fill="#3D4F65">safe but wasteful</text>
+
+  <!-- LangGraph resume -->
+  <rect x="270" y="195" width="180" height="155" rx="10" fill="#FBE9E7" stroke="#C8553D" stroke-width="1.5"/>
+  <text x="360" y="222" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">LangGraph resume</text>
+  <text x="360" y="270" text-anchor="middle" font-size="28" font-weight="700" fill="#C8553D">0%</text>
+  <text x="360" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">success rate</text>
+  <text x="360" y="325" text-anchor="middle" font-size="11" fill="#C8553D">persistence ≠ admissible</text>
+
+  <!-- DART -->
+  <rect x="490" y="195" width="180" height="155" rx="10" fill="#E8F3EC" stroke="#3F8A5C" stroke-width="1.5"/>
+  <text x="580" y="222" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">DART</text>
+  <text x="580" y="270" text-anchor="middle" font-size="28" font-weight="700" fill="#3F8A5C">1</text>
+  <text x="580" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">replay step · success</text>
+  <text x="580" y="325" text-anchor="middle" font-size="11" fill="#3D4F65">admissibility check</text>
+
+  <!-- arrows from failure -->
+  <path d="M348,123 Q250,160 168,193" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M360,131 L360,191" fill="none" stroke="#C8553D" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M372,123 Q470,160 552,193" fill="none" stroke="#3F8A5C" stroke-width="1.6" marker-end="url(#ag)"/>
+
+  <text x="360" y="408" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">structural gap of persistence-only runtimes — not a LangGraph bug</text>
+  <text x="360" y="428" text-anchor="middle" font-size="11" fill="#3D4F65">consistent across GLM · GPT · Gemini · DeepSeek · Qwen</text>
+</svg>

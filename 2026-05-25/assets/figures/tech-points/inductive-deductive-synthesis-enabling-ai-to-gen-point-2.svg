@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica, Arial" font-size="17" font-weight="bold" fill="#1E3A5F">埋头的工程师 + 旁观的架构师</text>
+
+  <!-- Architect (ISA) on top -->
+  <g>
+    <circle cx="300" cy="108" r="40" fill="#FDF0E8" stroke="#D97757" stroke-width="2"/>
+    <circle cx="288" cy="106" r="6" fill="none" stroke="#D97757" stroke-width="2"/>
+    <circle cx="312" cy="106" r="6" fill="none" stroke="#D97757" stroke-width="2"/>
+    <line x1="294" y1="106" x2="306" y2="106" stroke="#D97757" stroke-width="2"/>
+    <text x="300" y="172" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="bold" fill="#1E3A5F">ISA · 架构师（归纳/战略重启）</text>
+  </g>
+
+  <!-- Worker (DSA) bottom left -->
+  <g>
+    <rect x="50" y="230" width="220" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="160" y="256" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="bold" fill="#1E3A5F">DSA · 工程师（演绎一步步推）</text>
+    <!-- footsteps forward -->
+    <circle cx="80" cy="330" r="5" fill="#4B8BDA"/>
+    <circle cx="105" cy="340" r="5" fill="#4B8BDA"/>
+    <circle cx="130" cy="330" r="5" fill="#4B8BDA"/>
+    <circle cx="155" cy="340" r="5" fill="#4B8BDA"/>
+    <!-- wall -->
+    <line x1="195" y1="305" x2="195" y2="360" stroke="#1E3A5F" stroke-width="3"/>
+    <line x1="195" y1="305" x2="205" y2="300" stroke="#1E3A5F" stroke-width="3"/>
+    <line x1="195" y1="360" x2="205" y2="365" stroke="#1E3A5F" stroke-width="3"/>
+    <text x="230" y="338" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" font-weight="bold" fill="#D97757">卡住</text>
+  </g>
+
+  <!-- New DSA branch bottom right -->
+  <g>
+    <rect x="330" y="230" width="220" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="440" y="256" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="bold" fill="#1E3A5F">新 DSA（换设计重来）</text>
+    <circle cx="360" cy="340" r="5" fill="#4B8BDA"/>
+    <circle cx="385" cy="330" r="5" fill="#4B8BDA"/>
+    <circle cx="410" cy="340" r="5" fill="#4B8BDA"/>
+    <circle cx="435" cy="330" r="5" fill="#4B8BDA"/>
+    <circle cx="460" cy="340" r="5" fill="#4B8BDA"/>
+    <circle cx="485" cy="330" r="5" fill="#4B8BDA"/>
+    <text x="520" y="338" font-family="Helvetica, Arial" font-size="18" fill="#2E7D5B" font-weight="bold">✓</text>
+  </g>
+
+  <!-- Arrows: ISA observes worker -->
+  <path d="M 268 128 Q 210 180 175 228" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#b)"/>
+  <text x="195" y="200" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#D97757">观察</text>
+
+  <!-- ISA triggers reload to new DSA -->
+  <path d="M 332 128 Q 400 180 425 228" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#b)"/>
+  <text x="415" y="200" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#D97757" font-weight="bold">重启 / 加引理</text>
+
+  <!-- bottom caption -->
+  <text x="300" y="408" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65" font-style="italic">深挖证明细节 + 死胡同时果断换路</text>
+</svg>

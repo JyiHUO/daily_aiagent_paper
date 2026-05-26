@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-25",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-25 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>The Misattribution Gap: When Memory Poisoning Looks Like Model Failure in Agentic AI Systems</strong></li><li><strong>Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems</strong></li><li><strong>DART: Semantic Recoverability for Structured Tool Agents</strong></li></ul><p>['评测、安全、runtime 三条线正合力把 Agent 推向系统工程化']</p>",
+  "report_date": "2026-05-25",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-25T22:03:09Z"
+}

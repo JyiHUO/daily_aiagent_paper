@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/downloaded_pdfs/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic",
+  "candidates": [
+    {
+      "id": "page-4-block-8",
+      "page_index": 4,
+      "caption": "Figure 1 presents an end-to-end view of the Semantic Norm Drift (SND) attack, the vulnerable multi-agent pipeline, and the three defenses proposed in this work. The architecture is organized into three stages.",
+      "clip": [
+        41.4,
+        324.71031494140624,
+        570.6029296875,
+        633.5103149414062
+      ],
+      "clip_area": 163417.86468750003,
+      "page_area": 484704.0,
+      "text_density": 0.6794893111803504,
+      "kind": "captioned_figure",
+      "score": 34.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/01-p5-captioned_figure.png",
+      "filename": "01-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        60.0,
+        60.006072998046875,
+        551.9927978515625,
+        347.3919982910156
+      ],
+      "clip_area": 141391.80544804782,
+      "page_area": 484704.0,
+      "text_density": 0.005536083302072899,
+      "kind": "embedded_image",
+      "xref": 467,
+      "score": 11.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/02-p2-embedded_image.png",
+      "filename": "02-p2-embedded_image.png"
+    },
+    {
+      "id": "page-6-block-4",
+      "page_index": 6,
+      "caption": "3.2 Pipeline Model and Trust Laundering Chain",
+      "clip": [
+        41.4,
+        18.0,
+        314.434716796875,
+        246.3544921875
+      ],
+      "clip_area": 62348.704103708274,
+      "page_area": 484704.0,
+      "text_density": 0.5417902556706602,
+      "kind": "captioned_figure",
+      "score": 10.692763378930092,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/03-p7-captioned_figure.png",
+      "filename": "03-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-13-embedded-2-0",
+      "page_index": 13,
+      "caption": "第 14 页内嵌图片候选",
+      "clip": [
+        294.1973571777344,
+        269.10443115234375,
+        435.2789611816406,
+        388.59912109375
+      ],
+      "clip_area": 16858.502526883036,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 852,
+      "score": 5.187316694743145,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/04-p14-embedded_image.png",
+      "filename": "04-p14-embedded_image.png"
+    },
+    {
+      "id": "page-10-embedded-2-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        59.257118225097656,
+        225.83822631835938,
+        200.55471801757812,
+        343.30975341796875
+      ],
+      "clip_area": 16598.44482313213,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 821,
+      "score": 5.184427164701468,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/05-p11-embedded_image.png",
+      "filename": "05-p11-embedded_image.png"
+    },
+    {
+      "id": "page-13-embedded-1-0",
+      "page_index": 13,
+      "caption": "第 14 页内嵌图片候选",
+      "clip": [
+        176.74986267089844,
+        269.10443115234375,
+        314.9044189453125,
+        388.59912109375
+      ],
+      "clip_area": 16508.73586600367,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 851,
+      "score": 5.183430398511152,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/06-p14-embedded_image.png",
+      "filename": "06-p14-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/the-misattribution-gap-when-memory-poisoning-looks-like-model-failure-in-agentic/contact-sheet.svg"
+}

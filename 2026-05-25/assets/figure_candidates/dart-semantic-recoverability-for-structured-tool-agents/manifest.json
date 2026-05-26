@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/downloaded_pdfs/dart-semantic-recoverability-for-structured-tool-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-24",
+      "page_index": 4,
+      "caption": "Figure 2: Recovery method overview. After failure, the runtime identifies the failed instance, checks boundary and admissibility conditions, and restores the latest admissible checkpoint; otherwise it falls back to whole-task rerun.",
+      "clip": [
+        119.69900512695312,
+        202.96990966796875,
+        492.2516174316406,
+        305.78759765625
+      ],
+      "clip_area": 38304.99825116247,
+      "page_area": 484704.0,
+      "text_density": 0.3234547129414325,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.81832831519363,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-24",
+      "page_index": 4,
+      "caption": "Figure 2: Recovery method overview. After failure, the runtime identifies the failed instance, checks boundary and admissibility conditions, and restores the latest admissible checkpoint; otherwise it falls back to whole-task rerun.",
+      "clip": [
+        77.4,
+        18.0,
+        534.598291015625,
+        292.1943359375
+      ],
+      "clip_area": 125361.18179678918,
+      "page_area": 484704.0,
+      "text_density": 0.3580261455582039,
+      "kind": "captioned_figure",
+      "score": 22.31843126650777,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-caption-34",
+      "page_index": 1,
+      "caption": "Figure 1: Commitment-sensitive recovery regime. Whole-task rerun is correct but expensive because it replays an unrelated completed prefix. Checkpoint-aligned restore can remain controller-legal yet become semantically invalid when committed downstream consumers remain in place.",
+      "clip": [
+        119.69900512695312,
+        55.999053955078125,
+        492.2852478027344,
+        242.07321166992188
+      ],
+      "clip_area": 69328.67128203437,
+      "page_area": 484704.0,
+      "text_density": 0.3712817510174954,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.293413508750657,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/03-p2-drawing_cluster_with_caption.png",
+      "filename": "03-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-34",
+      "page_index": 1,
+      "caption": "Figure 1: Commitment-sensitive recovery regime. Whole-task rerun is correct but expensive because it replays an unrelated completed prefix. Checkpoint-aligned restore can remain controller-legal yet become semantically invalid when committed downstream consumers remain in place.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6005798339844,
+        228.85012817382812
+      ],
+      "clip_area": 96400.80085914415,
+      "page_area": 484704.0,
+      "text_density": 0.24682804709356912,
+      "kind": "captioned_figure",
+      "score": 18.0614371839319,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-9-block-8",
+      "page_index": 9,
+      "caption": "[7] C. Hagen and G. Alonso. Exception handling in workflow management systems. IEEE Transactions on Software Engineering , 26(10):943–958, 2000.",
+      "clip": [
+        81.88300170898438,
+        18.0,
+        534.5977722167969,
+        290.041259765625
+      ],
+      "clip_area": 123157.09648345114,
+      "page_area": 484704.0,
+      "text_density": 0.4360779836492578,
+      "kind": "captioned_figure",
+      "score": 10.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/05-p10-captioned_figure.png",
+      "filename": "05-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-10-block-4",
+      "page_index": 10,
+      "caption": "[25] J. Vyas and M. Mercangoz. Autonomous control leveraging LLMs: An agentic framework for next- generation industrial automation. arXiv preprint arXiv:2507.07115 , 2025.",
+      "clip": [
+        77.4,
+        18.0,
+        536.0913635253906,
+        184.0883026123047
+      ],
+      "clip_area": 76183.26999085574,
+      "page_area": 484704.0,
+      "text_density": 0.4465539613739875,
+      "kind": "captioned_figure",
+      "score": 5.846480777676174,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/06-p11-captioned_figure.png",
+      "filename": "06-p11-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/dart-semantic-recoverability-for-structured-tool-agents/contact-sheet.svg"
+}

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C24B4B"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A8C5C"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">归因鸿沟：当记忆投毒被误判为模型失准</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">Agent 违规的第三条路径 — 语义规范漂移 (SND)</text>
+
+  <!-- Left: poisoned doc -->
+  <g>
+    <rect x="40" y="130" width="180" height="80" rx="8" fill="#FFF4E8" stroke="#E0A064" stroke-width="1.5"/>
+    <text x="130" y="158" text-anchor="middle" font-size="13" font-weight="600" fill="#7A4A1A">伪装政策文档 m*</text>
+    <text x="130" y="178" text-anchor="middle" font-size="11" fill="#7A4A1A">格式合规 · 无触发词</text>
+    <text x="130" y="195" text-anchor="middle" font-size="11" fill="#7A4A1A">通过所有安全分类器</text>
+  </g>
+
+  <!-- Center: shared vector memory -->
+  <g>
+    <ellipse cx="450" cy="305" rx="155" ry="110" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">共享向量记忆 (ChromaDB)</text>
+
+    <rect x="370" y="270" width="50" height="34" rx="3" fill="#FFFFFF" stroke="#9DB6CF"/>
+    <rect x="430" y="270" width="50" height="34" rx="3" fill="#FFFFFF" stroke="#9DB6CF"/>
+    <rect x="490" y="270" width="50" height="34" rx="3" fill="#F4C28A" stroke="#C24B4B" stroke-width="2"/>
+    <text x="515" y="291" text-anchor="middle" font-size="11" font-weight="700" fill="#C24B4B">m*</text>
+
+    <text x="450" y="332" text-anchor="middle" font-size="11" fill="#3D4F65">来源标签丢失 → 被当作权威</text>
+    <text x="450" y="365" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">WRITE → STORE → RETRIEVE → COMPLY</text>
+    <text x="450" y="383" text-anchor="middle" font-size="10" fill="#3D4F65">Trust Laundering Chain</text>
+  </g>
+
+  <!-- Arrow doc -> memory -->
+  <path d="M220,180 Q290,210 340,255" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="265" y="205" font-size="10" fill="#3D4F65">上传</text>
+
+  <!-- Right: agents -->
+  <g>
+    <rect x="680" y="130" width="180" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="708" cy="160" r="14" fill="#4B8BDA"/>
+    <text x="708" y="164" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">A1</text>
+    <text x="785" y="156" text-anchor="middle" font-size="11" fill="#1E3A5F">财务报告 Agent</text>
+    <text x="785" y="172" text-anchor="middle" font-size="10" fill="#3D4F65">引用 m* → 泄露 ID</text>
+
+    <rect x="680" y="210" width="180" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="708" cy="240" r="14" fill="#4B8BDA"/>
+    <text x="708" y="244" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">A2</text>
+    <text x="785" y="236" text-anchor="middle" font-size="11" fill="#1E3A5F">医疗 EHR Agent</text>
+    <text x="785" y="252" text-anchor="middle" font-size="10" fill="#3D4F65">59/65 显式引用 m*</text>
+  </g>
+
+  <!-- Arrows memory -> agents -->
+  <path d="M598,265 Q640,215 678,165" fill="none" stroke="#C24B4B" stroke-width="2" marker-end="url(#arR)"/>
+  <path d="M600,300 Q640,265 678,238" fill="none" stroke="#C24B4B" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="628" y="208" font-size="10" fill="#C24B4B">检索·合规</text>
+
+  <!-- Misattribution gap -->
+  <g>
+    <rect x="680" y="295" width="180" height="80" rx="8" fill="#FBE9E9" stroke="#C24B4B" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="770" y="320" text-anchor="middle" font-size="12" font-weight="700" fill="#7A1A1A">归因鸿沟</text>
+    <text x="770" y="338" text-anchor="middle" font-size="10" fill="#7A1A1A">日志数学上不可区分</text>
+    <text x="770" y="354" text-anchor="middle" font-size="10" fill="#7A1A1A">100% 错怪模型</text>
+    <text x="770" y="370" text-anchor="middle" font-size="10" fill="#7A1A1A">重训失效，攻击长存</text>
+  </g>
+
+  <path d="M770,272 Q800,283 800,295" fill="none" stroke="#C24B4B" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arR)"/>
+
+  <!-- Bottom: defenses -->
+  <g>
+    <rect x="60" y="465" width="240" height="115" rx="10" fill="#EAF4EC" stroke="#4A8C5C" stroke-width="1.5"/>
+    <text x="180" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#1E5A2E">CCT · 反事实定位</text>
+    <text x="180" y="515" text-anchor="middle" font-size="11" fill="#2D5A3E">逐条剔除重跑会话，定位因果入口</text>
+    <text x="180" y="535" text-anchor="middle" font-size="11" fill="#2D5A3E">事后归因，找出真正肇事条目</text>
+    <text x="180" y="562" text-anchor="middle" font-size="11" font-weight="600" fill="#1E5A2E">TPR 87.5% · 0 误报</text>
+  </g>
+
+  <g>
+    <rect x="330" y="465" width="240" height="115" rx="10" fill="#EAF4EC" stroke="#4A8C5C" stroke-width="1.5"/>
+    <text x="450" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#1E5A2E">RCM · 检索覆盖度监控</text>
+    <text x="450" y="515" text-anchor="middle" font-size="11" fill="#2D5A3E">异常宽覆盖即报警</text>
+    <text x="450" y="535" text-anchor="middle" font-size="11" fill="#2D5A3E">满足检索-覆盖困境保证</text>
+    <text x="450" y="562" text-anchor="middle" font-size="11" font-weight="600" fill="#1E5A2E">AUC = 1.000</text>
+  </g>
+
+  <g>
+    <rect x="600" y="465" width="240" height="115" rx="10" fill="#DCEBFB" stroke="#1E5AA8" stroke-width="2"/>
+    <text x="720" y="492" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">MP-IFC · 信息流控制</text>
+    <text x="720" y="515" text-anchor="middle" font-size="11" fill="#1E3A5F">写入打来源标签</text>
+    <text x="720" y="535" text-anchor="middle" font-size="11" fill="#1E3A5F">跨会话校验 provenance</text>
+    <text x="720" y="562" text-anchor="middle" font-size="11" font-weight="600" fill="#1E5AA8">阻断 97% 攻击</text>
+  </g>
+
+  <!-- connecting from memory to defenses -->
+  <path d="M370,400 Q290,430 215,463" fill="none" stroke="#4A8C5C" stroke-width="1.5" marker-end="url(#arG)"/>
+  <path d="M450,415 L450,463" fill="none" stroke="#4A8C5C" stroke-width="1.5" marker-end="url(#arG)"/>
+  <path d="M530,400 Q620,430 695,463" fill="none" stroke="#1E5AA8" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <text x="450" y="605" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">三层防御：事后定位 · 实时监控 · 源头阻断</text>
+</svg>

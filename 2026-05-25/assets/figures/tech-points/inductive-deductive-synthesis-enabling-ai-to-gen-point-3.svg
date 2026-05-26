@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="34" font-size="17" font-weight="600" fill="#1E3A5F" text-anchor="middle">在“已证明正确”的候选中，再筛一次“跑得快”</text>
+
+  <!-- Left: Two correct candidates -->
+  <g>
+    <text x="140" y="80" font-size="13" fill="#1E3A5F" text-anchor="middle" font-weight="600">候选 A · 已证明 ✓ · 链表表示</text>
+    <rect x="50" y="92" width="180" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="80" cy="132" r="10" fill="#4B8BDA"/>
+    <circle cx="115" cy="132" r="10" fill="#4B8BDA"/>
+    <circle cx="150" cy="132" r="10" fill="#4B8BDA"/>
+    <circle cx="185" cy="132" r="10" fill="#4B8BDA"/>
+    <line x1="90" y1="132" x2="105" y2="132" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="125" y1="132" x2="140" y2="132" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="160" y1="132" x2="175" y2="132" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="160" font-size="11" fill="#3D4F65" text-anchor="middle">get 要遍历 · 慢</text>
+
+    <text x="140" y="208" font-size="13" fill="#1E3A5F" text-anchor="middle" font-weight="600">候选 B · 已证明 ✓ · 平衡树 map</text>
+    <rect x="50" y="220" width="180" height="115" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="140" cy="248" r="9" fill="#E8A04A"/>
+    <circle cx="110" cy="278" r="9" fill="#E8A04A"/>
+    <circle cx="170" cy="278" r="9" fill="#E8A04A"/>
+    <circle cx="95" cy="306" r="8" fill="#E8A04A"/>
+    <circle cx="125" cy="306" r="8" fill="#E8A04A"/>
+    <circle cx="185" cy="306" r="8" fill="#E8A04A"/>
+    <line x1="135" y1="256" x2="115" y2="270" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="145" y1="256" x2="165" y2="270" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="105" y1="286" x2="97" y2="298" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="115" y1="286" x2="123" y2="298" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="170" y1="287" x2="183" y2="298" stroke="#E8A04A" stroke-width="1.5"/>
+    <text x="140" y="328" font-size="11" fill="#3D4F65" text-anchor="middle">查找 ~ 树深 · 快</text>
+  </g>
+
+  <!-- Arrows to benchmark -->
+  <path d="M230 132 Q 290 150 338 210" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M230 278 Q 290 260 338 240" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Middle: benchmark cluster -->
+  <g>
+    <rect x="340" y="190" width="140" height="85" rx="10" fill="#FFF4E6" stroke="#E8A04A" stroke-width="1.8"/>
+    <text x="410" y="215" font-size="13" font-weight="600" fill="#1E3A5F" text-anchor="middle">5-VM Benchmark</text>
+    <text x="410" y="237" font-size="11" fill="#3D4F65" text-anchor="middle">put / get 负载</text>
+    <text x="410" y="256" font-size="11" fill="#3D4F65" text-anchor="middle">吞吐 · p99 · 内存</text>
+  </g>
+
+  <!-- Arrow to ISA -->
+  <path d="M480 232 L 553 232" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="516" y="222" font-size="11" fill="#3D4F65" text-anchor="middle">数字反馈</text>
+
+  <!-- Right: ISA chooses -->
+  <g>
+    <rect x="555" y="190" width="125" height="85" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="617" y="218" font-size="13" font-weight="600" fill="#1E3A5F" text-anchor="middle">ISA 选择</text>
+    <text x="617" y="244" font-size="11" fill="#3D4F65" text-anchor="middle">既正确</text>
+    <text x="617" y="262" font-size="11" fill="#3D4F65" text-anchor="middle">又更快</text>
+  </g>
+
+  <!-- Loop arrow back to candidate generation -->
+  <path d="M617 275 Q 617 395 140 395 Q 40 395 40 340" stroke="#4B8BDA" stroke-width="1.6" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="380" y="412" font-size="11" fill="#3D4F65" text-anchor="middle">下一轮：偏向更高效的设计</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="442" font-size="11" fill="#1E3A5F" text-anchor="middle" font-style="italic">去掉性能反馈 → 平均慢 1.42×</text>
+</svg>

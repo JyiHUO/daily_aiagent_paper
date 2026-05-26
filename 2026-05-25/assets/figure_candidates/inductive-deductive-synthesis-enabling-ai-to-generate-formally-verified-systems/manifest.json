@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/downloaded_pdfs/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-16",
+      "page_index": 1,
+      "caption": "Figure 1: Code and proof advance jointly and incremen- tally with IDS; the proof assistant grades each partial step.",
+      "clip": [
+        278.10198974609375,
+        155.47003173828125,
+        521.9976806640625,
+        278.61956787109375
+      ],
+      "clip_area": 30035.641201339662,
+      "page_area": 484704.0,
+      "text_density": 0.4401754006777564,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.333729346681551,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-27",
+      "page_index": 3,
+      "caption": "Figure 2: Counter specification (left), partial synthesis (center, yellow = Admitted ), and complete synthesis (right, green = filled in). Rocq accepts both files.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5994812011719,
+        214.7932891845703
+      ],
+      "clip_area": 89973.78971905775,
+      "page_area": 484704.0,
+      "text_density": 0.2935986198157646,
+      "kind": "captioned_figure",
+      "score": 5.183791585710322,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-caption-26",
+      "page_index": 7,
+      "caption": "Figure 4: Throughput, p99 latency, and peak memory vs. put rate, and throughput vs. ops-per-worker N , for IDS suite CC and monotonic reads. Solid = IDS; dashed = reference (function-as-map for both). The per-spec breakdown for all seven specifications appears in § D.1 .",
+      "clip": [
+        90.0,
+        56.00061798095703,
+        522.0032653808594,
+        206.26702880859375
+      ],
+      "clip_area": 64915.580154600786,
+      "page_area": 484704.0,
+      "text_density": 0.23219926383643724,
+      "kind": "drawing_cluster_with_caption",
+      "score": 4.5893283937537745,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/03-p8-drawing_cluster_with_caption.png",
+      "filename": "03-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        222.67799377441406,
+        58.00187683105469,
+        519.9943237304688,
+        163.84002685546875
+      ],
+      "clip_area": 31467.41033459711,
+      "page_area": 484704.0,
+      "text_density": 0.19341876290083734,
+      "kind": "drawing_cluster",
+      "score": 1.544512118556395,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/04-p9-drawing_cluster.png",
+      "filename": "04-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        92.0,
+        58.00061798095703,
+        520.0032653808594,
+        204.26702880859375
+      ],
+      "clip_area": 62602.5014497668,
+      "page_area": 484704.0,
+      "text_density": 0.22812194712257008,
+      "kind": "drawing_cluster",
+      "score": -0.19173347791235074,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/05-p8-drawing_cluster.png",
+      "filename": "05-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-block-26",
+      "page_index": 7,
+      "caption": "Figure 4: Throughput, p99 latency, and peak memory vs. put rate, and throughput vs. ops-per-worker N , for IDS suite CC and monotonic reads. Solid = IDS; dashed = reference (function-as-map for both). The per-spec breakdown for all seven specifications appears in § D.1 .",
+      "clip": [
+        77.4,
+        18.0,
+        534.7726989746094,
+        189.385986328125
+      ],
+      "clip_area": 78387.27113332004,
+      "page_area": 484704.0,
+      "text_density": 0.14740815934982113,
+      "kind": "captioned_figure",
+      "score": -2.173519881730156,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/06-p8-captioned_figure.png",
+      "filename": "06-p8-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-25/assets/figure_candidates/inductive-deductive-synthesis-enabling-ai-to-generate-formally-verified-systems/contact-sheet.svg"
+}
