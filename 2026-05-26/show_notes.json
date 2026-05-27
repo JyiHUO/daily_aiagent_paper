@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-26",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-26 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>From Model Scaling to System Scaling: Scaling the Harness in Agentic AI</strong></li><li><strong>CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents</strong></li><li><strong>Stop Comparing LLM Agents Without Disclosing the Harness</strong></li></ul><p>['今天的共同信号：Agent 性能边界不在模型，在 harness 与环境治理']</p>",
+  "report_date": "2026-05-26",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-26T22:31:34Z"
+}

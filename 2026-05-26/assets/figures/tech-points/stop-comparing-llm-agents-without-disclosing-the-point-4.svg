@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">Score = Model + Harness</text>
+
+  <!-- Black box on left -->
+  <rect x="40" y="80" width="180" height="120" rx="8" fill="#FFF4E6" stroke="#D89B5B" stroke-width="1.5"/>
+  <text x="130" y="105" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">Before</text>
+  <text x="130" y="140" text-anchor="middle" font-size="13" fill="#3D4F65">{model, score}</text>
+  <text x="130" y="170" text-anchor="middle" font-size="11" fill="#A0522D">hidden harness</text>
+  <text x="130" y="190" text-anchor="middle" font-size="11" fill="#A0522D">(black box)</text>
+
+  <!-- Arrow middle -->
+  <line x1="225" y1="140" x2="295" y2="140" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Harness Card on right -->
+  <rect x="300" y="70" width="260" height="200" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="430" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Harness Card</text>
+  <line x1="315" y1="100" x2="545" y2="100" stroke="#4B8BDA" stroke-width="0.5"/>
+
+  <text x="320" y="122" font-size="11" fill="#3D4F65">▸ Execution</text>
+  <text x="320" y="142" font-size="11" fill="#3D4F65">▸ Tools</text>
+  <text x="320" y="162" font-size="11" fill="#3D4F65">▸ Context</text>
+  <text x="320" y="182" font-size="11" fill="#3D4F65">▸ Scheduling</text>
+  <text x="435" y="122" font-size="11" fill="#3D4F65">▸ Observability</text>
+  <text x="435" y="142" font-size="11" fill="#3D4F65">▸ Verification</text>
+  <text x="435" y="162" font-size="11" fill="#3D4F65">▸ Governance</text>
+
+  <line x1="315" y1="200" x2="545" y2="200" stroke="#4B8BDA" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="430" y="220" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E3A5F">2×2 grid · HV / MV / reversals</text>
+  <text x="430" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">RR(k) · Retention · Lag τ</text>
+  <text x="430" y="260" text-anchor="middle" font-size="10" fill="#A0522D">disclosed like hyperparameters</text>
+
+  <!-- Bottom variance bars -->
+  <text x="50" y="310" font-size="12" fill="#1E3A5F" font-weight="bold">Variance exposed</text>
+  <text x="50" y="338" font-size="11" fill="#3D4F65">Model</text>
+  <rect x="120" y="328" width="30" height="12" fill="#D89B5B"/>
+  <text x="50" y="368" font-size="11" fill="#3D4F65">Harness</text>
+  <rect x="120" y="358" width="234" height="12" fill="#4B8BDA"/>
+  <text x="365" y="369" font-size="11" font-weight="bold" fill="#1E3A5F">7.8× model</text>
+
+  <text x="300" y="402" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">disclose the harness, decompose the score</text>
+</svg>

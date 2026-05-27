@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-26",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 714,
+  "selected_count": 3,
+  "focus_titles": [
+    "From Model Scaling to System Scaling: Scaling the Harness in Agentic AI",
+    "CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents",
+    "Stop Comparing LLM Agents Without Disclosing the Harness"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

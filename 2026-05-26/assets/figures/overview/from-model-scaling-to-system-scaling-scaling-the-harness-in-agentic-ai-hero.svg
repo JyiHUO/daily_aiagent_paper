@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <rect width="900" height="640" fill="#FBFAF6"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">从模型缩放 到 系统缩放</text>
+  <text x="450" y="74" text-anchor="middle" font-size="13" fill="#3D4F65">Agent 的瓶颈不在 R，而在包裹它的 Harness</text>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D98E48"/>
+    </marker>
+  </defs>
+
+  <!-- Outer harness ring (dashed) -->
+  <circle cx="450" cy="340" r="200" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.55"/>
+  <text x="450" y="135" text-anchor="middle" font-size="11" fill="#4B8BDA" font-style="italic">Harness · 系统层</text>
+
+  <!-- Center: Model R -->
+  <circle cx="450" cy="340" r="58" fill="#1E3A5F"/>
+  <text x="450" y="335" text-anchor="middle" font-size="22" font-weight="700" fill="#FBFAF6">R</text>
+  <text x="450" y="358" text-anchor="middle" font-size="11" fill="#D9E4F0">基础模型推理</text>
+
+  <!-- M Memory (top) -->
+  <circle cx="450" cy="180" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="450" y="178" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">M</text>
+  <text x="450" y="196" text-anchor="middle" font-size="11" fill="#3D4F65">可信记忆</text>
+
+  <!-- C Context (right-top) -->
+  <circle cx="618" cy="262" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="618" y="260" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">C</text>
+  <text x="618" y="278" text-anchor="middle" font-size="11" fill="#3D4F65">上下文治理</text>
+
+  <!-- S Skills (right-bottom) -->
+  <circle cx="595" cy="448" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="595" y="446" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">S</text>
+  <text x="595" y="464" text-anchor="middle" font-size="11" fill="#3D4F65">技能路由</text>
+
+  <!-- O Orchestration (left-bottom) -->
+  <circle cx="305" cy="448" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="305" y="446" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">O</text>
+  <text x="305" y="464" text-anchor="middle" font-size="11" fill="#3D4F65">编排循环</text>
+
+  <!-- G Governance (left-top) -->
+  <circle cx="282" cy="262" r="46" fill="#FFF1E6" stroke="#D98E48" stroke-width="2"/>
+  <text x="282" y="260" text-anchor="middle" font-size="18" font-weight="700" fill="#9A4F12">G</text>
+  <text x="282" y="278" text-anchor="middle" font-size="11" fill="#9A4F12">验证治理</text>
+
+  <!-- Clockwise loop: M -> C -> S -> O -> G -> M, with C -> R feeding center -->
+
+  <!-- M -> C -->
+  <line x1="488" y1="201" x2="582" y2="244" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <!-- C -> S -->
+  <line x1="618" y1="308" x2="601" y2="402" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <!-- S -> O -->
+  <line x1="549" y1="455" x2="351" y2="455" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <!-- O -> G -->
+  <line x1="299" y1="402" x2="288" y2="308" stroke="#D98E48" stroke-width="2" marker-end="url(#ahO)"/>
+  <!-- G -> M -->
+  <line x1="320" y1="238" x2="408" y2="198" stroke="#D98E48" stroke-width="2" marker-end="url(#ahO)"/>
+
+  <!-- C -> R (context feeds model) -->
+  <line x1="585" y1="293" x2="500" y2="328" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+  <!-- R -> S (model picks skill) -->
+  <line x1="498" y1="368" x2="558" y2="412" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+
+  <!-- Bottom labels: three tensions -->
+  <g font-size="11" fill="#3D4F65">
+    <rect x="80" y="555" width="220" height="56" rx="8" fill="#EFF6FF" stroke="#B8CFE8"/>
+    <text x="190" y="575" text-anchor="middle" font-weight="700" fill="#1E3A5F">上下文 C</text>
+    <text x="190" y="594" text-anchor="middle">最小够用 · 可追溯</text>
+
+    <rect x="340" y="555" width="220" height="56" rx="8" fill="#EFF6FF" stroke="#B8CFE8"/>
+    <text x="450" y="575" text-anchor="middle" font-weight="700" fill="#1E3A5F">记忆 M</text>
+    <text x="450" y="594" text-anchor="middle">置信度 · 时效 · 可验证</text>
+
+    <rect x="600" y="555" width="220" height="56" rx="8" fill="#EFF6FF" stroke="#B8CFE8"/>
+    <text x="710" y="575" text-anchor="middle" font-weight="700" fill="#1E3A5F">技能 S</text>
+    <text x="710" y="594" text-anchor="middle">路由后必有校验</text>
+  </g>
+
+  <!-- Side note: scaling shift -->
+  <text x="60" y="120" font-size="12" fill="#9A4F12" font-weight="700">模型 scaling</text>
+  <text x="60" y="138" font-size="11" fill="#3D4F65">只改进 R</text>
+  <text x="740" y="120" font-size="12" fill="#1E3A5F" font-weight="700">系统 scaling</text>
+  <text x="740" y="138" font-size="11" fill="#3D4F65">改进 M C S O G</text>
+
+  <!-- Eval note -->
+  <text x="450" y="525" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">评测从一次成功率 → 过程指标 + 纵向漂移</text>
+</svg>

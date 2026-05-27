@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/downloaded_pdfs/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai",
+  "candidates": [
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "3 System Scaling: A Framework for Agentic AI 5",
+      "clip": [
+        77.4,
+        18.0,
+        534.6033874511719,
+        119.01854705810547
+      ],
+      "clip_area": 46186.021910361436,
+      "page_area": 484704.0,
+      "text_density": 0.1708405905081624,
+      "kind": "captioned_figure",
+      "score": 50.0627425907365,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/01-p2-captioned_figure.png",
+      "filename": "01-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-1",
+      "page_index": 4,
+      "caption": "3 System Scaling: A Framework for Agentic AI",
+      "clip": [
+        77.4,
+        18.0,
+        389.2527099609375,
+        114.89214324951172
+      ],
+      "clip_area": 30216.07744628359,
+      "page_area": 484704.0,
+      "text_density": 0.2964802868403432,
+      "kind": "captioned_figure",
+      "score": 36.346916983427,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.251181461071977,
+      "score": -3.361720944318618,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/03-p2-layout_region_left_top.png",
+      "filename": "03-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        59.08583068847656,
+        33.39947509765625,
+        553.6138305664062,
+        321.57147216796875
+      ],
+      "clip_area": 142509.12133201025,
+      "page_area": 484704.0,
+      "text_density": 0.27944816169430325,
+      "kind": "drawing_cluster",
+      "score": -3.9668897016581948,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/04-p6-drawing_cluster.png",
+      "filename": "04-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.34664783901302054,
+      "score": -9.089703620781231,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.267592708764999,
+      "score": -10.33342108589994,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/from-model-scaling-to-system-scaling-scaling-the-harness-in-agentic-ai/contact-sheet.svg"
+}

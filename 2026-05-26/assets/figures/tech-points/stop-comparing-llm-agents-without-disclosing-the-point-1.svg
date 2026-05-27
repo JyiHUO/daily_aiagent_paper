@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Score = Model + Harness (not just Model)</text>
+
+  <!-- Left scenario: Harness X -->
+  <rect x="40" y="60" width="230" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="155" y="82" text-anchor="middle" font-size="13" fill="#3D4F65" font-weight="600">Harness X</text>
+  <text x="155" y="100" text-anchor="middle" font-size="11" fill="#3D4F65">A &gt; B</text>
+
+  <circle cx="95" cy="155" r="22" fill="#4B8BDA"/>
+  <text x="95" y="159" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">A</text>
+  <text x="95" y="198" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">55.4</text>
+
+  <circle cx="215" cy="155" r="22" fill="#C97B5C"/>
+  <text x="215" y="159" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">B</text>
+  <text x="215" y="198" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">48.2</text>
+
+  <!-- Right scenario: Harness Y -->
+  <rect x="330" y="60" width="230" height="160" rx="10" fill="#FBF1EC" stroke="#C97B5C" stroke-width="1.5"/>
+  <text x="445" y="82" text-anchor="middle" font-size="13" fill="#3D4F65" font-weight="600">Harness Y</text>
+  <text x="445" y="100" text-anchor="middle" font-size="11" fill="#3D4F65">B &gt; A</text>
+
+  <circle cx="385" cy="155" r="22" fill="#4B8BDA"/>
+  <text x="385" y="159" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">A</text>
+  <text x="385" y="198" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">45.9</text>
+
+  <circle cx="505" cy="155" r="22" fill="#C97B5C"/>
+  <text x="505" y="159" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">B</text>
+  <text x="505" y="198" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">52.1</text>
+
+  <!-- Flip arrows between -->
+  <path d="M 275 140 Q 300 122 325 140" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M 325 175 Q 300 193 275 175" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="161" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="700">flip</text>
+
+  <!-- Variance decomposition -->
+  <text x="300" y="258" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="700">Var(score) = MV + HV + interaction</text>
+
+  <!-- Bars -->
+  <rect x="160" y="300" width="40" height="22" fill="#4B8BDA" opacity="0.85"/>
+  <text x="180" y="340" text-anchor="middle" font-size="11" fill="#3D4F65" font-weight="700">MV (model)</text>
+
+  <rect x="280" y="280" width="40" height="42" fill="#C97B5C" opacity="0.9"/>
+  <text x="300" y="340" text-anchor="middle" font-size="11" fill="#3D4F65" font-weight="700">HV (harness)</text>
+
+  <rect x="400" y="305" width="40" height="17" fill="#8AA9C9" opacity="0.85"/>
+  <text x="420" y="340" text-anchor="middle" font-size="11" fill="#3D4F65" font-weight="700">M×H (interaction)</text>
+
+  <line x1="140" y1="322" x2="460" y2="322" stroke="#3D4F65" stroke-width="0.8"/>
+
+  <text x="300" y="385" text-anchor="middle" font-size="12" fill="#1E3A5F" font-style="italic">HV often ≥ MV  →  rankings flip across harnesses</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" fill="#1E3A5F" font-size="17" font-weight="600">Generator – Discriminator  ·  信息墙</text>
+
+  <!-- Task at top feeding both -->
+  <rect x="230" y="55" width="140" height="40" rx="6" fill="#1E3A5F"/>
+  <text x="300" y="80" text-anchor="middle" fill="#fff" font-size="12">任务指令</text>
+
+  <!-- Generator side -->
+  <rect x="50" y="130" width="180" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="140" y="158" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">Generator</text>
+  <text x="140" y="183" text-anchor="middle" fill="#3D4F65" font-size="12">initial-setup.py</text>
+  <text x="140" y="203" text-anchor="middle" fill="#3D4F65" font-size="12">golden-patch.py</text>
+  <text x="140" y="232" text-anchor="middle" fill="#3D4F65" font-size="11" font-style="italic">造初始态 / 黄金态</text>
+
+  <!-- Wall -->
+  <line x1="300" y1="115" x2="300" y2="290" stroke="#C97B5C" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="300" y="280" text-anchor="middle" fill="#C97B5C" font-size="10">看不到对方脚本</text>
+
+  <!-- Discriminator side -->
+  <rect x="370" y="130" width="180" height="130" rx="10" fill="#FFF4EC" stroke="#C97B5C" stroke-width="1.5"/>
+  <text x="460" y="158" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">Discriminator</text>
+  <text x="460" y="183" text-anchor="middle" fill="#3D4F65" font-size="12">reward.py</text>
+  <text x="460" y="203" text-anchor="middle" fill="#3D4F65" font-size="12">仅凭任务描述</text>
+  <text x="460" y="232" text-anchor="middle" fill="#3D4F65" font-size="11" font-style="italic">独立打分</text>
+
+  <!-- Task → both -->
+  <line x1="270" y1="95" x2="200" y2="130" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="330" y1="95" x2="400" y2="130" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- Verification -->
+  <rect x="120" y="320" width="360" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="300" y="343" text-anchor="middle" fill="#1E3A5F" font-size="13" font-weight="600">迭代验证：reward(初始态)=0，reward(黄金态)=1</text>
+  <text x="300" y="365" text-anchor="middle" fill="#3D4F65" font-size="11">+ 多数投票 · teacher rollout 过滤</text>
+
+  <!-- Both → verification -->
+  <line x1="170" y1="260" x2="220" y2="320" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="430" y1="260" x2="380" y2="320" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Loop back arrow (iteration) -->
+  <path d="M120,350 L70,350 L70,195 L50,195" fill="none" stroke="#9AA8BD" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#a)"/>
+  <text x="78" y="275" fill="#7A8699" font-size="10" transform="rotate(-90 78 275)">未通过则迭代</text>
+</svg>

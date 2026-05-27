@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Agent = 闭环控制系统</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">可靠性是 harness 的性质，不是模型的性质</text>
+
+  <!-- Outer harness ring -->
+  <circle cx="300" cy="230" r="140" fill="#FFF4E6" stroke="#E8A857" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="300" y="108" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Harness (控制器 C_H)</text>
+
+  <!-- Inner model -->
+  <circle cx="300" cy="230" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="300" y="226" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Model π_θ</text>
+  <text x="300" y="244" text-anchor="middle" font-size="11" fill="#3D4F65">看到的只是 c(s_t)</text>
+
+  <!-- Loop arrows around model -->
+  <path d="M 300 165 A 65 65 0 0 1 365 230" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M 300 295 A 65 65 0 0 1 235 230" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="372" y="195" font-size="11" fill="#3D4F65">action a_t</text>
+  <text x="170" y="272" font-size="11" fill="#3D4F65">obs s_t</text>
+
+  <!-- Three reliability properties as small tags on the harness ring -->
+  <g font-size="11" fill="#1E3A5F" font-weight="600">
+    <rect x="58" y="142" width="100" height="28" rx="14" fill="#FFE8CC" stroke="#E8A857"/>
+    <text x="108" y="160" text-anchor="middle">稳定性 V(s_t)</text>
+
+    <rect x="442" y="142" width="100" height="28" rx="14" fill="#FFE8CC" stroke="#E8A857"/>
+    <text x="492" y="160" text-anchor="middle">漂移 δ_t</text>
+
+    <rect x="250" y="350" width="100" height="28" rx="14" fill="#FFE8CC" stroke="#E8A857"/>
+    <text x="300" y="368" text-anchor="middle">延迟 τ</text>
+  </g>
+
+  <text x="300" y="404" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">τ 越大 → 模型在错误状态上多走 τ 步（harness 的锅）</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="800" height="560" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">别再只比 LLM —— 请公开 Harness</text>
+  <text x="400" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">分数 = 模型能力 × 脚手架（Harness）</text>
+
+  <!-- Variance ratio highlight (top center) -->
+  <g transform="translate(400,150)">
+    <circle r="58" fill="#fff" stroke="#C0392B" stroke-width="2.5"/>
+    <text y="-12" text-anchor="middle" font-size="12" fill="#3D4F65">方差比 HV / MV</text>
+    <text y="20" text-anchor="middle" font-size="30" font-weight="800" fill="#C0392B">7.8×</text>
+    <text y="40" text-anchor="middle" font-size="11" fill="#3D4F65">harness ≫ model</text>
+  </g>
+
+  <!-- Left side note -->
+  <g>
+    <rect x="40" y="130" width="150" height="70" rx="6" fill="#fff" stroke="#D4C9B8"/>
+    <text x="115" y="152" text-anchor="middle" font-size="12" fill="#3D4F65">同一模型，换 Harness</text>
+    <text x="115" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#C0392B">↕ 13 分</text>
+  </g>
+
+  <!-- Right side note -->
+  <g>
+    <rect x="610" y="130" width="150" height="70" rx="6" fill="#fff" stroke="#D4C9B8"/>
+    <text x="685" y="152" text-anchor="middle" font-size="12" fill="#3D4F65">9 组对比中排名反转</text>
+    <text x="685" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#C0392B">6 次</text>
+  </g>
+
+  <!-- Pivot triangle -->
+  <polygon points="400,440 360,495 440,495" fill="#1E3A5F"/>
+  <line x1="335" y1="495" x2="465" y2="495" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tilted balance beam -->
+  <g transform="rotate(-9 400 415)">
+    <line x1="170" y1="415" x2="630" y2="415" stroke="#1E3A5F" stroke-width="5" stroke-linecap="round"/>
+    <line x1="190" y1="415" x2="190" y2="360" stroke="#1E3A5F" stroke-width="2"/>
+    <line x1="610" y1="415" x2="610" y2="360" stroke="#1E3A5F" stroke-width="2"/>
+
+    <!-- Left pan: Model (light) -->
+    <rect x="130" y="305" width="120" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="190" y="330" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">模型 M</text>
+    <text x="190" y="352" text-anchor="middle" font-size="12" fill="#3D4F65">MV = 2.37</text>
+
+    <!-- Right pan: Harness (heavy) -->
+    <rect x="525" y="270" width="170" height="95" rx="8" fill="#FCE8D5" stroke="#E08A4B" stroke-width="2.5"/>
+    <text x="610" y="296" text-anchor="middle" font-size="15" font-weight="700" fill="#8B4A1F">脚手架 Harness</text>
+    <text x="610" y="318" text-anchor="middle" font-size="11" fill="#8B4A1F">工具 · 上下文 · 重试</text>
+    <text x="610" y="335" text-anchor="middle" font-size="11" fill="#8B4A1F">验证 · 调度 · 恢复</text>
+    <text x="610" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#C0392B">HV = 18.48</text>
+  </g>
+
+  <!-- Bottom prescription -->
+  <line x1="100" y1="520" x2="700" y2="520" stroke="#D4C9B8" stroke-width="1"/>
+  <text x="400" y="542" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">解法 · 公开 Harness Card + 模型×脚手架 因子实验 + 方差分解</text>
+</svg>

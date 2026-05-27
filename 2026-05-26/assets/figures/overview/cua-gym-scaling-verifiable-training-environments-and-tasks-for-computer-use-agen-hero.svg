@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="600" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">CUA-Gym：为 Computer-Use Agent 批量合成可验证训练环境</text>
+  <text x="600" y="78" text-anchor="middle" font-size="14" fill="#3D4F65">任务 + 环境 + 奖励 三元组的工厂化生产</text>
+
+  <!-- LEFT: Environment Factory -->
+  <g>
+    <rect x="60" y="120" width="300" height="270" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="210" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">① 环境工厂 CUA-Gym-Hub</text>
+
+    <!-- mock app icons -->
+    <g transform="translate(90,180)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#1E3A5F">Mail</text>
+    </g>
+    <g transform="translate(165,180)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#1E3A5F">Notion</text>
+    </g>
+    <g transform="translate(240,180)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#1E3A5F">Calc</text>
+    </g>
+    <g transform="translate(90,235)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#1E3A5F">CRM</text>
+    </g>
+    <g transform="translate(165,235)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#1E3A5F">Shop</text>
+    </g>
+    <g transform="translate(240,235)">
+      <rect width="60" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-dasharray="3,2"/>
+      <text x="30" y="28" text-anchor="middle" font-size="11" fill="#3D4F65">…</text>
+    </g>
+
+    <text x="210" y="318" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">110 个高仿应用</text>
+    <text x="210" y="340" text-anchor="middle" font-size="11" fill="#3D4F65">状态注入 · session 隔离</text>
+    <text x="210" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">同 mock 可生成多种初始态</text>
+  </g>
+
+  <!-- CENTER: Generator vs Discriminator -->
+  <g>
+    <rect x="420" y="120" width="360" height="490" rx="14" fill="#FFF6EC" stroke="#E89B5A" stroke-width="1.5"/>
+    <text x="600" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">② 生成器 — 判别器 双 Agent</text>
+    <text x="600" y="172" text-anchor="middle" font-size="12" fill="#3D4F65">用信息墙阻断奖励作弊</text>
+
+    <!-- Generator -->
+    <g>
+      <rect x="445" y="200" width="140" height="110" rx="10" fill="#fff" stroke="#E89B5A" stroke-width="1.5"/>
+      <circle cx="475" cy="230" r="13" fill="#E89B5A"/>
+      <text x="475" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">G</text>
+      <text x="495" y="234" font-size="13" font-weight="700" fill="#1E3A5F">Generator</text>
+      <text x="455" y="263" font-size="11" fill="#3D4F65">initial-setup.py / golden.py</text>
+      <text x="455" y="283" font-size="10.5" fill="#7A8699">构造初始态与黄金态</text>
+    </g>
+
+    <!-- Wall -->
+    <line x1="600" y1="205" x2="600" y2="335" stroke="#E89B5A" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="600" y="200" text-anchor="middle" font-size="10" fill="#E89B5A" font-weight="600">信息墙</text>
+
+    <!-- Discriminator -->
+    <g>
+      <rect x="615" y="200" width="140" height="110" rx="10" fill="#fff" stroke="#E89B5A" stroke-width="1.5"/>
+      <circle cx="645" cy="230" r="13" fill="#1E3A5F"/>
+      <text x="645" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">D</text>
+      <text x="665" y="234" font-size="13" font-weight="700" fill="#1E3A5F">Discriminator</text>
+      <text x="625" y="263" font-size="11" fill="#3D4F65">reward.py · 仅看任务</text>
+      <text x="625" y="283" font-size="10.5" fill="#7A8699">独立判定是否完成</text>
+    </g>
+
+    <!-- iterate loop -->
+    <path d="M 515 310 Q 515 350 600 350 Q 685 350 685 310" fill="none" stroke="#E89B5A" stroke-width="1.8" marker-end="url(#arrOrange)"/>
+    <text x="600" y="372" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">迭代直到 reward 能区分初/黄金态</text>
+
+    <!-- Filter -->
+    <g>
+      <rect x="475" y="395" width="250" height="60" rx="10" fill="#fff" stroke="#E89B5A"/>
+      <text x="600" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">多数投票 + Teacher Rollout 过滤</text>
+      <text x="600" y="440" text-anchor="middle" font-size="11" fill="#3D4F65">剔除假奖励、伪通过样本</text>
+    </g>
+
+    <line x1="600" y1="378" x2="600" y2="395" stroke="#E89B5A" stroke-width="1.8" marker-end="url(#arrOrange)"/>
+
+    <!-- Output triple -->
+    <g>
+      <rect x="445" y="490" width="310" height="100" rx="10" fill="#1E3A5F"/>
+      <text x="600" y="520" text-anchor="middle" font-size="13" font-weight="700" fill="#FFF6EC">可验证三元组</text>
+      <text x="600" y="546" text-anchor="middle" font-size="12" fill="#EFF6FF">⟨ 任务指令 · 环境状态 · 奖励函数 ⟩</text>
+      <text x="600" y="572" text-anchor="middle" font-size="11" fill="#9FB7D4">32,112 条 · 45% hard · 38% 跨应用</text>
+    </g>
+    <line x1="600" y1="455" x2="600" y2="490" stroke="#E89B5A" stroke-width="1.8" marker-end="url(#arrOrange)"/>
+  </g>
+
+  <!-- Arrow from env to center -->
+  <line x1="360" y1="255" x2="418" y2="255" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="389" y="246" text-anchor="middle" font-size="10" fill="#4B8BDA">注入</text>
+
+  <!-- RIGHT: RL Training -->
+  <g>
+    <rect x="840" y="120" width="300" height="270" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="990" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">③ RLVR 训练</text>
+    <text x="990" y="172" text-anchor="middle" font-size="12" fill="#3D4F65">GSPO on Qwen3.5-A3B / A17B</text>
+
+    <!-- Bench bars -->
+    <g transform="translate(880,205)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">OSWorld-V</text>
+      <rect x="80" y="-11" width="60" height="13" fill="#C9D8E8"/>
+      <rect x="80" y="-11" width="100" height="13" fill="#4B8BDA"/>
+      <text x="190" y="0" font-size="11" fill="#1E3A5F" font-weight="600">54.5 → 62.1</text>
+    </g>
+    <g transform="translate(880,235)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">A17B</text>
+      <rect x="80" y="-11" width="80" height="13" fill="#C9D8E8"/>
+      <rect x="80" y="-11" width="140" height="13" fill="#4B8BDA"/>
+      <text x="230" y="0" font-size="11" fill="#1E3A5F" font-weight="600">62.2 → 72.6</text>
+    </g>
+
+    <!-- Emergent -->
+    <rect x="865" y="262" width="250" height="115" rx="8" fill="#fff" stroke="#4B8BDA" stroke-dasharray="4,3"/>
+    <text x="990" y="285" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">涌现：多动作批处理</text>
+    <text x="990" y="308" text-anchor="middle" font-size="11" fill="#3D4F65">每 step tool-call: 1 → 1.4–1.9</text>
+    <text x="990" y="328" text-anchor="middle" font-size="11" fill="#3D4F65">轨迹长度 −33% ~ −45%</text>
+    <text x="990" y="358" text-anchor="middle" font-size="10.5" fill="#7A8699">未训过的 WebArena 也提升</text>
+  </g>
+
+  <!-- Arrow from center to RL -->
+  <line x1="760" y1="500" x2="900" y2="395" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="828" y="445" text-anchor="middle" font-size="11" fill="#4B8BDA">大规模可验证数据</text>
+
+  <!-- Bottom: scaling axis -->
+  <g>
+    <rect x="60" y="640" width="1080" height="90" rx="12" fill="#F1F5FA" stroke="#4B8BDA" stroke-width="1"/>
+    <text x="600" y="668" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">双轴 Scaling：环境多样性 与 轨迹数量 是两条独立的 scaling 维度</text>
+
+    <g transform="translate(180,700)">
+      <circle r="6" fill="#4B8BDA"/>
+      <text x="14" y="5" font-size="12" fill="#3D4F65">10 环境 / 3K 轨迹</text>
+    </g>
+    <line x1="340" y1="705" x2="425" y2="705" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+    <g transform="translate(450,700)">
+      <circle r="8" fill="#4B8BDA"/>
+      <text x="16" y="5" font-size="12" fill="#3D4F65">80 环境 / 3K 轨迹</text>
+    </g>
+    <line x1="620" y1="705" x2="705" y2="705" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+    <g transform="translate(730,700)">
+      <circle r="11" fill="#1E3A5F"/>
+      <text x="20" y="5" font-size="12" fill="#1E3A5F" font-weight="600">80 环境 / 6K 轨迹</text>
+    </g>
+    <text x="990" y="705" font-size="11" fill="#7A8699">→ 性能持续提升</text>
+  </g>
+</svg>

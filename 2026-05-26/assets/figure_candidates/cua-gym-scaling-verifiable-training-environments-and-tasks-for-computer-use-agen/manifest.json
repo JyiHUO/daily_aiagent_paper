@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/downloaded_pdfs/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-11",
+      "page_index": 8,
+      "caption": "Figure 9: Emergent action batching during RL. Average tool calls per model step on CUA-G YM - A3B. The SFT-initialized policy emits approxi- mately one call per step; RL drives this to a sta- ble 1.4–1.9 band.",
+      "clip": [
+        297.7760009765625,
+        152.12709045410156,
+        542.411376953125,
+        382.38702392578125
+      ],
+      "clip_area": 56329.72539718263,
+      "page_area": 501156.9211820215,
+      "text_density": 0.13096300758408067,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.568105382701635,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        56.866127014160156,
+        540.3402099609375,
+        211.44500732421875
+      ],
+      "clip_area": 75044.06021030084,
+      "page_area": 501156.9211820215,
+      "text_density": 0.12096497209482032,
+      "kind": "drawing_cluster",
+      "score": 8.375924565536346,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/02-p4-drawing_cluster.png",
+      "filename": "02-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-13-block-3",
+      "page_index": 13,
+      "caption": "Algorithm 1 CUA-G YM co-generation pipeline.",
+      "clip": [
+        40.714196777343744,
+        18.0,
+        311.46478881835935,
+        166.4011993408203
+      ],
+      "clip_area": 40179.71258112387,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3449292690352673,
+      "kind": "captioned_figure",
+      "score": 7.550685108785338,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/03-p14-captioned_figure.png",
+      "filename": "03-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        70.74199676513672,
+        475.45672607421875,
+        524.4614868164062,
+        618.1211547851562
+      ],
+      "clip_area": 64729.63184318226,
+      "page_area": 501156.9211820215,
+      "text_density": 0.10319673249009442,
+      "kind": "drawing_cluster",
+      "score": 7.327414182185248,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/04-p5-drawing_cluster.png",
+      "filename": "04-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        299.7760009765625,
+        154.12709045410156,
+        540.411376953125,
+        380.38702392578125
+      ],
+      "clip_area": 54446.14415938966,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1194296219991226,
+      "kind": "drawing_cluster",
+      "score": 6.239179837379196,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/05-p9-drawing_cluster.png",
+      "filename": "05-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-1",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        296.0603942871094,
+        76.2606430053711,
+        444.71630859375,
+        220.4544677734375
+      ],
+      "clip_area": 21435.264858268434,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11893110578204329,
+      "kind": "drawing_cluster",
+      "score": 5.902303262613719,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/06-p7-drawing_cluster.png",
+      "filename": "06-p7-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-26/assets/figure_candidates/cua-gym-scaling-verifiable-training-environments-and-tasks-for-computer-use-agen/contact-sheet.svg"
+}
