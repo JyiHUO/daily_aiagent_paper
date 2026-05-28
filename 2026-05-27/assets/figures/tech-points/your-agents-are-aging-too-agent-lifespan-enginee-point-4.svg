@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">行为合规 ≠ 事实正确</text>
+
+  <!-- Left: smooth talking agent -->
+  <g>
+    <circle cx="150" cy="180" r="72" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="150" y="158" text-anchor="middle" font-size="30">🙂</text>
+    <text x="150" y="186" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">"控制餐饮支出"</text>
+    <text x="150" y="206" text-anchor="middle" font-size="11" fill="#3D4F65">流畅 · CVR ≈ 0</text>
+    <text x="150" y="285" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">表面合规</text>
+  </g>
+
+  <!-- Probe arrow -->
+  <line x1="225" y1="180" x2="378" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="301" y="170" text-anchor="middle" font-size="11" fill="#1E3A5F">事实 probe：还剩多少？</text>
+
+  <!-- Right: hidden rotting accumulator -->
+  <g>
+    <rect x="380" y="115" width="180" height="130" rx="8" fill="#FBECEC" stroke="#C76B6B" stroke-width="2"/>
+    <text x="470" y="140" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">累计字段（预算余额）</text>
+    <text x="470" y="172" text-anchor="middle" font-size="20" fill="#C76B6B" font-weight="700">$309 → $?</text>
+    <text x="470" y="195" text-anchor="middle" font-size="11" fill="#3D4F65">precision 0.90 → 0.37</text>
+    <text x="470" y="215" text-anchor="middle" font-size="11" fill="#C76B6B">lag recall ↓↓ · 漂移累积</text>
+    <text x="470" y="285" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">内里失真</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="330" width="440" height="60" rx="8" fill="#F5F1E8" stroke="#B89968" stroke-width="1.5"/>
+  <text x="300" y="355" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">表征问题，不是容量问题</text>
+  <text x="300" y="375" text-anchor="middle" font-size="11" fill="#3D4F65">7B → 30B 都救不了 · 需显式维护衍生状态</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C44545"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">Sink Budget · Intersection Propagation</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">每个值带"还能去哪"的通行证；混合后只取交集</text>
+  <text x="360" y="76" text-anchor="middle" font-size="11" fill="#7A8699">权限单调收窄 — 链得越长，能去的 Sink 越少</text>
+
+  <!-- Left ticket: salaries -->
+  <g>
+    <rect x="60" y="110" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="150" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">salaries.csv  · B₁</text>
+    <text x="150" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">✓ display</text>
+    <text x="150" y="184" text-anchor="middle" font-size="12" fill="#B8C4D6">✗ http</text>
+    <text x="150" y="206" text-anchor="middle" font-size="12" fill="#B8C4D6">✗ email</text>
+  </g>
+
+  <!-- Right ticket: news -->
+  <g>
+    <rect x="480" y="110" width="180" height="120" rx="10" fill="#FDF4EC" stroke="#D89A5B" stroke-width="1.6"/>
+    <text x="570" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">news page  · B₂</text>
+    <text x="570" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">✓ display</text>
+    <text x="570" y="184" text-anchor="middle" font-size="12" fill="#3D4F65">✓ http</text>
+    <text x="570" y="206" text-anchor="middle" font-size="12" fill="#3D4F65">✓ email</text>
+  </g>
+
+  <!-- Merge to summary -->
+  <line x1="240" y1="210" x2="290" y2="295" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="480" y1="210" x2="430" y2="295" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <text x="360" y="265" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">summarize ( B₁ ∩ B₂ )</text>
+
+  <!-- Summary node (intersection) -->
+  <g>
+    <rect x="270" y="300" width="180" height="78" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="360" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">summary</text>
+    <text x="360" y="358" text-anchor="middle" font-size="12" fill="#1E3A5F">B = { display }</text>
+  </g>
+
+  <!-- Allowed sink -->
+  <line x1="315" y1="378" x2="210" y2="418" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="150" y="438" font-size="12" fill="#1E3A5F" font-weight="700">display ✓</text>
+
+  <!-- Blocked sink -->
+  <line x1="405" y1="378" x2="510" y2="418" stroke="#C44545" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arRed)"/>
+  <text x="540" y="438" font-size="12" fill="#C44545" font-weight="700">send-http ✗ blocked</text>
+</svg>

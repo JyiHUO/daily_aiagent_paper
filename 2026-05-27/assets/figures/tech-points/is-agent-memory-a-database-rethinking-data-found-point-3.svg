@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5C"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">MemState: Topic as Self-Contained Unit</text>
+
+  <!-- Central topic node -->
+  <circle cx="190" cy="215" r="98" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="190" y="170" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">Website Redesign</text>
+  <line x1="115" y1="183" x2="265" y2="183" stroke="#9DB4CC" stroke-width="1"/>
+  <text x="190" y="203" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">summary · embedding</text>
+  <text x="190" y="226" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#3D4F65">deadline: 4/20</text>
+  <text x="190" y="246" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#8295A8">history: (3/15,T0) (4/20,T1)</text>
+  <text x="190" y="278" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-style="italic" fill="#8295A8">fields with valued history</text>
+
+  <!-- Extension target -->
+  <ellipse cx="485" cy="130" rx="82" ry="42" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="485" y="128" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">Milestone</text>
+  <text x="485" y="148" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">flagged for revise</text>
+
+  <line x1="278" y1="170" x2="412" y2="135" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="345" y="138" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#4B8BDA">extension — propagates change</text>
+
+  <!-- Association target -->
+  <ellipse cx="485" cy="300" rx="82" ry="42" fill="#FBF1EA" stroke="#A85A3A" stroke-width="2"/>
+  <text x="485" y="298" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#7A3F26">Alice</text>
+  <text x="485" y="316" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#7A3F26">retrieval only</text>
+
+  <line x1="278" y1="262" x2="412" y2="297" stroke="#C97B5C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#b)"/>
+  <text x="345" y="295" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" fill="#A85A3A">association — no propagation</text>
+
+  <!-- Policy guard at bottom -->
+  <rect x="110" y="355" width="380" height="46" rx="6" fill="#FFF8E8" stroke="#B08A3E" stroke-width="1.8"/>
+  <text x="300" y="374" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#6B5320">Policy ⟨event, condition, action⟩</text>
+  <text x="300" y="391" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#6B5320">post-condition checked before commit · abort on violation</text>
+
+  <line x1="190" y1="313" x2="245" y2="354" stroke="#B08A3E" stroke-width="1.5" stroke-dasharray="3,3"/>
+</svg>

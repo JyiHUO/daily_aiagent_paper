@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="-apple-system,Segoe UI,sans-serif">
+  <rect width="720" height="480" fill="#FAF7F2"/>
+  
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Append-only Memory: Four Failures</text>
+  <text x="360" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">CRUD cannot express what long-term memory needs</text>
+
+  <!-- Quadrant 1: unbounded growth -->
+  <g>
+    <rect x="50" y="78" width="300" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="65" y="102" font-size="13" font-weight="600" fill="#1E3A5F">① Unbounded Growth</text>
+    <text x="65" y="120" font-size="11" fill="#3D4F65">CREATE without merge</text>
+    <g font-size="10" fill="#3D4F65">
+      <rect x="65" y="132" width="200" height="18" fill="#fff" stroke="#B8CFE6"/>
+      <text x="73" y="145">deadline = Mar 15</text>
+      <rect x="65" y="154" width="200" height="18" fill="#fff" stroke="#B8CFE6"/>
+      <text x="73" y="167">deadline = Mar 15</text>
+      <rect x="65" y="176" width="200" height="18" fill="#fff" stroke="#B8CFE6"/>
+      <text x="73" y="189">deadline = Mar 15</text>
+    </g>
+    <text x="65" y="222" font-size="10" fill="#B05A3C">duplicates pile up</text>
+  </g>
+
+  <!-- Quadrant 2: no semantic revision -->
+  <g>
+    <rect x="370" y="78" width="300" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="385" y="102" font-size="13" font-weight="600" fill="#1E3A5F">② No Semantic Revision</text>
+    <text x="385" y="120" font-size="11" fill="#3D4F65">UPDATE cannot supersede</text>
+    <g font-size="10">
+      <rect x="385" y="132" width="270" height="18" fill="#fff" stroke="#B8CFE6"/>
+      <text x="393" y="145" fill="#9AA8B8" text-decoration="line-through">deadline = Mar 15  (old)</text>
+      <rect x="385" y="154" width="270" height="18" fill="#fff" stroke="#4B8BDA"/>
+      <text x="393" y="167" fill="#1E3A5F">deadline = Apr 20  (new)</text>
+    </g>
+    <text x="385" y="222" font-size="10" fill="#B05A3C">old and new coexist — ambiguous answer</text>
+  </g>
+
+  <!-- Quadrant 3: age-based forgetting -->
+  <g>
+    <rect x="50" y="270" width="300" height="170" rx="10" fill="#FFF4EC" stroke="#D9894E" stroke-width="1.3"/>
+    <text x="65" y="294" font-size="13" font-weight="600" fill="#1E3A5F">③ Forgets by Age, not Value</text>
+    <text x="65" y="312" font-size="11" fill="#3D4F65">DELETE ignores importance</text>
+    
+    <rect x="65" y="328" width="160" height="22" fill="#fff" stroke="#B8CFE6"/>
+    <text x="73" y="343" font-size="11" fill="#1E3A5F">project info (high-value)</text>
+    <line x1="68" y1="339" x2="222" y2="339" stroke="#C44" stroke-width="1.5"/>
+    <text x="235" y="343" font-size="10" fill="#C44">evicted</text>
+    
+    <rect x="65" y="358" width="160" height="22" fill="#fff" stroke="#B8CFE6"/>
+    <text x="73" y="373" font-size="11" fill="#1E3A5F">lunch chat (trivia)</text>
+    <text x="235" y="373" font-size="10" fill="#6A8A55">kept</text>
+
+    <text x="65" y="412" font-size="10" fill="#B05A3C">high-value lost, trivia survives</text>
+  </g>
+
+  <!-- Quadrant 4: read-only retrieval -->
+  <g>
+    <rect x="370" y="270" width="300" height="170" rx="10" fill="#FFF4EC" stroke="#D9894E" stroke-width="1.3"/>
+    <text x="385" y="294" font-size="13" font-weight="600" fill="#1E3A5F">④ Read-only Retrieval</text>
+    <text x="385" y="312" font-size="11" fill="#3D4F65">READ leaves no trace</text>
+
+    <circle cx="400" cy="350" r="6" fill="#4B8BDA"/>
+    <circle cx="424" cy="350" r="6" fill="#4B8BDA"/>
+    <circle cx="448" cy="350" r="6" fill="#4B8BDA"/>
+    <text x="465" y="354" font-size="10" fill="#3D4F65">accessed 10× — still weight = 1</text>
+
+    <text x="385" y="412" font-size="10" fill="#B05A3C">frequent facts not reinforced</text>
+  </g>
+
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">逐层换零件 · 定位失败阶段</text>
+  <text x="300" y="52" text-anchor="middle" font-size="12" fill="#3D4F65">Counterfactual Probes (P1 / P2 / P3)</text>
+
+  <!-- P1 -->
+  <g>
+    <rect x="50" y="80" width="150" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="125" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">P1 · 全自家</text>
+    <circle cx="85" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="85" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">写</text>
+    <circle cx="125" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="125" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">读</text>
+    <circle cx="165" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="165" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">用</text>
+    <text x="125" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">Agent 自带管线</text>
+    <text x="125" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">Acc(P1)</text>
+  </g>
+
+  <!-- P2 -->
+  <g>
+    <rect x="225" y="80" width="150" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="300" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">P2 · 换检索</text>
+    <circle cx="260" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="260" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">写</text>
+    <circle cx="300" cy="150" r="14" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+    <text x="300" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">读★</text>
+    <circle cx="340" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="340" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">用</text>
+    <text x="300" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">oracle retriever</text>
+    <text x="300" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">Acc(P2)</text>
+  </g>
+
+  <!-- P3 -->
+  <g>
+    <rect x="400" y="80" width="150" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="475" y="105" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">P3 · 喂答案</text>
+    <circle cx="435" cy="150" r="14" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+    <text x="435" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">写★</text>
+    <circle cx="475" cy="150" r="14" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+    <text x="475" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">读★</text>
+    <circle cx="515" cy="150" r="14" fill="#FCE8D5" stroke="#D89A6A"/>
+    <text x="515" y="154" text-anchor="middle" font-size="10" fill="#1E3A5F">用</text>
+    <text x="475" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">gold context 注入</text>
+    <text x="475" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">Acc(P3)</text>
+  </g>
+
+  <!-- arrows between probes -->
+  <line x1="200" y1="150" x2="223" y2="150" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="375" y1="150" x2="398" y2="150" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- diff labels -->
+  <g>
+    <rect x="120" y="270" width="360" height="92" rx="8" fill="#FFF8F0" stroke="#D89A6A" stroke-width="1"/>
+    <text x="300" y="293" text-anchor="middle" font-size="12" fill="#1E3A5F">Acc(P2) − Acc(P1) = <tspan font-weight="700" fill="#C0392B">Read error</tspan> (检索的锅)</text>
+    <text x="300" y="315" text-anchor="middle" font-size="12" fill="#1E3A5F">Acc(P3) − Acc(P2) = <tspan font-weight="700" fill="#C0392B">Write error</tspan> (写入的锅)</text>
+    <text x="300" y="337" text-anchor="middle" font-size="12" fill="#1E3A5F">1 − Acc(P3) = <tspan font-weight="700" fill="#C0392B">Utilize error</tspan> (不会用)</text>
+    <text x="300" y="355" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">同一错答 → 拆出不同病因，对症修复</text>
+  </g>
+
+  <text x="300" y="390" text-anchor="middle" font-size="11" fill="#3D4F65">维护事件单独以事件前后窗口的 Δshock 度量</text>
+</svg>

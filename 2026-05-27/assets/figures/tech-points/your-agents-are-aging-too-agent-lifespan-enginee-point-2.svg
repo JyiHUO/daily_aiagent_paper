@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="320" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Agent Aging Curve</text>
+  <text x="320" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">scoring across sessions, not day-one</text>
+
+  <!-- Left: stacked sessions -->
+  <g transform="translate(40,100)">
+    <rect x="0" y="0" width="160" height="220" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">sessions (temporal DAG)</text>
+    <g font-size="10" fill="#3D4F65">
+      <line x1="15" y1="48" x2="145" y2="48" stroke="#4B8BDA" stroke-width="1"/>
+      <text x="80" y="62" text-anchor="middle">s1  fact written</text>
+      <line x1="15" y1="82" x2="145" y2="82" stroke="#4B8BDA" stroke-width="1"/>
+      <text x="80" y="96" text-anchor="middle">s2  version++</text>
+      <line x1="15" y1="116" x2="145" y2="116" stroke="#4B8BDA" stroke-width="1"/>
+      <text x="80" y="130" text-anchor="middle">s3  interference</text>
+      <line x1="15" y1="150" x2="145" y2="150" stroke="#C97A4A" stroke-width="1.5"/>
+      <text x="80" y="164" text-anchor="middle" fill="#9E4A1F" font-weight="600">s5  flush event</text>
+      <line x1="15" y1="190" x2="145" y2="190" stroke="#4B8BDA" stroke-width="1"/>
+      <text x="80" y="204" text-anchor="middle">s8  probe</text>
+    </g>
+  </g>
+
+  <!-- Arrow from sessions to plot -->
+  <path d="M 204 210 L 254 210" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Right: aging curve -->
+  <g transform="translate(260,100)">
+    <rect x="0" y="0" width="340" height="220" rx="8" fill="#FFF7EE" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="170" y="22" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">precision over time</text>
+
+    <!-- axes -->
+    <line x1="40" y1="50" x2="40" y2="190" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="40" y1="190" x2="315" y2="190" stroke="#3D4F65" stroke-width="1"/>
+    <text x="22" y="56" font-size="10" fill="#3D4F65">1.0</text>
+    <text x="22" y="194" font-size="10" fill="#3D4F65">0</text>
+    <text x="315" y="206" text-anchor="end" font-size="10" fill="#3D4F65">session →</text>
+
+    <!-- half-life marker (drawn behind curve) -->
+    <line x1="150" y1="50" x2="150" y2="190" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="153" y="62" font-size="10" fill="#1E3A5F" font-weight="600">half-life</text>
+
+    <!-- decaying curve with a drop at s5 -->
+    <path d="M 50 60 Q 95 72 125 95 T 175 135 L 180 172 Q 220 178 260 184 L 300 188"
+          fill="none" stroke="#C97A4A" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- lifecycle event marker -->
+    <circle cx="178" cy="152" r="4" fill="#9E4A1F"/>
+    <text x="186" y="148" font-size="10" fill="#9E4A1F">lifecycle event (s5)</text>
+
+    <!-- decay slope label -->
+    <text x="250" y="170" font-size="10" fill="#3D4F65" font-style="italic">decay slope</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="320" y="380" text-anchor="middle" font-size="11" fill="#3D4F65">temporal DAG drives sessions → aging curve reveals when agents break</text>
+</svg>

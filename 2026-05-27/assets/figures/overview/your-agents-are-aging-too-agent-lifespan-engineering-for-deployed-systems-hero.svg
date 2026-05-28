@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A4A"/>
+    </marker>
+    <linearGradient id="aging" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#7FB3E8"/>
+      <stop offset="1" stop-color="#C97A4A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="640" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="500" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">你的 Agent 也在变老</text>
+  <text x="500" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">权重冻结 ≠ 系统冻结：部署后的可靠性是一条衰减曲线</text>
+
+  <!-- Day-1 Agent (left, fresh) -->
+  <g>
+    <circle cx="130" cy="320" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="115" cy="312" r="5" fill="#1E3A5F"/>
+    <circle cx="145" cy="312" r="5" fill="#1E3A5F"/>
+    <path d="M112 335 Q130 348 148 335" stroke="#1E3A5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="130" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Day-1 Agent</text>
+    <text x="130" y="425" text-anchor="middle" font-size="11" fill="#3D4F65">基准分数光鲜</text>
+  </g>
+
+  <!-- Aged Agent (right, tired) -->
+  <g>
+    <circle cx="870" cy="320" r="58" fill="#FBEFE6" stroke="#C97A4A" stroke-width="2"/>
+    <path d="M850 308 L862 314 M890 308 L878 314" stroke="#1E3A5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M852 345 Q870 335 888 345" stroke="#1E3A5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="870" y="408" text-anchor="middle" font-size="13" font-weight="700" fill="#C25A2E">Aged Agent</text>
+    <text x="870" y="425" text-anchor="middle" font-size="11" fill="#3D4F65">8–200 sessions 之后</text>
+  </g>
+
+  <!-- Aging arrow timeline -->
+  <line x1="195" y1="320" x2="805" y2="320" stroke="url(#aging)" stroke-width="3" marker-end="url(#arO)"/>
+  <text x="500" y="312" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">时间 / 会话累积</text>
+
+  <!-- Four aging mechanisms (above timeline) -->
+  <g font-size="11.5" fill="#1E3A5F">
+    <g>
+      <rect x="225" y="135" width="135" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="292" y="160" text-anchor="middle" font-weight="700">压缩老化</text>
+      <text x="292" y="180" text-anchor="middle" font-size="10.5" fill="#3D4F65">写入时丢细节</text>
+    </g>
+    <g>
+      <rect x="375" y="135" width="135" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="442" y="160" text-anchor="middle" font-weight="700">干扰老化</text>
+      <text x="442" y="180" text-anchor="middle" font-size="10.5" fill="#3D4F65">相似记忆混淆</text>
+    </g>
+    <g>
+      <rect x="525" y="135" width="135" height="62" rx="10" fill="#FBEFE6" stroke="#C97A4A" stroke-width="1.5"/>
+      <text x="592" y="160" text-anchor="middle" font-weight="700">修订老化</text>
+      <text x="592" y="180" text-anchor="middle" font-size="10.5" fill="#3D4F65">事实更新未传播</text>
+    </g>
+    <g>
+      <rect x="675" y="135" width="135" height="62" rx="10" fill="#FBEFE6" stroke="#C97A4A" stroke-width="1.5"/>
+      <text x="742" y="160" text-anchor="middle" font-weight="700">维护老化</text>
+      <text x="742" y="180" text-anchor="middle" font-size="10.5" fill="#3D4F65">flush/recompact 冲击</text>
+    </g>
+  </g>
+  <!-- connect mechanisms to timeline -->
+  <g stroke="#9FB6CC" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <line x1="292" y1="197" x2="292" y2="318"/>
+    <line x1="442" y1="197" x2="442" y2="318"/>
+    <line x1="592" y1="197" x2="592" y2="318"/>
+    <line x1="742" y1="197" x2="742" y2="318"/>
+  </g>
+
+  <!-- Diagnostic probe (below timeline) -->
+  <g>
+    <rect x="225" y="450" width="550" height="125" rx="12" fill="#F4F8FD" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="500" y="475" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">AgingBench · 反事实探针定位失败阶段</text>
+
+    <!-- three stages -->
+    <g font-size="11" fill="#1E3A5F">
+      <rect x="248" y="495" width="140" height="58" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="318" y="516" text-anchor="middle" font-weight="700">Write</text>
+      <text x="318" y="534" text-anchor="middle" font-size="10" fill="#3D4F65">写入压缩出错</text>
+      <text x="318" y="548" text-anchor="middle" font-size="10" fill="#3D4F65">→ 改写入策略</text>
+
+      <rect x="430" y="495" width="140" height="58" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="500" y="516" text-anchor="middle" font-weight="700">Retrieve</text>
+      <text x="500" y="534" text-anchor="middle" font-size="10" fill="#3D4F65">检索抓错条目</text>
+      <text x="500" y="548" text-anchor="middle" font-size="10" fill="#3D4F65">→ 抗干扰检索</text>
+
+      <rect x="612" y="495" width="140" height="58" rx="8" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="682" y="516" text-anchor="middle" font-weight="700">Utilize</text>
+      <text x="682" y="534" text-anchor="middle" font-size="10" fill="#3D4F65">拿到也不会用</text>
+      <text x="682" y="548" text-anchor="middle" font-size="10" fill="#3D4F65">→ 改 planning</text>
+    </g>
+
+    <line x1="388" y1="524" x2="430" y2="524" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+    <line x1="570" y1="524" x2="612" y2="524" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Feedback loop arrow from probe back to Aged agent -->
+  <path d="M775 500 Q840 470 870 380" stroke="#4B8BDA" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <text x="828" y="455" text-anchor="end" font-size="10" fill="#3D4F65" font-style="italic">阶段定向修复</text>
+
+  <!-- Bottom keywords -->
+  <text x="500" y="610" text-anchor="middle" font-size="11.5" fill="#1E3A5F"><tspan font-weight="700">纵向评测</tspan><tspan dx="14">·</tspan><tspan dx="10" font-weight="700">机制级诊断</tspan><tspan dx="14">·</tspan><tspan dx="10" font-weight="700">阶段定向修复</tspan></text>
+</svg>

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/downloaded_pdfs/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-15",
+      "page_index": 2,
+      "caption": "Figure 1. Budget propagation example. A summary combining salary data (display-only) and public news inherits the most restric- tive budget via intersection. Because the resulting budget permits display but not HTTP sending, the outbound call is blocked while user display is allowed. This monotonic attenuation is the core runtime property of ChainCaps.",
+      "clip": [
+        291.9411315917969,
+        51.22468566894531,
+        556.9426879882812,
+        164.17428588867188
+      ],
+      "clip_area": 29931.819852588233,
+      "page_area": 484704.0,
+      "text_density": 0.20356540225318104,
+      "kind": "drawing_cluster_with_caption",
+      "score": 38.91865164094901,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-14",
+      "page_index": 4,
+      "caption": "Figure 2. ChainCaps proxy architecture. The proxy intercepts every tools/call between the LLM agent and tool server. Steps 1–2 resolve argument dependencies and compute B agg = B ctx ∩ T",
+      "clip": [
+        37.574462890625,
+        62.66015625,
+        307.30572509765625,
+        167.77198791503906
+      ],
+      "clip_area": 28351.94702790398,
+      "page_area": 484704.0,
+      "text_density": 0.28087897522214084,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.262283120314926,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/02-p5-drawing_cluster_with_caption.png",
+      "filename": "02-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-15",
+      "page_index": 2,
+      "caption": "Figure 1. Budget propagation example. A summary combining salary data (display-only) and public news inherits the most restric- tive budget via intersection. Because the resulting budget permits display but not HTTP sending, the outbound call is blocked while user display is allowed. This monotonic attenuation is the core runtime property of ChainCaps.",
+      "clip": [
+        276.2930053710937,
+        18.0,
+        573.5246215820313,
+        147.4839324951172
+      ],
+      "clip_area": 38486.718528871614,
+      "page_area": 484704.0,
+      "text_density": 0.14142893388560607,
+      "kind": "captioned_figure",
+      "score": 30.74189417273999,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/03-p3-captioned_figure.png",
+      "filename": "03-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-14",
+      "page_index": 4,
+      "caption": "Figure 2. ChainCaps proxy architecture. The proxy intercepts every tools/call between the LLM agent and tool server. Steps 1–2 resolve argument dependencies and compute B agg = B ctx ∩ T",
+      "clip": [
+        24.293001556396483,
+        18.0,
+        321.612451171875,
+        151.0529022216797
+      ],
+      "clip_area": 39559.21565829189,
+      "page_area": 484704.0,
+      "text_density": 0.1838414074611949,
+      "kind": "captioned_figure",
+      "score": 28.209062392975994,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/04-p5-captioned_figure.png",
+      "filename": "04-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-49",
+      "page_index": 4,
+      "caption": "Figure 3. Attack success rate across five frontier models. Without defense, ASR ranges from 25% to 68%. With ChainCaps , all tested models fall to ≤ 5% ASR (Qwen 3.5 reaches 0%), corresponding to an 86–100% relative reduction on this stress-test suite.",
+      "clip": [
+        276.2930053710937,
+        18.0,
+        572.0444580078125,
+        278.67108154296875
+      ],
+      "clip_area": 77093.85102671759,
+      "page_area": 484704.0,
+      "text_density": 0.2520223118340501,
+      "kind": "captioned_figure",
+      "score": 13.535259634698303,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/05-p5-captioned_figure.png",
+      "filename": "05-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        293.9411315917969,
+        53.22468566894531,
+        554.9426879882812,
+        162.17428588867188
+      ],
+      "clip_area": 28436.01522612339,
+      "page_area": 484704.0,
+      "text_density": 0.19549973382502303,
+      "kind": "drawing_cluster",
+      "score": 3.385971695233323,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/06-p3-drawing_cluster.png",
+      "filename": "06-p3-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/chaincaps-composition-safe-tool-using-agents-via-monotonic-capability-attenuatio/contact-sheet.svg"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-27",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-27 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems</strong></li><li><strong>Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory</strong></li><li><strong>ChainCaps: Composition-Safe Tool-Using Agents via Monotonic Capability Attenuation</strong></li></ul><p>['记忆与运行时治理是今天的真正主战场，eval 正在变成它们的诊断工具']</p>",
+  "report_date": "2026-05-27",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-27T22:09:11Z"
+}

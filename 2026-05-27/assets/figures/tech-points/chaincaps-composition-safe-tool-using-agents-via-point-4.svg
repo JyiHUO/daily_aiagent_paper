@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+    <marker id="arDark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="18" font-weight="bold" fill="#1E3A5F">Non-Amplification Theorem</text>
+  <text x="300" y="54" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">A sink is allowed only if every origin permitted it from the start</text>
+
+  <!-- Source -->
+  <circle cx="90" cy="230" r="54" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.6"/>
+  <text x="90" y="222" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">Origin</text>
+  <text x="90" y="240" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">salaries.csv</text>
+  <text x="90" y="256" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">Init = {display}</text>
+
+  <!-- Chain (intermediate steps) -->
+  <g>
+    <circle cx="225" cy="230" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="295" cy="230" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="365" cy="230" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="225" y="233" text-anchor="middle" font-family="Helvetica,Arial" font-size="9" fill="#3D4F65">sum</text>
+    <text x="295" y="233" text-anchor="middle" font-family="Helvetica,Arial" font-size="9" fill="#3D4F65">trans</text>
+    <text x="365" y="233" text-anchor="middle" font-family="Helvetica,Arial" font-size="9" fill="#3D4F65">fmt</text>
+  </g>
+  <text x="295" y="195" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" font-style="italic" fill="#3D4F65">budget can only shrink (∩)</text>
+
+  <!-- Sink (denied) -->
+  <rect x="445" y="190" width="115" height="80" rx="8" fill="#FBE9E5" stroke="#C8553D" stroke-width="1.6"/>
+  <text x="502" y="216" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#7A2E1F">Sink: send-http</text>
+  <text x="502" y="252" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#C8553D">BLOCKED</text>
+
+  <!-- Flow arrows through chain -->
+  <line x1="144" y1="230" x2="207" y2="230" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="241" y1="230" x2="277" y2="230" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="311" y1="230" x2="347" y2="230" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="381" y1="230" x2="443" y2="230" stroke="#C8553D" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
+
+  <!-- Audit shortcut -->
+  <path d="M 90 176 Q 295 95 502 188" fill="none" stroke="#1E3A5F" stroke-width="1.6" stroke-dasharray="2,4" marker-end="url(#arDark)"/>
+  <text x="295" y="110" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="bold" fill="#1E3A5F">audit shortcut: Req(sink) ∈ Init(origin) ?</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="330" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">No need to trace the full chain — checking the origin's initial budget suffices.</text>
+  <text x="300" y="362" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" font-style="italic" fill="#4B8BDA">expressiveness: m sinks → m bits (vs. 2^m scalar IFC labels)</text>
+</svg>

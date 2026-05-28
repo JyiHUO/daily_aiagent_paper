@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A4A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Agent 记忆 ≠ 数据库</text>
+  <text x="440" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">从记录级 CRUD 到状态轨迹级正确性 (GEM)</text>
+
+  <!-- LEFT: CRUD broken state -->
+  <g>
+    <rect x="55" y="105" width="320" height="430" rx="14" fill="#FAF3EC" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="215" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#7A3E1F">记录级 CRUD：四种失败</text>
+
+    <!-- Stack of records (unregulated growth) -->
+    <g transform="translate(80,150)">
+      <rect x="0" y="0" width="200" height="22" rx="3" fill="#FFF" stroke="#C97A4A"/>
+      <text x="10" y="15" font-size="11" fill="#3D4F65">deadline = 3/15</text>
+      <rect x="0" y="26" width="200" height="22" rx="3" fill="#FFF" stroke="#C97A4A"/>
+      <text x="10" y="41" font-size="11" fill="#3D4F65">deadline = 3/15  (重复)</text>
+      <rect x="0" y="52" width="200" height="22" rx="3" fill="#FFF" stroke="#C97A4A"/>
+      <text x="10" y="67" font-size="11" fill="#3D4F65">deadline = 4/20  (新)</text>
+      <text x="215" y="48" font-size="22" fill="#C97A4A">↯</text>
+    </g>
+
+    <!-- four failure tags -->
+    <g font-size="11.5" fill="#7A3E1F">
+      <circle cx="80" cy="265" r="5" fill="#C97A4A"/>
+      <text x="92" y="269">① 无节制增长</text>
+      <circle cx="80" cy="293" r="5" fill="#C97A4A"/>
+      <text x="92" y="297">② 缺少语义修订（旧值不消失）</text>
+      <circle cx="80" cy="321" r="5" fill="#C97A4A"/>
+      <text x="92" y="325">③ 按年龄遗忘，而非相关性</text>
+      <circle cx="80" cy="349" r="5" fill="#C97A4A"/>
+      <text x="92" y="353">④ 只读检索，不强化重要记忆</text>
+    </g>
+
+    <!-- failure illustration -->
+    <g transform="translate(80,395)">
+      <rect width="270" height="120" rx="6" fill="#FFF7F0" stroke="#E0B89A"/>
+      <text x="14" y="24" font-size="11.5" fill="#7A3E1F" font-weight="600">用户："deadline 改了吗？"</text>
+      <text x="14" y="50" font-size="11" fill="#3D4F65">→ 检索可能返回 3/15（旧）</text>
+      <text x="14" y="74" font-size="11" fill="#3D4F65">→ 两周后该项目被按容量淘汰</text>
+      <text x="14" y="100" font-size="11.5" fill="#C97A4A" font-weight="600">→ Agent: "I don't know."</text>
+    </g>
+  </g>
+
+  <!-- Arrow between -->
+  <g>
+    <path d="M 385 320 L 495 320" stroke="#1E3A5F" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+    <text x="440" y="310" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">重新抽象</text>
+  </g>
+
+  <!-- RIGHT: GEM state trajectory -->
+  <g>
+    <rect x="505" y="105" width="320" height="430" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="665" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GEM：状态轨迹的正确性</text>
+
+    <!-- Central topic node -->
+    <g transform="translate(540,150)">
+      <rect width="250" height="120" rx="10" fill="#FFF" stroke="#1E3A5F" stroke-width="1.5"/>
+      <text x="125" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Topic: Website Redesign</text>
+      <line x1="12" y1="32" x2="238" y2="32" stroke="#CBD5E1"/>
+      <text x="12" y="52" font-size="11" fill="#3D4F65">deadline 历史:</text>
+      <text x="22" y="72" font-size="10.5" fill="#94A3B8" text-decoration="line-through">3/15  @T0</text>
+      <text x="22" y="90" font-size="11" fill="#1E3A5F" font-weight="600">4/20  @T1   ✓ active</text>
+      <text x="12" y="110" font-size="11" fill="#3D4F65">salience: ▮▮▮▮▯</text>
+    </g>
+
+    <!-- Four operators around -->
+    <g font-size="11" font-weight="600">
+      <rect x="525" y="295" width="135" height="36" rx="18" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="592" y="318" text-anchor="middle" fill="#1E3A5F">① ingestion 整合</text>
+
+      <rect x="670" y="295" width="135" height="36" rx="18" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="737" y="318" text-anchor="middle" fill="#1E3A5F">② revision 修订</text>
+
+      <rect x="525" y="342" width="135" height="36" rx="18" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="592" y="365" text-anchor="middle" fill="#1E3A5F">③ forgetting 衰减</text>
+
+      <rect x="670" y="342" width="135" height="36" rx="18" fill="#DBEAFE" stroke="#4B8BDA"/>
+      <text x="737" y="365" text-anchor="middle" fill="#1E3A5F">④ retrieval 读+写</text>
+    </g>
+
+    <!-- Policy / correctness -->
+    <g transform="translate(525,398)">
+      <rect width="280" height="60" rx="8" fill="#FFF" stroke="#4B8BDA" stroke-dasharray="4 3"/>
+      <text x="140" y="24" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E3A5F">声明式策略 P_t  ⟨event, cond, action⟩</text>
+      <text x="140" y="44" text-anchor="middle" font-size="10.5" fill="#3D4F65">事务 commit 前校验 C1–C6，违反则回滚</text>
+    </g>
+
+    <!-- closed loop arrow: retrieval -> topic salience (读即强化) -->
+    <path d="M 805 360 C 850 300, 830 215, 790 205" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#ah)"/>
+    <text x="843" y="285" text-anchor="middle" font-size="10" fill="#4B8BDA" transform="rotate(90,843,285)">读即强化</text>
+
+    <!-- MemState label -->
+    <text x="665" y="485" text-anchor="middle" font-size="11.5" fill="#3D4F65">原型 <tspan font-weight="700" fill="#1E3A5F">MemState</tspan>　·　Property Graph (Kuzu)</text>
+    <text x="665" y="505" text-anchor="middle" font-size="10.5" fill="#64748B">extension 边传播修订 · association 边扩展检索</text>
+  </g>
+
+  <!-- bottom keyword strip -->
+  <g font-size="11" fill="#1E3A5F">
+    <text x="440" y="572" text-anchor="middle" font-weight="600">轨迹级正确性　·　状态级算子　·　记忆即新型数据管理 workload</text>
+    <text x="440" y="595" text-anchor="middle" font-size="10.5" fill="#64748B">未来方向：原生记忆引擎　|　轨迹评测基准　|　共享记忆隐私</text>
+  </g>
+</svg>

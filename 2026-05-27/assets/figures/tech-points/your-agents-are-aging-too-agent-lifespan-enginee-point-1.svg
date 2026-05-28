@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Why did the agent get it wrong?</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65">Four kinds of agent aging</text>
+
+  <!-- Central aged agent -->
+  <circle cx="400" cy="270" r="48" fill="#FFF4E6" stroke="#D9914A" stroke-width="2"/>
+  <text x="400" y="266" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">aging</text>
+  <text x="400" y="284" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">agent</text>
+
+  <!-- Group label: cumulative -->
+  <text x="170" y="108" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7A8AA0" letter-spacing="1.5">CUMULATIVE</text>
+
+  <!-- 1. Compression -->
+  <g>
+    <rect x="70" y="125" width="200" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <rect x="92" y="148" width="46" height="60" fill="#fff" stroke="#3D4F65"/>
+    <line x1="98" y1="160" x2="132" y2="160" stroke="#3D4F65"/>
+    <line x1="98" y1="170" x2="132" y2="170" stroke="#3D4F65"/>
+    <line x1="98" y1="180" x2="132" y2="180" stroke="#3D4F65"/>
+    <line x1="98" y1="190" x2="120" y2="190" stroke="#3D4F65"/>
+    <path d="M148 178 L178 178" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="190" y="166" width="30" height="24" fill="#fff" stroke="#3D4F65"/>
+    <line x1="195" y1="176" x2="215" y2="176" stroke="#3D4F65"/>
+    <text x="170" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Compression</text>
+  </g>
+
+  <!-- 2. Interference -->
+  <g>
+    <rect x="70" y="305" width="200" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="105" y="350" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">John Smith</text>
+    <text x="105" y="375" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">John Smyth</text>
+    <text x="215" y="367" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#D9914A">?</text>
+    <text x="170" y="405" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Interference</text>
+  </g>
+
+  <!-- Group label: event-triggered -->
+  <text x="630" y="108" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#7A8AA0" letter-spacing="1.5">EVENT-TRIGGERED</text>
+
+  <!-- 3. Revision -->
+  <g>
+    <rect x="530" y="125" width="200" height="110" rx="10" fill="#FFF4E6" stroke="#D9914A" stroke-width="1.6"/>
+    <rect x="565" y="150" width="130" height="58" fill="#fff" stroke="#3D4F65"/>
+    <text x="630" y="175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#A04848">Premium</text>
+    <line x1="585" y1="171" x2="675" y2="171" stroke="#A04848" stroke-width="1.5"/>
+    <text x="630" y="197" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">Free</text>
+    <text x="630" y="225" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Revision</text>
+  </g>
+
+  <!-- 4. Maintenance -->
+  <g>
+    <rect x="530" y="305" width="200" height="110" rx="10" fill="#FFF4E6" stroke="#D9914A" stroke-width="1.6"/>
+    <rect x="560" y="335" width="60" height="50" fill="#fff" stroke="#3D4F65"/>
+    <line x1="568" y1="350" x2="612" y2="350" stroke="#3D4F65"/>
+    <line x1="568" y1="362" x2="612" y2="362" stroke="#3D4F65"/>
+    <line x1="568" y1="374" x2="600" y2="374" stroke="#3D4F65"/>
+    <g transform="translate(660 340) rotate(35)">
+      <rect x="-4" y="0" width="8" height="36" fill="#D9914A"/>
+      <circle cx="0" cy="-6" r="10" fill="none" stroke="#D9914A" stroke-width="5"/>
+    </g>
+    <text x="630" y="405" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Maintenance</text>
+  </g>
+
+  <!-- arrows from each cause to central agent -->
+  <path d="M270 200 L356 254" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M270 340 L356 286" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M530 200 L444 254" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+  <path d="M530 340 L444 286" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+
+  <!-- bottom note -->
+  <text x="400" y="475" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">same wrong answer — different cause, different fix</text>
+</svg>

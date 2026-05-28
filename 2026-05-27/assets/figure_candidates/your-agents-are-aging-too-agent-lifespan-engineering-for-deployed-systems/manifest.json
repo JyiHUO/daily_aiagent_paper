@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/downloaded_pdfs/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-23",
+      "page_index": 8,
+      "caption": "Figure 6 | Aging diagnostic profiles across different models and scenarios under our attribution.",
+      "clip": [
+        271.7923889160156,
+        513.6489868164062,
+        549.7424926757812,
+        675.666015625
+      ],
+      "clip_area": 45032.64996819757,
+      "page_area": 501156.9211820215,
+      "text_density": 1.0,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.50036277742442,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-61",
+      "page_index": 6,
+      "caption": "Figure 4 | Overall downward trend of aging measured by headline metrics within each scenario.",
+      "clip": [
+        47.552001953125,
+        69.03732299804688,
+        544.694580078125,
+        340.239013671875
+      ],
+      "clip_area": 134825.90769344568,
+      "page_area": 501156.9211820215,
+      "text_density": 0.18634703575335163,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.619177854798902,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-14",
+      "page_index": 7,
+      "caption": "Figure 5 | Memory Pipeline. Data flows sequentially as",
+      "clip": [
+        290.17999267578125,
+        430.4305725097656,
+        549.7932739257812,
+        523.416015625
+      ],
+      "clip_area": 24140.255995631218,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3625293047290861,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.316466782872958,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/03-p8-drawing_cluster_with_caption.png",
+      "filename": "03-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-11-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        40.00401306152344,
+        113.89572143554688,
+        428.43804931640625,
+        299.86712646484375
+      ],
+      "clip_area": 72237.6234835214,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15130010677294145,
+      "kind": "embedded_image",
+      "xref": 786,
+      "score": 7.524633854551529,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/04-p2-embedded_image.png",
+      "filename": "04-p2-embedded_image.png"
+    },
+    {
+      "id": "page-6-block-61",
+      "page_index": 6,
+      "caption": "Figure 4 | Overall downward trend of aging measured by headline metrics within each scenario.",
+      "clip": [
+        32.59819946289062,
+        18.0,
+        545.9005187988281,
+        321.0382995605469
+      ],
+      "clip_area": 155550.26201204731,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14455646590387797,
+      "kind": "captioned_figure",
+      "score": 4.126612045767322,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/05-p7-captioned_figure.png",
+      "filename": "05-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-23",
+      "page_index": 8,
+      "caption": "Figure 6 | Aging diagnostic profiles across different models and scenarios under our attribution.",
+      "clip": [
+        267.87420043945315,
+        333.378271484375,
+        562.8584045410156,
+        662.13427734375
+      ],
+      "clip_area": 96977.82873203635,
+      "page_area": 501156.9211820215,
+      "text_density": 0.937345015884467,
+      "kind": "captioned_figure",
+      "score": 3.077531430355961,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/06-p9-captioned_figure.png",
+      "filename": "06-p9-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/assets/figure_candidates/your-agents-are-aging-too-agent-lifespan-engineering-for-deployed-systems/contact-sheet.svg"
+}

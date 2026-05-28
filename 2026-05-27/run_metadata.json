@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-27",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 439,
+  "selected_count": 3,
+  "focus_titles": [
+    "Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems",
+    "Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory",
+    "ChainCaps: Composition-Safe Tool-Using Agents via Monotonic Capability Attenuation"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-27/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}
