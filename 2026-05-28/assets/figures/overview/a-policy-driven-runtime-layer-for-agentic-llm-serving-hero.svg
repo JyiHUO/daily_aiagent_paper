@@ -1,0 +1,92 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8924A"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Agent 运行时：缝合上下两层的第三层</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Policy-Driven Runtime for Agentic LLM Serving</text>
+
+  <!-- Top layer: Agent Framework -->
+  <rect x="80" y="100" width="740" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="110" y="130" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Agent 框架（AutoGen / LangGraph）</text>
+  <text x="110" y="152" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7B8FA8">知道 Agent 身份与调度，看不到引擎事件</text>
+
+  <circle cx="540" cy="140" r="16" fill="#4B8BDA"/>
+  <text x="540" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">P</text>
+  <circle cx="600" cy="140" r="16" fill="#4B8BDA"/>
+  <text x="600" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">T</text>
+  <circle cx="660" cy="140" r="16" fill="#4B8BDA"/>
+  <text x="660" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">C</text>
+  <text x="745" y="145" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7B8FA8">Planner / Tester / Coder</text>
+
+  <!-- Gap label -->
+  <text x="450" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-style="italic" fill="#E8924A">↕ 缝隙：身份与事件无法对齐</text>
+
+  <!-- Middle layer: Agent Runtime (the contribution) -->
+  <rect x="80" y="220" width="740" height="160" rx="12" fill="#FFF4E8" stroke="#E8924A" stroke-width="2.5"/>
+  <text x="110" y="250" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#B85A1E">Agent 运行时层　以 Agent 身份为共享坐标</text>
+
+  <!-- 4 primitives -->
+  <g>
+    <rect x="100" y="290" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="175" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#B85A1E">observe</text>
+    <text x="175" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">采集事件</text>
+  </g>
+  <g>
+    <rect x="270" y="290" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="345" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#B85A1E">score</text>
+    <text x="345" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">优先级打分</text>
+  </g>
+  <g>
+    <rect x="440" y="290" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="515" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#B85A1E">predict</text>
+    <text x="515" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">预判下一步</text>
+  </g>
+  <g>
+    <rect x="610" y="290" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="685" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#B85A1E">act</text>
+    <text x="685" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">预热 / 淘汰</text>
+  </g>
+
+  <!-- Down arrow from framework to runtime (identity inject) -->
+  <line x1="600" y1="180" x2="515" y2="290" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="625" y="240" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#4B8BDA">注入身份</text>
+
+  <!-- Bottom layer: Engine -->
+  <rect x="80" y="420" width="740" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="110" y="450" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">推理引擎（vLLM / SGLang）</text>
+  <text x="110" y="472" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7B8FA8">看到 token 与 KV block，但不知道身份</text>
+
+  <!-- KV blocks -->
+  <g>
+    <rect x="450" y="438" width="22" height="22" rx="3" fill="#4B8BDA"/>
+    <rect x="476" y="438" width="22" height="22" rx="3" fill="#4B8BDA"/>
+    <rect x="502" y="438" width="22" height="22" rx="3" fill="#C4D8EE"/>
+    <rect x="528" y="438" width="22" height="22" rx="3" fill="#4B8BDA"/>
+    <rect x="554" y="438" width="22" height="22" rx="3" fill="#C4D8EE"/>
+    <rect x="580" y="438" width="22" height="22" rx="3" fill="#4B8BDA"/>
+    <rect x="606" y="438" width="22" height="22" rx="3" fill="#C4D8EE"/>
+    <rect x="632" y="438" width="22" height="22" rx="3" fill="#4B8BDA"/>
+    <text x="660" y="455" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#7B8FA8">KV blocks</text>
+  </g>
+
+  <!-- Up arrow: events to runtime (observe) -->
+  <line x1="200" y1="420" x2="175" y2="360" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="100" y="400" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#4B8BDA">事件上报</text>
+
+  <!-- Down arrow: act to engine (warmup/evict) -->
+  <line x1="685" y1="360" x2="685" y2="420" stroke="#E8924A" stroke-width="2" marker-end="url(#arrOrange)"/>
+  <text x="695" y="395" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#B85A1E">下发动作</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="540" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">九类横切策略 · 一套原语接入 · 不改框架不改引擎</text>
+  <text x="450" y="562" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7B8FA8">CacheSage：命中率 +13~37pp　·　TTFT −12~29%　·　吞吐 +6~14%</text>
+</svg>

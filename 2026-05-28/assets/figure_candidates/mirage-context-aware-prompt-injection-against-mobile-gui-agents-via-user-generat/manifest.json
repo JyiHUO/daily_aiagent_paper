@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/downloaded_pdfs/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-88",
+      "page_index": 3,
+      "caption": "Figure 2: End-to-end pipeline of MIRAGE : the Localizer (§ 3.2 ) marks user-controllable regions, the Generator (§ 3.3 ) writes a context-aware payload per region and intent, and the Curator (§ 3.4 ) filters render artefacts and balances the surviving samples. The bottom strip threads one running example through all three stages.",
+      "clip": [
+        67.56831359863281,
+        57.12464904785156,
+        526.6564331054688,
+        373.03790283203125
+      ],
+      "clip_area": 145032.02160706487,
+      "page_area": 501156.9211820215,
+      "text_density": 0.30218395794694486,
+      "kind": "drawing_cluster_with_caption",
+      "score": 48.66896252318331,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-30",
+      "page_index": 0,
+      "caption": "Figure 1: Screenshot injection on a mobile GUI agent. Without an attack, the agent follows the benign goal of finding battery-life reviews; with a single injected user review instructing \"Add to Cart\", the agent is redirected to execute the payload.",
+      "clip": [
+        296.3233337402344,
+        210.43731689453125,
+        533.7825317382812,
+        463.7003173828125
+      ],
+      "clip_area": 60139.62897852622,
+      "page_area": 501156.9211820215,
+      "text_density": 0.38871660007723174,
+      "kind": "drawing_cluster_with_caption",
+      "score": 42.668218099761404,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-88",
+      "page_index": 3,
+      "caption": "Figure 2: End-to-end pipeline of MIRAGE : the Localizer (§ 3.2 ) marks user-controllable regions, the Generator (§ 3.3 ) writes a context-aware payload per region and intent, and the Curator (§ 3.4 ) filters render artefacts and balances the surviving samples. The bottom strip threads one running example through all three stages.",
+      "clip": [
+        40.77320251464843,
+        33.7939514160156,
+        554.3409484863281,
+        362.5499572753906
+      ],
+      "clip_area": 168838.48090385154,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2528850231667297,
+      "kind": "captioned_figure",
+      "score": 39.62689860999622,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/03-p4-captioned_figure.png",
+      "filename": "03-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-0-block-30",
+      "page_index": 0,
+      "caption": "Figure 1: Screenshot injection on a mobile GUI agent. Without an attack, the agent follows the benign goal of finding battery-life reviews; with a single injected user review instructing \"Add to Cart\", the agent is redirected to execute the payload.",
+      "clip": [
+        275.91021118164065,
+        123.8165344238281,
+        555.9111999511719,
+        452.5725402832031
+      ],
+      "clip_area": 92052.0067045468,
+      "page_area": 501156.9211820215,
+      "text_density": 0.4006945039429222,
+      "kind": "captioned_figure",
+      "score": 31.022800074494967,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/04-p1-captioned_figure.png",
+      "filename": "04-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-15-block-1",
+      "page_index": 15,
+      "caption": "Figure 4: LLM-judge realism (mean of four criteria, 1–5) versus cross-model ASR for the 200-sample RQ2 subset. Each point is one screenshot; y-axis takes dis- crete values { 0 , 0 . 2 , 0 . 4 , 0 . 6 , 0 . 8 , 1 . 0 } because there are five evaluated models. Spearman ρ = − 0 . 03 , Pearson r = − 0 . 01 , both p > 0 . 5 .",
+      "clip": [
+        48.865997314453125,
+        52.86781311035156,
+        311.13330078125,
+        244.77301025390625
+      ],
+      "clip_area": 50330.45857610414,
+      "page_area": 501156.9211820215,
+      "text_density": 0.05023662667081102,
+      "kind": "image_block_with_caption",
+      "score": 19.559227317512267,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/05-p16-image_block_with_caption.png",
+      "filename": "05-p16-image_block_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-0-0",
+      "page_index": 15,
+      "caption": "Figure 4: LLM-judge realism (mean of four criteria, 1–5) versus cross-model ASR for the 200-sample RQ2 subset. Each point is one screenshot; y-axis takes dis- crete values { 0 , 0 . 2 , 0 . 4 , 0 . 6 , 0 . 8 , 1 . 0 } because there are five evaluated models. Spearman ρ = − 0 . 03 , Pearson r = − 0 . 01 , both p > 0 . 5 .",
+      "clip": [
+        58.865997314453125,
+        58.86781311035156,
+        301.13330078125,
+        238.77301025390625
+      ],
+      "clip_area": 43585.14699163148,
+      "page_area": 501156.9211820215,
+      "text_density": 0.006580396217719864,
+      "kind": "embedded_image_with_caption",
+      "xref": 495,
+      "score": 18.48427941101813,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/06-p16-embedded_image_with_caption.png",
+      "filename": "06-p16-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/mirage-context-aware-prompt-injection-against-mobile-gui-agents-via-user-generat/contact-sheet.svg"
+}

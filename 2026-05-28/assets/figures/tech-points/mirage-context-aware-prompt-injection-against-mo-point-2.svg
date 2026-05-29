@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">攻击成功率三档分层</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">由"意图—机制"映射决定，与模型对齐无关</text>
+
+  <!-- Tier 1: High ASR -->
+  <rect x="70" y="100" width="610" height="92" rx="10" fill="#FEE9DC" stroke="#E8956B" stroke-width="1.5"/>
+  <circle cx="115" cy="146" r="26" fill="#E8956B"/>
+  <text x="115" y="152" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">88%</text>
+  <text x="160" y="132" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">时间 / 注意力诱导  ·  induce-wait, external-link</text>
+  <text x="160" y="158" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">"请稍候""点这里继续"——与正常 UI 引导文案无差别</text>
+  <text x="160" y="178" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#8A4A1F" font-style="italic">指令跟随越强的模型越容易中招</text>
+
+  <!-- Tier 2: Mid ASR -->
+  <rect x="70" y="208" width="610" height="92" rx="10" fill="#FFF6D9" stroke="#D9B84A" stroke-width="1.5"/>
+  <circle cx="115" cy="254" r="26" fill="#D9B84A"/>
+  <text x="115" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">17–26%</text>
+  <text x="160" y="240" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">同界面动作重定向  ·  click-elsewhere, follow-user</text>
+  <text x="160" y="266" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">改写点击目标，仍是常见 tap 原语，伪装难度中等</text>
+  <text x="160" y="286" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A6620" font-style="italic">induce-swipe 在不同模型间从 7% 到 50% 大幅波动</text>
+
+  <!-- Tier 3: Low ASR -->
+  <rect x="70" y="316" width="610" height="92" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <circle cx="115" cy="362" r="26" fill="#4B8BDA"/>
+  <text x="115" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">最低</text>
+  <text x="160" y="348" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">交互原语操纵  ·  induce-back, long-press, inject-text</text>
+  <text x="160" y="374" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">需长按 / 返回手势 / 写入字段——UGC 中罕见，难伪装</text>
+  <text x="160" y="394" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#2C5A8F" font-style="italic">攻击成败由"意图—机制"映射决定</text>
+
+  <!-- Y axis arrow indicating decreasing ASR -->
+  <line x1="36" y1="110" x2="36" y2="402" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="28" y="115" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">高</text>
+  <text x="28" y="258" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">ASR</text>
+  <text x="28" y="400" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">低</text>
+
+  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">同一档在 5 个 VLM Agent 上排序稳定 — 画面质量过滤无法防御</text>
+</svg>

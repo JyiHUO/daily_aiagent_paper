@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8833A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">CacheSage：预测下一个 Agent，提前预热</text>
+
+  <!-- Tester (current) -->
+  <circle cx="110" cy="220" r="55" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="600" fill="#1E3A5F">Tester</text>
+  <text x="110" y="238" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">当前 Agent</text>
+
+  <!-- Transition matrix (the brain) -->
+  <rect x="245" y="170" width="200" height="100" rx="10" fill="#FFF4E6" stroke="#E8833A" stroke-width="2"/>
+  <text x="345" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">在线转移矩阵 P(b | a)</text>
+  <text x="345" y="227" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Tester → Planner ≈ 1.0</text>
+  <text x="345" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">(MT-Bench 实测)</text>
+
+  <!-- Planner (predicted) -->
+  <circle cx="610" cy="220" r="55" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="610" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="600" fill="#1E3A5F">Planner</text>
+  <text x="610" y="238" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">预测的下一个</text>
+
+  <!-- arrows -->
+  <line x1="168" y1="220" x2="240" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="220" x2="550" y2="220" stroke="#E8833A" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrW)"/>
+  <text x="500" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#E8833A" font-weight="600">预测</text>
+
+  <!-- KV cache pool (warmup destination) -->
+  <rect x="430" y="340" width="280" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="570" y="370" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">GPU KV 缓存池</text>
+  <text x="570" y="400" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">预热 Planner 的 anchor (system+tools, ~40%)</text>
+
+  <line x1="610" y1="278" x2="610" y2="335" stroke="#E8833A" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrW)"/>
+  <text x="620" y="312" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#E8833A" font-weight="600">warmup</text>
+
+  <!-- footer note -->
+  <text x="360" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" font-style="italic">无结构时 score 退化为 LRU，不会变差</text>
+</svg>

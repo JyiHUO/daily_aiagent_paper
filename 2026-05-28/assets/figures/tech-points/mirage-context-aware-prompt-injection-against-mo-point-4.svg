@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="40" class="t" font-size="20" font-weight="700" fill="#1E3A5F" text-anchor="middle">5模型 · 10应用 · 全军覆没</text>
+  <text x="360" y="62" class="t" font-size="12" fill="#3D4F65" text-anchor="middle">1111 样本 / 96 截图</text>
+
+  <!-- Left: Models column -->
+  <rect x="40" y="100" width="180" height="320" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="125" class="t" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">5 个 VLM Agent</text>
+
+  <!-- bars -->
+  <g class="t" font-size="11" fill="#3D4F65">
+    <text x="58" y="160">gpt-4o-mini</text>
+    <rect x="58" y="167" width="120" height="10" fill="#FFE4D6"/>
+    <rect x="58" y="167" width="120" height="10" fill="#E87D4A" opacity="0.85"/>
+    <text x="195" y="176" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">30.2%</text>
+
+    <text x="58" y="200">GLM-4.5V</text>
+    <rect x="58" y="207" width="120" height="10" fill="#FFE4D6"/>
+    <rect x="58" y="207" width="115" height="10" fill="#E87D4A" opacity="0.85"/>
+    <text x="195" y="216" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">28.9%</text>
+
+    <text x="58" y="240">Qwen3-VL 8B</text>
+    <rect x="58" y="247" width="120" height="10" fill="#FFE4D6"/>
+    <rect x="58" y="247" width="114" height="10" fill="#E87D4A" opacity="0.85"/>
+    <text x="195" y="256" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">28.6%</text>
+
+    <text x="58" y="280">Qwen3-VL 30B</text>
+    <rect x="58" y="287" width="120" height="10" fill="#FFE4D6"/>
+    <rect x="58" y="287" width="99" height="10" fill="#E87D4A" opacity="0.85"/>
+    <text x="195" y="296" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">25.0%</text>
+
+    <text x="58" y="320">Qwen3-VL 32B</text>
+    <rect x="58" y="327" width="120" height="10" fill="#FFE4D6"/>
+    <rect x="58" y="327" width="91" height="10" fill="#E87D4A" opacity="0.85"/>
+    <text x="195" y="336" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">23.0%</text>
+  </g>
+
+  <text x="130" y="395" class="t" font-size="11" fill="#1E3A5F" text-anchor="middle" font-style="italic">闭源 / 开源 / 大小通吃</text>
+
+  <!-- Arrow -->
+  <line x1="228" y1="260" x2="300" y2="260" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Right: Apps comparison -->
+  <rect x="305" y="100" width="375" height="320" rx="10" fill="#FFF7EE" stroke="#E87D4A" stroke-width="1.5"/>
+  <text x="492" y="125" class="t" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">应用差异 = 23pp</text>
+
+  <!-- High UGC -->
+  <text x="365" y="152" class="t" font-size="11" font-weight="700" fill="#C04A1F" text-anchor="middle">UGC 暴露面大</text>
+  <g class="t" font-size="12" fill="#1E3A5F">
+    <rect x="325" y="165" width="80" height="28" rx="4" fill="#FFD5BD"/>
+    <text x="365" y="184" text-anchor="middle">Amazon</text>
+    <text x="430" y="184" font-size="13" font-weight="700" fill="#C04A1F">43%</text>
+
+    <rect x="325" y="200" width="80" height="28" rx="4" fill="#FFDFCC"/>
+    <text x="365" y="219" text-anchor="middle">X</text>
+
+    <rect x="325" y="235" width="80" height="28" rx="4" fill="#FFE4D6"/>
+    <text x="365" y="254" text-anchor="middle">Facebook</text>
+
+    <rect x="325" y="270" width="80" height="28" rx="4" fill="#FFE9DD"/>
+    <text x="365" y="289" text-anchor="middle">Temu</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="478" y1="160" x2="478" y2="305" stroke="#3D4F65" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+
+  <!-- Low UGC -->
+  <text x="550" y="152" class="t" font-size="11" font-weight="700" fill="#1E5F7A" text-anchor="middle">UGC 暴露面小</text>
+  <g class="t" font-size="12" fill="#1E3A5F">
+    <rect x="510" y="165" width="80" height="28" rx="4" fill="#DCEEF5"/>
+    <text x="550" y="184" text-anchor="middle">TikTok</text>
+    <text x="615" y="184" font-size="13" font-weight="700" fill="#1E5F7A">20%</text>
+
+    <rect x="510" y="200" width="80" height="28" rx="4" fill="#E5F2F8"/>
+    <text x="550" y="219" text-anchor="middle">WhatsApp</text>
+
+    <rect x="510" y="235" width="80" height="28" rx="4" fill="#EBF5FA"/>
+    <text x="550" y="254" text-anchor="middle">Spotify</text>
+
+    <rect x="510" y="270" width="80" height="28" rx="4" fill="#F0F8FB"/>
+    <text x="550" y="289" text-anchor="middle">Telegram</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="492" y="345" class="t" font-size="12" fill="#1E3A5F" text-anchor="middle" font-weight="700">视觉通道 = 结构弱点</text>
+  <text x="492" y="370" class="t" font-size="11" fill="#3D4F65" text-anchor="middle">非单一模型对齐问题</text>
+  <text x="492" y="390" class="t" font-size="11" fill="#3D4F65" text-anchor="middle">是 VLM-GUI 范式缺陷</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="455" class="t" font-size="11" fill="#3D4F65" text-anchor="middle">跨意图差异 82pp · 跨应用差异 23pp · 跨模型差异仅 7pp</text>
+</svg>

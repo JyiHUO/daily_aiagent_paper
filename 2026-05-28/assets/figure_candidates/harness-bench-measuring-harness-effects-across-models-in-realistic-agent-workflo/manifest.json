@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/downloaded_pdfs/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-33",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of the Harness-Bench evaluation pipeline. Each task is instantiated in a sandbox and executed by a model–harness configuration. Harness-Bench records artifacts, traces, usage statistics, and validator outputs, then combines completion, process, and security signals into a diagnostic score.",
+      "clip": [
+        90.0,
+        55.999359130859375,
+        521.9904174804688,
+        310.74395751953125
+      ],
+      "clip_area": 110047.22540881671,
+      "page_area": 484704.0,
+      "text_density": 0.14240085944582928,
+      "kind": "drawing_cluster_with_caption",
+      "score": 74.25594843325024,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-58",
+      "page_index": 3,
+      "caption": "Figure 2: Task suite overview. Harness-Bench contains 106 sandboxed offline tasks across eight workflow categories.",
+      "clip": [
+        77.04099884033204,
+        18.0,
+        534.5974365234375,
+        247.86227416992188
+      ],
+      "clip_area": 105174.96332692678,
+      "page_area": 484704.0,
+      "text_density": 0.33742523472026204,
+      "kind": "captioned_figure",
+      "score": 40.7230966204168,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-31",
+      "page_index": 6,
+      "caption": "Figure 3: Harness dependence and Codex reference. Left: mean score and cross-harness variance for each model backend, where variance is computed over harness-level averages on the fixed task suite. Right: Codex compared with GPT-backed configurable harnesses. Codex is included as a practical reference point rather than a controlled harness ablation.",
+      "clip": [
+        90.0,
+        56.00059509277344,
+        522.0057373046875,
+        253.00299072265625
+      ],
+      "clip_area": 85106.16517487727,
+      "page_area": 484704.0,
+      "text_density": 0.22746036553015364,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.098002125689415,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-31",
+      "page_index": 6,
+      "caption": "Figure 3: Harness dependence and Codex reference. Left: mean score and cross-harness variance for each model backend, where variance is computed over harness-level averages on the fixed task suite. Right: Codex compared with GPT-backed configurable harnesses. Codex is included as a practical reference point rather than a controlled harness ablation.",
+      "clip": [
+        77.4,
+        18.0,
+        536.3467041015625,
+        236.11813354492188
+      ],
+      "clip_area": 100104.59849522637,
+      "page_area": 484704.0,
+      "text_density": 0.15807822036711794,
+      "kind": "captioned_figure",
+      "score": 16.427580094586553,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/04-p7-captioned_figure.png",
+      "filename": "04-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-12-drawing-caption-28",
+      "page_index": 12,
+      "caption": "Figure 4: Category-level harness dependence. Variance is computed across configurable-harness average scores within each workflow category. Higher values indicate categories where benchmark performance varies more across harness configurations under the fixed Harness-Bench protocol.",
+      "clip": [
+        117.72000122070312,
+        478.1536865234375,
+        494.2569885253906,
+        623.666015625
+      ],
+      "clip_area": 54790.77401559055,
+      "page_area": 484704.0,
+      "text_density": 0.2696105498691529,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.232153385801833,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/05-p13-drawing_cluster_with_caption.png",
+      "filename": "05-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        92.0,
+        57.999359130859375,
+        519.9904174804688,
+        308.74395751953125
+      ],
+      "clip_area": 107316.28534534015,
+      "page_area": 484704.0,
+      "text_density": 0.13863989926305434,
+      "kind": "drawing_cluster",
+      "score": 6.48160604421674,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/06-p3-drawing_cluster.png",
+      "filename": "06-p3-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/harness-bench-measuring-harness-effects-across-models-in-realistic-agent-workflo/contact-sheet.svg"
+}

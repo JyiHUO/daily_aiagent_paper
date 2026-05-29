@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <!-- Top layer: Agent framework -->
+  <rect x="80" y="50" width="560" height="80" rx="8" fill="#FFF4E6" stroke="#E8A766" stroke-width="1.5"/>
+  <text x="360" y="82" class="t" font-size="18" font-weight="600" fill="#1E3A5F" text-anchor="middle">Agent 框架</text>
+  <text x="360" y="108" class="t" font-size="13" fill="#3D4F65" text-anchor="middle">知道身份 / 看不到 token</text>
+
+  <!-- Middle layer: Runtime (the gap) -->
+  <rect x="80" y="190" width="560" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="216" class="t" font-size="17" font-weight="700" fill="#1E3A5F" text-anchor="middle">Agent Runtime · 缝隙层（身份 × 事件）</text>
+
+  <!-- Four primitives as pills -->
+  <rect x="110" y="240" width="110" height="34" rx="17" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="165" y="262" class="t" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">observe</text>
+
+  <rect x="240" y="240" width="110" height="34" rx="17" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="295" y="262" class="t" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">score</text>
+
+  <rect x="370" y="240" width="110" height="34" rx="17" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="425" y="262" class="t" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">predict</text>
+
+  <rect x="500" y="240" width="110" height="34" rx="17" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="555" y="262" class="t" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">act</text>
+
+  <!-- Bottom layer: Engine -->
+  <rect x="80" y="350" width="560" height="80" rx="8" fill="#F0EDE5" stroke="#9A8E6F" stroke-width="1.5"/>
+  <text x="360" y="382" class="t" font-size="18" font-weight="600" fill="#1E3A5F" text-anchor="middle">推理引擎</text>
+  <text x="360" y="408" class="t" font-size="13" fill="#3D4F65" text-anchor="middle">看到 token / 不知身份</text>
+
+  <!-- Arrows: framework <-> runtime -->
+  <line x1="240" y1="130" x2="240" y2="188" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="480" y1="190" x2="480" y2="132" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Arrows: runtime <-> engine -->
+  <line x1="480" y1="290" x2="480" y2="348" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="240" y1="350" x2="240" y2="292" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

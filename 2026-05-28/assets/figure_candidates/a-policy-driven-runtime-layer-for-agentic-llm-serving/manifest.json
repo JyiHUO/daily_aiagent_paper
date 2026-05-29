@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/downloaded_pdfs/a-policy-driven-runtime-layer-for-agentic-llm-serving.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-26",
+      "page_index": 0,
+      "caption": "Figure 1: The seam between agent framework and serv- ing engine. Today (left): cross-cutting policies have no shared home and are patched into one neighbor or the other. Proposed (right): an agent runtime layer hosts these policies on four primitives with agent identity as the shared coordinate.",
+      "clip": [
+        299.9549865722656,
+        167.64927673339844,
+        581.3629150390625,
+        349.4897155761719
+      ],
+      "clip_area": 51171.34120623814,
+      "page_area": 484704.0,
+      "text_density": 0.3674653290053041,
+      "kind": "drawing_cluster_with_caption",
+      "score": 55.32065071752884,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-block-26",
+      "page_index": 0,
+      "caption": "Figure 1: The seam between agent framework and serv- ing engine. Today (left): cross-cutting policies have no shared home and are patched into one neighbor or the other. Proposed (right): an agent runtime layer hosts these policies on four primitives with agent identity as the shared coordinate.",
+      "clip": [
+        287.3549865722656,
+        27.21379394531249,
+        590.5884033203125,
+        336.0137939453125
+      ],
+      "clip_area": 93638.4790917969,
+      "page_area": 484704.0,
+      "text_density": 0.38778044085028945,
+      "kind": "captioned_figure",
+      "score": 43.04042754546441,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/02-p1-captioned_figure.png",
+      "filename": "02-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-28",
+      "page_index": 4,
+      "caption": "Figure 4: Headline evaluation across five multi-agent workloads, comparing vLLM, Continuum, and CacheSage. (a) Cache hit rate; CacheSage wins 5/5 with +13 to +37 pp lifts. (b) End-to-end per-turn latency; CacheSage drops 6% to 26%. (c) Throughput; CacheSage raises 6% to 14%.",
+      "clip": [
+        35.79800033569336,
+        67.68595123291016,
+        572.9724731445312,
+        190.3759765625
+      ],
+      "clip_area": 65905.94967532539,
+      "page_area": 484704.0,
+      "text_density": 0.22716687779712053,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.90227566189861,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/03-p5-drawing_cluster_with_caption.png",
+      "filename": "03-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-31",
+      "page_index": 2,
+      "caption": "Figure 2: Cross-session structure on five multi-agent workloads. (a) First-turn shareable surface 𝜑 . (b) Rela- tive conditional entropy reduction 𝑅 .",
+      "clip": [
+        299.9549865722656,
+        67.68572998046875,
+        576.1991577148438,
+        190.52398681640625
+      ],
+      "clip_area": 33933.352444242686,
+      "page_area": 484704.0,
+      "text_density": 0.26186290922804606,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.46526269569771,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/04-p3-drawing_cluster_with_caption.png",
+      "filename": "04-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-31",
+      "page_index": 2,
+      "caption": "Figure 2: Cross-session structure on five multi-agent workloads. (a) First-turn shareable surface 𝜑 . (b) Rela- tive conditional entropy reduction 𝑅 .",
+      "clip": [
+        286.96698608398435,
+        18.0,
+        590.5826049804688,
+        193.8306884765625
+      ],
+      "clip_area": 53384.943302806474,
+      "page_area": 484704.0,
+      "text_density": 0.18238927068854005,
+      "kind": "captioned_figure",
+      "score": 18.449809795385445,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/05-p3-captioned_figure.png",
+      "filename": "05-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-28",
+      "page_index": 4,
+      "caption": "Figure 4: Headline evaluation across five multi-agent workloads, comparing vLLM, Continuum, and CacheSage. (a) Cache hit rate; CacheSage wins 5/5 with +13 to +37 pp lifts. (b) End-to-end per-turn latency; CacheSage drops 6% to 26%. (c) Throughput; CacheSage raises 6% to 14%.",
+      "clip": [
+        22.888998413085936,
+        18.0,
+        590.5094848632813,
+        193.7955322265625
+      ],
+      "clip_area": 99785.1455182124,
+      "page_area": 484704.0,
+      "text_density": 0.16381704923415916,
+      "kind": "captioned_figure",
+      "score": 18.0797008850417,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/06-p5-captioned_figure.png",
+      "filename": "06-p5-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-28/assets/figure_candidates/a-policy-driven-runtime-layer-for-agentic-llm-serving/contact-sheet.svg"
+}

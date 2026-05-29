@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="bold" fill="#1E3A5F">同一模型，换 Harness 分数差 23.8</text>
+
+  <!-- Left: NanoBot high score -->
+  <rect x="70" y="110" width="220" height="240" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="180" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" fill="#1E3A5F" font-weight="bold">NanoBot</text>
+  <text x="180" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="48" font-weight="bold" fill="#1E3A5F">76.2</text>
+  <text x="180" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">更少 token，更高分数</text>
+
+  <!-- Gap arrow in middle -->
+  <text x="360" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" font-weight="bold" fill="#D97757">Δ 23.8</text>
+  <line x1="300" y1="230" x2="420" y2="230" stroke="#D97757" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="360" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一模型</text>
+
+  <!-- Right: OpenClaw low score -->
+  <rect x="430" y="110" width="220" height="240" rx="12" fill="#FAF1EC" stroke="#D97757" stroke-width="2"/>
+  <text x="540" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" fill="#1E3A5F" font-weight="bold">OpenClaw</text>
+  <text x="540" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="48" font-weight="bold" fill="#D97757">52.4</text>
+  <text x="540" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">更多 token，更低分数</text>
+
+  <!-- Bottom takeaway -->
+  <line x1="120" y1="410" x2="600" y2="410" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="360" y="442" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F">弱模型对 harness 更敏感，强模型方差小</text>
+</svg>
