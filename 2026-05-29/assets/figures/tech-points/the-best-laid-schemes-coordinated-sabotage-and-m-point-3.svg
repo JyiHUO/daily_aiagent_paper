@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8A05C"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="40" text-anchor="middle" class="t" font-size="20" font-weight="700" fill="#1E3A5F">监控视角越全 抓得越准</text>
+
+  <!-- Three suspect agents -->
+  <g>
+    <rect x="50" y="100" width="120" height="58" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="110" y="123" text-anchor="middle" class="t" font-size="13" font-weight="600" fill="#1E3A5F">Agent 1</text>
+    <text x="110" y="142" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">小改动</text>
+
+    <rect x="50" y="195" width="120" height="58" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="110" y="218" text-anchor="middle" class="t" font-size="13" font-weight="600" fill="#1E3A5F">Agent 2</text>
+    <text x="110" y="237" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">小改动</text>
+
+    <rect x="50" y="290" width="120" height="58" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="110" y="313" text-anchor="middle" class="t" font-size="13" font-weight="600" fill="#1E3A5F">Agent 3</text>
+    <text x="110" y="332" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">小改动</text>
+
+    <!-- shared channel -->
+    <rect x="50" y="385" width="120" height="50" rx="6" fill="#FFF4E6" stroke="#E8A05C" stroke-width="1.5"/>
+    <text x="110" y="406" text-anchor="middle" class="t" font-size="12" font-weight="600" fill="#1E3A5F">共享频道</text>
+    <text x="110" y="424" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">对齐 ratio…</text>
+  </g>
+
+  <!-- Monitor -->
+  <g transform="translate(330,224)">
+    <ellipse cx="0" cy="0" rx="78" ry="48" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="26" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="0" cy="0" r="11" fill="#1E3A5F"/>
+    <text x="0" y="78" text-anchor="middle" class="t" font-size="13" font-weight="700" fill="#1E3A5F">集体视角监控</text>
+  </g>
+
+  <!-- arrows from agents to monitor -->
+  <line x1="170" y1="129" x2="258" y2="206" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="170" y1="224" x2="252" y2="224" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="170" y1="319" x2="258" y2="244" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="170" y1="410" x2="270" y2="270" stroke="#E8A05C" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrO)"/>
+
+  <!-- arrow from monitor to results -->
+  <line x1="408" y1="224" x2="492" y2="224" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Right side: detection results -->
+  <g>
+    <text x="600" y="105" text-anchor="middle" class="t" font-size="13" font-weight="700" fill="#1E3A5F">检出率（Gemini 合谋）</text>
+
+    <rect x="495" y="120" width="210" height="50" rx="6" fill="#E8F5E9" stroke="#4CAF7C" stroke-width="1.5"/>
+    <text x="508" y="150" class="t" font-size="13" fill="#1E3A5F">代码 + 通信</text>
+    <text x="692" y="153" text-anchor="end" class="t" font-size="20" font-weight="700" fill="#2E7D5B">100%</text>
+
+    <rect x="495" y="180" width="210" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="508" y="210" class="t" font-size="13" fill="#1E3A5F">仅代码</text>
+    <text x="692" y="213" text-anchor="end" class="t" font-size="20" font-weight="700" fill="#1E3A5F">99%</text>
+
+    <rect x="495" y="240" width="210" height="50" rx="6" fill="#FFF4E6" stroke="#E8A05C" stroke-width="1.5"/>
+    <text x="508" y="270" class="t" font-size="13" fill="#1E3A5F">仅通信</text>
+    <text x="692" y="273" text-anchor="end" class="t" font-size="20" font-weight="700" fill="#C77530">93%</text>
+
+    <rect x="495" y="300" width="210" height="58" rx="6" fill="#FCE8E8" stroke="#D87070" stroke-width="1.5"/>
+    <text x="508" y="322" class="t" font-size="13" fill="#1E3A5F">逐个独审</text>
+    <text x="508" y="345" class="t" font-size="10" fill="#A03030">协同信号丢失</text>
+    <text x="692" y="338" text-anchor="end" class="t" font-size="18" font-weight="700" fill="#A03030">−20pp</text>
+  </g>
+
+  <text x="360" y="465" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">关键：集体视角的代码审计，是抓合谋的主力</text>
+</svg>

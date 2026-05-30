@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">安全感来自人，不是模型</text>
+  <text x="360" y="70" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Who pays the cost of agent failure?</text>
+
+  <!-- Agent ball falling -->
+  <circle cx="180" cy="180" r="42" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="180" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Agent 出错</text>
+  <text x="180" y="196" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">坠落中</text>
+
+  <!-- arrow agent → user net -->
+  <path d="M218 210 Q310 250 380 285" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Safety net (the user) -->
+  <path d="M340 300 Q470 270 600 300 L585 360 Q470 335 355 360 Z" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <line x1="360" y1="312" x2="585" y2="343" stroke="#4B8BDA" stroke-width="0.8" opacity="0.5"/>
+  <line x1="365" y1="328" x2="582" y2="356" stroke="#4B8BDA" stroke-width="0.8" opacity="0.5"/>
+  <line x1="400" y1="295" x2="410" y2="358" stroke="#4B8BDA" stroke-width="0.8" opacity="0.5"/>
+  <line x1="470" y1="287" x2="470" y2="350" stroke="#4B8BDA" stroke-width="0.8" opacity="0.5"/>
+  <line x1="540" y1="293" x2="535" y2="354" stroke="#4B8BDA" stroke-width="0.8" opacity="0.5"/>
+
+  <text x="470" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">用户 pushback 接住</text>
+  <text x="470" y="414" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">91.49% 修复靠人；自我纠正仅 2.99%</text>
+
+  <!-- Warning bottom -->
+  <line x1="100" y1="445" x2="640" y2="445" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="360" y="465" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">长时后台 Agent 场景下，这张网就消失了</text>
+</svg>

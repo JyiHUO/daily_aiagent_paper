@@ -1,0 +1,22 @@
+{
+  "date": "2026-05-29",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 570,
+  "selected_count": 3,
+  "focus_titles": [
+    "How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions",
+    "WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction",
+    "The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

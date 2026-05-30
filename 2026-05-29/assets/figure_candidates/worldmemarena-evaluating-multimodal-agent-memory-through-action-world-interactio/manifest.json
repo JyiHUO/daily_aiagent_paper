@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/downloaded_pdfs/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio",
+  "candidates": [
+    {
+      "id": "page-13-block-3",
+      "page_index": 13,
+      "caption": "Halid Abdulrahim Kadi and Kasim Terzić. Agent-arena: A general framework for evaluating control algorithms, 2025. URL https://arxiv.org/abs/2504.06468 .",
+      "clip": [
+        23.258001708984374,
+        18.0,
+        590.2558837890625,
+        162.87754821777344
+      ],
+      "clip_area": 82145.26300043194,
+      "page_area": 484704.0,
+      "text_density": 0.46179436692178777,
+      "kind": "captioned_figure",
+      "score": 19.91272514444924,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/01-p14-captioned_figure.png",
+      "filename": "01-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-0-embedded-20-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        236.56369018554688,
+        553.92822265625,
+        342.9584045410156,
+        660.8421020507812
+      ],
+      "clip_area": 11375.071658816189,
+      "page_area": 484704.0,
+      "text_density": 0.08419506977768888,
+      "kind": "embedded_image",
+      "xref": 552,
+      "score": 10.874685498436625,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/02-p1-embedded_image.png",
+      "filename": "02-p1-embedded_image.png"
+    },
+    {
+      "id": "page-0-embedded-10-4",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        139.24822998046875,
+        517.8533935546875,
+        304.9486083984375,
+        632.1843872070312
+      ],
+      "clip_area": 18944.688913095742,
+      "page_area": 484704.0,
+      "text_density": 0.09031838165252871,
+      "kind": "embedded_image",
+      "xref": 542,
+      "score": 10.591393644327118,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/03-p1-embedded_image.png",
+      "filename": "03-p1-embedded_image.png"
+    },
+    {
+      "id": "page-3-block-6",
+      "page_index": 3,
+      "caption": "3.2. Memory Lifecycle as a Diagnostic Framework",
+      "clip": [
+        23.258001708984374,
+        52.885943603515614,
+        336.2510009765625,
+        361.6859436035156
+      ],
+      "clip_area": 96652.23817382814,
+      "page_area": 484704.0,
+      "text_density": 0.6531606855023258,
+      "kind": "captioned_figure",
+      "score": 8.07391375748698,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/04-p4-captioned_figure.png",
+      "filename": "04-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-0-embedded-10-7",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        117.70828247070312,
+        517.8798828125,
+        345.2898254394531,
+        701.6558837890625
+      ],
+      "clip_area": 41824.0258628726,
+      "page_area": 484704.0,
+      "text_density": 0.1394681864818833,
+      "kind": "embedded_image",
+      "xref": 542,
+      "score": 7.896620209563364,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/05-p1-embedded_image.png",
+      "filename": "05-p1-embedded_image.png"
+    },
+    {
+      "id": "page-0-embedded-9-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        221.9248809814453,
+        575.8302612304688,
+        370.134033203125,
+        696.65673828125
+      ],
+      "clip_area": 17907.589729628526,
+      "page_area": 484704.0,
+      "text_density": 0.15376987124828567,
+      "kind": "embedded_image",
+      "xref": 541,
+      "score": 6.772780944320955,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/06-p1-embedded_image.png",
+      "filename": "06-p1-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/worldmemarena-evaluating-multimodal-agent-memory-through-action-world-interactio/contact-sheet.svg"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-05-29",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-05-29 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions</strong></li><li><strong>WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction</strong></li><li><strong>The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems</strong></li></ul><p>['今天主线：安全防合谋、记忆做阶段诊断、真实日志驱动评测']</p>",
+  "report_date": "2026-05-29",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-05-29T22:22:43Z"
+}

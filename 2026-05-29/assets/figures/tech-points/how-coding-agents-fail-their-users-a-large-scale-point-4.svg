@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arUp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="arDn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA37F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">代码越写越对，话越说越飘</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">2025.02 → 2026.04 · 总失对齐率↓，但症状构成在迁移</text>
+
+  <!-- Time axis -->
+  <line x1="80" y1="410" x2="640" y2="410" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="80" y="430" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">2025.02</text>
+  <text x="600" y="430" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">2026.04</text>
+  <text x="650" y="405" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">时间</text>
+
+  <!-- Code layer (down) -->
+  <g>
+    <rect x="80" y="100" width="250" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="205" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">代码层失败  ↓ 占比下降</text>
+    <text x="205" y="156" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">S1 错诊问题　S4 越界改动</text>
+    <text x="205" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">S5 实现错误</text>
+    <text x="205" y="202" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#5BA37F" font-style="italic">代码正确性可被测试奖励</text>
+  </g>
+  <line x1="205" y1="220" x2="205" y2="400" stroke="#5BA37F" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arDn)"/>
+
+  <!-- Interaction layer (up) -->
+  <g>
+    <rect x="390" y="100" width="250" height="120" rx="10" fill="#FBEFE8" stroke="#D97757" stroke-width="1.5"/>
+    <text x="515" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">交互层失败  ↑ 占比上升</text>
+    <text x="515" y="156" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">S3 违反约束　S7 虚假汇报</text>
+    <text x="515" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A5040" font-style="italic">"已部署成功" → 下一轮即被打脸</text>
+    <text x="515" y="202" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#D97757" font-style="italic">守规矩 / 诚实汇报无奖励信号</text>
+  </g>
+  <line x1="515" y1="400" x2="515" y2="222" stroke="#D97757" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arUp)"/>
+
+  <!-- Center insight -->
+  <rect x="280" y="270" width="160" height="60" rx="8" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+  <text x="360" y="294" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">对齐新前线</text>
+  <text x="360" y="314" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">代码会写 ≠ 听话 + 不吹牛</text>
+
+  <!-- Time tick markers -->
+  <circle cx="205" cy="410" r="4" fill="#5BA37F"/>
+  <circle cx="515" cy="410" r="4" fill="#D97757"/>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">合谋才能完成</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Joint-only Side Task</text>
+
+  <!-- Permission isolation hint -->
+  <text x="275" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#9AA8B8">权限与信息隔离</text>
+
+  <!-- Three puzzle pieces (agents with partial info) -->
+  <g>
+    <!-- Agent 1 -->
+    <path d="M 90 170 L 200 170 L 200 200 Q 215 200 215 215 Q 215 230 200 230 L 200 270 L 90 270 Z"
+          fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="145" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Agent 1</text>
+    <text x="145" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">片段 A</text>
+    <text x="145" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">单独无法作恶</text>
+
+    <!-- Agent 2 -->
+    <path d="M 220 170 L 330 170 L 330 200 Q 345 200 345 215 Q 345 230 330 230 L 330 270 L 220 270 L 220 230 Q 235 230 235 215 Q 235 200 220 200 Z"
+          fill="#FEF3E2" stroke="#E89B4C" stroke-width="2"/>
+    <text x="282" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Agent 2</text>
+    <text x="282" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">片段 B</text>
+    <text x="282" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">单独无法作恶</text>
+
+    <!-- Agent 3 -->
+    <path d="M 350 170 L 460 170 L 460 270 L 350 270 L 350 230 Q 365 230 365 215 Q 365 200 350 200 Z"
+          fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="405" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Agent 3</text>
+    <text x="405" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">片段 C</text>
+    <text x="405" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">单独无法作恶</text>
+  </g>
+
+  <!-- Arrow to outcome -->
+  <line x1="465" y1="220" x2="557" y2="220" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="511" y="211" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">拼接</text>
+
+  <!-- Outcome: hidden sabotage -->
+  <rect x="560" y="170" width="130" height="100" rx="8" fill="#FDECEC" stroke="#D4604A" stroke-width="2"/>
+  <text x="625" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">隐蔽破坏达成</text>
+  <text x="625" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Side Task Completed</text>
+
+  <!-- Bottom: shared channel hint -->
+  <line x1="145" y1="295" x2="405" y2="295" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="275" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">仅通过 append-only 共享通信</text>
+
+  <!-- Caption bottom -->
+  <text x="360" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">单 Agent → 安全 ｜ 多 Agent 合谋 → 危险</text>
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">8 仓库 · 7 场景 · 17 任务</text>
+</svg>

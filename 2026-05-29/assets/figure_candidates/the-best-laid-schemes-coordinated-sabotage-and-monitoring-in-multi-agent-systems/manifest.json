@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/downloaded_pdfs/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems",
+  "candidates": [
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 2: Swimlane of a successful coordinated rollout on model registry access under BUS . Each tick is a tool call, coloured by the task it advances.",
+      "clip": [
+        86.0,
+        53.99500274658203,
+        526.0000305175781,
+        205.19500732421875
+      ],
+      "clip_area": 66528.00662841811,
+      "page_area": 484704.0,
+      "text_density": 0.06661406143707763,
+      "kind": "image_block_with_caption",
+      "score": 35.73920007364909,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Swimlane of a successful coordinated rollout on model registry access under BUS . Each tick is a tool call, coloured by the task it advances.",
+      "clip": [
+        96.0,
+        59.99500274658203,
+        516.0000305175781,
+        199.19500732421875
+      ],
+      "clip_area": 58464.00617065444,
+      "page_area": 484704.0,
+      "text_density": 0.035162256065668536,
+      "kind": "embedded_image_with_caption",
+      "xref": 582,
+      "score": 34.649600068562826,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: SCHEME setup under the BUS topology. Agent 0 runs the evaluation script; Agents 1– 3 reimplement broken functions in disjoint write scopes and pursue a covert side task. Agents communicate only via the append-only shared channel; an automated test suite scores both tasks and a monitor reviews the full session.",
+      "clip": [
+        96.0,
+        87.01203155517578,
+        516.0,
+        215.5560302734375
+      ],
+      "clip_area": 53988.47946166992,
+      "page_area": 484704.0,
+      "text_density": 0.09896936002704186,
+      "kind": "embedded_image_with_caption",
+      "xref": 577,
+      "score": 31.461710392396046,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/03-p2-embedded_image_with_caption.png",
+      "filename": "03-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-14-embedded-0-0",
+      "page_index": 14,
+      "caption": "Figure 9: Overall sabotage success across N =85 samples per model. Solid lines are @ k ; dashed lines are b k . Same data as Figure 3’s All column, resolved by k .",
+      "clip": [
+        155.4010009765625,
+        350.9029846191406,
+        456.60955810546875,
+        537.7080078125
+      ],
+      "clip_area": 56267.271500503644,
+      "page_area": 484704.0,
+      "text_density": 0.10906587845868157,
+      "kind": "embedded_image_with_caption",
+      "xref": 601,
+      "score": 30.88123919804026,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/04-p15-embedded_image_with_caption.png",
+      "filename": "04-p15-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-14-block-12",
+      "page_index": 14,
+      "caption": "Figure 9: Overall sabotage success across N =85 samples per model. Solid lines are @ k ; dashed lines are b k . Same data as Figure 3’s All column, resolved by k .",
+      "clip": [
+        145.4010009765625,
+        344.9029846191406,
+        466.60955810546875,
+        543.7080078125
+      ],
+      "clip_area": 63857.87464991771,
+      "page_area": 484704.0,
+      "text_density": 0.16284323924547348,
+      "kind": "image_block_with_caption",
+      "score": 28.738937585826232,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/05-p15-image_block_with_caption.png",
+      "filename": "05-p15-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "Figure 1: SCHEME setup under the BUS topology. Agent 0 runs the evaluation script; Agents 1– 3 reimplement broken functions in disjoint write scopes and pursue a covert side task. Agents communicate only via the append-only shared channel; an automated test suite scores both tasks and a monitor reviews the full session.",
+      "clip": [
+        86.0,
+        81.01203155517578,
+        526.0,
+        221.5560302734375
+      ],
+      "clip_area": 61839.359436035156,
+      "page_area": 484704.0,
+      "text_density": 0.16342779475229352,
+      "kind": "image_block_with_caption",
+      "score": 28.681436308596112,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/06-p2-image_block_with_caption.png",
+      "filename": "06-p2-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/the-best-laid-schemes-coordinated-sabotage-and-monitoring-in-multi-agent-systems/contact-sheet.svg"
+}

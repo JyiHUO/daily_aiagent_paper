@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/downloaded_pdfs/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis",
+  "candidates": [
+    {
+      "id": "page-3-block-16",
+      "page_index": 3,
+      "caption": "Figure 1: Monthly session volume across the combined dataset, broken down by interaction modality. Vertical markers indicate the launch dates of major coding agents and data collection tools, as well as the scrape date.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        554.1736511230469,
+        202.08432006835938
+      ],
+      "clip_area": 94448.40972982811,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14077825838684221,
+      "kind": "captioned_figure",
+      "score": 24.402731271565333,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/01-p4-captioned_figure.png",
+      "filename": "01-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-11-drawing-caption-42",
+      "page_index": 11,
+      "caption": "Figure 6: Monthly share of each symptom among all misalignment episodes (February 2025–April 2026). Symptoms are stacked to sum to 1. S3 and S7 grow in share over time, while S1, S4, and S5 decline.",
+      "clip": [
+        295.22900390625,
+        54.865325927734375,
+        535.31982421875,
+        291.1390380859375
+      ],
+      "clip_area": 56727.14937034249,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20914275996696627,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.881736061652497,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/02-p12-drawing_cluster_with_caption.png",
+      "filename": "02-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-29",
+      "page_index": 5,
+      "caption": "Figure 2: Symptom-by-cause co-occurrence heatmap (row-normalized). Each cell shows the percentage of cause assignments for the given symptom.",
+      "clip": [
+        288.1419982910156,
+        293.6671142578125,
+        542.416748046875,
+        454.9150085449219
+      ],
+      "clip_area": 41001.267968514,
+      "page_area": 501156.9211820215,
+      "text_density": 0.6546579601480718,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.455569644094599,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-block-42",
+      "page_index": 11,
+      "caption": "Figure 6: Monthly share of each symptom among all misalignment episodes (February 2025–April 2026). Symptoms are stacked to sum to 1. S3 and S7 grow in share over time, while S1, S4, and S5 decline.",
+      "clip": [
+        276.3781982421875,
+        18.0,
+        555.9201721191406,
+        277.8393249511719
+      ],
+      "clip_area": 72635.99778770561,
+      "page_area": 501156.9211820215,
+      "text_density": 0.16328198315320425,
+      "kind": "captioned_figure",
+      "score": 3.810147652893363,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/04-p12-captioned_figure.png",
+      "filename": "04-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2: Symptom-by-cause co-occurrence heatmap (row-normalized). Each cell shows the percentage of cause assignments for the given symptom.",
+      "clip": [
+        386.2420654296875,
+        301.5185241699219,
+        532.7716064453125,
+        403.1610107421875
+      ],
+      "clip_area": 14893.62690512091,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7627119887767788,
+      "kind": "embedded_image_with_caption",
+      "xref": 413,
+      "score": 2.165484743390234,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/05-p6-embedded_image_with_caption.png",
+      "filename": "05-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-cluster-1",
+      "page_index": 11,
+      "caption": "第 12 页矢量图主图候选",
+      "clip": [
+        297.22900390625,
+        56.865325927734375,
+        533.31982421875,
+        289.1390380859375
+      ],
+      "clip_area": 54837.69124045968,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20832466827823776,
+      "kind": "drawing_cluster",
+      "score": 0.9098275837552876,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/06-p12-drawing_cluster.png",
+      "filename": "06-p12-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-05-29/assets/figure_candidates/how-coding-agents-fail-their-users-a-large-scale-analysis-of-developer-agent-mis/contact-sheet.svg"
+}

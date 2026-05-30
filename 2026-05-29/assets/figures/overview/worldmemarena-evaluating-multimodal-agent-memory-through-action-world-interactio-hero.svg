@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8893B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <!-- Title -->
+  <text class="t" x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">WorldMemArena</text>
+  <text class="t" x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">多模态智能体记忆 · 四阶段诊断闭环</text>
+
+  <!-- Center label: Action-World Loop -->
+  <circle cx="450" cy="335" r="62" fill="#FFF7ED" stroke="#E8893B" stroke-width="1.8"/>
+  <text class="t" x="450" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">动作-世界</text>
+  <text class="t" x="450" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">交互循环</text>
+  <text class="t" x="450" y="362" text-anchor="middle" font-size="10" fill="#9C5A1F">o → m → a → f</text>
+
+  <!-- Stage 1: Write (top) -->
+  <rect x="370" y="135" width="160" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text class="t" x="450" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">① 写入</text>
+  <text class="t" x="450" y="180" text-anchor="middle" font-size="11" fill="#3D4F65">Observe → Write</text>
+
+  <!-- Stage 2: Update (right) -->
+  <rect x="650" y="304" width="160" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text class="t" x="730" y="329" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">② 更新</text>
+  <text class="t" x="730" y="349" text-anchor="middle" font-size="11" fill="#3D4F65">合并 / 覆盖旧版</text>
+
+  <!-- Stage 3: Retrieve (bottom) -->
+  <rect x="370" y="475" width="160" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text class="t" x="450" y="500" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">③ 检索</text>
+  <text class="t" x="450" y="520" text-anchor="middle" font-size="11" fill="#3D4F65">Recall · NDCG</text>
+
+  <!-- Stage 4: Use (left) -->
+  <rect x="290" y="304" width="160" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text class="t" x="370" y="329" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">④ 使用</text>
+  <text class="t" x="370" y="349" text-anchor="middle" font-size="11" fill="#3D4F65">证据 → 决策</text>
+
+  <!-- Loop arrows (clockwise), terminate at module edges, avoiding center circle -->
+  <path d="M 532 188 Q 640 215 648 304" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 720 368 Q 670 470 532 502" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 388 473 Q 340 430 372 368" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 372 302 Q 360 220 368 192" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Left input: two regimes -->
+  <rect x="30" y="135" width="150" height="46" rx="8" fill="#FFF7ED" stroke="#E8893B" stroke-width="1.4"/>
+  <text class="t" x="105" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">终身演化</text>
+  <text class="t" x="105" y="172" text-anchor="middle" font-size="10" fill="#3D4F65">个人 / 项目状态</text>
+
+  <rect x="30" y="195" width="150" height="46" rx="8" fill="#FFF7ED" stroke="#E8893B" stroke-width="1.4"/>
+  <text class="t" x="105" y="215" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">智能体执行</text>
+  <text class="t" x="105" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">GUI / 具身轨迹</text>
+
+  <path d="M 180 188 Q 270 170 365 166" fill="none" stroke="#E8893B" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#arrO)"/>
+  <text class="t" x="255" y="158" text-anchor="middle" font-size="10" fill="#9C5A1F">400 任务</text>
+
+  <!-- Right output: 3 paradigms compared -->
+  <text class="t" x="790" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">三类记忆范式</text>
+
+  <rect x="715" y="165" width="150" height="32" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+  <text class="t" x="790" y="185" text-anchor="middle" font-size="11" fill="#1E3A5F">长上下文</text>
+
+  <rect x="715" y="203" width="150" height="32" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+  <text class="t" x="790" y="223" text-anchor="middle" font-size="11" fill="#1E3A5F">RAG / 外部记忆</text>
+
+  <rect x="715" y="241" width="150" height="32" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+  <text class="t" x="790" y="261" text-anchor="middle" font-size="11" fill="#1E3A5F">Harness 自管理</text>
+
+  <path d="M 715 250 Q 670 285 652 320" fill="none" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrG)"/>
+
+  <!-- Bottom findings -->
+  <text class="t" x="450" y="575" text-anchor="middle" font-size="11" fill="#9C5A1F">关键发现：写入 ≠ 答对 · 视觉证据未用 · 仅追加不修订</text>
+</svg>

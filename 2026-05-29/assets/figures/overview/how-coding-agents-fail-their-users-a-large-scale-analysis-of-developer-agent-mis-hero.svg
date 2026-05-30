@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07856"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAF8F5"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">编码 Agent 如何让开发者失望</text>
+  <text x="450" y="70" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">20,574 次真实会话 · 以用户反驳为失对齐的可见信号</text>
+
+  <!-- Developer (left) -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <circle cx="120" cy="290" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="120" cy="272" r="16" fill="#4B8BDA"/>
+    <path d="M92 308 Q120 290 148 308 L148 328 L92 328 Z" fill="#4B8BDA"/>
+    <text x="120" y="375" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">开发者</text>
+    <text x="120" y="394" text-anchor="middle" font-size="11" fill="#3D4F65">下指令 · 反驳</text>
+  </g>
+
+  <!-- Center: Agent core with symptom ring -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <circle cx="450" cy="290" r="135" fill="#FFF4ED" stroke="#E07856" stroke-width="2"/>
+    <circle cx="450" cy="290" r="62" fill="#FFFFFF" stroke="#E07856" stroke-width="1.5"/>
+    <text x="450" y="285" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">编码 Agent</text>
+    <text x="450" y="305" text-anchor="middle" font-size="11" fill="#3D4F65">7 类失对齐</text>
+
+    <!-- 7 symptom dots around -->
+    <g font-size="11" fill="#1E3A5F">
+      <!-- top -->
+      <circle cx="450" cy="180" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="450" y="184" text-anchor="middle" font-weight="700">S1</text>
+      <text x="450" y="160" text-anchor="middle" font-size="10" fill="#3D4F65">错读项目</text>
+
+      <!-- top-right -->
+      <circle cx="538" cy="218" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="538" y="222" text-anchor="middle" font-weight="700">S2</text>
+      <text x="566" y="208" font-size="10" fill="#3D4F65">误解意图</text>
+
+      <!-- right (highlight) -->
+      <circle cx="572" cy="290" r="24" fill="#E07856" stroke="#B85B3A"/>
+      <text x="572" y="294" text-anchor="middle" font-weight="700" fill="#FFFFFF">S3</text>
+      <text x="602" y="286" font-size="10" fill="#1E3A5F" font-weight="700">违反约束</text>
+      <text x="602" y="300" font-size="10" fill="#3D4F65">38.3%</text>
+
+      <!-- bottom-right -->
+      <circle cx="538" cy="362" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="538" y="366" text-anchor="middle" font-weight="700">S4</text>
+      <text x="566" y="378" font-size="10" fill="#3D4F65">越界行动</text>
+
+      <!-- bottom -->
+      <circle cx="450" cy="400" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="450" y="404" text-anchor="middle" font-weight="700">S5</text>
+      <text x="450" y="430" text-anchor="middle" font-size="10" fill="#3D4F65">实现错误</text>
+
+      <!-- bottom-left -->
+      <circle cx="362" cy="362" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="362" y="366" text-anchor="middle" font-weight="700">S6</text>
+      <text x="334" y="378" text-anchor="end" font-size="10" fill="#3D4F65">执行错</text>
+
+      <!-- left (highlight) -->
+      <circle cx="328" cy="290" r="24" fill="#E07856" stroke="#B85B3A"/>
+      <text x="328" y="294" text-anchor="middle" font-weight="700" fill="#FFFFFF">S7</text>
+      <text x="298" y="286" text-anchor="end" font-size="10" fill="#1E3A5F" font-weight="700">虚假汇报</text>
+      <text x="298" y="300" text-anchor="end" font-size="10" fill="#3D4F65">22.6%</text>
+
+      <!-- top-left -->
+      <circle cx="362" cy="218" r="22" fill="#FFE4D4" stroke="#E07856"/>
+      <text x="362" y="222" text-anchor="middle" font-weight="700">S8</text>
+    </g>
+  </g>
+
+  <!-- Arrow dev -> agent (instruction) -->
+  <line x1="180" y1="278" x2="298" y2="278" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arrB)"/>
+  <text x="240" y="270" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">指令</text>
+
+  <!-- Arrow agent -> dev (pushback feedback) -->
+  <path d="M298 308 Q238 348 180 312" fill="none" stroke="#E07856" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="238" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">反驳纠错</text>
+
+  <!-- Right side: outcomes -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <line x1="596" y1="290" x2="708" y2="230" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arrB)"/>
+    <line x1="596" y1="290" x2="708" y2="370" stroke="#E07856" stroke-width="2.2" marker-end="url(#arr)"/>
+
+    <rect x="710" y="170" width="160" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="790" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">代价落点</text>
+    <text x="790" y="224" text-anchor="middle" font-size="22" font-weight="700" fill="#E07856">90.5%</text>
+    <text x="790" y="246" text-anchor="middle" font-size="11" fill="#3D4F65">仅消耗精力</text>
+    <text x="790" y="262" text-anchor="middle" font-size="11" fill="#3D4F65">与用户信任</text>
+
+    <rect x="710" y="310" width="160" height="100" rx="10" fill="#FFF4ED" stroke="#E07856" stroke-width="1.5"/>
+    <text x="790" y="336" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">谁来兜底</text>
+    <text x="790" y="364" text-anchor="middle" font-size="22" font-weight="700" fill="#E07856">91.5%</text>
+    <text x="790" y="386" text-anchor="middle" font-size="11" fill="#3D4F65">需用户显式</text>
+    <text x="790" y="402" text-anchor="middle" font-size="11" fill="#3D4F65">纠正才修复</text>
+  </g>
+
+  <!-- Bottom: trend strip -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="60" y="485" width="780" height="90" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="80" y="513" font-size="13" font-weight="700" fill="#1E3A5F">时间趋势</text>
+
+    <text x="80" y="545" font-size="11" fill="#3D4F65">总失对齐率</text>
+    <text x="166" y="545" font-size="13" font-weight="700" fill="#4B8BDA">↓ 下降</text>
+
+    <text x="240" y="545" font-size="11" fill="#3D4F65">但是</text>
+
+    <text x="290" y="545" font-size="11" fill="#3D4F65">违反约束 S3</text>
+    <text x="378" y="545" font-size="13" font-weight="700" fill="#E07856">↑</text>
+
+    <text x="410" y="545" font-size="11" fill="#3D4F65">虚假汇报 S7</text>
+    <text x="498" y="545" font-size="13" font-weight="700" fill="#E07856">↑</text>
+
+    <text x="600" y="540" font-size="12" fill="#1E3A5F" font-style="italic" font-weight="700">越会写代码</text>
+    <text x="600" y="560" font-size="12" fill="#1E3A5F" font-style="italic" font-weight="700">越不听话</text>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">记忆生命周期四阶段</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Action-World Interaction Loop</text>
+
+  <!-- Stage 1: Write -->
+  <g>
+    <circle cx="105" cy="200" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <path d="M85 215 L130 170 L143 183 L98 228 Z" fill="#4B8BDA" opacity="0.85"/>
+    <path d="M85 215 L98 228 L88 232 Z" fill="#1E3A5F"/>
+    <text x="105" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">写入 Write</text>
+    <text x="105" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Recall / 幻觉率</text>
+  </g>
+
+  <!-- Stage 2: Update -->
+  <g>
+    <circle cx="275" cy="200" r="62" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+    <path d="M253 188 A25 25 0 1 1 255 215" fill="none" stroke="#E89B4C" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M253 188 L248 196 L259 195 Z" fill="#E89B4C"/>
+    <path d="M297 212 A25 25 0 1 1 295 185" fill="none" stroke="#1E3A5F" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M297 212 L302 204 L291 205 Z" fill="#1E3A5F"/>
+    <text x="275" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">更新合并 Update</text>
+    <text x="275" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">新版覆盖旧版</text>
+  </g>
+
+  <!-- Stage 3: Retrieve -->
+  <g>
+    <circle cx="445" cy="200" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="438" cy="193" r="20" fill="none" stroke="#1E3A5F" stroke-width="3.5"/>
+    <line x1="453" y1="208" x2="468" y2="223" stroke="#1E3A5F" stroke-width="4" stroke-linecap="round"/>
+    <text x="445" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">检索 Retrieve</text>
+    <text x="445" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Recall / NDCG</text>
+  </g>
+
+  <!-- Stage 4: Use -->
+  <g>
+    <circle cx="615" cy="200" r="62" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+    <circle cx="615" cy="200" r="26" fill="none" stroke="#E89B4C" stroke-width="3"/>
+    <circle cx="615" cy="200" r="14" fill="none" stroke="#1E3A5F" stroke-width="3"/>
+    <circle cx="615" cy="200" r="4" fill="#1E3A5F"/>
+    <text x="615" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">使用决策 Use &amp; Act</text>
+    <text x="615" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">证据使用率</text>
+  </g>
+
+  <!-- arrows between stages -->
+  <line x1="167" y1="200" x2="208" y2="200" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="337" y1="200" x2="378" y2="200" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <line x1="507" y1="200" x2="548" y2="200" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+
+  <!-- closed loop -->
+  <path d="M615 262 Q615 410 360 410 Q105 410 105 262" fill="none" stroke="#4B8BDA" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">每阶段独立打分 · 精准定位失效环节</text>
+</svg>
