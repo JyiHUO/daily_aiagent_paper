@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D87070"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8843D"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">嵌入空间中的弱信号聚类</text>
+
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <text x="80" y="92" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">分散请求</text>
+
+    <circle cx="80" cy="140" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="145" text-anchor="middle" font-size="12" fill="#3D4F65">U-83</text>
+    <circle cx="80" cy="210" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="215" text-anchor="middle" font-size="12" fill="#3D4F65">U-40</text>
+    <circle cx="80" cy="280" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="285" text-anchor="middle" font-size="12" fill="#3D4F65">U-17</text>
+    <circle cx="80" cy="360" r="22" fill="#FFF4E6" stroke="#C8843D" stroke-width="1.5"/>
+    <text x="80" y="365" text-anchor="middle" font-size="12" fill="#3D4F65">U-99</text>
+
+    <text x="80" y="412" text-anchor="middle" font-size="11" fill="#3D4F65">单条得分 ≈ 0.15</text>
+  </g>
+
+  <!-- arrows to embedding space -->
+  <line x1="104" y1="143" x2="252" y2="200" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="104" y1="210" x2="252" y2="220" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="104" y1="277" x2="252" y2="240" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="104" y1="358" x2="400" y2="340" stroke="#C8843D" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrOrange)"/>
+
+  <!-- middle: embedding space -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="170" y="100" width="320" height="300" rx="14" fill="#F7FAFE" stroke="#B8CCE4" stroke-width="1.2" stroke-dasharray="5,4"/>
+    <text x="330" y="125" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">嵌入空间</text>
+
+    <ellipse cx="300" cy="225" rx="75" ry="58" fill="#FDECEC" stroke="#D87070" stroke-width="1.8"/>
+    <circle cx="275" cy="210" r="6" fill="#D87070"/>
+    <circle cx="315" cy="200" r="6" fill="#D87070"/>
+    <circle cx="325" cy="240" r="6" fill="#D87070"/>
+    <circle cx="280" cy="250" r="6" fill="#D87070"/>
+    <text x="300" y="305" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">同一攻击簇</text>
+
+    <ellipse cx="420" cy="345" rx="42" ry="30" fill="#EAF5EA" stroke="#7FB07F" stroke-width="1.5"/>
+    <circle cx="410" cy="340" r="5" fill="#7FB07F"/>
+    <circle cx="430" cy="350" r="5" fill="#7FB07F"/>
+    <text x="420" y="385" text-anchor="middle" font-size="11" fill="#3D4F65">良性簇</text>
+  </g>
+
+  <!-- arrow to LLM judge -->
+  <line x1="375" y1="225" x2="555" y2="225" stroke="#D87070" stroke-width="2" marker-end="url(#arrRed)"/>
+  <text x="465" y="216" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">证据累积触发</text>
+
+  <!-- right: cross-context LLM judge -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="555" y="170" width="140" height="115" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="625" y="198" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">跨上下文 LLM</text>
+    <text x="625" y="218" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">综合判定</text>
+    <text x="625" y="252" text-anchor="middle" font-size="18" fill="#D87070" font-weight="700">0.95</text>
+    <text x="625" y="272" text-anchor="middle" font-size="11" fill="#3D4F65">拒绝放行</text>
+  </g>
+
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">弱信号 → 在线增量聚类 → 仅疑似簇触发昂贵的跨账号推理</text>
+</svg>

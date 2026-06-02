@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9785C"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4FA877"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">决策地形：高产区 Core 与陷阱区 Trap</text>
+
+  <!-- Productive Core -->
+  <ellipse cx="200" cy="260" rx="120" ry="70" fill="#DCF1E3" stroke="#4FA877" stroke-width="2"/>
+  <text x="200" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">Core 高产区</text>
+  <text x="200" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#3D4F65">扩散后 score 正分位</text>
+
+  <!-- Trap Region -->
+  <ellipse cx="540" cy="290" rx="120" ry="60" fill="#FBE2DC" stroke="#D9785C" stroke-width="2"/>
+  <text x="540" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">Trap 陷阱区</text>
+  <text x="540" y="308" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#3D4F65">扩散后 score 负分位</text>
+
+  <!-- Access arrow -->
+  <path d="M 70 170 Q 110 200 150 222" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arrB)"/>
+  <text x="80" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Access 进入高产</text>
+
+  <!-- Trap exposure arrow -->
+  <path d="M 670 180 Q 640 220 605 252" fill="none" stroke="#D9785C" stroke-width="2.2" marker-end="url(#arrR)"/>
+  <text x="640" y="168" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Trap 掉入陷阱</text>
+
+  <!-- Repair arrow: trap -> core -->
+  <path d="M 460 320 Q 360 400 260 315" fill="none" stroke="#4FA877" stroke-width="2.4" stroke-dasharray="6 4" marker-end="url(#arrG)"/>
+  <text x="360" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Repair 脱坑回归</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#3D4F65">每条 rollout 浓缩为三个二值事件：Access / Trap / Repair</text>
+</svg>

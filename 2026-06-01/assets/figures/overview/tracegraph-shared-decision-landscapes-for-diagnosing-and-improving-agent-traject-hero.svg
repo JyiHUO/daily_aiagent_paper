@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5A9B6E"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">TraceGraph：共享决策地形</text>
+  <text x="450" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">把多模型轨迹拼成一张图，识别陷阱并在线挽救</text>
+
+  <!-- Left: input trajectories -->
+  <g>
+    <rect x="30" y="100" width="170" height="280" rx="10" fill="#F5F8FC" stroke="#A8C5E2" stroke-width="1.2"/>
+    <text x="115" y="125" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">多模型轨迹</text>
+
+    <!-- three simple polylines -->
+    <polyline points="50,160 80,200 70,240 110,275" fill="none" stroke="#4B8BDA" stroke-width="2"/>
+    <polyline points="50,180 100,210 90,255 130,290" fill="none" stroke="#7BA7D9" stroke-width="2"/>
+    <polyline points="50,200 75,250 120,260 150,300" fill="none" stroke="#A8C5E2" stroke-width="2"/>
+    <circle cx="50" cy="160" r="4" fill="#4B8BDA"/>
+    <circle cx="50" cy="180" r="4" fill="#7BA7D9"/>
+    <circle cx="50" cy="200" r="4" fill="#A8C5E2"/>
+
+    <text x="115" y="335" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">分数都 ≈ 40%</text>
+    <text x="115" y="355" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">过程却天差地别</text>
+  </g>
+
+  <!-- Arrow into landscape -->
+  <path d="M 205 240 L 240 240" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Center: shared landscape (graph) -->
+  <g>
+    <rect x="245" y="100" width="430" height="320" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="460" y="125" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">共享决策图</text>
+
+    <!-- light edges (background) -->
+    <g stroke="#A8C5E2" stroke-width="1" fill="none" opacity="0.7">
+      <line x1="290" y1="170" x2="335" y2="210"/>
+      <line x1="465" y1="170" x2="500" y2="200"/>
+      <line x1="500" y1="200" x2="610" y2="220"/>
+      <line x1="290" y1="370" x2="450" y2="385"/>
+      <line x1="450" y1="385" x2="540" y2="370"/>
+      <line x1="615" y1="385" x2="585" y2="370"/>
+    </g>
+
+    <!-- Core region -->
+    <ellipse cx="370" cy="240" rx="75" ry="52" fill="#D5E8D4" stroke="#5A9B6E" stroke-width="2"/>
+    <text x="370" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#2D6840">高产区 Core</text>
+    <circle cx="350" cy="252" r="4" fill="#5A9B6E"/>
+    <circle cx="385" cy="258" r="4" fill="#5A9B6E"/>
+    <circle cx="365" cy="268" r="4" fill="#5A9B6E"/>
+
+    <!-- Trap region -->
+    <ellipse cx="555" cy="335" rx="72" ry="48" fill="#FADCD3" stroke="#D97757" stroke-width="2"/>
+    <text x="555" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#A84527">陷阱区 Trap</text>
+    <circle cx="535" cy="352" r="4" fill="#D97757"/>
+    <circle cx="575" cy="352" r="4" fill="#D97757"/>
+
+    <!-- Other scattered nodes -->
+    <circle cx="290" cy="170" r="4" fill="#7BA7D9"/>
+    <circle cx="465" cy="170" r="4" fill="#7BA7D9"/>
+    <circle cx="500" cy="200" r="4" fill="#7BA7D9"/>
+    <circle cx="610" cy="220" r="4" fill="#7BA7D9"/>
+    <circle cx="290" cy="370" r="4" fill="#7BA7D9"/>
+    <circle cx="450" cy="385" r="4" fill="#7BA7D9"/>
+    <circle cx="615" cy="385" r="4" fill="#7BA7D9"/>
+
+    <!-- Access arrow into core -->
+    <path d="M 295 175 L 332 218" stroke="#5A9B6E" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+    <text x="270" y="160" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#2D6840">Access 进入</text>
+
+    <!-- Trap arrow: core → trap -->
+    <path d="M 430 275 L 510 320" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <text x="438" y="298" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#A84527">Trap 踩坑</text>
+
+    <!-- Repair arrow: trap → core (dashed loop back) -->
+    <path d="M 510 335 Q 470 320 430 285" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+    <text x="455" y="345" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#1E3A5F">Repair 挽救</text>
+  </g>
+
+  <!-- Arrow center → right -->
+  <path d="M 680 240 L 735 240" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Right: runtime intervention -->
+  <g>
+    <rect x="740" y="140" width="145" height="200" rx="10" fill="#FFF4E6" stroke="#D97757" stroke-width="1.5"/>
+    <text x="812" y="166" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#A84527">在线挽救</text>
+    <line x1="755" y1="178" x2="869" y2="178" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="812" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">运行时检测</text>
+    <text x="812" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">命中陷阱状态</text>
+    <text x="812" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">前缀分叉</text>
+    <text x="812" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Hot / Note 提示</text>
+    <text x="812" y="311" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">轻量延续策略</text>
+  </g>
+
+  <!-- Down arrow from landscape to result -->
+  <path d="M 460 420 L 460 465" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Result box -->
+  <g>
+    <rect x="245" y="470" width="430" height="95" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="460" y="495" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">SWE-bench 实测增益</text>
+    <text x="335" y="530" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#A84527">40.4%</text>
+    <text x="400" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" fill="#4B8BDA">→</text>
+    <text x="465" y="530" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#2D6840">43.5%</text>
+    <text x="580" y="525" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">+3.1pp</text>
+    <text x="580" y="543" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">p = 0.016</text>
+    <text x="460" y="558" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">命中子集 resolved rate 显著提升</text>
+  </g>
+
+  <!-- Loop back arrow from intervention to result -->
+  <path d="M 812 340 L 812 515 L 680 515" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+</svg>

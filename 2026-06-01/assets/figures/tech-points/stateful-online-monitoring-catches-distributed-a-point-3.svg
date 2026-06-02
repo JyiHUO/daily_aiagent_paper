@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07B5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">99% 走快车道，1% 才深查</text>
+
+  <!-- Incoming requests -->
+  <g>
+    <text x="100" y="100" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">所有请求</text>
+    <g fill="#A9C5E8">
+      <circle cx="65" cy="135" r="5"/>
+      <circle cx="90" cy="150" r="5"/>
+      <circle cx="115" cy="130" r="5"/>
+      <circle cx="140" cy="155" r="5"/>
+      <circle cx="65" cy="175" r="5"/>
+      <circle cx="95" cy="190" r="5"/>
+      <circle cx="135" cy="180" r="5"/>
+      <circle cx="75" cy="215" r="5"/>
+      <circle cx="105" cy="225" r="5"/>
+      <circle cx="140" cy="210" r="5"/>
+    </g>
+    <circle cx="115" cy="200" r="6" fill="#E07B5C"/>
+  </g>
+
+  <!-- Fast lane -->
+  <rect x="240" y="110" width="200" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="340" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">本地快速评分</text>
+  <text x="340" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">≈ 99% 请求 · 延迟不变</text>
+
+  <!-- Slow lane -->
+  <rect x="240" y="270" width="200" height="90" rx="10" fill="#FDECE4" stroke="#E07B5C" stroke-width="2"/>
+  <text x="340" y="305" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">跨上下文深查</text>
+  <text x="340" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">尾部 1% · 汇聚簇内证据</text>
+
+  <!-- Routing arrows -->
+  <path d="M 160 170 L 235 155" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arB)"/>
+  <path d="M 160 200 L 235 295" stroke="#E07B5C" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Outcomes -->
+  <rect x="500" y="110" width="170" height="90" rx="10" fill="#F4F8FC" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="585" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">放行</text>
+  <text x="585" y="175" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">低开销</text>
+
+  <rect x="500" y="270" width="170" height="90" rx="10" fill="#F4F8FC" stroke="#E07B5C" stroke-width="1.5"/>
+  <text x="585" y="308" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">更早拦截</text>
+  <text x="585" y="335" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">第 25 步 (vs 37 步)</text>
+
+  <path d="M 440 155 L 495 155" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arB)"/>
+  <path d="M 440 315 L 495 315" stroke="#E07B5C" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65" font-style="italic">证据越聚越多 → 提早触发深查</text>
+</svg>

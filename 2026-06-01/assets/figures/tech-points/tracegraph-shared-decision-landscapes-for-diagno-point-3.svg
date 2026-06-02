@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">供给 vs 需求</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">模型风格 与 基准考点</text>
+
+  <!-- Left: Model Supply -->
+  <rect x="50" y="100" width="280" height="320" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="190" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">模型供给 Supply</text>
+
+  <!-- Model A: explorer-fixer -->
+  <circle cx="115" cy="220" r="38" fill="#FFE8D6" stroke="#E08B4A" stroke-width="2"/>
+  <text x="115" y="218" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">探索修复</text>
+  <text x="115" y="234" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">+Access +Repair</text>
+
+  <!-- Model B: conservative -->
+  <circle cx="265" cy="220" r="38" fill="#E8F0FE" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="265" y="218" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">保守浅层</text>
+  <text x="265" y="234" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">−Trap −Repair</text>
+
+  <text x="190" y="330" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">同分不同风</text>
+  <text x="190" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">相对其他模型均值的偏差</text>
+  <text x="190" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">95% CI bootstrap</text>
+
+  <!-- Right: Benchmark Demand -->
+  <rect x="390" y="100" width="280" height="320" rx="12" fill="#FEF6E8" stroke="#E0A84A" stroke-width="1.5"/>
+  <text x="530" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">基准需求 Demand</text>
+
+  <!-- Bench A: avoidance -->
+  <rect x="412" y="180" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#E0A84A" stroke-width="1.5"/>
+  <text x="462" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">考避坑</text>
+  <text x="462" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">奖励 low Trap</text>
+
+  <!-- Bench B: recovery -->
+  <rect x="548" y="180" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#E0A84A" stroke-width="1.5"/>
+  <text x="598" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">考恢复</text>
+  <text x="598" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">奖励 high Repair</text>
+
+  <text x="530" y="330" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">成功 − 失败</text>
+  <text x="530" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">三事件差值揭示考点</text>
+
+  <!-- Matching arrows -->
+  <line x1="335" y1="220" x2="385" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-style="italic" fill="#3D4F65">风格匹配考点 → 揭示真实能力</text>
+</svg>

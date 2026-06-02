@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/downloaded_pdfs/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-38",
+      "page_index": 1,
+      "caption": "Figure 2: Overview of our findings. (i) Harness-updating is flat in base capability . Models across capability tiers produce harness updates that yield similar gains. (ii) Harness-benefit is non-monotonic in base capability . Mid-tier models benefit most, while weak-tier models benefit little due to failures in harness activation and adherence.",
+      "clip": [
+        64.20500183105469,
+        54.86700439453125,
+        531.06103515625,
+        222.9320068359375
+      ],
+      "clip_area": 78462.16038058419,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15490860307071877,
+      "kind": "drawing_cluster_with_caption",
+      "score": 74.37728559776336,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-5-0",
+      "page_index": 1,
+      "caption": "Figure 2: Overview of our findings. (i) Harness-updating is flat in base capability . Models across capability tiers produce harness updates that yield similar gains. (ii) Harness-benefit is non-monotonic in base capability . Mid-tier models benefit most, while weak-tier models benefit little due to failures in harness activation and adherence.",
+      "clip": [
+        74.38591003417969,
+        67.24958801269531,
+        257.1119079589844,
+        217.0640411376953
+      ],
+      "clip_area": 27374.9954508245,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08434121140927885,
+      "kind": "embedded_image_with_caption",
+      "xref": 833,
+      "score": 71.04369393156354,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 2: Overview of our findings. (i) Harness-updating is flat in base capability . Models across capability tiers produce harness updates that yield similar gains. (ii) Harness-benefit is non-monotonic in base capability . Mid-tier models benefit most, while weak-tier models benefit little due to failures in harness activation and adherence.",
+      "clip": [
+        233.80462646484375,
+        66.23100280761719,
+        420.4888916015625,
+        218.77532958984375
+      ],
+      "clip_area": 28477.62554611545,
+      "page_area": 501156.9211820215,
+      "text_density": 0.10920564474960687,
+      "kind": "embedded_image_with_caption",
+      "xref": 828,
+      "score": 69.5640793766471,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/03-p2-embedded_image_with_caption.png",
+      "filename": "03-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-35",
+      "page_index": 4,
+      "caption": "Figure 3: Harness-updating capability ( ∆ update ) of each evolver. Evolvers are grouped by model family (Claude, Qwen, GPT-OSS). The best and worst evolver, marked in bold within each panel, change with the benchmark.",
+      "clip": [
+        52.865997314453125,
+        54.865692138671875,
+        542.4072265625,
+        225.8740234375
+      ],
+      "clip_area": 83715.62871568557,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14035741753728345,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.3087286001595,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/04-p5-drawing_cluster_with_caption.png",
+      "filename": "04-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-35",
+      "page_index": 4,
+      "caption": "Figure 3: Harness-updating capability ( ∆ update ) of each evolver. Evolvers are grouped by model family (Claude, Qwen, GPT-OSS). The best and worst evolver, marked in bold within each panel, change with the benchmark.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        555.4213928222656,
+        212.41893005371094
+      ],
+      "clip_area": 99993.38770620739,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09269791776518725,
+      "kind": "captioned_figure",
+      "score": 27.34916257526885,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/05-p5-captioned_figure.png",
+      "filename": "05-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-14-drawing-caption-25",
+      "page_index": 14,
+      "caption": "Figure 8: Post-evolution scores across evolvers for anchor agents on SWE (left) and SB (right) datasets. Each anchor task-solving agent is instantiated with a different LLM backbone: Opus 4.6, Sonnet 4.6, or Qwen3-235B. Blue dots show scores obtained with the seven evolvers, and the black tick marks the no-evolution baseline.",
+      "clip": [
+        70.63180541992188,
+        49.66575622558594,
+        524.5906982421875,
+        269.8340759277344
+      ],
+      "clip_area": 99947.36664652592,
+      "page_area": 501156.9211820215,
+      "text_density": 0.17992783432725518,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.1148562364372,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/06-p15-drawing_cluster_with_caption.png",
+      "filename": "06-p15-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/harness-updating-is-not-harness-benefit-disentangling-evolution-capabilities-in-/contact-sheet.svg"
+}

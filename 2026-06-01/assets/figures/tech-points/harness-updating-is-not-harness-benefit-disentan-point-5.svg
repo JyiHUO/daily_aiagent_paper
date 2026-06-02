@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">预算该花在哪？</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">写经验便宜，照做才贵</text>
+
+  <!-- LEFT: Conventional intuition -->
+  <g>
+    <text x="180" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#8A8A8A">直觉做法</text>
+
+    <rect x="80" y="125" width="200" height="80" rx="8" fill="#FBEFE8" stroke="#C97B5A" stroke-width="1.5"/>
+    <text x="180" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">强模型当 Evolver</text>
+    <text x="180" y="185" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">写经验</text>
+
+    <line x1="180" y1="215" x2="180" y2="258" stroke="#C97B5A" stroke-width="1.8" marker-end="url(#arrRed)"/>
+
+    <rect x="80" y="265" width="200" height="80" rx="8" fill="#F5F5F5" stroke="#B8B8B8" stroke-width="1.5"/>
+    <text x="180" y="298" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">弱模型当 Agent</text>
+    <text x="180" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">照做</text>
+
+    <text x="180" y="388" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" fill="#C97B5A">✗</text>
+    <text x="180" y="412" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#C97B5A">瓶颈在执行</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="360" y1="100" x2="360" y2="430" stroke="#D8D8D8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT: New advice -->
+  <g>
+    <text x="540" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#4B8BDA" font-weight="bold">本文建议</text>
+
+    <rect x="440" y="125" width="200" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">弱模型当 Evolver</text>
+    <text x="540" y="185" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">差距 ≤ 3.1 pp</text>
+
+    <line x1="540" y1="215" x2="540" y2="258" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+    <rect x="440" y="265" width="200" height="80" rx="8" fill="#DCE9F8" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="540" y="298" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">强模型当 Agent</text>
+    <text x="540" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">训练遵循力</text>
+
+    <text x="540" y="388" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" fill="#4B8BDA">✓</text>
+    <text x="540" y="412" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">领先 18–35 pp</text>
+  </g>
+
+  <text x="360" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">把算力留给 Agent，而不是 Evolver</text>
+</svg>

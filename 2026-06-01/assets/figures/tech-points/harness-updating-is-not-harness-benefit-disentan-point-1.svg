@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">拆解自进化的两种能力</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">谁在写经验 vs 谁在用经验</text>
+
+  <!-- Left: Harness Updating -->
+  <rect x="50" y="90" width="280" height="340" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="190" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">写经验的能力</text>
+  <text x="190" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">harness-updating</text>
+
+  <!-- evolvers varying -->
+  <rect x="75" y="170" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="115" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Evolver A</text>
+  <rect x="75" y="214" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="115" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Evolver B</text>
+  <rect x="75" y="258" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="115" y="280" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Evolver C</text>
+
+  <!-- fixed anchor agent -->
+  <rect x="215" y="214" width="90" height="34" rx="6" fill="#FFE8D6" stroke="#D97757"/>
+  <text x="260" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">固定 Agent (anchor)</text>
+
+  <line x1="155" y1="187" x2="213" y2="224" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="155" y1="231" x2="213" y2="231" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arrB)"/>
+  <line x1="155" y1="275" x2="213" y2="238" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arrB)"/>
+
+  <text x="190" y="335" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">换 evolver，看平均增益</text>
+  <text x="190" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="bold" fill="#D97757">→ 谁会写</text>
+  <text x="190" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">发现：跨能力档基本持平</text>
+
+  <!-- Right: Harness Benefit -->
+  <rect x="390" y="90" width="280" height="340" rx="14" fill="#FFF4E6" stroke="#D97757" stroke-width="1.5"/>
+  <text x="530" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">用经验的能力</text>
+  <text x="530" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">harness-benefit</text>
+
+  <!-- fixed evolver -->
+  <rect x="415" y="214" width="90" height="34" rx="6" fill="#E8F0FE" stroke="#4B8BDA"/>
+  <text x="460" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">固定 Evolver (anchor)</text>
+
+  <!-- agents varying -->
+  <rect x="565" y="170" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#D97757"/>
+  <text x="605" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Agent X</text>
+  <rect x="565" y="214" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#D97757"/>
+  <text x="605" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Agent Y</text>
+  <rect x="565" y="258" width="80" height="34" rx="6" fill="#FFFFFF" stroke="#D97757"/>
+  <text x="605" y="280" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Agent Z</text>
+
+  <line x1="505" y1="224" x2="563" y2="187" stroke="#D97757" stroke-width="1.5" marker-end="url(#arrO)"/>
+  <line x1="505" y1="231" x2="563" y2="231" stroke="#D97757" stroke-width="1.5" marker-end="url(#arrO)"/>
+  <line x1="505" y1="238" x2="563" y2="275" stroke="#D97757" stroke-width="1.5" marker-end="url(#arrO)"/>
+
+  <text x="530" y="335" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">换 agent，看最大增益</text>
+  <text x="530" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="bold" fill="#4B8BDA">→ 谁会用</text>
+  <text x="530" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">发现：中档模型受益最大</text>
+
+  <text x="360" y="462" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">两个轴独立归因，端到端涨分不再混为一谈</text>
+</svg>

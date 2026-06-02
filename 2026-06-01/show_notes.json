@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-06-01",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-06-01 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>Stateful Online Monitoring Catches Distributed Agent Attacks</strong></li><li><strong>Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents</strong></li><li><strong>TraceGraph: Shared Decision Landscapes for Diagnosing and Improving Agent Trajectories</strong></li></ul><p>[\"今天的关键词是'解构'：把安全、评测、进化、记忆都拆到组件层重新归因\"]</p>",
+  "report_date": "2026-06-01",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-06-01T22:25:54Z"
+}

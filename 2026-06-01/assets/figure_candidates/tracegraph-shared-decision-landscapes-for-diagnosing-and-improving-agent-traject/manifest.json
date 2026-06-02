@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/downloaded_pdfs/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        359.8370056152344,
+        59.41181945800781,
+        553.1355590820312,
+        218.60198974609375
+      ],
+      "clip_area": 30771.22964282008,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 422,
+      "score": 11.34190255158689,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/01-p2-embedded_image.png",
+      "filename": "01-p2-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        58.865997314453125,
+        65.95034790039062,
+        553.1343383789062,
+        253.00299072265625
+      ],
+      "clip_area": 92454.19945948292,
+      "page_area": 484704.0,
+      "text_density": 0.007838768499469887,
+      "kind": "embedded_image",
+      "xref": 424,
+      "score": 8.027268882883144,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/02-p3-embedded_image.png",
+      "filename": "02-p3-embedded_image.png"
+    },
+    {
+      "id": "page-16-drawing-cluster-0",
+      "page_index": 16,
+      "caption": "第 17 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        375.82843017578125,
+        557.1614379882812,
+        612.5549926757812
+      ],
+      "clip_area": 118906.67303013802,
+      "page_area": 484704.0,
+      "text_density": 0.08033934386470919,
+      "kind": "drawing_cluster",
+      "score": 7.979639368117449,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/03-p17-drawing_cluster.png",
+      "filename": "03-p17-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-1",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        54.865966796875,
+        295.6461486816406,
+        557.1422729492188,
+        424.80499267578125
+      ],
+      "clip_area": 64873.42706828378,
+      "page_area": 484704.0,
+      "text_density": 0.10451350042191605,
+      "kind": "drawing_cluster",
+      "score": 7.250005830999301,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/04-p7-drawing_cluster.png",
+      "filename": "04-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        63.95243835449219,
+        557.1349487304688,
+        196.97100830078125
+      ],
+      "clip_area": 66811.09764578054,
+      "page_area": 484704.0,
+      "text_density": 0.17053473534185762,
+      "kind": "drawing_cluster",
+      "score": 3.3102614088861033,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/05-p6-drawing_cluster.png",
+      "filename": "05-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-drawing-caption-16",
+      "page_index": 16,
+      "caption": "Figure 7 Demand-sign robustness across hyperparameter sweeps. Dots show baseline values; shaded bars show the range across core-quantile, trap-quantile, Laplace-smoothing, diffusion, and mutual- 𝑘 NN perturbations. All qualitative signs are stable except the borderline TerminalBench Trap sign under the largest mutual- 𝑘 NN setting.",
+      "clip": [
+        52.865997314453125,
+        373.82843017578125,
+        559.1614379882812,
+        614.5549926757812
+      ],
+      "clip_area": 121878.76104283333,
+      "page_area": 484704.0,
+      "text_density": 0.09384279787130347,
+      "kind": "drawing_cluster_with_caption",
+      "score": 2.1694321277217923,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/06-p17-drawing_cluster_with_caption.png",
+      "filename": "06-p17-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-01/assets/figure_candidates/tracegraph-shared-decision-landscapes-for-diagnosing-and-improving-agent-traject/contact-sheet.svg"
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">写经验 ≠ 模型强弱</text>
+  <text x="360" y="66" text-anchor="middle" font-size="13" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">同一段成功轨迹，强弱模型总结出几乎一致的 skill</text>
+
+  <!-- shared trajectory source -->
+  <rect x="280" y="105" width="160" height="58" rx="8" fill="#FEF3E6" stroke="#E8A661" stroke-width="1.5"/>
+  <text x="360" y="132" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">成功轨迹 flink-query</text>
+  <text x="360" y="151" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">从执行 evidence 中提炼步骤</text>
+
+  <!-- split arrows to evolvers -->
+  <path d="M 320 163 L 200 215" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M 400 163 L 520 215" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- left: small model -->
+  <rect x="70" y="220" width="220" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="180" y="246" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">Qwen 9B（弱 evolver）</text>
+  <text x="180" y="266" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">推理能力低</text>
+
+  <!-- right: strong model -->
+  <rect x="430" y="220" width="220" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="540" y="246" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">Opus 4.6（强 evolver）</text>
+  <text x="540" y="266" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">推理能力高</text>
+
+  <!-- arrows down to skills -->
+  <path d="M 180 280 L 180 315" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M 540 280 L 540 315" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- skill outputs -->
+  <rect x="70" y="320" width="220" height="92" rx="8" fill="#F4F8F2" stroke="#7AAE6E" stroke-width="1.5"/>
+  <text x="180" y="346" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">skill：啰嗦版</text>
+  <text x="180" y="370" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">步骤序列同构</text>
+  <text x="180" y="392" text-anchor="middle" font-size="12" font-weight="600" fill="#2F7A2F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">+3.8 pp</text>
+
+  <rect x="430" y="320" width="220" height="92" rx="8" fill="#F4F8F2" stroke="#7AAE6E" stroke-width="1.5"/>
+  <text x="540" y="346" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">skill：简洁版</text>
+  <text x="540" y="370" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">步骤序列同构</text>
+  <text x="540" y="392" text-anchor="middle" font-size="12" font-weight="600" fill="#2F7A2F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">+2.3 pp</text>
+
+  <!-- equals sign between -->
+  <text x="360" y="376" text-anchor="middle" font-size="34" font-weight="700" fill="#E8A661" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">≈</text>
+
+  <text x="360" y="452" text-anchor="middle" font-size="12" font-style="italic" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">7 个 evolver 间增益差距 ≤ 3.1 pp，无模型在所有 benchmark 上稳定占优</text>
+</svg>

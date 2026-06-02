@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A04848"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3D4F65"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">经验收益 倒 U 形</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">harness-benefit vs. base capability (SWE)</text>
+
+  <!-- baseline axis -->
+  <line x1="80" y1="380" x2="660" y2="380" stroke="#B8C5D6" stroke-width="1.5"/>
+  <text x="80" y="402" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">弱模型</text>
+  <text x="360" y="402" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">中等模型</text>
+  <text x="660" y="402" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">强模型</text>
+
+  <!-- inverted U curve -->
+  <path d="M 100 350 Q 360 110 620 340" stroke="#4B8BDA" stroke-width="2.5" fill="none"/>
+
+  <!-- weak point -->
+  <circle cx="130" cy="330" r="9" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="130" y="310" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">+4.4 pp</text>
+  <text x="130" y="294" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Qwen3-32B</text>
+
+  <!-- mid peak -->
+  <circle cx="360" cy="150" r="11" fill="#FDE9D9" stroke="#E8954A" stroke-width="2.5"/>
+  <text x="360" y="132" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">+19.3 pp</text>
+  <text x="360" y="115" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Qwen3-235B (峰值)</text>
+
+  <!-- strong point -->
+  <circle cx="595" cy="335" r="9" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="595" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">+2.6 pp</text>
+  <text x="595" y="299" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Opus 4.6</text>
+
+  <!-- mid annotation -->
+  <text x="360" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#E8954A" font-weight="600">中段获益最多</text>
+
+  <!-- weak annotation -->
+  <text x="130" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#A04848">空间最大却用不上经验</text>
+  <line x1="130" y1="434" x2="130" y2="343" stroke="#A04848" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#ar)"/>
+
+  <!-- strong annotation -->
+  <text x="595" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#3D4F65">已近天花板</text>
+  <line x1="595" y1="434" x2="595" y2="348" stroke="#3D4F65" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#ar2)"/>
+</svg>
