@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrSel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E6FD9"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">Harness 树 + Solve-time 路由</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">按任务 tag 选分支，避免技能互相干扰</text>
+
+  <!-- Incoming task -->
+  <rect x="40" y="200" width="130" height="70" rx="10" fill="#FFF4E6" stroke="#E8A95B" stroke-width="1.5"/>
+  <text x="105" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">新任务</text>
+  <text x="105" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">tag: sports</text>
+
+  <!-- Router (diamond) -->
+  <polygon points="255,235 315,200 375,235 315,270" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="315" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">Router</text>
+  <text x="315" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">git show</text>
+
+  <!-- Arrow task -> router -->
+  <line x1="170" y1="235" x2="253" y2="235" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Tree trunk: main -->
+  <rect x="450" y="60" width="160" height="46" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="530" y="88" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">main (基础 harness)</text>
+
+  <!-- Branches -->
+  <!-- sports (selected) -->
+  <rect x="450" y="135" width="180" height="56" rx="8" fill="#DCEBFF" stroke="#1E6FD9" stroke-width="2.5"/>
+  <text x="540" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="700">branch/sports ✓</text>
+  <text x="540" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">Sports prompt + signal-analyzer</text>
+
+  <!-- politics -->
+  <rect x="450" y="210" width="180" height="40" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="540" y="234" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">branch/politics</text>
+
+  <!-- finance -->
+  <rect x="450" y="266" width="180" height="40" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="540" y="290" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">branch/finance</text>
+
+  <!-- culture -->
+  <rect x="450" y="322" width="180" height="40" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="540" y="346" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">branch/culture</text>
+
+  <!-- Tree connector lines from main (orthogonal) -->
+  <path d="M 430 106 L 430 342 L 450 342" fill="none" stroke="#94A3B8" stroke-width="1.3"/>
+  <path d="M 430 163 L 450 163" fill="none" stroke="#94A3B8" stroke-width="1.3"/>
+  <path d="M 430 230 L 450 230" fill="none" stroke="#94A3B8" stroke-width="1.3"/>
+  <path d="M 430 286 L 450 286" fill="none" stroke="#94A3B8" stroke-width="1.3"/>
+
+  <!-- Router selects sports -->
+  <path d="M 375 222 Q 415 180 448 163" fill="none" stroke="#1E6FD9" stroke-width="2.4" marker-end="url(#arrSel)"/>
+  <text x="385" y="172" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E6FD9" font-weight="600">checkout</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">演化时按失败聚类长出分支 · solve 时只加载对应专科</text>
+</svg>

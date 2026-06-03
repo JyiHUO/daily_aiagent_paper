@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="42" text-anchor="middle" class="t" font-size="20" font-weight="700" fill="#1E3A5F">按场景发工具</text>
+  <text x="360" y="66" text-anchor="middle" class="t" font-size="13" fill="#3D4F65">ToolHub Scenario Env</text>
+
+  <!-- Spec source -->
+  <rect x="40" y="180" width="150" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="115" y="215" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">任务 Spec</text>
+  <text x="115" y="245" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">目标 / 约束 / 场景</text>
+  <text x="115" y="270" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">权限 / 资源 / 标签</text>
+
+  <!-- ToolHub index (shelf metaphor) -->
+  <g>
+    <rect x="265" y="150" width="190" height="180" rx="10" fill="#FFF7ED" stroke="#D88A3F" stroke-width="1.5"/>
+    <text x="360" y="178" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">ToolHub 货架</text>
+
+    <line x1="280" y1="200" x2="440" y2="200" stroke="#D88A3F" stroke-width="1"/>
+    <line x1="280" y1="245" x2="440" y2="245" stroke="#D88A3F" stroke-width="1"/>
+    <line x1="280" y1="290" x2="440" y2="290" stroke="#D88A3F" stroke-width="1"/>
+
+    <rect x="288" y="208" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="328" y="208" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="368" y="208" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="408" y="208" width="24" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+
+    <rect x="288" y="253" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="328" y="253" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="368" y="253" width="32" height="32" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+
+    <rect x="288" y="298" width="32" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="328" y="298" width="32" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="368" y="298" width="32" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="408" y="298" width="24" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+
+    <text x="360" y="355" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">工具 / Skill / 文件</text>
+  </g>
+
+  <!-- Docker scoped env -->
+  <g>
+    <rect x="525" y="180" width="160" height="130" rx="10" fill="#ECFDF5" stroke="#3FA37A" stroke-width="1.5"/>
+    <text x="605" y="210" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">沙箱环境</text>
+    <text x="605" y="235" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">init.sh / task.yaml</text>
+    <rect x="555" y="255" width="22" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="585" y="255" width="22" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <rect x="615" y="255" width="22" height="22" rx="3" fill="#FDE7C8" stroke="#D88A3F"/>
+    <text x="605" y="297" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">本任务专属子集</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="192" y1="240" x2="260" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="226" y="230" text-anchor="middle" class="t" font-size="11" fill="#4B8BDA">检索</text>
+
+  <line x1="458" y1="240" x2="520" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="489" y="230" text-anchor="middle" class="t" font-size="11" fill="#4B8BDA">物化</text>
+
+  <!-- bottom note -->
+  <text x="360" y="425" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">不发全套工具，只发本场景该有的 — 每任务专属，可复现</text>
+</svg>

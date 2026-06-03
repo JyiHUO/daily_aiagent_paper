@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Regret = L_evo + L_adapt</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">把退化拆成两类损失</text>
+
+  <!-- Oracle -->
+  <circle cx="360" cy="160" r="48" fill="#FFF4E0" stroke="#E0A35C" stroke-width="2"/>
+  <text x="360" y="156" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Oracle</text>
+  <text x="360" y="176" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">理想 harness</text>
+
+  <!-- Gap arrows from Oracle to two losses -->
+  <line x1="322" y1="190" x2="232" y2="278" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <line x1="398" y1="190" x2="488" y2="278" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+
+  <text x="232" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">能力差距</text>
+  <text x="488" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">特化差距</text>
+
+  <!-- Left: L_evo -->
+  <rect x="60" y="280" width="260" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="190" y="314" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">L_evo  演化损失</text>
+  <text x="190" y="356" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12.5" fill="#3D4F65">演化器能力不够</text>
+  <text x="190" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12.5" fill="#3D4F65">造不出该有组件</text>
+  <text x="190" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-style="italic" fill="#A65A2A">→ 解法：更强演化器</text>
+
+  <!-- Right: L_adapt -->
+  <rect x="400" y="280" width="260" height="160" rx="10" fill="#FDEFE6" stroke="#E0A35C" stroke-width="2"/>
+  <text x="530" y="314" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">L_adapt  适应损失</text>
+  <text x="530" y="356" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12.5" fill="#3D4F65">单 harness 通吃</text>
+  <text x="530" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12.5" fill="#3D4F65">异质任务互相伤害</text>
+  <text x="530" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-style="italic" fill="#A65A2A">→ 解法：solve-time 路由</text>
+</svg>

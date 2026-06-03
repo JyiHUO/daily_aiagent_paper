@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/downloaded_pdfs/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-37",
+      "page_index": 0,
+      "caption": "Figure 1: Example of agent deception operationalized as plan-action divergence. When external pressure is applied, the agent reports an observer-favored plan to conform (“power surge”) but executes an action con- sistent with its intrinsic goal (“valve aging”), revealing spontaneous deceptive behavior.",
+      "clip": [
+        233.76527404785156,
+        198.6798858642578,
+        587.2760009765625,
+        412.7786865234375
+      ],
+      "clip_area": 75686.22265559179,
+      "page_area": 501156.9211820215,
+      "text_density": 0.31804097886604793,
+      "kind": "drawing_cluster_with_caption",
+      "score": 60.558499297543705,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-30",
+      "page_index": 5,
+      "caption": "Figure 4: The logic flow of Deception Judger. The module classifies the behavioral stance of Plans and Actions. By comparing the stances across Regular and Pressure settings, the system identifies inconsistencies that constitute strategic deception.",
+      "clip": [
+        50.602012634277344,
+        41.972381591796875,
+        337.5747985839844,
+        215.1445770263672
+      ],
+      "clip_area": 49695.70737288578,
+      "page_area": 501156.9211820215,
+      "text_density": 0.30975774910211534,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.76670958023848,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/02-p6-drawing_cluster_with_caption.png",
+      "filename": "02-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-18",
+      "page_index": 7,
+      "caption": "Figure 6: Deception rates of evaluated LLMs across four distinct pressure types.",
+      "clip": [
+        52.865997314453125,
+        54.86347198486328,
+        542.4030151367188,
+        196.26702880859375
+      ],
+      "clip_area": 69222.27551695029,
+      "page_area": 501156.9211820215,
+      "text_density": 0.25835341702369086,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.06793137321133,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/03-p8-drawing_cluster_with_caption.png",
+      "filename": "03-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-90",
+      "page_index": 3,
+      "caption": "Figure 2: The overall pipeline of dataset construction. The process is divided into three stages: (1) constructing foundational seeds (pressures, tools, scenarios), (2) generating dual-variant test cases, and (3) a multi-layered filtering process to ensure quality.",
+      "clip": [
+        47.88196563720703,
+        37.513214111328125,
+        556.4419555664062,
+        335.3282165527344
+      ],
+      "clip_area": 151456.794642366,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20669798824371352,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.39812070537719,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-18",
+      "page_index": 7,
+      "caption": "Figure 6: Deception rates of evaluated LLMs across four distinct pressure types.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        318.89630737304685,
+        182.96829223632812
+      ],
+      "clip_area": 45827.219937731876,
+      "page_area": 501156.9211820215,
+      "text_density": 0.18347336234081818,
+      "kind": "captioned_figure",
+      "score": 9.300789592192375,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/05-p8-captioned_figure.png",
+      "filename": "05-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-49",
+      "page_index": 7,
+      "caption": "Figure 7: Distribution of deception types: conflict vs. ambiguous.",
+      "clip": [
+        276.3781982421875,
+        18.0,
+        555.9201110839844,
+        180.36233520507812
+      ],
+      "clip_area": 45387.07775668855,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1585393963058314,
+      "kind": "captioned_figure",
+      "score": 3.7919370856133225,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/06-p8-captioned_figure.png",
+      "filename": "06-p8-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/spade-bench-evaluating-spontaneous-strategic-deception-in-agents-via-plan-action/contact-sheet.svg"
+}

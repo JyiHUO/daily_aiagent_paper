@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/downloaded_pdfs/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-12",
+      "page_index": 1,
+      "caption": "Figure 2: Three deployment dimensions in open- ended task streams. Unbounded stream, heterogeneous tasks, and non-stationary distributions expose the limits of evolving a single dense harness for long-term deploy- ment",
+      "clip": [
+        288.1419982910156,
+        54.86726379394531,
+        542.4059448242188,
+        172.13299560546875
+      ],
+      "clip_area": 29816.447763502132,
+      "page_area": 501156.9211820215,
+      "text_density": 0.17222365888551264,
+      "kind": "drawing_cluster_with_caption",
+      "score": 62.79787433090815,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-1-0",
+      "page_index": 1,
+      "caption": "Figure 2: Three deployment dimensions in open- ended task streams. Unbounded stream, heterogeneous tasks, and non-stationary distributions expose the limits of evolving a single dense harness for long-term deploy- ment",
+      "clip": [
+        295.77386474609375,
+        65.42042541503906,
+        395.4523010253906,
+        165.04925537109375
+      ],
+      "clip_area": 9930.8459783555,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11795000810883173,
+      "kind": "embedded_image_with_caption",
+      "xref": 790,
+      "score": 58.833342246562935,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-4-0",
+      "page_index": 7,
+      "caption": "(c) Example of the Human-in-the-Loop workflow. Figure 8: Extracted trajectories of the designed multi-agent evolution, agentic routing, and Human-in-the-Loop.",
+      "clip": [
+        60.62213897705078,
+        249.18588256835938,
+        169.68621826171875,
+        358.3404541015625
+      ],
+      "clip_area": 11904.842843981227,
+      "page_area": 501156.9211820215,
+      "text_density": 0.12572506758944565,
+      "kind": "embedded_image_with_caption",
+      "xref": 941,
+      "score": 29.388771976233055,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/03-p8-embedded_image_with_caption.png",
+      "filename": "03-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-drawing-caption-41",
+      "page_index": 15,
+      "caption": "Figure 14: FutureX non-stationarity. Language, source accessibility, difficulty, and answer format shift across batches, creating solve-time harness mismatch when one static harness is reused for all tasks.",
+      "clip": [
+        98.22000122070312,
+        54.86189270019531,
+        497.0504150390625,
+        312.6240234375
+      ],
+      "clip_area": 102803.37726866128,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1257319555148863,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.39834241653639,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/04-p16-drawing_cluster_with_caption.png",
+      "filename": "04-p16-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-116",
+      "page_index": 7,
+      "caption": "(c) Example of the Human-in-the-Loop workflow. Figure 8: Extracted trajectories of the designed multi-agent evolution, agentic routing, and Human-in-the-Loop.",
+      "clip": [
+        52.865997314453125,
+        54.866249084472656,
+        542.4130859375,
+        369.1400146484375
+      ],
+      "clip_area": 153851.80696244095,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3209566394106522,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.542601635360867,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/05-p8-drawing_cluster_with_caption.png",
+      "filename": "05-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-15-block-41",
+      "page_index": 15,
+      "caption": "Figure 14: FutureX non-stationarity. Language, source accessibility, difficulty, and answer format shift across batches, creating solve-time harness mismatch when one static harness is reused for all tasks.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        554.1737731933594,
+        299.2334289550781
+      ],
+      "clip_area": 144292.87859754244,
+      "page_area": 501156.9211820215,
+      "text_density": 0.07467961505867167,
+      "kind": "captioned_figure",
+      "score": 15.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/06-p16-captioned_figure.png",
+      "filename": "06-p16-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/adaptive-auto-harness-sustained-self-improvement-for-agentic-system-deployment-o/contact-sheet.svg"
+}

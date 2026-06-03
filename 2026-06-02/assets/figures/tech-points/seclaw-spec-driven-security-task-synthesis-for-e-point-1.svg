@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97777"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">规范驱动的安全任务合成</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">人写规范 · 机器实现</text>
+
+  <!-- Step 1: Human writes spec -->
+  <g>
+    <rect x="50" y="120" width="170" height="220" rx="10" fill="#FFF4E6" stroke="#E8A55C" stroke-width="1.8"/>
+    <circle cx="135" cy="170" r="22" fill="#E8A55C"/>
+    <circle cx="135" cy="162" r="8" fill="#FFF4E6"/>
+    <path d="M118 185 Q135 174 152 185 L152 190 L118 190 Z" fill="#FFF4E6"/>
+    <text x="135" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">人类专家</text>
+    <text x="135" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">定义风险类型</text>
+    <text x="135" y="276" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">威胁场景</text>
+    <text x="135" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">验收标准</text>
+  </g>
+
+  <!-- Spec document in middle -->
+  <g>
+    <rect x="290" y="150" width="140" height="160" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="360" y="175" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">Spec</text>
+    <line x1="305" y1="185" x2="415" y2="185" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="310" y1="205" x2="410" y2="205" stroke="#9CB8D6" stroke-width="1"/>
+    <line x1="310" y1="222" x2="395" y2="222" stroke="#9CB8D6" stroke-width="1"/>
+    <line x1="310" y1="239" x2="410" y2="239" stroke="#9CB8D6" stroke-width="1"/>
+    <line x1="310" y1="256" x2="380" y2="256" stroke="#9CB8D6" stroke-width="1"/>
+    <line x1="310" y1="273" x2="410" y2="273" stroke="#9CB8D6" stroke-width="1"/>
+    <line x1="310" y1="290" x2="390" y2="290" stroke="#9CB8D6" stroke-width="1"/>
+    <text x="360" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">结构化规范</text>
+  </g>
+
+  <!-- Step 2: Agent implements -->
+  <g>
+    <rect x="500" y="120" width="170" height="220" rx="10" fill="#E8F0FB" stroke="#4B8BDA" stroke-width="1.8"/>
+    <rect x="560" y="150" width="50" height="50" rx="6" fill="#4B8BDA"/>
+    <circle cx="575" cy="168" r="3" fill="#fff"/>
+    <circle cx="595" cy="168" r="3" fill="#fff"/>
+    <rect x="572" y="180" width="26" height="3" rx="1" fill="#fff"/>
+    <text x="585" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">合成 Agent</text>
+    <text x="585" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">生成工件文件</text>
+    <text x="585" y="276" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">配置 MCP 工具</text>
+    <text x="585" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">可执行任务</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="222" y1="230" x2="285" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="432" y1="230" x2="495" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="253" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA">写</text>
+  <text x="463" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA">实现</text>
+
+  <!-- QA loop bottom -->
+  <g>
+    <rect x="240" y="395" width="240" height="55" rx="8" fill="#FEF2F2" stroke="#D97777" stroke-width="1.5"/>
+    <circle cx="275" cy="422" r="13" fill="#D97777"/>
+    <path d="M269 422 L273 426 L281 418" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="385" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">质检 Agent</text>
+    <text x="385" y="437" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">每步校验</text>
+  </g>
+
+  <!-- QA arrows up to spec and synth agent -->
+  <path d="M310 395 Q310 360 360 340" stroke="#D97777" stroke-width="1.6" stroke-dasharray="4,3" fill="none" marker-end="url(#arrowR)"/>
+  <path d="M450 395 Q500 370 560 340" stroke="#D97777" stroke-width="1.6" stroke-dasharray="4,3" fill="none" marker-end="url(#arrowR)"/>
+</svg>

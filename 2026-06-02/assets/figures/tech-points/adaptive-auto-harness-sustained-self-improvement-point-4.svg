@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">结构化触发的人类介入</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">只补外部信号，不给答案</text>
+
+  <!-- 演化主轴标签 -->
+  <text x="360" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">演化主轴</text>
+
+  <!-- 演化主轴：两个阶段 -->
+  <rect x="80" y="130" width="180" height="92" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="170" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Analyst · 规划</text>
+  <text x="170" y="184" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">输出 task board</text>
+  <text x="170" y="204" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">（条目 / 优先级）</text>
+
+  <rect x="460" y="130" width="180" height="92" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="550" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Researcher · 执行</text>
+  <text x="550" y="184" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">遇阻塞（认证墙 /</text>
+  <text x="550" y="204" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">API key 缺失）</text>
+
+  <line x1="260" y1="176" x2="455" y2="176" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 钩子向下 -->
+  <line x1="170" y1="222" x2="170" y2="305" stroke="#E89B5A" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#aro)"/>
+  <line x1="550" y1="222" x2="550" y2="305" stroke="#E89B5A" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#aro)"/>
+
+  <text x="184" y="262" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#B8632A" font-style="italic">钩子 1: task-board steering</text>
+  <text x="380" y="262" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#B8632A" font-style="italic">钩子 2: interactive assistance</text>
+
+  <!-- 人类干预层 -->
+  <rect x="80" y="305" width="180" height="86" rx="10" fill="#FDF1E3" stroke="#E89B5A" stroke-width="1.5"/>
+  <text x="170" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">补任务条目 / 数据源</text>
+  <text x="170" y="356" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">如：缺中文金融源 →</text>
+  <text x="170" y="374" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">猫眼 / 微博 / Yahoo</text>
+
+  <rect x="460" y="305" width="180" height="86" rx="10" fill="#FDF1E3" stroke="#E89B5A" stroke-width="1.5"/>
+  <text x="550" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">解阻塞 / 提供凭据</text>
+  <text x="550" y="356" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">如：提供 EXA-API-KEY，</text>
+  <text x="550" y="374" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">指示跳过 SERPER</text>
+
+  <!-- 中央人类符号 -->
+  <circle cx="360" cy="345" r="34" fill="#FDF1E3" stroke="#E89B5A" stroke-width="2"/>
+  <circle cx="360" cy="335" r="9" fill="none" stroke="#B8632A" stroke-width="2"/>
+  <path d="M345 365 Q360 348 375 365" fill="none" stroke="#B8632A" stroke-width="2"/>
+  <text x="360" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#B8632A">Human</text>
+
+  <line x1="260" y1="345" x2="326" y2="345" stroke="#E89B5A" stroke-width="1.5"/>
+  <line x1="394" y1="345" x2="460" y2="345" stroke="#E89B5A" stroke-width="1.5"/>
+
+  <!-- 底部效果说明 -->
+  <text x="360" y="438" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">仅补外部信号 → 演化器据此新建 tool</text>
+  <text x="360" y="458" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#B8632A">FutureX cycle 4: pass rate +15pp</text>
+</svg>

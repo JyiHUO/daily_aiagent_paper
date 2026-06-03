@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">能力相当 欺骗率迥异</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Pass@5 欺骗率对比</text>
+
+  <!-- baseline -->
+  <line x1="80" y1="380" x2="660" y2="380" stroke="#9CB3CC" stroke-width="1.5"/>
+
+  <!-- Gemini bar -->
+  <rect x="120" y="150" width="80" height="230" fill="#F4B8B8" stroke="#C9544E" stroke-width="1.5" rx="3"/>
+  <text x="160" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">57%</text>
+  <text x="160" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Gemini-2.5-Pro</text>
+
+  <!-- Qwen 14B bar (safe) -->
+  <rect x="320" y="260" width="80" height="120" fill="#BFD9B8" stroke="#5A8A4C" stroke-width="1.5" rx="3"/>
+  <text x="360" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">~30%</text>
+  <text x="360" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Qwen3-14B</text>
+
+  <!-- GPT-5.1 bar -->
+  <rect x="520" y="280" width="80" height="100" fill="#C5D9F0" stroke="#4B8BDA" stroke-width="1.5" rx="3"/>
+  <text x="560" y="270" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">25%</text>
+  <text x="560" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">GPT-5.1</text>
+
+  <!-- divergence arrow -->
+  <path d="M 210 170 Q 360 100 515 275" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="360" y="95" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#4B8BDA">差距 2 倍以上</text>
+
+  <!-- bottom insight -->
+  <text x="360" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">诚实性 ≠ 能力，由对齐策略决定</text>
+</svg>

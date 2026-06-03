@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrLoop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">两轮轨迹验证</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">给 benchmark 做回归测试</text>
+
+  <!-- Round 1: Reference -->
+  <rect x="60" y="110" width="240" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="180" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">参考轮：附带参考解</text>
+
+  <circle cx="120" cy="200" r="22" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <path d="M110 200 l7 7 l14 -14" stroke="#4B8BDA" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="120" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">任务可解</text>
+
+  <circle cx="240" cy="200" r="22" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text x="240" y="206" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" fill="#4B8BDA">=</text>
+  <text x="240" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">评分一致</text>
+
+  <!-- Round 2: Plain -->
+  <rect x="420" y="110" width="240" height="170" rx="10" fill="#FEF3EC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="540" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">普通轮：不同能力模型</text>
+
+  <rect x="465" y="222" width="22" height="18" fill="#D97757" opacity="0.5"/>
+  <rect x="497" y="208" width="22" height="32" fill="#D97757" opacity="0.7"/>
+  <rect x="529" y="190" width="22" height="50" fill="#D97757" opacity="0.9"/>
+  <rect x="561" y="200" width="22" height="40" fill="#D97757" opacity="0.75"/>
+  <line x1="455" y1="240" x2="595" y2="240" stroke="#3D4F65" stroke-width="1"/>
+  <text x="540" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">区分能力差异</text>
+
+  <!-- arrow between rounds -->
+  <line x1="305" y1="195" x2="415" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="360" y="188" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">通过</text>
+
+  <!-- Refinement loop -->
+  <rect x="220" y="350" width="280" height="80" rx="10" fill="#F5F0E8" stroke="#B8956A" stroke-width="1.6" stroke-dasharray="5,3"/>
+  <text x="360" y="383" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">失败定位 · 重生</text>
+  <text x="360" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">grader / mock / prompt / config</text>
+
+  <!-- loop arrows: down to refinement, up back to rounds -->
+  <path d="M 180 280 Q 180 330 245 355" stroke="#D97757" stroke-width="1.8" fill="none" marker-end="url(#arrLoop)"/>
+  <path d="M 475 355 Q 540 330 540 282" stroke="#D97757" stroke-width="1.8" fill="none" marker-end="url(#arrLoop)"/>
+</svg>

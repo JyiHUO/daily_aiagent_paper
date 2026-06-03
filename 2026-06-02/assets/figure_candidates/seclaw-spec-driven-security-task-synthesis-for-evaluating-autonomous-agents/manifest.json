@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/downloaded_pdfs/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents",
+  "candidates": [
+    {
+      "id": "page-5-block-1",
+      "page_index": 5,
+      "caption": "Figure 3: Spec-Driven Security Task Synthesis Pipeline. The pipeline converts risk taxonomies and scenarios into task prototypes, instantiates them as executable security tasks, and performs trajectory-based validation with iterative refinement.",
+      "clip": [
+        86.0001449584961,
+        63.86259460449219,
+        525.9913330078125,
+        233.59695434570312
+      ],
+      "clip_area": 74681.62259532546,
+      "page_area": 484704.0,
+      "text_density": 0.02457455707021807,
+      "kind": "image_block_with_caption",
+      "score": 47.829795806614726,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/01-p6-image_block_with_caption.png",
+      "filename": "01-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the SeClaw Framework.",
+      "clip": [
+        96.0,
+        69.86297607421875,
+        515.9797668457031,
+        316.7200012207031
+      ],
+      "clip_area": 103674.95586524438,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 344,
+      "score": 47.15194395405827,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the SeClaw Framework.",
+      "clip": [
+        86.0,
+        63.86297607421875,
+        525.9797668457031,
+        322.7200012207031
+      ],
+      "clip_area": 113891.8535703225,
+      "page_area": 484704.0,
+      "text_density": 0.007632942478689982,
+      "kind": "image_block_with_caption",
+      "score": 47.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/03-p4-image_block_with_caption.png",
+      "filename": "03-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 3: Spec-Driven Security Task Synthesis Pipeline. The pipeline converts risk taxonomies and scenarios into task prototypes, instantiates them as executable security tasks, and performs trajectory-based validation with iterative refinement.",
+      "clip": [
+        93.49122619628906,
+        48.080596923828125,
+        518.6943969726562,
+        248.35923767089844
+      ],
+      "clip_area": 85159.11308443523,
+      "page_area": 484704.0,
+      "text_density": 0.09019799315221201,
+      "kind": "embedded_image_with_caption",
+      "xref": 377,
+      "score": 46.33433277847212,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/04-p6-embedded_image_with_caption.png",
+      "filename": "04-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Figure 1: Safety Risk Taxonomy for agent: Sources and Potential Consequences.",
+      "clip": [
+        86.0,
+        63.86439514160156,
+        525.9904174804688,
+        231.9219970703125
+      ],
+      "clip_area": 73943.73443337996,
+      "page_area": 484704.0,
+      "text_density": 0.020229862809609055,
+      "kind": "image_block_with_caption",
+      "score": 29.82159704925978,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/05-p3-image_block_with_caption.png",
+      "filename": "05-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1: Safety Risk Taxonomy for agent: Sources and Potential Consequences.",
+      "clip": [
+        96.0,
+        69.86439514160156,
+        515.9904174804688,
+        225.9219970703125
+      ],
+      "clip_area": 65542.69738504011,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 343,
+      "score": 28.728252193167112,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/06-p3-embedded_image_with_caption.png",
+      "filename": "06-p3-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-02/assets/figure_candidates/seclaw-spec-driven-security-task-synthesis-for-evaluating-autonomous-agents/contact-sheet.svg"
+}

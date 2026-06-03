@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F" class="t">轨迹级评测</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65" class="t">只看终点 vs 看全程</text>
+
+  <!-- LEFT: only output -->
+  <g>
+    <rect x="50" y="90" width="270" height="170" rx="10" fill="#FEF3E8" stroke="#E8A87C" stroke-width="1.5"/>
+    <text x="185" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F" class="t">只看输出</text>
+
+    <circle cx="80" cy="170" r="6" fill="#9CB3C9"/>
+    <line x1="86" y1="170" x2="120" y2="170" stroke="#9CB3C9" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <circle cx="130" cy="170" r="8" fill="#D9534F"/>
+    <text x="130" y="195" text-anchor="middle" font-size="10" fill="#D9534F" class="t">泄露</text>
+    <line x1="138" y1="170" x2="180" y2="170" stroke="#9CB3C9" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <circle cx="190" cy="170" r="6" fill="#9CB3C9"/>
+    <line x1="196" y1="170" x2="240" y2="170" stroke="#9CB3C9" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <circle cx="250" cy="170" r="10" fill="#5CB85C"/>
+    <text x="250" y="195" text-anchor="middle" font-size="10" fill="#5CB85C" class="t">看似正常</text>
+
+    <text x="185" y="240" text-anchor="middle" font-size="11" fill="#3D4F65" class="t">中途风险被忽略</text>
+  </g>
+
+  <!-- RIGHT: trajectory -->
+  <g>
+    <rect x="400" y="90" width="270" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="535" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F" class="t">看全轨迹</text>
+
+    <circle cx="430" cy="170" r="6" fill="#4B8BDA"/>
+    <line x1="436" y1="170" x2="470" y2="170" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="480" cy="170" r="8" fill="#D9534F" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="480" y="195" text-anchor="middle" font-size="10" fill="#D9534F" class="t">捕获</text>
+    <line x1="488" y1="170" x2="530" y2="170" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="540" cy="170" r="6" fill="#4B8BDA"/>
+    <line x1="546" y1="170" x2="590" y2="170" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="600" cy="170" r="6" fill="#4B8BDA"/>
+
+    <text x="535" y="240" text-anchor="middle" font-size="11" fill="#3D4F65" class="t">每步动作可审计</text>
+  </g>
+
+  <!-- F-attack section -->
+  <text x="360" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F" class="t">F-attack 调和平均</text>
+
+  <g>
+    <rect x="100" y="335" width="170" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="185" y="362" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F" class="t">覆盖率 C</text>
+    <text x="185" y="385" text-anchor="middle" font-size="11" fill="#3D4F65" class="t">命中多少目标</text>
+  </g>
+
+  <g>
+    <rect x="450" y="335" width="170" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="535" y="362" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F" class="t">成功率 P</text>
+    <text x="535" y="385" text-anchor="middle" font-size="11" fill="#3D4F65" class="t">多少样本得手</text>
+  </g>
+
+  <line x1="270" y1="370" x2="333" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="450" y1="370" x2="387" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <circle cx="360" cy="370" r="24" fill="#1E3A5F"/>
+  <text x="360" y="376" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF" class="t">F</text>
+
+  <text x="360" y="438" text-anchor="middle" font-size="11" fill="#3D4F65" class="t">两者都高才算稳定有效</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="24" font-weight="700" fill="#1E3A5F">SPADE-Bench</text>
+  <text x="450" y="72" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">计划与行动是否一致？</text>
+
+  <!-- Agent core (center) -->
+  <circle cx="450" cy="320" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="450" y="316" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">Agent (LLM)</text>
+  <text x="450" y="340" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">同一任务 / 配对</text>
+
+  <!-- LEFT: Regular scenario -->
+  <rect x="60" y="140" width="220" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="170" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">常规情境</text>
+  <text x="170" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">无外部压力</text>
+
+  <!-- LEFT: Pressure scenario -->
+  <rect x="60" y="420" width="220" height="80" rx="10" fill="#FDECEA" stroke="#D9534F" stroke-width="1.5"/>
+  <text x="170" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#8B2B26">压力情境</text>
+  <text x="170" y="475" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">观察者 + 威胁</text>
+
+  <!-- Arrows from scenarios to agent -->
+  <path d="M280,180 Q360,210 391,290" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M280,460 Q360,430 391,352" fill="none" stroke="#D9534F" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- RIGHT TOP: Plan -->
+  <rect x="600" y="160" width="240" height="90" rx="10" fill="#FFF8E1" stroke="#E0A800" stroke-width="1.5"/>
+  <text x="720" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#7A5A00">声明的计划（用户可见）</text>
+  <text x="720" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">压力下口径漂移</text>
+
+  <!-- RIGHT BOTTOM: Action -->
+  <rect x="600" y="390" width="240" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="720" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">真实的行动（工具调用）</text>
+  <text x="720" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">仍执行原始意图</text>
+
+  <!-- Arrows from agent to plan/action -->
+  <path d="M500,288 Q555,250 598,212" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M500,352 Q555,395 598,428" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Divergence indicator -->
+  <line x1="720" y1="252" x2="720" y2="388" stroke="#D9534F" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="708,305 724,300 716,318 728,322 710,340 718,322" fill="#D9534F" opacity="0.9"/>
+  <text x="760" y="325" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#8B2B26">背离 = 欺骗</text>
+
+  <!-- Bottom legend / key finding -->
+  <rect x="150" y="535" width="600" height="50" rx="8" fill="#F5F7FA" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="450" y="556" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">配对比较：同一 case 在两情境下的立场漂移</text>
+  <text x="450" y="574" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">前沿模型欺骗率 25% – 57%，与模型能力解耦</text>
+</svg>

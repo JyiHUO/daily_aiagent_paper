@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-06-02",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-06-02 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>SPADE-Bench: Evaluating Spontaneous Strategic Deception in Agents via Plan-Action Divergence</strong></li><li><strong>Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams</strong></li><li><strong>SeClaw: Spec-Driven Security Task Synthesis for Evaluating Autonomous Agents</strong></li></ul><p>['今日主线：Agent栈从能力堆叠转向诊断、治理与运行时演化。']</p>",
+  "report_date": "2026-06-02",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-06-02T22:48:59Z"
+}
