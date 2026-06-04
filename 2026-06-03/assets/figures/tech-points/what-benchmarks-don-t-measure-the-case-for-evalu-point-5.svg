@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3DA374"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">同一模型，三种行为</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Claude Opus 4.6 · SR / UR</text>
+
+  <!-- Baseline -->
+  <g>
+    <rect x="55" y="100" width="180" height="250" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="145" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Baseline · 原生模型</text>
+
+    <text x="80" y="180" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">SR</text>
+    <rect x="80" y="188" width="130" height="14" fill="#DCE7F2"/>
+    <rect x="80" y="188" width="80" height="14" fill="#4B8BDA"/>
+    <text x="215" y="200" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">61.7%</text>
+
+    <text x="80" y="232" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">UR</text>
+    <rect x="80" y="240" width="130" height="14" fill="#DCE7F2"/>
+    <rect x="80" y="240" width="38" height="14" fill="#E8A04B"/>
+    <text x="215" y="252" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">29.2%</text>
+
+    <text x="145" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">默认状态</text>
+  </g>
+
+  <!-- Prompt-Only -->
+  <g>
+    <rect x="270" y="100" width="180" height="250" rx="10" fill="#FDF4E8" stroke="#E8A04B" stroke-width="1.5"/>
+    <text x="360" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Prompt-Only · 仅提示</text>
+
+    <text x="295" y="180" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">SR</text>
+    <rect x="295" y="188" width="130" height="14" fill="#F5E2C5"/>
+    <rect x="295" y="188" width="99" height="14" fill="#4B8BDA"/>
+    <text x="430" y="200" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">75.8%</text>
+
+    <text x="295" y="232" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">UR</text>
+    <rect x="295" y="240" width="130" height="14" fill="#F5E2C5"/>
+    <rect x="295" y="240" width="11" height="14" fill="#E8A04B"/>
+    <text x="430" y="252" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C0392B">8.3% ↓</text>
+
+    <text x="360" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">更不敢动（拒绝偏置）</text>
+  </g>
+
+  <!-- Checkpoint -->
+  <g>
+    <rect x="485" y="100" width="180" height="250" rx="10" fill="#E8F4EC" stroke="#3DA374" stroke-width="1.5"/>
+    <text x="575" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Checkpoint · 外挂检查</text>
+
+    <text x="510" y="180" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">SR</text>
+    <rect x="510" y="188" width="130" height="14" fill="#D4E8DC"/>
+    <rect x="510" y="188" width="117" height="14" fill="#3DA374"/>
+    <text x="645" y="200" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">90.0%</text>
+
+    <text x="510" y="232" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">UR</text>
+    <rect x="510" y="240" width="130" height="14" fill="#D4E8DC"/>
+    <rect x="510" y="240" width="103" height="14" fill="#3DA374"/>
+    <text x="645" y="252" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">79.2%</text>
+
+    <text x="575" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#3DA374">SR / UR / IRR 齐升</text>
+  </g>
+
+  <!-- arrows between panels -->
+  <line x1="237" y1="220" x2="268" y2="220" stroke="#C0392B" stroke-width="2" marker-end="url(#arrR)" stroke-dasharray="4,3"/>
+  <line x1="452" y1="220" x2="483" y2="220" stroke="#3DA374" stroke-width="2.5" marker-end="url(#arrG)"/>
+
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">安全–可用并非天然权衡</text>
+  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">关键在系统层而非提示层</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9543C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Compliance Bias</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">该停时不停的结构性偏差</text>
+
+  <!-- Agent in middle -->
+  <circle cx="360" cy="240" r="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Agent</text>
+  <text x="360" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">硬着头皮干</text>
+
+  <!-- Left push: RLHF -->
+  <rect x="40" y="200" width="170" height="80" rx="10" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="125" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">RLHF 偏好</text>
+  <text x="125" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">奖励自信完成的回答</text>
+  <line x1="210" y1="240" x2="298" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Right push: Benchmark -->
+  <rect x="510" y="200" width="170" height="80" rx="10" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="595" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Benchmark</text>
+  <text x="595" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">只奖励完成，没有 pause</text>
+  <line x1="510" y1="240" x2="422" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Agent suppresses pause -->
+  <line x1="360" y1="300" x2="360" y2="346" stroke="#C9543C" stroke-width="2.5" marker-end="url(#arrR)"/>
+
+  <!-- Pause sign blocked -->
+  <g transform="translate(360,378)">
+    <polygon points="0,-28 24,-14 24,14 0,28 -24,14 -24,-14" fill="#F5F5F5" stroke="#B0B0B0" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#999">PAUSE</text>
+    <line x1="-32" y1="-32" x2="32" y2="32" stroke="#C9543C" stroke-width="3"/>
+  </g>
+
+  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#C9543C" font-weight="600">缺输入 / 缺验证 / 缺授权 也照做</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">先看再做：TOR 指标</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">被环境观察支撑的动作占比</text>
+
+  <!-- 左：observation 眼睛 -->
+  <g>
+    <ellipse cx="180" cy="170" rx="70" ry="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <ellipse cx="180" cy="170" rx="18" ry="18" fill="#4B8BDA"/>
+    <circle cx="180" cy="170" r="7" fill="#EFF6FF"/>
+    <text x="180" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">观察环境  ls · cat · grep</text>
+  </g>
+
+  <!-- 右：action -->
+  <g>
+    <rect x="470" y="135" width="140" height="75" rx="10" fill="#FEF3E8" stroke="#E89A4F" stroke-width="2"/>
+    <text x="540" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">动手修改</text>
+    <text x="540" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">edit · run</text>
+    <text x="540" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">被支撑的动作才计入 TOR</text>
+  </g>
+
+  <!-- 箭头：观察支撑动作 -->
+  <path d="M 252 170 L 466 170" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="360" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA" font-style="italic">支撑</text>
+
+  <!-- 分隔与小标题 -->
+  <line x1="80" y1="295" x2="640" y2="295" stroke="#C9D6E2" stroke-width="1.5"/>
+  <text x="360" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">四个教师的 TOR：越高，学生越强</text>
+
+  <!-- bars: baseline y=410 -->
+  <line x1="90" y1="410" x2="630" y2="410" stroke="#C9D6E2" stroke-width="1"/>
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="150" y="397" width="20" height="13" fill="#A8B8CC"/>
+    <text x="160" y="390" text-anchor="middle" font-size="11" fill="#1E3A5F">2.5%</text>
+    <text x="160" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">Claude</text>
+
+    <rect x="290" y="377" width="20" height="33" fill="#8FAFD4"/>
+    <text x="300" y="370" text-anchor="middle" font-size="11" fill="#1E3A5F">6.5%</text>
+    <text x="300" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">Qwen</text>
+
+    <rect x="430" y="372" width="20" height="38" fill="#6FA0D6"/>
+    <text x="440" y="365" text-anchor="middle" font-size="11" fill="#1E3A5F">7.3%</text>
+    <text x="440" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">GLM</text>
+
+    <rect x="570" y="340" width="20" height="70" fill="#4B8BDA"/>
+    <text x="580" y="333" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">13.4%</text>
+    <text x="580" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">DeepSeek</text>
+  </g>
+
+  <text x="360" y="462" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" font-style="italic">高分教师不等于好教师 · 看得多才教得好</text>
+</svg>

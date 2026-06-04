@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <style>
+    .title { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; font-size: 20px; fill: #1E3A5F; font-weight: 600; }
+    .label { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; font-size: 16px; fill: #1E3A5F; font-weight: 600; }
+    .body { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; font-size: 13px; fill: #3D4F65; }
+    .resp { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; font-size: 13px; fill: #B45309; font-weight: 600; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" class="title">三类 Gap → 三种 Pause</text>
+
+  <!-- 中央源点 -->
+  <circle cx="110" cy="240" r="48" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="236" text-anchor="middle" class="label">Agent</text>
+  <text x="110" y="256" text-anchor="middle" class="body">该停吗？</text>
+
+  <!-- 三条分流箭头 -->
+  <line x1="152" y1="218" x2="278" y2="120" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="158" y1="240" x2="278" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="152" y1="262" x2="278" y2="360" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Spec gap -->
+  <rect x="280" y="80" width="180" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="370" y="108" text-anchor="middle" class="label">Specification</text>
+  <text x="370" y="130" text-anchor="middle" class="body">参数缺字段</text>
+  <text x="370" y="148" text-anchor="middle" class="body">哪个 Sarah？</text>
+
+  <!-- Verify gap -->
+  <rect x="280" y="200" width="180" height="80" rx="8" fill="#FEF3E7" stroke="#E8A05C" stroke-width="1.5"/>
+  <text x="370" y="228" text-anchor="middle" class="label">Verification</text>
+  <text x="370" y="250" text-anchor="middle" class="body">状态未确认</text>
+  <text x="370" y="268" text-anchor="middle" class="body">srv 真重启了？</text>
+
+  <!-- Authority gap -->
+  <rect x="280" y="320" width="180" height="80" rx="8" fill="#FCE9E9" stroke="#D97070" stroke-width="1.5"/>
+  <text x="370" y="348" text-anchor="middle" class="label">Authority</text>
+  <text x="370" y="370" text-anchor="middle" class="body">权限不足</text>
+  <text x="370" y="388" text-anchor="middle" class="body">$5000 谁批？</text>
+
+  <!-- 对应响应箭头 -->
+  <line x1="460" y1="120" x2="548" y2="120" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="460" y1="240" x2="548" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="460" y1="360" x2="548" y2="360" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 响应模块 -->
+  <rect x="552" y="96" width="148" height="48" rx="6" fill="#FFF7ED" stroke="#B45309" stroke-width="1.2"/>
+  <text x="626" y="118" text-anchor="middle" class="resp">反问追问 clarify</text>
+  <text x="626" y="136" text-anchor="middle" class="body">缺哪个字段</text>
+
+  <rect x="552" y="216" width="148" height="48" rx="6" fill="#FFF7ED" stroke="#B45309" stroke-width="1.2"/>
+  <text x="626" y="238" text-anchor="middle" class="resp">有界重查 re-check</text>
+  <text x="626" y="256" text-anchor="middle" class="body">不扩 action</text>
+
+  <rect x="552" y="336" width="148" height="48" rx="6" fill="#FFF7ED" stroke="#B45309" stroke-width="1.2"/>
+  <text x="626" y="358" text-anchor="middle" class="resp">暂停申请 approval</text>
+  <text x="626" y="376" text-anchor="middle" class="body">commitment pause</text>
+
+  <text x="360" y="450" text-anchor="middle" class="body">不是"拒绝"，而是结构化的 pause</text>
+</svg>

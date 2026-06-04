@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">教学悖论：强者未必善教</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一任务，不同教师轨迹 → 学生迁移能力差异</text>
+
+  <!-- LEFT: Strong teacher -->
+  <rect x="50" y="100" width="280" height="320" rx="12" fill="#FFF4EC" stroke="#E89B6C" stroke-width="1.5"/>
+  <text x="190" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Claude Opus · 分数 69.4</text>
+  <text x="190" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#A85A2A">一步走捷径，学生死记动作</text>
+
+  <rect x="80" y="180" width="220" height="40" rx="6" fill="#FFE0CC" stroke="#E89B6C"/>
+  <text x="190" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">edit utils.py</text>
+
+  <rect x="100" y="320" width="180" height="70" rx="8" fill="#FFFFFF" stroke="#E89B6C" stroke-width="1.5"/>
+  <text x="190" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Qwen3-32B 学生</text>
+  <text x="190" y="377" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#C2410C">15.5%</text>
+
+  <line x1="190" y1="220" x2="190" y2="318" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: Weaker teacher -->
+  <rect x="390" y="100" width="280" height="320" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="530" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">DeepSeek V3.2 · 分数 39.3</text>
+  <text x="530" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#2563B8">多步观察，学生学到可迁移套路</text>
+
+  <rect x="410" y="172" width="240" height="26" rx="5" fill="#DDEBFB" stroke="#4B8BDA"/>
+  <text x="530" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">cat utils.py</text>
+
+  <rect x="410" y="206" width="240" height="26" rx="5" fill="#DDEBFB" stroke="#4B8BDA"/>
+  <text x="530" y="224" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">ls src/</text>
+
+  <rect x="410" y="240" width="240" height="26" rx="5" fill="#DDEBFB" stroke="#4B8BDA"/>
+  <text x="530" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">edit + verify</text>
+
+  <rect x="440" y="320" width="180" height="70" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="530" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Qwen3-32B 学生</text>
+  <text x="530" y="377" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E70C2">20.6%</text>
+
+  <line x1="530" y1="266" x2="530" y2="318" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-style="italic" fill="#1E3A5F">高分教师 ≠ 好教师；可迁移轨迹才是关键</text>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-06-03",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-06-03 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>AI Agents Enable Adaptive Computer Worms</strong></li><li><strong>What Benchmarks Don't Measure: The Case for Evaluating Abstention Competence in Autonomous Agents</strong></li><li><strong>What Makes Interaction Trajectories Effective for Training Terminal Agents?</strong></li></ul><p>[\"评测和harness层正在全面重构，Agent研究进入'结构化诊断'阶段\", '强模型≠好教师、高完成率≠安全，旧默认假设接连被推翻']</p>",
+  "report_date": "2026-06-03",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-06-03T22:23:54Z"
+}

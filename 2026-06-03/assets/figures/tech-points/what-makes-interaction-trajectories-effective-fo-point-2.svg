@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">环境锚定监督 EGS</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">观察行为本身就是一种需要被监督的技能</text>
+
+  <!-- 左：传统SFT  -->
+  <g>
+    <text x="160" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#8A6D3B">传统：observe 被 mask</text>
+
+    <rect x="70" y="130" width="180" height="46" rx="6" fill="#FFF7E6" stroke="#D9A441" stroke-width="1.5"/>
+    <text x="160" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">act 行动</text>
+
+    <rect x="70" y="186" width="180" height="46" rx="6" fill="#F2F2F2" stroke="#B8C4D4" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="160" y="214" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#8A95A8">observe (loss masked)</text>
+
+    <rect x="70" y="242" width="180" height="46" rx="6" fill="#FFF7E6" stroke="#D9A441" stroke-width="1.5"/>
+    <text x="160" y="270" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">act 行动</text>
+
+    <rect x="70" y="320" width="180" height="60" rx="8" fill="#FBE9E7" stroke="#C75B4A" stroke-width="1.5"/>
+    <text x="160" y="346" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#C75B4A">13.8%</text>
+    <text x="160" y="366" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">32B 学生表现</text>
+  </g>
+
+  <!-- 中间分隔 vs -->
+  <text x="360" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">vs</text>
+
+  <!-- 右：EGS 闭环 -->
+  <g>
+    <text x="560" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E5F8A">EGS：监督完整闭环</text>
+
+    <rect x="475" y="130" width="170" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="560" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">inspect 观察</text>
+
+    <rect x="475" y="200" width="170" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="560" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">act 行动</text>
+
+    <rect x="475" y="270" width="170" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="560" y="298" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">verify 验证</text>
+
+    <path d="M 560 176 L 560 198" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    <path d="M 560 246 L 560 268" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    <path d="M 645 293 Q 685 293 685 223 Q 685 153 648 153" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+    <rect x="470" y="320" width="180" height="60" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.8"/>
+    <text x="560" y="346" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#2E7D32">20.6%</text>
+    <text x="560" y="366" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">32B 学生表现</text>
+  </g>
+
+  <!-- 底部 insight -->
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">即使是失败轨迹，inspect→act→verify 的闭环套路依然有教学价值</text>
+</svg>

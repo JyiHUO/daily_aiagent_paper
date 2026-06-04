@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2553D"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5A9472"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">工具边界三道关卡</text>
+
+  <!-- Agent intent -->
+  <rect x="40" y="200" width="120" height="80" rx="10" fill="#FFF4E8" stroke="#E8A765" stroke-width="2"/>
+  <text x="100" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F">Agent 意图调用</text>
+  <text x="100" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">give Sarah $500</text>
+
+  <!-- Gate fence (vertical bar) -->
+  <line x1="200" y1="95" x2="200" y2="400" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="4 4" opacity="0.4"/>
+  <text x="200" y="82" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" opacity="0.75">tool boundary</text>
+
+  <!-- Three checkpoints as gates -->
+  <rect x="230" y="105" width="180" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="320" y="133" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Constraint 参数完整性</text>
+  <text x="320" y="156" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">schema 必填字段校验</text>
+
+  <rect x="230" y="200" width="180" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="320" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Grounding 状态确认</text>
+  <text x="320" y="251" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">轮询 ledger（5×0.5s）</text>
+
+  <rect x="230" y="295" width="180" height="70" rx="8" fill="#FFF1ED" stroke="#C2553D" stroke-width="2"/>
+  <text x="320" y="323" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Commitment 独立 Guard</text>
+  <text x="320" y="346" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">隔离 GPT-4o 判授权</text>
+
+  <!-- arrows from agent to gates -->
+  <line x1="160" y1="230" x2="227" y2="140" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="160" y1="240" x2="227" y2="235" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="160" y1="250" x2="227" y2="330" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- pass -> tool -->
+  <rect x="540" y="200" width="140" height="70" rx="10" fill="#E8F4EC" stroke="#5A9472" stroke-width="2"/>
+  <text x="610" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">真正执行</text>
+  <text x="610" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Tool Call</text>
+
+  <line x1="410" y1="235" x2="538" y2="235" stroke="#5A9472" stroke-width="2" marker-end="url(#arGreen)"/>
+  <text x="474" y="226" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#5A9472">全部通过</text>
+
+  <!-- abstain branch -->
+  <line x1="410" y1="330" x2="538" y2="400" stroke="#C2553D" stroke-width="2" marker-end="url(#arRed)"/>
+  <rect x="540" y="380" width="140" height="60" rx="10" fill="#FFF1ED" stroke="#C2553D" stroke-width="2"/>
+  <text x="610" y="406" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">弃权 / 报错</text>
+  <text x="610" y="426" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C2553D">CONSTRAINT / COMMITMENT-ERROR</text>
+
+  <text x="360" y="465" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">把"该不该做"从 prompt 挪到工具边界</text>
+</svg>
