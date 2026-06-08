@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/downloaded_pdfs/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness",
+  "candidates": [
+    {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Fig. 1: Overview of H ARNESS F IX .",
+      "clip": [
+        26.964000701904297,
+        32.541656494140625,
+        585.0299072265625,
+        252.44598388671875
+      ],
+      "clip_area": 122721.10781503434,
+      "page_area": 484704.0,
+      "text_density": 0.011672360930172753,
+      "kind": "image_block_with_caption",
+      "score": 34.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Fig. 1: Overview of H ARNESS F IX .",
+      "clip": [
+        36.9640007019043,
+        38.541656494140625,
+        575.0299072265625,
+        246.44598388671875
+      ],
+      "clip_area": 111866.23038888688,
+      "page_area": 484704.0,
+      "text_density": 0.006695820860746897,
+      "kind": "embedded_image_with_caption",
+      "xref": 396,
+      "score": 33.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Fig. 2: Illustrative example for the AppWorld completion-guard harness flaw.",
+      "clip": [
+        36.9640007019043,
+        38.533172607421875,
+        575.033203125,
+        391.74200439453125
+      ],
+      "clip_area": 190050.7944084833,
+      "page_area": 484704.0,
+      "text_density": 0.008674347422759956,
+      "kind": "embedded_image_with_caption",
+      "xref": 397,
+      "score": 19.916135669729705,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Fig. 2: Illustrative example for the AppWorld completion-guard harness flaw.",
+      "clip": [
+        26.964000701904297,
+        32.533172607421875,
+        585.033203125,
+        397.74200439453125
+      ],
+      "clip_area": 203811.80147330265,
+      "page_area": 484704.0,
+      "text_density": 0.015468625053254966,
+      "kind": "image_block_with_caption",
+      "score": 19.78051417167569,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/04-p4-image_block_with_caption.png",
+      "filename": "04-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-block-13",
+      "page_index": 6,
+      "caption": "Loop guarding; explicit task-state modeling; retry and timeout bounding; verification-gated finalization; workflow checkpointing; delegated-output validation.",
+      "clip": [
+        318.1980041503906,
+        18.0,
+        583.4326416015625,
+        155.7005615234375
+      ],
+      "clip_area": 36522.958512491736,
+      "page_area": 484704.0,
+      "text_density": 0.47504096237707444,
+      "kind": "captioned_figure",
+      "score": 10.405810650138797,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/05-p7-captioned_figure.png",
+      "filename": "05-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8109110762701613,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/from-failed-trajectories-to-reliable-llm-agents-diagnosing-and-repairing-harness/contact-sheet.svg"
+}

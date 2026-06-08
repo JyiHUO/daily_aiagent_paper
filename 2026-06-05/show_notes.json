@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-06-05",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-06-05 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws</strong></li><li><strong>Coding with \"Enemy\": Can Human Developers Detect AI Agent Sabotage?</strong></li><li><strong>Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads</strong></li></ul><p>['今天的关键词是诊断：评测、记忆、安全都在向运行时下沉', 'Agent评测正在从打分系统进化为系统体检工具']</p>",
+  "report_date": "2026-06-05",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-06-05T22:26:28Z"
+}

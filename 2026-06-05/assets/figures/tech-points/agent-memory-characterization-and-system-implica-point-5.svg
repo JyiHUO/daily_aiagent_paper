@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">记忆库越大，写入越贵</text>
+  <text x="360" y="58" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">用户历史 64K → 1M token，写入 token 成本曲线</text>
+
+  <!-- Axes -->
+  <line x1="90" y1="400" x2="670" y2="400" stroke="#3D4F65" stroke-width="1.5"/>
+  <line x1="90" y1="400" x2="90" y2="90" stroke="#3D4F65" stroke-width="1.5"/>
+
+  <!-- X ticks -->
+  <text x="90" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">64K</text>
+  <text x="380" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">256K</text>
+  <text x="660" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">1M</text>
+  <text x="380" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">用户历史规模</text>
+
+  <!-- Y label -->
+  <text x="78" y="105" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">写入 token 成本</text>
+
+  <!-- 256K marker line -->
+  <line x1="380" y1="400" x2="380" y2="100" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- Linear curve: embedRAG -->
+  <path d="M 90,385 L 660,305" stroke="#94A3B8" stroke-width="3" fill="none"/>
+  <circle cx="660" cy="305" r="5" fill="#94A3B8"/>
+  <text x="650" y="295" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#475569" font-weight="600">embedRAG（线性）</text>
+
+  <!-- Superlinear curve: Letta / MIRIX -->
+  <path d="M 90,385 Q 300,372 380,335 Q 480,285 560,210 Q 620,150 660,110" stroke="#E07856" stroke-width="3.5" fill="none"/>
+  <circle cx="660" cy="110" r="6" fill="#E07856"/>
+  <text x="650" y="100" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#C2410C" font-weight="700">Letta / MIRIX（超线性）</text>
+
+  <!-- Annotation -->
+  <rect x="130" y="115" width="220" height="68" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="240" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="700">每条新记忆都要先扫旧库</text>
+  <text x="240" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">读写都走 LLM tool call</text>
+  <text x="240" y="176" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">库越大，单次写入越贵</text>
+
+  <line x1="350" y1="172" x2="468" y2="248" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+  <!-- 256K callout -->
+  <text x="385" y="345" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#64748B">256K 后斜率抬头</text>
+
+  <!-- Footer note -->
+  <text x="360" y="472" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">默认所有系统都不会遗忘，遗忘策略需运维自行实现</text>
+</svg>

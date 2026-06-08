@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/downloaded_pdfs/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w",
+  "candidates": [
+    {
+      "id": "page-10-drawing-caption-21",
+      "page_index": 10,
+      "caption": "Figure 11: QA tail latency by agent memory system. Fixed-depth pipelines (Paradigm II) have p95/p50 near 1.3 × . Systems with more complex store structures or query- adaptive pipelines display wider tails at QA time.",
+      "clip": [
+        36.0,
+        55.21538543701172,
+        314.985595703125,
+        192.1409912109375
+      ],
+      "clip_area": 38200.271693849936,
+      "page_area": 484704.0,
+      "text_density": 0.2628197196625028,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.45526428351483,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/01-p11-drawing_cluster_with_caption.png",
+      "filename": "01-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-43",
+      "page_index": 0,
+      "caption": "Figure 1: Agent memory gives rise to short-term working memory and long-term memory: the agent retrieves relevant long-term state into its active context, updates memory after interaction, and maintains stored knowledge over time.",
+      "clip": [
+        36.0,
+        224.15745544433594,
+        601.1755981445312,
+        440.45758056640625
+      ],
+      "clip_area": 122247.55259460304,
+      "page_area": 484704.0,
+      "text_density": 0.2910564275990736,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.33661434405559,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-40",
+      "page_index": 4,
+      "caption": "Figure 2: Long-context prompting vs. external agent memory. Per-query serving latency (retrieval + generation, excluding construction) on LongMemEval_S_* . Remote con- struction via OpenAI API, Local construction via vLLM.",
+      "clip": [
+        297.0,
+        55.22047424316406,
+        575.9802856445312,
+        197.69000244140625
+      ],
+      "clip_area": 39746.189672387205,
+      "page_area": 484704.0,
+      "text_density": 0.25474101524393955,
+      "kind": "drawing_cluster_with_caption",
+      "score": 37.95716341505682,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/03-p5-drawing_cluster_with_caption.png",
+      "filename": "03-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-block-21",
+      "page_index": 10,
+      "caption": "Figure 11: QA tail latency by agent memory system. Fixed-depth pipelines (Paradigm II) have p95/p50 near 1.3 × . Systems with more complex store structures or query- adaptive pipelines display wider tails at QA time.",
+      "clip": [
+        23.4,
+        18.0,
+        329.3081909179688,
+        173.95025634765625
+      ],
+      "clip_area": 47706.460792505,
+      "page_area": 484704.0,
+      "text_density": 0.1857197585179064,
+      "kind": "captioned_figure",
+      "score": 33.18688627550901,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/04-p11-captioned_figure.png",
+      "filename": "04-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-caption-23",
+      "page_index": 5,
+      "caption": "Figure 3: Phase cost breakdown. Paradigm III and IV agent memory systems shift the majority of end-to-end energy into construction, which is invisible to the user at query time.",
+      "clip": [
+        36.0,
+        315.0003356933594,
+        314.9783935546875,
+        452.2909851074219
+      ],
+      "clip_area": 38301.124823614955,
+      "page_area": 484704.0,
+      "text_density": 0.23611502686635752,
+      "kind": "drawing_cluster_with_caption",
+      "score": 33.058666441614264,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/05-p6-drawing_cluster_with_caption.png",
+      "filename": "05-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-40",
+      "page_index": 4,
+      "caption": "Figure 2: Long-context prompting vs. external agent memory. Per-query serving latency (retrieval + generation, excluding construction) on LongMemEval_S_* . Remote con- struction via OpenAI API, Local construction via vLLM.",
+      "clip": [
+        284.4,
+        18.0,
+        590.2898193359375,
+        179.499267578125
+      ],
+      "clip_area": 49400.98178235889,
+      "page_area": 484704.0,
+      "text_density": 0.1656612160695435,
+      "kind": "captioned_figure",
+      "score": 31.409226833409157,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/06-p5-captioned_figure.png",
+      "filename": "06-p5-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/agent-memory-characterization-and-system-implications-of-stateful-long-horizon-w/contact-sheet.svg"
+}

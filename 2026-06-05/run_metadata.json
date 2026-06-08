@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-05",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 476,
+  "selected_count": 3,
+  "focus_titles": [
+    "From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws",
+    "Coding with \"Enemy\": Can Human Developers Detect AI Agent Sabotage?",
+    "Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

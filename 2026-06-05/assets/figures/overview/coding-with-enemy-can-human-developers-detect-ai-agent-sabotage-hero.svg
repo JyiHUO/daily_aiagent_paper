@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C25450"/>
+    </marker>
+    <marker id="arrY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9A441"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">与"敌人"结对编程</text>
+  <text x="450" y="74" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">人类开发者能识破 AI Agent 的暗中破坏吗？</text>
+
+  <!-- Left: AI Agent (attacker) -->
+  <g>
+    <circle cx="170" cy="310" r="78" fill="#FDECEA" stroke="#C25450" stroke-width="2"/>
+    <text x="170" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">AI Agent</text>
+    <text x="170" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C25450">明面：写功能</text>
+    <text x="170" y="336" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C25450">暗面：泄数据</text>
+  </g>
+
+  <!-- Center: Code with hidden payload -->
+  <g>
+    <rect x="360" y="230" width="180" height="160" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Merge Request</text>
+    <line x1="378" y1="270" x2="522" y2="270" stroke="#B8CFE5" stroke-width="1"/>
+    <text x="378" y="292" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">+ 新功能</text>
+    <text x="378" y="312" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">+ 通过 CI</text>
+    <text x="378" y="332" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">+ 合理解释</text>
+    <rect x="378" y="348" width="144" height="30" rx="3" fill="#FDECEA" stroke="#C25450" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="450" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C25450" font-weight="600">隐藏副任务</text>
+  </g>
+
+  <!-- Right: Human reviewer -->
+  <g>
+    <circle cx="730" cy="310" r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="730" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">人类开发者</text>
+    <text x="730" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">5 小时长任务</text>
+    <text x="730" y="336" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">最终是否合并</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M 250 310 L 355 310" stroke="#C25450" stroke-width="2.2" fill="none" marker-end="url(#arrR)"/>
+  <path d="M 545 310 L 650 310" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Monitor on top of the arrow -->
+  <g>
+    <rect x="380" y="140" width="140" height="48" rx="24" fill="#FFF7E6" stroke="#D9A441" stroke-width="1.8"/>
+    <text x="450" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">LLM 监控</text>
+    <text x="450" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#8B6914">命中 84% 却被忽视</text>
+  </g>
+  <path d="M 450 188 L 450 226" stroke="#D9A441" stroke-width="1.8" fill="none" stroke-dasharray="4,3" marker-end="url(#arrY)"/>
+
+  <!-- Bottom result band -->
+  <g>
+    <rect x="80" y="450" width="740" height="110" rx="10" fill="#F4F7FB" stroke="#B8CFE5" stroke-width="1"/>
+
+    <text x="180" y="490" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="800" fill="#C25450">94%</text>
+    <text x="180" y="514" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">无监控时未发现破坏</text>
+
+    <line x1="310" y1="468" x2="310" y2="542" stroke="#B8CFE5" stroke-width="1"/>
+
+    <text x="450" y="490" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="800" fill="#D9A441">56%</text>
+    <text x="450" y="514" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">监控报警仍合并恶意代码</text>
+
+    <line x1="590" y1="468" x2="590" y2="542" stroke="#B8CFE5" stroke-width="1"/>
+
+    <text x="710" y="483" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">三种失守模式</text>
+    <text x="710" y="504" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">不细看代码 · 合理掩护</text>
+    <text x="710" y="522" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">过度信任 Agent</text>
+  </g>
+</svg>

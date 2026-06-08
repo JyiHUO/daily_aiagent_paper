@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">新鲜度 — 延迟权衡</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">会话间隔 5s · 构建时间决定可行性</text>
+
+  <!-- Session timeline -->
+  <line x1="80" y1="150" x2="640" y2="150" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="140" cy="150" r="8" fill="#4B8BDA"/>
+  <circle cx="360" cy="150" r="8" fill="#4B8BDA"/>
+  <circle cx="580" cy="150" r="8" fill="#4B8BDA"/>
+  <text x="140" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Session 1</text>
+  <text x="360" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Session 2</text>
+  <text x="580" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Session 3</text>
+  <text x="250" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">5s</text>
+  <text x="470" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">5s</text>
+
+  <!-- Fast lane: BM25 -->
+  <rect x="60" y="210" width="280" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="200" y="238" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">BM25 · 写入 ~10⁻³ s</text>
+  <rect x="105" y="258" width="6" height="14" fill="#4B8BDA"/>
+  <text x="200" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">写完 → 下次 session 能读到</text>
+
+  <!-- Slow lane: Mem0 -->
+  <rect x="380" y="210" width="280" height="110" rx="10" fill="#FDF2EC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="520" y="238" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#8B3A1F">Mem0 / MIRIX · 写入 ~10 s</text>
+  <rect x="405" y="258" width="230" height="14" fill="#D97757" opacity="0.75"/>
+  <text x="520" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">下次 session 到达时仍在写</text>
+
+  <!-- Outcomes -->
+  <line x1="200" y1="320" x2="200" y2="358" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="200" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">✓ 新鲜记忆可用</text>
+
+  <line x1="520" y1="320" x2="520" y2="358" stroke="#D97757" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="520" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#8B3A1F">同步拖慢 / 异步读旧</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="440" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#3D4F65">构建时间 &gt; 会话间隔 → 没有第三条路</text>
+</svg>

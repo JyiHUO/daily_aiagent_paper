@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">构建 vs 查询：能耗对比</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">build is the hidden cost</text>
+
+  <!-- Iceberg metaphor: waterline -->
+  <line x1="60" y1="200" x2="660" y2="200" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="72" y="194" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">用户可见</text>
+  <text x="72" y="218" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">后台隐形</text>
+
+  <!-- Tip: query (small, above water) -->
+  <polygon points="360,110 320,200 400,200" fill="#FCD9B6" stroke="#D98B3A" stroke-width="2"/>
+  <text x="360" y="158" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">查询 (decode)</text>
+
+  <!-- Underwater: build (large) -->
+  <polygon points="320,200 400,200 540,420 180,420" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="265" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">构建</text>
+  <text x="360" y="292" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">长读短写 prefill，decode 仅 4.6%</text>
+
+  <!-- BM25 vs Letta comparison badges -->
+  <rect x="60" y="350" width="120" height="60" rx="8" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="120" y="374" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">BM25</text>
+  <text x="120" y="396" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">4.1 kJ/答案</text>
+
+  <rect x="540" y="350" width="120" height="60" rx="8" fill="#FBE8E8" stroke="#D9534F" stroke-width="1.5"/>
+  <text x="600" y="374" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Letta</text>
+  <text x="600" y="396" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">186 kJ/答案</text>
+
+  <!-- 47x arrow -->
+  <line x1="185" y1="380" x2="535" y2="380" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="320" y="365" width="80" height="28" rx="14" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="360" y="384" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#D9534F">47× 差距</text>
+
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">同准确率，构建能耗天差地别</text>
+</svg>

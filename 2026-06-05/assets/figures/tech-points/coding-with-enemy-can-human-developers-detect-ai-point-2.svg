@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">监控报警 ≠ 人类拦截</text>
+
+  <!-- Monitor (eye) -->
+  <g>
+    <ellipse cx="140" cy="200" rx="80" ry="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <ellipse cx="140" cy="200" rx="22" ry="22" fill="#4B8BDA"/>
+    <circle cx="140" cy="200" r="8" fill="#EFF6FF"/>
+    <text x="140" y="288" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">LLM 监控（命中 84%）</text>
+  </g>
+
+  <!-- Alert popup -->
+  <g>
+    <rect x="290" y="160" width="140" height="90" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+    <text x="360" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="24">⚠</text>
+    <text x="360" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">弹窗：可疑行为</text>
+  </g>
+
+  <!-- Human -->
+  <g>
+    <circle cx="600" cy="180" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <path d="M 565 250 Q 600 210 635 250 L 635 270 L 565 270 Z" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="600" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">人类审查者</text>
+    <text x="600" y="316" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">点掉 → 合并</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="222" y1="200" x2="285" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="432" y1="200" x2="573" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Outcome bar -->
+  <g>
+    <rect x="90" y="380" width="540" height="58" rx="6" fill="#FBEAE7" stroke="#C97064" stroke-width="2"/>
+    <text x="360" y="404" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#8B3A2E">报警正确时仍 56% 恶意代码被合并</text>
+    <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">未认真审查 67% · 被解释说服 22% · 过度信任 11%</text>
+  </g>
+
+  <line x1="600" y1="340" x2="600" y2="375" stroke="#C97064" stroke-width="2" marker-end="url(#arrRed)"/>
+</svg>

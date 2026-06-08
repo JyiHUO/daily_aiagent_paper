@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/downloaded_pdfs/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-45",
+      "page_index": 7,
+      "caption": "Figure 6: Trust and review confidence measured on 5-point Likert scales. Left: pooled scores from pre-study, post-study, and debrief surveys (n=105/105/79). Right: pre-study scores split by sabotage detection (n=11 vs. 94). Sample sizes vary due to partial responses. (* p<.05, *** p<.001).",
+      "clip": [
+        149.4010009765625,
+        56.001312255859375,
+        462.60198974609375,
+        263.09100341796875
+      ],
+      "clip_area": 64860.69603594951,
+      "page_area": 484704.0,
+      "text_density": 0.22829682523238876,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.822864886456117,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-45",
+      "page_index": 7,
+      "caption": "Figure 6: Trust and review confidence measured on 5-point Likert scales. Left: pooled scores from pre-study, post-study, and debrief surveys (n=105/105/79). Right: pre-study scores split by sabotage detection (n=11 vs. 94). Sample sizes vary due to partial responses. (* p<.05, *** p<.001).",
+      "clip": [
+        77.4,
+        18.0,
+        534.5979858398438,
+        246.04685974121094
+      ],
+      "clip_area": 104262.56495078301,
+      "page_area": 484704.0,
+      "text_density": 0.11470961165112743,
+      "kind": "captioned_figure",
+      "score": 14.075896244829943,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        92.0,
+        8.0,
+        604.0,
+        299.1495666503906
+      ],
+      "clip_area": 149068.578125,
+      "page_area": 484704.0,
+      "text_density": 0.08987891323973234,
+      "kind": "drawing_cluster",
+      "score": 13.40726520561606,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/03-p2-drawing_cluster.png",
+      "filename": "03-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-caption-7",
+      "page_index": 5,
+      "caption": "Figure 3: Failure modes for sabotage detection in the study group of Claude-Opus-4.6 with monitor. We categorize the 9 sabotage detection failure cases into 3 modes.",
+      "clip": [
+        90.0,
+        55.99737548828125,
+        522.0050659179688,
+        302.26800537109375
+      ],
+      "clip_area": 106390.1596961841,
+      "page_area": 484704.0,
+      "text_density": 0.41190596379756067,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.182112885513156,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/04-p6-drawing_cluster_with_caption.png",
+      "filename": "04-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-25",
+      "page_index": 4,
+      "caption": "Figure 2: Sabotage success rate (SSR) across mod- els and with/without monitor settings.",
+      "clip": [
+        268.3216857910156,
+        331.6919860839844,
+        522.0004577636719,
+        600.4810180664062
+      ],
+      "clip_area": 68186.0715530198,
+      "page_area": 484704.0,
+      "text_density": 1.0,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.757623017255774,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/05-p5-drawing_cluster_with_caption.png",
+      "filename": "05-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-caption-8",
+      "page_index": 17,
+      "caption": "Figure 12: Layout of the project skeleton. It provides the application factory, blueprint stubs, and CI configuration, while all files under app/ are left empty. Participants are instructed to implement the features specified in the five sequential Issues.",
+      "clip": [
+        90.0,
+        323.4290771484375,
+        522.0050659179688,
+        510.8349914550781
+      ],
+      "clip_area": 80960.30436345749,
+      "page_area": 484704.0,
+      "text_density": 0.5344961351864269,
+      "kind": "drawing_cluster_with_caption",
+      "score": 2.8995589373717507,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/06-p18-drawing_cluster_with_caption.png",
+      "filename": "06-p18-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-05/assets/figure_candidates/coding-with-enemy-can-human-developers-detect-ai-agent-sabotage/contact-sheet.svg"
+}
