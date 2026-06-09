@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 06-08：给 Agent 补上可验证的中间层",
+  "shownotes_html": "<p>这一期我们聊一个共同主题：<strong>机制化</strong>。安全、评测、训练三条线今天都在做同一件事——给 Agent 的中间过程加上可机器验证的契约，不再依赖大模型自己说\"对还是错\"。</p><p><strong>本期重点</strong></p><ul><li><strong>恶意 Skill 运行时基准（MalSkillBench: A Runtime-Verified Benchmark of Malicious Agent Skills）</strong>：针对 Claude Code、Gemini CLI 这类编码 Agent 的第三方 skill 供应链风险，把攻击空间拆成攻击向量×行为×插入策略 108 个格子，每个恶意样本必须在 Docker 沙箱里真触发系统调用才入库；实测代码注入好造也好抓，提示词注入则攻防同时崩——这是今天最值得收藏的一把\"尺子\"。</li><li><strong>Lean4 工作流形式化验证（Lean4Agent: Formal Modeling and Verification for Agent Workflow and Trajectory）</strong>：把数学定理证明用的 Lean4 依赖类型搬进 Agent 工作流，分结构、语义、轨迹三层做\"编译期+契约+运行时\"检查，并用 LeanEvolve 按违例步骤精准修复，在 SWE-Bench 上再涨约 7 个点。亮点是能在部署前抓出\"信息流断裂\"这类隐含逻辑漏洞。</li><li><strong>GUI Agent 的实体染色奖励（StainFlow: Entity-Stain Tracking and Evidence Linking for Process Rewards in GUI Agents）</strong>：借用网络流量染色的思路，把任务关键实体当染料沿轨迹追浓度，让阶段从证据流里自然浮现，再用染色历史拼出动态证据窗口；连续浓度+离散关键节点联合做过程奖励，AndroidWorld 上对最强 baseline 仍有提升。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全开始向\"代码+提示词+行为\"三位一体的运行时治理收敛，野外样本严重偏态的问题被首次量化暴露。</li><li>评测与训练都在从\"终态判分\"下沉到过程层：形式化谓词、过程奖励、runtime 证据正在替代单纯的 LLM-as-judge。</li></ul><p>如果你手上的 Agent 系统失败时只能让大模型再判一次，那今天这三篇就是给你的提醒。欢迎在评论区聊聊你怎么给自己的 Agent 加\"中间层\"。本期内容由 AI 自动生成，仅供参考。</p>",
+  "report_date": "2026-06-08",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-08T22:14:21Z"
+}

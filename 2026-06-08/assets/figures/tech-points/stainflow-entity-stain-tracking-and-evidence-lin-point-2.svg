@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">按染色召回远距离证据</text>
+
+  <!-- Trajectory line -->
+  <line x1="60" y1="220" x2="660" y2="220" stroke="#C7D2DE" stroke-width="2"/>
+
+  <!-- Step nodes (gray = irrelevant) -->
+  <circle cx="110" cy="220" r="10" fill="#E5E9EF" stroke="#A8B4C4"/>
+  <circle cx="380" cy="220" r="10" fill="#E5E9EF" stroke="#A8B4C4"/>
+  <circle cx="440" cy="220" r="10" fill="#E5E9EF" stroke="#A8B4C4"/>
+
+  <!-- Stained evidence steps (orange) -->
+  <circle cx="170" cy="220" r="14" fill="#FCE4D6" stroke="#D97757" stroke-width="2"/>
+  <text x="170" y="224" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">S2</text>
+  <text x="170" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">复制</text>
+
+  <circle cx="290" cy="220" r="14" fill="#FCE4D6" stroke="#D97757" stroke-width="2"/>
+  <text x="290" y="224" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">S6</text>
+  <text x="290" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">粘贴</text>
+
+  <circle cx="500" cy="220" r="14" fill="#FCE4D6" stroke="#D97757" stroke-width="2"/>
+  <text x="500" y="224" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">S7</text>
+  <text x="500" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">选号</text>
+
+  <!-- Candidate key node (blue, larger) -->
+  <circle cx="600" cy="220" r="20" fill="#4B8BDA" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="600" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">S8</text>
+  <text x="600" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F" font-weight="600">候选节点 发短信</text>
+
+  <!-- Recall arrows from candidate back to stained steps -->
+  <path d="M 583 208 Q 380 120 184 210" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+  <path d="M 583 211 Q 450 140 304 211" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+  <path d="M 583 214 Q 555 175 514 214" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+
+  <text x="360" y="100" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#D97757" font-weight="600">沿染色回溯关键证据</text>
+
+  <!-- Bottom: evidence window -> judge -->
+  <rect x="120" y="350" width="280" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="260" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">证据窗口 W₈ = {2, 6, 7, 8, 9}</text>
+  <text x="260" y="410" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">高密度证据集，而非固定邻域</text>
+
+  <rect x="460" y="350" width="180" height="80" rx="10" fill="#FFF4EC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="550" y="380" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">F_key 判定</text>
+  <text x="550" y="410" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">ℓ₈ = 1，关键节点</text>
+
+  <line x1="400" y1="390" x2="455" y2="390" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <line x1="260" y1="280" x2="260" y2="345" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

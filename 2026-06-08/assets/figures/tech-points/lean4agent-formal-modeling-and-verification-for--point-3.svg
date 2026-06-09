@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">形式化引导的精准修复</text>
+
+  <!-- Left: blind LLM rewrite -->
+  <g>
+    <rect x="50" y="90" width="260" height="150" rx="10" fill="#FDF4EC" stroke="#D97757" stroke-width="1.5"/>
+    <text x="180" y="118" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">盲目重写</text>
+
+    <rect x="80" y="150" width="40" height="30" fill="#F4C9B5" stroke="#D97757"/>
+    <rect x="130" y="150" width="40" height="30" fill="#F4C9B5" stroke="#D97757"/>
+    <rect x="180" y="150" width="40" height="30" fill="#F4C9B5" stroke="#D97757"/>
+    <rect x="230" y="150" width="40" height="30" fill="#F4C9B5" stroke="#D97757"/>
+
+    <text x="180" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">整张工作流全部重来，模糊</text>
+  </g>
+
+  <!-- Right: formal-guided -->
+  <g>
+    <rect x="410" y="90" width="260" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="118" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">形式化引导</text>
+
+    <rect x="440" y="150" width="40" height="30" fill="#D6E6F8" stroke="#4B8BDA"/>
+    <rect x="490" y="150" width="40" height="30" fill="#D6E6F8" stroke="#4B8BDA"/>
+    <rect x="540" y="150" width="40" height="30" fill="#FFD86B" stroke="#D97757" stroke-width="2"/>
+    <rect x="590" y="150" width="40" height="30" fill="#D6E6F8" stroke="#4B8BDA"/>
+
+    <text x="560" y="143" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#D97757">违例步骤</text>
+
+    <text x="540" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">只重写第 N 步</text>
+  </g>
+
+  <!-- Lower part: evidence feeding into repair -->
+  <g>
+    <rect x="60" y="300" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="130" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">违反的谓词</text>
+    <text x="130" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Layer 3 定位</text>
+
+    <rect x="220" y="300" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="290" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">环境反馈</text>
+    <text x="290" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">单元测试输出</text>
+
+    <rect x="430" y="300" width="220" height="60" rx="8" fill="#1E3A5F"/>
+    <text x="540" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">LeanEvolve</text>
+    <text x="540" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#D6E6F8">局部精准修复</text>
+
+    <line x1="200" y1="330" x2="220" y2="330" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+    <line x1="360" y1="330" x2="427" y2="330" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- arrow from LeanEvolve up to violated step -->
+  <path d="M 540 300 L 540 245" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arr)"/>
+
+  <!-- result -->
+  <text x="360" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F" font-weight="bold">SWE-Bench +7.47%　形式化引导 &gt; 纯 LLM 演化</text>
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">定位违例 → 只改一处 → 再跑同题</text>
+</svg>

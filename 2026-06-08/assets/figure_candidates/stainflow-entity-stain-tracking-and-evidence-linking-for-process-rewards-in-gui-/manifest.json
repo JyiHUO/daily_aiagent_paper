@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/downloaded_pdfs/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-91",
+      "page_index": 3,
+      "caption": "Figure 2: Overall workflow of StainFlow, where Global Entity Stain Tracking and Local Stain Evidence Linking enable more objective and fine-grained step reward assignment.",
+      "clip": [
+        90.0,
+        55.999542236328125,
+        522.0032043457031,
+        250.83502197265625
+      ],
+      "clip_area": 84169.55156632606,
+      "page_area": 484704.0,
+      "text_density": 0.33967171015715003,
+      "kind": "drawing_cluster_with_caption",
+      "score": 61.354914630196845,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-caption-60",
+      "page_index": 1,
+      "caption": "Figure 1: Our proposed StainFlow dynamically and objectively partitions task stages and introduces flexible evidence windows for key-node verification, thereby providing more accurate step rewards.",
+      "clip": [
+        90.0,
+        56.00091552734375,
+        521.97802734375,
+        256.67872619628906
+      ],
+      "clip_area": 86688.40478443354,
+      "page_area": 484704.0,
+      "text_density": 0.2992088682439817,
+      "kind": "drawing_cluster_with_caption",
+      "score": 47.81067240296592,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-11",
+      "page_index": 8,
+      "caption": "Figure 4: StainFlow training reward curves and evidence span ranges.",
+      "clip": [
+        90.73400115966797,
+        261.8185729980469,
+        518.7810974121094,
+        372.2279968261719
+      ],
+      "clip_area": 47260.43326853402,
+      "page_area": 484704.0,
+      "text_density": 0.05020735128281237,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.52511592520593,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-7",
+      "page_index": 9,
+      "caption": "[5] Sanjiban Choudhury. Process reward models for llm agents: Practical framework and directions. arXiv preprint arXiv:2502.10325 , 2025.",
+      "clip": [
+        82.3810028076172,
+        102.91444702148436,
+        536.3413635253906,
+        411.7144470214844
+      ],
+      "clip_area": 140182.95938964846,
+      "page_area": 484704.0,
+      "text_density": 0.6823364387526478,
+      "kind": "captioned_figure",
+      "score": 24.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/04-p10-captioned_figure.png",
+      "filename": "04-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-6",
+      "page_index": 8,
+      "caption": "Figure 3: Effects of advantage weight η and stain decay factors γ i for persistent and transient entities.",
+      "clip": [
+        90.73400115966797,
+        146.3565673828125,
+        518.7810974121094,
+        256.7659912109375
+      ],
+      "clip_area": 47260.43326853402,
+      "page_area": 484704.0,
+      "text_density": 0.10818778595683602,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.83384876779577,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/05-p9-drawing_cluster_with_caption.png",
+      "filename": "05-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-1",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        92.73400115966797,
+        263.8185729980469,
+        516.7810974121094,
+        370.2279968261719
+      ],
+      "clip_area": 45122.607188211754,
+      "page_area": 484704.0,
+      "text_density": 0.03403230130670843,
+      "kind": "drawing_cluster",
+      "score": 8.501362302091241,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/06-p9-drawing_cluster.png",
+      "filename": "06-p9-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/stainflow-entity-stain-tracking-and-evidence-linking-for-process-rewards-in-gui-/contact-sheet.svg"
+}

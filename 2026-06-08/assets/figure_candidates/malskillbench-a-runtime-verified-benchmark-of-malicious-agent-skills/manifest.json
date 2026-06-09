@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/downloaded_pdfs/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills",
+  "candidates": [
+    {
+      "id": "page-3-block-2",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the benchmark construction framework.",
+      "clip": [
+        31.79800033569336,
+        65.68766784667969,
+        580.1873168945312,
+        206.16497802734375
+      ],
+      "clip_area": 77036.25612199825,
+      "page_area": 484704.0,
+      "text_density": 0.07764061285578627,
+      "kind": "image_block_with_caption",
+      "score": 37.85595840135554,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the benchmark construction framework.",
+      "clip": [
+        41.79800033569336,
+        71.68766784667969,
+        570.1873168945312,
+        200.16497802734375
+      ],
+      "clip_area": 67886.03811967891,
+      "page_area": 484704.0,
+      "text_density": 0.03840317324491088,
+      "kind": "embedded_image_with_caption",
+      "xref": 528,
+      "score": 36.754289312440875,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-41",
+      "page_index": 8,
+      "caption": "Figure 5: Wild sample overview (703 skills). (a) Delivery mech- anism: fake-prerequisite dependency impersonation versus other. (b) Behavior distribution over the taxonomy. Bubble area ∝ √ count , coloured operational (B1–B9) versus agent- native (B10–B15).",
+      "clip": [
+        309.56500244140625,
+        67.6854248046875,
+        566.605224609375,
+        281.2750244140625
+      ],
+      "clip_area": 54901.11813636124,
+      "page_area": 484704.0,
+      "text_density": 0.22408591223405364,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.964857689694128,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-41",
+      "page_index": 8,
+      "caption": "Figure 5: Wild sample overview (703 skills). (a) Delivery mech- anism: fake-prerequisite dependency impersonation versus other. (b) Behavior distribution over the taxonomy. Bubble area ∝ √ count , coloured operational (B1–B9) versus agent- native (B10–B15).",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        590.4102416992188,
+        261.1473388671875
+      ],
+      "clip_area": 73687.07881383525,
+      "page_area": 484704.0,
+      "text_density": 0.15257416739349006,
+      "kind": "captioned_figure",
+      "score": 23.46429527654432,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-14",
+      "page_index": 8,
+      "caption": "Figure 4: Runtime evidence of realized samples. (a) CDF of the Layer-2 judge confidence for accepted PI skills, with the dashed line at 𝜃 = 0 . 7 . (b) Matched runtime evidence items per realized sample, by attack vector.",
+      "clip": [
+        59.822998046875,
+        67.6863021850586,
+        288.02587890625,
+        208.2080078125
+      ],
+      "clip_area": 32067.458047455177,
+      "page_area": 484704.0,
+      "text_density": 0.2400184046476619,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.755200810556456,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/05-p9-drawing_cluster_with_caption.png",
+      "filename": "05-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-16",
+      "page_index": 2,
+      "caption": "Figure 1: Attack-pattern migration. Case 1: near-identical reverse shells in a PyPI package and a malicious skill. Case 2: a social-engineering frame migrated from a phishing email to SKILL.md prerequisites.",
+      "clip": [
+        299.9549865722656,
+        67.68648529052734,
+        576.197998046875,
+        213.655029296875
+      ],
+      "clip_area": 40322.79017687752,
+      "page_area": 484704.0,
+      "text_density": 0.65232263339608,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.448031001965305,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/06-p3-drawing_cluster_with_caption.png",
+      "filename": "06-p3-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/malskillbench-a-runtime-verified-benchmark-of-malicious-agent-skills/contact-sheet.svg"
+}

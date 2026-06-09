@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/downloaded_pdfs/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory",
+  "candidates": [
+    {
+      "id": "page-16-drawing-caption-15",
+      "page_index": 16,
+      "caption": "Figure 2: The workflow graph for layer-1 failure",
+      "clip": [
+        135.1747283935547,
+        52.018218994140625,
+        475.81982421875,
+        292.1995544433594
+      ],
+      "clip_area": 81816.5940295225,
+      "page_area": 484704.0,
+      "text_density": 0.07586865217370935,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.909073266994696,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/01-p17-drawing_cluster_with_caption.png",
+      "filename": "01-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-block-15",
+      "page_index": 16,
+      "caption": "Figure 2: The workflow graph for layer-1 failure",
+      "clip": [
+        178.7280029296875,
+        18.0,
+        433.2720581054688,
+        285.6024475097656
+      ],
+      "clip_area": 68116.61216409989,
+      "page_area": 484704.0,
+      "text_density": 0.08874313913135073,
+      "kind": "captioned_figure",
+      "score": 27.232262898386733,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/02-p17-captioned_figure.png",
+      "filename": "02-p17-captioned_figure.png"
+    },
+    {
+      "id": "page-3-block-8",
+      "page_index": 3,
+      "caption": "2.2.2 Layer 2: Static Semantic Verification for Agent Workflow",
+      "clip": [
+        77.4,
+        111.90651245117186,
+        412.88030395507815,
+        420.7065124511719
+      ],
+      "clip_area": 103596.31786132815,
+      "page_area": 484704.0,
+      "text_density": 0.7014572147213356,
+      "kind": "captioned_figure",
+      "score": 22.151070198459202,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/03-p4-captioned_figure.png",
+      "filename": "03-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-17-block-13",
+      "page_index": 17,
+      "caption": "Figure 3: Workflow with layer-1 verified errors",
+      "clip": [
+        181.44800415039063,
+        18.0,
+        430.55254516601565,
+        311.31146240234375
+      ],
+      "clip_area": 73065.21721635759,
+      "page_area": 484704.0,
+      "text_density": 0.12178349189860298,
+      "kind": "captioned_figure",
+      "score": 21.30482623293224,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/04-p18-captioned_figure.png",
+      "filename": "04-p18-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-12",
+      "page_index": 7,
+      "caption": "3.5.1 Workflow Errors identified by FormalAgentLib",
+      "clip": [
+        77.4,
+        300.37449951171874,
+        370.8979431152344,
+        609.1744995117188
+      ],
+      "clip_area": 90632.1648339844,
+      "page_area": 484704.0,
+      "text_density": 0.6076074085174429,
+      "kind": "captioned_figure",
+      "score": 20.007024053710936,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/05-p8-captioned_figure.png",
+      "filename": "05-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-17-drawing-caption-13",
+      "page_index": 17,
+      "caption": "Figure 3: Workflow with layer-1 verified errors",
+      "clip": [
+        90.0,
+        258.3599853515625,
+        522.0,
+        306.4339904785156
+      ],
+      "clip_area": 20767.97021484375,
+      "page_area": 484704.0,
+      "text_density": 0.42535073871159423,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.230755224609375,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/06-p18-drawing_cluster_with_caption.png",
+      "filename": "06-p18-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-08/assets/figure_candidates/lean4agent-formal-modeling-and-verification-for-agent-workflow-and-trajectory/contact-sheet.svg"
+}
