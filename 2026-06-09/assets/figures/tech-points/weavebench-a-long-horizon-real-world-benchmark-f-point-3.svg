@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">同模型 × 不同 Runtime，通过率相差 3 倍</text>
+
+  <!-- 中心模型 -->
+  <circle cx="360" cy="240" r="62" fill="#FFF4E0" stroke="#E8A33D" stroke-width="2"/>
+  <text x="360" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">同一模型 + GUI 插件</text>
+  <text x="360" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">screenshot + 9 动作</text>
+
+  <!-- 左 runtime: 适配 -->
+  <rect x="40" y="170" width="200" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Claude Code（对位 ✓）</text>
+  <text x="140" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="700" fill="#2E7D4F">41.2%</text>
+  <text x="140" y="288" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">PassRate</text>
+
+  <!-- 右 runtime: 失配 -->
+  <rect x="480" y="170" width="200" height="140" rx="10" fill="#FBEFEF" stroke="#C25450" stroke-width="2"/>
+  <text x="580" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Codex CLI（失配 ✗）</text>
+  <text x="580" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="700" fill="#C25450">13.2%</text>
+  <text x="580" y="288" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">PassRate</text>
+
+  <!-- 箭头 -->
+  <line x1="298" y1="240" x2="242" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="422" y1="240" x2="478" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 底注 -->
+  <text x="360" y="400" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">工具 schema 与 action loop 与模型强耦合</text>
+  <text x="360" y="424" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">不是换个壳就能跨 runtime 复用</text>
+</svg>

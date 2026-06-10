@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/downloaded_pdfs/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops",
+  "candidates": [
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        56.0,
+        62.391075134277344,
+        556.0072021484375,
+        354.13299560546875
+      ],
+      "clip_area": 145873.06140421238,
+      "page_area": 484704.0,
+      "text_density": 0.1780463578702856,
+      "kind": "drawing_cluster",
+      "score": 8.117218527782864,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/01-p2-drawing_cluster.png",
+      "filename": "01-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-block-16",
+      "page_index": 10,
+      "caption": "rynewang. Agents gaming the environment container. GitHub Issue, harbor-framework/harbor#974, March 2026. URL https://github.com/harbor-framework/harbor/issues/974 .",
+      "clip": [
+        41.4,
+        286.1027099609375,
+        570.6055541992188,
+        594.9027099609375
+      ],
+      "clip_area": 163418.67513671878,
+      "page_area": 484704.0,
+      "text_density": 0.6659470716269305,
+      "kind": "captioned_figure",
+      "score": 5.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/02-p11-captioned_figure.png",
+      "filename": "02-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        56.0,
+        62.87934875488281,
+        556.0096435546875,
+        259.43402099609375
+      ],
+      "clip_area": 98279.23160633631,
+      "page_area": 484704.0,
+      "text_density": 0.20561697945791596,
+      "kind": "drawing_cluster",
+      "score": 3.5549726948176694,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/03-p3-drawing_cluster.png",
+      "filename": "03-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-caption-3",
+      "page_index": 3,
+      "caption": "Figure 3: Three example hacks on SETA task 1219 (headless multi-resolution virtual display).",
+      "clip": [
+        54.0,
+        60.87872314453125,
+        558.0059814453125,
+        223.25201416015625
+      ],
+      "clip_area": 81837.10989883542,
+      "page_area": 484704.0,
+      "text_density": 0.6316529590549189,
+      "kind": "drawing_cluster_with_caption",
+      "score": 0.9093012210981719,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.25124480332140614,
+      "score": -3.365521479284368,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.24223088461111567,
+      "score": -8.81171163666694,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/hardening-agent-benchmarks-with-adversarial-hacker-fixer-loops/contact-sheet.svg"
+}

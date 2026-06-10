@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <style>
+    .h{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:18px;fill:#1E3A5F;font-weight:600;}
+    .t{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:13px;fill:#3D4F65;}
+    .tt{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:14px;fill:#1E3A5F;font-weight:600;}
+    .lbl{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:12px;fill:#4B8BDA;}
+    .lblo{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:12px;fill:#E89B5C;}
+  </style>
+
+  <text x="360" y="38" class="h" text-anchor="middle">共享防御池：修一次，全员生效</text>
+
+  <!-- Central shared pool -->
+  <circle cx="360" cy="250" r="82" fill="#FEF3E8" stroke="#E89B5C" stroke-width="2.5"/>
+  <text x="360" y="238" class="tt" text-anchor="middle">共享补丁池</text>
+  <text x="360" y="258" class="t" text-anchor="middle">bare git repo</text>
+  <text x="360" y="276" class="t" text-anchor="middle">基础设施级补丁</text>
+
+  <!-- Task A -->
+  <rect x="60" y="120" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="145" class="tt" text-anchor="middle">任务 A</text>
+  <text x="130" y="165" class="t" text-anchor="middle">贡献：计时硬化</text>
+
+  <!-- Task B -->
+  <rect x="60" y="320" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="345" class="tt" text-anchor="middle">任务 B</text>
+  <text x="130" y="365" class="t" text-anchor="middle">贡献：栈回溯屏蔽</text>
+
+  <!-- Task C -->
+  <rect x="520" y="120" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#E89B5C" stroke-width="1.5"/>
+  <text x="590" y="145" class="tt" text-anchor="middle">任务 C</text>
+  <text x="590" y="165" class="t" text-anchor="middle">合入全部补丁</text>
+
+  <!-- Task D -->
+  <rect x="520" y="320" width="140" height="60" rx="8" fill="#EFF6FF" stroke="#E89B5C" stroke-width="1.5"/>
+  <text x="590" y="345" class="tt" text-anchor="middle">任务 D</text>
+  <text x="590" y="365" class="t" text-anchor="middle">合入全部补丁</text>
+
+  <!-- Push arrows (A,B -> pool) -->
+  <line x1="200" y1="155" x2="282" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrB)"/>
+  <line x1="200" y1="345" x2="282" y2="282" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="218" y="200" class="lbl">push 补丁</text>
+  <text x="218" y="308" class="lbl">push 补丁</text>
+
+  <!-- Merge arrows (pool -> C,D) -->
+  <line x1="438" y1="218" x2="520" y2="155" stroke="#E89B5C" stroke-width="2" marker-end="url(#arrO)"/>
+  <line x1="438" y1="282" x2="520" y2="345" stroke="#E89B5C" stroke-width="2" marker-end="url(#arrO)"/>
+  <text x="455" y="200" class="lblo">merge</text>
+  <text x="455" y="308" class="lblo">merge</text>
+
+  <text x="360" y="445" class="t" text-anchor="middle">每个任务的防御 = 所有任务贡献的并集（iteration barrier 同步）</text>
+</svg>

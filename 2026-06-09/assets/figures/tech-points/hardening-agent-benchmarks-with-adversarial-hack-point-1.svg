@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A6B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA876"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">Hacker · Fixer · Solver 三方对抗闭环</text>
+
+  <!-- Hacker (left) -->
+  <circle cx="140" cy="260" r="64" fill="#FCE9E4" stroke="#C97A6B" stroke-width="2"/>
+  <text x="140" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="600" fill="#1E3A5F">Hacker</text>
+  <text x="140" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#C97A6B">找捷径攻击</text>
+
+  <!-- Verifier / Fixer (center) -->
+  <rect x="295" y="180" width="130" height="160" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="600" fill="#1E3A5F">Verifier</text>
+  <line x1="310" y1="232" x2="410" y2="232" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="310" y1="252" x2="410" y2="252" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="310" y1="272" x2="410" y2="272" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="360" y="305" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">Fixer 打补丁</text>
+  <text x="360" y="324" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">堵漏洞</text>
+
+  <!-- Solver (right) -->
+  <circle cx="580" cy="260" r="64" fill="#E6F4EA" stroke="#5BA876" stroke-width="2"/>
+  <text x="580" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="600" fill="#1E3A5F">Solver</text>
+  <text x="580" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#5BA876">守门员</text>
+
+  <!-- Hacker attacks verifier -->
+  <path d="M204 240 L 293 200" stroke="#C97A6B" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  <text x="248" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C97A6B">exploit</text>
+
+  <!-- Solver validates verifier -->
+  <path d="M516 240 L 427 200" stroke="#5BA876" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <text x="472" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#5BA876">验真解</text>
+
+  <!-- feedback loop: verifier → hacker (next round) -->
+  <path d="M295 330 Q 215 395 145 324" stroke="#4B8BDA" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <text x="220" y="400" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA">下一轮（最多 10 轮）</text>
+
+  <!-- bottom note -->
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Solver 仍能通过 → 补丁保留；否则回滚</text>
+</svg>

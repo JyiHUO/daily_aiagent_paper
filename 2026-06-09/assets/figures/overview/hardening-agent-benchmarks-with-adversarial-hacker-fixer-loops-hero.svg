@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3D8B5C"/>
+    </marker>
+    <marker id="arrGy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8BA3BD"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">对抗循环：让评测器自动免疫作弊</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Hacker – Fixer – Solver Loop · agent benchmark 加固</text>
+
+  <!-- side notes -->
+  <text x="60" y="108" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#8BA3BD">审计 1968 任务 · 16% 可被 hack</text>
+  <text x="840" y="108" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#8BA3BD">Terminal Wrench · 323 环境开源</text>
+
+  <!-- Center: Verifier shield -->
+  <g transform="translate(450,320)">
+    <path d="M0,-95 L80,-65 L80,15 Q80,75 0,105 Q-80,75 -80,15 L-80,-65 Z" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2.5"/>
+    <text x="0" y="-40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Verifier 评测器</text>
+    <line x1="-55" y1="-22" x2="55" y2="-22" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="0" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">逐轮打补丁</text>
+    <text x="0" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">共享防御池</text>
+    <text x="0" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#8BA3BD">cross-task</text>
+  </g>
+
+  <!-- Hacker (left) -->
+  <g transform="translate(150,300)">
+    <circle cx="0" cy="0" r="58" fill="#FDECE4" stroke="#D97757" stroke-width="2.5"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#9C3D1F">Hacker</text>
+    <text x="0" y="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#9C3D1F">找捷径</text>
+  </g>
+
+  <!-- Fixer (top) -->
+  <g transform="translate(450,150)">
+    <circle cx="0" cy="0" r="52" fill="#E8F0FB" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Fixer</text>
+    <text x="0" y="17" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">补漏洞</text>
+  </g>
+
+  <!-- Solver (right) -->
+  <g transform="translate(750,300)">
+    <circle cx="0" cy="0" r="58" fill="#E8F4EC" stroke="#3D8B5C" stroke-width="2.5"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1F5A38">Solver</text>
+    <text x="0" y="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1F5A38">守门员</text>
+  </g>
+
+  <!-- Hacker -> Verifier -->
+  <path d="M 208,288 Q 295,250 372,288" fill="none" stroke="#D97757" stroke-width="2.2" marker-end="url(#arrR)"/>
+  <text x="290" y="244" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#9C3D1F">攻击 exploit</text>
+
+  <!-- Verifier -> Fixer -->
+  <path d="M 418,235 Q 405,200 422,178" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="358" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">报告漏洞</text>
+
+  <!-- Fixer -> Verifier -->
+  <path d="M 478,178 Q 495,200 482,235" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="548" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">下发补丁</text>
+
+  <!-- Verifier -> Solver -->
+  <path d="M 528,288 Q 615,250 692,288" fill="none" stroke="#3D8B5C" stroke-width="2.2" marker-end="url(#arrG)"/>
+  <text x="610" y="244" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1F5A38">合法解通过？</text>
+
+  <!-- Loop back: Solver -> Hacker -->
+  <path d="M 720,352 Q 450,490 180,352" fill="none" stroke="#8BA3BD" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#arrGy)"/>
+  <text x="450" y="478" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">下一轮 · 至多 10 轮</text>
+
+  <!-- Result strip bottom -->
+  <g transform="translate(0,548)">
+    <rect x="120" y="0" width="240" height="38" rx="6" fill="#FDECE4" stroke="#D97757" stroke-width="1.2"/>
+    <text x="240" y="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#9C3D1F">加固前 ASR</text>
+    <text x="240" y="32" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#9C3D1F">62% / 76% / 61%</text>
+
+    <text x="400" y="25" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" fill="#4B8BDA">→</text>
+
+    <rect x="440" y="0" width="240" height="38" rx="6" fill="#E8F4EC" stroke="#3D8B5C" stroke-width="1.2"/>
+    <text x="560" y="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1F5A38">加固后 ASR</text>
+    <text x="560" y="32" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1F5A38">0% (KernelBench)</text>
+
+    <text x="780" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">弱模型也能</text>
+    <text x="780" y="36" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">守住强攻击</text>
+  </g>
+</svg>

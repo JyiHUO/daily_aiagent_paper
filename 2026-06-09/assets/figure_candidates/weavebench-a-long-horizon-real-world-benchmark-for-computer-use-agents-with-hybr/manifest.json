@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/downloaded_pdfs/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-61",
+      "page_index": 4,
+      "caption": "Figure 3 WeaveBench dataset overview. (a) Taxonomy of 114 tasks across 8 domains and 23 subcategories. (b) Number of GUI ↔ CLI channel switches per task, showing the degree of channel interleaving. (c) Rollout length measured by tool calls in the trajectory.",
+      "clip": [
+        50.03099822998047,
+        46.36106872558594,
+        545.2534790039062,
+        264.5369873046875
+      ],
+      "clip_area": 108045.61964387272,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19603525287875012,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.238391712206912,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        52.03099822998047,
+        10.463981628417969,
+        239.94711303710938,
+        141.4366226196289
+      ],
+      "clip_area": 24611.869841097272,
+      "page_area": 501156.9211820215,
+      "text_density": 0.10802603634645051,
+      "kind": "drawing_cluster",
+      "score": 12.591903039669605,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/02-p1-drawing_cluster.png",
+      "filename": "02-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-embedded-8-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        143.62384033203125,
+        323.666259765625,
+        248.59075927734375,
+        420.43402099609375
+      ],
+      "clip_area": 10157.413749597967,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04004119667368411,
+      "kind": "embedded_image",
+      "xref": 1247,
+      "score": 11.11286015277331,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/03-p2-embedded_image.png",
+      "filename": "03-p2-embedded_image.png"
+    },
+    {
+      "id": "page-4-block-61",
+      "page_index": 4,
+      "caption": "Figure 3 WeaveBench dataset overview. (a) Taxonomy of 114 tasks across 8 domains and 23 subcategories. (b) Number of GUI ↔ CLI channel switches per task, showing the degree of channel interleaving. (c) Rollout length measured by tool calls in the trajectory.",
+      "clip": [
+        37.102197265624994,
+        18.0,
+        558.9962219238281,
+        249.00558471679688
+      ],
+      "clip_area": 120560.43432637061,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14680174952693872,
+      "kind": "captioned_figure",
+      "score": 8.991895028383677,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/04-p5-captioned_figure.png",
+      "filename": "04-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-3-embedded-20-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        234.40640258789062,
+        145.5506134033203,
+        387.1746826171875,
+        250.0311279296875
+      ],
+      "clip_area": 15961.308500769082,
+      "page_area": 501156.9211820215,
+      "text_density": 0.014750302374226967,
+      "kind": "embedded_image",
+      "xref": 1101,
+      "score": 7.177347872230768,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/05-p4-embedded_image.png",
+      "filename": "05-p4-embedded_image.png"
+    },
+    {
+      "id": "page-9-drawing-caption-58",
+      "page_index": 9,
+      "caption": "Figure 6 WeaveBench failure anatomy. (a) Overall error distribution across the three frontier backbones (Opus 4.7, GPT-5.5, GPT-5.4) on OpenClaw ( n = 1 , 735), as a 2-ring sunburst: inner ring = 5 top-level families, outer ring = 13 sub-classes. (b) Per-backbone sub-class share. Full 13-backbone breakdown in Appendix F.2 .",
+      "clip": [
+        59.21399688720703,
+        46.36354064941406,
+        536.0598754882812,
+        236.2449951171875
+      ],
+      "clip_area": 90544.1889857353,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14529609881061878,
+      "kind": "drawing_cluster_with_caption",
+      "score": 7.088280615648821,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/06-p10-drawing_cluster_with_caption.png",
+      "filename": "06-p10-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-09/assets/figure_candidates/weavebench-a-long-horizon-real-world-benchmark-for-computer-use-agents-with-hybr/contact-sheet.svg"
+}

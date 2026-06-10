@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <rect width="720" height="480" fill="#FAF7F2"/>
+
+  <text x="360" y="50" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">双通道缺一不可：GUI 与 CLI 必须协作</text>
+
+  <!-- GUI 屏幕 -->
+  <g>
+    <rect x="80" y="120" width="200" height="150" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <rect x="80" y="120" width="200" height="22" rx="8" fill="#4B8BDA"/>
+    <circle cx="94" cy="131" r="3" fill="#FAF7F2"/>
+    <circle cx="106" cy="131" r="3" fill="#FAF7F2"/>
+    <circle cx="118" cy="131" r="3" fill="#FAF7F2"/>
+    <text x="180" y="195" text-anchor="middle" font-size="34" fill="#D97757">👁</text>
+    <text x="180" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">GUI：看见 bug</text>
+    <text x="180" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#6B7A8F">画面渲染才能发现</text>
+  </g>
+
+  <!-- CLI 终端 -->
+  <g>
+    <rect x="440" y="120" width="200" height="150" rx="8" fill="#1E3A5F" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="455" y="150" font-family="'Courier New',monospace" font-size="13" fill="#7FD49C">$ _</text>
+    <text x="540" y="200" text-anchor="middle" font-size="30" fill="#7FD49C">⚙</text>
+    <text x="540" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#A8C5E0">CLI：改源代码</text>
+    <text x="540" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#7A99B8">读 coredump / 编辑文件</text>
+  </g>
+
+  <!-- 双向箭头 -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#D97757"/>
+    </marker>
+  </defs>
+  <line x1="285" y1="185" x2="435" y2="185" stroke="#D97757" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="435" y1="210" x2="285" y2="210" stroke="#D97757" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="360" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#D97757">来回切换</text>
+
+  <!-- 底部对比 -->
+  <g>
+    <rect x="100" y="360" width="220" height="80" rx="6" fill="#FFF" stroke="#C9B8A8" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="210" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#9B7B5A">只用 GUI：补不了代码</text>
+    <text x="210" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#C45A4A">✗ 失败</text>
+  </g>
+  <g>
+    <rect x="400" y="360" width="220" height="80" rx="6" fill="#FFF" stroke="#C9B8A8" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="510" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#9B7B5A">只用 CLI：看不见 bug</text>
+    <text x="510" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#C45A4A">✗ 失败</text>
+  </g>
+
+  <text x="360" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">P1 通道不可替代：两条通道都是必经之路</text>
+</svg>
