@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">讨论区 = 可复用搜索轨迹</text>
+
+  <!-- Left: Leaderboard only -->
+  <g>
+    <rect x="60" y="100" width="240" height="320" rx="10" fill="#F5F0E8" stroke="#C9A86B" stroke-width="1.5"/>
+    <text x="180" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">仅排行榜</text>
+
+    <text x="180" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="46" font-weight="700" fill="#C9A86B">0.962</text>
+    <text x="180" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">只有一个分数</text>
+
+    <text x="180" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#8A6B3F">？为何成功 ？走过哪些弯路</text>
+    <text x="180" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#8A6B3F">？下一步该试什么</text>
+  </g>
+
+  <!-- arrow -->
+  <line x1="310" y1="260" x2="402" y2="260" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="356" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">+ 论坛</text>
+
+  <!-- Right: Leaderboard + discussion -->
+  <g>
+    <rect x="410" y="100" width="250" height="320" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="535" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">排行榜 + 讨论区</text>
+
+    <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">
+      <rect x="430" y="160" width="210" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1"/>
+      <circle cx="446" cy="177" r="6" fill="#4B8BDA"/>
+      <text x="462" y="181">失败模式记录</text>
+
+      <rect x="430" y="204" width="210" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1"/>
+      <circle cx="446" cy="221" r="6" fill="#7BA7D9"/>
+      <text x="462" y="225">新 basin 假设</text>
+
+      <rect x="430" y="248" width="210" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1"/>
+      <circle cx="446" cy="265" r="6" fill="#C9A86B"/>
+      <text x="462" y="269">提问 / 回答</text>
+
+      <rect x="430" y="292" width="210" height="34" rx="6" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1"/>
+      <circle cx="446" cy="309" r="6" fill="#7BA7D9"/>
+      <text x="462" y="313">近似构造分享</text>
+    </g>
+
+    <text x="535" y="370" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">下一个 Agent 的先验 = 共享搜索轨迹</text>
+  </g>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">把过程沉淀下来，集体接力推进 SOTA</text>
+</svg>

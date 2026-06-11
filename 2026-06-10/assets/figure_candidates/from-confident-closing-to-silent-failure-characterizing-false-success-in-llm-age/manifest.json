@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/downloaded_pdfs/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-85",
+      "page_index": 8,
+      "caption": "Figure 7. Detector vs. judge confidence on the tau2-bench eval set. The methods correlate ( ρ = 0 . 41 ) but capture complementary false successes; a 75/25 ensemble improves AUROC (0.855 vs. 0.834).",
+      "clip": [
+        347.94000244140625,
+        368.2760925292969,
+        500.9340515136719,
+        517.3330078125
+      ],
+      "clip_area": 22804.82101139892,
+      "page_area": 484704.0,
+      "text_density": 0.13530842034849,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.934881679217256,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-85",
+      "page_index": 8,
+      "caption": "Figure 7. Detector vs. judge confidence on the tau2-bench eval set. The methods correlate ( ρ = 0 . 41 ) but capture complementary false successes; a 75/25 ensemble improves AUROC (0.855 vs. 0.834).",
+      "clip": [
+        276.2930053710937,
+        191.6788818359375,
+        573.606591796875,
+        500.4788818359375
+      ],
+      "clip_area": 91810.43548828126,
+      "page_area": 484704.0,
+      "text_density": 0.20353453827211412,
+      "kind": "captioned_figure",
+      "score": 20.608043653542943,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/02-p9-captioned_figure.png",
+      "filename": "02-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-30",
+      "page_index": 8,
+      "caption": "Figure 4. LLM judge AUROC on tau2-bench (left, Frame A: FS vs TS) and AppWorld (right, FS vs HF). Dashed lines mark the respective task-disjoint detector AUROC (0.83 and 0.95). No judge configuration approaches the detector on either benchmark. On AppWorld, Sonnet performance degrades as more context is provided.",
+      "clip": [
+        155.0052032470703,
+        25.75525665283203,
+        433.427490234375,
+        174.65997314453125
+      ],
+      "clip_area": 41458.39170881512,
+      "page_area": 484704.0,
+      "text_density": 0.15280278933183977,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.092481436854225,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-block-5",
+      "page_index": 16,
+      "caption": "Table 11. AppWorld agent architecture status-writing behavior across all 8,190 trajectories. Only full code refl and ipfuncall ever write status=fail .",
+      "clip": [
+        24.337999725341795,
+        18.0,
+        572.0404907226563,
+        175.72695922851562
+      ],
+      "clip_area": 86387.44846688987,
+      "page_area": 484704.0,
+      "text_density": 0.15984142198252296,
+      "kind": "captioned_figure",
+      "score": 9.169375219569622,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/04-p17-captioned_figure.png",
+      "filename": "04-p17-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-30",
+      "page_index": 8,
+      "caption": "Figure 4. LLM judge AUROC on tau2-bench (left, Frame A: FS vs TS) and AppWorld (right, FS vs HF). Dashed lines mark the respective task-disjoint detector AUROC (0.83 and 0.95). No judge configuration approaches the detector on either benchmark. On AppWorld, Sonnet performance degrades as more context is provided.",
+      "clip": [
+        24.293001556396483,
+        18.0,
+        573.1599365234375,
+        157.9461212158203
+      ],
+      "clip_area": 76811.79861225329,
+      "page_area": 484704.0,
+      "text_density": 0.05088837108984172,
+      "kind": "captioned_figure",
+      "score": 7.853464429025037,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-2",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        349.94000244140625,
+        370.2760925292969,
+        498.9340515136719,
+        515.3330078125
+      ],
+      "clip_area": 21612.617153977044,
+      "page_area": 484704.0,
+      "text_density": 0.11964919729058392,
+      "kind": "drawing_cluster",
+      "score": 5.861188353164709,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/06-p9-drawing_cluster.png",
+      "filename": "06-p9-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/from-confident-closing-to-silent-failure-characterizing-false-success-in-llm-age/contact-sheet.svg"
+}

@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/downloaded_pdfs/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-7",
+      "page_index": 2,
+      "caption": "Figure 1: The EinsteinArena web interface. Each problem page includes a problem description, an active leaderboard with agent scores, and a discussion board where agents can share findings, ask questions, and propose hypotheses. All three components are updated in real time as new submissions are evaluated or new threads are published.",
+      "clip": [
+        100.08106994628906,
+        77.11915588378906,
+        508.7366638183594,
+        462.6823425292969
+      ],
+      "clip_area": 157562.55301382788,
+      "page_area": 484704.0,
+      "text_density": 0.09205973454768428,
+      "kind": "drawing_cluster_with_caption",
+      "score": 48.27641592713894,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-7",
+      "page_index": 2,
+      "caption": "Figure 1: The EinsteinArena web interface. Each problem page includes a problem description, an active leaderboard with agent scores, and a discussion board where agents can share findings, ask questions, and propose hypotheses. All three components are updated in real time as new submissions are evaluated or new threads are published.",
+      "clip": [
+        96.08106994628906,
+        89.14382934570312,
+        512.7366638183594,
+        459.9239807128906
+      ],
+      "clip_area": 154487.62416387163,
+      "page_area": 484704.0,
+      "text_density": 0.057186524671187934,
+      "kind": "image_block_with_caption",
+      "score": 43.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/02-p3-image_block_with_caption.png",
+      "filename": "02-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1: The EinsteinArena web interface. Each problem page includes a problem description, an active leaderboard with agent scores, and a discussion board where agents can share findings, ask questions, and propose hypotheses. All three components are updated in real time as new submissions are evaluated or new threads are published.",
+      "clip": [
+        127.02969360351562,
+        97.72189331054688,
+        481.75860595703125,
+        433.2994384765625
+      ],
+      "clip_area": 119039.05760700349,
+      "page_area": 484704.0,
+      "text_density": 0.004796161184545103,
+      "kind": "embedded_image_with_caption",
+      "xref": 535,
+      "score": 42.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/03-p3-embedded_image_with_caption.png",
+      "filename": "03-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-35",
+      "page_index": 9,
+      "caption": "Figure 5: Solution lineage of the kissing number problem. Arrows denote parental lineage, which is determined by computing similarity between feature vectors representing solution submissions. Details on methodologies are provided in Appendix C.",
+      "clip": [
+        130.94140625,
+        91.44947052001953,
+        552.6214599609375,
+        316.76800537109375
+      ],
+      "clip_area": 95012.33187807072,
+      "page_area": 484704.0,
+      "text_density": 0.03347974314730336,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.05569257642301,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/04-p10-drawing_cluster_with_caption.png",
+      "filename": "04-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-drawing-caption-26",
+      "page_index": 10,
+      "caption": "Figure 6: Solution lineage for the second autocorrelation inequality problem. Arrows denote parental lineage, which is determined by computing similarity between feature vectors representing solution submissions. Details on methodologies are provided in Appendix C.",
+      "clip": [
+        131.22903442382812,
+        96.67182922363281,
+        545.3631591796875,
+        311.2852783203125
+      ],
+      "clip_area": 88878.75290248962,
+      "page_area": 484704.0,
+      "text_density": 0.03654863003463885,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.987541698916552,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/05-p11-drawing_cluster_with_caption.png",
+      "filename": "05-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-23",
+      "page_index": 5,
+      "caption": "Figure 2: Best known lower bounds for the kissing number in dimension 11. The record stood at 582 for roughly 40 years before a burst of recent progress. Note that canonical citation for Ganzhinov’s result is [6], even if the result first appeared in the 2022 preprint.",
+      "clip": [
+        63.45372772216797,
+        46.1523323059082,
+        535.42919921875,
+        367.43524169921875
+      ],
+      "clip_area": 151637.6526447014,
+      "page_area": 484704.0,
+      "text_density": 0.06522507179007193,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/06-p6-drawing_cluster_with_caption.png",
+      "filename": "06-p6-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-10/assets/figure_candidates/harnessing-the-collective-intelligence-of-ai-agents-in-the-wild-for-new-discover/contact-sheet.svg"
+}

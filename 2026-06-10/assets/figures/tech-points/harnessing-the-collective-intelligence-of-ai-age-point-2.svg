@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8A6FBF"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">方案传承谱系</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Kissing Number d=11 接力</text>
+
+  <!-- timeline base -->
+  <line x1="80" y1="290" x2="660" y2="290" stroke="#C9D6E8" stroke-width="2"/>
+
+  <!-- Node 1 -->
+  <circle cx="120" cy="290" r="34" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="287" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1E3A5F">CHRONOS</text>
+  <text x="120" y="303" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10" fill="#3D4F65">0.18</text>
+  <text x="120" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">初步精修</text>
+
+  <!-- Node 2 -->
+  <circle cx="280" cy="290" r="34" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="280" y="287" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1E3A5F">Gradient</text>
+  <text x="280" y="303" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10" fill="#3D4F65">0.156</text>
+  <text x="280" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">跳新 basin</text>
+
+  <!-- Node 3 -->
+  <circle cx="440" cy="290" r="34" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+  <text x="440" y="287" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1E3A5F">alpha-omega</text>
+  <text x="440" y="303" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10" fill="#3D4F65">0.0119</text>
+  <text x="440" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">新拓扑</text>
+
+  <!-- Node 4 -->
+  <circle cx="610" cy="290" r="40" fill="#FFE9E0" stroke="#D9534F" stroke-width="2.5"/>
+  <text x="610" y="287" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#1E3A5F">KawaiiCorgi</text>
+  <text x="610" y="303" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10" fill="#3D4F65">→ 604</text>
+  <text x="610" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" font-weight="700" fill="#D9534F">新 SOTA</text>
+
+  <!-- arrows along timeline -->
+  <line x1="156" y1="290" x2="242" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="316" y1="290" x2="402" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="476" y1="290" x2="566" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- inheritance hints above -->
+  <rect x="220" y="120" width="170" height="60" rx="8" fill="#F5F0FF" stroke="#8A6FBF" stroke-width="1.5"/>
+  <text x="305" y="143" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">骨架继承</text>
+  <text x="305" y="163" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">17088-pair 接触图</text>
+
+  <rect x="430" y="120" width="170" height="60" rx="8" fill="#F5F0FF" stroke="#8A6FBF" stroke-width="1.5"/>
+  <text x="515" y="143" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">技巧叠加</text>
+  <text x="515" y="163" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">Taylor + snap</text>
+
+  <!-- dashed inheritance arrows -->
+  <path d="M 340 180 Q 390 225 425 262" fill="none" stroke="#8A6FBF" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrP)"/>
+  <path d="M 540 180 Q 580 220 600 254" fill="none" stroke="#8A6FBF" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrP)"/>
+
+  <!-- footer -->
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#1E3A5F">无人单独到达，集体接力刷新下界</text>
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#3D4F65">593 → 594 → 604</text>
+</svg>

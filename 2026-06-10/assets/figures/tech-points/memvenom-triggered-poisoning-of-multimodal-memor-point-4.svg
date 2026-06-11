@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7A8A9E"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">触发条件化投毒</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">干净任务保留 · 触发即激活</text>
+
+  <!-- 中央记忆库 -->
+  <g>
+    <ellipse cx="360" cy="240" rx="92" ry="60" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+    <circle cx="335" cy="232" r="6" fill="#E0A458"/>
+    <circle cx="372" cy="252" r="6" fill="#E0A458"/>
+    <circle cx="388" cy="224" r="5" fill="#E0A458"/>
+    <text x="360" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">多模态记忆（潜伏毒条目）</text>
+  </g>
+
+  <!-- 左：干净查询 -->
+  <g>
+    <rect x="50" y="200" width="150" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="125" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">干净截图</text>
+    <text x="125" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">日常任务</text>
+  </g>
+  <path d="M200 240 L 265 240" stroke="#7A8A9E" stroke-width="1.8" fill="none" stroke-dasharray="5,4" marker-end="url(#ahg)"/>
+
+  <!-- 右：触发查询 -->
+  <g>
+    <rect x="520" y="200" width="150" height="80" rx="10" fill="#FDECEC" stroke="#D9534F" stroke-width="1.8"/>
+    <text x="595" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">触发截图</text>
+    <text x="595" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">特定观察</text>
+  </g>
+  <path d="M520 240 L 455 240" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ah)"/>
+
+  <!-- 下方两种结果对比 -->
+  <g>
+    <rect x="60" y="380" width="220" height="64" rx="8" fill="#F2F7F2" stroke="#6BAA75" stroke-width="1.6"/>
+    <text x="170" y="406" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">行为正常</text>
+    <text x="170" y="427" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">PU ≈ BU</text>
+  </g>
+
+  <g>
+    <rect x="440" y="380" width="220" height="64" rx="8" fill="#FDECEC" stroke="#D9534F" stroke-width="1.6"/>
+    <text x="550" y="406" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">高成功率</text>
+    <text x="550" y="427" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">ASR-ra ≈ 99%</text>
+  </g>
+
+  <path d="M310 295 L 200 378" stroke="#7A8A9E" stroke-width="1.6" fill="none" stroke-dasharray="5,4" marker-end="url(#ahg)"/>
+  <path d="M410 295 L 520 378" stroke="#D9534F" stroke-width="2" fill="none" marker-end="url(#ahr)"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8853A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">模块化恶意子图</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">仅替换中间节点即可复用</text>
+
+  <!-- Three-node subgraph -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <!-- Vret -->
+    <circle cx="140" cy="220" r="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="140" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Vret</text>
+    <text x="140" y="234" text-anchor="middle" font-size="12" fill="#3D4F65">召回锚点 (固定)</text>
+
+    <!-- Vgoal -->
+    <circle cx="360" cy="220" r="66" fill="#FFF1E6" stroke="#E8853A" stroke-width="2.5" stroke-dasharray="5,3"/>
+    <text x="360" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Vgoal</text>
+    <text x="360" y="234" text-anchor="middle" font-size="12" font-weight="700" fill="#E8853A">目标节点 (可替换)</text>
+
+    <!-- Vpri -->
+    <circle cx="580" cy="220" r="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="580" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Vpri</text>
+    <text x="580" y="234" text-anchor="middle" font-size="12" fill="#3D4F65">优先级 (固定)</text>
+
+    <!-- edges -->
+    <line x1="202" y1="220" x2="292" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="428" y1="220" x2="518" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- dashed link from Vgoal to swap zone -->
+  <line x1="360" y1="288" x2="360" y2="358" stroke="#E8853A" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrO)"/>
+  <text x="372" y="328" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#E8853A">替换</text>
+
+  <!-- Swappable goals -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">
+    <rect x="120" y="370" width="110" height="40" rx="6" fill="#FFF1E6" stroke="#E8853A" stroke-width="1.2"/>
+    <text x="175" y="395" text-anchor="middle">钓鱼跳转</text>
+
+    <rect x="245" y="370" width="110" height="40" rx="6" fill="#FFF1E6" stroke="#E8853A" stroke-width="1.2"/>
+    <text x="300" y="395" text-anchor="middle">隐私泄露</text>
+
+    <rect x="370" y="370" width="110" height="40" rx="6" fill="#FFF1E6" stroke="#E8853A" stroke-width="1.2"/>
+    <text x="425" y="395" text-anchor="middle">未授转账</text>
+
+    <rect x="495" y="370" width="110" height="40" rx="6" fill="#FFF1E6" stroke="#E8853A" stroke-width="1.2"/>
+    <text x="550" y="395" text-anchor="middle">破坏操作</text>
+  </g>
+
+  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">Vret 与 Vpri 一次构造，多场景复用</text>
+</svg>

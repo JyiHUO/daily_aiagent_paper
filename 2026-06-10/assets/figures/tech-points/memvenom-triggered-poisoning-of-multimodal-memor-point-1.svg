@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5C"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">记忆空间中的隔离孤岛：触发条件化召回</text>
+
+  <!-- Benign memory cluster (left) -->
+  <circle cx="200" cy="280" r="95" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <circle cx="180" cy="260" r="6" fill="#4B8BDA"/>
+  <circle cx="220" cy="250" r="6" fill="#4B8BDA"/>
+  <circle cx="170" cy="295" r="6" fill="#4B8BDA"/>
+  <circle cx="225" cy="305" r="6" fill="#4B8BDA"/>
+  <circle cx="200" cy="280" r="6" fill="#1E3A5F"/>
+  <text x="200" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">干净截图簇 (良性查询)</text>
+
+  <!-- Repulsion arrows -->
+  <line x1="298" y1="265" x2="478" y2="252" stroke="#C97B5C" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <line x1="478" y1="308" x2="298" y2="295" stroke="#C97B5C" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+  <text x="380" y="244" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#C97B5C">L_space 推开 / 分离</text>
+
+  <!-- Triggered cluster (right, compact) -->
+  <circle cx="540" cy="280" r="55" fill="#FBE8DC" stroke="#C97B5C" stroke-width="1.8"/>
+  <circle cx="528" cy="270" r="5" fill="#C97B5C"/>
+  <circle cx="552" cy="272" r="5" fill="#C97B5C"/>
+  <circle cx="530" cy="292" r="5" fill="#C97B5C"/>
+  <circle cx="552" cy="293" r="5" fill="#C97B5C"/>
+  <circle cx="540" cy="282" r="6" fill="#1E3A5F"/>
+  <text x="540" y="405" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">触发器簇 (紧凑 + 隔离)</text>
+
+  <!-- Trigger badge -->
+  <rect x="525" y="115" width="30" height="30" rx="4" fill="#C97B5C"/>
+  <text x="540" y="136" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">τ</text>
+  <line x1="540" y1="148" x2="540" y2="222" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="600" y="188" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">视觉补丁注入</text>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">良性查询走不到右侧孤岛；带 τ 的截图才会命中并拉出恶意子图</text>
+</svg>

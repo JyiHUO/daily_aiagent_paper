@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">自信收尾，静默失败</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">LLM Agent 假成功的刻画与检测</text>
+
+  <!-- Agent speech bubble (left) -->
+  <g>
+    <rect x="60" y="110" width="240" height="130" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="180" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Agent 自述</text>
+    <text x="180" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">"已成功退款"</text>
+    <text x="180" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">processed ✓</text>
+  </g>
+
+  <!-- Environment state (right) -->
+  <g>
+    <rect x="600" y="110" width="240" height="130" rx="14" fill="#FDF1EC" stroke="#D97757" stroke-width="1.5"/>
+    <text x="720" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#7A4030">环境真实状态</text>
+    <text x="720" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#A33A1F">无写入操作</text>
+    <text x="720" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#D97757">reward = 0</text>
+  </g>
+
+  <!-- VS divider -->
+  <text x="450" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="800" fill="#1E3A5F">≠</text>
+  <text x="450" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#A33A1F">假成功</text>
+
+  <!-- Section header -->
+  <text x="450" y="290" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#3D4F65">谁能识破？</text>
+
+  <!-- LLM Judge (loser) -->
+  <g>
+    <rect x="80" y="320" width="340" height="190" rx="14" fill="#F5F5F7" stroke="#9AA5B5" stroke-width="1.5"/>
+    <text x="250" y="352" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">LLM-as-Judge</text>
+    <text x="250" y="372" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">5 模型 × 5 prompt</text>
+
+    <text x="250" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="38" font-weight="800" fill="#9AA5B5">0.65</text>
+    <text x="250" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">AUROC ≈ 蒙猜</text>
+
+    <text x="250" y="480" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A4030">被自信措辞误导，延迟 ~4000 ms</text>
+  </g>
+
+  <!-- TF-IDF detector (winner) -->
+  <g>
+    <rect x="480" y="320" width="340" height="190" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="650" y="352" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">TF-IDF 轻量检测</text>
+    <text x="650" y="372" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">bigram + 逻辑回归</text>
+
+    <text x="585" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="800" fill="#1E3A5F">0.83</text>
+    <text x="585" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">tau2-bench</text>
+
+    <text x="715" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="800" fill="#1E3A5F">0.95</text>
+    <text x="715" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">AppWorld</text>
+
+    <text x="650" y="480" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#1E3A5F">看动作而非措辞 · 3300× 更快</text>
+  </g>
+
+  <!-- Arrows from top boxes to monitors -->
+  <path d="M 180 240 Q 180 285 250 320" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 720 240 Q 720 285 650 320" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arrR)"/>
+
+  <!-- Bottom takeaway -->
+  <text x="450" y="555" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">production 监控应使用轻量域校准检测器作为 triage 信号</text>
+</svg>

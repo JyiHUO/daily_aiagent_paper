@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <rect width="720" height="480" fill="#FAF7F2"/>
+  
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">双控环境 vs 单控环境</text>
+  
+  <!-- LEFT: Single Control -->
+  <g>
+    <rect x="50" y="90" width="280" height="320" rx="12" fill="#FDECEC" stroke="#D97777" stroke-width="2"/>
+    <text x="190" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">单控 Single</text>
+    
+    <!-- Agent -->
+    <circle cx="110" cy="210" r="34" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="110" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Agent</text>
+    
+    <!-- speech bubble -->
+    <path d="M 160 188 L 290 188 Q 300 188 300 198 L 300 224 Q 300 234 290 234 L 180 234 L 165 248 L 172 234 Q 160 234 160 224 Z" fill="#FFFFFF" stroke="#D97777" stroke-width="1.5"/>
+    <text x="230" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">已退款 ✓</text>
+    
+    <!-- DB empty -->
+    <ellipse cx="190" cy="310" rx="55" ry="14" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <path d="M 135 310 L 135 340 Q 135 354 190 354 Q 245 354 245 340 L 245 310" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="190" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#D97777">空 (无记录)</text>
+    
+    <text x="190" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#D97777">假成功 45%+</text>
+  </g>
+  
+  <!-- RIGHT: Dual Control -->
+  <g>
+    <rect x="390" y="90" width="280" height="320" rx="12" fill="#E8F1E5" stroke="#5BA876" stroke-width="2"/>
+    <text x="530" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">双控 Dual</text>
+    
+    <!-- Agent -->
+    <circle cx="445" cy="195" r="32" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="445" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">Agent</text>
+    
+    <!-- Verifier -->
+    <circle cx="615" cy="195" r="32" fill="#FFFFFF" stroke="#5BA876" stroke-width="2"/>
+    <ellipse cx="615" cy="195" rx="16" ry="9" fill="none" stroke="#5BA876" stroke-width="1.5"/>
+    <circle cx="615" cy="195" r="4" fill="#5BA876"/>
+    <text x="615" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">独立校验</text>
+    
+    <!-- arrow: verifier checks DB -->
+    <path d="M 615 230 Q 615 280 585 310" stroke="#5BA876" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+    <polygon points="585,310 593,303 590,312" fill="#5BA876"/>
+    
+    <!-- arrow: agent writes DB -->
+    <path d="M 445 230 Q 445 280 475 310" stroke="#1E3A5F" stroke-width="2" fill="none"/>
+    <polygon points="475,310 467,303 470,312" fill="#1E3A5F"/>
+    
+    <!-- DB with check -->
+    <ellipse cx="530" cy="320" rx="55" ry="14" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <path d="M 475 320 L 475 350 Q 475 364 530 364 Q 585 364 585 350 L 585 320" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <path d="M 515 343 L 525 353 L 545 333" stroke="#5BA876" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <text x="530" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#5BA876">假成功仅 3%</text>
+  </g>
+  
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">幻觉 = 系统设计问题，而非模型问题</text>
+</svg>

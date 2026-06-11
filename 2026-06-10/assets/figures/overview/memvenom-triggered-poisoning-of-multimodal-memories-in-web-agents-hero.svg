@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <style>
+      .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text class="t" x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">MemVenom：多模态记忆投毒</text>
+  <text class="t" x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">触发条件召回 · 视觉优先级诱导 · 模块化恶意子图</text>
+
+  <!-- Memory Cylinder (left) -->
+  <g>
+    <path d="M70,200 L70,360 Q70,382 160,382 Q250,382 250,360 L250,200" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <ellipse cx="160" cy="200" rx="90" ry="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text class="t" x="160" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">图记忆库</text>
+
+    <!-- benign nodes -->
+    <line x1="115" y1="240" x2="135" y2="290" stroke="#9BBEE0" stroke-width="1"/>
+    <line x1="200" y1="255" x2="195" y2="310" stroke="#9BBEE0" stroke-width="1"/>
+    <line x1="135" y1="290" x2="195" y2="310" stroke="#9BBEE0" stroke-width="1"/>
+    <circle cx="115" cy="240" r="10" fill="#BFD7F2" stroke="#4B8BDA"/>
+    <circle cx="200" cy="255" r="10" fill="#BFD7F2" stroke="#4B8BDA"/>
+    <circle cx="135" cy="290" r="10" fill="#BFD7F2" stroke="#4B8BDA"/>
+    <circle cx="195" cy="310" r="10" fill="#BFD7F2" stroke="#4B8BDA"/>
+
+    <!-- malicious subgraph injected -->
+    <g>
+      <line x1="125" y1="345" x2="170" y2="355" stroke="#C0392B" stroke-width="1.5"/>
+      <line x1="170" y1="355" x2="215" y2="345" stroke="#C0392B" stroke-width="1.5"/>
+      <circle cx="125" cy="345" r="13" fill="#F4C7C3" stroke="#C0392B" stroke-width="2"/>
+      <text class="t" x="125" y="349" text-anchor="middle" font-size="9" font-weight="700" fill="#C0392B">召回</text>
+      <circle cx="170" cy="355" r="13" fill="#F4C7C3" stroke="#C0392B" stroke-width="2"/>
+      <text class="t" x="170" y="359" text-anchor="middle" font-size="9" font-weight="700" fill="#C0392B">目标</text>
+      <circle cx="215" cy="345" r="13" fill="#F4C7C3" stroke="#C0392B" stroke-width="2"/>
+      <text class="t" x="215" y="349" text-anchor="middle" font-size="9" font-weight="700" fill="#C0392B">优先</text>
+    </g>
+    <text class="t" x="160" y="410" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="700">恶意子图 Gadv</text>
+  </g>
+
+  <!-- Trigger screenshot (top center) -->
+  <g>
+    <text class="t" x="450" y="112" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">带触发的截图</text>
+    <rect x="380" y="120" width="140" height="95" rx="6" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <rect x="388" y="130" width="60" height="6" fill="#D6DEE8"/>
+    <rect x="388" y="144" width="100" height="4" fill="#E5EAF1"/>
+    <rect x="388" y="154" width="80" height="4" fill="#E5EAF1"/>
+    <rect x="388" y="164" width="90" height="4" fill="#E5EAF1"/>
+    <!-- visual trigger patch -->
+    <rect x="478" y="186" width="32" height="22" fill="#C0392B" opacity="0.9"/>
+    <text class="t" x="494" y="202" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">τ</text>
+  </g>
+
+  <!-- Web Agent (right) -->
+  <g>
+    <rect x="640" y="180" width="200" height="220" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text class="t" x="740" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Web Agent</text>
+    <text class="t" x="740" y="226" text-anchor="middle" font-size="10" fill="#3D4F65">VLM 黑盒</text>
+
+    <!-- VLM eye -->
+    <circle cx="740" cy="275" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="740" cy="275" r="14" fill="#4B8BDA"/>
+    <circle cx="744" cy="271" r="4" fill="#FFFFFF"/>
+
+    <!-- action box -->
+    <rect x="660" y="330" width="160" height="50" rx="6" fill="#F4C7C3" stroke="#C0392B" stroke-width="1.5"/>
+    <text class="t" x="740" y="352" text-anchor="middle" font-size="12" font-weight="700" fill="#C0392B">被劫持的动作</text>
+    <text class="t" x="740" y="370" text-anchor="middle" font-size="10" fill="#C0392B">钓鱼 / 转账 / 泄露</text>
+  </g>
+
+  <!-- Arrow: trigger -> memory (recall) -->
+  <path d="M 380,180 Q 320,190 250,205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arrB)"/>
+  <text class="t" x="318" y="158" text-anchor="middle" font-size="11" fill="#1E3A5F">查询召回</text>
+
+  <!-- Arrow: memory -> agent (poisoned context) -->
+  <path d="M 250,360 Q 450,460 638,360" stroke="#C0392B" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text class="t" x="450" y="478" text-anchor="middle" font-size="12" fill="#C0392B" font-weight="700">注入图文证据 → 覆盖原目标</text>
+
+  <!-- Arrow: trigger screenshot -> agent -->
+  <path d="M 520,180 Q 580,190 638,220" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arrB)"/>
+
+  <!-- Bottom result strip -->
+  <g>
+    <rect x="60" y="510" width="780" height="60" rx="8" fill="#FFF8E7" stroke="#E8B84C" stroke-width="1.5"/>
+
+    <text class="t" x="100" y="535" font-size="13" font-weight="700" fill="#1E3A5F">黑盒攻击</text>
+    <text class="t" x="100" y="555" font-size="11" fill="#3D4F65">无梯度无权重</text>
+
+    <line x1="250" y1="520" x2="250" y2="560" stroke="#E8B84C"/>
+    <text class="t" x="290" y="535" font-size="13" font-weight="700" fill="#C0392B">ASR 99.15%</text>
+    <text class="t" x="290" y="555" font-size="11" fill="#3D4F65">GPT-5 / SeeAct</text>
+
+    <line x1="455" y1="520" x2="455" y2="560" stroke="#E8B84C"/>
+    <text class="t" x="495" y="535" font-size="13" font-weight="700" fill="#1E3A5F">良性保留</text>
+    <text class="t" x="495" y="555" font-size="11" fill="#3D4F65">干净任务不掉点</text>
+
+    <line x1="650" y1="520" x2="650" y2="560" stroke="#E8B84C"/>
+    <text class="t" x="690" y="535" font-size="13" font-weight="700" fill="#1E3A5F">可复用</text>
+    <text class="t" x="690" y="555" font-size="11" fill="#3D4F65">换目标即换攻击</text>
+  </g>
+</svg>

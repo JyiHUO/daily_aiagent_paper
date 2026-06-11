@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA876"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Verifier 是一等公民</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Agent 会用尽一切手段攻击评分函数</text>
+
+  <!-- Agent -->
+  <circle cx="110" cy="260" r="54" fill="#FEF3E2" stroke="#E0A458" stroke-width="2"/>
+  <text x="110" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">Agent</text>
+  <text x="110" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">激进优化</text>
+
+  <!-- Shield / Verifier -->
+  <path d="M 360 140 L 470 175 L 470 285 Q 470 365 360 405 Q 250 365 250 285 L 250 175 Z"
+        fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="360" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">Verifier</text>
+  <line x1="290" y1="215" x2="430" y2="215" stroke="#B8D4F0" stroke-width="1"/>
+
+  <text x="360" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">80 位 Decimal 高精度</text>
+  <text x="360" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">阈值 δ 防浮点抖动</text>
+  <text x="360" y="322" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">公开 + 可迭代加固</text>
+
+  <!-- Submit arrow Agent -> Verifier -->
+  <path d="M 165 232 Q 210 195 258 188" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="205" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">提交解</text>
+
+  <!-- Feedback arrow Verifier -> Agent (loop back) -->
+  <path d="M 258 330 Q 200 360 162 295" fill="none" stroke="#5BA876" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="205" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">暴露边界 → 升级</text>
+
+  <!-- Score -->
+  <circle cx="610" cy="260" r="54" fill="#E8F4EC" stroke="#5BA876" stroke-width="2"/>
+  <text x="610" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">真分数</text>
+  <text x="610" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">非数值噪声</text>
+
+  <path d="M 472 260 L 555 260" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">verifier 不是配角，而是 benchmark 的一等公民</text>
+</svg>
