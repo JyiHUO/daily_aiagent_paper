@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">SWE-bench Lite · 同任务对比</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">谁会自信地交出错误补丁？</text>
+
+  <!-- 共同输入 -->
+  <rect x="40" y="200" width="140" height="80" rx="10" fill="#FFF4E6" stroke="#E8A55C" stroke-width="1.5"/>
+  <text x="110" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">同一任务</text>
+  <text x="110" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">600s · 750 配对单元</text>
+
+  <!-- StateFlow 路径 -->
+  <line x1="180" y1="225" x2="346" y2="155" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="350" y="115" width="320" height="80" rx="10" fill="#FCEAEA" stroke="#D96A6A" stroke-width="1.8"/>
+  <text x="370" y="148" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">StateFlow → 虚假成功补丁</text>
+  <text x="370" y="178" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="26" font-weight="800" fill="#D96A6A">64.6%</text>
+  <text x="500" y="178" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">253 / 750 谎报</text>
+
+  <!-- Autopilot 路径 -->
+  <line x1="180" y1="255" x2="346" y2="335" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <rect x="350" y="295" width="320" height="80" rx="10" fill="#E8F4EC" stroke="#5BA37A" stroke-width="1.8"/>
+  <text x="370" y="328" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Autopilot → 虚假成功补丁</text>
+  <text x="370" y="358" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="26" font-weight="800" fill="#5BA37A">2.86%</text>
+  <text x="500" y="358" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">其余诚实 stall</text>
+
+  <!-- 差距标注 -->
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">配对差 Δ = −33 pp</text>
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">stall 可恢复，错误补丁回不来</text>
+</svg>

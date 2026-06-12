@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">分层切片 vs 端到端</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">同样的回归，谁能看见？</text>
+
+  <!-- Left: End-to-end (opaque) -->
+  <g>
+    <rect x="60" y="100" width="260" height="320" rx="10" fill="#FDF2EC" stroke="#D98C5F" stroke-width="1.5"/>
+    <text x="190" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">端到端评测</text>
+
+    <rect x="100" y="160" width="180" height="180" rx="6" fill="#3D4F65" stroke="#1E3A5F"/>
+    <text x="190" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#EFF6FF">黑盒 Agent</text>
+    <text x="190" y="268" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#A8C5E8">分钟级 · 随机</text>
+
+    <text x="190" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#B8602F">通过率仅 −2pp，回归被掩盖</text>
+  </g>
+
+  <!-- Right: Layered slices -->
+  <g>
+    <rect x="400" y="100" width="260" height="320" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="530" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">分层切片 harness</text>
+
+    <rect x="430" y="150" width="200" height="34" rx="4" fill="#DCEAF7" stroke="#4B8BDA"/>
+    <text x="445" y="172" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">L0 本体解析</text>
+    <text x="615" y="172" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">✓</text>
+
+    <rect x="430" y="194" width="200" height="34" rx="4" fill="#DCEAF7" stroke="#4B8BDA"/>
+    <text x="445" y="216" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">L2 工具路由</text>
+    <text x="615" y="216" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">✓</text>
+
+    <rect x="430" y="238" width="200" height="34" rx="4" fill="#FBE4DA" stroke="#D98C5F" stroke-width="2"/>
+    <text x="445" y="260" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#B8602F">L4 reprice</text>
+    <text x="615" y="260" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#B8602F">−91pp</text>
+
+    <rect x="430" y="282" width="200" height="34" rx="4" fill="#DCEAF7" stroke="#4B8BDA"/>
+    <text x="445" y="304" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">L4 安全/记忆</text>
+    <text x="615" y="304" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">✓</text>
+
+    <text x="530" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">2.4 秒 · 无 LLM · 精准定位失效层</text>
+  </g>
+
+  <!-- middle arrow indicator -->
+  <line x1="328" y1="250" x2="398" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="363" y="242" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">拆解</text>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">确定性输出 → 像单测一样断言 → 进 PR CI</text>
+</svg>

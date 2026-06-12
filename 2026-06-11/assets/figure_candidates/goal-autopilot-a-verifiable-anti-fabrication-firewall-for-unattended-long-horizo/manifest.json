@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/downloaded_pdfs/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo",
+  "candidates": [
+    {
+      "id": "page-5-drawing-caption-27",
+      "page_index": 5,
+      "caption": "Figure 2: Per-tier fabrication rate on the 3,150-cell scaled corpus (autopilot, reflexion, stateflow × F2/M1/M2 × 70 tasks × 5 seeds). The floor cuts fabrication 22–65 × on the same paired inputs; the aggregate paired difference Autopilot vs. StateFlow is ∆= − 24 . 10 pp.",
+      "clip": [
+        99.9010009765625,
+        487.611328125,
+        512.0961608886719,
+        700.865966796875
+      ],
+      "clip_area": 87902.52988935262,
+      "page_area": 484704.0,
+      "text_density": 0.2905760935980514,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.34212916066528,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/01-p6-drawing_cluster_with_caption.png",
+      "filename": "01-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        95.9601821899414,
+        71.82257080078125,
+        516.0578002929688,
+        188.4315948486328
+      ],
+      "clip_area": 48987.17325182108,
+      "page_area": 484704.0,
+      "text_density": 0.06038684467360307,
+      "kind": "drawing_cluster",
+      "score": 10.544301925020234,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/02-p3-drawing_cluster.png",
+      "filename": "02-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-block-27",
+      "page_index": 5,
+      "caption": "Figure 2: Per-tier fabrication rate on the 3,150-cell scaled corpus (autopilot, reflexion, stateflow × F2/M1/M2 × 70 tasks × 5 seeds). The floor cuts fabrication 22–65 × on the same paired inputs; the aggregate paired difference Autopilot vs. StateFlow is ∆= − 24 . 10 pp.",
+      "clip": [
+        77.4,
+        381.07176513671874,
+        534.60341796875,
+        689.8717651367188
+      ],
+      "clip_area": 141184.41546875003,
+      "page_area": 484704.0,
+      "text_density": 0.40920354855046703,
+      "kind": "captioned_figure",
+      "score": 4.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/03-p6-captioned_figure.png",
+      "filename": "03-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-11-drawing-cluster-0",
+      "page_index": 11,
+      "caption": "第 12 页矢量图主图候选",
+      "clip": [
+        101.9010009765625,
+        67.862060546875,
+        510.11029052734375,
+        228.5989990234375
+      ],
+      "clip_area": 65614.31146008521,
+      "page_area": 484704.0,
+      "text_density": 0.27717593725073497,
+      "kind": "drawing_cluster",
+      "score": -3.10150832993204,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/04-p12-drawing_cluster.png",
+      "filename": "04-p12-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4992197871110457,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5217646887292855,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/goal-autopilot-a-verifiable-anti-fabrication-firewall-for-unattended-long-horizo/contact-sheet.svg"
+}

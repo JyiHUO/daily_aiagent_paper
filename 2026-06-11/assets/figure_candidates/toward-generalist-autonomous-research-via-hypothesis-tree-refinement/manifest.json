@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/downloaded_pdfs/toward-generalist-autonomous-research-via-hypothesis-tree-refinement.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement",
+  "candidates": [
+    {
+      "id": "page-3-embedded-19-0",
+      "page_index": 3,
+      "caption": "Figure 2 Overall framework of Arbor . A persistent coordinator maintains the research state as a hypothesis tree, iteratively exploring ideas, dispatching executors to implement them, and using evaluation feedback to refine the tree and update the current best artifact.",
+      "clip": [
+        219.4210662841797,
+        117.02175903320312,
+        403.03399658203125,
+        300.63470458984375
+      ],
+      "clip_area": 33713.71097427467,
+      "page_area": 484704.0,
+      "text_density": 0.20567324506207163,
+      "kind": "embedded_image_with_caption",
+      "xref": 1176,
+      "score": 40.834202084878754,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/01-p4-embedded_image_with_caption.png",
+      "filename": "01-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-caption-47",
+      "page_index": 11,
+      "caption": "Figure 3 Backbone generality and cross-task transfer. (a) Arbor is rerun with different backbone models while keeping the controller, evaluator budget, and task adapters fixed. (b) A BrowseComp-evolved search harness is frozen and evaluated on held-out search-agent tasks without further task-specific optimization.",
+      "clip": [
+        52.865997314453125,
+        47.7791748046875,
+        559.137939453125,
+        201.0460205078125
+      ],
+      "clip_area": 77594.70363958925,
+      "page_area": 484704.0,
+      "text_density": 0.15404152897549406,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.41967163524357,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/02-p12-drawing_cluster_with_caption.png",
+      "filename": "02-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-block-67",
+      "page_index": 0,
+      "caption": "Figure 1 Arbor at a glance. (a) Hypothesis tree and (b) development score from one Math-Reasoning Data Synthesis run. (c) Normalized held-out gains across all tasks.",
+      "clip": [
+        40.266004943847655,
+        376.47880859375,
+        557.08388671875,
+        685.27880859375
+      ],
+      "clip_area": 159593.36189208986,
+      "page_area": 484704.0,
+      "text_density": 0.2999044826564517,
+      "kind": "captioned_figure",
+      "score": 20.805731040612898,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/03-p1-captioned_figure.png",
+      "filename": "03-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-13-drawing-caption-29",
+      "page_index": 13,
+      "caption": "Figure 5 Exploration efficiency on the six AO tasks (one panel per task). Curves show the best-so-far development gain over the run, normalized to Arbor ’s final gain, so Arbor (solid) ends at 100% and the Claude Code baseline (dashed) at its own relative ceiling. Stars mark each method’s held-out test maximum, annotated with the test score from Table 2 .",
+      "clip": [
+        52.865997314453125,
+        47.77940368652344,
+        559.143310546875,
+        284.68597412109375
+      ],
+      "clip_area": 119940.42196672177,
+      "page_area": 484704.0,
+      "text_density": 0.1330313096058011,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.818121423651935,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/04-p14-drawing_cluster_with_caption.png",
+      "filename": "04-p14-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-67",
+      "page_index": 0,
+      "caption": "Figure 1 Arbor at a glance. (a) Hypothesis tree and (b) development score from one Math-Reasoning Data Synthesis run. (c) Normalized held-out gains across all tasks.",
+      "clip": [
+        52.78931427001953,
+        49.19146728515625,
+        559.21728515625,
+        700.572021484375
+      ],
+      "clip_area": 329877.3323378586,
+      "page_area": 484704.0,
+      "text_density": 0.5080260402451163,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/05-p1-drawing_cluster_with_caption.png",
+      "filename": "05-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-block-47",
+      "page_index": 11,
+      "caption": "Figure 3 Backbone generality and cross-task transfer. (a) Arbor is rerun with different backbone models while keeping the controller, evaluator budget, and task adapters fixed. (b) A BrowseComp-evolved search harness is frozen and evaluated on held-out search-agent tasks without further task-specific optimization.",
+      "clip": [
+        40.265997314453124,
+        18.0,
+        551.971826171875,
+        185.75186157226562
+      ],
+      "clip_area": 85839.60536821169,
+      "page_area": 484704.0,
+      "text_density": 0.10096441653931268,
+      "kind": "captioned_figure",
+      "score": 15.695908400621368,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/06-p12-captioned_figure.png",
+      "filename": "06-p12-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/toward-generalist-autonomous-research-via-hypothesis-tree-refinement/contact-sheet.svg"
+}

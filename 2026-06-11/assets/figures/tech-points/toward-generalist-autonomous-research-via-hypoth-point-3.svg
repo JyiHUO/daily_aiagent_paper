@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA776"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Held-out 合并门控</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">dev 高 ≠ 真改进，须过 test 闸门</text>
+
+  <!-- 候选分支 -->
+  <rect x="40" y="190" width="160" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="120" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">候选分支 (dev 最优)</text>
+  <text x="120" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#7A8FA6">可能过拟合 dev</text>
+
+  <!-- 闸门 -->
+  <rect x="270" y="180" width="180" height="120" rx="10" fill="#FFF7E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="360" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Test 闸门 (held-out)</text>
+  <line x1="305" y1="235" x2="305" y2="285" stroke="#E0A458" stroke-width="3"/>
+  <line x1="415" y1="235" x2="415" y2="285" stroke="#E0A458" stroke-width="3"/>
+  <line x1="305" y1="240" x2="415" y2="258" stroke="#E0A458" stroke-width="2.5"/>
+  <text x="360" y="290" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#7A8FA6">仅当 Etest 严格优于 Mbest</text>
+
+  <!-- 通过 -->
+  <rect x="520" y="115" width="160" height="90" rx="10" fill="#E8F5E9" stroke="#5BA776" stroke-width="1.8"/>
+  <text x="600" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">合并 ✓ 真改进</text>
+  <text x="600" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">更新 Mbest</text>
+
+  <!-- 拒绝 -->
+  <rect x="520" y="280" width="160" height="90" rx="10" fill="#FBECEA" stroke="#C97064" stroke-width="1.8"/>
+  <text x="600" y="313" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">拒绝 ✗ 投机评估器</text>
+  <text x="600" y="343" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">作为负向证据回流</text>
+
+  <!-- arrows -->
+  <line x1="200" y1="240" x2="266" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 450 215 Q 490 180 518 160" fill="none" stroke="#5BA776" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <path d="M 450 265 Q 490 300 518 320" fill="none" stroke="#C97064" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- feedback loop -->
+  <path d="M 600 370 Q 600 420 360 420 Q 120 420 120 295" fill="none" stroke="#C97064" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrRed)"/>
+  <text x="360" y="438" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#7A8FA6">dev 自由探索 · test 仅作准入 · 分离探索性与可迁移提升</text>
+</svg>

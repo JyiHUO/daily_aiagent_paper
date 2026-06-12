@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrUp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D89A4B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">全局思考 vs 局部实现</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Coordinator 与 Executor 解耦</text>
+
+  <!-- Coordinator: tree (top) -->
+  <g>
+    <rect x="180" y="90" width="360" height="150" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="360" y="115" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Coordinator · 维护假设树</text>
+
+    <!-- mini tree -->
+    <circle cx="360" cy="155" r="7" fill="#1E3A5F"/>
+    <line x1="360" y1="162" x2="290" y2="200" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="360" y1="162" x2="360" y2="200" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="360" y1="162" x2="430" y2="200" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="290" cy="207" r="6" fill="#4B8BDA"/>
+    <circle cx="360" cy="207" r="6" fill="#4B8BDA"/>
+    <circle cx="430" cy="207" r="6" fill="#4B8BDA"/>
+    <text x="360" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">Observe → Ideate → Select → Dispatch → Backprop</text>
+  </g>
+
+  <!-- Down arrows: dispatch -->
+  <line x1="290" y1="240" x2="160" y2="298" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="360" y1="240" x2="360" y2="298" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="430" y1="240" x2="560" y2="298" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="200" y="278" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA">下发假设</text>
+
+  <!-- Up arrow: feedback (clear loop back to coordinator) -->
+  <path d="M 600 300 Q 680 270 680 200 Q 680 150 590 150" fill="none" stroke="#D89A4B" stroke-width="2" marker-end="url(#arrUp)"/>
+  <text x="640" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#D89A4B">回传洞见</text>
+
+  <!-- Executors (bottom) -->
+  <g>
+    <rect x="80" y="300" width="160" height="100" rx="8" fill="#FDF4E7" stroke="#D89A4B" stroke-width="1.5"/>
+    <text x="160" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Executor</text>
+    <text x="160" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">独立工作区 · 实现并评分</text>
+    <text x="160" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">返回 (score, insight)</text>
+  </g>
+
+  <g>
+    <rect x="280" y="300" width="160" height="100" rx="8" fill="#FDF4E7" stroke="#D89A4B" stroke-width="1.5"/>
+    <text x="360" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Executor</text>
+    <text x="360" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">独立工作区 · 实现并评分</text>
+    <text x="360" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">返回 (score, insight)</text>
+  </g>
+
+  <g>
+    <rect x="480" y="300" width="160" height="100" rx="8" fill="#FDF4E7" stroke="#D89A4B" stroke-width="1.5"/>
+    <text x="560" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Executor</text>
+    <text x="560" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">独立工作区 · 实现并评分</text>
+    <text x="560" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">返回 (score, insight)</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="360" y="438" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Executor 不能改假设，只能修实现 → 分数始终绑定节点</text>
+  <text x="360" y="458" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">调试噪声留在 Executor，不污染全局研究状态</text>
+</svg>

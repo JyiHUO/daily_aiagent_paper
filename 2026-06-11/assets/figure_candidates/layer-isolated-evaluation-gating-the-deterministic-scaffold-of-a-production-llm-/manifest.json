@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/downloaded_pdfs/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-",
+  "candidates": [
+    {
+      "id": "page-11-block-3",
+      "page_index": 11,
+      "caption": "Boming Xia et al. Evaluation-driven development and operations of LLM agents: A process model and reference architecture. arXiv preprint arXiv:2411.13768 , 2024.",
+      "clip": [
+        41.4,
+        18.0,
+        570.8018432617188,
+        201.5247344970703
+      ],
+      "clip_area": 97158.33272686657,
+      "page_area": 484704.0,
+      "text_density": 0.48764851075041105,
+      "kind": "captioned_figure",
+      "score": 32.07953703029852,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/01-p12-captioned_figure.png",
+      "filename": "01-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-11-block-2",
+      "page_index": 11,
+      "caption": "Haoyu Sun et al. Agent planning benchmark (APB): A diagnostic framework for planning capabilities in LLM agents. arXiv preprint arXiv:2606.04874 , 2026.",
+      "clip": [
+        41.4,
+        18.0,
+        570.8192993164063,
+        165.45973205566406
+      ],
+      "clip_area": 78068.02802229469,
+      "page_area": 484704.0,
+      "text_density": 0.45891646979213707,
+      "kind": "captioned_figure",
+      "score": 2.8674225335810526,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/02-p12-captioned_figure.png",
+      "filename": "02-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.99821472167969,
+        556.0074462890625,
+        243.28497314453125
+      ],
+      "clip_area": 92644.75891018845,
+      "page_area": 484704.0,
+      "text_density": 0.21850730256337408,
+      "kind": "drawing_cluster",
+      "score": 0.7189480563107615,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/03-p8-drawing_cluster.png",
+      "filename": "03-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        135.41949462890625,
+        78.50434112548828,
+        517.3930358886719,
+        195.229736328125
+      ],
+      "clip_area": 44586.012560496805,
+      "page_area": 484704.0,
+      "text_density": 0.20819321535001292,
+      "kind": "embedded_image",
+      "xref": 358,
+      "score": -2.1961927814397004,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/04-p8-embedded_image.png",
+      "filename": "04-p8-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.49240606865889713,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.62800533168266,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/assets/figure_candidates/layer-isolated-evaluation-gating-the-deterministic-scaffold-of-a-production-llm-/contact-sheet.svg"
+}

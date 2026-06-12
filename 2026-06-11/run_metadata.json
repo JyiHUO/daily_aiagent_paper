@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-11",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 366,
+  "selected_count": 3,
+  "focus_titles": [
+    "Goal-Autopilot: A Verifiable Anti-Fabrication Firewall for Unattended Long-Horizon Agents",
+    "Toward Generalist Autonomous Research via Hypothesis-Tree Refinement",
+    "Layer-Isolated Evaluation: Gating the Deterministic Scaffold of a Production LLM Agent with a No-LLM, Regression-Locked Test Harness"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-11/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

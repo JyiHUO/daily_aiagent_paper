@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="19" font-weight="700" fill="#1E3A5F">未测 ≠ 满分</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Coverage-Honest Baseline</text>
+
+  <!-- LEFT: 传统做法 -->
+  <g>
+    <rect x="60" y="100" width="260" height="320" rx="10" fill="#FDF4EC" stroke="#E0B48A" stroke-width="1.5"/>
+    <text x="190" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">传统聚合</text>
+
+    <circle cx="190" cy="220" r="58" fill="#D4EDDA" stroke="#7AB87A" stroke-width="2"/>
+    <path d="M163,222 L184,243 L220,200" fill="none" stroke="#3D8B3D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="190" y="312" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">100%</text>
+
+    <text x="190" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#B8651F">没测 = 默认满分，缺口被掩盖</text>
+  </g>
+
+  <!-- 中间箭头 -->
+  <line x1="335" y1="240" x2="395" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ah)"/>
+
+  <!-- RIGHT: 本文做法 -->
+  <g>
+    <rect x="410" y="100" width="250" height="320" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="535" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">分层切片</text>
+
+    <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12">
+      <rect x="430" y="148" width="210" height="32" rx="4" fill="#D4EDDA"/>
+      <text x="445" y="169" fill="#1E3A5F">L1-parse</text>
+      <text x="625" y="169" text-anchor="end" fill="#3D8B3D" font-weight="700">98%</text>
+
+      <rect x="430" y="186" width="210" height="32" rx="4" fill="#D4EDDA"/>
+      <text x="445" y="207" fill="#1E3A5F">L3-tools</text>
+      <text x="625" y="207" text-anchor="end" fill="#3D8B3D" font-weight="700">95%</text>
+
+      <rect x="430" y="224" width="210" height="32" rx="4" fill="#FFE5E5" stroke="#D9534F" stroke-width="1.5"/>
+      <text x="445" y="245" fill="#1E3A5F">L2-routing</text>
+      <text x="625" y="245" text-anchor="end" fill="#D9534F" font-weight="700">null</text>
+
+      <rect x="430" y="262" width="210" height="32" rx="4" fill="#FFE5E5" stroke="#D9534F" stroke-width="1.5"/>
+      <text x="445" y="283" fill="#1E3A5F">L4-memory</text>
+      <text x="625" y="283" text-anchor="end" fill="#D9534F" font-weight="700">null</text>
+
+      <rect x="430" y="300" width="210" height="32" rx="4" fill="#FFE5E5" stroke="#D9534F" stroke-width="1.5"/>
+      <text x="445" y="321" fill="#1E3A5F">L4-reflex</text>
+      <text x="625" y="321" text-anchor="end" fill="#D9534F" font-weight="700">null</text>
+    </g>
+
+    <text x="535" y="370" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">未覆盖 = uncovered，缺口可见于 PR</text>
+  </g>
+
+  <text x="360" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">让覆盖度成为一等公民信号</text>
+</svg>

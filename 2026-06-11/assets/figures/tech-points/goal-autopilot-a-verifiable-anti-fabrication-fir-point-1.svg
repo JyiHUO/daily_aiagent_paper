@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75A5A"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E0913C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Gated FSM + Hard Floor</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">每道闸门都必须真正通过</text>
+
+  <!-- Gate 1 -->
+  <g>
+    <rect x="50" y="190" width="120" height="110" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="110" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Gate 1 · 同步原语</text>
+    <text x="110" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" fill="#2E7D52">✓</text>
+  </g>
+
+  <!-- Gate 2 -->
+  <g>
+    <rect x="200" y="190" width="120" height="110" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="260" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Gate 2 · 竞争测试</text>
+    <text x="260" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" fill="#2E7D52">✓</text>
+  </g>
+
+  <!-- Gate 3 (failed) -->
+  <g>
+    <rect x="350" y="190" width="120" height="110" rx="8" fill="#FBEAEA" stroke="#C75A5A" stroke-width="2"/>
+    <text x="410" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Gate 3 · 边界用例</text>
+    <text x="410" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" fill="#C75A5A">✗</text>
+  </g>
+
+  <!-- arrows between gates -->
+  <line x1="170" y1="245" x2="198" y2="245" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="320" y1="245" x2="348" y2="245" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- DONE (blocked) -->
+  <g>
+    <rect x="540" y="110" width="130" height="80" rx="8" fill="#F4F4F4" stroke="#B5B5B5" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="605" y="142" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#9A9A9A">DONE</text>
+    <text x="605" y="168" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#9A9A9A">不可达</text>
+  </g>
+
+  <!-- STALL -->
+  <g>
+    <rect x="540" y="300" width="130" height="80" rx="8" fill="#FFF4E5" stroke="#E0913C" stroke-width="2"/>
+    <text x="605" y="332" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">STALL</text>
+    <text x="605" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">诚实停止</text>
+  </g>
+
+  <!-- Path blocked to DONE -->
+  <line x1="470" y1="220" x2="538" y2="170" stroke="#C75A5A" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrRed)"/>
+  <text x="498" y="200" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#C75A5A">Floor 拦截</text>
+
+  <!-- Path to STALL -->
+  <line x1="470" y1="275" x2="538" y2="325" stroke="#E0913C" stroke-width="2" marker-end="url(#arrOrange)"/>
+
+  <!-- Bottom note -->
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">No-False-Success：任一 gate 未通过 → DONE 不可达</text>
+</svg>

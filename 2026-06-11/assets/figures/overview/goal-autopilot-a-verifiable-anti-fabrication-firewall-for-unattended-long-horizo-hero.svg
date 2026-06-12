@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9564B"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FBFAF7"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Goal-Autopilot：防虚报防火墙</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">让无人值守的长链路 Agent，宁可诚实停下，也不谎报成功</text>
+
+  <!-- Agent claim -->
+  <g>
+    <rect x="50" y="150" width="180" height="90" rx="10" fill="#FDECEA" stroke="#C9564B" stroke-width="1.5"/>
+    <text x="140" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Agent 自称完成</text>
+    <text x="140" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#C9564B">"我做完了"</text>
+    <text x="140" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">无人值守 · 静默虚报</text>
+  </g>
+
+  <!-- Firewall (center) - shield shape -->
+  <g>
+    <path d="M 450 110 L 560 145 L 560 270 Q 560 340 450 380 Q 340 340 340 270 L 340 145 Z"
+          fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="450" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">门控防火墙 (FSM)</text>
+
+    <!-- FSM nodes inside shield -->
+    <circle cx="385" cy="200" r="18" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="385" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">S1</text>
+    <circle cx="450" cy="230" r="18" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">S2</text>
+    <circle cx="515" cy="200" r="18" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="515" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">S3</text>
+
+    <path d="M 401 211 Q 420 225 432 228" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+    <path d="M 468 228 Q 490 225 501 213" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+    <!-- gate symbols -->
+    <text x="418" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#5A8F4E">✓ gate</text>
+    <text x="482" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#5A8F4E">✓ gate</text>
+
+    <text x="450" y="305" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">硬性 Floor：每个 gate</text>
+    <text x="450" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">真正执行且返回 ⊤ 才能 DONE</text>
+    <text x="450" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-style="italic" fill="#4B8BDA">No-False-Success 定理</text>
+  </g>
+
+  <!-- DONE output -->
+  <g>
+    <rect x="670" y="130" width="180" height="80" rx="10" fill="#E8F1E5" stroke="#5A8F4E" stroke-width="1.5"/>
+    <text x="760" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">DONE</text>
+    <text x="760" y="183" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">真完成 · 可验证</text>
+    <text x="760" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#5A8F4E">下游可信</text>
+  </g>
+
+  <!-- STALL output -->
+  <g>
+    <rect x="670" y="240" width="180" height="80" rx="10" fill="#FFF4E0" stroke="#C8923B" stroke-width="1.5"/>
+    <text x="760" y="270" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">STALL</text>
+    <text x="760" y="293" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">诚实停下 · 可恢复</text>
+    <text x="760" y="310" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C8923B">最坏即此</text>
+  </g>
+
+  <!-- Blocked output -->
+  <g>
+    <rect x="670" y="350" width="180" height="60" rx="10" fill="#FDECEA" stroke="#C9564B" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="760" y="377" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#C9564B">虚报成功 — 结构上不可能</text>
+    <text x="760" y="397" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">无路径可达此状态</text>
+  </g>
+
+  <!-- Arrow from agent to firewall -->
+  <path d="M 230 195 L 336 215" stroke="#C9564B" stroke-width="2" fill="none" marker-end="url(#arrRed)"/>
+
+  <!-- From firewall to outputs -->
+  <path d="M 558 195 Q 615 175 668 168" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 558 270 Q 615 275 668 278" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Blocked X mark -->
+  <g>
+    <line x1="540" y1="345" x2="668" y2="378" stroke="#C9564B" stroke-width="2" stroke-dasharray="6,4"/>
+    <circle cx="600" cy="362" r="15" fill="#FDECEA" stroke="#C9564B" stroke-width="2"/>
+    <text x="600" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#C9564B">✕</text>
+  </g>
+
+  <!-- Bottom: results -->
+  <g>
+    <rect x="80" y="445" width="740" height="125" rx="10" fill="#F2F4F7" stroke="#C8D2DE" stroke-width="1"/>
+    <text x="450" y="472" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">SWE-bench Lite 上的虚报率</text>
+
+    <!-- StateFlow -->
+    <text x="175" y="503" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">StateFlow</text>
+    <rect x="185" y="492" width="337" height="16" fill="#C9564B"/>
+    <text x="532" y="505" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#C9564B">33.7%</text>
+
+    <!-- Reflexion -->
+    <text x="175" y="528" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Reflexion</text>
+    <rect x="185" y="517" width="81" height="16" fill="#C8923B"/>
+    <text x="276" y="530" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#C8923B">8.1%</text>
+
+    <!-- Autopilot -->
+    <text x="175" y="553" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">Goal-Autopilot</text>
+    <rect x="185" y="542" width="7" height="16" fill="#5A8F4E"/>
+    <text x="202" y="555" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#5A8F4E">0.67%</text>
+  </g>
+</svg>

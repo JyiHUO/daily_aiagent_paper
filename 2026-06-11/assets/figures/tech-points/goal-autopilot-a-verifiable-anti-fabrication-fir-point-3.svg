@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5C9A6A"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0504D"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">执行前双层审计</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Goal Compiler + A3 Audit</text>
+
+  <!-- Source: Goal -->
+  <rect x="40" y="200" width="130" height="80" rx="10" fill="#FEF3E7" stroke="#E8A87C" stroke-width="1.5"/>
+  <text x="105" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">目标 FSM</text>
+  <text x="105" y="254" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">gates + DOD</text>
+
+  <!-- Layer 1: Static -->
+  <rect x="240" y="120" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="330" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">静态审计 (load-bearing)</text>
+  <text x="330" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">61 行 bash · jq + grep</text>
+  <text x="330" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">查文件名 / 测试 / rejection 词</text>
+
+  <!-- Layer 2: LLM judge -->
+  <rect x="240" y="260" width="180" height="100" rx="10" fill="#F4EFFB" stroke="#8E7AB5" stroke-width="1.5"/>
+  <text x="330" y="290" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">语义审计</text>
+  <text x="330" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">LLM judge</text>
+  <text x="330" y="340" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">补充语义覆盖网</text>
+
+  <!-- Pass -->
+  <rect x="490" y="120" width="190" height="100" rx="10" fill="#E8F5E9" stroke="#5C9A6A" stroke-width="1.5"/>
+  <text x="585" y="155" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">通过 → tick</text>
+  <text x="585" y="182" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">进入执行循环</text>
+  <text x="585" y="202" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">A1 / A2 / A3 ✓</text>
+
+  <!-- Reject -->
+  <rect x="490" y="260" width="190" height="100" rx="10" fill="#FBECEB" stroke="#C0504D" stroke-width="1.5"/>
+  <text x="585" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">打回 STALL</text>
+  <text x="585" y="322" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">如 hellopy.py ✗</text>
+  <text x="585" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">或缺 rejection 关键词</text>
+
+  <!-- Arrows from goal to two layers -->
+  <path d="M 170 230 L 235 170" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 170 250 L 235 305" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Layers to outcomes -->
+  <path d="M 420 170 L 485 170" stroke="#5C9A6A" stroke-width="2" fill="none" marker-end="url(#arrGreen)"/>
+  <path d="M 420 310 L 485 310" stroke="#C0504D" stroke-width="2" fill="none" marker-end="url(#arrRed)"/>
+
+  <!-- Bottom note -->
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">模型无关的文本核查 · 不与 LLM 共享失败模式</text>
+</svg>

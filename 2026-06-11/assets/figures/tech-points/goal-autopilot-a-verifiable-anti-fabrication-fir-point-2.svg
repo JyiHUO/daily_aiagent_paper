@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">无状态 Tick + 状态外化</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">每个 tick 都是新会话，记忆全在磁盘</text>
+
+  <!-- 中央：状态文件（外化的记忆） -->
+  <rect x="296" y="200" width="128" height="96" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="360" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">FSM 状态</text>
+  <text x="360" y="254" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">state.json + git</text>
+  <text x="360" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#9CA3AF">外化的唯一记忆</text>
+
+  <!-- 三个一次性 worker -->
+  <g>
+    <rect x="60" y="140" width="130" height="70" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="125" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Worker t₁</text>
+    <text x="125" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">新进程，tick 后销毁</text>
+  </g>
+
+  <g>
+    <rect x="295" y="370" width="130" height="70" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="360" y="400" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Worker t₂</text>
+    <text x="360" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">新进程，tick 后销毁</text>
+  </g>
+
+  <g>
+    <rect x="530" y="140" width="130" height="70" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="595" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">Worker t₃</text>
+    <text x="595" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">新进程，tick 后销毁</text>
+  </g>
+
+  <!-- 双向箭头：worker 读写状态（直线，干净） -->
+  <!-- t1: load 下 / commit 上 -->
+  <line x1="190" y1="180" x2="294" y2="220" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="294" y1="250" x2="190" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="210" y="200" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#4B8BDA">load / commit</text>
+
+  <!-- t2 -->
+  <line x1="350" y1="370" x2="350" y2="298" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="370" y1="298" x2="370" y2="370" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- t3 -->
+  <line x1="530" y1="180" x2="426" y2="220" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="426" y1="250" x2="530" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="445" y="200" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#4B8BDA">load / commit</text>
+
+  <text x="360" y="465" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-style="italic" fill="#1E3A5F">成本 O(状态)，与运行时长无关</text>
+</svg>
