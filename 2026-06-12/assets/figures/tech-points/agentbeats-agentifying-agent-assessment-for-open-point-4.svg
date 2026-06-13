@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">固定题库 → 自适应考官</text>
+
+  <!-- LEFT: fixed dataset -->
+  <g>
+    <rect x="60" y="110" width="220" height="280" rx="10" fill="#F1F3F6" stroke="#9AA7B8" stroke-width="1.5"/>
+    <text x="170" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">传统基准</text>
+
+    <g fill="#FFFFFF" stroke="#9AA7B8">
+      <rect x="100" y="165" width="140" height="32" rx="4"/>
+      <rect x="100" y="205" width="140" height="32" rx="4"/>
+      <rect x="100" y="245" width="140" height="32" rx="4"/>
+      <rect x="100" y="285" width="140" height="32" rx="4"/>
+      <rect x="100" y="325" width="140" height="32" rx="4"/>
+    </g>
+    <text x="170" y="186" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">题 1</text>
+    <text x="170" y="226" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">题 2</text>
+    <text x="170" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">题 3</text>
+    <text x="170" y="306" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">题 4</text>
+    <text x="170" y="346" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">题 5</text>
+
+    <text x="170" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A8699" font-style="italic">静态死板题库</text>
+  </g>
+
+  <!-- arrow between -->
+  <line x1="295" y1="250" x2="362" y2="250" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- RIGHT: adaptive judge -->
+  <g>
+    <rect x="370" y="110" width="290" height="280" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="515" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Judge Agent（智能考官）</text>
+
+    <!-- judge icon -->
+    <circle cx="425" cy="235" r="26" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <circle cx="418" cy="231" r="2.2" fill="#1E3A5F"/>
+    <circle cx="432" cy="231" r="2.2" fill="#1E3A5F"/>
+    <path d="M416 243 Q425 250 434 243" stroke="#1E3A5F" stroke-width="1.5" fill="none"/>
+
+    <!-- branch: skip -->
+    <line x1="453" y1="220" x2="525" y2="175" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="530" y="157" width="120" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="590" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">连错 → 跳过</text>
+
+    <!-- branch: harder -->
+    <line x1="455" y1="235" x2="525" y2="235" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="530" y="217" width="120" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="590" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">全对 → 加难</text>
+
+    <!-- branch: probe -->
+    <line x1="453" y1="250" x2="525" y2="295" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="530" y="277" width="120" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="590" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">探测弱点</text>
+
+    <!-- feedback loop -->
+    <path d="M530 335 Q470 355 430 263" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arr)"/>
+    <text x="515" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" font-style="italic">根据表现动态调整下一题</text>
+  </g>
+
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">基准从静态数据集 → 拥有判断力的交互式考官</text>
+</svg>

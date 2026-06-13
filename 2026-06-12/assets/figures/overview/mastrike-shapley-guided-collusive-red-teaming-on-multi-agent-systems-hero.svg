@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">MAStrike：Shapley 引导的合谋红队</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">分层多智能体系统 · 谁是关键节点 · 如何协同攻破</text>
+
+  <!-- LEFT: Hierarchical MAS with Shapley scoring -->
+  <g>
+    <text x="180" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">① Shapley 归因</text>
+
+    <!-- Orchestrator -->
+    <rect x="130" y="120" width="100" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="180" y="142" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">编排器</text>
+
+    <!-- Coordinators -->
+    <line x1="180" y1="154" x2="120" y2="178" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="180" y1="154" x2="240" y2="178" stroke="#4B8BDA" stroke-width="1"/>
+    <rect x="75" y="178" width="90" height="30" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="120" y="198" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">协调 A</text>
+    <rect x="195" y="178" width="90" height="30" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="240" y="198" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">协调 B</text>
+
+    <!-- Specialists -->
+    <line x1="120" y1="208" x2="80" y2="240" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="120" y1="208" x2="160" y2="240" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="240" y1="208" x2="200" y2="240" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="240" y1="208" x2="280" y2="240" stroke="#4B8BDA" stroke-width="1"/>
+
+    <circle cx="80" cy="258" r="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="283" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">φ=.08</text>
+
+    <circle cx="160" cy="258" r="16" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+    <text x="160" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" font-weight="700" fill="#D9534F">SRE</text>
+    <text x="160" y="289" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D9534F">φ=.31</text>
+
+    <circle cx="200" cy="258" r="15" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+    <text x="200" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="9" font-weight="700" fill="#D9534F">DevOps</text>
+    <text x="200" y="289" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D9534F">φ=.27</text>
+
+    <circle cx="280" cy="258" r="9" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="280" y="283" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">φ=.05</text>
+
+    <!-- interaction edge -->
+    <path d="M 170 248 Q 180 230 190 248" fill="none" stroke="#D9534F" stroke-width="1.8" stroke-dasharray="3,2"/>
+    <text x="180" y="226" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" font-weight="700" fill="#D9534F">I≈1</text>
+
+    <text x="180" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">圆=边际贡献 φ ；虚线=协同项 I</text>
+  </g>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="320" y1="225" x2="388" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="354" y="217" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">选联盟</text>
+
+  <!-- CENTER -->
+  <g>
+    <text x="510" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">② 协同注入</text>
+
+    <rect x="395" y="125" width="230" height="195" rx="10" fill="#FFF5F4" stroke="#D9534F" stroke-width="1.8"/>
+
+    <text x="510" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="700" fill="#D9534F">合谋联盟 C*</text>
+
+    <circle cx="445" cy="190" r="20" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+    <text x="445" y="194" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#D9534F">SRE</text>
+
+    <circle cx="575" cy="190" r="20" fill="#FCE8E6" stroke="#D9534F" stroke-width="2"/>
+    <text x="575" y="194" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" font-weight="700" fill="#D9534F">DevOps</text>
+
+    <line x1="465" y1="190" x2="555" y2="190" stroke="#D9534F" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+    <rect x="410" y="230" width="62" height="22" rx="11" fill="#FFFFFF" stroke="#D9534F" stroke-width="1"/>
+    <text x="441" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D9534F">提示注入</text>
+
+    <rect x="479" y="230" width="62" height="22" rx="11" fill="#FFFFFF" stroke="#D9534F" stroke-width="1"/>
+    <text x="510" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D9534F">工具操纵</text>
+
+    <rect x="548" y="230" width="62" height="22" rx="11" fill="#FFFFFF" stroke="#D9534F" stroke-width="1"/>
+    <text x="579" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D9534F">环境注入</text>
+
+    <text x="510" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">角色一致的协同剧本</text>
+    <text x="510" y="303" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">绕过交叉检查</text>
+  </g>
+
+  <!-- arrow 2 -> 3 -->
+  <line x1="632" y1="220" x2="742" y2="220" stroke="#D9534F" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="687" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">攻击</text>
+
+  <!-- RIGHT -->
+  <g>
+    <text x="800" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">③ MABench 评测</text>
+
+    <path d="M 800 130 L 855 150 L 855 215 Q 855 260 800 290 Q 745 260 745 215 L 745 150 Z" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <path d="M 795 145 L 805 195 L 790 230 L 808 285" fill="none" stroke="#D9534F" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <text x="800" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">前沿 MAS</text>
+    <text x="800" y="213" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="9" fill="#3D4F65">Claude/GPT/Gemini</text>
+
+    <text x="800" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">金融 · 工程 · CRM</text>
+  </g>
+
+  <!-- Closed-loop feedback -->
+  <path d="M 745 285 Q 600 395 420 360 Q 395 350 395 322" fill="none" stroke="#4B8BDA" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="590" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">④ 因果诊断闭环</text>
+  <text x="590" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">定位拦截者 → 改写剧本</text>
+
+  <!-- Bottom result bar -->
+  <rect x="80" y="455" width="740" height="110" rx="10" fill="#F4F8FD" stroke="#4B8BDA" stroke-width="1"/>
+
+  <text x="100" y="483" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">攻击成功率（k=2）</text>
+
+  <text x="100" y="513" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">基线方法</text>
+  <rect x="200" y="503" width="20" height="12" fill="#B8C5D6"/>
+  <text x="228" y="513" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">≈ 0%</text>
+
+  <text x="100" y="543" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#D9534F">MAStrike</text>
+  <rect x="200" y="533" width="370" height="12" fill="#D9534F"/>
+  <text x="580" y="543" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="700" fill="#D9534F">51% – 62%</text>
+
+  <text x="690" y="513" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">三大前沿模型 · 三高风险域</text>
+  <text x="690" y="533" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">ASR 单调随 k 上升</text>
+</svg>

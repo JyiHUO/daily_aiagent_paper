@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A6A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">潜空间打分 vs 解码后打分</text>
+
+  <!-- TOP ROW: old way -->
+  <text x="60" y="100" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#8B5A4A" font-weight="600">旧方法 (VLA-W 等)</text>
+
+  <!-- latent -->
+  <circle cx="120" cy="150" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="120" y="155" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">latent</text>
+
+  <!-- decode to image -->
+  <rect x="240" y="120" width="110" height="60" rx="6" fill="#FBEFEA" stroke="#C97A6A" stroke-width="1.5"/>
+  <text x="295" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">解码图像 decode</text>
+
+  <!-- VLM judge -->
+  <rect x="420" y="120" width="110" height="60" rx="6" fill="#FBEFEA" stroke="#C97A6A" stroke-width="1.5"/>
+  <text x="475" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">VLM 打分 judge</text>
+
+  <!-- score -->
+  <rect x="600" y="120" width="80" height="60" rx="6" fill="#F4F4F4" stroke="#888" stroke-width="1.5"/>
+  <text x="640" y="155" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">reward</text>
+
+  <line x1="152" y1="150" x2="238" y2="150" stroke="#C97A6A" stroke-width="1.8" marker-end="url(#arrRed)"/>
+  <line x1="350" y1="150" x2="418" y2="150" stroke="#C97A6A" stroke-width="1.8" marker-end="url(#arrRed)"/>
+  <line x1="530" y1="150" x2="598" y2="150" stroke="#C97A6A" stroke-width="1.8" marker-end="url(#arrRed)"/>
+
+  <text x="385" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#C97A6A" font-style="italic">慢 · 贵 · 难在线规划</text>
+
+  <!-- divider -->
+  <line x1="60" y1="240" x2="660" y2="240" stroke="#D5DCE5" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- BOTTOM ROW: WEAVER -->
+  <text x="60" y="285" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">WEAVER</text>
+
+  <!-- latent -->
+  <circle cx="120" cy="360" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="120" y="365" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">latent</text>
+
+  <!-- reward head -->
+  <rect x="260" y="305" width="150" height="50" rx="6" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="335" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">reward head R(ẑ, ℓ)</text>
+  <text x="335" y="343" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">AdaPool + MLP</text>
+
+  <!-- critic head -->
+  <rect x="260" y="370" width="150" height="50" rx="6" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="335" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">critic head V(ẑ, ℓ)</text>
+  <text x="335" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">λ-return bootstrap</text>
+
+  <line x1="152" y1="350" x2="258" y2="330" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="152" y1="370" x2="258" y2="395" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- advantage output -->
+  <rect x="490" y="335" width="170" height="60" rx="6" fill="#FFF6E5" stroke="#D9A441" stroke-width="1.5"/>
+  <text x="575" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">H 步 advantage</text>
+  <text x="575" y="378" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">R + γᴴ V</text>
+
+  <line x1="410" y1="330" x2="488" y2="355" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="410" y1="395" x2="488" y2="375" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <text x="385" y="455" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA" font-style="italic">无解码 · 无外部 VLM · 实时 best-of-N</text>
+</svg>

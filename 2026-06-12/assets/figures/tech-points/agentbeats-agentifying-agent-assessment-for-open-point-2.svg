@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">同一协议 · 五种部署形态</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">AAA / A2A · MCP</text>
+
+  <!-- Center hub -->
+  <circle cx="360" cy="260" r="62" fill="#FEF3E2" stroke="#E8A85C" stroke-width="2"/>
+  <text x="360" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">AgentBeats</text>
+  <text x="360" y="275" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">统一协议</text>
+
+  <!-- Local: top-left -->
+  <rect x="60" y="110" width="140" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Local</text>
+  <text x="130" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">本地脚本</text>
+
+  <!-- Remote: top-right -->
+  <rect x="520" y="110" width="140" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="590" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Remote</text>
+  <text x="590" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">自部署接入</text>
+
+  <!-- Hosted: bottom-left -->
+  <rect x="60" y="340" width="140" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Hosted</text>
+  <text x="130" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">平台托管</text>
+
+  <!-- Proxy: bottom-right -->
+  <rect x="520" y="340" width="140" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="590" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Proxy</text>
+  <text x="590" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">本地+反代</text>
+
+  <!-- CI: bottom center -->
+  <rect x="290" y="400" width="140" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">CI</text>
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">流水线触发</text>
+
+  <!-- Connecting lines from hub edge to each mode edge -->
+  <line x1="312" y1="227" x2="208" y2="178" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="408" y1="227" x2="512" y2="178" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="312" y1="293" x2="208" y2="342" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="408" y1="293" x2="512" y2="342" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="360" y1="322" x2="360" y2="398" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+</svg>

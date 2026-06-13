@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">多步去噪 → 少步蒸馏</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Rectified Flow Distillation</text>
+
+  <!-- BEFORE: long chain -->
+  <text x="60" y="174" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">蒸馏前 NFE=50</text>
+
+  <g>
+    <circle cx="170" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="220" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="270" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="320" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="370" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="420" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <text x="475" y="174" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" fill="#9FB4CC">· · ·</text>
+    <circle cx="525" cy="170" r="14" fill="#E8EEF5" stroke="#9FB4CC" stroke-width="1.5"/>
+    <circle cx="580" cy="170" r="18" fill="#FFE9D6" stroke="#E8A06B" stroke-width="2"/>
+    <text x="580" y="174" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">image</text>
+  </g>
+
+  <line x1="184" y1="170" x2="206" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="234" y1="170" x2="256" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="284" y1="170" x2="306" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="334" y1="170" x2="356" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="384" y1="170" x2="406" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="434" y1="170" x2="456" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="495" y1="170" x2="511" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+  <line x1="539" y1="170" x2="562" y2="170" stroke="#9FB4CC" stroke-width="1.5"/>
+
+  <text x="630" y="174" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">慢 · 42s</text>
+
+  <!-- distill arrow -->
+  <line x1="360" y1="220" x2="360" y2="300" stroke="#4B8BDA" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+  <text x="378" y="265" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#4B8BDA">蒸馏</text>
+
+  <!-- AFTER: short chain -->
+  <text x="60" y="374" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#4B8BDA" font-weight="600">蒸馏后 NFE=16</text>
+
+  <g>
+    <circle cx="220" cy="370" r="16" fill="#DCE9F8" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="320" cy="370" r="16" fill="#DCE9F8" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="420" cy="370" r="16" fill="#DCE9F8" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="525" cy="370" r="16" fill="#DCE9F8" stroke="#4B8BDA" stroke-width="2"/>
+    <circle cx="620" cy="370" r="20" fill="#FFE9D6" stroke="#E8A06B" stroke-width="2"/>
+    <text x="620" y="374" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">image</text>
+  </g>
+
+  <line x1="236" y1="370" x2="302" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="336" y1="370" x2="402" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="436" y1="370" x2="507" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="541" y1="370" x2="598" y2="370" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">3× 加速 · 质量更优</text>
+  <text x="360" y="452" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">离线分析 → 在线规划</text>
+</svg>

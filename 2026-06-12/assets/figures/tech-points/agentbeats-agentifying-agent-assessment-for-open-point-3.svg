@@ -1,0 +1,41 @@
+<svg width="720" height="480" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+  <rect width="720" height="480" fill="#FAF7F2"/>
+
+  <text x="360" y="42" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F" text-anchor="middle">保真度验证：同一 agent，两条管线</text>
+
+  <!-- Left: Native Harness -->
+  <rect x="70" y="100" width="240" height="190" rx="10" fill="#FFF1E6" stroke="#E8A87C" stroke-width="1.5"/>
+  <text x="190" y="130" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F" text-anchor="middle">原生 Harness</text>
+
+  <circle cx="190" cy="190" r="34" fill="#FFFFFF" stroke="#E8A87C" stroke-width="1.5"/>
+  <text x="190" y="196" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" text-anchor="middle">Agent</text>
+
+  <text x="190" y="265" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#C2733A" text-anchor="middle">↑ 分数偏高</text>
+
+  <!-- Right: AAA pipeline -->
+  <rect x="410" y="100" width="240" height="190" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="530" y="130" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F" text-anchor="middle">AAA 统一管线</text>
+
+  <circle cx="530" cy="190" r="34" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="530" y="196" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" text-anchor="middle">Agent</text>
+
+  <text x="530" y="265" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F" text-anchor="middle">公平基线</text>
+
+  <!-- vs in middle -->
+  <text x="360" y="200" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#3D4F65" text-anchor="middle">vs</text>
+
+  <!-- Insight box -->
+  <rect x="120" y="350" width="480" height="100" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="360" y="382" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F" text-anchor="middle">发现：协同适配 (co-adaptation) 效应</text>
+  <text x="360" y="410" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" text-anchor="middle">模型与其原生 harness 存在隐性适配，分数虚高；</text>
+  <text x="360" y="430" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" text-anchor="middle">只有统一接口才能干净地观测到这一现象。</text>
+
+  <!-- Arrows pointing down to insight -->
+  <line x1="190" y1="290" x2="260" y2="349" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="530" y1="290" x2="460" y2="349" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Shapley 归因：谁是关键合谋者</text>
+
+  <!-- Left: agents -->
+  <g>
+    <circle cx="130" cy="170" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="130" y="176" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F">SRE</text>
+
+    <circle cx="240" cy="170" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="240" y="176" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F">DevOps</text>
+
+    <circle cx="185" cy="280" r="38" fill="#FDF4E8" stroke="#D89B5B" stroke-width="2"/>
+    <text x="185" y="286" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F">QA</text>
+
+    <text x="185" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">多Agent联盟 C</text>
+  </g>
+
+  <!-- arrows from agents to Shapley/Interaction -->
+  <text x="355" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">联盟价值 ASR(C)</text>
+  <line x1="278" y1="160" x2="425" y2="170" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="220" y1="280" x2="425" y2="265" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Shapley box -->
+  <rect x="430" y="145" width="180" height="60" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="520" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Shapley φᵢ</text>
+  <text x="520" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">个体边际贡献</text>
+
+  <!-- Interaction box -->
+  <rect x="430" y="235" width="180" height="60" rx="8" fill="#FDF4E8" stroke="#D89B5B" stroke-width="1.5"/>
+  <text x="520" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">交互 Iᵢⱼ</text>
+  <text x="520" y="280" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">协同 1+1 &gt; 2</text>
+
+  <!-- arrows merge to target -->
+  <line x1="520" y1="298" x2="520" y2="345" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="520" y1="208" x2="520" y2="343" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- output: collusion target -->
+  <rect x="380" y="350" width="280" height="62" rx="8" fill="#1E3A5F"/>
+  <text x="520" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">锁定合谋联盟</text>
+  <text x="520" y="397" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#BFD4EE">示例：SRE + DevOps（Iᵢⱼ≈1）</text>
+
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">从博弈论视角量化“打哪里、谁配合谁”</text>
+</svg>

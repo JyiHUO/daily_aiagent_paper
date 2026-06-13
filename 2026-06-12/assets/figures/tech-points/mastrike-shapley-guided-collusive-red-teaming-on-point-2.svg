@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">协同感知联盟选择</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">个体强 ≠ 合谋强</text>
+
+  <!-- LEFT: only individual scores -->
+  <g>
+    <rect x="40" y="110" width="280" height="160" rx="10" fill="#FBEFEC" stroke="#C97064" stroke-width="1.5"/>
+    <text x="180" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">仅看 φᵢ（个体最强）</text>
+
+    <circle cx="105" cy="200" r="28" fill="#fff" stroke="#C97064" stroke-width="2"/>
+    <text x="105" y="197" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">A · φ高</text>
+
+    <circle cx="255" cy="200" r="28" fill="#fff" stroke="#C97064" stroke-width="2"/>
+    <text x="255" y="197" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">B · φ高</text>
+
+    <line x1="133" y1="200" x2="227" y2="200" stroke="#C97064" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="180" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C97064">Iᵢⱼ 弱 → 信号冲突</text>
+
+    <text x="180" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C97064">易被其他 Agent 识破</text>
+  </g>
+
+  <!-- RIGHT: coordination-aware -->
+  <g>
+    <rect x="400" y="110" width="280" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">φᵢ + Iᵢⱼ（协同最优）</text>
+
+    <circle cx="465" cy="200" r="28" fill="#fff" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="465" y="197" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">A · φ中</text>
+
+    <circle cx="615" cy="200" r="28" fill="#fff" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="615" y="197" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">C · φ中</text>
+
+    <line x1="493" y1="200" x2="587" y2="200" stroke="#4B8BDA" stroke-width="3"/>
+    <text x="540" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA" font-weight="600">Iᵢⱼ 强 → 默契合谋</text>
+
+    <text x="540" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">max Σφᵢ + ΣIᵢⱼ  s.t. |C|=k</text>
+  </g>
+
+  <!-- Bottom: transfer via embedding similarity -->
+  <g>
+    <rect x="160" y="345" width="400" height="90" rx="10" fill="#F5F0E6" stroke="#B89968" stroke-width="1.5"/>
+    <text x="360" y="372" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">新任务 q：embedding 相似度 + softmax 迁移</text>
+    <text x="360" y="402" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">从采样任务迁移 φᵢ、Iᵢⱼ，无需对 q 重新采样联盟</text>
+    <text x="360" y="421" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#4B8BDA">输出协同最优联盟 C*ₖ(q)</text>
+  </g>
+
+  <!-- arrows from comparison down to transfer -->
+  <path d="M 200 270 L 280 345" stroke="#C97064" stroke-width="1.5" fill="none" marker-end="url(#arrRed)" stroke-dasharray="4,3"/>
+  <path d="M 520 270 L 440 345" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+</svg>

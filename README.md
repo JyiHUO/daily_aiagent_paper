@@ -4,19 +4,73 @@
 
 ## 最新日报
 
-- **日期**：2026-05-18
+- **日期**：2026-06-12
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Who Owns This Agent? Tracing AI Agents Back to Their Owners
-  - Argus: Evidence Assembly for Scalable Deep Research Agents
-  - Effective Harness Engineering for Algorithm Discovery with Coding Agents
-- **日报路径**：[2026-05-18/daily_report.md](2026-05-18/daily_report.md)
+  - TerraBench: Can Agents Reason Over Heterogeneous Earth-System Data?
+  - MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback
+  - $\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation
+- **日报路径**：[2026-06-12/daily_report.md](2026-06-12/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-12 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | TerraBench: Can Agents Reason Over Heterogeneous Earth-System Data? | [2026-06-12/daily_report.md](2026-06-12/daily_report.md) |
+|  |  |  | 2 | MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback |  |
+|  |  |  | 3 | $\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation |  |
+| 2026-06-11 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Goal-Autopilot: A Verifiable Anti-Fabrication Firewall for Unattended Long-Horizon Agents | [2026-06-11/daily_report.md](2026-06-11/daily_report.md) |
+|  |  |  | 2 | Toward Generalist Autonomous Research via Hypothesis-Tree Refinement |  |
+|  |  |  | 3 | Layer-Isolated Evaluation: Gating the Deterministic Scaffold of a Production LLM Agent with a No-LLM, Regression-Locked Test Harness |  |
+| 2026-06-10 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Harnessing the Collective Intelligence of AI Agents in the Wild for New Discoveries | [2026-06-10/daily_report.md](2026-06-10/daily_report.md) |
+|  |  |  | 2 | From Confident Closing to Silent Failure: Characterizing False Success in LLM Agents |  |
+|  |  |  | 3 | MemVenom: Triggered Poisoning of Multimodal Memories in Web Agents |  |
+| 2026-06-09 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Hardening Agent Benchmarks with Adversarial Hacker-Fixer Loops | [2026-06-09/daily_report.md](2026-06-09/daily_report.md) |
+|  |  |  | 2 | VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation |  |
+|  |  |  | 3 | WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Agents with Hybrid Interfaces |  |
+| 2026-06-08 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | MalSkillBench: A Runtime-Verified Benchmark of Malicious Agent Skills | [2026-06-08/daily_report.md](2026-06-08/daily_report.md) |
+|  |  |  | 2 | Lean4Agent: Formal Modeling and Verification for Agent Workflow and Trajectory |  |
+|  |  |  | 3 | StainFlow: Entity-Stain Tracking and Evidence Linking for Process Rewards in GUI Agents |  |
+| 2026-06-05 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws | [2026-06-05/daily_report.md](2026-06-05/daily_report.md) |
+|  |  |  | 2 | Coding with "Enemy": Can Human Developers Detect AI Agent Sabotage? |  |
+|  |  |  | 3 | Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads |  |
+| 2026-06-03 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | AI Agents Enable Adaptive Computer Worms | [2026-06-03/daily_report.md](2026-06-03/daily_report.md) |
+|  |  |  | 2 | What Benchmarks Don't Measure: The Case for Evaluating Abstention Competence in Autonomous Agents |  |
+|  |  |  | 3 | What Makes Interaction Trajectories Effective for Training Terminal Agents? |  |
+| 2026-06-02 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | SPADE-Bench: Evaluating Spontaneous Strategic Deception in Agents via Plan-Action Divergence | [2026-06-02/daily_report.md](2026-06-02/daily_report.md) |
+|  |  |  | 2 | Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams |  |
+|  |  |  | 3 | SeClaw: Spec-Driven Security Task Synthesis for Evaluating Autonomous Agents |  |
+| 2026-06-01 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Stateful Online Monitoring Catches Distributed Agent Attacks | [2026-06-01/daily_report.md](2026-06-01/daily_report.md) |
+|  |  |  | 2 | Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents |  |
+|  |  |  | 3 | TraceGraph: Shared Decision Landscapes for Diagnosing and Improving Agent Trajectories |  |
+| 2026-05-29 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | How Coding Agents Fail Their Users: A Large-Scale Analysis of Developer-Agent Misalignment in 20,574 Real-World Sessions | [2026-05-29/daily_report.md](2026-05-29/daily_report.md) |
+|  |  |  | 2 | WorldMemArena: Evaluating Multimodal Agent Memory Through Action-World Interaction |  |
+|  |  |  | 3 | The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems |  |
+| 2026-05-28 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows | [2026-05-28/daily_report.md](2026-05-28/daily_report.md) |
+|  |  |  | 2 | A Policy-Driven Runtime Layer for Agentic LLM Serving |  |
+|  |  |  | 3 | MIRAGE: Context-Aware Prompt Injection against Mobile GUI Agents via User-Generated Content |  |
+| 2026-05-27 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Your Agents Are Aging Too: Agent Lifespan Engineering for Deployed Systems | [2026-05-27/daily_report.md](2026-05-27/daily_report.md) |
+|  |  |  | 2 | Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory |  |
+|  |  |  | 3 | ChainCaps: Composition-Safe Tool-Using Agents via Monotonic Capability Attenuation |  |
+| 2026-05-26 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | From Model Scaling to System Scaling: Scaling the Harness in Agentic AI | [2026-05-26/daily_report.md](2026-05-26/daily_report.md) |
+|  |  |  | 2 | CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents |  |
+|  |  |  | 3 | Stop Comparing LLM Agents Without Disclosing the Harness |  |
+| 2026-05-25 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Misattribution Gap: When Memory Poisoning Looks Like Model Failure in Agentic AI Systems | [2026-05-25/daily_report.md](2026-05-25/daily_report.md) |
+|  |  |  | 2 | Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems |  |
+|  |  |  | 3 | DART: Semantic Recoverability for Structured Tool Agents |  |
+| 2026-05-22 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | [2026-05-22/daily_report.md](2026-05-22/daily_report.md) |
+|  |  |  | 2 | Ratchet: A Minimal Hygiene Recipe for Self-Evolving LLM Agents |  |
+|  |  |  | 3 | Blind Spots in the Guard: How Domain-Camouflaged Injection Attacks Evade Detection in Multi-Agent LLM Systems |  |
+| 2026-05-21 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents | [2026-05-21/daily_report.md](2026-05-21/daily_report.md) |
+|  |  |  | 2 | Agent JIT Compilation for Latency-Optimizing Web Agent Planning and Scheduling |  |
+|  |  |  | 3 | MemGym: a Long-Horizon Memory Environment for LLM Agents |  |
+| 2026-05-20 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | EngiAI: A Multi-Agent Framework and Benchmark Suite for LLM-Driven Engineering Design | [2026-05-20/daily_report.md](2026-05-20/daily_report.md) |
+|  |  |  | 2 | RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents |  |
+|  |  |  | 3 | STAR-PólyaMath: Multi-Agent Reasoning under Persistent Meta-Strategic Supervision |  |
+| 2026-05-19 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Code as Agent Harness | [2026-05-19/daily_report.md](2026-05-19/daily_report.md) |
+|  |  |  | 2 | MINTEval: Evaluating Memory under Multi-Target Interference in Long-Horizon Agent Systems |  |
+|  |  |  | 3 | SLEIGHT-Bench: A Benchmark of Evasion Attacks Against Agent Monitors |  |
 | 2026-05-18 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Who Owns This Agent? Tracing AI Agents Back to Their Owners | [2026-05-18/daily_report.md](2026-05-18/daily_report.md) |
 |  |  |  | 2 | Argus: Evidence Assembly for Scalable Deep Research Agents |  |
 |  |  |  | 3 | Effective Harness Engineering for Algorithm Discovery with Coding Agents |  |

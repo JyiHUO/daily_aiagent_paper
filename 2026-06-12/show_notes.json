@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 6/12：Agent 系统正在被一层层拆开",
+  "shownotes_html": "<p>今天的关键词是<strong>分层</strong>：Agent 的外壳、安全、评测正在被拆成独立研究对象，每一层都出现了'我们以为它 work，其实没那么 work'的反转。三篇必读分别对应底层世界模型、评测协议化和多 Agent 合谋攻击。</p><p><strong>本期重点</strong></p><ul><li><strong>机器人世界模型 WEAVER（WEAVER: Better, Faster, Longer）</strong>：把视频生成、JEPA、Dreamer 的关键技巧揉进一个多视角潜空间世界模型，用同一个模型同时撑起策略评估、合成数据改进和测试时 best-of-N 规划，推理速度比 Ctrl-World 快 5–10 倍。</li><li><strong>评测基础设施 AgentBeats（Agentifying Agent Assessment）</strong>：把 benchmark 本身 agent 化，用 A2A + MCP 两个协议统一接口，把 N×M 集成压成 N+M；五个月公开赛覆盖 298 个 judge agent 与 467 个 subject agent，并意外揭示模型与原生 harness 之间的协同适配效应。</li><li><strong>多 Agent 合谋红队 MAStrike（Shapley-Guided Collusive Red-Teaming）</strong>：第一次把 Shapley 值搬进 MAS 安全分析，量化每个 Agent 的安全重要性与两两协同效应，再据此生成协调式合谋攻击，在前沿模型上把攻击成功率打到 55%–62%，而传统红队基线几乎为零。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全从单点防御转向系统级合谋与运行时治理，攻击协同化、防御认证化、治理框架化三线并进。</li><li>长程自治能力的提升，可能不是来自堆更多 Agent，而是来自更扎实的共享世界/认知层；自动多 Agent 相对 CoT-SC 的优势正在被严肃证伪。</li></ul><p>如果你正在维护一个 Agent 系统，这期可以当作一次'分层体检'的提示：harness 是不是只是胶水？安全检查有没有压在关键节点上？评测接口和生产接口是不是同一套？欢迎在评论区聊聊你的答案。本期内容由 AI 自动生成，如有疏漏请多包涵，我们下期见。</p>",
+  "report_date": "2026-06-12",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-12T22:22:22Z"
+}
