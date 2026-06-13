@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/downloaded_pdfs/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-36",
+      "page_index": 1,
+      "caption": "Figure 1: We present WEAVER , a WM that satisfies three desiderata: (i) high fidelity, (ii) long-horizon consistency and (iii) efficient generation. With these, we unlock the potential for downstream policy evaluation (middle), policy improvement (top right) and Test-time Planning (bottom right).",
+      "clip": [
+        90.0,
+        56.00218200683594,
+        522.0,
+        236.90699768066406
+      ],
+      "clip_area": 78150.88037109375,
+      "page_area": 484704.0,
+      "text_density": 0.11771896779779129,
+      "kind": "drawing_cluster_with_caption",
+      "score": 44.605205047366894,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-29",
+      "page_index": 5,
+      "caption": "Figure 3: We report FID at various hori- zon lengths and find that WEAVER is consis- tently better at long-horizon rollouts.",
+      "clip": [
+        319.6809997558594,
+        63.762908935546875,
+        522.0004272460938,
+        242.52398681640625
+      ],
+      "clip_area": 36166.83893439267,
+      "page_area": 484704.0,
+      "text_density": 0.18052189281625008,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.37054019696269,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/02-p6-drawing_cluster_with_caption.png",
+      "filename": "02-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-43",
+      "page_index": 6,
+      "caption": "Figure 5: We present FVD vs inference time (in seconds) for WEAVER and Ctrl-World across views on DROID (val) and OOD task datasets. We find that WEAVER pareto-dominates the leading method Ctrl-World at different NFE while using upto 16 × less inference time.",
+      "clip": [
+        90.0,
+        239.75460815429688,
+        521.9958190917969,
+        352.0249938964844
+      ],
+      "clip_area": 48500.33724844828,
+      "page_area": 484704.0,
+      "text_density": 0.24158718044778207,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.843661809226944,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-23",
+      "page_index": 6,
+      "caption": "Figure 4: Reward Prediction & Test-time Planning with Advantage Filtering . (Left) Predicted rewards from WEAVER match the Robometer reward over trajectory. (Right) The highlighted action sample is the one with the best advantage value and the best outcome in WEAVER ’s imagination.",
+      "clip": [
+        90.0,
+        55.99702453613281,
+        522.0,
+        216.697021484375
+      ],
+      "clip_area": 69422.39868164062,
+      "page_area": 484704.0,
+      "text_density": 0.0983936168691208,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.667742973204312,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-3-0",
+      "page_index": 6,
+      "caption": "Figure 4: Reward Prediction & Test-time Planning with Advantage Filtering . (Left) Predicted rewards from WEAVER match the Robometer reward over trajectory. (Right) The highlighted action sample is the one with the best advantage value and the best outcome in WEAVER ’s imagination.",
+      "clip": [
+        98.5739974975586,
+        119.79302978515625,
+        318.0,
+        212.697021484375
+      ],
+      "clip_area": 20385.55151507957,
+      "page_area": 484704.0,
+      "text_density": 0.07006166479665749,
+      "kind": "embedded_image_with_caption",
+      "xref": 878,
+      "score": 13.226506127945328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/05-p7-embedded_image_with_caption.png",
+      "filename": "05-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-1-0",
+      "page_index": 6,
+      "caption": "Figure 4: Reward Prediction & Test-time Planning with Advantage Filtering . (Left) Predicted rewards from WEAVER match the Robometer reward over trajectory. (Right) The highlighted action sample is the one with the best advantage value and the best outcome in WEAVER ’s imagination.",
+      "clip": [
+        308.6520080566406,
+        78.0150146484375,
+        416.010009765625,
+        202.00502014160156
+      ],
+      "clip_area": 13311.31922163209,
+      "page_area": 484704.0,
+      "text_density": 0.07336347073798813,
+      "kind": "embedded_image_with_caption",
+      "xref": 876,
+      "score": 13.147903546907024,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/06-p7-embedded_image_with_caption.png",
+      "filename": "06-p7-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/texttt-weaver-better-faster-longer-an-effective-world-model-for-robotic-manipula/contact-sheet.svg"
+}

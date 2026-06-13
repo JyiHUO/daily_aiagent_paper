@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/downloaded_pdfs/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba",
+  "candidates": [
+    {
+      "id": "page-5-block-1",
+      "page_index": 5,
+      "caption": "d Case study – PRISM produces a typed pipeline edit",
+      "clip": [
+        49.23106536865234,
+        18.0,
+        304.3651184082031,
+        195.5543670654297
+      ],
+      "clip_area": 45300.1653042752,
+      "page_area": 501156.9211820215,
+      "text_density": 0.06165810548152003,
+      "kind": "captioned_figure",
+      "score": 13.503335170047503,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/01-p6-captioned_figure.png",
+      "filename": "01-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        56.865966796875,
+        540.3640747070312,
+        257.8767852783203
+      ],
+      "clip_area": 97590.36590785021,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08530148578346876,
+      "kind": "drawing_cluster",
+      "score": 8.766248251967989,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/02-p8-drawing_cluster.png",
+      "filename": "02-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        290.1419982910156,
+        205.90777587890625,
+        540.3984375,
+        529.5809326171875
+      ],
+      "clip_area": 81001.29167285375,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1832015830202679,
+      "kind": "drawing_cluster",
+      "score": 8.707919370704523,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/03-p1-drawing_cluster.png",
+      "filename": "03-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-block-12",
+      "page_index": 4,
+      "caption": "initial proposal. After each subsequent trial the Code agent regenerates the pipeline conditioned on the context bundle",
+      "clip": [
+        41.102197265624994,
+        64.0653137207031,
+        318.9025939941406,
+        392.8213195800781
+      ],
+      "clip_area": 91328.54885461657,
+      "page_area": 501156.9211820215,
+      "text_density": 0.553788886555677,
+      "kind": "captioned_figure",
+      "score": 6.014761653940184,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/04-p5-captioned_figure.png",
+      "filename": "04-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        56.866302490234375,
+        540.2576904296875,
+        321.57952880859375
+      ],
+      "clip_area": 128489.60111266468,
+      "page_area": 501156.9211820215,
+      "text_density": 0.16454715319772936,
+      "kind": "drawing_cluster",
+      "score": 2.927170808136238,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/05-p6-drawing_cluster.png",
+      "filename": "05-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        56.865020751953125,
+        540.3958740234375,
+        306.0348815917969
+      ],
+      "clip_area": 120979.41181316413,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2072809390764194,
+      "kind": "drawing_cluster",
+      "score": 2.3631436554148353,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/06-p4-drawing_cluster.png",
+      "filename": "06-p4-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mdforge-agentic-molecular-dynamics-pipeline-design-under-sparse-simulator-feedba/contact-sheet.svg"
+}

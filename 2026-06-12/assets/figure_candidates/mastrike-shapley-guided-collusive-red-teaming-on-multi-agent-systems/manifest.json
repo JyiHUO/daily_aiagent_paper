@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/downloaded_pdfs/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-168",
+      "page_index": 8,
+      "caption": "Figure 5: Shapley interaction index in the engineering domain, where the ASR of composed agent pairs are shown in the cells. The results indicate that the selection of agent pairs is critical for MAS red-teaming.",
+      "clip": [
+        90.0,
+        56.00175476074219,
+        522.0045166015625,
+        358.2770080566406
+      ],
+      "clip_area": 130584.27468070947,
+      "page_area": 484704.0,
+      "text_density": 0.1519412813125923,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.683523121244463,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-68",
+      "page_index": 8,
+      "caption": "Figure 4: Shapley value distribution of agents in different domains. Agents with zero Shapley values are omitted.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5982604980469,
+        224.73133850097656
+      ],
+      "clip_area": 94517.2083530794,
+      "page_area": 484704.0,
+      "text_density": 0.06256520856187878,
+      "kind": "captioned_figure",
+      "score": 23.050191203923106,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/02-p9-captioned_figure.png",
+      "filename": "02-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-8-embedded-3-0",
+      "page_index": 8,
+      "caption": "Figure 5: Shapley interaction index in the engineering domain, where the ASR of composed agent pairs are shown in the cells. The results indicate that the selection of agent pairs is critical for MAS red-teaming.",
+      "clip": [
+        372.72344970703125,
+        238.24041748046875,
+        481.5509033203125,
+        347.06787109375
+      ],
+      "clip_area": 11843.414659950882,
+      "page_area": 484704.0,
+      "text_density": 0.17734443515404455,
+      "kind": "embedded_image_with_caption",
+      "xref": 598,
+      "score": 22.290927386979003,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/03-p9-embedded_image_with_caption.png",
+      "filename": "03-p9-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-14-drawing-caption-23",
+      "page_index": 14,
+      "caption": "Figure 7: Finance benign trajectory. The MAS independently verifies identity, device trust, account history, and policy compliance before the <Card Operations> agent freezes the misplaced card.",
+      "clip": [
+        97.91899871826172,
+        195.92019653320312,
+        514.0317687988281,
+        569.177001953125
+      ],
+      "clip_area": 155316.92325470666,
+      "page_area": 484704.0,
+      "text_density": 0.16276833837986482,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.03389969720811,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/04-p15-drawing_cluster_with_caption.png",
+      "filename": "04-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-2-0",
+      "page_index": 8,
+      "caption": "Figure 5: Shapley interaction index in the engineering domain, where the ASR of composed agent pairs are shown in the cells. The results indicate that the selection of agent pairs is critical for MAS red-teaming.",
+      "clip": [
+        283.4936218261719,
+        238.24041748046875,
+        392.3210754394531,
+        347.06787109375
+      ],
+      "clip_area": 11843.414659950882,
+      "page_area": 484704.0,
+      "text_density": 0.19299434335435187,
+      "kind": "embedded_image_with_caption",
+      "xref": 597,
+      "score": 21.351932894960562,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/05-p9-embedded_image_with_caption.png",
+      "filename": "05-p9-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-1-0",
+      "page_index": 8,
+      "caption": "Figure 5: Shapley interaction index in the engineering domain, where the ASR of composed agent pairs are shown in the cells. The results indicate that the selection of agent pairs is critical for MAS red-teaming.",
+      "clip": [
+        194.26377868652344,
+        238.24041748046875,
+        303.09124755859375,
+        347.06787109375
+      ],
+      "clip_area": 11843.416320526041,
+      "page_area": 484704.0,
+      "text_density": 0.19310925847595792,
+      "kind": "embedded_image_with_caption",
+      "xref": 596,
+      "score": 21.34503800611504,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/06-p9-embedded_image_with_caption.png",
+      "filename": "06-p9-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/mastrike-shapley-guided-collusive-red-teaming-on-multi-agent-systems/contact-sheet.svg"
+}

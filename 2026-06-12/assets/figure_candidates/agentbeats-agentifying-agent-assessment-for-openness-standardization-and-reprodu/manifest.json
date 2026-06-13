@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/downloaded_pdfs/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu",
+  "candidates": [
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "Figure 5: Competition submissions: distribution of judge agents/subject agents across categories (left) and submission timeline over the course of the competition (right).",
+      "clip": [
+        54.40899658203125,
+        71.68647766113281,
+        557.5888671875,
+        274.1519775390625
+      ],
+      "clip_area": 101876.56403064821,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 610,
+      "score": 28.131961822562758,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/01-p11-embedded_image_with_caption.png",
+      "filename": "01-p11-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-10-block-2",
+      "page_index": 10,
+      "caption": "Figure 5: Competition submissions: distribution of judge agents/subject agents across categories (left) and submission timeline over the course of the competition (right).",
+      "clip": [
+        44.40899658203125,
+        65.68647766113281,
+        567.5888671875,
+        280.1519775390625
+      ],
+      "clip_area": 112204.03247547243,
+      "page_area": 484704.0,
+      "text_density": 0.029114312005507844,
+      "kind": "image_block_with_caption",
+      "score": 28.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/02-p11-image_block_with_caption.png",
+      "filename": "02-p11-image_block_with_caption.png"
+    },
+    {
+      "id": "page-16-drawing-caption-19",
+      "page_index": 16,
+      "caption": "Figure 6: Tool-call distributions for the main experiments, shown separately for DevEval, SWE-Bench Pro, and Terminal- Bench. Each horizontal bar is normalized within a benchmark-model-harness cell. Native harness tool names are mapped into comparable categories: command/shell, edit/write, read, and other.",
+      "clip": [
+        86.23799896240234,
+        67.68536376953125,
+        525.77197265625,
+        520.2510375976562
+      ],
+      "clip_area": 198917.98897510953,
+      "page_area": 484704.0,
+      "text_density": 0.18438008257393804,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.921569098584982,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/03-p17-drawing_cluster_with_caption.png",
+      "filename": "03-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-41",
+      "page_index": 0,
+      "caption": "Figure 1: Comparison between Traditional LLM/Agent bench- marks and AAA. AAA reduces the number of integrations from 𝑁 × 𝑀 to 𝑁 + 𝑀 , while completely separating the bench- mark and target agent as shown in the gray boxes.",
+      "clip": [
+        244.66046142578125,
+        188.41690063476562,
+        604.0,
+        413.68829345703125
+      ],
+      "clip_area": 80948.9183507245,
+      "page_area": 484704.0,
+      "text_density": 0.27602304452173576,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.138049754815018,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/04-p1-drawing_cluster_with_caption.png",
+      "filename": "04-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-21",
+      "page_index": 3,
+      "caption": "Figure 3: AAA interaction pattern. The internal structure of the judge agent is illustrative rather than prescriptive. Section 5 discusses the recommended practices for designing judge agents.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        590.3313842773438,
+        227.2169952392578
+      ],
+      "clip_area": 63387.81155627082,
+      "page_area": 484704.0,
+      "text_density": 0.1155004573808892,
+      "kind": "captioned_figure",
+      "score": 11.574281574438547,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/05-p4-captioned_figure.png",
+      "filename": "05-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-caption-66",
+      "page_index": 2,
+      "caption": "Figure 2: Complete separation between benchmarks and agents. Traditional benchmarks are tightly coupled with fixed agent harness and typically allow only LLM replace- ment as illustrated by the green shaded area, whereas agenti- fied benchmarks allow the entire agent to be swapped.",
+      "clip": [
+        243.23678588867188,
+        330.2822570800781,
+        604.0,
+        564.771484375
+      ],
+      "clip_area": 84595.08731339779,
+      "page_area": 484704.0,
+      "text_density": 0.34350625665471063,
+      "kind": "drawing_cluster_with_caption",
+      "score": 11.12957001531067,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/06-p3-drawing_cluster_with_caption.png",
+      "filename": "06-p3-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-12/assets/figure_candidates/agentbeats-agentifying-agent-assessment-for-openness-standardization-and-reprodu/contact-sheet.svg"
+}
