@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">CAGE: one socket for many agents</text>
+
+  <!-- Heterogeneous agents on the left -->
+  <g>
+    <rect x="40" y="100" width="150" height="44" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="115" y="127" text-anchor="middle" font-size="14" fill="#1E3A5F">Codex</text>
+
+    <rect x="40" y="170" width="150" height="44" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="115" y="197" text-anchor="middle" font-size="14" fill="#1E3A5F">Claude Code</text>
+
+    <rect x="40" y="240" width="150" height="44" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="115" y="267" text-anchor="middle" font-size="14" fill="#1E3A5F">Qwen Code</text>
+
+    <text x="115" y="312" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">heterogeneous harnesses</text>
+  </g>
+
+  <!-- Adapter: shaped like a plug/funnel -->
+  <g>
+    <path d="M250,150 L330,150 L330,135 L380,180 L330,225 L330,210 L250,210 Z"
+          fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="290" y="177" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Adapter</text>
+    <text x="290" y="195" text-anchor="middle" font-size="10" fill="#3D4F65">unified API</text>
+  </g>
+
+  <!-- arrows from agents to adapter -->
+  <line x1="190" y1="122" x2="246" y2="158" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="190" y1="192" x2="246" y2="180" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="190" y1="262" x2="246" y2="202" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Cyber Range -->
+  <g>
+    <rect x="430" y="110" width="240" height="120" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="550" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Cyber Range (auto-reset)</text>
+
+    <rect x="455" y="155" width="60" height="50" rx="3" fill="#FFFFFF" stroke="#3D4F65"/>
+    <circle cx="465" cy="165" r="2" fill="#E0A458"/>
+    <line x1="460" y1="180" x2="510" y2="180" stroke="#3D4F65" stroke-width="0.8"/>
+    <line x1="460" y1="190" x2="500" y2="190" stroke="#3D4F65" stroke-width="0.8"/>
+
+    <rect x="585" y="155" width="60" height="50" rx="3" fill="#FFFFFF" stroke="#3D4F65"/>
+    <circle cx="595" cy="165" r="2" fill="#E0A458"/>
+    <line x1="590" y1="180" x2="640" y2="180" stroke="#3D4F65" stroke-width="0.8"/>
+    <line x1="590" y1="190" x2="630" y2="190" stroke="#3D4F65" stroke-width="0.8"/>
+
+    <line x1="515" y1="180" x2="585" y2="180" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <text x="550" y="222" text-anchor="middle" font-size="11" fill="#3D4F65">multi-host targets</text>
+  </g>
+
+  <line x1="380" y1="180" x2="428" y2="170" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Verifier with canary -->
+  <g>
+    <rect x="430" y="290" width="240" height="120" rx="10" fill="#FDF4FF" stroke="#7A4FA8" stroke-width="1.8"/>
+    <text x="550" y="318" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Verifier — PoC must read secret</text>
+
+    <rect x="455" y="338" width="115" height="32" rx="4" fill="#FFFFFF" stroke="#7A4FA8"/>
+    <text x="512" y="358" text-anchor="middle" font-size="11" fill="#1E3A5F" font-family="monospace">canary_xK9f</text>
+
+    <circle cx="610" cy="354" r="20" fill="#E8F5E9" stroke="#3F8A5C" stroke-width="1.6"/>
+    <path d="M599,354 L607,362 L621,346" stroke="#3F8A5C" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <line x1="550" y1="232" x2="550" y2="288" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="360" y="445" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">plug in any agent · reset the range · verify by real effect</text>
+</svg>

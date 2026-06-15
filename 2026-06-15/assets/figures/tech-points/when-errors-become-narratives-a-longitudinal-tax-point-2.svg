@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">Trigger / Amplifier / Concealer</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">三层根因分解：哪一层值得修</text>
+
+  <!-- Trigger -->
+  <g>
+    <circle cx="130" cy="200" r="62" fill="#FFF1E6" stroke="#E89B5A" stroke-width="2"/>
+    <text x="130" y="190" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Trigger</text>
+    <text x="130" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">外部小火星</text>
+    <text x="130" y="228" text-anchor="middle" font-size="10" fill="#7A6450">无穷无尽 · 修不完</text>
+  </g>
+
+  <!-- Amplifier -->
+  <g>
+    <polygon points="270,148 410,148 370,232 310,232" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="340" y="185" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Amplifier</text>
+    <text x="340" y="205" text-anchor="middle" font-size="11" fill="#3D4F65">架构放大器</text>
+    <text x="340" y="223" text-anchor="middle" font-size="10" fill="#3D4F65">复制20处 · 行号解析</text>
+  </g>
+
+  <!-- Concealer -->
+  <g>
+    <rect x="490" y="150" width="150" height="100" rx="8" fill="#EAF0E6" stroke="#6B8E5A" stroke-width="2"/>
+    <text x="565" y="182" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Concealer</text>
+    <text x="565" y="204" text-anchor="middle" font-size="11" fill="#3D4F65">沉默面具</text>
+    <text x="565" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">status 谎报 ok</text>
+    <text x="565" y="238" text-anchor="middle" font-size="10" fill="#3D4F65">fail-open 守卫</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <line x1="192" y1="195" x2="268" y2="188" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="412" y1="188" x2="488" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Output to user -->
+  <line x1="642" y1="200" x2="668" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="690" y="207" font-size="22" text-anchor="middle" fill="#1E3A5F">👤</text>
+  <text x="690" y="232" font-size="10" fill="#7A6450" text-anchor="middle">用户读到</text>
+  <text x="690" y="245" font-size="10" fill="#7A6450" text-anchor="middle">流畅叙述</text>
+
+  <!-- Leverage band -->
+  <line x1="60" y1="320" x2="660" y2="320" stroke="#C8D2DD" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="60" y="312" font-size="11" font-weight="bold" fill="#3D4F65">修复杠杆 →</text>
+
+  <text x="130" y="345" text-anchor="middle" font-size="11" fill="#A88060">低杠杆（治标）</text>
+  <text x="130" y="362" text-anchor="middle" font-size="10" fill="#7A6450">头痛医头</text>
+
+  <text x="340" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E3A5F">高杠杆（一次性）</text>
+  <text x="340" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">一个共享 helper 替换 20 处</text>
+
+  <text x="565" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E3A5F">高杠杆（一次性）</text>
+  <text x="565" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">出错时大声报 · 保留 cause</text>
+
+  <text x="360" y="420" text-anchor="middle" font-size="12" fill="#1E3A5F" font-style="italic">trigger 永远会再来 — 真正可关闭的，是 amplifier 与 concealer</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-15",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 308,
+  "selected_count": 3,
+  "focus_titles": [
+    "Same-Origin Policy for Agentic Browsers",
+    "HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry",
+    "AgentSpec: Understanding Embodied Agent Scaffolds Through Controlled Composition"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

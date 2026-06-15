@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97A4A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">From Public Web to Internal Network</text>
+
+  <!-- Attacker -->
+  <circle cx="60" cy="220" r="30" fill="#FFE8D6" stroke="#D97A4A" stroke-width="2"/>
+  <text x="60" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="60" y="272" text-anchor="middle" font-size="11" fill="#3D4F65">external</text>
+
+  <!-- Stage 1: Web Exploit -->
+  <rect x="160" y="130" width="200" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="260" y="156" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 1 · WebExploit</text>
+  <rect x="235" y="178" width="50" height="90" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+  <circle cx="275" cy="223" r="3" fill="#1E3A5F"/>
+  <text x="260" y="295" text-anchor="middle" font-size="11" fill="#3D4F65">110 vulns / 15 apps</text>
+
+  <!-- Stage 2: Post Exploit -->
+  <rect x="420" y="100" width="250" height="240" rx="10" fill="#FFF7E6" stroke="#D97A4A" stroke-width="2"/>
+  <text x="545" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 2 · PostExploit</text>
+
+  <!-- hosts grid -->
+  <g fill="#FFFFFF" stroke="#D97A4A" stroke-width="1.5">
+    <rect x="445" y="148" width="40" height="32" rx="3"/>
+    <rect x="498" y="148" width="40" height="32" rx="3"/>
+    <rect x="551" y="148" width="40" height="32" rx="3"/>
+    <rect x="604" y="148" width="40" height="32" rx="3"/>
+    <rect x="445" y="196" width="40" height="32" rx="3" fill="#FFE8D6"/>
+    <rect x="498" y="196" width="40" height="32" rx="3"/>
+    <rect x="551" y="196" width="40" height="32" rx="3"/>
+    <rect x="604" y="196" width="40" height="32" rx="3"/>
+    <rect x="445" y="244" width="40" height="32" rx="3"/>
+    <rect x="498" y="244" width="40" height="32" rx="3"/>
+    <rect x="551" y="244" width="40" height="32" rx="3"/>
+    <rect x="604" y="244" width="40" height="32" rx="3"/>
+  </g>
+
+  <!-- lateral movement arrows -->
+  <path d="M485 212 L498 212" stroke="#D97A4A" stroke-width="1.5" marker-end="url(#arrO)" fill="none"/>
+  <path d="M518 228 L518 244" stroke="#D97A4A" stroke-width="1.5" marker-end="url(#arrO)" fill="none"/>
+  <path d="M538 260 L551 260" stroke="#D97A4A" stroke-width="1.5" marker-end="url(#arrO)" fill="none"/>
+  <path d="M571 244 L571 230" stroke="#D97A4A" stroke-width="1.5" marker-end="url(#arrO)" fill="none"/>
+  <path d="M591 212 L604 212" stroke="#D97A4A" stroke-width="1.5" marker-end="url(#arrO)" fill="none"/>
+
+  <text x="545" y="318" text-anchor="middle" font-size="11" fill="#3D4F65">156 hosts · lateral · privesc</text>
+
+  <!-- Main flow arrows -->
+  <path d="M92 220 L158 220" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)" fill="none"/>
+  <path d="M362 220 L418 220" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)" fill="none"/>
+
+  <text x="125" y="212" text-anchor="middle" font-size="10" fill="#3D4F65">scan</text>
+  <text x="390" y="212" text-anchor="middle" font-size="10" fill="#3D4F65">foothold</text>
+
+  <text x="360" y="385" text-anchor="middle" font-size="12" font-style="italic" fill="#3D4F65">one continuous kill chain — not isolated CTFs</text>
+</svg>

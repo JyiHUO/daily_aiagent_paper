@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B0B8C5"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">AEGIS：把 Harness 改写当作 RL</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">三种 RL 风险 → 三道关卡</text>
+
+  <!-- Harness as agent -->
+  <circle cx="100" cy="220" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="100" y="212" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Harness</text>
+  <text x="100" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">state H_t</text>
+  <text x="100" y="246" text-anchor="middle" font-size="10" fill="#3D4F65">reward = verifier</text>
+
+  <!-- edit arrow -->
+  <path d="M158,200 Q260,130 270,200" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="215" y="148" text-anchor="middle" font-size="11" fill="#3D4F65">code edit (action)</text>
+
+  <!-- Three gates -->
+  <text x="370" y="188" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">three gates</text>
+
+  <rect x="270" y="200" width="60" height="140" rx="4" fill="#FFF4E6" stroke="#E89B4B" stroke-width="1.6"/>
+  <text x="300" y="230" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">Planner</text>
+  <text x="300" y="256" text-anchor="middle" font-size="10" fill="#8A5A2B">vs. under-</text>
+  <text x="300" y="270" text-anchor="middle" font-size="10" fill="#8A5A2B">exploration</text>
+
+  <rect x="340" y="200" width="60" height="140" rx="4" fill="#FFF4E6" stroke="#E89B4B" stroke-width="1.6"/>
+  <text x="370" y="230" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">Critic</text>
+  <text x="370" y="256" text-anchor="middle" font-size="10" fill="#8A5A2B">vs. reward</text>
+  <text x="370" y="270" text-anchor="middle" font-size="10" fill="#8A5A2B">hacking</text>
+
+  <rect x="410" y="200" width="60" height="140" rx="4" fill="#FFE8E8" stroke="#D45959" stroke-width="2"/>
+  <text x="440" y="230" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">Gate U</text>
+  <text x="440" y="256" text-anchor="middle" font-size="10" fill="#9B3838">vs. forgetting</text>
+  <text x="440" y="270" text-anchor="middle" font-size="10" fill="#9B3838">(no regression)</text>
+
+  <!-- pass arrow -->
+  <path d="M470,270 L520,270 L520,220 L555,220" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="555" y="208" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">ship ✓</text>
+
+  <!-- reject loop back to Harness -->
+  <path d="M370,340 Q230,395 110,278" fill="none" stroke="#B0B8C5" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#b)"/>
+  <text x="240" y="385" text-anchor="middle" font-size="10" fill="#7A8696">reject → revise harness</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">缝隙比组件更危险</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">failures live in the seams, not in the parts</text>
+
+  <!-- Two healthy components -->
+  <rect x="50" y="100" width="170" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="135" y="135" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="bold">declared state</text>
+  <text x="135" y="160" text-anchor="middle" font-size="11" fill="#3D4F65">registry · code  ✓ healthy</text>
+
+  <rect x="380" y="100" width="170" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="465" y="135" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="bold">runtime state</text>
+  <text x="465" y="160" text-anchor="middle" font-size="11" fill="#3D4F65">crontab · launchd  ✓ healthy</text>
+
+  <!-- The seam (crack) between the two healthy components -->
+  <path d="M230 110 Q255 150 240 175 Q225 200 250 230" stroke="#C97064" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <path d="M370 110 Q345 150 360 175 Q375 200 350 230" stroke="#C97064" stroke-width="3" stroke-dasharray="6 5" fill="none"/>
+  <text x="300" y="150" text-anchor="middle" font-size="13" fill="#C97064" font-weight="bold">the seam</text>
+  <text x="300" y="168" text-anchor="middle" font-size="10" fill="#C97064">silent drift</text>
+
+  <!-- Convergence engine -->
+  <rect x="150" y="270" width="300" height="80" rx="12" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="300" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Convergence Engine</text>
+  <text x="300" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">diff declared ↔ runtime</text>
+  <text x="300" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">alert → dry-run → machine-sync</text>
+
+  <!-- Arrows from components to engine edges -->
+  <path d="M150 200 L220 270" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M450 200 L380 270" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Sunset Law note -->
+  <text x="300" y="385" text-anchor="middle" font-size="12" fill="#1E3A5F" font-style="italic">Sunset Law: one logical entity → one physical form</text>
+  <text x="300" y="405" text-anchor="middle" font-size="10" fill="#3D4F65">retire an old mechanism before adding a new one</text>
+</svg>

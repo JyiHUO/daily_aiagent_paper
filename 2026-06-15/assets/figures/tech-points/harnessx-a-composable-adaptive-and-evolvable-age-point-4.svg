@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Segoe UI, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8956B"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Harness  &#8646;  Model  Co-Evolution</text>
+
+  <!-- Harness side -->
+  <g>
+    <circle cx="140" cy="220" r="72" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="140" cy="220" r="36" fill="#DCEBFB" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="216" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">Harness</text>
+    <text x="140" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">H0 H1 H2</text>
+    <text x="140" y="315" text-anchor="middle" font-size="11" fill="#3D4F65">scaffold evolves</text>
+  </g>
+
+  <!-- Model side -->
+  <g>
+    <circle cx="460" cy="220" r="72" fill="#FBEEE3" stroke="#E8956B" stroke-width="1.5"/>
+    <circle cx="460" cy="220" r="36" fill="#F5D9C2" stroke="#E8956B" stroke-width="1.5"/>
+    <text x="460" y="224" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">Model</text>
+    <text x="460" y="315" text-anchor="middle" font-size="11" fill="#3D4F65">weights evolve</text>
+  </g>
+
+  <!-- Shared replay buffer -->
+  <g>
+    <rect x="255" y="175" width="90" height="90" rx="6" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="300" y="192" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="600">replay buffer B</text>
+    <line x1="265" y1="202" x2="335" y2="202" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="265" y1="216" x2="335" y2="216" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="265" y1="230" x2="335" y2="230" stroke="#E8956B" stroke-width="1"/>
+    <line x1="265" y1="244" x2="335" y2="244" stroke="#E8956B" stroke-width="1"/>
+    <text x="300" y="282" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">shared (&#964;, r)</text>
+  </g>
+
+  <!-- Harness <-> Buffer arrows (two straight lanes) -->
+  <line x1="212" y1="200" x2="252" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="252" y1="240" x2="212" y2="240" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="232" y="194" text-anchor="middle" font-size="10" fill="#4B8BDA">rollouts</text>
+  <text x="232" y="256" text-anchor="middle" font-size="10" fill="#4B8BDA">AEGIS evidence</text>
+
+  <!-- Model <-> Buffer arrows -->
+  <line x1="388" y1="200" x2="348" y2="200" stroke="#E8956B" stroke-width="1.8" marker-end="url(#b)"/>
+  <line x1="348" y1="240" x2="388" y2="240" stroke="#E8956B" stroke-width="1.8" marker-end="url(#b)"/>
+  <text x="368" y="194" text-anchor="middle" font-size="10" fill="#C26B3F">rollouts</text>
+  <text x="368" y="256" text-anchor="middle" font-size="10" fill="#C26B3F">cross-harness GRPO</text>
+
+  <!-- Bottom takeaway -->
+  <text x="300" y="380" text-anchor="middle" font-size="12" fill="#1E3A5F">one buffer  ·  two learners  ·  break the scaffolding ceiling</text>
+</svg>

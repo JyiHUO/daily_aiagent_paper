@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/downloaded_pdfs/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-28",
+      "page_index": 4,
+      "caption": "Figure 3: Overview of A GENT C YBER R ANGE and the C AGE pipeline. A GENT C YBER R ANGE provides web and post exploitation tasks, and C AGE is an easy-to-use, scalable pipeline that runs heterogeneous agents on these tasks and automatically verifies their results.",
+      "clip": [
+        93.96099853515625,
+        519.56298828125,
+        518.0321350097656,
+        686.5753173828125
+      ],
+      "clip_area": 70825.10820737109,
+      "page_area": 484704.0,
+      "text_density": 0.1727743691033046,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.22048350055029,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-71",
+      "page_index": 6,
+      "caption": "Figure 4: Difficulty levels in A GENT C YBER R ANGE . Information increases from Level-0 to Level- 2. Web : Level-0 gives only the target URL, Level-1 adds which URLs are vulnerable, and Level-2 adds each vulnerability’s type. Post : Level-0 gives only the entry-point IP, Level-1 adds the topology, and Level-2 adds concrete CVEs and hints.",
+      "clip": [
+        91.97899627685547,
+        55.99818420410156,
+        520.010986328125,
+        284.2908020019531
+      ],
+      "clip_area": 97716.54351002828,
+      "page_area": 484704.0,
+      "text_density": 0.16990073694315563,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.691695155744311,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        92.0,
+        512.8040771484375,
+        520.0056762695312,
+        671.5339965820312
+      ],
+      "clip_area": 67937.3065113835,
+      "page_area": 484704.0,
+      "text_density": 0.16502947751486058,
+      "kind": "drawing_cluster",
+      "score": 9.65309031034596,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/03-p2-drawing_cluster.png",
+      "filename": "03-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        99.91899871826172,
+        330.94598388671875,
+        512.0790100097656,
+        538.2337036132812
+      ],
+      "clip_area": 85435.7089030901,
+      "page_area": 484704.0,
+      "text_density": 0.12315621963293609,
+      "kind": "drawing_cluster",
+      "score": 8.359912476502613,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/04-p3-drawing_cluster.png",
+      "filename": "04-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-11-drawing-caption-32",
+      "page_index": 11,
+      "caption": "Figure 7: Run-to-run variance of Level-0 web exploitation. Many vulnerabilities surface in only a single run, indicating high variance and explain- ing the gap between Pass@1 and Pass@3 (Max).",
+      "clip": [
+        288.0,
+        54.704917907714844,
+        522.002685546875,
+        198.47998046875
+      ],
+      "clip_area": 33643.75075395219,
+      "page_area": 484704.0,
+      "text_density": 0.18870217097559924,
+      "kind": "drawing_cluster_with_caption",
+      "score": 6.851689194285736,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/05-p12-drawing_cluster_with_caption.png",
+      "filename": "05-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        95.96099853515625,
+        521.56298828125,
+        516.0321350097656,
+        684.5753173828125
+      ],
+      "clip_area": 68476.7743450664,
+      "page_area": 484704.0,
+      "text_density": 0.15978925524596654,
+      "kind": "drawing_cluster",
+      "score": 3.9734977335205235,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/06-p5-drawing_cluster.png",
+      "filename": "06-p5-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-15/assets/figure_candidates/agentcyberrange-benchmarking-frontier-ai-systems-in-realistic-cyber-ranges/contact-sheet.svg"
+}

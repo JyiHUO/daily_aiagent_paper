@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 6/15：Agent 运行时被严肃对待",
+  "shownotes_html": "<p>这一期我们聊一件正在发生的转变：Agent 的研究重心，正从「更聪明的模型」滑向「更可治理的系统」。今天的三篇重点论文，分别从安全、harness 演化和具身 scaffold 三个切口，把 Agent 运行时层推上了独立的研究台面。</p><p><strong>本期重点</strong></p><ul><li><strong>面向 Agent 浏览器的同源策略（Same-Origin Policy for Agentic Browsers）</strong>：把 Web 经典的同源策略搬到 Agent 浏览器，指出 Agent 本身就是一条绕过 SOP 的跨域数据通道，并给出基准 SOPBench 与运行时防御 SOPGuard——用类似 OS 污点跟踪的思路，把跨域写入退化为「人工授权」一步。</li><li><strong>HarnessX：可组合、可适应、可演化的 Agent 外壳铸造厂</strong>：把 prompt、工具、记忆、控制流这层 harness 当成一等对象，把 harness 改写形式化为 RL 问题，并配合变体隔离与模型协同进化，让脚手架自己跑迭代而不是靠人手堆。</li><li><strong>AgentSpec：通过受控组合理解具身 Agent 的 scaffold</strong>：给感知/记忆/推理/反思/动作定义类型化接口，做大规模对照实验。两个有判断力的结论：记忆有没有用取决于和推理风格的匹配；RL 训练时就要把部署用的 scaffold 暴露给模型，否则上线挂记忆反而掉点。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全今天集中在 runtime 治理层：同源策略、guardrail 自身被 DoS、生产级静默失败分类，三种视角共同把「运行时」立成一个独立的安全研究面。</li><li>系统层与评测层同步下沉：harness/scaffold 从手工堆叠走向可组合可演化的工程科学，评测也从「最终成功率」转向「长期、流式、跨域」的能力审计。</li></ul><p>如果你正在做 Agent 产品，不妨顺着播客最后那个小练习，把自家系统的运行时拆开看看：换模型要改多少代码、加一道安全审批要动几个文件。欢迎在评论区聊聊你的答案。本期内容由 AI 自动生成整理，如有疏漏，欢迎指正交流。</p>",
+  "report_date": "2026-06-15",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-15T22:17:46Z"
+}

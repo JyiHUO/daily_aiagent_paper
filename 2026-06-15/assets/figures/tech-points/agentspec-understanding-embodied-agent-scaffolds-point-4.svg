@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C7634D"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E7D5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">训练要预演部署的脚手架</text>
+
+  <!-- Top row: GRPO -->
+  <text x="70" y="120" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#C7634D">GRPO</text>
+  <text x="70" y="140" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">裸prompt训练</text>
+
+  <rect x="170" y="95" width="130" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="235" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">训练: 裸观测</text>
+  <text x="235" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">无记忆</text>
+
+  <line x1="300" y1="125" x2="395" y2="125" stroke="#C7634D" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
+  <text x="347" y="116" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C7634D">分布漂移</text>
+
+  <rect x="400" y="95" width="150" height="60" rx="8" fill="#FBEDE7" stroke="#C7634D" stroke-width="1.5"/>
+  <text x="475" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">部署: 加记忆</text>
+  <text x="475" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">外部脚手架</text>
+
+  <line x1="550" y1="125" x2="580" y2="125" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <rect x="580" y="95" width="90" height="60" rx="8" fill="#F5F5F5" stroke="#C7634D" stroke-width="1.5"/>
+  <text x="625" y="123" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#C7634D">4.03</text>
+  <text x="625" y="142" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">下降</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="220" x2="660" y2="220" stroke="#D0D7E2" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Bottom row: SUPO -->
+  <text x="70" y="325" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#2E7D5C">SUPO</text>
+  <text x="70" y="345" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">摘要预演训练</text>
+
+  <rect x="170" y="300" width="130" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="235" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">训练: 带摘要</text>
+  <text x="235" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">每8步压缩</text>
+
+  <line x1="300" y1="330" x2="395" y2="330" stroke="#2E7D5C" stroke-width="2" marker-end="url(#arGreen)"/>
+  <text x="347" y="321" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#2E7D5C">分布对齐</text>
+
+  <rect x="400" y="300" width="150" height="60" rx="8" fill="#E8F3EC" stroke="#2E7D5C" stroke-width="1.5"/>
+  <text x="475" y="325" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">部署: 加记忆</text>
+  <text x="475" y="345" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">天然适配</text>
+
+  <line x1="550" y1="330" x2="580" y2="330" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <rect x="580" y="300" width="90" height="60" rx="8" fill="#F5F5F5" stroke="#2E7D5C" stroke-width="1.5"/>
+  <text x="625" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#2E7D5C">7.07</text>
+  <text x="625" y="347" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">提升</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">同一基模 · 同一记忆模块 · 差距来自训练时是否见过脚手架</text>
+</svg>

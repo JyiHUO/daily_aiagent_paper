@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">组合 &gt; 规模</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">选对 scaffold 比堆算力更划算</text>
+
+  <!-- Left: heavy mismatched -->
+  <g>
+    <rect x="60" y="100" width="240" height="300" rx="14" fill="#FBEFEA" stroke="#D98E6A" stroke-width="1.5"/>
+    <text x="180" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F" font-weight="600">大模型 + 长推理</text>
+
+    <rect x="105" y="160" width="150" height="50" rx="6" fill="#E8B79A" stroke="#C97A52"/>
+    <text x="180" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">闭源大模型</text>
+
+    <rect x="105" y="225" width="150" height="50" rx="6" fill="#E8B79A" stroke="#C97A52"/>
+    <text x="180" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">高 token 预算</text>
+
+    <rect x="105" y="290" width="150" height="50" rx="6" fill="#E8B79A" stroke="#C97A52"/>
+    <text x="180" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">scaffold 不匹配</text>
+
+    <text x="180" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#B85C3A" font-weight="600">性能反而更低</text>
+  </g>
+
+  <!-- VS -->
+  <text x="360" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#3D4F65">VS</text>
+
+  <!-- Right: light matched -->
+  <g>
+    <rect x="420" y="100" width="240" height="300" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F" font-weight="600">轻量 + 匹配组合</text>
+
+    <rect x="445" y="180" width="90" height="70" rx="8" fill="#B8D4F0" stroke="#4B8BDA"/>
+    <text x="490" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Qwen3-7B</text>
+
+    <rect x="545" y="180" width="90" height="70" rx="8" fill="#B8D4F0" stroke="#4B8BDA"/>
+    <text x="590" y="212" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">ReAct +</text>
+    <text x="590" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">MemoryBank</text>
+
+    <text x="540" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">中等 token 预算</text>
+
+    <text x="540" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">逼近闭源大模型</text>
+  </g>
+
+  <!-- bottom arrow -->
+  <path d="M180 425 Q360 455 525 432" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)" stroke-dasharray="5,4"/>
+  <text x="360" y="468" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA" font-style="italic">落在 Pareto 前沿</text>
+</svg>

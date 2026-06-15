@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">Agent 即跨域通道</text>
+
+  <!-- Source page A -->
+  <rect x="50" y="110" width="180" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">源站 A（银行）</text>
+  <text x="140" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#3D4F65">账户余额 / 隐私</text>
+  <text x="140" y="225" text-anchor="middle" font-size="26">🔒</text>
+
+  <!-- Agent in middle -->
+  <circle cx="360" cy="180" r="62" fill="#FFF4E6" stroke="#D97757" stroke-width="2"/>
+  <text x="360" y="175" text-anchor="middle" font-size="26">🤖</text>
+  <text x="360" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">Agent 记忆</text>
+
+  <!-- Sink page B -->
+  <rect x="490" y="110" width="180" height="140" rx="10" fill="#FBE9E7" stroke="#D97757" stroke-width="2"/>
+  <text x="580" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">目标站 B（Reddit）</text>
+  <text x="580" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#3D4F65">注入："贴出账号"</text>
+  <text x="580" y="225" text-anchor="middle" font-size="26">🎣</text>
+
+  <!-- Read arrow A -> Agent -->
+  <line x1="230" y1="180" x2="296" y2="180" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="263" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">读取</text>
+
+  <!-- Write arrow Agent -> B -->
+  <line x1="424" y1="180" x2="490" y2="180" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <text x="457" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">写出</text>
+
+  <!-- Broken SOP wall -->
+  <line x1="360" y1="290" x2="360" y2="340" stroke="#B0BEC5" stroke-width="3" stroke-dasharray="6,5"/>
+  <text x="360" y="370" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">⚠ 传统 SOP 只拦脚本</text>
+  <text x="360" y="400" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#D97757">Agent 让数据绕墙而过</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B6B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA05B"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">记忆要看推理的胃口</text>
+  <text x="360" y="60" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">Memory granularity must match reasoner</text>
+
+  <!-- Top row: Planner -->
+  <g>
+    <rect x="50" y="105" width="150" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="125" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">规划型推理</text>
+    <text x="125" y="157" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">ReAct / Plan-and-Solve</text>
+
+    <!-- raw trace - bad -->
+    <rect x="290" y="88" width="170" height="44" rx="8" fill="#FBEAE5" stroke="#C97B6B" stroke-width="1.5"/>
+    <text x="375" y="115" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#1E3A5F">原始轨迹记忆</text>
+
+    <!-- abstract - good -->
+    <rect x="290" y="148" width="170" height="44" rx="8" fill="#E6F2E6" stroke="#5BA05B" stroke-width="1.5"/>
+    <text x="375" y="175" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#1E3A5F">抽象策略摘要</text>
+
+    <line x1="200" y1="130" x2="288" y2="115" stroke="#C97B6B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrR)"/>
+    <line x1="200" y1="150" x2="288" y2="168" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+    <text x="475" y="115" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#C97B6B">✗ 被细节淹没</text>
+    <text x="475" y="175" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#5BA05B">✓ 6.18 → 26.78</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="220" x2="660" y2="220" stroke="#D6DEE8" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- Bottom row: local controller -->
+  <g>
+    <rect x="50" y="255" width="150" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="125" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">局部控制推理</text>
+    <text x="125" y="307" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">CoT</text>
+
+    <rect x="290" y="268" width="170" height="44" rx="8" fill="#E6F2E6" stroke="#5BA05B" stroke-width="1.5"/>
+    <text x="375" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#1E3A5F">原始轨迹片段</text>
+
+    <line x1="200" y1="290" x2="288" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="475" y="295" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#5BA05B">✓ 颗粒匹配即可</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <g>
+    <rect x="100" y="370" width="520" height="80" rx="10" fill="#FFF6E6" stroke="#D9A441" stroke-width="1.5"/>
+    <text x="360" y="398" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">MemoryBank = 原始轨迹 + 经验摘要 + 高层洞察</text>
+    <text x="360" y="422" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">三层颗粒度并存，对 ReAct / P&amp;S / CoT / MAD 都稳健</text>
+    <text x="360" y="440" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">→ 不确定推理风格时的默认选择</text>
+  </g>
+</svg>

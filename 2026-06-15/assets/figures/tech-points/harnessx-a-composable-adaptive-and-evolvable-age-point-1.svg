@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Harness as First-Class Object</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">H = (Model, Components)   ·   8 lifecycle hooks</text>
+
+  <!-- Backbone rail with 8 hooks -->
+  <line x1="80" y1="160" x2="520" y2="160" stroke="#1E3A5F" stroke-width="2.5"/>
+  <text x="72" y="164" text-anchor="end" font-size="11" fill="#3D4F65">hooks</text>
+
+  <g fill="#4B8BDA">
+    <circle cx="110" cy="160" r="6"/>
+    <circle cx="170" cy="160" r="6"/>
+    <circle cx="230" cy="160" r="6"/>
+    <circle cx="290" cy="160" r="6"/>
+    <circle cx="350" cy="160" r="6"/>
+    <circle cx="410" cy="160" r="6"/>
+    <circle cx="470" cy="160" r="6"/>
+    <circle cx="520" cy="160" r="6"/>
+  </g>
+
+  <!-- highlight one hook -->
+  <circle cx="290" cy="160" r="11" fill="none" stroke="#E8A33D" stroke-width="2"/>
+  <text x="290" y="138" text-anchor="middle" font-size="11" fill="#1E3A5F">before-tool hook</text>
+
+  <!-- pluggable processor -->
+  <rect x="240" y="220" width="100" height="46" rx="8" fill="#FFF4E0" stroke="#E8A33D" stroke-width="1.6"/>
+  <text x="290" y="240" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">processor</text>
+  <text x="290" y="256" text-anchor="middle" font-size="10" fill="#3D4F65">async process(event)</text>
+
+  <!-- alternative processors hint -->
+  <rect x="120" y="230" width="80" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-dasharray="3 3"/>
+  <text x="160" y="251" text-anchor="middle" font-size="11" fill="#3D4F65">swap</text>
+
+  <rect x="380" y="230" width="80" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-dasharray="3 3"/>
+  <text x="420" y="251" text-anchor="middle" font-size="11" fill="#3D4F65">remove</text>
+
+  <path d="M200,247 L238,247" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <path d="M342,247 L380,247" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <path d="M290,218 L290,174" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- 9 orthogonal axes as chips -->
+  <text x="300" y="305" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">9 orthogonal axes</text>
+  <g font-size="10.5" fill="#1E3A5F">
+    <rect x="70"  y="320" width="62" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="101" y="335" text-anchor="middle">model</text>
+    <rect x="140" y="320" width="62" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="171" y="335" text-anchor="middle">context</text>
+    <rect x="210" y="320" width="62" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="241" y="335" text-anchor="middle">memory</text>
+    <rect x="280" y="320" width="56" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="308" y="335" text-anchor="middle">tools</text>
+    <rect x="344" y="320" width="62" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="375" y="335" text-anchor="middle">sandbox</text>
+    <rect x="414" y="320" width="56" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="442" y="335" text-anchor="middle">reward</text>
+    <rect x="478" y="320" width="52" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="504" y="335" text-anchor="middle">safety</text>
+
+    <rect x="160" y="350" width="92" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="206" y="365" text-anchor="middle">observability</text>
+    <rect x="350" y="350" width="92" height="22" rx="11" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="396" y="365" text-anchor="middle">train-bridge</text>
+  </g>
+
+  <text x="300" y="400" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">composable · type-safe · evolvable</text>
+</svg>
