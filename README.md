@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-12
+- **日期**：2026-06-15
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - TerraBench: Can Agents Reason Over Heterogeneous Earth-System Data?
-  - MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback
-  - $\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation
-- **日报路径**：[2026-06-12/daily_report.md](2026-06-12/daily_report.md)
+  - HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry
+  - When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime
+  - AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges
+- **日报路径**：[2026-06-15/daily_report.md](2026-06-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry | [2026-06-15/daily_report.md](2026-06-15/daily_report.md) |
+|  |  |  | 2 | When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime |  |
+|  |  |  | 3 | AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges |  |
 | 2026-06-12 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | TerraBench: Can Agents Reason Over Heterogeneous Earth-System Data? | [2026-06-12/daily_report.md](2026-06-12/daily_report.md) |
 |  |  |  | 2 | MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback |  |
 |  |  |  | 3 | $\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation |  |
