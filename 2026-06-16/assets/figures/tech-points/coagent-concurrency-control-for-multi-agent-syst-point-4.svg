@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">并发控制协议对比 (Serial = 1.0×)</text>
+
+  <!-- 基准线 -->
+  <line x1="60" y1="240" x2="680" y2="240" stroke="#4B8BDA" stroke-dasharray="4,4" stroke-width="1" opacity="0.6"/>
+  <text x="68" y="236" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#4B8BDA">1.0× baseline</text>
+
+  <!-- Serial -->
+  <rect x="80" y="240" width="90" height="160" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5" rx="4"/>
+  <text x="125" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">1.0×</text>
+  <text x="125" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">Serial</text>
+
+  <!-- 2PL -->
+  <rect x="200" y="234" width="90" height="166" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" rx="4"/>
+  <text x="245" y="224" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">1.04×</text>
+  <text x="245" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">2PL</text>
+  <text x="245" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#DC2626">死锁 0.81/次</text>
+
+  <!-- OCC -->
+  <rect x="320" y="251" width="90" height="149" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" rx="4"/>
+  <text x="365" y="241" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">0.93×</text>
+  <text x="365" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">OCC</text>
+  <text x="365" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#DC2626">abort 0.95/次</text>
+
+  <!-- No Coord -->
+  <rect x="440" y="176" width="90" height="224" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5" rx="4"/>
+  <text x="485" y="166" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">快但崩</text>
+  <text x="485" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">No Coord</text>
+  <text x="485" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#D97706">通过率 13%</text>
+
+  <!-- MTPO (winner) -->
+  <rect x="560" y="200" width="90" height="200" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5" rx="4"/>
+  <text x="605" y="190" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">1.4×</text>
+  <text x="605" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">MTPO</text>
+  <text x="605" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#2563EB">正确率 ≈ Serial</text>
+
+  <!-- 胜出箭头 -->
+  <path d="M 470 110 Q 560 110 600 195" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="360" y="105" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">语义并发控制胜出：保留并发收益且正确率不掉</text>
+</svg>

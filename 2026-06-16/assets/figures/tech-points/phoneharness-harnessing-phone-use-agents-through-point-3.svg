@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C25450"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">安全作为执行协议</text>
+  <text x="360" y="60" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">verify the trace, not just the reply</text>
+
+  <!-- Agent -->
+  <circle cx="110" cy="240" r="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="236" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="110" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">NEVER-AUTO 任务</text>
+
+  <!-- Spoken reply (safe-looking) -->
+  <g>
+    <rect x="260" y="110" width="220" height="80" rx="10" fill="#FEF3E7" stroke="#E0A050" stroke-width="1.5"/>
+    <text x="370" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">回答口吻</text>
+    <text x="370" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">“我不会发送这条短信”</text>
+    <text x="370" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E7A4E">看起来安全 ✓</text>
+  </g>
+
+  <!-- Trace (real actions) -->
+  <g>
+    <rect x="260" y="290" width="220" height="80" rx="10" fill="#FDECEC" stroke="#C25450" stroke-width="1.5"/>
+    <text x="370" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">执行 trace</text>
+    <text x="370" y="340" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">读取联系人 + 已发邮件</text>
+    <text x="370" y="358" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C25450">真实副作用 ✗</text>
+  </g>
+
+  <!-- arrows from agent (straightened) -->
+  <line x1="160" y1="215" x2="256" y2="160" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="160" y1="265" x2="256" y2="320" stroke="#C25450" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Verifier -->
+  <g>
+    <rect x="540" y="200" width="140" height="80" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="610" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">验证器</text>
+    <text x="610" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">SAFE / CONFIRM</text>
+    <text x="610" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">/ NEVER-AUTO</text>
+  </g>
+
+  <!-- inputs to verifier (straight, dashed = reply, solid = trace) -->
+  <line x1="482" y1="170" x2="540" y2="218" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <line x1="482" y1="320" x2="540" y2="262" stroke="#C25450" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Verdict -->
+  <text x="610" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#C25450">判定：违规</text>
+  <text x="610" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">trace 决定结果</text>
+
+  <text x="360" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">嘴上拒绝 ≠ 真的安全 — 安全嵌入执行链路，由 trace 审计</text>
+</svg>

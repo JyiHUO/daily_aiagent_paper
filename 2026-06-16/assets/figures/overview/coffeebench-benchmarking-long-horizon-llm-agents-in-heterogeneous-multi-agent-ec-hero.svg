@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="560" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">CoffeeBench：异构多 Agent 经济沙盒</text>
+  <text x="400" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">90 天 · 6 家企业 · 一条会议价的咖啡供应链</text>
+
+  <!-- Side note: time mechanic -->
+  <g transform="translate(40,110)">
+    <rect x="0" y="0" width="170" height="58" rx="8" fill="#FFFFFF" stroke="#B0C4DE" stroke-width="1"/>
+    <text x="12" y="22" font-size="11" font-weight="700" fill="#1E3A5F">时间是稀缺资源</text>
+    <text x="12" y="40" font-size="10" fill="#3D4F65">每次工具调用 = 30 分钟</text>
+  </g>
+
+  <g transform="translate(590,110)">
+    <rect x="0" y="0" width="170" height="58" rx="8" fill="#FFFFFF" stroke="#B0C4DE" stroke-width="1"/>
+    <text x="12" y="22" font-size="11" font-weight="700" fill="#1E3A5F">KPI：累计净利润</text>
+    <text x="12" y="40" font-size="10" fill="#3D4F65">长程一致性考验</text>
+  </g>
+
+  <!-- Outer ring: supply chain -->
+  <g>
+    <!-- Farmer -->
+    <circle cx="150" cy="260" r="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="256" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">农场 A/B</text>
+    <text x="150" y="274" text-anchor="middle" font-size="11" fill="#3D4F65">生豆供应</text>
+
+    <!-- Roaster B (peer) -->
+    <circle cx="400" cy="190" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="400" y="186" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">烘焙商 B</text>
+    <text x="400" y="203" text-anchor="middle" font-size="11" fill="#3D4F65">同行参考</text>
+
+    <!-- Retailer -->
+    <circle cx="650" cy="260" r="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="650" y="256" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">零售商 A/B</text>
+    <text x="650" y="274" text-anchor="middle" font-size="11" fill="#3D4F65">下游销售</text>
+  </g>
+
+  <!-- Center: Agent under test -->
+  <g>
+    <circle cx="400" cy="340" r="78" fill="#FFF4EE" stroke="#D97757" stroke-width="2"/>
+    <text x="400" y="326" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">被测 Agent</text>
+    <text x="400" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#D97757">烘焙商 A</text>
+    <text x="400" y="368" text-anchor="middle" font-size="11" fill="#3D4F65">议价 · 烘焙 · 销售</text>
+  </g>
+
+  <!-- Farmer -> Center (green beans) -->
+  <path d="M 195 285 Q 270 330 327 326" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="210" y="320" font-size="11" fill="#3D4F65">生豆 / 议价</text>
+
+  <!-- Center -> Retailer (roasted) -->
+  <path d="M 473 326 Q 530 330 605 285" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="540" y="320" font-size="11" fill="#3D4F65">熟豆 / 报价</text>
+
+  <!-- Peer roaster connection (weak) -->
+  <path d="M 400 236 L 400 262" fill="none" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="2,3"/>
+  <text x="410" y="254" font-size="10" fill="#9098A8">几乎零沟通</text>
+
+  <!-- Bottom: two failure / success paths -->
+  <g>
+    <!-- Success: GPT-5.5 -->
+    <rect x="60" y="460" width="300" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="78" y="486" font-size="13" font-weight="700" fill="#1E3A5F">主动议价 → 盈利</text>
+    <text x="78" y="506" font-size="11" fill="#3D4F65">GPT-5.5：≈140 条 DM</text>
+    <text x="78" y="523" font-size="11" fill="#3D4F65">净利润 +3,109</text>
+
+    <!-- Failure: idle-drift -->
+    <rect x="440" y="460" width="300" height="80" rx="10" fill="#FFF4EE" stroke="#D97757" stroke-width="1.5"/>
+    <text x="458" y="486" font-size="13" font-weight="700" fill="#D97757">idle-drift：想而不动</text>
+    <text x="458" y="506" font-size="11" fill="#3D4F65">Haiku 4.5：≈40 天空转</text>
+    <text x="458" y="523" font-size="11" fill="#3D4F65">净利润 −630</text>
+  </g>
+
+  <!-- Connectors from center to outcomes -->
+  <path d="M 355 410 Q 280 440 235 460" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <path d="M 445 410 Q 520 440 565 460" fill="none" stroke="#D97757" stroke-width="1.8" marker-end="url(#arO)"/>
+</svg>

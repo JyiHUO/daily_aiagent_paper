@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">外层控制器 + GUI Worker 解耦</text>
+  <text x="360" y="70" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">项目经理 + 实习生：各司其职</text>
+
+  <!-- Outer Controller (Manager) -->
+  <rect x="70" y="120" width="240" height="200" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <circle cx="190" cy="180" r="28" fill="#4B8BDA" opacity="0.85"/>
+  <text x="190" y="187" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">PM</text>
+  <text x="190" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">外层控制器</text>
+  <text x="190" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">规划 · CLI · MCP 调用</text>
+  <text x="190" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A8FA8">DeepSeek V4</text>
+
+  <!-- GUI Worker (Intern) -->
+  <rect x="410" y="120" width="240" height="200" rx="14" fill="#FDF2E9" stroke="#E89B5C" stroke-width="2"/>
+  <circle cx="530" cy="180" r="28" fill="#E89B5C" opacity="0.9"/>
+  <text x="530" y="187" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">GUI</text>
+  <text x="530" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">GUI Worker</text>
+  <text x="530" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">框定的点屏幕子任务</text>
+  <text x="530" y="295" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A8FA8">Seed2.0-Pro</text>
+
+  <!-- Arrows between -->
+  <path d="M310,200 L406,200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arrB)"/>
+  <text x="358" y="192" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">派发子任务</text>
+
+  <path d="M410,250 L314,250" stroke="#E89B5C" stroke-width="2.2" fill="none" marker-end="url(#arrO)"/>
+  <text x="358" y="268" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">回传结果</text>
+
+  <!-- Result -->
+  <rect x="180" y="380" width="360" height="64" rx="10" fill="#F0F7F0" stroke="#5BA572" stroke-width="2"/>
+  <text x="360" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">模型对组合 · 总通过率 74.8%</text>
+  <text x="360" y="428" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">评测对象从单模型走向「模型对」</text>
+
+  <path d="M230,320 L320,378" stroke="#5BA572" stroke-width="1.6" fill="none" stroke-dasharray="4,3"/>
+  <path d="M490,320 L400,378" stroke="#5BA572" stroke-width="1.6" fill="none" stroke-dasharray="4,3"/>
+</svg>

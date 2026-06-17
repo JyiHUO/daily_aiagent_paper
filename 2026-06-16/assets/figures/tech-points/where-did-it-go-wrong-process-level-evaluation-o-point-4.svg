@@ -1,0 +1,75 @@
+<svg width="720" height="480" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">三轴难度旋钮</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Difficulty Knobs</text>
+
+  <!-- Axis 1: hard negatives -->
+  <g>
+    <rect x="60" y="100" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">干扰项数量</text>
+    <circle cx="100" cy="170" r="9" fill="#F5B945"/>
+    <circle cx="130" cy="170" r="9" fill="#B8C5D6"/>
+    <circle cx="160" cy="170" r="9" fill="#B8C5D6"/>
+    <circle cx="190" cy="170" r="9" fill="#B8C5D6"/>
+    <text x="150" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">1 target + N negatives</text>
+  </g>
+
+  <!-- Axis 2: trajectory length -->
+  <g>
+    <rect x="270" y="100" width="180" height="120" rx="10" fill="#FFF6E5" stroke="#F5B945" stroke-width="1.5"/>
+    <text x="360" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">轨迹长度</text>
+    <line x1="295" y1="170" x2="425" y2="170" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <circle cx="305" cy="170" r="4" fill="#4B8BDA"/>
+    <circle cx="340" cy="170" r="4" fill="#4B8BDA"/>
+    <circle cx="375" cy="170" r="4" fill="#4B8BDA"/>
+    <text x="360" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">oracle steps</text>
+  </g>
+
+  <!-- Axis 3: info depth -->
+  <g>
+    <rect x="480" y="100" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="570" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">信息层级</text>
+    <rect x="500" y="152" width="40" height="28" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="520" y="171" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">card</text>
+    <rect x="550" y="152" width="40" height="28" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="570" y="171" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">filter</text>
+    <rect x="600" y="152" width="40" height="28" rx="3" fill="#1E3A5F" stroke="#1E3A5F"/>
+    <text x="620" y="171" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#FFFFFF">detail</text>
+    <text x="570" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">浅 → 深</text>
+  </g>
+
+  <!-- Arrows down -->
+  <line x1="150" y1="222" x2="220" y2="293" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="360" y1="222" x2="360" y2="293" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="570" y1="222" x2="500" y2="293" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Outcome: separation -->
+  <g>
+    <rect x="100" y="300" width="520" height="150" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="360" y="326" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">拉开模型差距（探索 SR）</text>
+
+    <!-- axis -->
+    <line x1="150" y1="420" x2="590" y2="420" stroke="#3D4F65" stroke-width="1"/>
+    <text x="150" y="438" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">易</text>
+    <text x="575" y="438" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">难</text>
+
+    <!-- bunched left -->
+    <circle cx="195" cy="378" r="6" fill="#4B8BDA"/>
+    <circle cx="205" cy="374" r="6" fill="#F5B945"/>
+    <circle cx="200" cy="384" r="6" fill="#1E3A5F"/>
+
+    <!-- spread right -->
+    <circle cx="520" cy="352" r="6" fill="#4B8BDA"/>
+    <circle cx="545" cy="385" r="6" fill="#F5B945"/>
+    <circle cx="570" cy="408" r="6" fill="#1E3A5F"/>
+
+    <path d="M 215 376 Q 360 365 510 354" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+    <path d="M 215 378 Q 360 385 535 385" stroke="#F5B945" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+    <path d="M 215 384 Q 360 405 560 408" stroke="#1E3A5F" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  </g>
+</svg>

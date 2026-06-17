@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">语义 MDP 影子追踪</text>
+
+  <!-- GUI layer (top) -->
+  <rect x="80" y="70" width="560" height="120" rx="10" fill="#FFF4E6" stroke="#E8A857" stroke-width="2"/>
+  <text x="95" y="92" font-size="14" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-weight="bold">GUI 表层 · 坐标动作</text>
+
+  <circle cx="180" cy="135" r="16" fill="#FFD9A8" stroke="#E8A857"/>
+  <text x="180" y="139" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">点击</text>
+  <text x="180" y="172" text-anchor="middle" font-size="11" fill="#7A6244" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">(179,495)</text>
+
+  <circle cx="360" cy="135" r="16" fill="#FFD9A8" stroke="#E8A857"/>
+  <text x="360" y="139" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">回退</text>
+  <text x="360" y="172" text-anchor="middle" font-size="11" fill="#7A6244" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">history-back</text>
+
+  <circle cx="540" cy="135" r="16" fill="#FFD9A8" stroke="#E8A857"/>
+  <text x="540" y="139" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">点击</text>
+  <text x="540" y="172" text-anchor="middle" font-size="11" fill="#7A6244" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">(272,269)</text>
+
+  <!-- Translation arrows -->
+  <line x1="180" y1="200" x2="180" y2="273" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="360" y1="200" x2="360" y2="273" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="540" y1="200" x2="540" y2="273" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="655" y="245" text-anchor="end" font-size="12" fill="#4B8BDA" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-style="italic">影子映射</text>
+
+  <!-- MDP layer (bottom) -->
+  <rect x="80" y="280" width="560" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="95" y="302" font-size="14" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-weight="bold">语义 MDP 影子 · 高层动作</text>
+
+  <rect x="135" y="325" width="90" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="180" y="348" text-anchor="middle" font-size="12" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">ViewRepo(020)</text>
+
+  <rect x="315" y="325" width="90" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="360" y="348" text-anchor="middle" font-size="12" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">ViewRepo(023)</text>
+
+  <rect x="495" y="325" width="90" height="36" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+  <text x="540" y="348" text-anchor="middle" font-size="12" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">StarRepo(023)</text>
+
+  <line x1="225" y1="343" x2="312" y2="343" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+  <line x1="405" y1="343" x2="492" y2="343" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arr)"/>
+
+  <text x="360" y="386" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">语义轨迹随状态转移自动记录 · 无需人工标注</text>
+
+  <!-- Footer insight -->
+  <text x="360" y="440" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">网页本就由状态机渲染 → 过程标注零成本</text>
+</svg>

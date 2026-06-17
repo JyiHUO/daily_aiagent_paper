@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/downloaded_pdfs/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions",
+  "candidates": [
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 1: PhoneHarness host-device architecture. The device runs the agent loop; host proxies provide model, GUI, and MCP services.",
+      "clip": [
+        104.9280014038086,
+        73.04234313964844,
+        490.3435363769531,
+        339.510986328125
+      ],
+      "clip_area": 102701.15466805466,
+      "page_area": 501156.9211820215,
+      "text_density": 0.006304081665257902,
+      "kind": "embedded_image_with_caption",
+      "xref": 339,
+      "score": 67.14112394075616,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/01-p4-embedded_image_with_caption.png",
+      "filename": "01-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 1: PhoneHarness host-device architecture. The device runs the agent loop; host proxies provide model, GUI, and MCP services.",
+      "clip": [
+        94.9280014038086,
+        67.04234313964844,
+        500.3435363769531,
+        345.510986328125
+      ],
+      "clip_area": 112895.51395150193,
+      "page_area": 501156.9211820215,
+      "text_density": 0.027578832575029504,
+      "kind": "image_block_with_caption",
+      "score": 67.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/02-p4-image_block_with_caption.png",
+      "filename": "02-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-drawing-caption-8",
+      "page_index": 10,
+      "caption": "Figure 6: Pass rate on mixed-action-affordance tasks. PhoneHarness (Ours) is strongest when CLI operations are available either as an alternative path or as optional support for GUI-primary workflows.",
+      "clip": [
+        135.07200622558594,
+        69.03797912597656,
+        460.2041015625,
+        230.27703857421875
+      ],
+      "clip_area": 52423.99324856023,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14365309418441954,
+      "kind": "drawing_cluster_with_caption",
+      "score": 63.763303162807716,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/03-p11-drawing_cluster_with_caption.png",
+      "filename": "03-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-caption-10",
+      "page_index": 11,
+      "caption": "Figure 7: Execution steps by task type. PhoneHarness (Ours) reduces steps on device/system operations and tool-assisted workflows by routing away from unnecessary GUI exploration.",
+      "clip": [
+        105.30599975585938,
+        69.03794860839844,
+        489.9884338378906,
+        255.58099365234375
+      ],
+      "clip_area": 71759.83262857888,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1683852408435171,
+      "kind": "drawing_cluster_with_caption",
+      "score": 60.494217023039845,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/04-p12-drawing_cluster_with_caption.png",
+      "filename": "04-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-block-8",
+      "page_index": 10,
+      "caption": "Figure 6: Pass rate on mixed-action-affordance tasks. PhoneHarness (Ours) is strongest when CLI operations are available either as an alternative path or as optional support for GUI-primary workflows.",
+      "clip": [
+        54.857202148437494,
+        18.0,
+        540.3878234863281,
+        216.59713745117188
+      ],
+      "clip_area": 96424.99154259394,
+      "page_area": 501156.9211820215,
+      "text_density": 0.05894893632119436,
+      "kind": "captioned_figure",
+      "score": 56.07138879491771,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/05-p11-captioned_figure.png",
+      "filename": "05-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-11-block-10",
+      "page_index": 11,
+      "caption": "Figure 7: Execution steps by task type. PhoneHarness (Ours) reduces steps on device/system operations and tool-assisted workflows by routing away from unnecessary GUI exploration.",
+      "clip": [
+        55.27520141601562,
+        18.0,
+        539.9950622558594,
+        241.90115356445312
+      ],
+      "clip_area": 108529.33599764219,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09120448309074987,
+      "kind": "captioned_figure",
+      "score": 53.53361252563992,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/06-p12-captioned_figure.png",
+      "filename": "06-p12-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/assets/figure_candidates/phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions/contact-sheet.svg"
+}

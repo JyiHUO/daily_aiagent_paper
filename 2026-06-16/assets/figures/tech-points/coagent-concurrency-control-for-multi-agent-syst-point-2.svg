@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B4C"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7B8C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">MTPO：启动即定序 σ，依赖单向流动</text>
+
+  <!-- Agent A (low rank) -->
+  <circle cx="160" cy="200" r="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="160" y="196" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="600" fill="#1E3A5F">Agent A</text>
+  <text x="160" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">σ = 1（低）</text>
+
+  <!-- Agent B (high rank) -->
+  <circle cx="560" cy="200" r="60" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+  <text x="560" y="196" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="600" fill="#1E3A5F">Agent B</text>
+  <text x="560" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">σ = 2（高）</text>
+
+  <!-- shared object trajectory -->
+  <rect x="290" y="160" width="140" height="80" rx="10" fill="#F5F5F5" stroke="#9AA8B8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="360" y="188" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">共享对象</text>
+  <text x="360" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">write trajectory</text>
+  <text x="360" y="228" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">按 σ 排序</text>
+
+  <!-- A writes to object -->
+  <line x1="220" y1="195" x2="288" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrowB)"/>
+  <text x="254" y="186" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">write</text>
+
+  <!-- notify B (framework -> high σ) -->
+  <line x1="432" y1="195" x2="500" y2="195" stroke="#E89B4C" stroke-width="2" marker-end="url(#arrowO)"/>
+  <text x="466" y="186" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#E89B4C">notify</text>
+
+  <!-- B filtered read back from object -->
+  <path d="M 500 220 Q 466 250 432 220" fill="none" stroke="#6B7B8C" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#arrowG)"/>
+  <text x="466" y="263" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">read（仅 σ ≤ self）</text>
+
+  <!-- timeline arrow σ -->
+  <line x1="80" y1="370" x2="660" y2="370" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="80" y="392" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">低 σ</text>
+  <text x="630" y="392" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">高 σ</text>
+
+  <!-- bottom note: replay -->
+  <rect x="140" y="420" width="440" height="40" rx="8" fill="#F0F4F9" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="360" y="446" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">迟到写 → 逆操作回滚 → 按 σ 重放，达到 quiescence 即等价串行</text>
+</svg>

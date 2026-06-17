@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 6/16：把 Agent 当系统造",
+  "shownotes_html": "<p>当 Agent 不再只追求更聪明的模型，而是开始像分布式系统一样被认真设计——这一期我们挑了三篇代表作，从 runtime、评测到手机端动作面，看看 Agent 工程化这条线今天走到了哪。</p><p><strong>本期重点</strong></p><ul><li><strong>多 Agent 并发控制（CoAgent: Concurrency Control for Multi-Agent Systems）</strong>：把传统数据库里的 2PL/OCC 换掉，用 LLM 的语义判断当并发控制新原语，提出 MTPO 协议，让冲突时 Agent 自己打补丁，10 个高竞争场景下接近串行正确率却拿到 1.4× 加速。</li><li><strong>Web Agent 过程级评测（Where Did It Go Wrong? Process-Level Evaluation of Web Agents with Semantic State Tracking）</strong>：给网页挂一个语义 MDP 影子，把成功率拆成探索、执行、技能三层，还能在共享状态上对齐成功/失败轨迹，精确定位每个 Agent 是栽在哪一步。</li><li><strong>手机 Agent 混合动作面（PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions）</strong>：让手机 Agent 像懂 adb 的工程师，GUI/CLI/工具混合路由，确定性优先；评测只认真实副作用，安全策略嵌进执行协议而不是事后审查。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent runtime 正成为独立战场：并发控制、协议语言、可执行记忆同时把\"prompt 编排\"换成\"可验证协议\"。</li><li>评测和安全一起下沉：过程级轨迹分析成为新底座，组合攻面、记忆旁路、伪死规避提醒孤立 guardrail 已经不够用。</li></ul><p>欢迎在评论区聊聊你最想看哪条线继续展开。本期内容由 AI 自动整理生成，如有疏漏欢迎指正，我们下期见。</p>",
+  "report_date": "2026-06-16",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-16T22:43:21Z"
+}

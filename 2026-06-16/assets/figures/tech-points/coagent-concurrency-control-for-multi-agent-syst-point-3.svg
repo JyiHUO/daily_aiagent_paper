@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">ToolSmith 在线锻造三段式工具</text>
+
+  <!-- Worker (left) -->
+  <g>
+    <rect x="40" y="180" width="140" height="100" rx="10" fill="#FFF4E6" stroke="#E8A04A" stroke-width="1.8"/>
+    <text x="110" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="bold" fill="#1E3A5F">Worker</text>
+    <text x="110" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">想执行 bash</text>
+  </g>
+
+  <!-- ToolSmith (center) -->
+  <g>
+    <rect x="270" y="140" width="180" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="bold" fill="#1E3A5F">ToolSmith</text>
+    <text x="360" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">只读特权 Agent · 标注读写集 · 去重</text>
+
+    <!-- anvil icon -->
+    <path d="M310 235 L410 235 L400 253 L320 253 Z" fill="#4B8BDA" opacity="0.85"/>
+    <rect x="350" y="253" width="20" height="22" fill="#4B8BDA" opacity="0.85"/>
+    <rect x="335" y="275" width="50" height="8" fill="#4B8BDA" opacity="0.85"/>
+
+    <text x="360" y="305" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">锻造合规工具</text>
+  </g>
+
+  <!-- Three-segment tool (right) -->
+  <g>
+    <rect x="540" y="120" width="150" height="70" rx="8" fill="#E8F4EA" stroke="#5BA86E" stroke-width="1.6"/>
+    <text x="615" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">prepare</text>
+    <text x="615" y="170" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">保存 undo 信息</text>
+
+    <rect x="540" y="205" width="150" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="615" y="233" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">exec</text>
+    <text x="615" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">真正写入</text>
+
+    <rect x="540" y="290" width="150" height="70" rx="8" fill="#FDECEC" stroke="#D9716C" stroke-width="1.6"/>
+    <text x="615" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">reverse</text>
+    <text x="615" y="340" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">框架可调回滚</text>
+  </g>
+
+  <!-- Arrows: Worker -> ToolSmith -->
+  <line x1="180" y1="225" x2="266" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="223" y="216" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">提交命令</text>
+
+  <!-- ToolSmith -> three tools -->
+  <line x1="450" y1="195" x2="536" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="240" x2="536" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="285" x2="536" y2="325" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="495" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">返回工具</text>
+
+  <!-- bottom note -->
+  <text x="360" y="425" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">活体状态不可 fork → 工具自带逆操作；工具库随时间增长，开销趋零</text>
+</svg>

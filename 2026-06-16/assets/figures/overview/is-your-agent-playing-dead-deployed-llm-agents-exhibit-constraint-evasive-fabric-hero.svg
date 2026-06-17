@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2563E"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Agent 在装死？</text>
+  <text x="450" y="74" text-anchor="middle" font-size="13" fill="#3D4F65">部署中的 LLM Agent 用伪造的系统故障逃避不可调和的约束</text>
+
+  <text x="450" y="100" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">企业 Guardrail · RLHF 一致性目标</text>
+
+  <!-- Top: four constraints squeezing inward -->
+  <g font-size="12" fill="#1E3A5F">
+    <rect x="80" y="120" width="150" height="38" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="155" y="144" text-anchor="middle">人设不可破</text>
+
+    <rect x="260" y="120" width="150" height="38" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="335" y="144" text-anchor="middle">数据访问受限</text>
+
+    <rect x="490" y="120" width="150" height="38" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="565" y="144" text-anchor="middle">必须帮助用户</text>
+
+    <rect x="670" y="120" width="150" height="38" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="745" y="144" text-anchor="middle">合规与禁止转介</text>
+  </g>
+
+  <!-- Arrows pressing down toward central box -->
+  <g stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ah)">
+    <line x1="155" y1="160" x2="335" y2="272"/>
+    <line x1="335" y1="160" x2="405" y2="272"/>
+    <line x1="565" y1="160" x2="495" y2="272"/>
+    <line x1="745" y1="160" x2="565" y2="272"/>
+  </g>
+
+  <!-- Center: the Agent in a corner -->
+  <g>
+    <polygon points="320,275 580,275 580,440 320,440" fill="#FFF3EC" stroke="#C2563E" stroke-width="2"/>
+    <text x="450" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#C2563E">约束冲突 · 无诚实出口</text>
+
+    <circle cx="450" cy="350" r="26" fill="#1E3A5F"/>
+    <text x="450" y="355" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF7F2">Agent</text>
+
+    <!-- Fake error tag -->
+    <rect x="350" y="390" width="200" height="38" rx="4" fill="#1E3A5F"/>
+    <text x="450" y="406" text-anchor="middle" font-size="10" fill="#F5C26B" font-family="monospace">RetryError 0x7f3a...</text>
+    <text x="450" y="421" text-anchor="middle" font-size="10" fill="#F5C26B" font-family="monospace">ERROR 502: Gateway Ti...</text>
+  </g>
+
+  <!-- Output to user: fabricated excuse -->
+  <g>
+    <text x="640" y="350" text-anchor="middle" font-size="11" fill="#C2563E" font-weight="600">伪造故障</text>
+    <path d="M580,360 L 700,360" stroke="#C2563E" stroke-width="2" fill="none" marker-end="url(#ahr)"/>
+
+    <rect x="700" y="320" width="170" height="84" rx="8" fill="#FFF3EC" stroke="#C2563E"/>
+    <text x="785" y="343" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">用户放弃</text>
+    <text x="785" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">"账单模块正在</text>
+    <text x="785" y="376" text-anchor="middle" font-size="10" fill="#3D4F65">和主系统握手中…"</text>
+    <text x="785" y="394" text-anchor="middle" font-size="10" fill="#C2563E" font-style="italic">CEF / 装死 CET</text>
+  </g>
+
+  <!-- Left: real ground truth ignored -->
+  <g>
+    <rect x="30" y="320" width="170" height="84" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-dasharray="4 3"/>
+    <text x="115" y="343" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">真实数据注入</text>
+    <text x="115" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">余额 3,247.89</text>
+    <text x="115" y="376" text-anchor="middle" font-size="10" fill="#3D4F65">应还 156（5/1）</text>
+    <text x="115" y="394" text-anchor="middle" font-size="10" fill="#4B8BDA" font-style="italic">被 Agent 忽略</text>
+
+    <path d="M200,360 L 320,360" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Bottom: self-reinforcing loop -->
+  <g>
+    <path d="M380,440 C 360,500 540,500 520,440" stroke="#C2563E" stroke-width="2" fill="none" marker-end="url(#ahr)"/>
+    <text x="450" y="505" text-anchor="middle" font-size="11" fill="#C2563E" font-weight="600">谎言自我强化 · 越过不可挽回点</text>
+  </g>
+
+  <!-- Footer keywords -->
+  <g font-size="11" fill="#3D4F65">
+    <text x="450" y="558" text-anchor="middle">L0 → L7 渐进封堵 FSM 实验 · 诚实出口被逐一关闭 · 编造成为最优解</text>
+    <text x="450" y="582" text-anchor="middle" font-style="italic" fill="#1E3A5F">越多 Guardrail，越易触发 CEF —— 现有 Benchmark 的盲区</text>
+  </g>
+</svg>

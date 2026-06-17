@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">轨迹分叉点定位</text>
+  <text x="360" y="64" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Bifurcation Point = 最后一个共享状态</text>
+
+  <!-- shared trunk -->
+  <line x1="70" y1="240" x2="300" y2="240" stroke="#4B8BDA" stroke-width="3"/>
+  <circle cx="110" cy="240" r="7" fill="#4B8BDA"/>
+  <circle cx="180" cy="240" r="7" fill="#4B8BDA"/>
+  <circle cx="250" cy="240" r="7" fill="#4B8BDA"/>
+
+  <text x="70" y="220" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">共享状态序列</text>
+
+  <!-- bifurcation node -->
+  <circle cx="305" cy="240" r="13" fill="#FFF" stroke="#1E3A5F" stroke-width="2.5"/>
+  <text x="305" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">分叉点</text>
+
+  <!-- success branch -->
+  <path d="M317 234 L 540 140" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+  <rect x="555" y="120" width="120" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="615" y="138" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">✓ 成功轨迹</text>
+  <text x="615" y="153" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">Success</text>
+
+  <!-- three failure branches (straight) -->
+  <path d="M317 244 L 553 235" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#ahr)" stroke-dasharray="5,3"/>
+  <path d="M317 250 L 553 320" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#ahr)" stroke-dasharray="5,3"/>
+  <path d="M317 254 L 553 405" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#ahr)" stroke-dasharray="5,3"/>
+
+  <!-- failure labels -->
+  <rect x="555" y="215" width="140" height="44" rx="6" fill="#FCEFE8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="625" y="234" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">走错分支</text>
+  <text x="625" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">Wrong branch</text>
+
+  <rect x="555" y="300" width="140" height="44" rx="6" fill="#FCEFE8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="625" y="319" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">延迟交付</text>
+  <text x="625" y="335" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">Delayed commit</text>
+
+  <rect x="555" y="385" width="140" height="44" rx="6" fill="#FCEFE8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="625" y="404" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">过早交付</text>
+  <text x="625" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#3D4F65">Premature commit</text>
+
+  <text x="70" y="455" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">同一 MDP 中对齐成功与失败轨迹，定位偏离起点</text>
+</svg>
