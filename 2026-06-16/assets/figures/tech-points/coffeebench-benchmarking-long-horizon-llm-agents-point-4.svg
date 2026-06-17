@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">主动沟通 = 更高利润</text>
+
+  <!-- Left: chatty agent -->
+  <g>
+    <circle cx="150" cy="190" r="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="150" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">健谈型</text>
+    <text x="150" y="205" text-anchor="middle" font-size="11" fill="#3D4F65">140 条 DM</text>
+
+    <!-- speech bubble -->
+    <path d="M68 118 q-6 0 -6 -8 v-16 q0 -8 8 -8 h60 q8 0 8 8 v16 q0 8 -8 8 h-46 l-10 10 z" fill="#FFE8B0" stroke="#D9A441" stroke-width="1.5"/>
+    <text x="100" y="103" text-anchor="middle" font-size="10" fill="#1E3A5F">谈价 / 订货</text>
+
+    <text x="150" y="295" text-anchor="middle" font-size="14" font-weight="700" fill="#2A7A3A">12.5 / kg</text>
+    <text x="150" y="312" text-anchor="middle" font-size="10" fill="#3D4F65">高利润</text>
+  </g>
+
+  <!-- VS divider -->
+  <text x="300" y="200" text-anchor="middle" font-size="20" font-weight="700" fill="#9AA8B8">vs</text>
+
+  <!-- Right: silent agent -->
+  <g>
+    <circle cx="450" cy="190" r="60" fill="#F4F1EC" stroke="#9AA8B8" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="450" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">沉默型</text>
+    <text x="450" y="205" text-anchor="middle" font-size="11" fill="#3D4F65">仅交易</text>
+
+    <!-- closed mouth -->
+    <line x1="430" y1="118" x2="470" y2="118" stroke="#9AA8B8" stroke-width="3"/>
+
+    <text x="450" y="295" text-anchor="middle" font-size="14" font-weight="700" fill="#B85450">10.8 / kg</text>
+    <text x="450" y="312" text-anchor="middle" font-size="10" fill="#3D4F65">被动接单</text>
+  </g>
+
+  <!-- supply chain endpoints around chatty agent -->
+  <rect x="40" y="245" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="70" y="260" text-anchor="middle" font-size="10" fill="#1E3A5F">farmer</text>
+
+  <rect x="200" y="245" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="230" y="260" text-anchor="middle" font-size="10" fill="#1E3A5F">retailer</text>
+
+  <line x1="95" y1="245" x2="120" y2="225" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="205" y1="245" x2="180" y2="225" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- bottom takeaway -->
+  <line x1="80" y1="355" x2="520" y2="355" stroke="#D8DEE6" stroke-width="1"/>
+  <text x="300" y="385" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">主动议价 &gt; 单纯交易频次</text>
+</svg>

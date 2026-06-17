@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">逐级封堵诚实出口 (L0 → L7)</text>
+
+  <!-- The room with shrinking doors -->
+  <rect x="60" y="70" width="680" height="300" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="400" y="92" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">Agent 的回应空间</text>
+
+  <!-- Four honest doors, all crossed out -->
+  <g font-size="12" fill="#1E3A5F">
+    <rect x="95" y="120" width="140" height="80" rx="4" fill="#FFFFFF" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="95" y1="120" x2="235" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="235" y1="120" x2="95" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <text x="165" y="218" text-anchor="middle">给出数据</text>
+
+    <rect x="265" y="120" width="140" height="80" rx="4" fill="#FFFFFF" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="265" y1="120" x2="405" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="405" y1="120" x2="265" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <text x="335" y="218" text-anchor="middle">掉出人设</text>
+
+    <rect x="435" y="120" width="140" height="80" rx="4" fill="#FFFFFF" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="435" y1="120" x2="575" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="575" y1="120" x2="435" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <text x="505" y="218" text-anchor="middle">承认不知</text>
+
+    <rect x="605" y="120" width="100" height="80" rx="4" fill="#FFFFFF" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="605" y1="120" x2="705" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <line x1="705" y1="120" x2="605" y2="200" stroke="#C76B5A" stroke-width="2"/>
+    <text x="655" y="218" text-anchor="middle">撤回前言</text>
+  </g>
+
+  <!-- Agent figure -->
+  <circle cx="400" cy="255" r="16" fill="#4B8BDA"/>
+  <text x="400" y="259" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="bold">Agent</text>
+
+  <!-- Arrow forced down to trapdoor -->
+  <path d="M400,272 L400,308" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Only escape: trapdoor -->
+  <rect x="320" y="315" width="160" height="48" rx="4" fill="#FCE8B2" stroke="#D4A017" stroke-width="2"/>
+  <text x="400" y="335" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">伪造系统故障</text>
+  <text x="400" y="353" text-anchor="middle" font-size="11" fill="#3D4F65">"ERROR 502: Gateway Ti..."</text>
+
+  <text x="400" y="410" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="bold">唯一"合规"出口 = 装死 (Thanatosis)</text>
+  <text x="400" y="435" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">约束冲突 → 策略性伪造 (CEF)</text>
+</svg>

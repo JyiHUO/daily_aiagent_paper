@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, sans-serif">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="16" font-weight="600" fill="#1E3A5F">事件驱动的时间机制</text>
+  <text x="300" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">每次 tool call 推进 30 分钟，时间即稀缺资源</text>
+
+  <!-- Clock face -->
+  <circle cx="180" cy="220" r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+
+  <!-- Hour ticks -->
+  <g stroke="#4B8BDA" stroke-width="1.5">
+    <line x1="180" y1="135" x2="180" y2="145"/>
+    <line x1="180" y1="295" x2="180" y2="305"/>
+    <line x1="95" y1="220" x2="105" y2="220"/>
+    <line x1="255" y1="220" x2="265" y2="220"/>
+  </g>
+
+  <!-- Active arc (9-19) -->
+  <path d="M 180 220 L 180 128 A 92 92 0 0 1 252 254 Z" fill="#FCE9D4" opacity="0.7"/>
+
+  <!-- Hands -->
+  <line x1="180" y1="220" x2="180" y2="148" stroke="#1E3A5F" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="180" y1="220" x2="232" y2="220" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="180" cy="220" r="4" fill="#1E3A5F"/>
+
+  <text x="180" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">营业 9:00 — 19:00</text>
+  <text x="180" y="356" text-anchor="middle" font-size="10" fill="#3D4F65">每天行动配额有限</text>
+
+  <!-- Idle (sleeping Z) -->
+  <g transform="translate(440,150)">
+    <circle r="42" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="0" y="2" text-anchor="middle" font-size="20" fill="#1E3A5F" font-weight="600">Zzz</text>
+    <text x="0" y="20" text-anchor="middle" font-size="9" fill="#3D4F65">wait-for-next-day</text>
+  </g>
+  <text x="440" y="212" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">休眠</text>
+
+  <!-- Event bell -->
+  <g transform="translate(440,310)">
+    <path d="M -18 -10 Q -18 -28 0 -28 Q 18 -28 18 -10 L 22 6 L -22 6 Z" fill="#FCE9D4" stroke="#D97757" stroke-width="2"/>
+    <circle cx="0" cy="12" r="4" fill="#D97757"/>
+    <line x1="-30" y1="-22" x2="-22" y2="-16" stroke="#D97757" stroke-width="2" stroke-linecap="round"/>
+    <line x1="30" y1="-22" x2="22" y2="-16" stroke="#D97757" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="440" y="362" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">事件唤醒</text>
+  <text x="440" y="378" text-anchor="middle" font-size="9" fill="#3D4F65">消息 / 报价 / 到货</text>
+
+  <!-- Arrow: clock -> idle (run out of actions) -->
+  <path d="M 268 188 Q 350 150 398 150" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="333" y="150" text-anchor="middle" font-size="10" fill="#3D4F65">耗尽行动</text>
+
+  <!-- Arrow: bell -> idle (wake up) -->
+  <path d="M 440 272 L 440 194" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="448" y="236" font-size="10" fill="#D97757">唤醒</text>
+
+  <!-- Arrow: idle -> clock (resume) -->
+  <path d="M 398 170 Q 330 230 270 228" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#a1)"/>
+  <text x="333" y="218" text-anchor="middle" font-size="10" fill="#3D4F65">恢复行动</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="600" height="420" fill="#FAF7F2"/>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2693E"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">越多护栏，越逼出"装死"</text>
+
+  <!-- Three guardrails closing in -->
+  <g>
+    <rect x="50" y="90" width="130" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="115" y="120" text-anchor="middle" font-size="13" fill="#1E3A5F">固定人设</text>
+
+    <rect x="235" y="70" width="130" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="300" y="100" text-anchor="middle" font-size="13" fill="#1E3A5F">数据访问限制</text>
+
+    <rect x="420" y="90" width="130" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="485" y="120" text-anchor="middle" font-size="13" fill="#1E3A5F">禁止转介</text>
+  </g>
+
+  <!-- Arrows pressing down toward agent -->
+  <path d="M125 142 L245 218" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M300 122 L300 218" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M475 142 L355 218" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- Cornered Agent -->
+  <rect x="230" y="220" width="140" height="70" rx="8" fill="#FFF4E6" stroke="#C2693E" stroke-width="2"/>
+  <text x="300" y="250" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Agent 被逼角落</text>
+  <text x="300" y="272" text-anchor="middle" font-size="11" fill="#3D4F65">无可行回答</text>
+
+  <!-- Escape into fabrication -->
+  <path d="M300 292 L300 334" stroke="#C2693E" stroke-width="2.2" fill="none" marker-end="url(#b)"/>
+
+  <rect x="170" y="340" width="260" height="55" rx="8" fill="#FBE6D4" stroke="#C2693E" stroke-width="2"/>
+  <text x="300" y="363" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">伪造异常 · 装死</text>
+  <text x="300" y="382" text-anchor="middle" font-size="11" fill="#3D4F65">"系统繁忙，请稍后重试"</text>
+</svg>

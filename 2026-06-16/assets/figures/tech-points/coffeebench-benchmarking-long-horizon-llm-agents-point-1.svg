@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">异构供应链经济沙盒</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">90 天 · 6 家企业 · 仅 roaster-A 是被测 Agent</text>
+
+  <!-- Farmers -->
+  <g>
+    <rect x="60" y="170" width="160" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="208" text-anchor="middle" font-size="28">🌱</text>
+    <text x="140" y="240" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Farmers ×2</text>
+    <text x="140" y="262" text-anchor="middle" font-size="11" fill="#3D4F65">生豆供应</text>
+    <text x="140" y="278" text-anchor="middle" font-size="10" fill="#64748B">参考模型扮演</text>
+  </g>
+
+  <!-- Roasters -->
+  <g>
+    <rect x="300" y="150" width="200" height="160" rx="10" fill="#FFF4E6" stroke="#E8A33D" stroke-width="2"/>
+    <text x="400" y="188" text-anchor="middle" font-size="32">☕</text>
+    <text x="400" y="222" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Roasters ×2 (烘焙)</text>
+    <rect x="318" y="240" width="164" height="56" rx="6" fill="#FFE0B2" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="400" y="262" text-anchor="middle" font-size="12" font-weight="600" fill="#92400E">roaster-A ← 被测 LLM</text>
+    <text x="400" y="282" text-anchor="middle" font-size="10" fill="#92400E">roaster-B 由参考模型扮演</text>
+  </g>
+
+  <!-- Retailers -->
+  <g>
+    <rect x="580" y="170" width="160" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="660" y="208" text-anchor="middle" font-size="28">🏪</text>
+    <text x="660" y="240" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Retailers ×2</text>
+    <text x="660" y="262" text-anchor="middle" font-size="11" fill="#3D4F65">终端售卖</text>
+    <text x="660" y="278" text-anchor="middle" font-size="10" fill="#64748B">参考模型扮演</text>
+  </g>
+
+  <!-- Arrows: supply chain -->
+  <line x1="222" y1="220" x2="296" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="259" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">议价 / 采购生豆</text>
+
+  <line x1="502" y1="220" x2="578" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="540" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">挂单 / 出熟豆</text>
+
+  <!-- Bottom: tools and KPI -->
+  <g>
+    <rect x="120" y="370" width="260" height="80" rx="10" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+    <text x="250" y="395" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">共享工具</text>
+    <text x="250" y="416" text-anchor="middle" font-size="11" fill="#3D4F65">post-listing · make-offer · accept-offer</text>
+    <text x="250" y="434" text-anchor="middle" font-size="11" fill="#3D4F65">send-message · roast</text>
+  </g>
+
+  <g>
+    <rect x="420" y="370" width="260" height="80" rx="10" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.2"/>
+    <text x="550" y="395" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">KPI: 累计净利润</text>
+    <text x="550" y="416" text-anchor="middle" font-size="11" fill="#3D4F65">现金 · 库存 · 应收应付</text>
+    <text x="550" y="434" text-anchor="middle" font-size="10" fill="#9B1C1C">每日结算运营成本与 spoilage</text>
+  </g>
+
+  <!-- connectors to bottom -->
+  <line x1="360" y1="312" x2="300" y2="368" stroke="#4B8BDA" stroke-width="1.3" stroke-dasharray="3 3"/>
+  <line x1="440" y1="312" x2="500" y2="368" stroke="#4B8BDA" stroke-width="1.3" stroke-dasharray="3 3"/>
+</svg>

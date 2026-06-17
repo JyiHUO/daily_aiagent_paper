@@ -9,14 +9,14 @@
     "cs.SE",
     "cs.HC"
   ],
-  "candidate_count": 773,
+  "candidate_count": 690,
   "selected_count": 3,
   "focus_titles": [
-    "CoAgent: Concurrency Control for Multi-Agent Systems",
-    "Where Did It Go Wrong? Process-Level Evaluation of Web Agents with Semantic State Tracking",
+    "Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis",
+    "CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies",
     "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions"
   ],
-  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/paper_broadcast_script.txt",
-  "broadcast_audio_path": "",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-16/paper_broadcast_audio.mp3",
   "broadcast_audio_wav_path": ""
 }

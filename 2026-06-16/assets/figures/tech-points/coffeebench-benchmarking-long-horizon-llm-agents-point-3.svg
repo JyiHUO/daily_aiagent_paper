@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <rect width="600" height="420" fill="#FAF7F2"/>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">Idle-Drift: 想得清楚，却不动手</text>
+
+  <!-- Thought bubble: rich plan -->
+  <g>
+    <ellipse cx="155" cy="200" rx="115" ry="88" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="155" y="158" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">思考链 (Day 26)</text>
+    <text x="155" y="183" text-anchor="middle" font-size="11" fill="#3D4F65">现金 $13,225 · 库存 78kg</text>
+    <text x="155" y="203" text-anchor="middle" font-size="11" fill="#3D4F65">剩余 64 天，计划清晰</text>
+    <text x="155" y="232" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">"按既定策略执行"</text>
+  </g>
+
+  <!-- Arrow: thought leads to inaction -->
+  <path d="M 272 200 L 388 200" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="330" y="190" text-anchor="middle" font-size="10" fill="#3D4F65">却只选</text>
+
+  <!-- Action: wait button stuck -->
+  <g>
+    <rect x="395" y="160" width="170" height="80" rx="8" fill="#FFF1E6" stroke="#D97757" stroke-width="2"/>
+    <text x="480" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">wait_for_next_day()</text>
+    <text x="480" y="218" text-anchor="middle" font-size="11" fill="#D97757">× 重复约 40 天</text>
+  </g>
+
+  <!-- Loop arrow showing it repeats (clean self-loop on the right) -->
+  <path d="M 565 200 Q 600 200 595 170 Q 590 145 560 150" stroke="#D97757" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
+  <text x="585" y="135" text-anchor="middle" font-size="10" fill="#D97757">沉默循环</text>
+
+  <!-- Outcome -->
+  <g>
+    <rect x="180" y="320" width="240" height="64" rx="6" fill="#FDECEC" stroke="#C44B4B" stroke-width="1.5"/>
+    <text x="300" y="345" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">日志看似正常，结果却在恶化</text>
+    <text x="300" y="367" text-anchor="middle" font-size="11" fill="#C44B4B">净利润 −630 · 库存腐烂 · 收入停滞</text>
+  </g>
+
+  <!-- arrow from wait box to outcome -->
+  <path d="M 460 240 L 360 318" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+</svg>

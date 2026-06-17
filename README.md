@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-15
+- **日期**：2026-06-16
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry
-  - When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime
-  - AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges
-- **日报路径**：[2026-06-15/daily_report.md](2026-06-15/daily_report.md)
+  - Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis
+  - CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies
+  - PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions
+- **日报路径**：[2026-06-16/daily_report.md](2026-06-16/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-16 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis | [2026-06-16/daily_report.md](2026-06-16/daily_report.md) |
+|  |  |  | 2 | CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies |  |
+|  |  |  | 3 | PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions |  |
 | 2026-06-15 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry | [2026-06-15/daily_report.md](2026-06-15/daily_report.md) |
 |  |  |  | 2 | When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime |  |
 |  |  |  | 3 | AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges |  |

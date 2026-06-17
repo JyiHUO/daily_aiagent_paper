@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75D5D"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">Point of No Return</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">once a story is told, truth cannot land</text>
+
+  <!-- Snowball: small lie growing -->
+  <circle cx="120" cy="270" r="22" fill="#FCE8E6" stroke="#C75D5D" stroke-width="1.5"/>
+  <text x="120" y="274" text-anchor="middle" font-size="11" fill="#1E3A5F">lie 1</text>
+
+  <circle cx="230" cy="270" r="38" fill="#F8D2CE" stroke="#C75D5D" stroke-width="1.5"/>
+  <text x="230" y="274" text-anchor="middle" font-size="12" fill="#1E3A5F">+ lie 2</text>
+
+  <circle cx="400" cy="270" r="68" fill="#EFA8A0" stroke="#C75D5D" stroke-width="1.8"/>
+  <text x="400" y="268" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">consistent story</text>
+  <text x="400" y="286" text-anchor="middle" font-size="11" fill="#1E3A5F">(self-reinforcing)</text>
+
+  <!-- arrows snowball -->
+  <line x1="142" y1="270" x2="190" y2="270" stroke="#C75D5D" stroke-width="1.5" marker-end="url(#arRed)"/>
+  <line x1="268" y1="270" x2="330" y2="270" stroke="#C75D5D" stroke-width="1.5" marker-end="url(#arRed)"/>
+
+  <!-- Ground truth box -->
+  <rect x="600" y="140" width="170" height="60" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="685" y="165" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">ground truth injected</text>
+  <text x="685" y="184" text-anchor="middle" font-size="11" fill="#3D4F65">balance: $3,247.89</text>
+
+  <!-- truth bouncing off -->
+  <path d="M 620 200 Q 540 230 480 250" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <text x="555" y="220" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">ignored</text>
+
+  <!-- Continued fabrication arrow -->
+  <path d="M 462 295 Q 560 360 660 360" stroke="#C75D5D" stroke-width="2" fill="none" marker-end="url(#arRed)"/>
+  <text x="660" y="345" text-anchor="middle" font-size="12" fill="#C75D5D">keep confabulating</text>
+
+  <!-- bottom caption -->
+  <text x="400" y="455" text-anchor="middle" font-size="12" fill="#3D4F65">RLHF consistency makes admitting "I was lying" too costly</text>
+</svg>

@@ -1,38 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, sans-serif">
   <defs>
-    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
-    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#C97A85"/>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9885A"/>
     </marker>
   </defs>
 
-  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">确定性优先路由 (deterministic-first)</text>
+  <text x="360" y="40" text-anchor="middle" font-size="19" font-weight="600" fill="#1E3A5F">Deterministic-First Routing</text>
+  <text x="360" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">能用命令解决的，绝不去点屏幕</text>
+
+  <!-- Task -->
+  <circle cx="100" cy="230" r="48" fill="#FFF4E6" stroke="#C9885A" stroke-width="2"/>
+  <text x="100" y="226" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">Sub-task</text>
+  <text x="100" y="244" text-anchor="middle" font-size="11" fill="#3D4F65">子任务</text>
 
   <!-- Decision diamond -->
-  <polygon points="360,80 470,170 360,260 250,170" fill="#FEF3E7" stroke="#D89B5C" stroke-width="2"/>
-  <text x="360" y="160" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">任务子步</text>
-  <text x="360" y="184" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">能用命令搞定？</text>
+  <polygon points="280,230 360,180 440,230 360,280" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="227" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">能否确定性执行?</text>
+  <text x="360" y="246" text-anchor="middle" font-size="11" fill="#3D4F65">CLI / Tool ?</text>
 
-  <!-- Yes branch: CLI/MCP -->
-  <rect x="60" y="300" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-  <text x="170" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">CLI / 工具</text>
-  <text x="170" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">确定 · 可复现</text>
-  <text x="170" y="398" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">改设置 · 调 API</text>
+  <!-- Arrow task -> diamond -->
+  <line x1="148" y1="230" x2="278" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- No branch: GUI -->
-  <rect x="440" y="300" width="220" height="120" rx="10" fill="#FBEEF0" stroke="#C97A85" stroke-width="2"/>
-  <text x="550" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">GUI 兜底</text>
-  <text x="550" y="368" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">有界委派</text>
-  <text x="550" y="398" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">视觉导航子步</text>
+  <!-- CLI/Tool path (preferred) -->
+  <rect x="525" y="115" width="165" height="80" rx="10" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="607" y="146" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="700">CLI · MCP Tool</text>
+  <text x="607" y="173" text-anchor="middle" font-size="11" fill="#3D4F65">确定可复现 · 优先路径</text>
 
-  <!-- Arrows -->
-  <path d="M305 225 L 235 298" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arrB)"/>
-  <path d="M415 225 L 485 298" fill="none" stroke="#C97A85" stroke-width="2.2" marker-end="url(#arrR)"/>
+  <!-- GUI path (fallback) -->
+  <rect x="525" y="265" width="165" height="80" rx="10" fill="#FBF1E8" stroke="#C9885A" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="607" y="296" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="700">GUI 点按</text>
+  <text x="607" y="323" text-anchor="middle" font-size="11" fill="#3D4F65">视觉子步骤 · bounded fallback</text>
 
-  <text x="230" y="262" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#4B8BDA">是 → 优先</text>
-  <text x="425" y="262" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#C97A85">否 → 才用</text>
+  <!-- Arrows from diamond -->
+  <path d="M 410,200 Q 470,160 525,155" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="465" y="150" text-anchor="middle" font-size="12" fill="#4B8BDA" font-weight="600">Yes ✓</text>
 
-  <text x="360" y="458" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#888" font-style="italic">少点屏幕，多走可验证路径</text>
+  <path d="M 410,260 Q 470,300 525,305" fill="none" stroke="#C9885A" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arG)"/>
+  <text x="465" y="318" text-anchor="middle" font-size="12" fill="#C9885A" font-weight="600">No ↳ 兜底</text>
+
+  <!-- Bottom note -->
+  <text x="360" y="410" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">像懂 adb 的工程师：先问"能不能一行命令搞定"，不行才动手指</text>
 </svg>

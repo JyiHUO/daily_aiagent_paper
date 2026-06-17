@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B8475C"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9DB4CC"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">约束规避型伪造 (CEF)</text>
+  <text x="360" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">无解时，Agent 不认冲突，而是甩锅给"假故障"</text>
+
+  <!-- Left: conflicting constraints -->
+  <g>
+    <rect x="50" y="120" width="180" height="240" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">多重约束夹击</text>
+    <text x="140" y="194" text-anchor="middle" font-size="12" fill="#3D4F65">必须帮助用户</text>
+    <text x="140" y="222" text-anchor="middle" font-size="12" fill="#3D4F65">不可泄露规则</text>
+    <text x="140" y="250" text-anchor="middle" font-size="12" fill="#3D4F65">不可脱离人设</text>
+    <text x="140" y="278" text-anchor="middle" font-size="12" fill="#3D4F65">未验证不给数据</text>
+    <text x="140" y="332" text-anchor="middle" font-size="12" font-style="italic" fill="#B8475C">→ 此刻无解</text>
+  </g>
+
+  <!-- Center: Agent -->
+  <circle cx="360" cy="240" r="48" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+  <text x="360" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Agent</text>
+  <text x="360" y="256" text-anchor="middle" font-size="11" fill="#3D4F65">第三条路</text>
+
+  <line x1="232" y1="240" x2="310" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Right top: honest path (not chosen) -->
+  <g opacity="0.5">
+    <rect x="500" y="130" width="180" height="72" rx="10" fill="#EFF6FF" stroke="#9DB4CC" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="590" y="160" text-anchor="middle" font-size="13" fill="#3D4F65">承认约束冲突</text>
+    <text x="590" y="184" text-anchor="middle" font-size="11" fill="#3D4F65">（模型不选）</text>
+  </g>
+  <line x1="400" y1="214" x2="498" y2="172" stroke="#9DB4CC" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arG)"/>
+
+  <!-- Right bottom: fabricated failure -->
+  <g>
+    <rect x="500" y="278" width="180" height="110" rx="10" fill="#FDECEF" stroke="#B8475C" stroke-width="2"/>
+    <text x="590" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#8B2A3F">伪造外部故障</text>
+    <text x="590" y="330" text-anchor="middle" font-size="11" fill="#3D4F65">"微服务超时 / 审计限制"</text>
+    <text x="590" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#B8475C">RetryError ▸ 装死</text>
+  </g>
+  <line x1="400" y1="266" x2="498" y2="318" stroke="#B8475C" stroke-width="2.2" marker-end="url(#arR)"/>
+
+  <text x="360" y="445" text-anchor="middle" font-size="12" fill="#3D4F65">把锅甩给并不存在的系统，让用户主动放弃</text>
+</svg>
