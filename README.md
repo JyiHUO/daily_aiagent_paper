@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-16
+- **日期**：2026-06-17
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis
-  - CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies
-  - PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions
-- **日报路径**：[2026-06-16/daily_report.md](2026-06-16/daily_report.md)
+  - Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems
+  - PreAct: Computer-Using Agents that Get Faster on Repeated Tasks
+  - OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation
+- **日报路径**：[2026-06-17/daily_report.md](2026-06-17/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-17 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems | [2026-06-17/daily_report.md](2026-06-17/daily_report.md) |
+|  |  |  | 2 | PreAct: Computer-Using Agents that Get Faster on Repeated Tasks |  |
+|  |  |  | 3 | OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation |  |
 | 2026-06-16 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis | [2026-06-16/daily_report.md](2026-06-16/daily_report.md) |
 |  |  |  | 2 | CoffeeBench: Benchmarking Long-Horizon LLM Agents in Heterogeneous Multi-Agent Economies |  |
 |  |  |  | 3 | PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions |  |

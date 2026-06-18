@@ -14,9 +14,9 @@
   "focus_titles": [
     "Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems",
     "PreAct: Computer-Using Agents that Get Faster on Repeated Tasks",
-    "Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering"
+    "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation"
   ],
-  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/paper_broadcast_script.txt",
-  "broadcast_audio_path": "",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/paper_broadcast_audio.mp3",
   "broadcast_audio_wav_path": ""
 }
