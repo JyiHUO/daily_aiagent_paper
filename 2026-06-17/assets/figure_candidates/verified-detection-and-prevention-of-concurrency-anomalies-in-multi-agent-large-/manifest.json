@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/downloaded_pdfs/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-",
+  "candidates": [
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        328.9864807128906,
+        112.05420684814453,
+        547.9315185546875,
+        257.4973449707031
+      ],
+      "clip_area": 31844.05338007328,
+      "page_area": 484704.0,
+      "text_density": 0.10776546802643497,
+      "kind": "drawing_cluster",
+      "score": 6.68789473374805,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/01-p8-drawing_cluster.png",
+      "filename": "01-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-drawing-cluster-0",
+      "page_index": 16,
+      "caption": "第 17 页矢量图主图候选",
+      "clip": [
+        296.0,
+        152.23251342773438,
+        580.000732421875,
+        348.2330017089844
+      ],
+      "clip_area": 55664.28222692013,
+      "page_area": 484704.0,
+      "text_density": 0.2011591363553696,
+      "kind": "drawing_cluster",
+      "score": 1.34894384342138,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/02-p17-drawing_cluster.png",
+      "filename": "02-p17-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5623101275183758,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/03-p1-layout_region_left_top.png",
+      "filename": "03-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.829539044514311,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/04-p2-layout_region_left_top.png",
+      "filename": "04-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.5573345549417397,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/05-p1-layout_region_right_top.png",
+      "filename": "05-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.8182365216701266,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/verified-detection-and-prevention-of-concurrency-anomalies-in-multi-agent-large-/contact-sheet.svg"
+}

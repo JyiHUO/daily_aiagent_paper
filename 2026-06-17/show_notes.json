@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 1117：评测、运行时、记忆三连解耦",
+  "shownotes_html": "<p>这期我们顺着一个反常数字切入：同一个 Claude Opus 4.6，换不同 Agent 脚手架，TerminalBench 成功率能从 58% 飙到近 80%。今天的三篇重点论文从评测、运行时、长期记忆三个方向同时指向同一个关键词——<strong>解耦</strong>。</p><p><strong>本期重点</strong></p><ul><li><strong>编码 Agent 评测的根本错位（Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering）</strong>：直接挑战 SWE-Bench 这套主流评测，指出 model/harness/environment 被打包成一个分数，并提出 NS2 这种组件级、verifier-of-verifier 的评测框架。</li><li><strong>多 Agent 并发异常的形式化检测与防御（Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent LLM Systems）</strong>：把数据库隔离级别搬到 Agent 共享状态，定义 4 类并发异常和 L0–L4 五级一致性层级，用 TLA+/Verus 写了 274 条机器证明，并复现了 deer-flow 与 LangGraph 的真实并发 bug。</li><li><strong>会越用越快的 Computer-Use Agent（PreAct: Computer-Using Agents that Get Faster on Repeated Tasks）</strong>：把首次成功的轨迹编译成带屏幕校验的状态机程序，重放时不再调用 LLM，速度提升 8.5–13 倍；通过 verify-before-store 防止\"跑得通但没干成\"的伪成功污染程序库。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 评测从端到端 pass rate，集体转向组件级、轨迹级诊断。</li><li>Multi-Agent runtime 治理首次拿到机器验证级保障，从架构图走向可验证代码。</li><li>Computer-use Agent 把\"重复任务变便宜\"当成一等指标，靠轨迹编译+校验做缓存飞轮。</li></ul><p>如果你只想带一句话出门：<em>单一 pass rate 已经不足以指导 Agent 改进，下一步竞争在组件级评测和可验证 runtime 这两条新坐标轴上。</em>欢迎在评论区聊聊你手上的 Agent 系统卡在哪一层。本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-06-17",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-17T22:19:47Z"
+}

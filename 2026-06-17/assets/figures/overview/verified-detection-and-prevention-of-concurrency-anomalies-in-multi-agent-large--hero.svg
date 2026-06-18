@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0533A"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">多 Agent 并发异常的形式化检测与防止</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">把数据库隔离级别搬到 LLM Agent 运行时 · TLA+ 规约 · Verus 机器证明</text>
+
+  <!-- LEFT: 共享状态 + 长生成 -->
+  <g>
+    <rect x="48" y="110" width="230" height="180" rx="12" fill="#FFF3EE" stroke="#C0533A" stroke-width="1.5"/>
+    <text x="163" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#7A2E1A">共享状态 + 长生成</text>
+
+    <circle cx="92" cy="180" r="16" fill="#fff" stroke="#C0533A" stroke-width="1.5"/>
+    <text x="92" y="184" text-anchor="middle" font-size="11" fill="#7A2E1A">A₁</text>
+    <circle cx="92" cy="232" r="16" fill="#fff" stroke="#C0533A" stroke-width="1.5"/>
+    <text x="92" y="236" text-anchor="middle" font-size="11" fill="#7A2E1A">A₂</text>
+
+    <rect x="146" y="158" width="110" height="78" rx="6" fill="#fff" stroke="#C0533A" stroke-width="1.2"/>
+    <text x="201" y="178" text-anchor="middle" font-size="11" fill="#7A2E1A">memory</text>
+    <text x="201" y="196" text-anchor="middle" font-size="11" fill="#7A2E1A">vector idx</text>
+    <text x="201" y="214" text-anchor="middle" font-size="11" fill="#7A2E1A">tool registry</text>
+    <text x="201" y="230" text-anchor="middle" font-size="10" fill="#C0533A" font-style="italic">读集无锁</text>
+
+    <line x1="108" y1="180" x2="144" y2="180" stroke="#C0533A" stroke-width="1.5" marker-end="url(#arrR)"/>
+    <line x1="144" y1="232" x2="108" y2="232" stroke="#C0533A" stroke-width="1.5" marker-end="url(#arrR)"/>
+
+    <text x="163" y="266" text-anchor="middle" font-size="11" fill="#7A2E1A" font-weight="600">4 类异常</text>
+    <text x="163" y="282" text-anchor="middle" font-size="10.5" fill="#7A2E1A">A1 stale · A2 phantom · A3 cascade · A6 reorder</text>
+  </g>
+
+  <!-- CENTER: Lattice ladder -->
+  <g>
+    <text x="450" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">一致性层级 L₀ ⊊ L₁ ⊊ L₂ ⊊ L₃ ⊊ L₄</text>
+
+    <g font-size="12" fill="#1E3A5F">
+      <rect x="330" y="250" width="240" height="30" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="345" y="270" font-weight="700">L₀</text>
+      <text x="378" y="270" fill="#3D4F65">无防护（默认）</text>
+
+      <rect x="330" y="218" width="240" height="30" rx="4" fill="#E1EEFB" stroke="#4B8BDA"/>
+      <text x="345" y="238" font-weight="700">L₁</text>
+      <text x="378" y="238" fill="#3D4F65">挡 A1 · SSI / 悲观锁</text>
+
+      <rect x="330" y="186" width="240" height="30" rx="4" fill="#D2E5F7" stroke="#4B8BDA"/>
+      <text x="345" y="206" font-weight="700">L₂</text>
+      <text x="378" y="206" fill="#3D4F65">+A3 因果追踪</text>
+
+      <rect x="330" y="154" width="240" height="30" rx="4" fill="#BFD7F2" stroke="#3A6FB8"/>
+      <text x="345" y="174" font-weight="700">L₃</text>
+      <text x="378" y="174" fill="#1E3A5F">+A6 提交序定序器</text>
+
+      <rect x="330" y="122" width="240" height="30" rx="4" fill="#A5C5EC" stroke="#3A6FB8"/>
+      <text x="345" y="142" font-weight="700">L₄</text>
+      <text x="378" y="142" fill="#1E3A5F">+A2 全部消除</text>
+    </g>
+
+    <path d="M 590 270 Q 620 200 590 132" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="600" y="208" font-size="11" fill="#4B8BDA">越高越严</text>
+  </g>
+
+  <!-- RIGHT: Verus / runtime / evidence -->
+  <g>
+    <rect x="622" y="110" width="230" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="737" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">机器验证 + Rust 实现</text>
+
+    <text x="640" y="160" font-size="12" fill="#1E3A5F">📐 TLA+ 规约 · TLC 反例</text>
+    <text x="640" y="184" font-size="12" fill="#1E3A5F">✅ 274 条 Verus 证明（0 admit）</text>
+    <text x="640" y="208" font-size="12" fill="#1E3A5F">⚙ 3 个可运行 Rust runtime</text>
+    <text x="640" y="232" font-size="12" fill="#1E3A5F">🔍 detector 健全且完备</text>
+    <text x="737" y="270" text-anchor="middle" font-size="10.5" fill="#4B8BDA" font-style="italic">A3 复现：0/1000 vs 1000/1000</text>
+  </g>
+
+  <!-- bottom: real-world audit -->
+  <g>
+    <rect x="48" y="340" width="804" height="100" rx="12" fill="#fff" stroke="#1E3A5F" stroke-width="1.2"/>
+    <text x="450" y="363" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">在真实 Agent 框架中复现并修复</text>
+
+    <g>
+      <rect x="80" y="378" width="350" height="50" rx="8" fill="#FFF3EE" stroke="#C0533A"/>
+      <text x="98" y="398" font-size="12" font-weight="700" fill="#7A2E1A">ByteDance deer-flow</text>
+      <text x="98" y="417" font-size="11" fill="#3D4F65">silent lost update (A1)</text>
+      <text x="260" y="402" font-size="13" fill="#1E3A5F">→</text>
+      <text x="278" y="398" font-size="11" font-weight="700" fill="#1E3A5F">L₀ ⇒ L₁ refinement</text>
+      <text x="278" y="417" font-size="10" fill="#3D4F65">机器验证修复</text>
+    </g>
+
+    <g>
+      <rect x="470" y="378" width="350" height="50" rx="8" fill="#FFF3EE" stroke="#C0533A"/>
+      <text x="488" y="398" font-size="12" font-weight="700" fill="#7A2E1A">LangGraph ToolNode</text>
+      <text x="488" y="417" font-size="11" fill="#3D4F65">tool-effect reorder (A6)</text>
+      <text x="660" y="402" font-size="13" fill="#1E3A5F">→</text>
+      <text x="678" y="398" font-size="11" font-weight="700" fill="#1E3A5F">L₃ commit 定序器</text>
+      <text x="678" y="417" font-size="10" fill="#3D4F65">乱序被消除</text>
+    </g>
+  </g>
+
+  <!-- connecting flows from left/right into bottom -->
+  <path d="M 163 290 Q 163 320 240 340" fill="none" stroke="#C0533A" stroke-width="1.3" stroke-dasharray="4,3" opacity="0.7"/>
+  <path d="M 737 290 Q 737 320 660 340" fill="none" stroke="#4B8BDA" stroke-width="1.3" stroke-dasharray="4,3" opacity="0.7"/>
+
+  <!-- arrows linking left -> ladder -> right -->
+  <line x1="278" y1="200" x2="328" y2="200" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="572" y1="200" x2="620" y2="200" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="303" y="194" font-size="10" fill="#3D4F65">建模</text>
+  <text x="595" y="194" font-size="10" fill="#3D4F65">证明</text>
+
+  <text x="450" y="470" text-anchor="middle" font-size="12" fill="#3D4F65">首个面向 Agent runtime 的「可运行 + 机器验证」并发一致性层级</text>
+  <text x="450" y="492" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">读—生成—写在长推理窗口内变成显式可控的隔离级别选择</text>
+</svg>

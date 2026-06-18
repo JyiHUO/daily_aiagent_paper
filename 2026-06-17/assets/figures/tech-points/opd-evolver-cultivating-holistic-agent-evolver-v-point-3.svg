@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">Slow-Fast Loop · Privileged Distillation</text>
+
+  <!-- Student (left, blindfolded) -->
+  <g>
+    <circle cx="180" cy="220" r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="180" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Student</text>
+    <text x="180" y="197" text-anchor="middle" font-size="11" fill="#3D4F65">(deployed agent)</text>
+    <rect x="138" y="220" width="84" height="14" fill="#3D4F65" rx="2"/>
+    <text x="180" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">sees: task + memories</text>
+  </g>
+
+  <!-- Teacher (right, with crown / eye) -->
+  <g>
+    <circle cx="540" cy="220" r="78" fill="#FFF4E6" stroke="#E8995A" stroke-width="2"/>
+    <text x="540" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Teacher</text>
+    <text x="540" y="197" text-anchor="middle" font-size="11" fill="#3D4F65">(same model + oracle)</text>
+    <ellipse cx="540" cy="228" rx="18" ry="10" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="540" cy="228" r="5" fill="#1E3A5F"/>
+    <path d="M512,158 L524,146 L540,158 L556,146 L568,158 L564,172 L516,172 z" fill="#E8995A" stroke="#B8722E" stroke-width="1.2"/>
+    <text x="540" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">+ V-values, hindsight</text>
+  </g>
+
+  <!-- Student's own trajectory (prefix path) feeding both sides -->
+  <path d="M180,310 Q360,360 540,310" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="360" y="355" text-anchor="middle" font-size="12" font-style="italic" fill="#1E3A5F">student's own rollout (prefix)</text>
+
+  <!-- KL distillation arrow (teacher -> student) -->
+  <path d="M462,210 L258,210" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="360" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">token-level KL</text>
+
+  <!-- shared distillation target label -->
+  <text x="360" y="402" text-anchor="middle" font-size="11" fill="#3D4F65">one shared distillation target →</text>
+
+  <!-- four shared abilities -->
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="80" y="418" width="120" height="32" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="438" text-anchor="middle">select</text>
+    <rect x="220" y="418" width="120" height="32" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="280" y="438" text-anchor="middle">execute</text>
+    <rect x="360" y="418" width="120" height="32" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="420" y="438" text-anchor="middle">write</text>
+    <rect x="500" y="418" width="120" height="32" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="560" y="438" text-anchor="middle">maintain</text>
+  </g>
+</svg>

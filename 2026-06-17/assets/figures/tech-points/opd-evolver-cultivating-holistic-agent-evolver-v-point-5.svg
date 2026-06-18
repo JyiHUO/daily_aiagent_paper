@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="16" font-weight="600" fill="#1E3A5F">小模型靠"会用经验"挑战巨头</text>
+
+  <!-- Big: 397B -->
+  <circle cx="450" cy="220" r="95" fill="#FBE9D6" stroke="#C97A3F" stroke-width="2"/>
+  <text x="450" y="205" text-anchor="middle" font-family="Helvetica,Arial" font-size="28" font-weight="700" fill="#1E3A5F">397B</text>
+  <text x="450" y="232" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">参数巨头 · 无记忆能力</text>
+
+  <!-- Small but smart: 9B -->
+  <circle cx="160" cy="230" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="160" y="225" text-anchor="middle" font-family="Helvetica,Arial" font-size="22" font-weight="700" fill="#1E3A5F">9B</text>
+  <text x="160" y="248" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">内化记忆</text>
+
+  <!-- Four skills as badges around 9B -->
+  <g font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F" text-anchor="middle">
+    <rect x="55" y="118" width="50" height="22" rx="11" fill="#DCEAFB" stroke="#4B8BDA"/>
+    <text x="80" y="134">选</text>
+    <rect x="215" y="118" width="50" height="22" rx="11" fill="#DCEAFB" stroke="#4B8BDA"/>
+    <text x="240" y="134">用</text>
+    <rect x="55" y="322" width="50" height="22" rx="11" fill="#DCEAFB" stroke="#4B8BDA"/>
+    <text x="80" y="338">写</text>
+    <rect x="215" y="322" width="50" height="22" rx="11" fill="#DCEAFB" stroke="#4B8BDA"/>
+    <text x="240" y="338">管</text>
+  </g>
+
+  <!-- Lines from skills to 9B -->
+  <g stroke="#4B8BDA" stroke-width="1.2" fill="none" opacity="0.55">
+    <line x1="105" y1="140" x2="130" y2="186"/>
+    <line x1="215" y1="140" x2="190" y2="186"/>
+    <line x1="105" y1="322" x2="130" y2="276"/>
+    <line x1="215" y1="322" x2="190" y2="276"/>
+  </g>
+
+  <!-- Arrow: 9B challenges 397B -->
+  <path d="M218 220 Q300 185 355 215" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="290" y="172" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="600" fill="#C97A3F">超越 6/10 子集</text>
+
+  <!-- Bottom note -->
+  <line x1="80" y1="370" x2="520" y2="370" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="300" y="389" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">去掉记忆归因 → 平均掉 6.5 分（四能力联合蒸馏，缺一不可）</text>
+</svg>

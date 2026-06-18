@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/downloaded_pdfs/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-136",
+      "page_index": 2,
+      "caption": "Figure 1: ( Top ) The fast loop lets the agent interact with environments and a four-level memory hierarchy; ( Down ) the slow loop converts outcome-calibrated hindsight into on-policy self-distillation signals for OPD-Evolver .",
+      "clip": [
+        62.85270690917969,
+        63.39849853515625,
+        542.7532958984375,
+        383.695068359375
+      ],
+      "clip_area": 153710.51250988152,
+      "page_area": 501156.9211820215,
+      "text_density": 0.26812032447558937,
+      "kind": "drawing_cluster_with_caption",
+      "score": 65.71278053146463,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-136",
+      "page_index": 2,
+      "caption": "Figure 1: ( Top ) The fast loop lets the agent interact with environments and a four-level memory hierarchy; ( Down ) the slow loop converts outcome-calibrated hindsight into on-policy self-distillation signals for OPD-Evolver .",
+      "clip": [
+        58.0,
+        235.0,
+        547.0,
+        389.0
+      ],
+      "clip_area": 75306.0,
+      "page_area": 501156.9211820215,
+      "text_density": 0.30639433975768193,
+      "kind": "image_block_with_caption",
+      "score": 58.25307294787241,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/02-p3-image_block_with_caption.png",
+      "filename": "02-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-18",
+      "page_index": 6,
+      "caption": "Figure 2: Distribution of calibrated memory scores for memories selected by the original Q WEN 3.5-9B and OPD-Evolver -9B after selection distillation.",
+      "clip": [
+        288.1419982910156,
+        202.1031036376953,
+        542.4050903320312,
+        331.572021484375
+      ],
+      "clip_area": 32919.16737490101,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15116563891609483,
+      "kind": "drawing_cluster_with_caption",
+      "score": 44.0958301914221,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/03-p7-drawing_cluster_with_caption.png",
+      "filename": "03-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-8",
+      "page_index": 7,
+      "caption": "Figure 3: Distribution of calibrated memory scores for memories written by the original Q WEN 3.5-9B and OPD-Evolver -9B after writing distillation.",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        319.06390991210935,
+        164.51609802246094
+      ],
+      "clip_area": 40725.865536603415,
+      "page_area": 501156.9211820215,
+      "text_density": 0.06906625975063464,
+      "kind": "captioned_figure",
+      "score": 32.452509617073375,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/04-p8-captioned_figure.png",
+      "filename": "04-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-6-block-18",
+      "page_index": 6,
+      "caption": "Figure 2: Distribution of calibrated memory scores for memories selected by the original Q WEN 3.5-9B and OPD-Evolver -9B after selection distillation.",
+      "clip": [
+        276.3781982421875,
+        18.0,
+        554.3398498535156,
+        315.507080078125
+      ],
+      "clip_area": 82695.55934457926,
+      "page_area": 501156.9211820215,
+      "text_density": 0.35576856496828446,
+      "kind": "captioned_figure",
+      "score": 20.37272565017604,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/05-p7-captioned_figure.png",
+      "filename": "05-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-14-drawing-caption-97",
+      "page_index": 14,
+      "caption": "Figure 8: Case studies for the E XECUTOR . Top-left: InterCode-SQL; top-right: MiniHack-Room-5 × 5; bot- tom: LifelongAgentBench-OS.",
+      "clip": [
+        289.5329895019531,
+        56.253257751464844,
+        540.9616088867188,
+        526.899169921875
+      ],
+      "clip_area": 118333.85191608989,
+      "page_area": 501156.9211820215,
+      "text_density": 0.07111690593630428,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/06-p15-drawing_cluster_with_caption.png",
+      "filename": "06-p15-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/opd-evolver-cultivating-holistic-agent-evolver-via-on-policy-distillation/contact-sheet.svg"
+}

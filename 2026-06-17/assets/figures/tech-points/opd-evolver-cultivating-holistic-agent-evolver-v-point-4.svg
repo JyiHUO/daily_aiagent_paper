@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="300" y="35" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Memory Maintenance as Tool Use</text>
+  <text x="300" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">agent learns to clean its own memory shelf</text>
+
+  <!-- Messy shelf (left) -->
+  <g>
+    <rect x="30" y="110" width="170" height="220" rx="6" fill="#FEF3E8" stroke="#D9A066" stroke-width="1.5"/>
+    <text x="115" y="132" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">cluttered memory</text>
+    <line x1="40" y1="145" x2="190" y2="145" stroke="#D9A066" stroke-width="1"/>
+    <line x1="40" y1="200" x2="190" y2="200" stroke="#D9A066" stroke-width="1"/>
+    <line x1="40" y1="255" x2="190" y2="255" stroke="#D9A066" stroke-width="1"/>
+
+    <!-- duplicate tips row -->
+    <rect x="50" y="158" width="60" height="32" fill="#F4C7A0" stroke="#B8763C"/>
+    <text x="80" y="178" text-anchor="middle" font-size="10" fill="#1E3A5F">tip 8</text>
+    <rect x="120" y="158" width="60" height="32" fill="#F4C7A0" stroke="#B8763C"/>
+    <text x="150" y="178" text-anchor="middle" font-size="10" fill="#1E3A5F">tip 9 (dup)</text>
+
+    <!-- stale row -->
+    <rect x="50" y="213" width="60" height="32" fill="#E8D5C0" stroke="#B8763C"/>
+    <text x="80" y="233" text-anchor="middle" font-size="10" fill="#7A6450">stale</text>
+    <rect x="120" y="213" width="60" height="32" fill="#F4C7A0" stroke="#B8763C"/>
+    <text x="150" y="233" text-anchor="middle" font-size="10" fill="#1E3A5F">tip 10</text>
+
+    <!-- redundant tools -->
+    <rect x="50" y="268" width="60" height="32" fill="#F4C7A0" stroke="#B8763C"/>
+    <text x="80" y="288" text-anchor="middle" font-size="10" fill="#1E3A5F">tool 2</text>
+    <rect x="120" y="268" width="60" height="32" fill="#F4C7A0" stroke="#B8763C"/>
+    <text x="150" y="288" text-anchor="middle" font-size="10" fill="#1E3A5F">tool 5</text>
+
+    <text x="115" y="320" text-anchor="middle" font-size="10" fill="#3D4F65">redundant · low-use</text>
+  </g>
+
+  <!-- Agent with toolkit (middle) -->
+  <g>
+    <!-- diagnostic note above -->
+    <rect x="232" y="100" width="136" height="34" rx="4" fill="#F5F8FC" stroke="#90A8C4" stroke-dasharray="3,3"/>
+    <text x="300" y="115" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="600">D-mem diagnostics</text>
+    <text x="300" y="128" text-anchor="middle" font-size="9" fill="#3D4F65">value · freq · redundancy</text>
+    <line x1="300" y1="134" x2="300" y2="178" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+    <circle cx="300" cy="218" r="42" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="300" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">agent</text>
+    <text x="300" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">tool-call</text>
+
+    <!-- tool tags -->
+    <rect x="240" y="288" width="56" height="22" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="268" y="303" text-anchor="middle" font-size="10" fill="#1E3A5F">lookup</text>
+    <rect x="304" y="288" width="56" height="22" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="332" y="303" text-anchor="middle" font-size="10" fill="#1E3A5F">merge</text>
+    <rect x="272" y="316" width="56" height="22" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="300" y="331" text-anchor="middle" font-size="10" fill="#1E3A5F">delete</text>
+  </g>
+
+  <!-- Clean shelf (right) -->
+  <g>
+    <rect x="400" y="110" width="170" height="220" rx="6" fill="#EAF3FB" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="485" y="132" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">curated memory</text>
+    <line x1="410" y1="145" x2="560" y2="145" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="410" y1="210" x2="560" y2="210" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="410" y1="275" x2="560" y2="275" stroke="#4B8BDA" stroke-width="1"/>
+
+    <rect x="425" y="158" width="120" height="36" fill="#B9D4F0" stroke="#2E6BB0"/>
+    <text x="485" y="180" text-anchor="middle" font-size="10" fill="#1E3A5F">merged tip 8+9</text>
+
+    <rect x="425" y="223" width="120" height="36" fill="#B9D4F0" stroke="#2E6BB0"/>
+    <text x="485" y="245" text-anchor="middle" font-size="10" fill="#1E3A5F">merged tool 2+5</text>
+
+    <text x="485" y="298" text-anchor="middle" font-size="10" fill="#3D4F65">tidy · high-value</text>
+    <text x="485" y="320" text-anchor="middle" font-size="10" font-weight="600" fill="#1E3A5F">trajectory η_q</text>
+  </g>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <path d="M202,218 L256,218" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M344,218 L398,218" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+  <!-- bottom note -->
+  <text x="300" y="385" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">every Q tasks: agent decides what to merge / delete</text>
+  <text x="300" y="402" text-anchor="middle" font-size="10" fill="#3D4F65">the cleanup trace itself becomes a training signal</text>
+</svg>

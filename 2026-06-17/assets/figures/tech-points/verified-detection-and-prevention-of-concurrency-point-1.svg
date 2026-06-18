@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="#FAF7F2"/>
+
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">Agent 生成期间，世界已变</text>
+  <text x="400" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">长推理 = 没锁的读写窗口</text>
+
+  <!-- Agent bubble -->
+  <ellipse cx="170" cy="250" rx="95" ry="72" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="170" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Agent</text>
+  <text x="170" y="258" text-anchor="middle" font-size="12" fill="#3D4F65">read → think (数秒~数分)</text>
+  <text x="170" y="278" text-anchor="middle" font-size="11" fill="#9AA5B5">按旧状态决策</text>
+
+  <!-- Commit arrow -->
+  <line x1="268" y1="250" x2="535" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <text x="400" y="242" text-anchor="middle" font-size="12" fill="#3D4F65">commit</text>
+
+  <!-- Shared world -->
+  <rect x="540" y="175" width="220" height="155" rx="8" fill="#FFF1E8" stroke="#D97757" stroke-width="2"/>
+  <text x="650" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">共享世界（已被改）</text>
+
+  <text x="555" y="225" font-size="11" fill="#3D4F65">A1  读集被改写  (stale-gen)</text>
+  <text x="555" y="247" font-size="11" fill="#3D4F65">A2  工具下架   (phantom-tool)</text>
+  <text x="555" y="269" font-size="11" fill="#3D4F65">A3  依赖回滚   (causal-cascade)</text>
+  <text x="555" y="291" font-size="11" fill="#3D4F65">A6  写入乱序   (reordering)</text>
+  <text x="555" y="316" font-size="10" font-style="italic" fill="#9AA5B5">TLA+ / TLC 给出反例轨迹</text>
+
+  <!-- Disturbance from other agent -->
+  <line x1="650" y1="120" x2="650" y2="172" stroke="#D97757" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#b)"/>
+  <text x="650" y="110" text-anchor="middle" font-size="11" fill="#D97757">其他 Agent 在改写</text>
+
+  <!-- Bottom takeaway -->
+  <text x="400" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">4 类并发异常 = 脏读 / 幻读 在 Agent 上的翻版</text>
+  <text x="400" y="432" text-anchor="middle" font-size="11" fill="#9AA5B5">把数据库隔离级别思想，搬到多 Agent LLM 系统</text>
+</svg>

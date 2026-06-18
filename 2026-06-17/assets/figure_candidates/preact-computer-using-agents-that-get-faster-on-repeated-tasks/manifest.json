@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/downloaded_pdfs/preact-computer-using-agents-that-get-faster-on-repeated-tasks.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-9",
+      "page_index": 9,
+      "caption": "Figure 5. Where the cost goes. The first time PreAct sees a task it runs the full agent (top: ≈ N rounds of observe–reason–act) and pays a one-time compile-and-verify premium. Every later run replays the stored program (bottom): no language-model calls, an order of magnitude faster, and already verified before it was stored.",
+      "clip": [
+        82.65599822998047,
+        56.000335693359375,
+        529.3587341308594,
+        255.83697509765625
+      ],
+      "clip_area": 89267.5735551368,
+      "page_area": 484704.0,
+      "text_density": 0.12476884610497714,
+      "kind": "drawing_cluster_with_caption",
+      "score": 37.305731162091774,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-9",
+      "page_index": 9,
+      "caption": "Figure 5. Where the cost goes. The first time PreAct sees a task it runs the full agent (top: ≈ N rounds of observe–reason–act) and pays a one-time compile-and-verify premium. Every later run replays the stored program (bottom): no language-model calls, an order of magnitude faster, and already verified before it was stored.",
+      "clip": [
+        52.20000305175781,
+        18.0,
+        559.80166015625,
+        242.3383026123047
+      ],
+      "clip_area": 113874.4941580149,
+      "page_area": 484704.0,
+      "text_density": 0.1078863811294113,
+      "kind": "captioned_figure",
+      "score": 25.326817132235323,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/02-p10-captioned_figure.png",
+      "filename": "02-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-11-drawing-caption-7",
+      "page_index": 11,
+      "caption": "Figure 6. The verify-before-store gate. A freshly compiled program is re-run from a clean state and re-scored by an independent evaluator; it enters the corpus only if it both replays cleanly and passes. This is what rejects the “runs but doesn’t work” programs—the ones that replay to full coverage yet leave the task unsolved.",
+      "clip": [
+        75.95999908447266,
+        55.99839782714844,
+        536.0653076171875,
+        253.48602294921875
+      ],
+      "clip_area": 90865.10468818329,
+      "page_area": 484704.0,
+      "text_density": 0.1528286068961268,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.639895860545543,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/03-p12-drawing_cluster_with_caption.png",
+      "filename": "03-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        84.65599822998047,
+        58.000823974609375,
+        527.355224609375,
+        287.49798583984375
+      ],
+      "clip_area": 101598.21601400594,
+      "page_area": 484704.0,
+      "text_density": 0.12515380726951716,
+      "kind": "drawing_cluster",
+      "score": 8.419640630651259,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/04-p3-drawing_cluster.png",
+      "filename": "04-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        124.83000183105469,
+        58.00068664550781,
+        487.17572021484375,
+        287.57098388671875
+      ],
+      "clip_area": 83183.81427344657,
+      "page_area": 484704.0,
+      "text_density": 0.21121488234231137,
+      "kind": "drawing_cluster",
+      "score": 7.051371662499613,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/05-p2-drawing_cluster.png",
+      "filename": "05-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        84.65599822998047,
+        58.000335693359375,
+        527.3587341308594,
+        253.83697509765625
+      ],
+      "clip_area": 86697.4160539161,
+      "page_area": 484704.0,
+      "text_density": 0.11802044380022628,
+      "kind": "drawing_cluster",
+      "score": 6.682077994807714,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/06-p10-drawing_cluster.png",
+      "filename": "06-p10-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-17/assets/figure_candidates/preact-computer-using-agents-that-get-faster-on-repeated-tasks/contact-sheet.svg"
+}

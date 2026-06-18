@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4FA373"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica, Arial" font-size="18" font-weight="600" fill="#1E3A5F">Verify Before Store</text>
+  <text x="300" y="56" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#3D4F65">replay 跑完 ≠ 任务真的完成</text>
+
+  <!-- candidate program -->
+  <rect x="30" y="150" width="160" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="110" y="180" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="600" fill="#1E3A5F">候选程序 P′</text>
+  <text x="110" y="202" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">replay 无报错，看似成功</text>
+
+  <!-- gate -->
+  <rect x="240" y="110" width="140" height="160" rx="6" fill="#FFF6E5" stroke="#D9A441" stroke-width="2"/>
+  <text x="310" y="138" text-anchor="middle" font-family="Helvetica, Arial" font-size="14" font-weight="700" fill="#1E3A5F">Gate</text>
+  <text x="310" y="162" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">RESET env + 独立评估器</text>
+  <text x="310" y="192" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="700" fill="#1E3A5F">score ≥ 1.0 ?</text>
+  <!-- gate bar -->
+  <line x1="260" y1="220" x2="360" y2="220" stroke="#D9A441" stroke-width="2"/>
+  <line x1="275" y1="220" x2="275" y2="250" stroke="#D9A441" stroke-width="2"/>
+  <line x1="310" y1="220" x2="310" y2="250" stroke="#D9A441" stroke-width="2"/>
+  <line x1="345" y1="220" x2="345" y2="250" stroke="#D9A441" stroke-width="2"/>
+
+  <!-- pass -->
+  <rect x="420" y="105" width="160" height="70" rx="8" fill="#E8F4EC" stroke="#4FA373" stroke-width="1.5"/>
+  <text x="500" y="133" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="600" fill="#1E3A5F">入库 ✓</text>
+  <text x="500" y="155" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">UPSERT 到 corpus</text>
+
+  <!-- reject -->
+  <rect x="420" y="205" width="160" height="70" rx="8" fill="#FBEEEC" stroke="#C97064" stroke-width="1.5"/>
+  <text x="500" y="233" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="600" fill="#1E3A5F">拒绝 ✗</text>
+  <text x="500" y="255" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">跑得通但没干成</text>
+
+  <!-- arrows -->
+  <line x1="190" y1="190" x2="238" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="160" x2="418" y2="140" stroke="#4FA373" stroke-width="2" marker-end="url(#arGreen)"/>
+  <line x1="380" y1="220" x2="418" y2="240" stroke="#C97064" stroke-width="2" marker-end="url(#arRed)"/>
+
+  <text x="395" y="135" font-family="Helvetica, Arial" font-size="10" fill="#4FA373">pass</text>
+  <text x="395" y="218" font-family="Helvetica, Arial" font-size="10" fill="#C97064">fail</text>
+
+  <text x="300" y="335" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" font-style="italic" fill="#1E3A5F">让程序库 越用越好，而不是越用越烂</text>
+</svg>

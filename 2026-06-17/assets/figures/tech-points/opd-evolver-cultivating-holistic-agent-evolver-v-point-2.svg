@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3D9B6F"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">
+    Outcome-Calibrated Memory Attribution
+  </text>
+  <text x="360" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">
+    a memory's value = how much it lifts the outcome when chosen
+  </text>
+
+  <!-- Memory note in the middle -->
+  <g>
+    <rect x="305" y="190" width="110" height="80" rx="6" fill="#FFF6E0" stroke="#D9A441" stroke-width="2"/>
+    <line x1="320" y1="212" x2="400" y2="212" stroke="#D9A441" stroke-width="1"/>
+    <line x1="320" y1="228" x2="400" y2="228" stroke="#D9A441" stroke-width="1"/>
+    <line x1="320" y1="244" x2="380" y2="244" stroke="#D9A441" stroke-width="1"/>
+    <text x="360" y="262" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">memory m</text>
+  </g>
+
+  <!-- Left: chosen group -->
+  <g>
+    <rect x="60" y="195" width="170" height="70" rx="8" fill="#EAF5EE" stroke="#3D9B6F" stroke-width="1.6"/>
+    <text x="145" y="223" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">tasks that USED m</text>
+    <text x="145" y="247" text-anchor="middle" font-size="15" fill="#3D9B6F" font-weight="700">avg reward = 0.8</text>
+  </g>
+
+  <!-- Right: not chosen group -->
+  <g>
+    <rect x="490" y="195" width="170" height="70" rx="8" fill="#FBECEA" stroke="#C97064" stroke-width="1.6"/>
+    <text x="575" y="223" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">tasks that SKIPPED m</text>
+    <text x="575" y="247" text-anchor="middle" font-size="15" fill="#C97064" font-weight="700">avg reward = 0.5</text>
+  </g>
+
+  <!-- Arrows from m to two groups (straight) -->
+  <line x1="305" y1="230" x2="232" y2="230" fill="none" stroke="#3D9B6F" stroke-width="1.8" marker-end="url(#arGreen)"/>
+  <line x1="415" y1="230" x2="488" y2="230" fill="none" stroke="#C97064" stroke-width="1.8" marker-end="url(#arRed)"/>
+
+  <!-- Bottom: difference -->
+  <g>
+    <rect x="225" y="350" width="270" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="378" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">attribution Â(m) = 0.8 − 0.5</text>
+    <text x="360" y="402" text-anchor="middle" font-size="12" fill="#3D4F65">fine-grained label: keep / drop</text>
+  </g>
+
+  <!-- arrows from groups down to diff -->
+  <line x1="180" y1="265" x2="260" y2="348" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="540" y1="265" x2="460" y2="348" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- subtle minus sign in middle -->
+  <text x="360" y="338" text-anchor="middle" font-size="22" fill="#4B8BDA" font-weight="700">−</text>
+</svg>

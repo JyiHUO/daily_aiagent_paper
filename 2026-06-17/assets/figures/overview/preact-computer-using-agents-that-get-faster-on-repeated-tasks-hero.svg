@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrowDark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1E3A5F"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E8956B"/>
+    </marker>
+    <marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E8956B"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="640" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">PreAct：让 Computer-Use Agent 在重复任务上越跑越快</text>
+  <text x="450" y="72" text-anchor="middle" font-size="13" fill="#3D4F65">首次成功 → 编译为带屏幕校验的状态机 → 重放快 8.5–13×，无需 LLM 调用</text>
+
+  <!-- LEFT: First run (slow, with LLM) -->
+  <g>
+    <text x="180" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">首次执行：CUA 慢速求解</text>
+
+    <!-- Phone screen -->
+    <rect x="100" y="130" width="160" height="280" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <rect x="115" y="150" width="130" height="22" rx="4" fill="#FFFFFF" stroke="#9DBCE0"/>
+    <rect x="115" y="182" width="130" height="22" rx="4" fill="#FFFFFF" stroke="#9DBCE0"/>
+    <rect x="115" y="214" width="130" height="22" rx="4" fill="#FFFFFF" stroke="#9DBCE0"/>
+    <rect x="155" y="370" width="50" height="24" rx="4" fill="#4B8BDA"/>
+    <text x="180" y="387" text-anchor="middle" font-size="11" fill="#FFFFFF">Save</text>
+
+    <!-- LLM bubbles -->
+    <g fill="#E8956B" opacity="0.9">
+      <circle cx="62" cy="170" r="14"/>
+      <circle cx="62" cy="230" r="14"/>
+      <circle cx="62" cy="290" r="14"/>
+      <circle cx="62" cy="350" r="14"/>
+    </g>
+    <g font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      <text x="62" y="174">LLM</text>
+      <text x="62" y="234">LLM</text>
+      <text x="62" y="294">LLM</text>
+      <text x="62" y="354">LLM</text>
+    </g>
+
+    <!-- arrows from LLM to screen -->
+    <g stroke="#E8956B" stroke-width="1.5" fill="none" opacity="0.75">
+      <path d="M 76 170 L 98 165" marker-end="url(#ar1)"/>
+      <path d="M 76 230 L 98 200" marker-end="url(#ar1)"/>
+      <path d="M 76 290 L 98 230" marker-end="url(#ar1)"/>
+      <path d="M 76 350 L 98 380" marker-end="url(#ar1)"/>
+    </g>
+
+    <text x="180" y="436" text-anchor="middle" font-size="12" fill="#3D4F65">每一步都让模型重新看屏、推理、点击</text>
+  </g>
+
+  <!-- Compile arrow with gate -->
+  <g>
+    <path d="M 270 270 L 410 270" stroke="#1E3A5F" stroke-width="2.5" fill="none" marker-end="url(#arrowDark)"/>
+    <text x="340" y="258" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">编译 + 验证后入库</text>
+
+    <!-- gate icon (shield) -->
+    <g transform="translate(331,282)">
+      <path d="M 0 0 L 18 0 L 18 14 C 18 22, 9 28, 9 28 C 9 28, 0 22, 0 14 Z" fill="#E8956B" stroke="#1E3A5F" stroke-width="1.5"/>
+      <path d="M 4 13 L 8 17 L 14 9" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="357" y="298" font-size="10" fill="#3D4F65">独立评估器：score ≥ 1.0 才入库</text>
+  </g>
+
+  <!-- RIGHT: State machine program -->
+  <g>
+    <text x="640" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">重放：状态机程序，零 LLM 调用</text>
+
+    <!-- States -->
+    <g>
+      <circle cx="470" cy="180" r="28" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="470" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">S1</text>
+      <text x="470" y="192" text-anchor="middle" font-size="9" fill="#3D4F65">App 打开</text>
+
+      <circle cx="600" cy="180" r="28" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="600" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">S2</text>
+      <text x="600" y="192" text-anchor="middle" font-size="9" fill="#3D4F65">表单可见</text>
+
+      <circle cx="730" cy="180" r="28" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="730" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">S3</text>
+      <text x="730" y="192" text-anchor="middle" font-size="9" fill="#3D4F65">填写完毕</text>
+
+      <circle cx="830" cy="260" r="28" fill="#FFF1E6" stroke="#E8956B" stroke-width="2"/>
+      <text x="830" y="258" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">✓</text>
+      <text x="830" y="272" text-anchor="middle" font-size="9" fill="#3D4F65">已保存</text>
+    </g>
+
+    <!-- transitions -->
+    <g stroke="#4B8BDA" stroke-width="2" fill="none">
+      <path d="M 498 180 L 572 180" marker-end="url(#arrowBlue)"/>
+      <path d="M 628 180 L 702 180" marker-end="url(#arrowBlue)"/>
+      <path d="M 750 200 L 808 240" marker-end="url(#arrowBlue)"/>
+    </g>
+    <g font-size="10" fill="#3D4F65" text-anchor="middle">
+      <text x="535" y="172">点击「+」</text>
+      <text x="665" y="172">输入参数</text>
+      <text x="800" y="218">Save</text>
+    </g>
+
+    <!-- verify eye -->
+    <g transform="translate(450,250)">
+      <ellipse cx="0" cy="0" rx="14" ry="8" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="4" fill="#1E3A5F"/>
+    </g>
+    <text x="450" y="278" text-anchor="middle" font-size="10" fill="#3D4F65">每步先校验屏幕</text>
+
+    <!-- fallback dashed -->
+    <path d="M 436 254 C 400 310, 350 340, 295 360" stroke="#E8956B" stroke-width="1.8" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowOrange)"/>
+    <text x="360" y="318" font-size="10" fill="#A65A2C">屏幕不匹配 → 交还 CUA</text>
+
+    <!-- speedup badge -->
+    <g transform="translate(640,400)">
+      <rect x="-95" y="0" width="190" height="52" rx="26" fill="#1E3A5F"/>
+      <text x="0" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">8.5× – 13× 加速</text>
+      <text x="0" y="40" text-anchor="middle" font-size="11" fill="#C9D6E8">无需逐步调用 LLM</text>
+    </g>
+  </g>
+
+  <!-- Bottom: store / library + return loop -->
+  <g>
+    <rect x="280" y="498" width="340" height="92" rx="12" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="450" y="522" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">程序库（Program Store）</text>
+
+    <g>
+      <rect x="298" y="538" width="92" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="344" y="555" text-anchor="middle" font-size="10" font-weight="700" fill="#1E3A5F">添加联系人</text>
+      <text x="344" y="569" text-anchor="middle" font-size="9" fill="#3D4F65">{name, phone}</text>
+
+      <rect x="404" y="538" width="92" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="450" y="555" text-anchor="middle" font-size="10" font-weight="700" fill="#1E3A5F">发送邮件</text>
+      <text x="450" y="569" text-anchor="middle" font-size="9" fill="#3D4F65">{to, subject}</text>
+
+      <rect x="510" y="538" width="92" height="40" rx="6" fill="#FFF1E6" stroke="#E8956B" stroke-dasharray="3,3"/>
+      <text x="556" y="555" text-anchor="middle" font-size="10" font-weight="700" fill="#A65A2C">未命中</text>
+      <text x="556" y="569" text-anchor="middle" font-size="9" fill="#3D4F65">→ 退回 CUA</text>
+    </g>
+
+    <!-- arrows: gate -> store, store -> replay -->
+    <path d="M 340 318 C 340 410, 340 470, 360 496" stroke="#1E3A5F" stroke-width="1.8" fill="none" marker-end="url(#arrowDark)"/>
+    <text x="270" y="420" font-size="10" fill="#3D4F65">通过则 UPSERT</text>
+
+    <path d="M 560 498 C 590 460, 615 430, 625 372" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#arrowBlue)"/>
+    <text x="615" y="455" font-size="10" fill="#3D4F65">命中即重放</text>
+  </g>
+</svg>
