@@ -9,14 +9,14 @@
     "cs.SE",
     "cs.HC"
   ],
-  "candidate_count": 348,
+  "candidate_count": 295,
   "selected_count": 3,
   "focus_titles": [
     "SafeClawBench: Separating Semantic, Audit-Evidence, and Sandbox Harm in Tool-Using LLM Agents",
-    "CEO-Bench: Can Agents Play the Long Game?",
-    "Code-Augur: Agentic Vulnerability Detection via Specification Inference"
+    "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents",
+    "VISUALSKILL: Multimodal Skills for Computer-Use Agents"
   ],
-  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/paper_broadcast_script.txt",
-  "broadcast_audio_path": "",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/paper_broadcast_audio.mp3",
   "broadcast_audio_wav_path": ""
 }

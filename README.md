@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-17
+- **日期**：2026-06-18
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems
-  - PreAct: Computer-Using Agents that Get Faster on Repeated Tasks
-  - OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation
-- **日报路径**：[2026-06-17/daily_report.md](2026-06-17/daily_report.md)
+  - SafeClawBench: Separating Semantic, Audit-Evidence, and Sandbox Harm in Tool-Using LLM Agents
+  - GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents
+  - VISUALSKILL: Multimodal Skills for Computer-Use Agents
+- **日报路径**：[2026-06-18/daily_report.md](2026-06-18/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-18 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | SafeClawBench: Separating Semantic, Audit-Evidence, and Sandbox Harm in Tool-Using LLM Agents | [2026-06-18/daily_report.md](2026-06-18/daily_report.md) |
+|  |  |  | 2 | GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents |  |
+|  |  |  | 3 | VISUALSKILL: Multimodal Skills for Computer-Use Agents |  |
 | 2026-06-17 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems | [2026-06-17/daily_report.md](2026-06-17/daily_report.md) |
 |  |  |  | 2 | PreAct: Computer-Using Agents that Get Faster on Repeated Tasks |  |
 |  |  |  | 3 | OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation |  |
