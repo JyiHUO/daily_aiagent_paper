@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" font-family="-apple-system, Segoe UI, sans-serif">
+  <!-- Title -->
+  <text x="320" y="36" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">Skill as an Illustrated Manual</text>
+  <text x="320" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">text and screenshots interleaved by reference</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Cover / Index (SKILL.md) -->
+  <g>
+    <rect x="50" y="100" width="150" height="240" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="125" y="128" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">SKILL.md</text>
+    <text x="125" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">index · when to use</text>
+    <line x1="70" y1="170" x2="180" y2="170" stroke="#4B8BDA" stroke-width="1"/>
+    <line x1="70" y1="195" x2="180" y2="195" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="70" y1="220" x2="180" y2="220" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="70" y1="245" x2="180" y2="245" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="70" y1="270" x2="180" y2="270" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="70" y1="295" x2="160" y2="295" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="70" y1="320" x2="170" y2="320" stroke="#9DB8D6" stroke-width="1"/>
+  </g>
+
+  <!-- Arrow to chapter -->
+  <line x1="205" y1="220" x2="265" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="235" y="210" text-anchor="middle" font-size="10" fill="#4B8BDA">load on demand</text>
+
+  <!-- Chapter page (guide.md with interleaved screenshot) -->
+  <g>
+    <rect x="270" y="100" width="320" height="240" rx="6" fill="#FFF7EC" stroke="#E6A24A" stroke-width="1.6"/>
+    <text x="430" y="128" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">guide.md + screenshots</text>
+
+    <!-- text lines -->
+    <line x1="290" y1="150" x2="570" y2="150" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="290" y1="165" x2="560" y2="165" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="290" y1="180" x2="540" y2="180" stroke="#3D4F65" stroke-width="1"/>
+
+    <!-- inline screenshot -->
+    <rect x="310" y="198" width="240" height="80" rx="3" fill="#FFFFFF" stroke="#E6A24A" stroke-width="1.4"/>
+    <rect x="310" y="198" width="240" height="14" fill="#E6A24A" opacity="0.35"/>
+    <circle cx="318" cy="205" r="2" fill="#E6A24A"/>
+    <circle cx="326" cy="205" r="2" fill="#E6A24A"/>
+    <rect x="320" y="222" width="80" height="48" fill="#FFEFD6" stroke="#E6A24A" stroke-width="0.8"/>
+    <line x1="410" y1="228" x2="540" y2="228" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="410" y1="240" x2="530" y2="240" stroke="#9DB8D6" stroke-width="1"/>
+    <line x1="410" y1="252" x2="510" y2="252" stroke="#9DB8D6" stroke-width="1"/>
+    <text x="430" y="293" text-anchor="middle" font-size="10" fill="#A66A1F">fig01.png — referenced inline</text>
+
+    <!-- text lines after image -->
+    <line x1="290" y1="312" x2="560" y2="312" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="290" y1="326" x2="520" y2="326" stroke="#3D4F65" stroke-width="1"/>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="320" y="400" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">screenshots are first-class citizens, woven into the prose</text>
+</svg>

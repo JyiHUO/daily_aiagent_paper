@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">Hidden Checkpoints in Evolving Dialogue</text>
+  <text x="300" y="52" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">multi-principal write / read on shared memory</text>
+
+  <!-- Principals above timeline -->
+  <rect x="80" y="75" width="80" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="120" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">Patient</text>
+  <line x1="120" y1="109" x2="120" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <rect x="260" y="75" width="80" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="300" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">Doctor</text>
+  <line x1="300" y1="109" x2="300" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <rect x="440" y="75" width="80" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="480" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">Pharmacist</text>
+  <line x1="480" y1="109" x2="480" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <!-- Timeline -->
+  <line x1="60" y1="180" x2="540" y2="180" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="60" y="170" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">turn 1</text>
+  <text x="540" y="170" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">turn 223</text>
+
+  <!-- Visible turn dots -->
+  <circle cx="100" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="140" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="220" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="260" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="340" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="380" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="460" cy="180" r="5" fill="#4B8BDA"/>
+  <circle cx="500" cy="180" r="5" fill="#4B8BDA"/>
+
+  <!-- Hidden checkpoints -->
+  <g>
+    <circle cx="180" cy="180" r="9" fill="#E8A87C" stroke="#C8553D" stroke-width="2"/>
+    <text x="180" y="184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">?</text>
+  </g>
+  <g>
+    <circle cx="300" cy="180" r="9" fill="#E8A87C" stroke="#C8553D" stroke-width="2"/>
+    <text x="300" y="184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">?</text>
+  </g>
+  <g>
+    <circle cx="420" cy="180" r="9" fill="#E8A87C" stroke="#C8553D" stroke-width="2"/>
+    <text x="420" y="184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1E3A5F">?</text>
+  </g>
+
+  <!-- Hidden probe explanation -->
+  <rect x="180" y="265" width="240" height="70" rx="8" fill="#FFF4E8" stroke="#C8553D" stroke-width="1.5"/>
+  <text x="300" y="287" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">Hidden Checkpoint (agent-blind)</text>
+  <text x="300" y="306" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">expected-action · judge-spec · leak-targets</text>
+  <text x="300" y="323" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">probes utility / access / deletion</text>
+
+  <line x1="180" y1="189" x2="225" y2="263" stroke="#C8553D" stroke-width="1.3" marker-end="url(#arr)"/>
+  <line x1="300" y1="189" x2="300" y2="263" stroke="#C8553D" stroke-width="1.3" marker-end="url(#arr)"/>
+  <line x1="420" y1="189" x2="375" y2="263" stroke="#C8553D" stroke-width="1.3" marker-end="url(#arr)"/>
+
+  <!-- Bottom tagline -->
+  <text x="300" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-style="italic" fill="#1E3A5F">"should I recall, refuse, or forget?"</text>
+</svg>

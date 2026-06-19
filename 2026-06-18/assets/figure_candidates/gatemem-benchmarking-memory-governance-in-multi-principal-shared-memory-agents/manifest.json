@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/downloaded_pdfs/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of G ATE M EM . Unlike conventional memory benchmarks that focus on recall and utility in single-principal private-memory settings, G ATE M EM evaluates whether agents can govern shared memory across multiple principals by supporting utility, enforcing access control, and honoring deletion requests.",
+      "clip": [
+        64.73922729492188,
+        91.58621215820312,
+        190.94287109375,
+        195.72683715820312
+      ],
+      "clip_area": 13142.926342487335,
+      "page_area": 484704.0,
+      "text_density": 0.15594460049520883,
+      "kind": "embedded_image_with_caption",
+      "xref": 590,
+      "score": 61.589356485204,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-16-drawing-caption-145",
+      "page_index": 16,
+      "caption": "Figure 7: Checkpoint composition and attack taxonomy. Top: utility, access-control, and active-forgetting shares within each domain. Bottom: access-control and active-forgetting attack mixtures within each domain, reported as percentages within the corresponding checkpoint type.",
+      "clip": [
+        58.680999755859375,
+        55.997894287109375,
+        553.320556640625,
+        355.1520080566406
+      ],
+      "clip_area": 147973.4582752157,
+      "page_area": 484704.0,
+      "text_density": 0.1667816884796954,
+      "kind": "drawing_cluster_with_caption",
+      "score": 7.793098691218276,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/02-p17-drawing_cluster_with_caption.png",
+      "filename": "02-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-139",
+      "page_index": 9,
+      "caption": "Figure 4: Attack-type failure breakdown for GPT-4o-mini on the medical domain. Bars report judge-derived failure rates per baseline. Access-control failures measure unauthorized disclosure, while active-forgetting failures track recovery or confirmation of deleted information. Lower is better.",
+      "clip": [
+        54.0,
+        56.001312255859375,
+        557.9893798828125,
+        283.5269775390625
+      ],
+      "clip_area": 114670.5189535059,
+      "page_area": 484704.0,
+      "text_density": 0.1963301450864587,
+      "kind": "drawing_cluster_with_caption",
+      "score": 6.020191294812477,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/03-p10-drawing_cluster_with_caption.png",
+      "filename": "03-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        30.17546844482422,
+        22.423828125,
+        581.3050537109375,
+        342.4342041015625
+      ],
+      "clip_area": 176367.18579281587,
+      "page_area": 484704.0,
+      "text_density": 0.20401319611408347,
+      "kind": "drawing_cluster",
+      "score": 5.604578125475594,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/04-p2-drawing_cluster.png",
+      "filename": "04-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-14-drawing-cluster-0",
+      "page_index": 14,
+      "caption": "第 15 页矢量图主图候选",
+      "clip": [
+        60.680999755859375,
+        57.99951171875,
+        551.3294677734375,
+        376.2969970703125
+      ],
+      "clip_area": 156172.17356159166,
+      "page_area": 484704.0,
+      "text_density": 0.14543705969226328,
+      "kind": "drawing_cluster",
+      "score": 4.073776418464203,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/05-p15-drawing_cluster.png",
+      "filename": "05-p15-drawing_cluster.png"
+    },
+    {
+      "id": "page-17-drawing-cluster-0",
+      "page_index": 17,
+      "caption": "第 18 页矢量图主图候选",
+      "clip": [
+        60.680999755859375,
+        57.99664306640625,
+        551.3241577148438,
+        368.3179931640625
+      ],
+      "clip_area": 152257.04719400965,
+      "page_area": 484704.0,
+      "text_density": 0.15163955109789637,
+      "kind": "drawing_cluster",
+      "score": 3.7016269341262182,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/06-p18-drawing_cluster.png",
+      "filename": "06-p18-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/gatemem-benchmarking-memory-governance-in-multi-principal-shared-memory-agents/contact-sheet.svg"
+}

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="'PingFang SC','Helvetica Neue',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A4B"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="560" fill="#F7FAFC"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">VisualSkill：把截图写进 Agent 的操作手册</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">让 Computer-Use Agent 像看图说明书一样操作软件　·　CUA Benchmark +15.3</text>
+
+  <!-- LEFT: text-only skill (old) -->
+  <g>
+    <rect x="40" y="110" width="220" height="180" rx="10" fill="#FDF1E8" stroke="#E08A4B" stroke-width="1.5"/>
+    <text x="150" y="135" text-anchor="middle" font-size="14" font-weight="700" fill="#9A4F1E">纯文本技能（旧）</text>
+    <line x1="60" y1="148" x2="240" y2="148" stroke="#E08A4B" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="60" y="172" font-size="11" fill="#3D4F65">"点击对话框底部的 Save 按钮…"</text>
+    <text x="60" y="210" font-size="11" fill="#B0552A" font-style="italic">→ 点错位置 / 图标靠脑补</text>
+    <text x="60" y="230" font-size="11" fill="#B0552A" font-style="italic">→ 无法验证 UI 中间状态</text>
+
+    <!-- sad icon -->
+    <circle cx="220" cy="265" r="14" fill="none" stroke="#E08A4B" stroke-width="2"/>
+    <path d="M213 272 Q220 266 227 272" fill="none" stroke="#E08A4B" stroke-width="2"/>
+    <circle cx="215" cy="261" r="1.5" fill="#E08A4B"/>
+    <circle cx="225" cy="261" r="1.5" fill="#E08A4B"/>
+    <text x="60" y="268" font-size="11" fill="#9A4F1E">文字描述歧义重</text>
+  </g>
+
+  <!-- VS arrow -->
+  <text x="290" y="200" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">→</text>
+
+  <!-- CENTER: multimodal skill book -->
+  <g>
+    <rect x="315" y="105" width="225" height="205" rx="8" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <rect x="315" y="105" width="225" height="28" fill="#1E3A5F"/>
+    <text x="427" y="124" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">SKILL.md　多模态手册</text>
+
+    <!-- text lines -->
+    <line x1="332" y1="150" x2="525" y2="150" stroke="#3D4F65" stroke-width="1.2"/>
+    <line x1="332" y1="161" x2="500" y2="161" stroke="#3D4F65" stroke-width="1.2"/>
+
+    <!-- screenshot embed -->
+    <rect x="340" y="174" width="175" height="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <rect x="346" y="180" width="55" height="10" fill="#4B8BDA" opacity="0.6"/>
+    <rect x="346" y="196" width="35" height="6" fill="#4B8BDA" opacity="0.4"/>
+    <rect x="386" y="196" width="35" height="6" fill="#4B8BDA" opacity="0.4"/>
+    <circle cx="495" cy="205" r="9" fill="#E08A4B"/>
+    <text x="495" y="209" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">▶</text>
+    <text x="427" y="252" text-anchor="middle" font-size="10" fill="#4B8BDA" font-style="italic">fig01.png · 真实 UI 截图</text>
+
+    <line x1="332" y1="266" x2="525" y2="266" stroke="#3D4F65" stroke-width="1.2"/>
+    <line x1="332" y1="277" x2="510" y2="277" stroke="#3D4F65" stroke-width="1.2"/>
+    <line x1="332" y1="288" x2="480" y2="288" stroke="#3D4F65" stroke-width="1.2"/>
+
+    <text x="427" y="303" text-anchor="middle" font-size="11" fill="#3D4F65">文字与截图按引用顺序穿插</text>
+  </g>
+
+  <!-- RIGHT: Agent -->
+  <g>
+    <rect x="595" y="135" width="160" height="155" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="675" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">CUA Agent</text>
+    <!-- robot icon -->
+    <rect x="645" y="175" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="660" cy="195" r="4" fill="#4B8BDA"/>
+    <circle cx="690" cy="195" r="4" fill="#4B8BDA"/>
+    <line x1="658" y1="210" x2="692" y2="210" stroke="#1E3A5F" stroke-width="1.5"/>
+    <line x1="675" y1="175" x2="675" y2="167" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="675" cy="165" r="2.5" fill="#E08A4B"/>
+    <text x="675" y="250" text-anchor="middle" font-size="11" fill="#3D4F65">读图 &amp; 对照像素</text>
+    <text x="675" y="268" text-anchor="middle" font-size="11" fill="#3D4F65">验证中间状态</text>
+  </g>
+
+  <!-- load_topic arrow -->
+  <path d="M 545 205 L 593 205" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <rect x="548" y="180" width="42" height="18" rx="9" fill="#1E3A5F"/>
+  <text x="569" y="193" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">MCP</text>
+  <text x="569" y="222" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="600">load_topic(t)</text>
+
+  <!-- BOTTOM: two-stage construction feeding the book -->
+  <g>
+    <rect x="60" y="380" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="165" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 1：官方手册</text>
+    <text x="165" y="425" text-anchor="middle" font-size="11" fill="#3D4F65">抽取目录 + 厂商截图</text>
+    <text x="165" y="443" text-anchor="middle" font-size="11" fill="#3D4F65">建立技能骨架</text>
+
+    <rect x="305" y="380" width="240" height="80" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="425" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 2：真实软件探索</text>
+    <text x="425" y="425" text-anchor="middle" font-size="11" fill="#3D4F65">free explorer · 自由点击截图</text>
+    <text x="425" y="443" text-anchor="middle" font-size="11" fill="#3D4F65">trajectory · 复盘失败补图</text>
+
+    <!-- result -->
+    <rect x="580" y="380" width="170" height="80" rx="8" fill="#1E3A5F"/>
+    <text x="665" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">收益</text>
+    <text x="665" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="#E08A4B">+15.3 分</text>
+    <text x="665" y="448" text-anchor="middle" font-size="10" fill="#EFF6FF">图片消费量 ×10</text>
+  </g>
+
+  <!-- arrows from stages up to book -->
+  <path d="M 200 380 Q 220 345 330 312" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M 425 380 L 425 313" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- arrow from agent down to result -->
+  <path d="M 675 290 L 665 378" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- Footer keywords -->
+  <text x="400" y="505" text-anchor="middle" font-size="11" fill="#3D4F65">截图作为一等公民　·　按需加载　·　两阶段构建　·　长流程 GUI 操作</text>
+  <text x="400" y="525" text-anchor="middle" font-size="10" fill="#8593A8">关键时刻：识别图标 / 验证 UI 中间状态</text>
+</svg>

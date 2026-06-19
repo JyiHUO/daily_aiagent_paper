@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 06-18：评测、安全、推理三线齐刷",
+  "shownotes_html": "<p>这期我们盯住一个共同的反思：当 Agent 接上工具、跨越长程、做出判断时，过去那套\"短任务通过率\"的评测是不是在系统性高估它们？三篇论文从长程经营、安全沙箱、代码审计三个角度给出答案。</p><p><strong>本期重点</strong></p><ul><li><strong>500 天创业模拟里的 Agent 长程能力（CEO-Bench: Can Agents Play the Long Game?）</strong>：让十款 SOTA 模型当 500 天 CEO 经营 SaaS 公司，多数破产或跑不赢固定规则脚本，只有 Claude Opus 4.8 与 GPT-5.5 真正突破基线，长程差距远大于短任务。</li><li><strong>把 Agent 安全拆成三层端点（SafeClawBench: Separating Semantic, Audit-Evidence, and Sandbox Harm in Tool-Using LLM Agents）</strong>：把语义合规、审计证据、沙箱状态变更分开度量，发现真正出事的样例里近 84% 在文本评测层是\"通过\"的，长 prompt 防御也被泼了一盆冷水。</li><li><strong>让 Agent 的假设可被 fuzzer 证伪（Code-Augur: Agentic Vulnerability Detection via Specification Inference）</strong>：把 Agent 判定\"安全\"时的隐含不变量直接写成源码 assert，再用 fuzzer 攻击这些断言，在 AIxCC 与 OSV 基准上比 SOTA 多挖 34%–370% 的 bug，并找到 22 个真实新漏洞。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 评测从短程单一 ASR 转向长程、多端点、可观测状态变更。</li><li>安全研究重心从 prompt 层防御下沉到 runtime 治理与可验证性，\"把 Agent 推理变成可被外部证伪的产物\"成为今天最具方法论辐射力的方向。</li></ul><p>如果你最近在做 Agent 产品，不妨挑一个 Agent 最近做出的判断，把它背后的假设写下来，再想办法构造输入去证伪它——能被打脸是好事。本期由 AI 自动生成，欢迎在评论区留言交流你踩过的长程或安全坑。</p>",
+  "report_date": "2026-06-18",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-18T22:19:54Z"
+}

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/downloaded_pdfs/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-10",
+      "page_index": 8,
+      "caption": "Figure 3: Exec ObservedHarm by defense. Bars show means; dots and ranges show endpoint spread.",
+      "clip": [
+        159.30099487304688,
+        55.99955749511719,
+        452.70416259765625,
+        283.10400390625
+      ],
+      "clip_area": 66633.16398137016,
+      "page_area": 484704.0,
+      "text_density": 0.1611713941897903,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.870084837294474,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-15",
+      "page_index": 6,
+      "caption": "Figure 2: Reduced-panel CoreFail@600 defense trajectories. Each row traces one endpoint across prompt policies; lower is better.",
+      "clip": [
+        159.30099487304688,
+        213.63986206054688,
+        452.6982421875,
+        395.20697021484375
+      ],
+      "clip_area": 53271.2897353163,
+      "page_area": 484704.0,
+      "text_density": 0.12863930264097193,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.673545060822978,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-block-9",
+      "page_index": 11,
+      "caption": "[22] OpenClaw Contributors. OpenClaw: Open-source framework for tool-using AI agents. https: //github.com/openclaw , 2024.",
+      "clip": [
+        77.39999237060547,
+        297.91844482421874,
+        537.5884033203125,
+        606.7184448242188
+      ],
+      "clip_area": 142106.18130126956,
+      "page_area": 484704.0,
+      "text_density": 0.7142407275396735,
+      "kind": "captioned_figure",
+      "score": 12.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/03-p12-captioned_figure.png",
+      "filename": "03-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-10",
+      "page_index": 8,
+      "caption": "Figure 3: Exec ObservedHarm by defense. Bars show means; dots and ranges show endpoint spread.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5974365234375,
+        265.9914245605469
+      ],
+      "clip_area": 113381.04358887748,
+      "page_area": 484704.0,
+      "text_density": 0.07113799658812132,
+      "kind": "captioned_figure",
+      "score": 11.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        100.10128784179688,
+        58.18943786621094,
+        511.9016418457031,
+        171.6581268310547
+      ],
+      "clip_area": 46726.44628408179,
+      "page_area": 484704.0,
+      "text_density": 0.21464379524750532,
+      "kind": "drawing_cluster",
+      "score": 6.440555021639479,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/05-p2-drawing_cluster.png",
+      "filename": "05-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        161.30099487304688,
+        215.63986206054688,
+        450.6982421875,
+        393.20697021484375
+      ],
+      "clip_area": 51387.4323134413,
+      "page_area": 484704.0,
+      "text_density": 0.121393838962256,
+      "kind": "drawing_cluster",
+      "score": 6.087341132413988,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/06-p7-drawing_cluster.png",
+      "filename": "06-p7-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/safeclawbench-separating-semantic-audit-evidence-and-sandbox-harm-in-tool-using-/contact-sheet.svg"
+}

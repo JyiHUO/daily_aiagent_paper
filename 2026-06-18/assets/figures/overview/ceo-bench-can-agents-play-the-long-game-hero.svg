@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFC"/>
+
+  <text x="450" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="24" font-weight="700" fill="#1E3A5F">CEO-Bench</text>
+  <text x="450" y="70" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">能否经营 500 天的虚拟创业公司？</text>
+
+  <!-- Central Agent -->
+  <circle cx="450" cy="310" r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="450" y="298" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">Agent CEO</text>
+  <text x="450" y="322" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">$1M 起步 · Python 终端</text>
+  <text x="450" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" font-style="italic">现金余额 = 唯一评分</text>
+
+  <!-- Top-left -->
+  <g>
+    <rect x="60" y="120" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="145" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">长程规划</text>
+    <text x="145" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">500 天决策</text>
+  </g>
+
+  <!-- Top-right -->
+  <g>
+    <rect x="670" y="120" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="755" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">噪声推断</text>
+    <text x="755" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">19 张数据表</text>
+  </g>
+
+  <!-- Bottom-left -->
+  <g>
+    <rect x="60" y="430" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="145" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">动态适应</text>
+    <text x="145" y="482" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">市场漂移</text>
+  </g>
+
+  <!-- Bottom-right -->
+  <g>
+    <rect x="670" y="430" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="755" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">多线协同</text>
+    <text x="755" y="482" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">34 个工具</text>
+  </g>
+
+  <!-- Connections to center -->
+  <line x1="230" y1="170" x2="378" y2="268" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <line x1="670" y1="170" x2="522" y2="268" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <line x1="230" y1="455" x2="378" y2="358" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+  <line x1="670" y1="455" x2="522" y2="358" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ah)"/>
+
+  <!-- Outcome -->
+  <g transform="translate(260,560)">
+    <rect x="0" y="0" width="380" height="44" rx="8" fill="#FFF4ED" stroke="#D97757" stroke-width="1.5"/>
+    <text x="190" y="20" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#8B3A1F">结果：多数 SOTA 模型破产</text>
+    <text x="190" y="36" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#8B3A1F">仅 Opus 4.8 / GPT-5.5 守住本金</text>
+  </g>
+
+  <line x1="450" y1="402" x2="450" y2="555" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#ahr)"/>
+</svg>

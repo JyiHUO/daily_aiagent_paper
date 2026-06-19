@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A8B4C2"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="bold" fill="#1E3A5F">load_topic：一次取齐图文</text>
+
+  <!-- LEFT: Read approach -->
+  <g>
+    <text x="200" y="78" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#3D4F65">普通 Read 方式</text>
+
+    <circle cx="80" cy="240" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="80" y="245" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#1E3A5F">Agent</text>
+
+    <!-- md doc -->
+    <rect x="265" y="125" width="80" height="90" rx="4" fill="#FFF7ED" stroke="#D97706" stroke-width="1.3"/>
+    <line x1="277" y1="148" x2="333" y2="148" stroke="#D97706" stroke-width="1"/>
+    <line x1="277" y1="160" x2="333" y2="160" stroke="#D97706" stroke-width="1"/>
+    <line x1="277" y1="172" x2="333" y2="172" stroke="#D97706" stroke-width="1"/>
+    <line x1="277" y1="184" x2="325" y2="184" stroke="#D97706" stroke-width="1"/>
+    <line x1="277" y1="196" x2="333" y2="196" stroke="#D97706" stroke-width="1"/>
+    <text x="305" y="234" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">SKILL.md</text>
+
+    <!-- scattered images -->
+    <rect x="262" y="278" width="38" height="32" fill="#FEF3C7" stroke="#A8B4C2" stroke-width="1"/>
+    <rect x="312" y="298" width="38" height="32" fill="#FEF3C7" stroke="#A8B4C2" stroke-width="1"/>
+    <rect x="278" y="345" width="38" height="32" fill="#FEF3C7" stroke="#A8B4C2" stroke-width="1"/>
+    <text x="305" y="402" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">图片散落，需多次 Read</text>
+
+    <!-- arrow: only one read for md -->
+    <path d="M115,232 L262,178" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <text x="155" y="200" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">读 md（一次）</text>
+
+    <!-- skipped image read -->
+    <path d="M115,255 L258,300" stroke="#A8B4C2" stroke-width="1.3" stroke-dasharray="4,3" fill="none" marker-end="url(#arGray)"/>
+    <text x="135" y="285" font-family="Helvetica,Arial" font-size="10" fill="#A8B4C2" font-style="italic">取图常被跳过</text>
+
+    <text x="200" y="455" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#B45309" font-weight="bold">~0.8 张图 / 任务</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="410" y1="70" x2="410" y2="465" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- RIGHT: load_topic -->
+  <g>
+    <text x="600" y="78" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#3D4F65">load_topic(t) MCP 工具</text>
+
+    <circle cx="465" cy="240" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="465" y="245" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#1E3A5F">Agent</text>
+
+    <!-- bundled package: text with images interleaved -->
+    <rect x="590" y="125" width="160" height="250" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="670" y="146" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#1E3A5F" font-weight="bold">一次返回·图文交错</text>
+
+    <line x1="605" y1="162" x2="735" y2="162" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="605" y1="172" x2="735" y2="172" stroke="#3D4F65" stroke-width="1"/>
+    <rect x="615" y="182" width="110" height="30" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+    <line x1="605" y1="224" x2="735" y2="224" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="605" y1="234" x2="720" y2="234" stroke="#3D4F65" stroke-width="1"/>
+    <rect x="615" y="244" width="110" height="30" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+    <line x1="605" y1="286" x2="735" y2="286" stroke="#3D4F65" stroke-width="1"/>
+    <rect x="615" y="296" width="110" height="30" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+    <line x1="605" y1="338" x2="710" y2="338" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="605" y1="348" x2="730" y2="348" stroke="#3D4F65" stroke-width="1"/>
+
+    <!-- call arrow -->
+    <path d="M500,228 L588,228" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+    <text x="544" y="220" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">load_topic(t)</text>
+
+    <!-- return arrow -->
+    <path d="M588,258 L500,258" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+    <text x="544" y="276" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">文字 + 截图打包</text>
+
+    <text x="600" y="455" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#1E3A5F" font-weight="bold">~7.9 张图 / 任务  (≈10×)</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8985A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">两阶段技能构建</text>
+
+  <!-- Stage 1: Manual -->
+  <g>
+    <rect x="50" y="90" width="170" height="210" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="135" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Stage 1 · 读手册</text>
+    <!-- book icon -->
+    <path d="M85 138 L135 131 L185 138 L185 208 L135 201 L85 208 Z" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <line x1="135" y1="131" x2="135" y2="201" stroke="#1E3A5F" stroke-width="1.2"/>
+    <line x1="95" y1="153" x2="125" y2="149" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="95" y1="168" x2="125" y2="164" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="145" y1="149" x2="175" y2="153" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="145" y1="164" x2="175" y2="168" stroke="#3D4F65" stroke-width="1"/>
+    <text x="135" y="240" text-anchor="middle" font-size="12" fill="#3D4F65">官方目录 + 厂商截图</text>
+    <text x="135" y="278" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">静态骨架</text>
+  </g>
+
+  <!-- Stage 2: Explore -->
+  <g>
+    <rect x="380" y="90" width="170" height="210" rx="10" fill="#FFF4E6" stroke="#E8985A" stroke-width="1.5"/>
+    <text x="465" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Stage 2 · 实地探</text>
+    <!-- magnifier over UI -->
+    <rect x="400" y="135" width="100" height="70" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.2"/>
+    <rect x="400" y="135" width="100" height="12" fill="#E8985A" opacity="0.5"/>
+    <rect x="410" y="155" width="30" height="20" fill="#EFF6FF" stroke="#3D4F65" stroke-width="0.8"/>
+    <rect x="450" y="155" width="40" height="40" fill="#EFF6FF" stroke="#3D4F65" stroke-width="0.8"/>
+    <circle cx="490" cy="195" r="14" fill="none" stroke="#C7522A" stroke-width="2.5"/>
+    <line x1="500" y1="205" x2="512" y2="217" stroke="#C7522A" stroke-width="3" stroke-linecap="round"/>
+    <text x="465" y="240" text-anchor="middle" font-size="12" fill="#3D4F65">自由探索 + 失败复盘</text>
+    <text x="465" y="278" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">动态补丁</text>
+  </g>
+
+  <!-- merge arrows -->
+  <path d="M220 200 Q260 200 280 320 L290 340" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M380 200 Q340 200 320 320 L310 340" stroke="#E8985A" stroke-width="2" fill="none" marker-end="url(#ar2)"/>
+
+  <!-- Skill Guide -->
+  <rect x="210" y="345" width="180" height="50" rx="8" fill="#1E3A5F"/>
+  <text x="300" y="370" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">多模态技能库</text>
+  <text x="300" y="386" text-anchor="middle" font-size="11" fill="#EFF6FF">文字 + 截图</text>
+</svg>

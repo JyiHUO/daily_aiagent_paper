@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/downloaded_pdfs/ceo-bench-can-agents-play-the-long-game.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-52",
+      "page_index": 2,
+      "caption": "Figure 3. Cash on hand over time for each of the three runs per model. We show all experiments for each model to describe full behavior patterns. We also release all agent action trajectories in an interactive trajectory viewer .",
+      "clip": [
+        48.5594482421875,
+        68.24754333496094,
+        562.5864868164062,
+        339.26104736328125
+      ],
+      "clip_area": 139308.2688892996,
+      "page_area": 484704.0,
+      "text_density": 0.2448895439353515,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.10662736387891,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-12-drawing-caption-85",
+      "page_index": 12,
+      "caption": "Figure 12. Better-performing models excel along four skill axes : (a) uncovering hidden ad-channel effectiveness and allocating spend to the best channel, (b) forecasting future cash, (c) reacting quickly to competitor events, and (d) planning more extensively. We show mean and standard deviation of each measurement in plots above.",
+      "clip": [
+        34.37675857543945,
+        66.62691497802734,
+        562.351318359375,
+        389.27532958984375
+      ],
+      "clip_area": 170350.15466965848,
+      "page_area": 484704.0,
+      "text_density": 0.2896909216964574,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.960467630999702,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/02-p13-drawing_cluster_with_caption.png",
+      "filename": "02-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-73",
+      "page_index": 2,
+      "caption": "Figure 4. Running a startup requires coordinating many moving parts, making it a fitting choice as a canonical task evaluating agent’s skills to steer complex decisions across long-horizon.",
+      "clip": [
+        268.4058837890625,
+        449.91412353515625,
+        570.58984375,
+        681.5521240234375
+      ],
+      "clip_area": 69997.2882649824,
+      "page_area": 484704.0,
+      "text_density": 0.29206192803844333,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.054031965082096,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/03-p3-drawing_cluster_with_caption.png",
+      "filename": "03-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-caption-45",
+      "page_index": 11,
+      "caption": "Figure 10. Targeted development spending breakdown. GPT-5.5 and Claude Opus 4.8 direct much larger shares of development spending toward fine-grained group-specific improvements than most other models.",
+      "clip": [
+        283.2012634277344,
+        327.9993896484375,
+        563.93701171875,
+        457.17388916015625
+      ],
+      "clip_area": 36263.899780539796,
+      "page_area": 484704.0,
+      "text_density": 0.6421028697725487,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.402932219783779,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/04-p12-drawing_cluster_with_caption.png",
+      "filename": "04-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-46",
+      "page_index": 5,
+      "caption": "Figure 5. Major design principles behind CEO-B ENCH ’s world mechanics and example designs that follow the principles.",
+      "clip": [
+        48.63478088378906,
+        66.62199401855469,
+        563.3671264648438,
+        261.82618713378906
+      ],
+      "clip_area": 100477.91218946176,
+      "page_area": 484704.0,
+      "text_density": 0.2126632020035501,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.156629126336568,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/05-p6-drawing_cluster_with_caption.png",
+      "filename": "05-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-52",
+      "page_index": 2,
+      "caption": "Figure 3. Cash on hand over time for each of the three runs per model. We show all experiments for each model to describe full behavior patterns. We also release all agent action trajectories in an interactive trajectory viewer .",
+      "clip": [
+        40.265997314453124,
+        18.0,
+        571.7302490234375,
+        313.94049072265625
+      ],
+      "clip_area": 157281.79145230615,
+      "page_area": 484704.0,
+      "text_density": 0.1614167977250975,
+      "kind": "captioned_figure",
+      "score": 13.114992136494148,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/06-p3-captioned_figure.png",
+      "filename": "06-p3-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/ceo-bench-can-agents-play-the-long-game/contact-sheet.svg"
+}

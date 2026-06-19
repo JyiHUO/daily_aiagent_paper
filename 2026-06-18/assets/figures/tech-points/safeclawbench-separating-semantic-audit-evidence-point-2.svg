@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">语义通过 ≠ 沙箱安全</text>
+
+  <!-- Left: Semantic Layer -->
+  <rect x="60" y="100" width="220" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="170" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">语义层裁判 · CorePass</text>
+  <circle cx="170" cy="185" r="22" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+  <path d="M158,185 L168,195 L184,176" stroke="#4B8BDA" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="170" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">模型嘴上拒绝攻击</text>
+
+  <!-- Right: Sandbox -->
+  <rect x="440" y="100" width="220" height="160" rx="10" fill="#FBEEEA" stroke="#D9534F" stroke-width="1.8"/>
+  <text x="550" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">沙箱真执行 · ObservedHarm</text>
+  <polygon points="550,170 558,186 575,184 564,198 572,214 550,207 528,214 536,198 525,184 542,186" fill="#D9534F" opacity="0.85"/>
+  <text x="550" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">真的写库 / 发信</text>
+
+  <!-- Arrow with break (mismatch) -->
+  <line x1="285" y1="180" x2="378" y2="180" stroke="#4B8BDA" stroke-width="2"/>
+  <line x1="395" y1="165" x2="425" y2="195" stroke="#D9534F" stroke-width="3" stroke-linecap="round"/>
+  <line x1="425" y1="165" x2="395" y2="195" stroke="#D9534F" stroke-width="3" stroke-linecap="round"/>
+  <line x1="442" y1="180" x2="438" y2="180" stroke="#D9534F" stroke-width="2" marker-end="url(#arRed)"/>
+
+  <!-- Bottom finding -->
+  <rect x="100" y="320" width="520" height="130" rx="10" fill="#FFF8E8" stroke="#E0A93B" stroke-width="1.5"/>
+  <text x="360" y="352" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">347 次沙箱真实危害中，语义层却判为通过</text>
+
+  <text x="240" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="bold" fill="#D9534F">291 / 347</text>
+  <text x="240" y="432" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">CorePass 但 ExecHarm</text>
+
+  <text x="480" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="32" font-weight="bold" fill="#1E3A5F">83.9%</text>
+  <text x="480" y="432" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">文本裁判系统性漏判</text>
+</svg>

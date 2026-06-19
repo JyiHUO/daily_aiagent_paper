@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/downloaded_pdfs/visualskill-multimodal-skills-for-computer-use-agents.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents",
+  "candidates": [
+    {
+      "id": "page-1-block-1",
+      "page_index": 1,
+      "caption": "Figure 1: A text-only skill struggles to describe the precise operations and icons to focus on, creating ambi- guities that multimodal skills can avoid.",
+      "clip": [
+        48.865997314453125,
+        52.86817932128906,
+        311.1181640625,
+        319.89501953125
+      ],
+      "clip_area": 70028.36742494674,
+      "page_area": 501156.9211820215,
+      "text_density": 0.03999365241759626,
+      "kind": "image_block_with_caption",
+      "score": 47.7780929713883,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: A text-only skill struggles to describe the precise operations and icons to focus on, creating ambi- guities that multimodal skills can avoid.",
+      "clip": [
+        58.865997314453125,
+        58.86817932128906,
+        301.1181640625,
+        313.89501953125
+      ],
+      "clip_area": 61780.80461977096,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0046265486592879735,
+      "kind": "embedded_image_with_caption",
+      "xref": 542,
+      "score": 46.68645338466412,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-16-embedded-1-0",
+      "page_index": 16,
+      "caption": "fig02.png • vendor screenshot extracted from PDF page 88",
+      "clip": [
+        352.9159851074219,
+        375.33416748046875,
+        477.634521484375,
+        498.0970153808594
+      ],
+      "clip_area": 15310.802711603232,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0486922566549324,
+      "kind": "embedded_image_with_caption",
+      "xref": 559,
+      "score": 13.170120030128924,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/03-p17-embedded_image_with_caption.png",
+      "filename": "03-p17-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-16-drawing-caption-15",
+      "page_index": 16,
+      "caption": "fig02.png • vendor screenshot extracted from PDF page 88",
+      "clip": [
+        288.1419982910156,
+        124.08267211914062,
+        542.4124145507812,
+        519.7750244140625
+      ],
+      "clip_area": 100612.85912883561,
+      "page_area": 501156.9211820215,
+      "text_density": 0.260924639440985,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.262442290527966,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/04-p17-drawing_cluster_with_caption.png",
+      "filename": "04-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        70.20500183105469,
+        58.86541748046875,
+        525.0718383789062,
+        407.80902099609375
+      ],
+      "clip_area": 158722.87306476012,
+      "page_area": 501156.9211820215,
+      "text_density": 0.003943944822775891,
+      "kind": "embedded_image",
+      "xref": 609,
+      "score": 7.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/05-p4-embedded_image.png",
+      "filename": "05-p4-embedded_image.png"
+    },
+    {
+      "id": "page-14-embedded-1-0",
+      "page_index": 14,
+      "caption": "第 15 页内嵌图片候选",
+      "clip": [
+        77.5510025024414,
+        378.51324462890625,
+        286.4154052734375,
+        583.7880249023438
+      ],
+      "clip_area": 42874.594385758974,
+      "page_area": 501156.9211820215,
+      "text_density": 0.07178088249530186,
+      "kind": "embedded_image",
+      "xref": 558,
+      "score": 5.476384382063989,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/06-p15-embedded_image.png",
+      "filename": "06-p15-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-18/assets/figure_candidates/visualskill-multimodal-skills-for-computer-use-agents/contact-sheet.svg"
+}

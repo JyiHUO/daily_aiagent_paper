@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">500 天创业长局</text>
+  <text x="360" y="65" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">现金为唯一评分</text>
+
+  <!-- Start: bag of money -->
+  <g transform="translate(60,200)">
+    <circle cx="50" cy="40" r="48" fill="#FFF4DC" stroke="#E0A93B" stroke-width="2"/>
+    <text x="50" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">$1M</text>
+    <text x="50" y="115" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">起步资金</text>
+  </g>
+
+  <!-- Middle: timeline of weeks -->
+  <g>
+    <rect x="190" y="210" width="340" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="360" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">每周决策 · 推进一周 · 共约 71 周</text>
+
+    <!-- week ticks -->
+    <line x1="210" y1="240" x2="510" y2="240" stroke="#4B8BDA" stroke-width="1.5"/>
+    <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#1E3A5F">
+      <circle cx="220" cy="240" r="4" fill="#4B8BDA"/>
+      <circle cx="290" cy="240" r="4" fill="#4B8BDA"/>
+      <circle cx="360" cy="240" r="4" fill="#4B8BDA"/>
+      <circle cx="430" cy="240" r="4" fill="#4B8BDA"/>
+      <circle cx="500" cy="240" r="4" fill="#4B8BDA"/>
+      <text x="220" y="258" text-anchor="middle">W1</text>
+      <text x="500" y="258" text-anchor="middle">W71</text>
+    </g>
+
+    <text x="360" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">定价 · 营销 · 研发 · 客服 · 销售</text>
+    <text x="360" y="310" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A8AA0">34 工具 · 19 数据表</text>
+  </g>
+
+  <!-- End: two outcomes -->
+  <g transform="translate(580,150)">
+    <rect x="0" y="0" width="100" height="60" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
+    <text x="50" y="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#2E7D32">盈利</text>
+    <text x="50" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">现金 &gt; 0</text>
+  </g>
+
+  <g transform="translate(580,270)">
+    <rect x="0" y="0" width="100" height="60" rx="8" fill="#FDECEC" stroke="#D9534F" stroke-width="1.5"/>
+    <text x="50" y="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#B53A35">破产</text>
+    <text x="50" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">现金 &lt; 0</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="160" y1="240" x2="188" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="532" y1="230" x2="578" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="532" y1="260" x2="578" y2="295" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- bottom note -->
+  <text x="360" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="600">长程规划 · 噪声推断 · 动态适应 · 多业务协同</text>
+  <text x="360" y="442" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#7A8AA0">四种能力一并压在 Agent 身上</text>
+</svg>

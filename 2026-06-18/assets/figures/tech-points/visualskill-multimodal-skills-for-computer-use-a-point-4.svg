@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system, Segoe UI, sans-serif">
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">截图作为技能的一部分</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">两类最受益的时刻</text>
+
+  <!-- Left: Locate -->
+  <g>
+    <rect x="60" y="100" width="300" height="300" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="210" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">① 定位元素</text>
+
+    <!-- Mock dialog -->
+    <rect x="100" y="150" width="220" height="160" rx="6" fill="#ffffff" stroke="#3D4F65" stroke-width="1.2"/>
+    <rect x="100" y="150" width="220" height="22" rx="6" fill="#D9E4F0" stroke="#3D4F65" stroke-width="1.2"/>
+    <circle cx="310" cy="161" r="4" fill="#E07A5F"/>
+    <text x="118" y="205" font-size="11" fill="#3D4F65">Are you sure?</text>
+    <rect x="200" y="270" width="90" height="26" rx="4" fill="#4B8BDA"/>
+    <text x="245" y="287" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">Save</text>
+
+    <!-- wrong click on titlebar -->
+    <text x="185" y="167" font-size="14" fill="#E07A5F" font-weight="700">✗</text>
+    <!-- right click on Save -->
+    <text x="248" y="288" font-size="14" fill="#2E7D5B" font-weight="700">✓</text>
+
+    <text x="210" y="350" text-anchor="middle" font-size="12" fill="#3D4F65">技能写："点底部的 Save"</text>
+    <text x="210" y="375" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">看参考图 → 直击正确像素</text>
+  </g>
+
+  <!-- Right: Verify -->
+  <g>
+    <rect x="440" y="100" width="300" height="300" rx="14" fill="#FFF4E6" stroke="#E0A062" stroke-width="1.5"/>
+    <text x="590" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">② 校验状态</text>
+
+    <!-- Reference screenshot -->
+    <rect x="465" y="160" width="110" height="90" rx="4" fill="#ffffff" stroke="#3D4F65" stroke-width="1.2"/>
+    <rect x="475" y="195" width="80" height="14" fill="#D9E4F0"/>
+    <text x="520" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">参考截图</text>
+
+    <!-- Current screenshot (subtle diff) -->
+    <rect x="605" y="160" width="110" height="90" rx="4" fill="#ffffff" stroke="#3D4F65" stroke-width="1.2"/>
+    <rect x="615" y="195" width="80" height="14" fill="#ffffff" stroke="#E07A5F" stroke-width="1.2" stroke-dasharray="3,2"/>
+    <text x="660" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">当前截图</text>
+
+    <!-- compare arrows -->
+    <line x1="578" y1="205" x2="602" y2="205" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="602" y1="215" x2="578" y2="215" stroke="#4B8BDA" stroke-width="1.5"/>
+
+    <text x="590" y="320" text-anchor="middle" font-size="12" fill="#3D4F65">输入框看似接收却被静默拒绝？</text>
+    <text x="590" y="375" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">像素对比 → 一眼识破</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="438" text-anchor="middle" font-size="12" fill="#3D4F65">文字会歧义，像素不会</text>
+</svg>

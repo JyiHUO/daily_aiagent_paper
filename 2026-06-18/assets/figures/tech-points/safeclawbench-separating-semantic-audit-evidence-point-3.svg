@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">六类攻击家族 · 600 任务</text>
+  <text x="360" y="62" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Agent 不可信通道全景</text>
+
+  <!-- Central agent -->
+  <circle cx="360" cy="260" r="60" fill="#FFF4E6" stroke="#E8A857" stroke-width="2"/>
+  <text x="360" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">LLM Agent</text>
+  <text x="360" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">600 cases</text>
+
+  <!-- DPI top-left -->
+  <rect x="60" y="120" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="125" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">DPI · 直接注入</text>
+  <text x="125" y="164" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">CoreFail 20.8%</text>
+
+  <!-- IPI top-right -->
+  <rect x="530" y="120" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="595" y="145" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">IPI · 间接注入</text>
+  <text x="595" y="164" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">CoreFail 16%</text>
+
+  <!-- TRI middle-left -->
+  <rect x="40" y="232" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="105" y="257" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">TRI · 工具返回</text>
+  <text x="105" y="276" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">CoreFail 13.4%</text>
+
+  <!-- ADI middle-right -->
+  <rect x="550" y="232" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="615" y="257" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">ADI · 对抗诱导</text>
+  <text x="615" y="276" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">CoreFail 9%</text>
+
+  <!-- MPI bottom-left (highlight) -->
+  <rect x="60" y="344" width="130" height="56" rx="8" fill="#FCE4E4" stroke="#D9534F" stroke-width="2"/>
+  <text x="125" y="369" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">MPI · 记忆投毒</text>
+  <text x="125" y="388" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#D9534F">CoreFail 54.4%</text>
+
+  <!-- MEX bottom-right (highlight) -->
+  <rect x="530" y="344" width="130" height="56" rx="8" fill="#FCE4E4" stroke="#D9534F" stroke-width="2"/>
+  <text x="595" y="369" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">MEX · 记忆提取</text>
+  <text x="595" y="388" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" font-weight="600" fill="#D9534F">CoreFail 54.4%</text>
+
+  <!-- Arrows to agent -->
+  <line x1="190" y1="170" x2="316" y2="225" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <line x1="530" y1="170" x2="404" y2="225" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <line x1="170" y1="260" x2="298" y2="260" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <line x1="550" y1="260" x2="422" y2="260" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arrB)"/>
+  <line x1="190" y1="350" x2="316" y2="296" stroke="#D9534F" stroke-width="2" marker-end="url(#arrR)"/>
+  <line x1="530" y1="350" x2="404" y2="296" stroke="#D9534F" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Bottom note -->
+  <text x="360" y="440" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#D9534F">记忆通道（MPI/MEX）显著高于其它通道</text>
+  <text x="360" y="458" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">每族 100 例 · 共 600 任务 · D0 无防御基线</text>
+</svg>

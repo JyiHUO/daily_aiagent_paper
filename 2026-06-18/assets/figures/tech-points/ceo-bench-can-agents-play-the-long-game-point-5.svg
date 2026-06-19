@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">四维能力归因</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">不只看分数，看强在哪</text>
+
+  <!-- Center: total score -->
+  <circle cx="360" cy="260" r="60" fill="#FFF4E6" stroke="#E89B5A" stroke-width="2"/>
+  <text x="360" y="256" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">长程得分</text>
+  <text x="360" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">综合产物</text>
+
+  <!-- Top-left: hidden info -->
+  <rect x="60" y="120" width="180" height="74" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="150" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">隐藏信息</text>
+  <text x="150" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">最优广告渠道命中率</text>
+
+  <!-- Top-right: foresight -->
+  <rect x="480" y="120" width="180" height="74" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="570" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">前瞻预测</text>
+  <text x="570" y="178" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">四周现金流误差</text>
+
+  <!-- Bottom-left: adapt -->
+  <rect x="60" y="326" width="180" height="74" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="150" y="354" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">环境适应</text>
+  <text x="150" y="384" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">察觉对手的延迟</text>
+
+  <!-- Bottom-right: planning -->
+  <rect x="480" y="326" width="180" height="74" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="570" y="354" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">规划分支</text>
+  <text x="570" y="384" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">memo 中 if 频次</text>
+
+  <!-- Arrows from 4 corners to center -->
+  <line x1="240" y1="180" x2="316" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="480" y1="180" x2="404" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="240" y1="340" x2="316" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="480" y1="340" x2="404" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">可观测代理指标 → 分项归因诊断</text>
+</svg>
