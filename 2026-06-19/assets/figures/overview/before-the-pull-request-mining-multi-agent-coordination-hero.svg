@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'PingFang SC','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Pull Request 之前：挖掘多 Agent 协调过程</text>
+  <text x="450" y="70" text-anchor="middle" font-size="13" fill="#3D4F65">PR 层看不见的冲突，藏在 Agent 认领与碰撞的事件流里</text>
+
+  <!-- Left: chaotic agents without coordination -->
+  <g>
+    <text x="170" y="110" text-anchor="middle" font-size="14" font-weight="600" fill="#B8512E">无协调 · 重复与冲突</text>
+
+    <circle cx="100" cy="170" r="22" fill="#FCE9E0" stroke="#D97757" stroke-width="1.5"/>
+    <text x="100" y="175" text-anchor="middle" font-size="12" fill="#1E3A5F">A1</text>
+    <circle cx="170" cy="155" r="22" fill="#FCE9E0" stroke="#D97757" stroke-width="1.5"/>
+    <text x="170" y="160" text-anchor="middle" font-size="12" fill="#1E3A5F">A2</text>
+    <circle cx="240" cy="175" r="22" fill="#FCE9E0" stroke="#D97757" stroke-width="1.5"/>
+    <text x="240" y="180" text-anchor="middle" font-size="12" fill="#1E3A5F">A3</text>
+
+    <!-- collision target -->
+    <rect x="125" y="240" width="90" height="60" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+    <text x="170" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">issue #6</text>
+    <text x="170" y="284" text-anchor="middle" font-size="10" fill="#B8512E">争抢 / 重做</text>
+
+    <line x1="105" y1="190" x2="145" y2="238" stroke="#D97757" stroke-width="1.5" marker-end="url(#arRed)"/>
+    <line x1="170" y1="178" x2="170" y2="238" stroke="#D97757" stroke-width="1.5" marker-end="url(#arRed)"/>
+    <line x1="235" y1="195" x2="195" y2="238" stroke="#D97757" stroke-width="1.5" marker-end="url(#arRed)"/>
+
+    <!-- metric -->
+    <g transform="translate(60,340)">
+      <text x="110" y="0" text-anchor="middle" font-size="11" fill="#3D4F65">重复劳动占比</text>
+      <text x="110" y="34" text-anchor="middle" font-size="28" font-weight="700" fill="#D97757">78%</text>
+      <text x="110" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">有效吞吐 2.3</text>
+    </g>
+
+    <text x="170" y="448" text-anchor="middle" font-size="11" fill="#8A6F5C" font-style="italic">PR 历史里看不到 ↓</text>
+    <text x="170" y="468" text-anchor="middle" font-size="10.5" fill="#3D4F65">conflicting edits · race-to-close</text>
+    <text x="170" y="486" text-anchor="middle" font-size="10.5" fill="#3D4F65">lock starvation · redundant rediscovery</text>
+  </g>
+
+  <!-- Center: grite substrate -->
+  <g>
+    <circle cx="450" cy="300" r="118" fill="none" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.35"/>
+    <text x="450" y="186" text-anchor="middle" font-size="11" fill="#1E3A5F" opacity="0.7">refs/grite/wal · 存在 git 内部</text>
+
+    <polygon points="450,210 540,260 540,340 450,390 360,340 360,260" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="246" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">grite</text>
+    <text x="450" y="264" text-anchor="middle" font-size="11" fill="#3D4F65">协调底座</text>
+
+    <!-- event log entries -->
+    <g font-size="9.5" fill="#1E3A5F">
+      <rect x="385" y="280" width="130" height="14" rx="2" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="0.8"/>
+      <text x="392" y="290">claim · #6 · A2</text>
+      <rect x="385" y="300" width="130" height="14" rx="2" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="0.8"/>
+      <text x="392" y="310">edit · file.py · A1</text>
+      <rect x="385" y="320" width="130" height="14" rx="2" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="0.8"/>
+      <text x="392" y="330">close · #6 · A3 ✓</text>
+    </g>
+
+    <text x="450" y="358" text-anchor="middle" font-size="10.5" fill="#3D4F65">append-only · 签名 · 内容寻址</text>
+    <text x="450" y="376" text-anchor="middle" font-size="10.5" fill="#3D4F65">CRDT 合并 · fetch/push 同步</text>
+
+    <text x="352" y="252" text-anchor="end" font-size="10" fill="#4B8BDA">租约</text>
+    <text x="548" y="252" text-anchor="start" font-size="10" fill="#4B8BDA">共享状态</text>
+  </g>
+
+  <!-- Arrow from chaos to grite -->
+  <path d="M262,300 Q310,300 358,300" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="310" y="290" text-anchor="middle" font-size="10" fill="#3D4F65">接入</text>
+
+  <!-- Right: outcomes -->
+  <g>
+    <text x="730" y="110" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">协调后 · 收敛与可挖掘</text>
+
+    <circle cx="660" cy="170" r="22" fill="#E3F0FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="660" y="175" text-anchor="middle" font-size="12" fill="#1E3A5F">A1</text>
+    <circle cx="730" cy="170" r="22" fill="#E3F0FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="730" y="175" text-anchor="middle" font-size="12" fill="#1E3A5F">A2</text>
+    <circle cx="800" cy="170" r="22" fill="#E3F0FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="800" y="175" text-anchor="middle" font-size="12" fill="#1E3A5F">A3</text>
+
+    <rect x="635" y="225" width="50" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="660" y="246" text-anchor="middle" font-size="10" fill="#3D4F65">#5</text>
+    <rect x="705" y="225" width="50" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="730" y="246" text-anchor="middle" font-size="10" fill="#3D4F65">#6</text>
+    <rect x="775" y="225" width="50" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="800" y="246" text-anchor="middle" font-size="10" fill="#3D4F65">#7</text>
+
+    <line x1="660" y1="192" x2="660" y2="223" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ar)"/>
+    <line x1="730" y1="192" x2="730" y2="223" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ar)"/>
+    <line x1="800" y1="192" x2="800" y2="223" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ar)"/>
+
+    <g transform="translate(620,340)">
+      <text x="110" y="0" text-anchor="middle" font-size="11" fill="#3D4F65">重复劳动占比</text>
+      <text x="110" y="34" text-anchor="middle" font-size="28" font-weight="700" fill="#4B8BDA">0%</text>
+      <text x="110" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">有效吞吐 8.0 ×3</text>
+    </g>
+
+    <text x="730" y="448" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">日志即数据集 ↓</text>
+    <text x="730" y="468" text-anchor="middle" font-size="10.5" fill="#3D4F65">失败模式自动恢复 · 带 provenance</text>
+    <text x="730" y="486" text-anchor="middle" font-size="10.5" fill="#3D4F65">两副本字节一致 · 不丢写</text>
+  </g>
+
+  <!-- Arrows from grite to outcome -->
+  <path d="M542,280 Q590,240 633,235" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M542,320 Q590,360 633,250" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)" opacity="0"/>
+  <path d="M542,330 Q600,380 690,360" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Bottom strip -->
+  <g transform="translate(0,520)">
+    <rect x="0" y="0" width="900" height="80" fill="#F1F5FB"/>
+    <text x="450" y="28" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">关键洞察</text>
+    <text x="180" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">租约 ＋ 共享状态 缺一不可</text>
+    <text x="450" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">协调过程写进 git，离线可验证</text>
+    <text x="720" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">PR 之前的信号才是信任差距所在</text>
+  </g>
+</svg>

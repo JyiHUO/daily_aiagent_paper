@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" font-size="20" font-weight="600" fill="#1E3A5F" text-anchor="middle">反馈质量决定 Agent 的耐力</text>
+  <text x="400" y="62" font-size="13" fill="#3D4F65" text-anchor="middle">Same model · 不同反馈 → 通过轮数差 6–12×</text>
+
+  <!-- Left: minimal feedback -->
+  <g>
+    <rect x="70" y="110" width="240" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="190" y="138" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">最小反馈</text>
+    <text x="190" y="160" font-size="12" fill="#3D4F65" text-anchor="middle">只说 "failed"</text>
+    <rect x="100" y="185" width="40" height="26" fill="#A8C5E8"/>
+    <text x="200" y="203" font-size="13" fill="#1E3A5F">≈ 2.8 轮</text>
+  </g>
+
+  <!-- Agent in middle -->
+  <g>
+    <circle cx="400" cy="280" r="58" fill="#FFF4E0" stroke="#E8A33D" stroke-width="1.8"/>
+    <text x="400" y="278" font-size="15" fill="#1E3A5F" text-anchor="middle" font-weight="600">Agent</text>
+    <text x="400" y="298" font-size="11" fill="#3D4F65" text-anchor="middle">retry &amp; fix</text>
+  </g>
+
+  <!-- Right: detailed feedback -->
+  <g>
+    <rect x="490" y="110" width="240" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="610" y="138" font-size="14" fill="#1E3A5F" text-anchor="middle" font-weight="600">详细反馈</text>
+    <text x="610" y="160" font-size="12" fill="#3D4F65" text-anchor="middle">assertion error · trace</text>
+    <rect x="520" y="185" width="180" height="26" fill="#4B8BDA"/>
+    <text x="610" y="203" font-size="13" fill="white" text-anchor="middle" font-weight="600">≈ 39.4 轮</text>
+  </g>
+
+  <!-- arrows feedback to agent -->
+  <path d="M 220,230 Q 280,260 348,272" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#ar)" stroke-dasharray="4,4"/>
+  <path d="M 580,230 Q 520,260 452,272" stroke="#4B8BDA" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+
+  <text x="400" y="370" font-size="13" fill="#3D4F65" text-anchor="middle" font-style="italic">越具体的错误信息 → 越长的存活轮数</text>
+
+  <!-- bottom insight -->
+  <g>
+    <rect x="160" y="400" width="480" height="60" rx="8" fill="#F5F0E8" stroke="#E8A33D" stroke-width="1.2"/>
+    <text x="400" y="424" font-size="13" fill="#1E3A5F" text-anchor="middle" font-weight="600">前 3–5 次重试吃掉大部分收益</text>
+    <text x="400" y="445" font-size="12" fill="#3D4F65" text-anchor="middle">Agent 不是不会写，而是缺一面"哪里错了"的镜子</text>
+  </g>
+</svg>

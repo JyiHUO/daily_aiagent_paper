@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+  <style>
+    .title { fill: #1E3A5F; font-size: 18px; font-weight: bold; }
+    .label { fill: #1E3A5F; font-size: 13px; font-weight: bold; }
+    .small { fill: #3D4F65; font-size: 11px; }
+    .tag { fill: #1E3A5F; font-size: 12px; }
+  </style>
+
+  <text x="300" y="30" text-anchor="middle" class="title">CRDT 合并：不静默丢写</text>
+
+  <!-- Agent A -->
+  <circle cx="90" cy="130" r="34" fill="#FCE7D2" stroke="#D89060" stroke-width="2"/>
+  <text x="90" y="135" text-anchor="middle" class="label">Agent A</text>
+  <text x="90" y="185" text-anchor="middle" class="small">+label: bug</text>
+
+  <!-- Agent B -->
+  <circle cx="90" cy="300" r="34" fill="#FCE7D2" stroke="#D89060" stroke-width="2"/>
+  <text x="90" y="305" text-anchor="middle" class="label">Agent B</text>
+  <text x="90" y="355" text-anchor="middle" class="small">title改 +label: urgent</text>
+
+  <!-- arrows to merge -->
+  <path d="M124 130 Q 220 160 295 200" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M124 300 Q 220 270 295 235" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Merge box -->
+  <rect x="300" y="160" width="260" height="130" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="430" y="186" text-anchor="middle" class="label">CRDT 合并</text>
+  <text x="320" y="215" class="tag">• 标量 → 时间戳胜出</text>
+  <text x="320" y="238" class="tag">• 集合 → 并集保留</text>
+  <text x="320" y="261" class="tag">• 评论 → 仅追加</text>
+
+  <!-- arrow to result -->
+  <path d="M430 290 L 320 388" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- result -->
+  <rect x="160" y="392" width="280" height="36" rx="8" fill="#E8F1E5" stroke="#6FA86A" stroke-width="1.5"/>
+  <text x="300" y="415" text-anchor="middle" class="tag">labels = {bug, urgent} ✓ 收敛幂等</text>
+</svg>

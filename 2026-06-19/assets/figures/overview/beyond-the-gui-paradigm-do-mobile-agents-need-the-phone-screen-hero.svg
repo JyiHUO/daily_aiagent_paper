@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A4A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">移动 Agent 真的需要看屏幕吗？</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">GUI 视觉点击  vs.  CLI 命令行直连</text>
+
+  <!-- Central phone -->
+  <g>
+    <text x="450" y="215" text-anchor="middle" font-size="12" fill="#3D4F65">Android 设备</text>
+    <rect x="395" y="220" width="110" height="190" rx="14" fill="#F5EFE6" stroke="#1E3A5F" stroke-width="2"/>
+    <rect x="408" y="240" width="84" height="140" rx="3" fill="#FFFFFF" stroke="#C9D4E0"/>
+    <circle cx="425" cy="260" r="4" fill="#4B8BDA" opacity="0.5"/>
+    <circle cx="450" cy="260" r="4" fill="#C97A4A" opacity="0.5"/>
+    <circle cx="475" cy="260" r="4" fill="#4B8BDA" opacity="0.5"/>
+    <rect x="418" y="280" width="64" height="8" fill="#E5ECF3"/>
+    <rect x="418" y="295" width="64" height="8" fill="#E5ECF3"/>
+    <rect x="418" y="310" width="64" height="8" fill="#E5ECF3"/>
+    <circle cx="450" cy="395" r="6" fill="none" stroke="#1E3A5F" stroke-width="1.5"/>
+  </g>
+
+  <!-- LEFT: GUI paradigm -->
+  <g>
+    <rect x="40" y="180" width="240" height="240" rx="14" fill="#FFF5EE" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="160" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#9A4E22">GUI 范式</text>
+    <text x="160" y="226" text-anchor="middle" font-size="11" fill="#3D4F65">看截图 · 模拟点击</text>
+
+    <!-- finger icon -->
+    <g transform="translate(110,250)">
+      <path d="M20 40 L20 18 Q20 10 28 10 Q36 10 36 18 L36 35 L44 35 Q52 35 52 43 L52 60 Q52 70 42 70 L26 70 Q18 70 18 62 Z" fill="#FFE0CC" stroke="#C97A4A" stroke-width="1.6"/>
+    </g>
+
+    <text x="160" y="360" text-anchor="middle" font-size="11" fill="#3D4F65">视觉 grounding 受限</text>
+    <text x="160" y="378" text-anchor="middle" font-size="11" fill="#3D4F65">看不见后台 / 数据库</text>
+    <text x="160" y="396" text-anchor="middle" font-size="11" fill="#3D4F65">平均 18.6 步 / 任务</text>
+
+    <!-- arrow into phone screen -->
+    <line x1="280" y1="290" x2="392" y2="290" stroke="#C97A4A" stroke-width="2" marker-end="url(#arO)"/>
+    <text x="336" y="282" text-anchor="middle" font-size="10" fill="#9A4E22">tap / swipe</text>
+  </g>
+
+  <!-- RIGHT: CLI paradigm -->
+  <g>
+    <rect x="620" y="180" width="240" height="240" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="740" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">CLI 范式</text>
+    <text x="740" y="226" text-anchor="middle" font-size="11" fill="#3D4F65">通用 Coding Agent · ADB</text>
+
+    <!-- terminal -->
+    <rect x="650" y="245" width="180" height="90" rx="6" fill="#1E3A5F"/>
+    <circle cx="662" cy="257" r="3" fill="#C97A4A"/>
+    <circle cx="672" cy="257" r="3" fill="#E0C36A"/>
+    <circle cx="682" cy="257" r="3" fill="#7AB87A"/>
+    <text x="660" y="282" font-size="10" fill="#7AB87A" font-family="monospace">$ adb shell ls</text>
+    <text x="660" y="298" font-size="10" fill="#E5ECF3" font-family="monospace">  /sdcard/Movies</text>
+    <text x="660" y="314" font-size="10" fill="#7AB87A" font-family="monospace">$ adb shell rm</text>
+    <text x="660" y="328" font-size="10" fill="#4B8BDA" font-family="monospace">  ok</text>
+
+    <text x="740" y="360" text-anchor="middle" font-size="11" fill="#3D4F65">直达系统服务 / SQL</text>
+    <text x="740" y="378" text-anchor="middle" font-size="11" fill="#3D4F65">无需移动后训练</text>
+    <text x="740" y="396" text-anchor="middle" font-size="11" fill="#3D4F65">平均 10.7 步 / 任务</text>
+
+    <!-- arrow into phone -->
+    <line x1="620" y1="290" x2="508" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="564" y="282" text-anchor="middle" font-size="10" fill="#1E3A5F">bash · ADB</text>
+  </g>
+
+  <!-- ceiling tag -->
+  <text x="450" y="442" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">Oracle 上限：CLI 可解约 88% 任务</text>
+
+  <!-- Bottom results bar -->
+  <g transform="translate(0,460)">
+    <rect x="60" y="0" width="780" height="125" rx="12" fill="#F7F9FC" stroke="#C9D4E0"/>
+    <text x="450" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">同台对决：CLI 全面胜出</text>
+
+    <!-- AndroidWorld -->
+    <text x="180" y="55" text-anchor="middle" font-size="11" fill="#3D4F65">AndroidWorld</text>
+    <text x="120" y="82" font-size="11" fill="#9A4E22">GUI 最佳</text>
+    <text x="120" y="103" font-size="20" font-weight="700" fill="#9A4E22">69.3%</text>
+    <text x="220" y="82" font-size="11" fill="#1E3A5F">Claude Code</text>
+    <text x="220" y="103" font-size="20" font-weight="700" fill="#1E3A5F">71.8%</text>
+
+    <line x1="345" y1="50" x2="345" y2="115" stroke="#C9D4E0"/>
+
+    <!-- MobileWorld -->
+    <text x="450" y="55" text-anchor="middle" font-size="11" fill="#3D4F65">MobileWorld</text>
+    <text x="395" y="82" font-size="11" fill="#9A4E22">GUI 最佳</text>
+    <text x="395" y="103" font-size="20" font-weight="700" fill="#9A4E22">43.2%</text>
+    <text x="490" y="82" font-size="11" fill="#1E3A5F">Claude Code</text>
+    <text x="490" y="103" font-size="20" font-weight="700" fill="#1E3A5F">51.9%</text>
+
+    <line x1="615" y1="50" x2="615" y2="115" stroke="#C9D4E0"/>
+
+    <!-- CLI-Advantage -->
+    <text x="730" y="55" text-anchor="middle" font-size="11" fill="#3D4F65">CLI-Advantage 套件</text>
+    <text x="670" y="82" font-size="11" fill="#9A4E22">GUI</text>
+    <text x="670" y="103" font-size="20" font-weight="700" fill="#9A4E22">≤33%</text>
+    <text x="745" y="82" font-size="11" fill="#1E3A5F">CLI</text>
+    <text x="745" y="103" font-size="20" font-weight="700" fill="#1E3A5F">60–69%</text>
+  </g>
+</svg>

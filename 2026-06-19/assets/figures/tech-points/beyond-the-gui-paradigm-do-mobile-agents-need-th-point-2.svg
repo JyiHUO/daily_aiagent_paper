@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="32" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">CLI-Advantage: GUI 范式的盲区</text>
+  <text x="360" y="52" text-anchor="middle" font-size="12" fill="#3D4F65">同一个任务，两条路</text>
+
+  <!-- Task cloud -->
+  <ellipse cx="360" cy="110" rx="200" ry="38" fill="#FFF4E6" stroke="#E8A87C" stroke-width="1.5"/>
+  <text x="360" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">"列出高于平均的支出"</text>
+  <text x="360" y="125" text-anchor="middle" font-size="11" fill="#3D4F65">批量 · 聚合 · 跨App · 隐藏状态</text>
+
+  <!-- arrows down -->
+  <path d="M280 145 L190 205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M440 145 L530 205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- GUI side -->
+  <rect x="50" y="210" width="260" height="200" rx="10" fill="#FDECEC" stroke="#D88B8B" stroke-width="1.5"/>
+  <text x="180" y="234" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GUI Agent</text>
+
+  <g transform="translate(95,252)">
+    <rect x="0" y="0" width="170" height="14" rx="2" fill="#fff" stroke="#D88B8B"/>
+    <rect x="0" y="22" width="170" height="14" rx="2" fill="#fff" stroke="#D88B8B"/>
+    <rect x="0" y="44" width="170" height="14" rx="2" fill="#fff" stroke="#D88B8B"/>
+    <rect x="0" y="66" width="170" height="14" rx="2" fill="#fff" stroke="#D88B8B"/>
+    <text x="150" y="92" font-size="20">👆</text>
+  </g>
+  <text x="180" y="382" text-anchor="middle" font-size="11" fill="#3D4F65">逐条翻 · 心算平均 · 比对</text>
+  <text x="180" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#C0504D">≈ 22–33%</text>
+
+  <!-- CLI side -->
+  <rect x="410" y="210" width="260" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="540" y="234" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">CLI Agent</text>
+
+  <rect x="430" y="252" width="220" height="86" rx="6" fill="#1E3A5F"/>
+  <text x="445" y="274" font-size="11" fill="#9FD3FF" font-family="monospace">$ adb shell sqlite3 \</text>
+  <text x="445" y="292" font-size="11" fill="#FFE08A" font-family="monospace">  SELECT * WHERE</text>
+  <text x="445" y="310" font-size="11" fill="#FFE08A" font-family="monospace">  amt &gt; AVG(amt);</text>
+  <text x="445" y="328" font-size="11" fill="#9FD3FF" font-family="monospace">▌</text>
+
+  <text x="540" y="382" text-anchor="middle" font-size="11" fill="#3D4F65">一条管道直达数据</text>
+  <text x="540" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D32">≈ 60–69%</text>
+
+  <text x="360" y="445" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">45 模板 · 135 实例 · 平均步数 10.7 vs 18.6</text>
+</svg>

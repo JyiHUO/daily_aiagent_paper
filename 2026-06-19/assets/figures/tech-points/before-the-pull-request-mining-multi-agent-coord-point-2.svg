@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3D7A3D"/>
+    </marker>
+  </defs>
+
+  <style>
+    .title{fill:#1E3A5F;font-size:18px;font-weight:600}
+    .lbl{fill:#1E3A5F;font-size:14px;font-weight:600}
+    .sub{fill:#3D4F65;font-size:12px}
+    .tag{fill:#1E3A5F;font-size:11px}
+  </style>
+
+  <text x="360" y="32" text-anchor="middle" class="title">Lease + Shared State：缺一不可</text>
+
+  <!-- Scene 1: locks only -->
+  <g>
+    <rect x="40" y="60" width="290" height="330" rx="10" fill="#FFF4E6" stroke="#E8A857" stroke-width="1.5"/>
+    <text x="185" y="86" text-anchor="middle" class="lbl">Locks only</text>
+    <text x="185" y="104" text-anchor="middle" class="sub">互斥但不知历史</text>
+
+    <rect x="130" y="140" width="110" height="70" rx="6" fill="#fff" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="185" y="170" text-anchor="middle" class="tag">Task #7（昨日已完成）</text>
+    <text x="185" y="192" text-anchor="middle" class="sub" fill="#8a6a2a">✓ done, lease released</text>
+
+    <circle cx="90" cy="295" r="22" fill="#4B8BDA"/>
+    <text x="90" y="300" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">B</text>
+    <path d="M112 282 Q145 250 168 218" stroke="#D9534F" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <text x="170" y="278" text-anchor="middle" class="sub" fill="#D9534F">重新做一遍</text>
+
+    <text x="185" y="345" text-anchor="middle" class="tag">redundant work: 64%　·　goodput: 3.84</text>
+    <text x="185" y="370" text-anchor="middle" class="sub">无共享态 → 无法跳过已完成任务</text>
+  </g>
+
+  <!-- Scene 2: locks + state -->
+  <g>
+    <rect x="390" y="60" width="290" height="330" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="535" y="86" text-anchor="middle" class="lbl">Locks + Shared State</text>
+    <text x="535" y="104" text-anchor="middle" class="sub">看得见队友的成果</text>
+
+    <rect x="480" y="140" width="110" height="70" rx="6" fill="#fff" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="535" y="170" text-anchor="middle" class="tag">Task #7</text>
+    <text x="535" y="192" text-anchor="middle" class="sub" fill="#3D7A3D">● closed</text>
+
+    <circle cx="440" cy="295" r="22" fill="#4B8BDA"/>
+    <text x="440" y="300" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">B</text>
+
+    <path d="M462 282 Q495 250 518 218" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+    <text x="470" y="248" text-anchor="middle" class="sub" fill="#4B8BDA">查询状态</text>
+
+    <path d="M465 305 L628 305" stroke="#3D7A3D" stroke-width="2" fill="none" marker-end="url(#arg)"/>
+    <text x="548" y="296" text-anchor="middle" class="sub" fill="#3D7A3D">跳过 → 下一任务</text>
+
+    <text x="535" y="345" text-anchor="middle" class="tag">redundant work: 0%　·　goodput: 8.00</text>
+    <text x="535" y="370" text-anchor="middle" class="sub">互斥 + 历史可见 → 主动跳过</text>
+  </g>
+
+  <text x="360" y="418" text-anchor="middle" class="sub">租约管"此刻不撞车"，共享状态管"别再做一遍"</text>
+</svg>

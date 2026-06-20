@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-19",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 399,
+  "selected_count": 3,
+  "focus_titles": [
+    "StaminaBench: Stress-Testing Coding Agents over 100 Interaction Turns",
+    "Before the Pull Request: Mining Multi-Agent Coordination",
+    "Beyond the GUI Paradigm: Do Mobile Agents Need the Phone Screen?"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-19/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-19/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}
