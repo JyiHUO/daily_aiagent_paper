@@ -1,43 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
   <defs>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">教师与学生 同一工具集</text>
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">同一套工具，教师即学生的影子</text>
 
-  <!-- 左：教师 -->
-  <g>
-    <circle cx="140" cy="240" r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-    <text x="140" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">教师</text>
-    <text x="140" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">单 agent · GPT-5</text>
+  <!-- Teacher -->
+  <circle cx="140" cy="200" r="62" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="140" y="196" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">Teacher</text>
+  <text x="140" y="216" text-anchor="middle" font-size="11" fill="#3D4F65">single agent</text>
+
+  <!-- Shared toolbelt -->
+  <rect x="255" y="155" width="90" height="90" rx="8" fill="#FFF4E6" stroke="#C47A3D" stroke-width="2"/>
+  <text x="300" y="188" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">shared toolset</text>
+  <line x1="270" y1="202" x2="330" y2="202" stroke="#C47A3D" stroke-width="1"/>
+  <text x="300" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">click · type · ask-user</text>
+
+  <!-- Student -->
+  <circle cx="460" cy="200" r="50" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="460" y="198" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Student</text>
+  <text x="460" y="216" text-anchor="middle" font-size="11" fill="#3D4F65">small model</text>
+
+  <!-- Connecting arrows -->
+  <line x1="204" y1="200" x2="252" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="347" y1="200" x2="407" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- forbidden actions -->
+  <g transform="translate(140,335)">
+    <circle r="26" fill="#FDECEC" stroke="#B0413E" stroke-width="2"/>
+    <line x1="-18" y1="18" x2="18" y2="-18" stroke="#B0413E" stroke-width="3"/>
+    <text x="0" y="56" text-anchor="middle" font-size="11" fill="#1E3A5F">disabled: URL hacks / unsafe clicks</text>
   </g>
+  <line x1="140" y1="262" x2="140" y2="306" stroke="#B0413E" stroke-width="2" stroke-dasharray="4,3"/>
 
-  <!-- 中：共享工具集 -->
-  <g>
-    <rect x="290" y="170" width="140" height="140" rx="10" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
-    <text x="360" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">同一工具集</text>
-    <text x="360" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">click · type · scroll</text>
-    <text x="360" y="258" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">ask-user</text>
-    <text x="360" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#B85C5C">⊘ 危险 / URL 绕过</text>
+  <!-- user simulator -->
+  <g transform="translate(460,335)">
+    <rect x="-70" y="-20" width="140" height="40" rx="20" fill="#E8F1E8" stroke="#3F7A4F" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">user simulator</text>
+    <text x="0" y="56" text-anchor="middle" font-size="11" fill="#1E3A5F">answers ask-user, adds follow-ups</text>
   </g>
+  <line x1="460" y1="250" x2="460" y2="313" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- 右：学生 -->
-  <g>
-    <circle cx="580" cy="240" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-    <text x="580" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">学生</text>
-    <text x="580" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">Fara-1.5</text>
-  </g>
-
-  <!-- 箭头 -->
-  <line x1="218" y1="240" x2="288" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
-  <line x1="432" y1="240" x2="516" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
-
-  <text x="253" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">生成轨迹</text>
-  <text x="474" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">蒸馏</text>
-
-  <!-- 底部说明 -->
-  <text x="360" y="410" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">动作空间对齐 → 无分布偏移</text>
-  <text x="360" y="438" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">教师可热插拔，持续吃前沿模型红利</text>
+  <!-- bottom caption -->
+  <text x="300" y="405" text-anchor="middle" font-size="12" fill="#3D4F65">action spaces aligned → no distribution shift in distillation</text>
 </svg>

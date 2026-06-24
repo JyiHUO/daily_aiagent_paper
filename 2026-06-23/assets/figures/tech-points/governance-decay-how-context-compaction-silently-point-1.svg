@@ -1,52 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="-apple-system, Helvetica, Arial, sans-serif">
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">压缩抹去规则，治理失效</text>
+  <text x="360" y="32" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">Governance Decay</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">压缩为了省 token，悄悄抹掉了安全规则</text>
 
   <!-- LEFT: before compaction -->
   <g>
-    <rect x="50" y="80" width="240" height="310" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="170" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">压缩前：规则在上下文中</text>
+    <rect x="50" y="80" width="240" height="230" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">压缩前 · Context</text>
 
-    <!-- rule shield -->
-    <path d="M170 135 L205 148 L205 185 Q205 210 170 225 Q135 210 135 185 L135 148 Z" fill="#FEF3E8" stroke="#D97757" stroke-width="2"/>
-    <text x="170" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">合规规则</text>
-    <text x="170" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">禁止外发</text>
+    <path d="M170 128 L200 140 L200 166 Q200 186 170 200 Q140 186 140 166 L140 140 Z"
+          fill="#FDE7D6" stroke="#C97B4A" stroke-width="1.5"/>
+    <text x="170" y="168" text-anchor="middle" font-size="11" fill="#1E3A5F">合规规则 policy</text>
 
-    <text x="170" y="265" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">触发请求 ↓</text>
+    <rect x="80" y="220" width="180" height="14" rx="2" fill="#CFE0F4"/>
+    <rect x="80" y="240" width="180" height="14" rx="2" fill="#CFE0F4"/>
+    <rect x="80" y="260" width="120" height="14" rx="2" fill="#CFE0F4"/>
 
-    <rect x="90" y="295" width="160" height="70" rx="8" fill="#ffffff" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="170" y="323" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">拒绝执行</text>
-    <text x="170" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">违规率 0%</text>
+    <text x="170" y="295" text-anchor="middle" font-size="12" fill="#1E3A5F">Agent 拒绝违规请求</text>
   </g>
 
-  <!-- center: compaction arrow -->
+  <!-- compaction arrow -->
   <g>
-    <path d="M295 235 L425 235" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
-    <text x="360" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">上下文压缩</text>
-    <text x="360" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">摘掉合规前言</text>
+    <line x1="295" y1="195" x2="425" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="360" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">压缩 / 摘要</text>
+    <text x="360" y="213" text-anchor="middle" font-size="11" fill="#3D4F65">只保任务进展</text>
   </g>
 
   <!-- RIGHT: after compaction -->
   <g>
-    <rect x="430" y="80" width="240" height="310" rx="12" fill="#FBEEE8" stroke="#D97757" stroke-width="1.5"/>
-    <text x="550" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">压缩后：规则被摘掉</text>
+    <rect x="430" y="80" width="240" height="230" rx="10" fill="#FDF1ED" stroke="#C97B4A" stroke-width="1.5"/>
+    <text x="550" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">压缩后 · Context</text>
 
-    <!-- erased shield -->
-    <path d="M550 135 L585 148 L585 185 Q585 210 550 225 Q515 210 515 185 L515 148 Z" fill="none" stroke="#C9A99A" stroke-width="2" stroke-dasharray="5 4"/>
-    <line x1="525" y1="150" x2="575" y2="215" stroke="#D97757" stroke-width="2"/>
-    <line x1="575" y1="150" x2="525" y2="215" stroke="#D97757" stroke-width="2"/>
+    <path d="M550 128 L580 140 L580 166 Q580 186 550 200 Q520 186 520 166 L520 140 Z"
+          fill="none" stroke="#C97B4A" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.7"/>
+    <line x1="525" y1="135" x2="575" y2="198" stroke="#C97B4A" stroke-width="1.5" opacity="0.7"/>
+    <text x="550" y="220" text-anchor="middle" font-size="11" fill="#C97B4A">规则被摘掉</text>
 
-    <text x="550" y="265" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一请求 ↓</text>
+    <rect x="460" y="235" width="180" height="14" rx="2" fill="#CFE0F4"/>
+    <rect x="460" y="255" width="180" height="14" rx="2" fill="#CFE0F4"/>
+    <rect x="460" y="275" width="120" height="14" rx="2" fill="#CFE0F4"/>
 
-    <rect x="470" y="295" width="160" height="70" rx="8" fill="#ffffff" stroke="#D97757" stroke-width="1.5"/>
-    <text x="550" y="323" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#D97757">照常执行</text>
-    <text x="550" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">违规率 30%–59%</text>
+    <text x="550" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#C97B4A">Agent 执行违规操作</text>
   </g>
 
-  <text x="360" y="435" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">模型未变 · 请求未变 · 规则被 harness 自己遗忘</text>
+  <!-- bottom data -->
+  <g>
+    <text x="170" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">违规率 0% · 规则保留</text>
+    <text x="550" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#C97B4A">违规率 38% · 规则被压缩掉</text>
+  </g>
+
+  <text x="360" y="395" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">让 Agent 忘记规则的，不是攻击者，而是 harness 自己</text>
+  <text x="360" y="418" text-anchor="middle" font-size="10" fill="#7A8A9E">ConstraintRot · 1323 episodes · 最坏模型违规率达 59%</text>
 </svg>

@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-19
+- **日期**：2026-06-23
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - StaminaBench: Stress-Testing Coding Agents over 100 Interaction Turns
-  - Before the Pull Request: Mining Multi-Agent Coordination
-  - Beyond the GUI Paradigm: Do Mobile Agents Need the Phone Screen?
-- **日报路径**：[2026-06-19/daily_report.md](2026-06-19/daily_report.md)
+  - Role-Based Agentic AI for Intent-Driven Network and Service Orchestration
+  - Governance Decay: How Context Compaction Silently Erases Safety Constraints in Long-Horizon LLM Agents
+  - Fara-1.5: Scalable Learning Environments for Computer Use Agents
+- **日报路径**：[2026-06-23/daily_report.md](2026-06-23/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-23 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Role-Based Agentic AI for Intent-Driven Network and Service Orchestration | [2026-06-23/daily_report.md](2026-06-23/daily_report.md) |
+|  |  |  | 2 | Governance Decay: How Context Compaction Silently Erases Safety Constraints in Long-Horizon LLM Agents |  |
+|  |  |  | 3 | Fara-1.5: Scalable Learning Environments for Computer Use Agents |  |
 | 2026-06-19 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | StaminaBench: Stress-Testing Coding Agents over 100 Interaction Turns | [2026-06-19/daily_report.md](2026-06-19/daily_report.md) |
 |  |  |  | 2 | Before the Pull Request: Mining Multi-Agent Coordination |  |
 |  |  |  | 3 | Beyond the GUI Paradigm: Do Mobile Agents Need the Phone Screen? |  |

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="Helvetica, Arial, sans-serif">
+  <rect width="600" height="440" fill="#FAF7F2"/>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5C"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">分域隔离的知识平面</text>
+  <text x="300" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">问语义，不看原始数据</text>
+
+  <!-- Supervisor on top -->
+  <rect x="220" y="76" width="160" height="54" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="300" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Supervisor Agent</text>
+  <text x="300" y="118" text-anchor="middle" font-size="10" fill="#3D4F65">"能扛这个 SLA 吗？"</text>
+
+  <!-- SPARQL down -->
+  <path d="M260,130 L160,206" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M340,130 L440,206" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <text x="178" y="172" font-size="10" fill="#4B8BDA" font-style="italic">SPARQL 语义问</text>
+
+  <!-- intentReport up -->
+  <path d="M180,206 L285,134" stroke="#C97B5C" stroke-width="1.8" fill="none" stroke-dasharray="4,3" marker-end="url(#ar2)"/>
+  <path d="M420,206 L315,134" stroke="#C97B5C" stroke-width="1.8" fill="none" stroke-dasharray="4,3" marker-end="url(#ar2)"/>
+  <text x="392" y="172" font-size="10" fill="#C97B5C" font-style="italic">语义答复</text>
+
+  <!-- Domain 1: BSS -->
+  <rect x="60" y="210" width="180" height="170" rx="10" fill="#FFF3E8" stroke="#C97B5C" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="150" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#C97B5C">BSS 域知识图</text>
+  <circle cx="110" cy="285" r="9" fill="#C97B5C"/>
+  <circle cx="180" cy="275" r="9" fill="#C97B5C"/>
+  <circle cx="140" cy="335" r="9" fill="#C97B5C"/>
+  <circle cx="200" cy="335" r="9" fill="#C97B5C"/>
+  <line x1="110" y1="285" x2="180" y2="275" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="110" y1="285" x2="140" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="180" y1="275" x2="200" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="140" y1="335" x2="200" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <text x="150" y="370" text-anchor="middle" font-size="10" fill="#3D4F65">客户・合同・计费</text>
+
+  <!-- Domain 2: OSS/RAN -->
+  <rect x="360" y="210" width="180" height="170" rx="10" fill="#FFF3E8" stroke="#C97B5C" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="450" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#C97B5C">OSS / RAN 域知识图</text>
+  <circle cx="410" cy="285" r="9" fill="#C97B5C"/>
+  <circle cx="480" cy="275" r="9" fill="#C97B5C"/>
+  <circle cx="440" cy="335" r="9" fill="#C97B5C"/>
+  <circle cx="500" cy="335" r="9" fill="#C97B5C"/>
+  <line x1="410" y1="285" x2="480" y2="275" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="410" y1="285" x2="440" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="480" y1="275" x2="500" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <line x1="440" y1="335" x2="500" y2="335" stroke="#C97B5C" stroke-width="1.3"/>
+  <text x="450" y="370" text-anchor="middle" font-size="10" fill="#3D4F65">资源・拓扑・配置</text>
+
+  <!-- ontology-aware bridge -->
+  <path d="M240,300 Q300,330 360,300" stroke="#1E3A5F" stroke-width="1.2" fill="none" stroke-dasharray="2,3"/>
+  <text x="300" y="328" text-anchor="middle" font-size="10" fill="#1E3A5F">本体感知，不共享原始数据</text>
+
+  <!-- bottom note -->
+  <text x="300" y="412" text-anchor="middle" font-size="10" fill="#3D4F65">虚线围栏 = 隐私边界　　节点图 = 域内知识</text>
+</svg>

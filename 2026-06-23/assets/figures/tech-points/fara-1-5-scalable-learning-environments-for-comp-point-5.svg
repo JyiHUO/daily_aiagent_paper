@@ -1,42 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
   <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#C97B4A"/>
+    </marker>
+    <marker id="c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#6FA86B"/>
     </marker>
   </defs>
 
-  <style>
-    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
-  </style>
+  <rect width="720" height="460" fill="#FAF7F2"/>
 
-  <text x="360" y="44" text-anchor="middle" class="t" font-size="20" font-weight="700" fill="#1E3A5F">关键点：停 vs 问</text>
-  <text x="360" y="68" text-anchor="middle" class="t" font-size="13" fill="#3D4F65">Critical Point Handling</text>
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">Stop or Ask at Critical Points</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">irreversible action · missing info · PII needed</text>
 
-  <!-- Center task node -->
-  <circle cx="360" cy="200" r="52" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-  <text x="360" y="196" text-anchor="middle" class="t" font-size="13" fill="#1E3A5F">到达付款页</text>
-  <text x="360" y="216" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">checkout</text>
+  <!-- Agent -->
+  <circle cx="100" cy="240" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="100" y="237" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="100" y="254" text-anchor="middle" font-size="11" fill="#3D4F65">about to act</text>
 
-  <!-- Left: authorized path -->
-  <rect x="60" y="300" width="240" height="120" rx="10" fill="#E8F3EA" stroke="#6FA86F" stroke-width="2"/>
-  <text x="180" y="330" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">已授权 → 直接提交</text>
-  <text x="180" y="356" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">auto-submit，闭环完成 ✓</text>
-  <text x="180" y="392" text-anchor="middle" class="t" font-size="11" fill="#6FA86F">"你可以直接付款"</text>
+  <!-- Critical-point gate -->
+  <line x1="340" y1="110" x2="340" y2="370" stroke="#C97B4A" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <text x="340" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#C97B4A">critical point</text>
+  <text x="340" y="388" text-anchor="middle" font-size="11" fill="#C97B4A">(submit · pay · send)</text>
 
-  <!-- Right: ask path -->
-  <rect x="420" y="300" width="240" height="120" rx="10" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
-  <text x="540" y="330" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">未授权 → ask-user</text>
-  <text x="540" y="356" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">请求确认后继续 ?</text>
-  <text x="540" y="392" text-anchor="middle" class="t" font-size="11" fill="#E89B4C">"帮我订机票"（未说能否付款）</text>
+  <!-- Ask path: Agent -> User -->
+  <path d="M 146 218 Q 260 140 455 150" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="260" y="130" text-anchor="middle" font-size="11" fill="#1E3A5F">ask-user-question</text>
 
-  <!-- Arrows from task to two branches -->
-  <path d="M 326 234 Q 250 270 200 298" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 394 234 Q 470 270 520 298" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Pre-authorized path: Agent -> Task Complete -->
+  <path d="M 146 262 Q 260 350 475 320" stroke="#6FA86B" stroke-width="2" fill="none" marker-end="url(#c)"/>
+  <text x="240" y="345" text-anchor="middle" font-size="11" fill="#3F6B3C">pre-authorized → proceed</text>
 
-  <!-- Labels on arrows -->
-  <text x="240" y="262" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">可继续</text>
-  <text x="480" y="262" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">需询问</text>
+  <!-- User -->
+  <rect x="455" y="120" width="160" height="70" rx="10" fill="#FFF4E6" stroke="#C97B4A" stroke-width="1.8"/>
+  <text x="535" y="150" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">User</text>
+  <text x="535" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">confirm · provide PII</text>
 
-  <!-- Bottom caption -->
-  <text x="360" y="456" text-anchor="middle" class="t" font-size="12" fill="#1E3A5F">从"一律停下" → "看情况问一句"</text>
+  <!-- Grant: User -> Task Complete -->
+  <path d="M 535 192 Q 560 240 545 285" stroke="#C97B4A" stroke-width="1.8" fill="none" stroke-dasharray="4 4" marker-end="url(#b)"/>
+  <text x="572" y="245" font-size="11" fill="#C97B4A">grant</text>
+
+  <!-- Task Complete -->
+  <rect x="465" y="288" width="150" height="64" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="540" y="316" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Task Complete</text>
+  <text x="540" y="334" text-anchor="middle" font-size="11" fill="#3D4F65">safely closed loop</text>
+
+  <text x="360" y="430" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">from cautious demo → cooperative completion</text>
 </svg>

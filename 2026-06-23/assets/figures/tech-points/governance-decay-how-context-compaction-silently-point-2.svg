@@ -1,41 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <marker id="arrowSoft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">上下文压缩后：谁被抹掉了？</text>
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">压缩后：谁先失守？</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">软规则违规涨幅是硬规则的 8.3×</text>
 
-  <!-- Compaction arrow from top -->
-  <line x1="360" y1="56" x2="360" y2="100" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <!-- Soft rules: thin paper -->
+  <g>
+    <rect x="80" y="130" width="240" height="280" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="200" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">软策略 (Soft)</text>
+    <text x="200" y="180" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">公司自定 · 模型无先验</text>
 
-  <!-- Hard rules side -->
-  <rect x="60" y="110" width="260" height="300" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-  <text x="190" y="142" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">硬安全规则 (Hard)</text>
+    <polygon points="140,230 260,225 270,330 150,335" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="160" y1="255" x2="245" y2="252" stroke="#9FB8D4" stroke-width="1"/>
+    <line x1="160" y1="275" x2="245" y2="272" stroke="#9FB8D4" stroke-width="1"/>
+    <line x1="160" y1="295" x2="245" y2="292" stroke="#9FB8D4" stroke-width="1"/>
 
-  <!-- Shield -->
-  <path d="M190 175 L240 195 L240 250 Q240 290 190 315 Q140 290 140 250 L140 195 Z" fill="#DCEBFB" stroke="#1E3A5F" stroke-width="2"/>
-  <text x="190" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">模型先验保护</text>
-  <text x="190" y="268" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">PII / SSH / 审计</text>
+    <path d="M 55,270 Q 95,262 135,270" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arrowSoft)"/>
+    <text x="95" y="248" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#4B8BDA">压缩冲击</text>
 
-  <text x="190" y="365" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" font-weight="700" fill="#1E3A5F">+6 pt</text>
-  <text x="190" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">几乎不涨</text>
+    <text x="200" y="378" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#C0392B">+50 pt</text>
+    <text x="200" y="396" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">违规率激增</text>
+  </g>
 
-  <!-- Soft rules side -->
-  <rect x="400" y="110" width="260" height="300" rx="14" fill="#FDECEC" stroke="#D9534F" stroke-width="2"/>
-  <text x="530" y="142" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">软组织策略 (Soft)</text>
+  <!-- Hard rules: stone tablet -->
+  <g>
+    <rect x="480" y="130" width="240" height="280" rx="8" fill="#F4EEE6" stroke="#A89070" stroke-width="1.5"/>
+    <text x="600" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">硬规则 (Hard)</text>
+    <text x="600" y="180" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">通用安全 · 模型自带先验</text>
 
-  <!-- Broken paper -->
-  <path d="M480 180 L580 180 L580 275 L555 295 L530 280 L505 295 L480 275 Z" fill="#FFFFFF" stroke="#D9534F" stroke-width="2" stroke-dasharray="5,4"/>
-  <line x1="495" y1="205" x2="565" y2="205" stroke="#D9534F" stroke-width="1.5"/>
-  <line x1="495" y1="225" x2="565" y2="225" stroke="#D9534F" stroke-width="1.5"/>
-  <line x1="495" y1="245" x2="545" y2="245" stroke="#D9534F" stroke-width="1.5"/>
-  <text x="530" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#D9534F">region / 额度 / 语言</text>
+    <path d="M540,230 Q540,215 555,215 L645,215 Q660,215 660,230 L660,340 L540,340 Z" fill="#D9C7AC" stroke="#A89070" stroke-width="2"/>
+    <line x1="560" y1="255" x2="640" y2="255" stroke="#8A7050" stroke-width="1.5"/>
+    <line x1="560" y1="280" x2="640" y2="280" stroke="#8A7050" stroke-width="1.5"/>
+    <line x1="560" y1="305" x2="620" y2="305" stroke="#8A7050" stroke-width="1.5"/>
 
-  <text x="530" y="365" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" font-weight="700" fill="#D9534F">+50 pt</text>
-  <text x="530" y="390" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">完全失守</text>
+    <path d="M 455,270 Q 485,265 535,272" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arrowSoft)"/>
+    <text x="485" y="248" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#4B8BDA">压缩冲击</text>
 
-  <!-- gap label -->
-  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">违规涨幅差距 8.3×</text>
+    <text x="600" y="378" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#5B8C5A">+6 pt</text>
+    <text x="600" y="396" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">几乎不变</text>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F" font-style="italic">部署专属治理规则最脆弱 — 安全基准测不出的盲区</text>
 </svg>
