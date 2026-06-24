@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/downloaded_pdfs/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents",
+  "candidates": [
+    {
+      "id": "page-7-block-3",
+      "page_index": 7,
+      "caption": "Figure 3 | Failure structure under targeted cor- ruption. Qwen2.5-7B shows concentrated an- choring, where first-step corruption accounts for a large share of the damage. GPT-4o is more robust to a single corrupted observation, but still collapses under persistent corruption.",
+      "clip": [
+        294.4599914550781,
+        98.95111083984375,
+        550.1865234375,
+        293.74603271484375
+      ],
+      "clip_area": 49814.22981888056,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04928894213502651,
+      "kind": "image_block_with_caption",
+      "score": 24.553491442432005,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/01-p8-image_block_with_caption.png",
+      "filename": "01-p8-image_block_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "Figure 3 | Failure structure under targeted cor- ruption. Qwen2.5-7B shows concentrated an- choring, where first-step corruption accounts for a large share of the damage. GPT-4o is more robust to a single corrupted observation, but still collapses under persistent corruption.",
+      "clip": [
+        304.4599914550781,
+        104.95111083984375,
+        540.1865234375,
+        287.74603271484375
+      ],
+      "clip_area": 43089.612997591496,
+      "page_area": 501156.9211820215,
+      "text_density": 0.00792364868322887,
+      "kind": "embedded_image_with_caption",
+      "xref": 374,
+      "score": 23.478773477751016,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/02-p8-embedded_image_with_caption.png",
+      "filename": "02-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "Figure 2 | Core matched comparison under standard task metrics. Across HotpotQA and FEVER, reliable observations improve over the no-feedback fallback, while shuffled misleading feedback falls below it. GPT-4o is shown for HotpotQA only.",
+      "clip": [
+        54.47825622558594,
+        67.03948974609375,
+        540.8014526367188,
+        334.1300048828125
+      ],
+      "clip_area": 129892.31305238511,
+      "page_area": 501156.9211820215,
+      "text_density": 0.027372255115933608,
+      "kind": "image_block_with_caption",
+      "score": 18.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/03-p5-image_block_with_caption.png",
+      "filename": "03-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 2 | Core matched comparison under standard task metrics. Across HotpotQA and FEVER, reliable observations improve over the no-feedback fallback, while shuffled misleading feedback falls below it. GPT-4o is shown for HotpotQA only.",
+      "clip": [
+        62.088050842285156,
+        67.68977355957031,
+        535.6737060546875,
+        345.23516845703125
+      ],
+      "clip_area": 131441.517693699,
+      "page_area": 501156.9211820215,
+      "text_density": 0.06693311095986734,
+      "kind": "embedded_image_with_caption",
+      "xref": 412,
+      "score": 17.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1 | Controlled matched-loop comparison. The agent loop, prompt, action space, and decoding stay fixed; only the returned observation changes: faithful, misleading, or absent.",
+      "clip": [
+        340.67327880859375,
+        110.48518371582031,
+        546.5271606445312,
+        316.33905029296875
+      ],
+      "clip_area": 42375.81752584316,
+      "page_area": 501156.9211820215,
+      "text_density": 0.06397177893251099,
+      "kind": "embedded_image_with_caption",
+      "xref": 410,
+      "score": 15.470842416953813,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/05-p2-embedded_image_with_caption.png",
+      "filename": "05-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.7161258696847032,
+      "score": -11.06269212257519,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/don-t-blindly-trust-it-how-unreliable-feedback-breaks-tool-using-llm-agents/contact-sheet.svg"
+}

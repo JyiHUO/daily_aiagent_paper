@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">克隆真实网站为沙盒</text>
+
+  <!-- Left: Real website (locked) -->
+  <g>
+    <rect x="60" y="110" width="220" height="220" rx="10" fill="#FEF3E8" stroke="#E8A87C" stroke-width="2"/>
+    <text x="170" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">真实网站</text>
+    
+    <!-- Lock icon -->
+    <rect x="148" y="180" width="44" height="36" rx="4" fill="#E8A87C"/>
+    <path d="M156 180 v-10 a14 14 0 0 1 28 0 v10" fill="none" stroke="#E8A87C" stroke-width="4"/>
+    <circle cx="170" cy="198" r="4" fill="#FEF3E8"/>
+    
+    <text x="170" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">登录限制 · 不可逆操作</text>
+    <text x="170" y="274" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">难以自动验证结果</text>
+  </g>
+
+  <!-- Arrow with label -->
+  <line x1="290" y1="220" x2="432" y2="220" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="360" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#4B8BDA">克隆</text>
+
+  <!-- Right: Sandbox (open with God view) -->
+  <g>
+    <rect x="440" y="110" width="220" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="550" y="140" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">FaraEnvs 沙盒</text>
+    
+    <!-- Eye / god view icon -->
+    <path d="M510 200 Q550 170 590 200 Q550 230 510 200 Z" fill="none" stroke="#4B8BDA" stroke-width="2.5"/>
+    <circle cx="550" cy="200" r="9" fill="#4B8BDA"/>
+    <circle cx="552" cy="197" r="3" fill="#EFF6FF"/>
+    
+    <text x="550" y="252" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">可查数据库 · 可重置</text>
+    <text x="550" y="274" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">sqldiff + LLM 自动判定</text>
+  </g>
+
+  <!-- Bottom: 6 domains -->
+  <text x="360" y="375" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">覆盖 6 个域</text>
+  
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F" text-anchor="middle">
+    <rect x="100" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="415">邮件</text>
+    
+    <rect x="190" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="230" y="415">日历</text>
+    
+    <rect x="280" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="320" y="415">媒体</text>
+    
+    <rect x="370" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="410" y="415">实验管理</text>
+    
+    <rect x="460" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="500" y="415">市场</text>
+    
+    <rect x="550" y="395" width="80" height="32" rx="16" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="590" y="415">排程</text>
+  </g>
+</svg>

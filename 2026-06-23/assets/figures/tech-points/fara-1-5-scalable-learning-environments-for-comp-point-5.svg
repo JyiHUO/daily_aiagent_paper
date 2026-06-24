@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="44" text-anchor="middle" class="t" font-size="20" font-weight="700" fill="#1E3A5F">关键点：停 vs 问</text>
+  <text x="360" y="68" text-anchor="middle" class="t" font-size="13" fill="#3D4F65">Critical Point Handling</text>
+
+  <!-- Center task node -->
+  <circle cx="360" cy="200" r="52" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="196" text-anchor="middle" class="t" font-size="13" fill="#1E3A5F">到达付款页</text>
+  <text x="360" y="216" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">checkout</text>
+
+  <!-- Left: authorized path -->
+  <rect x="60" y="300" width="240" height="120" rx="10" fill="#E8F3EA" stroke="#6FA86F" stroke-width="2"/>
+  <text x="180" y="330" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">已授权 → 直接提交</text>
+  <text x="180" y="356" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">auto-submit，闭环完成 ✓</text>
+  <text x="180" y="392" text-anchor="middle" class="t" font-size="11" fill="#6FA86F">"你可以直接付款"</text>
+
+  <!-- Right: ask path -->
+  <rect x="420" y="300" width="240" height="120" rx="10" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+  <text x="540" y="330" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">未授权 → ask-user</text>
+  <text x="540" y="356" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">请求确认后继续 ?</text>
+  <text x="540" y="392" text-anchor="middle" class="t" font-size="11" fill="#E89B4C">"帮我订机票"（未说能否付款）</text>
+
+  <!-- Arrows from task to two branches -->
+  <path d="M 326 234 Q 250 270 200 298" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 394 234 Q 470 270 520 298" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Labels on arrows -->
+  <text x="240" y="262" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">可继续</text>
+  <text x="480" y="262" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">需询问</text>
+
+  <!-- Bottom caption -->
+  <text x="360" y="456" text-anchor="middle" class="t" font-size="12" fill="#1E3A5F">从"一律停下" → "看情况问一句"</text>
+</svg>

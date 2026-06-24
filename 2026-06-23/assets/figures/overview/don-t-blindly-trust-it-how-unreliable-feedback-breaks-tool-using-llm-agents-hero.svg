@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3B8C5A"/>
+    </marker>
+    <marker id="ahy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8C7A3B"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">工具反馈不可靠时，Agent 反而更糟</text>
+  <text x="450" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#3D4F65">价值反转：Clean &gt; No Feedback &gt; Misleading</text>
+
+  <!-- matched-loop badge -->
+  <rect x="370" y="88" width="160" height="30" rx="15" fill="#1E3A5F"/>
+  <text x="450" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">matched-loop 对照</text>
+
+  <!-- Center Agent -->
+  <circle cx="450" cy="300" r="62" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="450" y="296" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">LLM Agent</text>
+  <text x="450" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">ReAct 循环</text>
+
+  <!-- Clean (left top) -->
+  <rect x="60" y="160" width="180" height="84" rx="12" fill="#E8F4EC" stroke="#3B8C5A" stroke-width="2"/>
+  <text x="150" y="188" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">干净反馈</text>
+  <text x="150" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">真实证据</text>
+  <text x="150" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="700" fill="#3B8C5A">44.8 F1</text>
+  <path d="M240,215 Q330,250 390,278" fill="none" stroke="#3B8C5A" stroke-width="2.5" marker-end="url(#ahg)"/>
+
+  <!-- No Feedback (left bottom) -->
+  <rect x="60" y="380" width="180" height="84" rx="12" fill="#F5F1E0" stroke="#8C7A3B" stroke-width="2"/>
+  <text x="150" y="408" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">无反馈兜底</text>
+  <text x="150" y="430" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">仅靠自身知识</text>
+  <text x="150" y="452" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="700" fill="#8C7A3B">22.3 F1</text>
+  <path d="M240,400 Q330,360 390,325" fill="none" stroke="#8C7A3B" stroke-width="2.5" marker-end="url(#ahy)"/>
+
+  <!-- Misleading (right) -->
+  <rect x="660" y="258" width="180" height="84" rx="12" fill="#FBEAE9" stroke="#D9534F" stroke-width="2.5"/>
+  <text x="750" y="286" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">误导反馈</text>
+  <text x="750" y="308" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">错位 / 注入证据</text>
+  <text x="750" y="330" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="700" fill="#D9534F">4.7 F1</text>
+  <path d="M660,300 L515,300" fill="none" stroke="#D9534F" stroke-width="2.5" marker-end="url(#ahr)"/>
+
+  <!-- Inversion callout -->
+  <path d="M450,362 L450,408" fill="none" stroke="#D9534F" stroke-width="2" stroke-dasharray="5,4"/>
+  <rect x="335" y="408" width="230" height="64" rx="10" fill="#FFF7E6" stroke="#D9534F" stroke-width="2"/>
+  <text x="450" y="434" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#D9534F">价值反转</text>
+  <text x="450" y="456" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">误导反馈下，工具反而拖累 Agent</text>
+
+  <!-- footer hint -->
+  <text x="450" y="560" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">HotpotQA · Qwen2.5-7B · 同循环同 prompt，仅改变工具观测保真度</text>
+</svg>

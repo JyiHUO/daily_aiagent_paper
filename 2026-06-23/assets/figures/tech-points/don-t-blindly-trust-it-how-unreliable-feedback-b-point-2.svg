@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">同一循环，三种观测</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">ReAct loop 不变，只换 tool 返回的观测</text>
+
+  <!-- shared loop pipeline -->
+  <rect x="80" y="100" width="100" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="130" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F">search</text>
+
+  <rect x="310" y="100" width="100" height="48" rx="8" fill="#FFF4E6" stroke="#E89B3C" stroke-width="1.5"/>
+  <text x="360" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F">tool 返回</text>
+
+  <rect x="540" y="100" width="100" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="590" y="130" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#1E3A5F">finish</text>
+
+  <line x1="180" y1="124" x2="305" y2="124" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="410" y1="124" x2="535" y2="124" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- three branches from tool 返回 -->
+  <line x1="320" y1="148" x2="200" y2="225" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <line x1="360" y1="148" x2="360" y2="225" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <line x1="400" y1="148" x2="520" y2="225" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- Clean -->
+  <rect x="80" y="230" width="200" height="180" rx="10" fill="#E8F3E8" stroke="#5BA85B" stroke-width="1.8"/>
+  <text x="180" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">Clean</text>
+  <text x="180" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">真实证据</text>
+  <rect x="105" y="305" width="150" height="80" rx="6" fill="#ffffff" stroke="#5BA85B" stroke-width="1"/>
+  <text x="180" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">gold passage</text>
+
+  <!-- Corrupted -->
+  <rect x="260" y="230" width="200" height="180" rx="10" fill="#FBEAEA" stroke="#D26B6B" stroke-width="1.8"/>
+  <text x="360" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">Corrupted</text>
+  <text x="360" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">误导证据</text>
+  <rect x="285" y="305" width="150" height="80" rx="6" fill="#ffffff" stroke="#D26B6B" stroke-width="1"/>
+  <text x="360" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">Shuffled / Plausible</text>
+
+  <!-- No Feedback -->
+  <rect x="440" y="230" width="200" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="540" y="260" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">No Feedback</text>
+  <text x="540" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">空观测兜底</text>
+  <rect x="465" y="305" width="150" height="80" rx="6" fill="#ffffff" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="540" y="350" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">empty</text>
+
+  <text x="360" y="448" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">唯一变量：观测保真度</text>
+</svg>

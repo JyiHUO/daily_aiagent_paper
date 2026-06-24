@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/downloaded_pdfs/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration",
+  "candidates": [
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Fig. 1: Role-based architectural framework for agentic intent-based service orchestration",
+      "clip": [
+        26.964000701904297,
+        32.53900146484375,
+        585.0419311523438,
+        333.8080139160156
+      ],
+      "clip_area": 168131.58697759768,
+      "page_area": 484704.0,
+      "text_density": 0.021462123244029324,
+      "kind": "image_block_with_caption",
+      "score": 68.72500932712768,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Fig. 1: Role-based architectural framework for agentic intent-based service orchestration",
+      "clip": [
+        36.9640007019043,
+        38.53900146484375,
+        575.0419311523438,
+        327.8080139160156
+      ],
+      "clip_area": 155649.27156316896,
+      "page_area": 484704.0,
+      "text_density": 0.012120455640651187,
+      "kind": "embedded_image_with_caption",
+      "xref": 236,
+      "score": 68.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-37",
+      "page_index": 5,
+      "caption": "Fig. 2: System architecture showing the integration of Busi- ness, Supervisor, and Service agents with MCP servers, knowl- edge plane, and BSS/OSS orchestration systems.",
+      "clip": [
+        30.964000701904297,
+        34.538848876953125,
+        318.00244140625,
+        340.3322448730469
+      ],
+      "clip_area": 87774.45956440526,
+      "page_area": 484704.0,
+      "text_density": 0.1406523155451285,
+      "kind": "drawing_cluster_with_caption",
+      "score": 55.33613284023013,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-37",
+      "page_index": 5,
+      "caption": "Fig. 2: System architecture showing the integration of Busi- ness, Supervisor, and Service agents with MCP servers, knowl- edge plane, and BSS/OSS orchestration systems.",
+      "clip": [
+        18.364000701904295,
+        18.0,
+        330.621484375,
+        323.33447265625
+      ],
+      "clip_area": 95342.97411029229,
+      "page_area": 484704.0,
+      "text_density": 0.1407177542820546,
+      "kind": "captioned_figure",
+      "score": 43.41630112207997,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/04-p6-captioned_figure.png",
+      "filename": "04-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Fig. 3: Intent Knowledge Graph ontology showing the semantic relationships between intent types (Business and Service), expectation models, reporting structures, and intent lifecycle states. The graph extends TMF Intent Common Model to support P2P connectivity scenarios.",
+      "clip": [
+        62.66899871826172,
+        38.53950500488281,
+        549.3455200195312,
+        246.9630126953125
+      ],
+      "clip_area": 101434.82768018672,
+      "page_area": 484704.0,
+      "text_density": 0.024994869774262015,
+      "kind": "embedded_image_with_caption",
+      "xref": 240,
+      "score": 36.12705364089096,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/05-p7-embedded_image_with_caption.png",
+      "filename": "05-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-block-1",
+      "page_index": 6,
+      "caption": "Fig. 3: Intent Knowledge Graph ontology showing the semantic relationships between intent types (Business and Service), expectation models, reporting structures, and intent lifecycle states. The graph extends TMF Intent Common Model to support P2P connectivity scenarios.",
+      "clip": [
+        52.66899871826172,
+        32.53950500488281,
+        559.3455200195312,
+        252.9630126953125
+      ],
+      "clip_area": 111683.41608961055,
+      "page_area": 484704.0,
+      "text_density": 0.05085445989889707,
+      "kind": "image_block_with_caption",
+      "score": 36.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/06-p7-image_block_with_caption.png",
+      "filename": "06-p7-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-23/assets/figure_candidates/role-based-agentic-ai-for-intent-driven-network-and-service-orchestration/contact-sheet.svg"
+}

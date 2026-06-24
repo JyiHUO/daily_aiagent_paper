@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5A9968"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9573F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">三重独立验证器</text>
+  <text x="360" y="60" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">三道关卡并行 · 缺一即弃</text>
+
+  <!-- Trajectory source -->
+  <rect x="30" y="205" width="110" height="70" rx="8" fill="#FEF3E7" stroke="#D4A574" stroke-width="1.5"/>
+  <text x="85" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" fill="#1E3A5F">候选轨迹</text>
+  <text x="85" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">trajectory</text>
+
+  <!-- Gate 1: Correctness -->
+  <rect x="200" y="100" width="170" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="285" y="128" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">① 正确性</text>
+  <text x="285" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">rubric ≥ 0.8 / sqldiff</text>
+  <text x="285" y="167" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">做对了吗</text>
+
+  <!-- Gate 2: Efficiency -->
+  <rect x="200" y="205" width="170" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="285" y="233" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">② 效率</text>
+  <text x="285" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">LLM judge ≥ 4/5</text>
+  <text x="285" y="272" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">绕弯/循环了吗</text>
+
+  <!-- Gate 3: Critical -->
+  <rect x="200" y="310" width="170" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="285" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">③ 关键点合规</text>
+  <text x="285" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">PII / 不可逆动作</text>
+  <text x="285" y="377" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">该问用户吗</text>
+
+  <!-- Source to gates -->
+  <path d="M 140 225 L 196 140" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 140 240 L 196 245" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 140 255 L 196 350" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- AND junction -->
+  <circle cx="450" cy="245" r="28" fill="#1E3A5F"/>
+  <text x="450" y="251" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">AND</text>
+
+  <path d="M 370 140 L 432 227" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 370 245 L 419 245" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 370 350 L 432 263" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Pass -->
+  <rect x="540" y="150" width="150" height="70" rx="8" fill="#E8F3EC" stroke="#5A9968" stroke-width="1.5"/>
+  <text x="615" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">✓ 高质轨迹</text>
+  <text x="615" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">进入训练集</text>
+
+  <!-- Reject -->
+  <rect x="540" y="270" width="150" height="70" rx="8" fill="#FBEDE8" stroke="#C9573F" stroke-width="1.5"/>
+  <text x="615" y="300" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">✗ 丢弃</text>
+  <text x="615" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">任一不过即弃</text>
+
+  <path d="M 475 230 L 535 190" stroke="#5A9968" stroke-width="1.5" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M 475 263 L 535 295" stroke="#C9573F" stroke-width="1.5" fill="none" marker-end="url(#arrowRed)"/>
+
+  <text x="485" y="210" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="10" fill="#5A9968">全过</text>
+  <text x="485" y="285" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="10" fill="#C9573F">否则</text>
+</svg>

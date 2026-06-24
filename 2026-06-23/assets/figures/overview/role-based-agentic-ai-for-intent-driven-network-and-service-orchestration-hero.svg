@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="640" fill="#FAF7F2"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">按组织角色拆分的 Agent 编排</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">从客户意图到网络资源：打通 BSS 与 OSS 的角色化多智能体架构</text>
+
+  <!-- Left side: Customer intent -->
+  <g>
+    <circle cx="80" cy="300" r="46" fill="#FFE8D6" stroke="#E89B5A" stroke-width="2"/>
+    <text x="80" y="296" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">客户</text>
+    <text x="80" y="314" text-anchor="middle" font-size="10.5" fill="#3D4F65">自然语言意图</text>
+    <text x="80" y="368" text-anchor="middle" font-size="10" fill="#7A6A55" font-style="italic">"高带宽低延时专线"</text>
+  </g>
+
+  <!-- Right side: Network -->
+  <g>
+    <circle cx="820" cy="300" r="46" fill="#D6E8FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="820" y="296" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">网络</text>
+    <text x="820" y="314" text-anchor="middle" font-size="10.5" fill="#3D4F65">RAN / Core / 云</text>
+    <text x="820" y="368" text-anchor="middle" font-size="10" fill="#3D5A85" font-style="italic">OSM · OpenSlice</text>
+  </g>
+
+  <!-- Pyramid: 4 layers -->
+  <g>
+    <polygon points="450,110 510,160 390,160" fill="#FFF1E0" stroke="#E89B5A" stroke-width="2"/>
+    <text x="450" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Business</text>
+    <text x="450" y="154" text-anchor="middle" font-size="10" fill="#3D4F65">产品经理</text>
+  </g>
+
+  <g>
+    <polygon points="390,160 510,160 550,220 350,220" fill="#FFE4C2" stroke="#E89B5A" stroke-width="2"/>
+    <text x="450" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Supervisor</text>
+    <text x="450" y="207" text-anchor="middle" font-size="10" fill="#3D4F65">解决方案架构师</text>
+  </g>
+
+  <g>
+    <polygon points="350,220 550,220 590,290 310,290" fill="#DCE9F7" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Service Agents</text>
+    <text x="450" y="270" text-anchor="middle" font-size="10" fill="#3D4F65">意图 · 安全 · 计费 · 保障</text>
+  </g>
+
+  <g>
+    <polygon points="310,290 590,290 630,360 270,360" fill="#C2D8F2" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="322" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Resource Agents</text>
+    <text x="450" y="340" text-anchor="middle" font-size="10" fill="#3D4F65">RAN · Core · 传输 · 云原生</text>
+  </g>
+
+  <!-- BSS / OSS labels -->
+  <text x="335" y="140" font-size="11" fill="#A86A2C" font-weight="700">BSS</text>
+  <text x="555" y="140" font-size="11" fill="#2D5B95" font-weight="700">OSS</text>
+
+  <!-- Intent down arrow: customer -> pyramid top-left edge -->
+  <path d="M 126 300 Q 230 200 388 162" stroke="#E89B5A" stroke-width="2.2" fill="none" marker-end="url(#arrO)"/>
+  <text x="180" y="225" font-size="11" fill="#A86A2C" font-weight="700">意图下行</text>
+
+  <!-- Report up arrow: pyramid bottom-right -> network -->
+  <path d="M 628 358 Q 740 380 776 318" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="660" y="410" font-size="11" fill="#2D5B95" font-weight="700">intentReport 上报</text>
+
+  <!-- Knowledge plane (under pyramid) -->
+  <g>
+    <rect x="270" y="430" width="360" height="56" rx="28" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="450" y="453" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">分域知识平面 · TMF Intent Model</text>
+    <text x="450" y="472" text-anchor="middle" font-size="10" fill="#3D4F65">SPARQL 语义问答 · 隐私隔离 · 策略 guardrail</text>
+  </g>
+
+  <!-- Connector pyramid to knowledge plane -->
+  <line x1="360" y1="360" x2="345" y2="430" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="540" y1="360" x2="555" y2="430" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Tech stack tags -->
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="105" y="525" width="130" height="32" rx="16" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="546" text-anchor="middle" font-weight="600">ReAct · LangGraph</text>
+
+    <rect x="255" y="525" width="120" height="32" rx="16" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="315" y="546" text-anchor="middle" font-weight="600">MCP 工具发现</text>
+
+    <rect x="395" y="525" width="110" height="32" rx="16" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="546" text-anchor="middle" font-weight="600">A2A 协作</text>
+
+    <rect x="525" y="525" width="130" height="32" rx="16" fill="#fff" stroke="#E89B5A" stroke-width="1.5"/>
+    <text x="590" y="546" text-anchor="middle" font-weight="600">TMF / OpenSlice</text>
+
+    <rect x="675" y="525" width="120" height="32" rx="16" fill="#fff" stroke="#E89B5A" stroke-width="1.5"/>
+    <text x="735" y="546" text-anchor="middle" font-weight="600">OSM SOL 005</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="450" y="595" text-anchor="middle" font-size="11.5" fill="#3D4F65">
+    <tspan font-weight="700" fill="#A86A2C">关键发现：</tspan>
+    <tspan>入口 Business Agent 的模型能力决定整条流水线能否启动</tspan>
+  </text>
+  <text x="450" y="615" text-anchor="middle" font-size="10.5" fill="#7A6A55">GPT-OSS 跑通 · Mistral-Nemo / Qwen3:4B 在工具调用环节失败</text>
+</svg>

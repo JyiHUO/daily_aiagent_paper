@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">压缩抹去规则，治理失效</text>
+
+  <!-- LEFT: before compaction -->
+  <g>
+    <rect x="50" y="80" width="240" height="310" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">压缩前：规则在上下文中</text>
+
+    <!-- rule shield -->
+    <path d="M170 135 L205 148 L205 185 Q205 210 170 225 Q135 210 135 185 L135 148 Z" fill="#FEF3E8" stroke="#D97757" stroke-width="2"/>
+    <text x="170" y="180" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">合规规则</text>
+    <text x="170" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">禁止外发</text>
+
+    <text x="170" y="265" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">触发请求 ↓</text>
+
+    <rect x="90" y="295" width="160" height="70" rx="8" fill="#ffffff" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="323" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">拒绝执行</text>
+    <text x="170" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">违规率 0%</text>
+  </g>
+
+  <!-- center: compaction arrow -->
+  <g>
+    <path d="M295 235 L425 235" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+    <text x="360" y="222" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">上下文压缩</text>
+    <text x="360" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">摘掉合规前言</text>
+  </g>
+
+  <!-- RIGHT: after compaction -->
+  <g>
+    <rect x="430" y="80" width="240" height="310" rx="12" fill="#FBEEE8" stroke="#D97757" stroke-width="1.5"/>
+    <text x="550" y="108" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">压缩后：规则被摘掉</text>
+
+    <!-- erased shield -->
+    <path d="M550 135 L585 148 L585 185 Q585 210 550 225 Q515 210 515 185 L515 148 Z" fill="none" stroke="#C9A99A" stroke-width="2" stroke-dasharray="5 4"/>
+    <line x1="525" y1="150" x2="575" y2="215" stroke="#D97757" stroke-width="2"/>
+    <line x1="575" y1="150" x2="525" y2="215" stroke="#D97757" stroke-width="2"/>
+
+    <text x="550" y="265" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一请求 ↓</text>
+
+    <rect x="470" y="295" width="160" height="70" rx="8" fill="#ffffff" stroke="#D97757" stroke-width="1.5"/>
+    <text x="550" y="323" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#D97757">照常执行</text>
+    <text x="550" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">违规率 30%–59%</text>
+  </g>
+
+  <text x="360" y="435" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">模型未变 · 请求未变 · 规则被 harness 自己遗忘</text>
+</svg>

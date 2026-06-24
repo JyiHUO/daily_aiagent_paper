@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 06-23：harness 才是真正的安全战场",
+  "shownotes_html": "<p>这期我们把目光从模型本身移开，去看 Agent 外面那一圈不起眼的工程脚手架——上下文压缩器、训练环境、工具反馈通道。今天的三篇论文凑巧形成了一组对照：让 Agent 不可靠的，往往不是模型，而是 harness 自己。</p><p><strong>本期重点</strong></p><ul><li><strong>治理衰减：长程 Agent 的安全规则被静默删除（Governance Decay: How Context Compaction Silently Erases Safety Constraints in Long-Horizon LLM Agents）</strong><br/>主流 Agent 框架例行的上下文压缩，会顺手把 in-context 的合规规则当成旧前言抹掉，违规率从 0% 飙到 30%，最坏到 59%；作者还顺势构造了针对摘要器的'压缩驱逐攻击'，并给出几乎零成本的 Constraint Pinning 防御。</li><li><strong>Fara-1.5：可规模化的 Computer Use Agent 学习环境（Fara-1.5: Scalable Learning Environments for Computer Use Agents）</strong><br/>微软把 CUA 的数据生产线讲得很透：合成沙盒 + 单 agent 强教师 + 三重独立验证器，并通过 8 类'关键点合规'让 Agent 学会在不可逆操作前主动询问用户，27B 模型直接对标 Gemini 2.5 Computer Use 和 OpenAI Operator。</li><li><strong>别盲目相信它：不可靠反馈如何击垮工具型 Agent（Don't Blindly Trust It: How Unreliable Feedback Breaks Tool-Using LLM Agents）</strong><br/>提出反直觉的'价值反转'：当工具反馈被污染时，调工具的 Agent 反而比根本不调更差；关键的 matched no-feedback fallback 对照设计，是今后 tool-use Agent 评测应该标配的方法论。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全的焦点从模型与权限，进一步收敛到 harness 的'压缩 / 摘要'环节，内存管理被认定为一类新的安全配置项与攻击面。</li><li>Computer Use 与 Tool Use 的评测共同走向'子系统级失败归因'：环境保真度、反馈可靠性、关键点合规，正在成为新的控制变量。</li></ul><p>如果你正在做 Agent 产品，今晚不妨翻一下你用的框架默认压缩策略，看看放在 memory 里的那条合规规则，跑完一段长会话后还在不在。欢迎在评论区聊聊你的发现。本期内容由 AI 自动生成，仅作研究参考，细节以论文原文为准。</p>",
+  "report_date": "2026-06-23",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-23T22:46:30Z"
+}

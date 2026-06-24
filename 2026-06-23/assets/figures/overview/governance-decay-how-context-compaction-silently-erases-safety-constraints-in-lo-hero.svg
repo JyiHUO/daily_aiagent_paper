@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">治理性衰减 · 上下文压缩如何悄悄抹去安全约束</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">Governance Decay in Long-Horizon LLM Agents</text>
+
+  <!-- LEFT: Before compaction -->
+  <g>
+    <rect x="40" y="105" width="300" height="380" rx="14" fill="#EFF6FF" stroke="#B9D2EF" stroke-width="1.5"/>
+    <text x="190" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">压缩前 · 规则在眼前</text>
+
+    <!-- Context window -->
+    <rect x="65" y="150" width="250" height="210" rx="8" fill="#FFFFFF" stroke="#C9D9EE"/>
+    <text x="190" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">Context</text>
+
+    <!-- Pinned rule highlighted -->
+    <rect x="80" y="183" width="220" height="36" rx="6" fill="#FFF4E0" stroke="#E0A340" stroke-width="1.5"/>
+    <text x="190" y="206" text-anchor="middle" font-size="12" font-weight="700" fill="#8A5A10">🛡 治理约束 / Policy</text>
+
+    <rect x="80" y="230" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <rect x="80" y="256" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <rect x="80" y="282" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <rect x="80" y="308" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <text x="190" y="348" text-anchor="middle" font-size="10" fill="#7A8699">历史对话 / 工具调用</text>
+
+    <!-- Agent -->
+    <circle cx="190" cy="410" r="30" fill="#4B8BDA" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="190" y="415" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Agent</text>
+
+    <text x="190" y="465" text-anchor="middle" font-size="14" font-weight="700" fill="#2E7D4F">✓ 拒绝违规 · 0%</text>
+  </g>
+
+  <!-- Middle: Compaction gear -->
+  <g transform="translate(450,295)">
+    <circle r="48" fill="#FFFFFF" stroke="#C8553D" stroke-width="2.5"/>
+    <g fill="#C8553D">
+      <rect x="-6" y="-56" width="12" height="14" rx="2"/>
+      <rect x="-6" y="42" width="12" height="14" rx="2"/>
+      <rect x="-56" y="-6" width="14" height="12" rx="2"/>
+      <rect x="42" y="-6" width="14" height="12" rx="2"/>
+    </g>
+    <text y="-4" text-anchor="middle" font-size="12" font-weight="700" fill="#C8553D">Context</text>
+    <text y="12" text-anchor="middle" font-size="12" font-weight="700" fill="#C8553D">Compaction</text>
+    <text y="82" text-anchor="middle" font-size="11" fill="#3D4F65">摘要器悄悄丢弃规则</text>
+  </g>
+
+  <!-- Arrow left -> gear -->
+  <line x1="345" y1="295" x2="397" y2="295" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Arrow gear -> right -->
+  <line x1="503" y1="295" x2="555" y2="295" stroke="#C8553D" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- RIGHT: After compaction -->
+  <g>
+    <rect x="560" y="105" width="300" height="380" rx="14" fill="#FBEFEC" stroke="#E5B8AC" stroke-width="1.5"/>
+    <text x="710" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#8A2E1A">压缩后 · 规则被抹掉</text>
+
+    <rect x="585" y="150" width="250" height="210" rx="8" fill="#FFFFFF" stroke="#E5C5BB"/>
+    <text x="710" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">Summary</text>
+
+    <!-- Erased rule -->
+    <rect x="600" y="183" width="220" height="36" rx="6" fill="#F4F4F4" stroke="#BBBBBB" stroke-dasharray="4 3"/>
+    <text x="710" y="206" text-anchor="middle" font-size="12" fill="#A0A0A0" text-decoration="line-through">治理约束已丢失</text>
+
+    <rect x="600" y="230" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <rect x="600" y="256" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <rect x="600" y="282" width="220" height="20" rx="4" fill="#EEF2F7"/>
+    <text x="710" y="348" text-anchor="middle" font-size="10" fill="#7A8699">任务进展保留</text>
+
+    <circle cx="710" cy="410" r="30" fill="#C8553D" stroke="#8A2E1A" stroke-width="2"/>
+    <text x="710" y="415" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">Agent</text>
+
+    <text x="710" y="465" text-anchor="middle" font-size="14" font-weight="700" fill="#C8553D">✗ 执行违规 · 最高 59%</text>
+  </g>
+
+  <!-- Bottom: mitigation strip -->
+  <g>
+    <rect x="60" y="515" width="780" height="78" rx="12" fill="#F4F8FF" stroke="#B9D2EF"/>
+    <circle cx="105" cy="554" r="22" fill="#FFF4E0" stroke="#E0A340" stroke-width="2"/>
+    <text x="105" y="561" text-anchor="middle" font-size="20">🛡</text>
+
+    <text x="145" y="546" font-size="14" font-weight="700" fill="#1E3A5F">Constraint Pinning · 训练无关的缓解方案</text>
+    <text x="145" y="568" font-size="12" fill="#3D4F65">将治理约束隔离到 pinned buffer，每轮压缩后逐字重注入</text>
+    <text x="145" y="585" font-size="12" fill="#3D4F65">开销 &lt; 0.5% · 违规率恢复 0% · 合法完成率 99% · ConstraintRot 1,323 episodes</text>
+  </g>
+</svg>

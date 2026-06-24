@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">工具反馈的价值反转</text>
+  <text x="360" y="60" text-anchor="middle" font-size="12" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">HotpotQA · Qwen2.5-7B (F1)</text>
+
+  <!-- Flow arrows -->
+  <path d="M 215 110 Q 285 95 348 110" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="282" y="90" text-anchor="middle" font-size="12" fill="#4B8BDA" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">工具带来收益</text>
+
+  <path d="M 432 110 Q 505 95 575 110" fill="none" stroke="#D9534F" stroke-width="2" marker-end="url(#arR)" stroke-dasharray="5,3"/>
+  <text x="503" y="90" text-anchor="middle" font-size="12" fill="#D9534F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">反而成为负担</text>
+
+  <!-- Clean -->
+  <rect x="70" y="125" width="140" height="240" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="155" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">干净工具</text>
+  <text x="140" y="255" text-anchor="middle" font-size="44" font-weight="bold" fill="#2E7D5B" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">44.8</text>
+  <text x="140" y="278" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">F1</text>
+  <text x="140" y="335" text-anchor="middle" font-size="12" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">正确地图</text>
+
+  <!-- No tool -->
+  <rect x="290" y="170" width="140" height="195" rx="8" fill="#F5F1E8" stroke="#B89968" stroke-width="2"/>
+  <text x="360" y="200" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">不调工具</text>
+  <text x="360" y="278" text-anchor="middle" font-size="38" font-weight="bold" fill="#B89968" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">22.3</text>
+  <text x="360" y="298" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">F1</text>
+  <text x="360" y="335" text-anchor="middle" font-size="12" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">凭记忆作答</text>
+
+  <!-- Shuffled -->
+  <rect x="510" y="295" width="140" height="70" rx="8" fill="#FBECEC" stroke="#D9534F" stroke-width="2"/>
+  <text x="580" y="200" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">误导工具</text>
+  <text x="580" y="338" text-anchor="middle" font-size="26" font-weight="bold" fill="#D9534F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">4.7</text>
+  <text x="580" y="358" text-anchor="middle" font-size="11" fill="#FBECEC" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">F1</text>
+  <text x="580" y="225" text-anchor="middle" font-size="12" fill="#D9534F" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">错误地图</text>
+
+  <!-- No-tool baseline -->
+  <line x1="60" y1="170" x2="660" y2="170" stroke="#B89968" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+  <text x="668" y="174" font-size="10" fill="#B89968" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">基线</text>
+
+  <text x="360" y="420" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="bold" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">误导反馈 &lt; 无反馈 &lt; 干净反馈</text>
+  <text x="360" y="445" text-anchor="middle" font-size="12" fill="#3D4F65" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">不可靠工具会把"收益"反转为"负贡献"</text>
+</svg>
