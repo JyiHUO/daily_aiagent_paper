@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-23
+- **日期**：2026-06-24
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Role-Based Agentic AI for Intent-Driven Network and Service Orchestration
-  - Governance Decay: How Context Compaction Silently Erases Safety Constraints in Long-Horizon LLM Agents
-  - Fara-1.5: Scalable Learning Environments for Computer Use Agents
-- **日报路径**：[2026-06-23/daily_report.md](2026-06-23/daily_report.md)
+  - MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery
+  - Qwen-AgentWorld: Language World Models for General Agents
+  - Red-Teaming the Agentic Red-Team
+- **日报路径**：[2026-06-24/daily_report.md](2026-06-24/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-24 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery | [2026-06-24/daily_report.md](2026-06-24/daily_report.md) |
+|  |  |  | 2 | Qwen-AgentWorld: Language World Models for General Agents |  |
+|  |  |  | 3 | Red-Teaming the Agentic Red-Team |  |
 | 2026-06-23 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Role-Based Agentic AI for Intent-Driven Network and Service Orchestration | [2026-06-23/daily_report.md](2026-06-23/daily_report.md) |
 |  |  |  | 2 | Governance Decay: How Context Compaction Silently Erases Safety Constraints in Long-Horizon LLM Agents |  |
 |  |  |  | 3 | Fara-1.5: Scalable Learning Environments for Computer Use Agents |  |
