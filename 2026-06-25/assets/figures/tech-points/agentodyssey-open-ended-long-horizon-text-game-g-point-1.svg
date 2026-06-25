@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520">
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M 0 0 L 7 3 L 0 6 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="520" fill="#FAF7F2"/>
+  
+  <text x="360" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#1E3A5F">五大能力 · 同一场冒险</text>
+  <text x="360" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#3D4F65">后期任务依赖前期积累 · 一环断则全局崩</text>
+
+  <!-- Central long-horizon arc -->
+  <path d="M 110 300 Q 360 150 610 300" stroke="#4B8BDA" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  
+  <!-- 1. Exploration -->
+  <circle cx="110" cy="295" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="110" y="292" text-anchor="middle" font-family="Georgia, serif" font-size="20">🧭</text>
+  <text x="110" y="312" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1E3A5F">探索</text>
+  
+  <!-- 2. Episodic Memory -->
+  <circle cx="235" cy="215" r="38" fill="#FDF4E7" stroke="#D9985F" stroke-width="2"/>
+  <text x="235" y="212" text-anchor="middle" font-family="Georgia, serif" font-size="20">📍</text>
+  <text x="235" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1E3A5F">情景记忆</text>
+  
+  <!-- 3. World Knowledge -->
+  <circle cx="360" cy="180" r="42" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="177" text-anchor="middle" font-family="Georgia, serif" font-size="22">🌙</text>
+  <text x="360" y="199" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1E3A5F">世界知识</text>
+  
+  <!-- 4. Skill Learning -->
+  <circle cx="485" cy="215" r="38" fill="#FDF4E7" stroke="#D9985F" stroke-width="2"/>
+  <text x="485" y="212" text-anchor="middle" font-family="Georgia, serif" font-size="20">📜</text>
+  <text x="485" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1E3A5F">技能学习</text>
+  
+  <!-- 5. Long-horizon Planning -->
+  <circle cx="610" cy="295" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="610" y="292" text-anchor="middle" font-family="Georgia, serif" font-size="20">🎯</text>
+  <text x="610" y="312" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#1E3A5F">长程规划</text>
+
+  <!-- Step markers -->
+  <text x="110" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#3D4F65">第 1 步</text>
+  <text x="610" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#3D4F65">第 N 步 · 主线完成</text>
+
+  <!-- Bottom: chain dependency -->
+  <rect x="60" y="395" width="600" height="100" rx="8" fill="#FFFFFF" stroke="#C9D6E2" stroke-width="1"/>
+  <text x="360" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1E3A5F">链式依赖 · 任一能力缺失则后续任务失败</text>
+  
+  <text x="110" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3D4F65">见过矿洞</text>
+  <text x="110" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#8B7355">(探索)</text>
+  
+  <text x="235" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3D4F65">记得位置</text>
+  <text x="235" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#8B7355">(记忆)</text>
+  
+  <text x="360" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3D4F65">夜晚危险</text>
+  <text x="360" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#8B7355">(知识)</text>
+  
+  <text x="485" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3D4F65">记下配方</text>
+  <text x="485" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#8B7355">(技能)</text>
+  
+  <text x="610" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#3D4F65">完成交易</text>
+  <text x="610" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#8B7355">(规划)</text>
+
+  <!-- Connecting arrows in bottom row -->
+  <path d="M 150 460 L 190 460" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+  <path d="M 275 460 L 315 460" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+  <path d="M 400 460 L 440 460" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+  <path d="M 525 460 L 565 460" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">对齐的三层防线</text>
+
+  <!-- Layer 1: Training-time -->
+  <rect x="80" y="90" width="560" height="80" rx="8" fill="#FFF5E6" stroke="#E0A050" stroke-width="1.5"/>
+  <text x="110" y="124" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">训练时 — RLHF，调倾向</text>
+  <text x="620" y="138" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#B07030" font-style="italic">可被伪装对齐</text>
+
+  <!-- Layer 2: Inference-time -->
+  <rect x="80" y="190" width="560" height="80" rx="8" fill="#EFF6FF" stroke="#7BA7D9" stroke-width="1.5"/>
+  <text x="110" y="224" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">推理时 — Prompt / Guardrail</text>
+  <text x="620" y="238" text-anchor="end" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3A6FA8" font-style="italic">仍在 Agent 进程内</text>
+
+  <!-- Layer 3: Execution-time (the new layer) -->
+  <rect x="60" y="305" width="600" height="110" rx="10" fill="#E8F0E8" stroke="#3F7A3F" stroke-width="2.5"/>
+  <text x="90" y="340" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">执行时 — 新层 · Safety Kernel</text>
+  <text x="90" y="370" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">部署架构提供，Agent 结构上不可触及</text>
+  <text x="90" y="395" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3F7A3F" font-weight="700">动作是否发生 → 由系统决定，而非模型</text>
+
+  <!-- Vertical flow arrow showing fallthrough -->
+  <line x1="40" y1="130" x2="40" y2="305" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="28" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" transform="rotate(-90,28,220)">逐层兜底</text>
+
+  <text x="360" y="450" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">前两层可被逃逸 → 第三层从架构上不可触及</text>
+</svg>

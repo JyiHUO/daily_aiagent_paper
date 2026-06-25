@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua",
+  "candidates": [
+    {
+      "id": "page-1-embedded-6-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        18.138256072998047,
+        63.25556945800781,
+        168.2958221435547,
+        171.34146118164062
+      ],
+      "clip_area": 16229.914427786425,
+      "page_area": 484704.0,
+      "text_density": 0.07602391600252062,
+      "kind": "embedded_image",
+      "xref": 1008,
+      "score": 11.18033238253096,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/01-p2-embedded_image.png",
+      "filename": "01-p2-embedded_image.png"
+    },
+    {
+      "id": "page-14-embedded-0-0",
+      "page_index": 14,
+      "caption": "第 15 页内嵌图片候选",
+      "clip": [
+        55.381996154785156,
+        110.33203125,
+        415.7918395996094,
+        267.39036560058594
+      ],
+      "clip_area": 56605.369694999536,
+      "page_area": 484704.0,
+      "text_density": 0.06786756954750499,
+      "kind": "embedded_image",
+      "xref": 1087,
+      "score": 5.628948552166661,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/02-p15-embedded_image.png",
+      "filename": "02-p15-embedded_image.png"
+    },
+    {
+      "id": "page-10-embedded-5-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        55.852210998535156,
+        110.86691284179688,
+        415.0234069824219,
+        267.9252014160156
+      ],
+      "clip_area": 56410.81334638456,
+      "page_area": 484704.0,
+      "text_density": 0.06799899974321592,
+      "kind": "embedded_image",
+      "xref": 1082,
+      "score": 5.626786814959829,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/03-p11-embedded_image.png",
+      "filename": "03-p11-embedded_image.png"
+    },
+    {
+      "id": "page-14-drawing-cluster-0",
+      "page_index": 14,
+      "caption": "第 15 页矢量图主图候选",
+      "clip": [
+        50.16461944580078,
+        73.3185806274414,
+        564.391845703125,
+        432.55474853515625
+      ],
+      "clip_area": 184729.0181944946,
+      "page_area": 484704.0,
+      "text_density": 0.09307237833842111,
+      "kind": "drawing_cluster",
+      "score": 5.570970381947442,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/04-p15-drawing_cluster.png",
+      "filename": "04-p15-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-drawing-cluster-0",
+      "page_index": 10,
+      "caption": "第 11 页矢量图主图候选",
+      "clip": [
+        49.99876403808594,
+        73.85346221923828,
+        564.2259521484375,
+        438.2232971191406
+      ],
+      "clip_area": 187368.87563280982,
+      "page_area": 484704.0,
+      "text_density": 0.09190522454546306,
+      "kind": "drawing_cluster",
+      "score": 5.423146450622566,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/05-p11-drawing_cluster.png",
+      "filename": "05-p11-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-embedded-4-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        392.8203430175781,
+        110.866943359375,
+        558.4816284179688,
+        271.894775390625
+      ],
+      "clip_area": 26676.07763953507,
+      "page_area": 484704.0,
+      "text_density": 0.05211985049781199,
+      "kind": "embedded_image",
+      "xref": 1081,
+      "score": 5.296400862661501,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/06-p11-embedded_image.png",
+      "filename": "06-p11-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentodyssey-open-ended-long-horizon-text-game-generation-for-test-time-continua/contact-sheet.svg"
+}

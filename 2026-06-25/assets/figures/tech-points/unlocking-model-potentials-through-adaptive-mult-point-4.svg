@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">Explorer：先画地图，再动手</text>
+
+  <!-- Left: vague issue -->
+  <g>
+    <rect x="30" y="95" width="140" height="130" rx="10" fill="#F3F0EA" stroke="#C9B79C" stroke-width="1.5"/>
+    <text x="100" y="122" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">模糊 Issue</text>
+    <circle cx="65" cy="158" r="6" fill="#D9C9AE" opacity="0.7"/>
+    <circle cx="90" cy="172" r="9" fill="#D9C9AE" opacity="0.6"/>
+    <circle cx="118" cy="156" r="7" fill="#D9C9AE" opacity="0.7"/>
+    <circle cx="140" cy="175" r="8" fill="#D9C9AE" opacity="0.5"/>
+    <text x="100" y="210" text-anchor="middle" font-size="10" fill="#8A7355">35–41% 不提 buggy 文件</text>
+  </g>
+
+  <!-- Middle: Explorer with AST -->
+  <g>
+    <rect x="220" y="80" width="160" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="300" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Explorer</text>
+    <text x="300" y="120" text-anchor="middle" font-size="10" fill="#3D4F65">AST 结构化定位</text>
+
+    <!-- mini tree -->
+    <circle cx="300" cy="148" r="6" fill="#4B8BDA"/>
+    <line x1="300" y1="154" x2="270" y2="178" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="300" y1="154" x2="330" y2="178" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="270" cy="182" r="5" fill="#4B8BDA"/>
+    <circle cx="330" cy="182" r="5" fill="#E07A5F"/>
+    <line x1="270" y1="187" x2="255" y2="208" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="270" y1="187" x2="285" y2="208" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="255" cy="212" r="4" fill="#4B8BDA"/>
+    <circle cx="285" cy="212" r="4" fill="#4B8BDA"/>
+    <text x="348" y="186" font-size="9" fill="#E07A5F">可疑</text>
+
+    <text x="300" y="248" text-anchor="middle" font-size="10" fill="#3D4F65">候选文件 · 调用链 · 可疑行</text>
+    <text x="300" y="266" text-anchor="middle" font-size="9" fill="#8A7355">tree-sitter · 100+ 语言</text>
+  </g>
+
+  <!-- Right: two recipients -->
+  <g>
+    <rect x="430" y="95" width="140" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="500" y="120" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Patch Editor</text>
+    <text x="500" y="138" text-anchor="middle" font-size="10" fill="#3D4F65">按图修补</text>
+
+    <rect x="430" y="205" width="140" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="500" y="230" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Validator</text>
+    <text x="500" y="248" text-anchor="middle" font-size="10" fill="#3D4F65">按图复现</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="170" y1="160" x2="218" y2="170" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="150" x2="428" y2="128" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="215" x2="428" y2="232" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Bottom note -->
+  <text x="300" y="332" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">结构化 context summary（不含测试 / 不含 patch）</text>
+  <text x="300" y="356" text-anchor="middle" font-size="11" fill="#3D4F65">保留测试与修补的独立性，避免预算浪费在搜代码</text>
+</svg>

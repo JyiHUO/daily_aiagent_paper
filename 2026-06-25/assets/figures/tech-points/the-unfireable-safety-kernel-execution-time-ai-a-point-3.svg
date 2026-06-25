@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">机器验证 fail-closed</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">穷举所有输入组合，而非样本测试</text>
+
+  <!-- Left: Tests (limited) -->
+  <g>
+    <rect x="60" y="120" width="240" height="280" rx="12" fill="#FFF4E6" stroke="#E0A56A" stroke-width="1.5"/>
+    <text x="180" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">传统单测：采样若干输入</text>
+
+    <!-- sparse dots in a region -->
+    <circle cx="110" cy="220" r="5" fill="#4B8BDA"/>
+    <circle cx="160" cy="240" r="5" fill="#4B8BDA"/>
+    <circle cx="220" cy="225" r="5" fill="#4B8BDA"/>
+    <circle cx="135" cy="295" r="5" fill="#4B8BDA"/>
+    <circle cx="200" cy="315" r="5" fill="#4B8BDA"/>
+    <circle cx="255" cy="275" r="5" fill="#4B8BDA"/>
+    <circle cx="105" cy="345" r="5" fill="#4B8BDA"/>
+
+    <!-- unknown gaps -->
+    <text x="180" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" fill="#D9534F" opacity="0.7">?</text>
+    <text x="245" y="340" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="28" fill="#D9534F" opacity="0.7">?</text>
+
+    <text x="180" y="385" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#A0522D">未覆盖的组合 = 潜在漏洞</text>
+  </g>
+
+  <!-- Arrow comparison -->
+  <path d="M315,260 L405,260" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="360" y="250" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">升级</text>
+
+  <!-- Right: Verified (full) -->
+  <g>
+    <rect x="420" y="120" width="240" height="280" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">Kani 穷举证明：覆盖全部输入</text>
+
+    <!-- filled region -->
+    <rect x="445" y="190" width="190" height="160" rx="6" fill="#4B8BDA" opacity="0.18"/>
+    <rect x="445" y="190" width="190" height="160" rx="6" fill="none" stroke="#4B8BDA" stroke-dasharray="3,3"/>
+    
+    <text x="540" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">∀ (state, cooldown, probe)</text>
+    <text x="540" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">→ Refuse ✓</text>
+    <text x="540" y="320" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">4 个 kani::proof / 4 通过</text>
+
+    <text x="540" y="385" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">不存在让它放行的组合</text>
+  </g>
+
+  <!-- Binding arrow -->
+  <path d="M420,415 L320,440" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Bottom binding -->
+  <rect x="180" y="430" width="360" height="36" rx="8" fill="#1E3A5F"/>
+  <text x="360" y="454" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#FFFFFF">被证明的纯函数 = 上线 circuit breaker 路径</text>
+</svg>

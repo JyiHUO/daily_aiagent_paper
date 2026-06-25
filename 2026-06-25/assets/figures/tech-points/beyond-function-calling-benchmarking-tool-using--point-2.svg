@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">瓶颈是诊断，不是算力</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一个失败任务的两种救援方式</text>
+
+  <!-- 中央故障 -->
+  <circle cx="360" cy="250" r="52" fill="#FEF3E2" stroke="#E8A04A" stroke-width="2"/>
+  <text x="360" y="245" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">工具故障</text>
+  <text x="360" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">源冲突 / 漂移</text>
+
+  <!-- 左：算力扩展 -->
+  <rect x="55" y="170" width="200" height="160" rx="10" fill="#EFF6FF" stroke="#A8C5E8" stroke-width="1.5"/>
+  <text x="155" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">多给算力 (+10 轮重试)</text>
+
+  <!-- 哑铃图标 -->
+  <g transform="translate(155,245)">
+    <rect x="-30" y="-6" width="60" height="12" fill="#A8C5E8"/>
+    <rect x="-40" y="-12" width="10" height="24" fill="#4B8BDA"/>
+    <rect x="30" y="-12" width="10" height="24" fill="#4B8BDA"/>
+  </g>
+  <text x="155" y="293" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#9A6B3A">+ 3~11%</text>
+  <text x="155" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">只是在重复同样的错</text>
+
+  <!-- 右：提示诊断 -->
+  <rect x="465" y="170" width="200" height="160" rx="10" fill="#E8F3EC" stroke="#7FB893" stroke-width="1.5"/>
+  <text x="565" y="200" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">告知病因 (一句 Hint)</text>
+
+  <!-- 灯泡图标 -->
+  <g transform="translate(565,250)">
+    <circle cx="0" cy="-2" r="14" fill="#FFE89A" stroke="#E8A04A" stroke-width="1.5"/>
+    <rect x="-6" y="10" width="12" height="5" fill="#9A6B3A"/>
+    <line x1="-20" y1="-12" x2="-26" y2="-16" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="20" y1="-12" x2="26" y2="-16" stroke="#E8A04A" stroke-width="1.5"/>
+    <line x1="0" y1="-22" x2="0" y2="-30" stroke="#E8A04A" stroke-width="1.5"/>
+  </g>
+  <text x="565" y="293" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#3F8A5B">+ 25~35%</text>
+  <text x="565" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">回收 60~80% 的 gap</text>
+
+  <!-- 箭头：从故障指向两种方案 -->
+  <line x1="255" y1="250" x2="304" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="465" y1="250" x2="416" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 底部结论 -->
+  <text x="360" y="410" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">模型会修，只是不知道坏了</text>
+  <text x="360" y="434" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">缺的是异常感知，不是推理预算</text>
+</svg>

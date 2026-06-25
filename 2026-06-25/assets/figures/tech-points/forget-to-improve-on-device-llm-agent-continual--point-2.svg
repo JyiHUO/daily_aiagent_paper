@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">一个分数，三道闸门</text>
+
+  <!-- 中心硬币 -->
+  <circle cx="360" cy="240" r="78" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5"/>
+  <text x="360" y="232" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">净值/字节</text>
+  <text x="360" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#D97706">ρ</text>
+
+  <!-- 左：KEEP -->
+  <rect x="40" y="170" width="170" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="125" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">KEEP</text>
+  <text x="125" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">留什么 · 填满 RAM</text>
+
+  <!-- 上：SHARE -->
+  <rect x="275" y="70" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="360" y="100" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">SHARE</text>
+  <text x="360" y="125" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">发什么 · 省上行</text>
+
+  <!-- 右：TRUST -->
+  <rect x="510" y="170" width="170" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="595" y="205" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#1E3A5F">TRUST</text>
+  <text x="595" y="235" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">信什么 · 挡投毒</text>
+
+  <!-- 箭头 从中心 ρ 辐射到三个闸门 -->
+  <line x1="295" y1="220" x2="212" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="360" y1="162" x2="360" y2="142" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="425" y1="220" x2="508" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 底部一句话 -->
+  <text x="360" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" fill="#1E3A5F">除陈与防毒，同一条路径</text>
+</svg>

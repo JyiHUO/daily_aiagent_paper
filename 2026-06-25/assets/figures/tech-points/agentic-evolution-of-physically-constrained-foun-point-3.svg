@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="18" font-weight="600" fill="#1E3A5F">Reviewer Agent as Gatekeeper</text>
+
+  <!-- Incoming blueprints -->
+  <g>
+    <circle cx="70" cy="200" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="70" cy="150" r="18" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="70" cy="250" r="18" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="70" y="295" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">blueprints</text>
+  </g>
+
+  <!-- Gate (shield-like) -->
+  <g>
+    <path d="M300,100 L360,130 L360,220 Q300,280 240,220 L240,130 Z" fill="#FFF4E6" stroke="#E0A458" stroke-width="2"/>
+    <text x="300" y="150" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">Score &gt;= 4.0</text>
+    <text x="300" y="175" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">motivation . novelty</text>
+    <text x="300" y="190" text-anchor="middle" font-family="Helvetica,Arial" font-size="10" fill="#3D4F65">feasibility . result</text>
+    <text x="300" y="230" text-anchor="middle" font-family="Helvetica,Arial" font-size="22">⚖</text>
+  </g>
+
+  <!-- Pass: Q-Enhance -->
+  <g>
+    <rect x="455" y="105" width="120" height="60" rx="8" fill="#E6F4EA" stroke="#5BA776" stroke-width="1.5"/>
+    <text x="515" y="130" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="600" fill="#1E3A5F">Q-Enhance</text>
+    <text x="515" y="150" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#2E7D52">4.45 PASS</text>
+  </g>
+
+  <!-- Reject: AUQ -->
+  <g>
+    <rect x="455" y="235" width="120" height="60" rx="8" fill="#FBECEA" stroke="#C97064" stroke-width="1.5"/>
+    <text x="515" y="260" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" font-weight="600" fill="#1E3A5F">AUQ</text>
+    <text x="515" y="280" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#B0463A">2.95 REJECT</text>
+  </g>
+
+  <!-- arrow in -->
+  <line x1="95" y1="200" x2="235" y2="175" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- pass arrow -->
+  <line x1="358" y1="150" x2="453" y2="135" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- reject arrow -->
+  <line x1="358" y1="215" x2="453" y2="260" stroke="#C97064" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- feedback loop to EKG -->
+  <path d="M515,295 L515,355 L70,355 L70,275" fill="none" stroke="#C97064" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrowRed)"/>
+  <text x="300" y="375" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#B0463A" font-style="italic">rejected pathway -&gt; EKG memory</text>
+</svg>

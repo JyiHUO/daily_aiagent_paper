@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Algorithmic Chain-of-Thought</text>
+  <text x="360" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">right model for the right role, anchored on a proven path</text>
+
+  <!-- Four specialist roles -->
+  <g>
+    <circle cx="120" cy="180" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="120" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Analyzer</text>
+    <text x="120" y="194" text-anchor="middle" font-size="10" fill="#3D4F65">Gemini · recall</text>
+  </g>
+
+  <g>
+    <circle cx="280" cy="180" r="46" fill="#FFF4E6" stroke="#D98C3C" stroke-width="1.6"/>
+    <text x="280" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Ideator</text>
+    <text x="280" y="194" text-anchor="middle" font-size="10" fill="#3D4F65">DeepSeek · diverge</text>
+  </g>
+
+  <g>
+    <circle cx="440" cy="180" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="440" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Architect</text>
+    <text x="440" y="194" text-anchor="middle" font-size="10" fill="#3D4F65">Claude · formalize</text>
+  </g>
+
+  <g>
+    <circle cx="600" cy="180" r="46" fill="#FFF4E6" stroke="#D98C3C" stroke-width="1.6"/>
+    <text x="600" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Executor</text>
+    <text x="600" y="194" text-anchor="middle" font-size="10" fill="#3D4F65">GPT · realize</text>
+  </g>
+
+  <!-- arrows between roles -->
+  <line x1="166" y1="180" x2="230" y2="180" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="326" y1="180" x2="390" y2="180" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="486" y1="180" x2="550" y2="180" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- link the role pipeline down to the anchor path -->
+  <line x1="360" y1="230" x2="360" y2="278" stroke="#4B8BDA" stroke-width="1.4" stroke-dasharray="3 3"/>
+
+  <!-- Anchor: proven path from EKG -->
+  <text x="360" y="295" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">anchored on a high-scoring path from the EKG</text>
+
+  <g>
+    <circle cx="180" cy="340" r="9" fill="#4B8BDA"/>
+    <circle cx="280" cy="340" r="9" fill="#4B8BDA"/>
+    <circle cx="380" cy="340" r="9" fill="#4B8BDA"/>
+    <circle cx="480" cy="340" r="9" fill="#4B8BDA"/>
+    <circle cx="560" cy="340" r="11" fill="#FFF4E6" stroke="#D98C3C" stroke-width="2"/>
+    <line x1="189" y1="340" x2="271" y2="340" stroke="#4B8BDA" stroke-width="1.6"/>
+    <line x1="289" y1="340" x2="371" y2="340" stroke="#4B8BDA" stroke-width="1.6"/>
+    <line x1="389" y1="340" x2="471" y2="340" stroke="#4B8BDA" stroke-width="1.6"/>
+    <line x1="489" y1="340" x2="547" y2="340" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+    <text x="180" y="368" text-anchor="middle" font-size="10" fill="#3D4F65">prior methods</text>
+    <text x="560" y="368" text-anchor="middle" font-size="10" fill="#D98C3C" font-weight="600">next mutation</text>
+  </g>
+
+  <text x="360" y="430" text-anchor="middle" font-size="11" fill="#1E3A5F">specialist roles think along a validated trajectory, not from zero</text>
+</svg>

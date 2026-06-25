@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-27",
+      "page_index": 0,
+      "caption": "Fig. 1: The on-device agent-memory design space: CURATOR uses one net-value-per-byte score to decide what to keep, what to share, and what to trust.",
+      "clip": [
+        290.4443664550781,
+        182.984130859375,
+        584.0009765625,
+        410.96014404296875
+      ],
+      "clip_area": 66923.8656159807,
+      "page_area": 484704.0,
+      "text_density": 0.3750148603786683,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.04270688412413,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-22",
+      "page_index": 7,
+      "caption": "Fig. 6: Per-budget Pareto fronts on three on-device planners (3B blue, 7B orange, Phi green; solid ◦ task, dashed □ victim- subset accuracy). Accuracy holds as each budget shrinks to its knee, 107 KB memory (a) and 454 B uplink (b), and falls only below it.",
+      "clip": [
+        30.964000701904297,
+        34.540496826171875,
+        580.9149169921875,
+        158.7146759033203
+      ],
+      "clip_area": 68289.7035630715,
+      "page_area": 484704.0,
+      "text_density": 0.19857628640907193,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.64419729948981,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/02-p8-drawing_cluster_with_caption.png",
+      "filename": "02-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-20",
+      "page_index": 8,
+      "caption": "Fig. 9: Per-decision cost on real hardware across two Jetson generations and two planner sizes (INA3221 power monitor, tegrastats, 5 seeds). (a) absolute energy rises with device tier (Orin → Thor) and model (3B → 7B), yet curation cuts it in every configuration; (b) as a fraction of keep-all, energy, RAM, and uplink all fall to 0.38–0.64 on both backbones.",
+      "clip": [
+        30.964000701904297,
+        34.540496826171875,
+        317.90087890625,
+        158.7146759033203
+      ],
+      "clip_area": 35630.151297984354,
+      "page_area": 484704.0,
+      "text_density": 0.16952451104398591,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.024419907338448,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-22",
+      "page_index": 7,
+      "caption": "Fig. 6: Per-budget Pareto fronts on three on-device planners (3B blue, 7B orange, Phi green; solid ◦ task, dashed □ victim- subset accuracy). Accuracy holds as each budget shrinks to its knee, 107 KB memory (a) and 454 B uplink (b), and falls only below it.",
+      "clip": [
+        18.3639892578125,
+        18.0,
+        330.621484375,
+        155.4104766845703
+      ],
+      "clip_area": 42907.45125238263,
+      "page_area": 484704.0,
+      "text_density": 0.1553129562137341,
+      "kind": "captioned_figure",
+      "score": 17.957972085535765,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/04-p8-captioned_figure.png",
+      "filename": "04-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-20",
+      "page_index": 8,
+      "caption": "Fig. 9: Per-decision cost on real hardware across two Jetson generations and two planner sizes (INA3221 power monitor, tegrastats, 5 seeds). (a) absolute energy rises with device tier (Orin → Thor) and model (3B → 7B), yet curation cuts it in every configuration; (b) as a fraction of keep-all, energy, RAM, and uplink all fall to 0.38–0.64 on both backbones.",
+      "clip": [
+        18.36400451660156,
+        18.0,
+        330.6215454101563,
+        155.4104766845703
+      ],
+      "clip_area": 42907.45754253506,
+      "page_area": 484704.0,
+      "text_density": 0.15983340553449982,
+      "kind": "captioned_figure",
+      "score": 15.686745196180402,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-23",
+      "page_index": 6,
+      "caption": "Fig. 5: Backbone robustness across three on-device planners (Qwen2.5-3B 15 seeds; Phi-3.5-mini and Qwen2.5-7B 5 seeds; error bars are SEM). (a) task and (b) victim-subset accuracy both rise under curation on every backbone, at the same 2 . 7 × footprint cut.",
+      "clip": [
+        293.9779968261719,
+        274.12750244140625,
+        580.9149169921875,
+        398.30169677734375
+      ],
+      "clip_area": 35630.16088685021,
+      "page_area": 484704.0,
+      "text_density": 0.22818245382512178,
+      "kind": "drawing_cluster_with_caption",
+      "score": 11.50494344701325,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/06-p7-drawing_cluster_with_caption.png",
+      "filename": "06-p7-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/forget-to-improve-on-device-llm-agent-continual-learning-via-budget-curated-memo/contact-sheet.svg"
+}

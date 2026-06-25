@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8553D"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">按净值遗忘，让端侧Agent变强</text>
+  <text x="450" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#3D4F65">一把尺子 ρ = (价值 − 风险) / 字节，同时管 留 / 发 / 信</text>
+
+  <!-- Left inputs -->
+  <g>
+    <rect x="60" y="160" width="180" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="188" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">价值 V̂</text>
+    <text x="150" y="210" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">命中 × 帮助 × 压缩</text>
+  </g>
+
+  <g>
+    <rect x="60" y="265" width="180" height="70" rx="10" fill="#FBEFEC" stroke="#C8553D" stroke-width="1.5"/>
+    <text x="150" y="293" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#8A2E1F">风险 Ĥ</text>
+    <text x="150" y="315" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#5A3A33">陈旧 + 来源可疑</text>
+  </g>
+
+  <g>
+    <rect x="60" y="370" width="180" height="70" rx="10" fill="#F2F4F7" stroke="#8A99AE" stroke-width="1.5"/>
+    <text x="150" y="398" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">字节 b</text>
+    <text x="150" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">RAM / 上行成本</text>
+  </g>
+
+  <!-- Arrows into ruler -->
+  <path d="M 240 195 Q 310 230 358 280" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 240 300 L 358 300" stroke="#C8553D" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <path d="M 240 405 Q 310 370 358 320" stroke="#8A99AE" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Central ruler -->
+  <g>
+    <circle cx="450" cy="300" r="92" fill="#1E3A5F" stroke="#4B8BDA" stroke-width="3"/>
+    <text x="450" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" fill="#BFD7F2">净值 / 字节</text>
+    <text x="450" y="318" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">ρ</text>
+    <text x="450" y="348" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#BFD7F2">一把尺子</text>
+  </g>
+
+  <!-- Three decisions -->
+  <g>
+    <rect x="610" y="160" width="230" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="640" y="190" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">留 KEEP</text>
+    <text x="640" y="212" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">驱逐低值，控 RAM</text>
+  </g>
+
+  <g>
+    <rect x="610" y="265" width="230" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="640" y="295" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#1E3A5F">发 SHARE</text>
+    <text x="640" y="317" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">价值 &gt; 上行成本</text>
+  </g>
+
+  <g>
+    <rect x="610" y="370" width="230" height="70" rx="10" fill="#FBEFEC" stroke="#C8553D" stroke-width="1.8"/>
+    <text x="640" y="400" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#8A2E1F">信 TRUST</text>
+    <text x="640" y="422" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#5A3A33">按来源拦投毒</text>
+  </g>
+
+  <!-- Arrows from ruler to decisions -->
+  <path d="M 528 255 Q 570 220 608 195" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 542 300 L 608 300" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 528 345 Q 570 380 608 405" stroke="#C8553D" stroke-width="2.2" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Testbed note -->
+  <text x="450" y="470" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#8A99AE">真机验证：Jetson + 双机械臂</text>
+
+  <!-- Bottom results -->
+  <g>
+    <rect x="60" y="495" width="780" height="80" rx="10" fill="#F7F9FC" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="135" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">2.7×↓</text>
+    <text x="135" y="554" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">内存占用</text>
+
+    <text x="295" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">2.4×↓</text>
+    <text x="295" y="554" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">上行流量</text>
+
+    <text x="455" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#C8553D">0.75 → 0</text>
+    <text x="455" y="554" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">注入成功率</text>
+
+    <text x="625" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">↑</text>
+    <text x="625" y="554" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">毒/陈旧场景准确率</text>
+
+    <text x="775" y="528" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">=</text>
+    <text x="775" y="554" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65">原任务不掉点</text>
+  </g>
+</svg>

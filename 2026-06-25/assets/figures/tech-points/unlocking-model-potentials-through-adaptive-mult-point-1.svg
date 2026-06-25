@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">Issue 质量分级路由</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">写得清楚走快车道，写得模糊先勘察</text>
+
+  <!-- 4 criteria -->
+  <text x="300" y="88" text-anchor="middle" font-size="11" fill="#3D4F65">检查 4 项：buggy file · function · fix策略 · 复现信息</text>
+
+  <!-- Diamond gate -->
+  <polygon points="300,105 360,155 300,205 240,155" fill="#FFF7E6" stroke="#E0A33C" stroke-width="2"/>
+  <text x="300" y="152" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Quality</text>
+  <text x="300" y="168" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Checker</text>
+
+  <!-- Left branch -->
+  <path d="M 260 180 Q 190 230 145 270" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="178" y="222" font-size="11" fill="#2C7A4A" font-weight="600">all 4 ✓ · fast lane</text>
+
+  <!-- Right branch -->
+  <path d="M 340 180 Q 410 230 455 270" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="378" y="222" font-size="11" fill="#B85C3C" font-weight="600">missing · scout first</text>
+
+  <!-- Left destination -->
+  <rect x="55" y="275" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="145" y="302" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Validator ∥ Patch Editor</text>
+  <text x="145" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">跳过探索，直接并行修补</text>
+  <text x="145" y="358" text-anchor="middle" font-size="18">⚡ 省 token</text>
+
+  <!-- Right destination -->
+  <rect x="365" y="275" width="180" height="100" rx="10" fill="#FDF1EC" stroke="#B85C3C" stroke-width="1.5"/>
+  <text x="455" y="302" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Explorer 先勘察</text>
+  <text x="455" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">补全仓库上下文再修补</text>
+  <text x="455" y="358" text-anchor="middle" font-size="18">🔍 防错路</text>
+</svg>

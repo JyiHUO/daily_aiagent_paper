@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica, Arial" font-size="20" font-weight="700" fill="#1E3A5F">Beyond Score: Diagnose How an Agent Learns</text>
+
+  <!-- Before game -->
+  <g>
+    <circle cx="130" cy="240" r="70" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="130" y="232" text-anchor="middle" font-family="Helvetica, Arial" font-size="15" font-weight="700" fill="#1E3A5F">Before</text>
+    <text x="130" y="256" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#3D4F65">QA pre-test</text>
+    <text x="130" y="274" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#8a6d3b">filter leakage</text>
+  </g>
+
+  <!-- Game in middle -->
+  <g>
+    <rect x="320" y="190" width="160" height="100" rx="10" fill="#FFF5E6" stroke="#E5A050" stroke-width="2"/>
+    <text x="400" y="228" text-anchor="middle" font-family="Helvetica, Arial" font-size="15" font-weight="700" fill="#1E3A5F">Long-Horizon</text>
+    <text x="400" y="250" text-anchor="middle" font-family="Helvetica, Arial" font-size="15" font-weight="700" fill="#1E3A5F">Text Game</text>
+    <text x="400" y="272" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">play &amp; learn</text>
+  </g>
+
+  <!-- After game -->
+  <g>
+    <circle cx="670" cy="240" r="70" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="670" y="232" text-anchor="middle" font-family="Helvetica, Arial" font-size="15" font-weight="700" fill="#1E3A5F">After</text>
+    <text x="670" y="256" text-anchor="middle" font-family="Helvetica, Arial" font-size="12" fill="#3D4F65">QA + memory</text>
+    <text x="670" y="274" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">post-test</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="202" y1="240" x2="318" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="482" y1="240" x2="598" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Delta indicator -->
+  <text x="400" y="165" text-anchor="middle" font-family="Helvetica, Arial" font-size="14" font-weight="700" fill="#C0504D">Δ knowledge  •  Δ memory</text>
+
+  <!-- Bottom signals -->
+  <g>
+    <rect x="100" y="365" width="200" height="85" rx="8" fill="#F4EFFA" stroke="#7B6BB0" stroke-width="1.5"/>
+    <text x="200" y="392" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="700" fill="#1E3A5F">Action Entropy ↓</text>
+    <text x="200" y="412" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">behavior collapse</text>
+    <polyline points="120,440 145,438 170,438 185,432 195,422" fill="none" stroke="#7B6BB0" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="500" y="365" width="200" height="85" rx="8" fill="#FDECEC" stroke="#C0504D" stroke-width="1.5"/>
+    <text x="600" y="392" text-anchor="middle" font-family="Helvetica, Arial" font-size="13" font-weight="700" fill="#1E3A5F">Token Cost ↑↑</text>
+    <text x="600" y="412" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#3D4F65">quadratic context</text>
+    <polyline points="520,440 550,436 575,428 590,418 600,402" fill="none" stroke="#C0504D" stroke-width="2"/>
+  </g>
+
+  <!-- connectors from game down -->
+  <line x1="360" y1="290" x2="245" y2="363" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <line x1="440" y1="290" x2="555" y2="363" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Helvetica, Arial" font-size="11" fill="#6a7384" font-style="italic">progress score alone hides where the agent breaks</text>
+</svg>

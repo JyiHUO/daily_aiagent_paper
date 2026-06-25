@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <rect width="600" height="420" fill="#FBFAF7"/>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">演化知识图谱：算法家谱当长期记忆</text>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89846"/>
+    </marker>
+  </defs>
+
+  <!-- Left: family tree -->
+  <text x="170" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">EKG 家谱（带因果的记忆）</text>
+
+  <g stroke="#4B8BDA" stroke-width="1.6" fill="none">
+    <line x1="170" y1="110" x2="120" y2="180"/>
+    <line x1="170" y1="110" x2="220" y2="180"/>
+    <line x1="120" y1="180" x2="90"  y2="255"/>
+    <line x1="120" y1="180" x2="150" y2="255"/>
+    <line x1="220" y1="180" x2="220" y2="255"/>
+    <line x1="150" y1="255" x2="150" y2="320"/>
+  </g>
+
+  <g font-size="10" fill="#1E3A5F" text-anchor="middle">
+    <circle cx="170" cy="110" r="16" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="170" y="113">GPTQ</text>
+
+    <circle cx="120" cy="180" r="16" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="120" y="183">AWQ</text>
+
+    <circle cx="220" cy="180" r="16" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <text x="220" y="183">Smooth</text>
+
+    <circle cx="90"  cy="255" r="10" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <circle cx="150" cy="255" r="10" fill="#DCE9F7" stroke="#4B8BDA"/>
+    <circle cx="220" cy="255" r="10" fill="#DCE9F7" stroke="#4B8BDA"/>
+  </g>
+
+  <!-- New node grown by agent -->
+  <circle cx="150" cy="320" r="16" fill="#FFE8C7" stroke="#E89846" stroke-width="2"/>
+  <text x="150" y="323" font-size="10" fill="#8B5A1F" text-anchor="middle" font-weight="600">新方法</text>
+
+  <text x="150" y="358" font-size="11" fill="#3D4F65" text-anchor="middle" font-style="italic">沿家谱往下生长</text>
+
+  <!-- Divider -->
+  <line x1="320" y1="80" x2="320" y2="380" stroke="#C9CFD8" stroke-dasharray="3,4"/>
+
+  <!-- Right: agent flow -->
+  <text x="470" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Agent 怎么用这张图</text>
+
+  <rect x="390" y="86" width="160" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="470" y="106" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">Agent 提问</text>
+  <text x="470" y="123" text-anchor="middle" font-size="10" fill="#3D4F65">压 MoE 到 sub-3-bit ?</text>
+
+  <line x1="470" y1="136" x2="470" y2="174" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <rect x="380" y="178" width="180" height="58" rx="8" fill="#FFF6E5" stroke="#E89846"/>
+  <text x="470" y="200" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">挑高分演化路径</text>
+  <text x="470" y="220" text-anchor="middle" font-size="10" fill="#3D4F65">≥9 分路径作 CoT 起点</text>
+
+  <line x1="470" y1="238" x2="470" y2="278" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <rect x="380" y="282" width="180" height="58" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="470" y="304" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">结果回写图谱</text>
+  <text x="470" y="324" text-anchor="middle" font-size="10" fill="#3D4F65">成功 + / 失败 −</text>
+
+  <!-- loop back arrow from writeback to tree root area -->
+  <path d="M 380 311 Q 300 311 270 220 Q 250 140 188 116" stroke="#E89846" stroke-width="1.6" fill="none" stroke-dasharray="5,3" marker-end="url(#b)"/>
+  <text x="300" y="190" font-size="10" fill="#8B5A1F" text-anchor="middle">越用越准</text>
+</svg>

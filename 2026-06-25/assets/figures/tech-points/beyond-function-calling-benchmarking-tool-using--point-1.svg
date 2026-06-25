@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">工具怪怪的，但还能用</text>
+  <text x="360" y="66" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#3D4F65">五类故障注入 + 保留恢复路径</text>
+
+  <!-- Clean tool -->
+  <circle cx="90" cy="250" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="90" y="246" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">干净工具</text>
+  <text x="90" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">Clean</text>
+
+  <!-- Injection zone -->
+  <rect x="200" y="110" width="320" height="280" rx="14" fill="#FFF6E8" stroke="#E0A155" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="360" y="135" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="13" fill="#8A5A1E" font-weight="600">注入五类故障</text>
+
+  <!-- 5 fault chips -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1E3A5F">
+    <rect x="220" y="155" width="130" height="38" rx="6" fill="#FFFFFF" stroke="#E0A155"/>
+    <text x="285" y="178" text-anchor="middle">文档漂移</text>
+
+    <rect x="370" y="155" width="130" height="38" rx="6" fill="#FFFFFF" stroke="#E0A155"/>
+    <text x="435" y="178" text-anchor="middle">参数丢失</text>
+
+    <rect x="220" y="210" width="130" height="38" rx="6" fill="#FFFFFF" stroke="#E0A155"/>
+    <text x="285" y="233" text-anchor="middle">超时异常</text>
+
+    <rect x="370" y="210" width="130" height="38" rx="6" fill="#FFFFFF" stroke="#E0A155"/>
+    <text x="435" y="233" text-anchor="middle">返回变形</text>
+
+    <rect x="295" y="265" width="130" height="38" rx="6" fill="#FFFFFF" stroke="#E0A155"/>
+    <text x="360" y="288" text-anchor="middle">多源冲突</text>
+  </g>
+
+  <!-- Recovery path label -->
+  <text x="360" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#8A5A1E" font-weight="600">保留可恢复路径</text>
+  <text x="360" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">重试 / 归一化 / 交叉验证</text>
+
+  <!-- Canonical answer -->
+  <circle cx="630" cy="250" r="58" fill="#E8F4EC" stroke="#4FA374" stroke-width="2"/>
+  <text x="630" y="246" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" fill="#1E3A5F" font-weight="600">正解仍可达</text>
+  <text x="630" y="266" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="11" fill="#3D4F65">考诊断力</text>
+
+  <!-- Arrows -->
+  <line x1="150" y1="250" x2="198" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="522" y1="250" x2="570" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="360" y="440" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="12" fill="#3D4F65" font-style="italic">1106 任务 · 4956 工具 · 人工审核保留 88.5%</text>
+</svg>

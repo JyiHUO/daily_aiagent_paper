@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="38" text-anchor="middle" class="t" font-size="20" font-weight="700" fill="#1E3A5F">不可触达的安全内核：四条架构性控制要求</text>
+
+  <!-- Agent 区 -->
+  <rect x="50" y="110" width="200" height="280" rx="10" fill="#FFF4E6" stroke="#E0A86B" stroke-width="1.5"/>
+  <text x="150" y="138" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">Agent 进程</text>
+  <circle cx="150" cy="230" r="46" fill="#FAD9A8" stroke="#C78A4C" stroke-width="1.5"/>
+  <text x="150" y="228" text-anchor="middle" class="t" font-size="13" font-weight="600" fill="#1E3A5F">Agent</text>
+  <text x="150" y="246" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">可被越权</text>
+
+  <!-- 围栏（隔离边界） -->
+  <line x1="290" y1="100" x2="290" y2="400" stroke="#1E3A5F" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="290" y="93" text-anchor="middle" class="t" font-size="10" fill="#1E3A5F">P1 隔离边界</text>
+
+  <!-- 唯一通道 -->
+  <path d="M198 230 L 428 218" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="315" y="208" text-anchor="middle" class="t" font-size="11" font-weight="600" fill="#1E3A5F">P2 唯一通道（强制前置）</text>
+
+  <!-- Kernel -->
+  <rect x="430" y="170" width="180" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="520" y="198" text-anchor="middle" class="t" font-size="14" font-weight="700" fill="#1E3A5F">安全内核（Agent 只读）</text>
+  <text x="520" y="222" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">P3 fail-closed</text>
+  <text x="520" y="242" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">不可达即拒绝</text>
+  <text x="520" y="262" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">Ed25519 验证</text>
+
+  <!-- 到签名日志 -->
+  <path d="M520 280 L 520 318" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- 签名日志 -->
+  <rect x="430" y="320" width="180" height="60" rx="8" fill="#FFF4E6" stroke="#C78A4C" stroke-width="1.5"/>
+  <text x="520" y="345" text-anchor="middle" class="t" font-size="13" font-weight="700" fill="#1E3A5F">P4 签名日志</text>
+  <text x="520" y="365" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">operator 私钥 / append-only</text>
+
+  <!-- Agent 无法触达内核（红色阻断） -->
+  <path d="M210 175 Q 340 120 430 175" stroke="#C0504D" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <g stroke="#C0504D" stroke-width="2.5">
+    <line x1="310" y1="135" x2="330" y2="155"/>
+    <line x1="330" y1="135" x2="310" y2="155"/>
+  </g>
+  <text x="320" y="128" text-anchor="middle" class="t" font-size="10" fill="#C0504D">无法改写内核</text>
+
+  <text x="360" y="430" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">控制必须在 Agent 进程之外，且是后果性动作的唯一路径</text>
+</svg>

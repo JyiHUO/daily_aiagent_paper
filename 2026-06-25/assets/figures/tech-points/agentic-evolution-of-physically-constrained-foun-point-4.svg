@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="-apple-system, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="300" y="32" text-anchor="middle" fill="#1E3A5F" font-size="16" font-weight="700">A Health Report Bridges Model and Hardware</text>
+  <text x="300" y="52" text-anchor="middle" fill="#3D4F65" font-size="11">compress the model into a thin dashboard the LLM can actually see</text>
+
+  <!-- 左：庞大模型 -->
+  <g>
+    <text x="95" y="100" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">235B Model</text>
+    <rect x="30" y="115" width="130" height="160" rx="6" fill="#E8EEF7" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="45" y1="140" x2="145" y2="140" stroke="#3D4F65" stroke-width="1" opacity="0.4"/>
+    <line x1="45" y1="165" x2="145" y2="165" stroke="#3D4F65" stroke-width="1" opacity="0.4"/>
+    <line x1="45" y1="190" x2="145" y2="190" stroke="#3D4F65" stroke-width="1" opacity="0.4"/>
+    <line x1="45" y1="215" x2="145" y2="215" stroke="#3D4F65" stroke-width="1" opacity="0.4"/>
+    <line x1="45" y1="240" x2="145" y2="240" stroke="#3D4F65" stroke-width="1" opacity="0.4"/>
+    <text x="95" y="262" text-anchor="middle" fill="#3D4F65" font-size="11">438 GB · too heavy to send</text>
+  </g>
+
+  <!-- 中：体检报告 -->
+  <g>
+    <text x="300" y="100" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">Sensitivity Profile</text>
+    <rect x="230" y="115" width="140" height="160" rx="6" fill="#FFF4E6" stroke="#C97B3E" stroke-width="1.5"/>
+
+    <!-- 小趋势图 -->
+    <line x1="245" y1="240" x2="355" y2="240" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="245" y1="240" x2="245" y2="150" stroke="#3D4F65" stroke-width="1"/>
+    <polyline points="245,230 260,210 275,220 290,190 305,200 320,170 335,180 355,155"
+      fill="none" stroke="#C97B3E" stroke-width="1.8"/>
+    <text x="300" y="143" text-anchor="middle" fill="#3D4F65" font-size="10">layer outliers</text>
+    <text x="300" y="262" text-anchor="middle" fill="#C97B3E" font-size="11">~750 KB · numbers + curves</text>
+  </g>
+
+  <!-- 右：Agent + 硬件约束 -->
+  <g>
+    <text x="510" y="100" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">Agent</text>
+    <circle cx="510" cy="155" r="32" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="510" y="159" text-anchor="middle" fill="#1E3A5F" font-size="11">reads dashboard</text>
+
+    <!-- 硬件约束 C -->
+    <rect x="445" y="210" width="130" height="65" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="510" y="230" text-anchor="middle" fill="#1E3A5F" font-size="11" font-weight="600">C = ⟨VRAM, Δacc, speed⟩</text>
+    <text x="510" y="248" text-anchor="middle" fill="#3D4F65" font-size="10">dual-A100 · 160 GB</text>
+    <text x="510" y="265" text-anchor="middle" fill="#3D4F65" font-size="10">picks 3.5-bit mixed</text>
+  </g>
+
+  <!-- 箭头 -->
+  <path d="M162,195 L228,195" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="195" y="187" text-anchor="middle" fill="#3D4F65" font-size="10">distill</text>
+
+  <path d="M372,180 L476,162" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="420" y="160" text-anchor="middle" fill="#3D4F65" font-size="10">view</text>
+
+  <path d="M510,188 L510,207" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- 反馈回环：从约束回到模型，形成闭环 -->
+  <path d="M445,260 Q 260,340 95,290" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="270" y="335" text-anchor="middle" fill="#4B8BDA" font-size="10">deploy: 438 GB → 108 GB, −0.64% acc</text>
+</svg>

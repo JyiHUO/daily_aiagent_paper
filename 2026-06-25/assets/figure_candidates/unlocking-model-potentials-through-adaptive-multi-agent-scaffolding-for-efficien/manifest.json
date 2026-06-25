@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Fig. 2. Analysis of issue descriptions in SWE-bench Verified (all 500 instances) and SWE-bench Pro (all 731 instances).",
+      "clip": [
+        235.5693359375,
+        458.95391845703125,
+        450.7289123535156,
+        621.8155517578125
+      ],
+      "clip_area": 35041.24003541656,
+      "page_area": 349920.0,
+      "text_density": 0.1122739748248897,
+      "kind": "embedded_image_with_caption",
+      "xref": 538,
+      "score": 21.452908622011243,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-12-drawing-caption-4",
+      "page_index": 12,
+      "caption": "Fig. 9. Resolution rate across problem difficulty levels. Non-code files are excluded from the SWE-bench Pro file count.",
+      "clip": [
+        27.827999114990234,
+        68.68116760253906,
+        463.040283203125,
+        218.3466796875
+      ],
+      "clip_area": 65136.26936371619,
+      "page_area": 349920.0,
+      "text_density": 0.06020517641013941,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.723736326263513,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/02-p13-drawing_cluster_with_caption.png",
+      "filename": "02-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-caption-34",
+      "page_index": 1,
+      "caption": "Fig. 2. Analysis of issue descriptions in SWE-bench Verified (all 500 instances) and SWE-bench Pro (all 731 instances).",
+      "clip": [
+        172.26132202148438,
+        453.4159240722656,
+        458.3043212890625,
+        628.1180419921875
+      ],
+      "clip_area": 49972.31778821256,
+      "page_area": 349920.0,
+      "text_density": 0.2492070411885809,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.40282550410973,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/03-p2-drawing_cluster_with_caption.png",
+      "filename": "03-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-28",
+      "page_index": 3,
+      "caption": "Fig. 3. Overview of i cat-agent.",
+      "clip": [
+        205.28199768066406,
+        215.7213897705078,
+        458.19049072265625,
+        394.59130859375
+      ],
+      "clip_area": 45237.721620129654,
+      "page_area": 349920.0,
+      "text_density": 0.45781638041042305,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.502641351334773,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/04-p4-drawing_cluster_with_caption.png",
+      "filename": "04-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-34",
+      "page_index": 1,
+      "caption": "Fig. 2. Analysis of issue descriptions in SWE-bench Verified (all 500 instances) and SWE-bench Pro (all 731 instances).",
+      "clip": [
+        225.5693359375,
+        452.95391845703125,
+        460.7289123535156,
+        627.8155517578125
+      ],
+      "clip_area": 41120.38761842437,
+      "page_area": 349920.0,
+      "text_density": 0.1729790936907826,
+      "kind": "image_block_with_caption",
+      "score": 18.878147574313314,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/05-p2-image_block_with_caption.png",
+      "filename": "05-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-12-block-4",
+      "page_index": 12,
+      "caption": "Fig. 9. Resolution rate across problem difficulty levels. Non-code files are excluded from the SWE-bench Pro file count.",
+      "clip": [
+        25.714820861816406,
+        82.1532974243164,
+        458.87139892578125,
+        216.39401245117188
+      ],
+      "clip_area": 58147.24875789258,
+      "page_area": 349920.0,
+      "text_density": 0.054199016653697016,
+      "kind": "image_block_with_caption",
+      "score": 14.646080541754362,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/06-p13-image_block_with_caption.png",
+      "filename": "06-p13-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/unlocking-model-potentials-through-adaptive-multi-agent-scaffolding-for-efficien/contact-sheet.svg"
+}

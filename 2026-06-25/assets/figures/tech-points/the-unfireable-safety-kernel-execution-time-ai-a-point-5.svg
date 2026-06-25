@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C66"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="40" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">控制是否生效，谁说了算？</text>
+
+  <!-- LEFT: 同期方案 -->
+  <g>
+    <rect x="40" y="90" width="290" height="340" rx="10" fill="#FFF4EC" stroke="#E0A57A" stroke-width="1.5"/>
+    <text x="185" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">同期方案：控制在进程内</text>
+
+    <!-- Agent -->
+    <circle cx="185" cy="225" r="55" fill="#FFE2CC" stroke="#C66" stroke-width="2"/>
+    <text x="185" y="220" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Agent</text>
+    <text x="185" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">含 hook</text>
+
+    <!-- bypass arrow (skip control) -->
+    <path d="M 140 265 Q 75 330 110 380" fill="none" stroke="#C66" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
+    <text x="55" y="335" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#C66">绕过</text>
+
+    <!-- through hook -->
+    <path d="M 220 270 L 248 355" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="245" y="315" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#4B8BDA">经 hook</text>
+
+    <rect x="65" y="380" width="105" height="38" rx="6" fill="#FFF" stroke="#C66"/>
+    <text x="117" y="404" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">外部动作</text>
+
+    <rect x="200" y="360" width="105" height="38" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="252" y="384" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">控制层</text>
+  </g>
+
+  <!-- RIGHT: Unfireable Kernel -->
+  <g>
+    <rect x="390" y="90" width="290" height="340" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="535" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">安全内核：结构上唯一路径</text>
+
+    <!-- Agent -->
+    <circle cx="535" cy="210" r="45" fill="#FFE2CC" stroke="#C66" stroke-width="2"/>
+    <text x="535" y="215" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">Agent</text>
+
+    <!-- only path arrow -->
+    <path d="M 535 256 L 535 295" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+    <!-- Kernel wall -->
+    <rect x="430" y="300" width="210" height="55" rx="6" fill="#1E3A5F" stroke="#1E3A5F"/>
+    <text x="535" y="324" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#FFF">安全内核</text>
+    <text x="535" y="344" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#B8D4F0">Agent 不可触及</text>
+
+    <path d="M 535 355 L 535 383" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+    <rect x="455" y="388" width="160" height="35" rx="6" fill="#FFF" stroke="#4B8BDA"/>
+    <text x="535" y="411" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#1E3A5F">外部动作</text>
+  </g>
+
+  <text x="360" y="465" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">控制是否被调用 ≠ 控制是否生效</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; }
+  </style>
+
+  <text x="360" y="40" text-anchor="middle" class="t" font-size="20" font-weight="600" fill="#1E3A5F">同一把尺子 ρ 跨异构真机通用</text>
+
+  <!-- center rho -->
+  <circle cx="360" cy="250" r="52" fill="#FEF3E2" stroke="#E8A857" stroke-width="2"/>
+  <text x="360" y="244" text-anchor="middle" class="t" font-size="24" font-weight="700" fill="#1E3A5F">ρ</text>
+  <text x="360" y="270" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">净值/字节</text>
+
+  <!-- Left: Orin -->
+  <rect x="60" y="150" width="220" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="170" y="182" text-anchor="middle" class="t" font-size="15" font-weight="600" fill="#1E3A5F">Orin 3B · 先撞内存墙</text>
+
+  <text x="170" y="228" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">内存</text>
+  <text x="170" y="250" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#C75B4A">51.6 → 19.4 MB</text>
+  <text x="170" y="290" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">能耗</text>
+  <text x="170" y="312" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#C75B4A">12.8 → 8.2 J</text>
+
+  <!-- Right: Thor -->
+  <rect x="440" y="150" width="220" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="550" y="182" text-anchor="middle" class="t" font-size="15" font-weight="600" fill="#1E3A5F">Thor 7B · 先撞能耗/上行墙</text>
+
+  <text x="550" y="228" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">能耗</text>
+  <text x="550" y="250" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#C75B4A">27.0 → 16.1 J</text>
+  <text x="550" y="290" text-anchor="middle" class="t" font-size="12" fill="#3D4F65">上行</text>
+  <text x="550" y="312" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#C75B4A">642 → 210 B</text>
+
+  <!-- arrows from rho to both -->
+  <line x1="308" y1="250" x2="282" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="412" y1="250" x2="438" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="360" y="420" text-anchor="middle" class="t" font-size="13" fill="#1E3A5F">哪边吃紧管哪边 · 无需按设备重新调参</text>
+</svg>

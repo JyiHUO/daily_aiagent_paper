@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#DDE9F7"/>
+      <stop offset="100%" stop-color="#B9D2EE"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="640" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">演化知识图谱驱动的多 Agent 硬件感知发现引擎</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">让 Agent 沿"算法家谱"演化，把 235B 模型压进双 A100</text>
+
+  <!-- Top constraint band -->
+  <rect x="60" y="92" width="780" height="44" rx="22" fill="#FFF4EC" stroke="#D97757" stroke-width="1.3"/>
+  <text x="450" y="119" text-anchor="middle" font-size="13" fill="#3D4F65"><tspan fill="#A8451E" font-weight="600">硬件约束 C = </tspan>⟨ VRAM 上限 · 精度损失 ≤ 1% · 推理速度下限 ⟩<tspan fill="#A8451E" font-style="italic">  物理边界</tspan></text>
+
+  <!-- Left: EKG knowledge graph (memory) -->
+  <g>
+    <rect x="60" y="170" width="230" height="300" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="175" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">演化知识图谱 EKG</text>
+    <text x="175" y="214" text-anchor="middle" font-size="11" fill="#3D4F65">164 篇压缩论文 · 长期记忆</text>
+
+    <!-- edges first so nodes overlay -->
+    <line x1="124" y1="258" x2="161" y2="248" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="189" y1="248" x2="226" y2="266" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="175" y1="259" x2="138" y2="311" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="240" y1="284" x2="220" y2="321" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="148" y1="338" x2="167" y2="389" stroke="#D97757" stroke-width="2" stroke-dasharray="3,2"/>
+    <line x1="208" y1="348" x2="180" y2="390" stroke="#D97757" stroke-width="2" stroke-dasharray="3,2"/>
+
+    <!-- nodes -->
+    <circle cx="110" cy="260" r="16" fill="#4B8BDA"/>
+    <circle cx="175" cy="245" r="16" fill="#4B8BDA"/>
+    <circle cx="240" cy="270" r="16" fill="#4B8BDA"/>
+    <circle cx="135" cy="325" r="16" fill="#7BA8DC"/>
+    <circle cx="215" cy="335" r="16" fill="#7BA8DC"/>
+    <circle cx="170" cy="405" r="18" fill="#D97757"/>
+
+    <text x="110" y="263" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">GPTQ</text>
+    <text x="175" y="248" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">AWQ</text>
+    <text x="240" y="273" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">Smooth</text>
+    <text x="135" y="328" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">SpQR</text>
+    <text x="215" y="338" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">SqzLLM</text>
+    <text x="170" y="409" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">NEW</text>
+
+    <text x="175" y="448" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">Inspiration / Improvement</text>
+    <text x="175" y="462" text-anchor="middle" font-size="10" fill="#A8451E">高分路径 = 算法 CoT</text>
+  </g>
+
+  <!-- Center: Multi-agent loop -->
+  <g>
+    <circle cx="450" cy="320" r="135" fill="url(#core)" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">多 Agent 协作演化</text>
+
+    <!-- four role chips -->
+    <g font-size="11" font-weight="600">
+      <rect x="378" y="232" width="86" height="28" rx="14" fill="#fff" stroke="#4B8BDA"/>
+      <text x="421" y="251" text-anchor="middle" fill="#1E3A5F">Analyzer</text>
+
+      <rect x="498" y="306" width="92" height="28" rx="14" fill="#fff" stroke="#4B8BDA"/>
+      <text x="544" y="325" text-anchor="middle" fill="#1E3A5F">Ideator</text>
+
+      <rect x="378" y="380" width="96" height="28" rx="14" fill="#fff" stroke="#4B8BDA"/>
+      <text x="426" y="399" text-anchor="middle" fill="#1E3A5F">Architect</text>
+
+      <rect x="312" y="306" width="92" height="28" rx="14" fill="#fff" stroke="#D97757"/>
+      <text x="358" y="325" text-anchor="middle" fill="#A8451E">Reviewer</text>
+    </g>
+
+    <!-- circular arrows around the four chips -->
+    <path d="M 470,262 A 80 80 0 0 1 510,302" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+    <path d="M 540,338 A 80 80 0 0 1 478,378" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+    <path d="M 410,406 A 80 80 0 0 1 372,338" fill="none" stroke="#D97757" stroke-width="1.8" marker-end="url(#ar2)"/>
+    <path d="M 350,302 A 80 80 0 0 1 405,260" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <text x="450" y="356" text-anchor="middle" font-size="11" fill="#A8451E" font-weight="700">Peer Review ≥ 4.0</text>
+
+    <text x="450" y="478" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">算法版 Chain-of-Thought</text>
+  </g>
+
+  <!-- Right: Hardware deployment -->
+  <g>
+    <rect x="610" y="170" width="230" height="300" rx="14" fill="#FFF4EC" stroke="#D97757" stroke-width="1.5"/>
+    <text x="725" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#A8451E">硬件落地</text>
+    <text x="725" y="214" text-anchor="middle" font-size="11" fill="#3D4F65">敏感度档案 · 750KB JSON</text>
+
+    <!-- mini chart -->
+    <rect x="638" y="232" width="174" height="58" rx="6" fill="#fff" stroke="#D97757" stroke-width="1"/>
+    <polyline points="648,278 670,260 690,268 710,248 730,255 750,242 770,250 790,238 802,244"
+              fill="none" stroke="#D97757" stroke-width="1.8"/>
+    <text x="725" y="305" text-anchor="middle" font-size="10" fill="#3D4F65">逐层敏感度 / 离群值趋势</text>
+
+    <!-- GPU -->
+    <rect x="640" y="325" width="78" height="50" rx="6" fill="#1E3A5F"/>
+    <text x="679" y="346" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">A100</text>
+    <text x="679" y="362" text-anchor="middle" font-size="10" fill="#B9D2EE">80 GB</text>
+    <rect x="732" y="325" width="78" height="50" rx="6" fill="#1E3A5F"/>
+    <text x="771" y="346" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">A100</text>
+    <text x="771" y="362" text-anchor="middle" font-size="10" fill="#B9D2EE">80 GB</text>
+
+    <text x="725" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Qwen3-235B 落地部署</text>
+    <text x="725" y="423" text-anchor="middle" font-size="11" fill="#A8451E">438 GB → 108 GB  (−75%)</text>
+    <text x="725" y="442" text-anchor="middle" font-size="11" fill="#3D4F65">精度损失仅 0.64%</text>
+    <text x="725" y="459" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">MoE-Salient-AQ · Q-Enhance</text>
+  </g>
+
+  <!-- Flow arrow: EKG -> center -->
+  <path d="M 290 320 L 313 320" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="301" y="312" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">读记忆</text>
+
+  <!-- Flow arrow: center -> hardware -->
+  <path d="M 587 320 L 610 320" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="598" y="312" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">出蓝图</text>
+
+  <!-- write back loop: hardware -> EKG (closed loop) -->
+  <path d="M 610 455 Q 450 560 175 475" fill="none" stroke="#D97757" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#ar2)"/>
+  <text x="450" y="585" text-anchor="middle" font-size="11" fill="#A8451E" font-weight="600">实测结果回写记忆 · 记忆越用越准</text>
+
+  <!-- top constraint feedback into center -->
+  <path d="M 450 136 L 450 182" fill="none" stroke="#D97757" stroke-width="1.8" marker-end="url(#ar2)"/>
+  <text x="462" y="162" font-size="10" fill="#A8451E">约束注入</text>
+</svg>

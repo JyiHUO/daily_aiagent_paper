@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">Agent 体检：五处"撞墙"</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">最佳模型仍远落后人类</text>
+
+  <!-- Central agent -->
+  <circle cx="400" cy="300" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="400" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Agent</text>
+  <text x="400" y="316" text-anchor="middle" font-size="11" fill="#3D4F65">长程任务中</text>
+
+  <!-- 1 Top-left: exploration -->
+  <g>
+    <rect x="80" y="120" width="180" height="78" rx="8" fill="#FEF3E2" stroke="#D9905A" stroke-width="1.6"/>
+    <text x="170" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">探索不足</text>
+    <text x="170" y="174" text-anchor="middle" font-size="11" fill="#3D4F65">只拿当前需要的</text>
+    <text x="170" y="190" text-anchor="middle" font-size="11" fill="#3D4F65">忽略长期价值</text>
+  </g>
+
+  <!-- 2 Top-right: episodic memory -->
+  <g>
+    <rect x="540" y="120" width="180" height="78" rx="8" fill="#FEF3E2" stroke="#D9905A" stroke-width="1.6"/>
+    <text x="630" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">记忆失效</text>
+    <text x="630" y="174" text-anchor="middle" font-size="11" fill="#3D4F65">反复撞同一堵墙</text>
+    <text x="630" y="190" text-anchor="middle" font-size="11" fill="#3D4F65">幻觉物品位置</text>
+  </g>
+
+  <!-- 3 Left: world knowledge -->
+  <g>
+    <rect x="40" y="270" width="180" height="78" rx="8" fill="#FEF3E2" stroke="#D9905A" stroke-width="1.6"/>
+    <text x="130" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">世界知识幻觉</text>
+    <text x="130" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">伪造不存在的配方</text>
+    <text x="130" y="340" text-anchor="middle" font-size="11" fill="#3D4F65">材料凭空生成</text>
+  </g>
+
+  <!-- 4 Right: procedural skill -->
+  <g>
+    <rect x="580" y="270" width="180" height="78" rx="8" fill="#FEF3E2" stroke="#D9905A" stroke-width="1.6"/>
+    <text x="670" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">技能学不会</text>
+    <text x="670" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">打不赢同种敌人</text>
+    <text x="670" y="340" text-anchor="middle" font-size="11" fill="#3D4F65">策略无积累</text>
+  </g>
+
+  <!-- 5 Bottom: planning lost -->
+  <g>
+    <rect x="290" y="430" width="220" height="78" rx="8" fill="#FEF3E2" stroke="#D9905A" stroke-width="1.6"/>
+    <text x="400" y="460" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">主目标走丢</text>
+    <text x="400" y="484" text-anchor="middle" font-size="11" fill="#3D4F65">完成子任务后</text>
+    <text x="400" y="500" text-anchor="middle" font-size="11" fill="#3D4F65">不再回到主线</text>
+  </g>
+
+  <!-- Connectors with arrowheads pointing at central agent -->
+  <line x1="250" y1="195" x2="356" y2="266" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="550" y1="195" x2="444" y2="266" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="225" y1="305" x2="338" y2="300" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="575" y1="305" x2="462" y2="300" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="400" y1="425" x2="400" y2="365" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Bottom caption -->
+  <text x="400" y="540" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">附加代价：Long-Context 的 token 成本 ∝ 步数²，horizon 受限</text>
+</svg>

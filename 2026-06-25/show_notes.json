@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 6/25：把控制权搬出模型",
+  "shownotes_html": "<p>这期我们聊一个共同主题：今天的高分论文不约而同地把 Agent 的可靠性，从\"指望模型更聪明\"挪到了\"系统层兜底\"。记忆、安全、工具调用三条线，居然在说同一句话。</p><p><strong>本期重点</strong></p><ul><li><strong>用遗忘换进化：端侧 Agent 的预算化记忆治理（Forget to Improve: On-Device LLM-Agent Continual Learning via Budget-Curated Memory）</strong>——一个\"净值/字节\"分数同时管\"留什么、发什么、信什么\"，还在真实 Jetson 机械臂上跑出了能耗和带宽的真账。</li><li><strong>不可解雇的安全内核：执行时对齐（The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems）</strong>——把 guardrail 从 Agent 进程里搬出去，用 Rust 写、用机器证明 fail-closed，对会自我修改的 Agent 实测千次越权零成功。</li><li><strong>函数调用之外：工具环境不可靠下的 Agent 评测（Beyond Function Calling: Benchmarking Tool-Using Agents under Tool-Environment Unreliability）</strong>——五类可恢复故障注入，揭示一个反直觉结论：瓶颈不是算力，而是诊断；告诉模型\"出了什么问题\"比多给十轮预算管用得多。</li></ul><p><strong>今日趋势</strong></p><ul><li>Agent 安全从\"防注入\"升级到\"架构控制\"，控制面要跑在 Agent 进程之外，还得能事后取证。</li><li>Harness、scaffold、memory 作为系统层变量被显式建模，\"系统设计上限\"正在替代\"模型上限\"成为讨论焦点。</li></ul><p>欢迎在评论区聊聊你怎么看\"Agent 运行时\"这件事。本期由 AI 自动生成，若有疏漏，欢迎指正，我们下期见。</p>",
+  "report_date": "2026-06-25",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-25T22:12:01Z"
+}

@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other",
+  "candidates": [
+    {
+      "id": "page-13-block-3",
+      "page_index": 13,
+      "caption": "Figure 4: Breadth of the adversarial taxonomy in the in-process tier. Eight attack classes, in de- scending volume directive forgery, safety-core floor evasion, ceiling escalation, kill-switch dominance, cross-claim replay, cross-target redirection, asynchronous-context forgery, and trust-anchor substi- tution, each refused with zero bypasses.",
+      "clip": [
+        92.11799621582031,
+        415.3604736328125,
+        519.8930053710938,
+        650.2109985351562
+      ],
+      "clip_area": 100463.18544022087,
+      "page_area": 484704.0,
+      "text_density": 0.013690712411354982,
+      "kind": "image_block_with_caption",
+      "score": 15.116257616002454,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/01-p14-image_block_with_caption.png",
+      "filename": "01-p14-image_block_with_caption.png"
+    },
+    {
+      "id": "page-13-embedded-1-0",
+      "page_index": 13,
+      "caption": "Figure 4: Breadth of the adversarial taxonomy in the in-process tier. Eight attack classes, in de- scending volume directive forgery, safety-core floor evasion, ceiling escalation, kill-switch dominance, cross-claim replay, cross-target redirection, asynchronous-context forgery, and trust-anchor substi- tution, each refused with zero bypasses.",
+      "clip": [
+        102.11799621582031,
+        421.3604736328125,
+        509.89300537109375,
+        644.2109985351562
+      ],
+      "clip_area": 90872.87483231071,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 264,
+      "score": 14.009698609247897,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/02-p14-embedded_image_with_caption.png",
+      "filename": "02-p14-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-block-1",
+      "page_index": 15,
+      "caption": "Figure 6: Defense in depth as deployed. A self-modification attempt is refused first at the transport seam (api_action_forbidden) and again at the autonomy ladder behind it (auton- omy_human_only). Two independent seams deny the same action, so neither alone is a single point of failure.",
+      "clip": [
+        92.11799621582031,
+        54.00074768066406,
+        519.8930053710938,
+        240.59600830078125
+      ],
+      "clip_area": 79820.78932010126,
+      "page_area": 484704.0,
+      "text_density": 0.01723673647590052,
+      "kind": "image_block_with_caption",
+      "score": 7.886897659112236,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/03-p16-image_block_with_caption.png",
+      "filename": "03-p16-image_block_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-0-0",
+      "page_index": 15,
+      "caption": "Figure 6: Defense in depth as deployed. A self-modification attempt is refused first at the transport seam (api_action_forbidden) and again at the autonomy ladder behind it (auton- omy_human_only). Two independent seams deny the same action, so neither alone is a single point of failure.",
+      "clip": [
+        102.11799621582031,
+        60.00074768066406,
+        509.89300537109375,
+        234.59600830078125
+      ],
+      "clip_area": 71195.58399783564,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 266,
+      "score": 6.791062044420396,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/04-p16-embedded_image_with_caption.png",
+      "filename": "04-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-0-0",
+      "page_index": 17,
+      "caption": "第 18 页内嵌图片候选",
+      "clip": [
+        102.11799621582031,
+        307.80035400390625,
+        509.882080078125,
+        558.926025390625
+      ],
+      "clip_area": 102400.02932731155,
+      "page_area": 484704.0,
+      "text_density": 0.00042022699062789303,
+      "kind": "embedded_image",
+      "xref": 267,
+      "score": 6.137778103636795,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/05-p18-embedded_image.png",
+      "filename": "05-p18-embedded_image.png"
+    },
+    {
+      "id": "page-12-embedded-0-0",
+      "page_index": 12,
+      "caption": "第 13 页内嵌图片候选",
+      "clip": [
+        102.11799621582031,
+        59.99913024902344,
+        509.884521484375,
+        279.780029296875
+      ],
+      "clip_area": 89619.29352514143,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 262,
+      "score": 5.995769928057127,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/06-p13-embedded_image.png",
+      "filename": "06-p13-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/the-unfireable-safety-kernel-execution-time-ai-alignment-for-ai-agents-and-other/contact-sheet.svg"
+}

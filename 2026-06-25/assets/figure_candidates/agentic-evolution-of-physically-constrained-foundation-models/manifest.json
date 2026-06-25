@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/agentic-evolution-of-physically-constrained-foundation-models.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models",
+  "candidates": [
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        108.59500122070312,
+        59.70042419433594,
+        511.1777038574219,
+        313.95294189453125
+      ],
+      "clip_area": 102357.6657279348,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08766232863570185,
+      "kind": "drawing_cluster",
+      "score": 8.677567678834944,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/01-p10-drawing_cluster.png",
+      "filename": "01-p10-drawing_cluster.png"
+    },
+    {
+      "id": "page-12-drawing-cluster-0",
+      "page_index": 12,
+      "caption": "第 13 页矢量图主图候选",
+      "clip": [
+        84.07099914550781,
+        153.41116333007812,
+        486.67559814453125,
+        377.39410400390625
+      ],
+      "clip_area": 90176.56201260863,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08937717865643154,
+      "kind": "drawing_cluster",
+      "score": 8.439331080754204,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/02-p13-drawing_cluster.png",
+      "filename": "02-p13-drawing_cluster.png"
+    },
+    {
+      "id": "page-10-drawing-cluster-0",
+      "page_index": 10,
+      "caption": "第 11 页矢量图主图候选",
+      "clip": [
+        84.07099914550781,
+        59.70062255859375,
+        486.68658447265625,
+        247.3564910888672
+      ],
+      "clip_area": 75553.17734839045,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08900190738483141,
+      "kind": "drawing_cluster",
+      "score": 8.299365305225566,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/03-p11-drawing_cluster.png",
+      "filename": "03-p11-drawing_cluster.png"
+    },
+    {
+      "id": "page-12-embedded-4-0",
+      "page_index": 12,
+      "caption": "第 13 页内嵌图片候选",
+      "clip": [
+        88.07099914550781,
+        155.4111785888672,
+        305.1156005859375,
+        292.0010986328125
+      ],
+      "clip_area": 29646.10475671827,
+      "page_area": 501156.9211820215,
+      "text_density": 0.021902199618860387,
+      "kind": "embedded_image",
+      "xref": 439,
+      "score": 5.329401163963536,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/04-p13-embedded_image.png",
+      "filename": "04-p13-embedded_image.png"
+    },
+    {
+      "id": "page-12-embedded-3-0",
+      "page_index": 12,
+      "caption": "第 13 页内嵌图片候选",
+      "clip": [
+        284.94012451171875,
+        155.4111785888672,
+        482.53570556640625,
+        292.0010986328125
+      ],
+      "clip_area": 26989.56461729668,
+      "page_area": 501156.9211820215,
+      "text_density": 0.021397758804101975,
+      "kind": "embedded_image",
+      "xref": 438,
+      "score": 5.299884051303296,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/05-p13-embedded_image.png",
+      "filename": "05-p13-embedded_image.png"
+    },
+    {
+      "id": "page-10-embedded-1-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        279.0948791503906,
+        141.55673217773438,
+        482.68658447265625,
+        245.35650634765625
+      ],
+      "clip_area": 21132.773035320453,
+      "page_area": 501156.9211820215,
+      "text_density": 0.004226546671359479,
+      "kind": "embedded_image",
+      "xref": 411,
+      "score": 5.2348085892813385,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/06-p11-embedded_image.png",
+      "filename": "06-p11-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/agentic-evolution-of-physically-constrained-foundation-models/contact-sheet.svg"
+}

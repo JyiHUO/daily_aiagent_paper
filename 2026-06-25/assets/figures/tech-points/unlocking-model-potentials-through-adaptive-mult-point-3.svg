@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="420" fill="#FAF7F2"/>
+
+  <text x="300" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">考官与考生互不通气</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">防止 test 与 patch 互相迎合</text>
+
+  <!-- Validator -->
+  <rect x="50" y="110" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Validator（出题人）</text>
+  <text x="140" y="178" text-anchor="middle" font-size="11" fill="#B8862E">测试必须 fail-to-pass</text>
+  <text x="140" y="200" text-anchor="middle" font-size="11" fill="#B8862E">断言只许加强，不许放宽</text>
+
+  <!-- Patch Editor -->
+  <rect x="370" y="110" width="180" height="120" rx="10" fill="#FDF2E9" stroke="#D97757" stroke-width="2"/>
+  <text x="460" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Patch Editor（考生）</text>
+  <text x="460" y="178" text-anchor="middle" font-size="11" fill="#A04A2E">全程看不到测试代码</text>
+  <text x="460" y="200" text-anchor="middle" font-size="11" fill="#A04A2E">只能围绕 issue 写补丁</text>
+
+  <!-- Wall -->
+  <line x1="300" y1="95" x2="300" y2="270" stroke="#1E3A5F" stroke-width="3" stroke-dasharray="6,5"/>
+  <text x="300" y="170" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">隔墙</text>
+
+  <!-- Arrows to issue -->
+  <path d="M 160 230 L 235 300" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M 440 230 L 365 300" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#a2)"/>
+
+  <!-- Real issue -->
+  <ellipse cx="300" cy="335" rx="120" ry="40" fill="#FFF8E7" stroke="#B8862E" stroke-width="2"/>
+  <text x="300" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">真实 Issue</text>
+  <text x="300" y="352" text-anchor="middle" font-size="11" fill="#3D4F65">两边唯一共同的参照</text>
+</svg>

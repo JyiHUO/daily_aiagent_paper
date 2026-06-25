@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/downloaded_pdfs/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un",
+  "candidates": [
+    {
+      "id": "page-5-drawing-caption-24",
+      "page_index": 5,
+      "caption": "Figure 4: Overall accuracy on the 200-task subset across five models. Baseline is the exception-injected setting, Oracle is the clean upper bound, and Test-time scaling and Hint are recovery strategies.",
+      "clip": [
+        39.33399963378906,
+        38.000648498535156,
+        307.16748046875,
+        186.63702392578125
+      ],
+      "clip_area": 39809.797809371375,
+      "page_area": 484704.0,
+      "text_density": 0.19844510645369384,
+      "kind": "drawing_cluster_with_caption",
+      "score": 32.335624699549165,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/01-p6-drawing_cluster_with_caption.png",
+      "filename": "01-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-49",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the benchmark distribution across task domains, reliability hazard types, and number of tools per task, showing broad topical coverage, diverse reliability challenges, and varied multi-tool complexity.",
+      "clip": [
+        36.0,
+        37.99873352050781,
+        583.1370849609375,
+        183.77603149414062
+      ],
+      "clip_area": 79760.16586677544,
+      "page_area": 484704.0,
+      "text_density": 0.1339002699861642,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.652207866016543,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/02-p4-drawing_cluster_with_caption.png",
+      "filename": "02-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-24",
+      "page_index": 5,
+      "caption": "Figure 4: Overall accuracy on the 200-task subset across five models. Baseline is the exception-injected setting, Oracle is the clean upper bound, and Test-time scaling and Hint are recovery strategies.",
+      "clip": [
+        23.4,
+        18.0,
+        323.0947204589844,
+        172.7198944091797
+      ],
+      "clip_area": 46368.73550440269,
+      "page_area": 484704.0,
+      "text_density": 0.13994031417102418,
+      "kind": "captioned_figure",
+      "score": 23.91878932200969,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/03-p6-captioned_figure.png",
+      "filename": "03-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-90",
+      "page_index": 6,
+      "caption": "Figure 6: Failure behavior taxonomy by model.",
+      "clip": [
+        301.5,
+        38.00779724121094,
+        575.9974365234375,
+        212.5479736328125
+      ],
+      "clip_area": 47910.830989843234,
+      "page_area": 484704.0,
+      "text_density": 0.144691411001512,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.650857906463095,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-45",
+      "page_index": 4,
+      "caption": "Figure 3: Post-error behaviors after the first failed tool re- sponse.",
+      "clip": [
+        304.8299865722656,
+        217.61883544921875,
+        572.6698608398438,
+        379.2130126953125
+      ],
+      "clip_area": 43281.364115966484,
+      "page_area": 484704.0,
+      "text_density": 0.1538492087239043,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.0499515222987,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/05-p5-drawing_cluster_with_caption.png",
+      "filename": "05-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-49",
+      "page_index": 3,
+      "caption": "Figure 2: Overview of the benchmark distribution across task domains, reliability hazard types, and number of tools per task, showing broad topical coverage, diverse reliability challenges, and varied multi-tool complexity.",
+      "clip": [
+        23.4,
+        18.0,
+        588.5979248046875,
+        177.1598358154297
+      ],
+      "clip_area": 89956.80891513564,
+      "page_area": 484704.0,
+      "text_density": 0.11872261669239276,
+      "kind": "captioned_figure",
+      "score": 17.676163097513495,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/06-p4-captioned_figure.png",
+      "filename": "06-p4-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/assets/figure_candidates/beyond-function-calling-benchmarking-tool-using-agents-under-tool-environment-un/contact-sheet.svg"
+}

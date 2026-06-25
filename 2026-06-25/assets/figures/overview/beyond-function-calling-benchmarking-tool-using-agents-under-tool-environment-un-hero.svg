@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07B5B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3FA678"/>
+    </marker>
+  </defs>
+
+  <style>
+    .ti { font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; fill:#1E3A5F; }
+    .tx { font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; fill:#3D4F65; }
+    .tw { font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif; fill:#ffffff; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="ti" font-size="22" font-weight="700">工具环境不可靠时，Agent 还能完成任务吗？</text>
+  <text x="450" y="64" text-anchor="middle" class="tx" font-size="13">可恢复故障下的工具使用评测</text>
+
+  <!-- LEFT: clean task -->
+  <rect x="50" y="100" width="170" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="135" y="130" text-anchor="middle" class="ti" font-size="14" font-weight="700">原始任务</text>
+  <text x="135" y="152" text-anchor="middle" class="tx" font-size="11">clean tools · 可解</text>
+
+  <!-- Hazard injection node -->
+  <polygon points="360,100 500,100 520,135 500,170 360,170 340,135" fill="#FFF1EC" stroke="#E07B5B" stroke-width="1.8"/>
+  <text x="430" y="130" text-anchor="middle" class="ti" font-size="14" font-weight="700">注入可恢复故障</text>
+  <text x="430" y="152" text-anchor="middle" class="tx" font-size="11">保留至少一条恢复路径</text>
+
+  <line x1="220" y1="135" x2="338" y2="135" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 5 hazard types as small chips -->
+  <g font-size="11" class="tw">
+    <rect x="555" y="92" width="120" height="26" rx="13" fill="#E07B5B"/>
+    <text x="615" y="110" text-anchor="middle">Spec Drift</text>
+    <rect x="685" y="92" width="155" height="26" rx="13" fill="#E07B5B"/>
+    <text x="762" y="110" text-anchor="middle">Invocation Error</text>
+    <rect x="555" y="126" width="145" height="26" rx="13" fill="#E07B5B"/>
+    <text x="627" y="144" text-anchor="middle">Execution Fail</text>
+    <rect x="710" y="126" width="130" height="26" rx="13" fill="#E07B5B"/>
+    <text x="775" y="144" text-anchor="middle">Output Drift</text>
+    <rect x="610" y="160" width="200" height="26" rx="13" fill="#E07B5B"/>
+    <text x="710" y="178" text-anchor="middle">Cross-source Conflict</text>
+  </g>
+  <line x1="520" y1="135" x2="553" y2="135" stroke="#E07B5B" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Central Agent -->
+  <circle cx="450" cy="320" r="58" fill="#1E3A5F"/>
+  <text x="450" y="316" text-anchor="middle" class="tw" font-size="15" font-weight="700">Agent</text>
+  <text x="450" y="336" text-anchor="middle" class="tw" font-size="11" opacity="0.9">诊断 + 恢复</text>
+
+  <line x1="430" y1="170" x2="450" y2="258" stroke="#E07B5B" stroke-width="2.2" marker-end="url(#arrR)"/>
+  <text x="468" y="220" class="tx" font-size="11">不可靠环境</text>
+
+  <!-- LEFT path: baseline failure -->
+  <g>
+    <rect x="70" y="260" width="220" height="120" rx="12" fill="#FBEEEA" stroke="#E07B5B" stroke-width="1.5"/>
+    <text x="180" y="285" text-anchor="middle" class="ti" font-size="14" font-weight="700">Baseline 失败</text>
+    <text x="180" y="308" text-anchor="middle" class="tx" font-size="11">同一任务 · 多次执行</text>
+    <path d="M100,335 Q140,340 175,348" stroke="#E07B5B" stroke-width="1.5" fill="none"/>
+    <path d="M100,345 Q145,360 195,365" stroke="#E07B5B" stroke-width="1.5" fill="none"/>
+    <path d="M100,355 Q150,338 215,332" stroke="#E07B5B" stroke-width="1.5" fill="none"/>
+    <circle cx="175" cy="348" r="3" fill="#E07B5B"/>
+    <circle cx="195" cy="365" r="3" fill="#E07B5B"/>
+    <circle cx="215" cy="332" r="3" fill="#E07B5B"/>
+    <text x="250" y="370" text-anchor="middle" class="tx" font-size="11" font-style="italic">轨迹发散</text>
+  </g>
+  <line x1="392" y1="320" x2="294" y2="320" stroke="#E07B5B" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrR)"/>
+
+  <!-- RIGHT path: hint recovery -->
+  <g>
+    <rect x="610" y="260" width="220" height="120" rx="12" fill="#E8F5EE" stroke="#3FA678" stroke-width="1.5"/>
+    <text x="720" y="285" text-anchor="middle" class="ti" font-size="14" font-weight="700">Hint 提示恢复</text>
+    <text x="720" y="308" text-anchor="middle" class="tx" font-size="11">告知故障类型 · 收敛</text>
+    <path d="M635,355 Q680,345 715,335" stroke="#3FA678" stroke-width="1.5" fill="none"/>
+    <path d="M635,330 Q680,335 715,335" stroke="#3FA678" stroke-width="1.5" fill="none"/>
+    <path d="M635,370 Q680,355 715,335" stroke="#3FA678" stroke-width="1.5" fill="none"/>
+    <circle cx="720" cy="335" r="6" fill="#3FA678"/>
+    <text x="720" y="370" text-anchor="middle" class="tx" font-size="11" font-style="italic">收敛到正解</text>
+  </g>
+  <line x1="508" y1="320" x2="608" y2="320" stroke="#3FA678" stroke-width="2" marker-end="url(#arrG)"/>
+
+  <!-- Bottom: key finding -->
+  <rect x="120" y="420" width="660" height="160" rx="12" fill="#F5F8FC" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="450" y="448" text-anchor="middle" class="ti" font-size="15" font-weight="700">瓶颈不是算力，而是诊断能力</text>
+
+  <g transform="translate(150,470)">
+    <rect x="0" y="0" width="180" height="30" rx="6" fill="#E0EAF5"/>
+    <text x="12" y="20" class="tx" font-size="12">测试时扩展 TTS</text>
+    <rect x="195" y="0" width="60" height="30" rx="6" fill="#4B8BDA"/>
+    <text x="225" y="20" text-anchor="middle" class="tw" font-size="13" font-weight="700">+8%</text>
+  </g>
+  <g transform="translate(150,515)">
+    <rect x="0" y="0" width="180" height="30" rx="6" fill="#E8F5EE"/>
+    <text x="12" y="20" class="tx" font-size="12">故障提示 Hint</text>
+    <rect x="195" y="0" width="225" height="30" rx="6" fill="#3FA678"/>
+    <text x="307" y="20" text-anchor="middle" class="tw" font-size="13" font-weight="700">+30%</text>
+  </g>
+  <text x="640" y="490" text-anchor="middle" class="tx" font-size="12">12 个主流模型，最高仅 0.513</text>
+  <text x="640" y="515" text-anchor="middle" class="tx" font-size="12">恢复能力存在但未被触发</text>
+  <text x="640" y="540" text-anchor="middle" class="tx" font-size="12">提示比算力更能解锁性能</text>
+</svg>

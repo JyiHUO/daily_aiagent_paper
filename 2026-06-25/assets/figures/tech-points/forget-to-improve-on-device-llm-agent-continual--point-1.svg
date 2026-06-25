@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B6B"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6BA47A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="42" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F" text-anchor="middle">一把尺子，三处决策</text>
+  <text x="360" y="66" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65" text-anchor="middle">ρ = ( V̂ − λ·Ĥ ) / bytes</text>
+
+  <!-- 左：收益 V̂ -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="40" y="160" width="170" height="100" rx="10" fill="#EAF4EC" stroke="#6BA47A" stroke-width="1.8"/>
+    <text x="125" y="190" font-size="16" font-weight="700" fill="#1E3A5F" text-anchor="middle">收益 V̂</text>
+    <text x="125" y="216" font-size="12" fill="#3D4F65" text-anchor="middle">命中 · 帮助 · 抽象压缩</text>
+    <text x="125" y="240" font-size="11" fill="#6BA47A" text-anchor="middle">（分子）</text>
+    <line x1="212" y1="210" x2="280" y2="210" stroke="#6BA47A" stroke-width="2" marker-end="url(#arrG)"/>
+  </g>
+
+  <!-- 右：风险 Ĥ -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <rect x="510" y="160" width="170" height="100" rx="10" fill="#FBEDE8" stroke="#C97B6B" stroke-width="1.8"/>
+    <text x="595" y="190" font-size="16" font-weight="700" fill="#1E3A5F" text-anchor="middle">风险 Ĥ</text>
+    <text x="595" y="216" font-size="12" fill="#3D4F65" text-anchor="middle">负迁移 η · 投毒来源</text>
+    <text x="595" y="240" font-size="11" fill="#C97B6B" text-anchor="middle">（减项，乘 λ）</text>
+    <line x1="508" y1="210" x2="440" y2="210" stroke="#C97B6B" stroke-width="2" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- 中心 ρ -->
+  <g transform="translate(360,210)" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <circle r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="0" y="-8" font-size="34" font-weight="700" fill="#1E3A5F" text-anchor="middle">ρ</text>
+    <text x="0" y="22" font-size="12" fill="#3D4F65" text-anchor="middle">净值/字节</text>
+  </g>
+
+  <!-- 三个出口 -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif">
+    <line x1="310" y1="270" x2="190" y2="368" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="360" y1="290" x2="360" y2="368" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="410" y1="270" x2="530" y2="368" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+    <rect x="100" y="370" width="140" height="64" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="395" font-size="15" font-weight="700" fill="#1E3A5F" text-anchor="middle">KEEP</text>
+    <text x="170" y="416" font-size="12" fill="#3D4F65" text-anchor="middle">留什么</text>
+
+    <rect x="290" y="370" width="140" height="64" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="360" y="395" font-size="15" font-weight="700" fill="#1E3A5F" text-anchor="middle">SHARE</text>
+    <text x="360" y="416" font-size="12" fill="#3D4F65" text-anchor="middle">发什么</text>
+
+    <rect x="480" y="370" width="140" height="64" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="550" y="395" font-size="15" font-weight="700" fill="#1E3A5F" text-anchor="middle">TRUST</text>
+    <text x="550" y="416" font-size="12" fill="#3D4F65" text-anchor="middle">信什么</text>
+  </g>
+</svg>
