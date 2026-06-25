@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">记忆系统 = ⟨R, S, Q, U⟩</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">像数据库一样拆成四个模块</text>
+
+  <!-- 黑盒 -->
+  <g>
+    <rect x="50" y="180" width="170" height="140" rx="10" fill="#F1F1F1" stroke="#9AA3AE" stroke-width="1.5" stroke-dasharray="5,4"/>
+    <text x="135" y="225" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="600" fill="#3D4F65">原来：黑盒</text>
+    <text x="135" y="262" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#6B7280">只看 F1，难横比</text>
+    <text x="135" y="290" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#6B7280">名字花哨本质同</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="225" y1="250" x2="305" y2="250" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="265" y="240" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">拆解</text>
+
+  <!-- 四模块 2x2 -->
+  <g>
+    <rect x="310" y="120" width="170" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="395" y="155" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">R</text>
+    <text x="395" y="183" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">表示存储</text>
+    <text x="395" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#6B7280">token / 图 / 引擎</text>
+  </g>
+
+  <g>
+    <rect x="500" y="120" width="170" height="110" rx="10" fill="#FEF3E7" stroke="#E08A3C" stroke-width="1.8"/>
+    <text x="585" y="155" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">S</text>
+    <text x="585" y="183" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">抽取</text>
+    <text x="585" y="208" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#6B7280">原文 / 三元组</text>
+  </g>
+
+  <g>
+    <rect x="310" y="250" width="170" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="395" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Q</text>
+    <text x="395" y="313" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">检索路由</text>
+    <text x="395" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#6B7280">KNN / 图 / 混合</text>
+  </g>
+
+  <g>
+    <rect x="500" y="250" width="170" height="110" rx="10" fill="#FEF3E7" stroke="#E08A3C" stroke-width="1.8"/>
+    <text x="585" y="285" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">U</text>
+    <text x="585" y="313" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" fill="#3D4F65">维护</text>
+    <text x="585" y="338" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#6B7280">驱逐 / 合并</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="360" y="420" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">12 个系统 → 同一张分类表，消融只改一个模块</text>
+</svg>

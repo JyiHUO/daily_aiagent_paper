@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9544A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" fill="#1E3A5F" font-size="17" font-weight="600">任务谈话题，不问答案</text>
+
+  <!-- Hidden user -->
+  <g>
+    <circle cx="100" cy="220" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="100" y="215" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">隐藏用户</text>
+    <text x="100" y="236" text-anchor="middle" fill="#3D4F65" font-size="11">31 维状态</text>
+  </g>
+
+  <!-- Task (indirect) -->
+  <g>
+    <rect x="240" y="170" width="140" height="100" rx="10" fill="#FFF4E6" stroke="#E8A04A" stroke-width="1.8"/>
+    <text x="310" y="205" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">间接任务</text>
+    <text x="310" y="228" text-anchor="middle" fill="#3D4F65" font-size="11">仅触及话题</text>
+    <text x="310" y="248" text-anchor="middle" fill="#3D4F65" font-size="11">不暴露目标值</text>
+  </g>
+
+  <!-- Critic -->
+  <g>
+    <rect x="450" y="170" width="120" height="100" rx="10" fill="#F5ECF5" stroke="#8E5A9B" stroke-width="1.8"/>
+    <text x="510" y="205" text-anchor="middle" fill="#1E3A5F" font-size="14" font-weight="600">盲审 Critic</text>
+    <text x="510" y="228" text-anchor="middle" fill="#3D4F65" font-size="11">只看任务</text>
+    <text x="510" y="248" text-anchor="middle" fill="#3D4F65" font-size="11">查是否泄漏</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M162,220 L238,220" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M380,220 L448,220" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- Reject loop: Critic -> rewrite -> back to Task -->
+  <path d="M510,170 Q510,110 400,110 Q310,110 310,168" stroke="#C9544A" stroke-width="1.8" fill="none" stroke-dasharray="5,4" marker-end="url(#r)"/>
+  <text x="410" y="100" text-anchor="middle" fill="#C9544A" font-size="11">泄漏则改写</text>
+
+  <!-- Bottom note -->
+  <g>
+    <rect x="120" y="330" width="360" height="62" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="300" y="355" text-anchor="middle" fill="#1E3A5F" font-size="13" font-weight="600">Agent 只能靠"真记住"得分</text>
+    <text x="300" y="377" text-anchor="middle" fill="#3D4F65" font-size="11">答案无法从任务文本直接推出</text>
+  </g>
+</svg>

@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/downloaded_pdfs/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-10",
+      "page_index": 9,
+      "caption": "Figure 3: Illustrative case study of post-interaction user-state recovery. The hidden dimension is never shown to the agent, but the user’s follow-up turns expose diagnostic evidence for reconstructing the target dimension. Highlighted spans mark the phrases that reveal the ground-truth dimension.",
+      "clip": [
+        95.94000244140625,
+        55.99726867675781,
+        516.0653991699219,
+        333.6910095214844
+      ],
+      "clip_area": 116666.19304141635,
+      "page_area": 484704.0,
+      "text_density": 0.7826244528341827,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-10",
+      "page_index": 9,
+      "caption": "Figure 3: Illustrative case study of post-interaction user-state recovery. The hidden dimension is never shown to the agent, but the user’s follow-up turns expose diagnostic evidence for reconstructing the target dimension. Highlighted spans mark the phrases that reveal the ground-truth dimension.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6014953613281,
+        321.53729248046875
+      ],
+      "clip_area": 138777.70401999913,
+      "page_area": 484704.0,
+      "text_density": 0.6460759526675454,
+      "kind": "captioned_figure",
+      "score": 11.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/02-p10-captioned_figure.png",
+      "filename": "02-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-3-embedded-20-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        284.53009033203125,
+        137.3913116455078,
+        391.17340087890625,
+        375.0587463378906
+      ],
+      "clip_area": 25345.642044778913,
+      "page_area": 484704.0,
+      "text_density": 0.11816814251704855,
+      "kind": "embedded_image",
+      "xref": 725,
+      "score": 4.991529693919076,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/03-p4-embedded_image.png",
+      "filename": "03-p4-embedded_image.png"
+    },
+    {
+      "id": "page-3-embedded-11-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        99.52955627441406,
+        276.16326904296875,
+        287.4388427734375,
+        375.05877685546875
+      ],
+      "clip_area": 18583.384311005473,
+      "page_area": 484704.0,
+      "text_density": 0.19446846200187212,
+      "kind": "embedded_image",
+      "xref": 716,
+      "score": 0.3383743277877338,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/04-p4-embedded_image.png",
+      "filename": "04-p4-embedded_image.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        92.0,
+        117.7435302734375,
+        604.0,
+        465.3838195800781
+      ],
+      "clip_area": 177991.828125,
+      "page_area": 484704.0,
+      "text_density": 0.24456052250593927,
+      "kind": "drawing_cluster",
+      "score": -0.962334404178895,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-embedded-15-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        387.8342590332031,
+        137.13307189941406,
+        497.8349609375,
+        375.48919677734375
+      ],
+      "clip_area": 26219.341039760504,
+      "page_area": 484704.0,
+      "text_density": 0.25174097907937737,
+      "kind": "embedded_image",
+      "xref": 720,
+      "score": -3.013132733209747,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/06-p4-embedded_image.png",
+      "filename": "06-p4-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/memprobe-probing-long-term-agent-memory-via-hidden-user-state-recovery/contact-sheet.svg"
+}

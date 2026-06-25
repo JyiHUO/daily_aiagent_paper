@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/downloaded_pdfs/red-teaming-the-agentic-red-team.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team",
+  "candidates": [
+    {
+      "id": "page-14-drawing-caption-26",
+      "page_index": 14,
+      "caption": "Figure 6: Representation of the proposed secure architecture for agentic-red-teams . In red, components and paths that should be considered malicious within the system.",
+      "clip": [
+        37.734947204589844,
+        79.41798400878906,
+        427.8687744140625,
+        237.40774536132812
+      ],
+      "clip_area": 61637.150256377296,
+      "page_area": 484704.0,
+      "text_density": 0.10810301521896334,
+      "kind": "drawing_cluster_with_caption",
+      "score": 56.99867631193305,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/01-p15-drawing_cluster_with_caption.png",
+      "filename": "01-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-14-block-26",
+      "page_index": 14,
+      "caption": "Figure 6: Representation of the proposed secure architecture for agentic-red-teams . In red, components and paths that should be considered malicious within the system.",
+      "clip": [
+        23.4,
+        18.0,
+        588.6014038085938,
+        243.01824951171875
+      ],
+      "clip_area": 127180.63050657586,
+      "page_area": 484704.0,
+      "text_density": 0.06558721924973601,
+      "kind": "captioned_figure",
+      "score": 46.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/02-p15-captioned_figure.png",
+      "filename": "02-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-8",
+      "page_index": 4,
+      "caption": "Figure 2: Kill chain for agentic-red-teams (first row), and intermediate adversarial objectives (second row). Dotted lines represent skipping connections conditionally enabled by the target architecture.",
+      "clip": [
+        63.629615783691406,
+        66.00232696533203,
+        548.1144409179688,
+        183.34127807617188
+      ],
+      "clip_area": 56848.94121037476,
+      "page_area": 484704.0,
+      "text_density": 0.21442753072577994,
+      "kind": "drawing_cluster_with_caption",
+      "score": 45.5660030587907,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/03-p5-drawing_cluster_with_caption.png",
+      "filename": "03-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-23",
+      "page_index": 1,
+      "caption": "The architecture of agentic-red-teams drastically varies across implementations; however, these systems can generally be",
+      "clip": [
+        286.97101440429685,
+        355.3802978515625,
+        588.6031127929688,
+        664.1802978515625
+      ],
+      "clip_area": 93143.9919824219,
+      "page_area": 484704.0,
+      "text_density": 0.6767458123388241,
+      "kind": "captioned_figure",
+      "score": 45.03493324424913,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-8",
+      "page_index": 4,
+      "caption": "Figure 2: Kill chain for agentic-red-teams (first row), and intermediate adversarial objectives (second row). Dotted lines represent skipping connections conditionally enabled by the target architecture.",
+      "clip": [
+        23.4,
+        18.0,
+        588.60341796875,
+        170.27931213378906
+      ],
+      "clip_area": 86068.78770394773,
+      "page_area": 484704.0,
+      "text_density": 0.11313662784677579,
+      "kind": "captioned_figure",
+      "score": 39.96812219257065,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/05-p5-captioned_figure.png",
+      "filename": "05-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-9",
+      "page_index": 4,
+      "caption": "adversarial objectives, spanning infrastructure abuse and se- crets exfiltration. An overview of the kill chain is given in Figure 2 . Its main stages are:",
+      "clip": [
+        23.4,
+        18.0,
+        326.3699890136719,
+        215.7602996826172
+      ],
+      "clip_area": 59915.435822183,
+      "page_area": 484704.0,
+      "text_density": 0.2166985907419028,
+      "kind": "captioned_figure",
+      "score": 19.463811620176756,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/06-p5-captioned_figure.png",
+      "filename": "06-p5-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/red-teaming-the-agentic-red-team/contact-sheet.svg"
+}

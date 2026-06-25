@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">Kill Chain: The Red-Teamer Gets Red-Teamed</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">crossing trust boundaries inside the agent itself</text>
+
+  <!-- Target -->
+  <g>
+    <circle cx="80" cy="240" r="40" fill="#FEF3E2" stroke="#E8A24A" stroke-width="1.5"/>
+    <text x="80" y="237" text-anchor="middle" font-size="12" fill="#1E3A5F">Target</text>
+    <text x="80" y="253" text-anchor="middle" font-size="11" fill="#3D4F65">(bait)</text>
+  </g>
+
+  <!-- Worker -->
+  <g>
+    <rect x="180" y="200" width="130" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="245" y="230" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Worker</text>
+    <text x="245" y="250" text-anchor="middle" font-size="11" fill="#3D4F65">Kali shell — ① RCE</text>
+  </g>
+
+  <!-- Orchestrator -->
+  <g>
+    <rect x="345" y="200" width="130" height="80" rx="8" fill="#E3EEFB" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="410" y="230" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Orchestrator</text>
+    <text x="410" y="250" text-anchor="middle" font-size="11" fill="#3D4F65">② escalate · ③ persist</text>
+  </g>
+
+  <!-- Host -->
+  <g>
+    <rect x="510" y="200" width="140" height="80" rx="8" fill="#D6E4F5" stroke="#2E5A9E" stroke-width="1.5"/>
+    <text x="580" y="230" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Operator Host</text>
+    <text x="580" y="250" text-anchor="middle" font-size="11" fill="#3D4F65">④ sandbox escape · ⑤ pwned</text>
+  </g>
+
+  <!-- Trophy -->
+  <g>
+    <path d="M705 232 q15 -25 30 0 l-3 18 h-24 z" fill="#E8A24A"/>
+    <rect x="713" y="252" width="14" height="9" fill="#9A6B2F"/>
+    <rect x="703" y="261" width="34" height="5" fill="#9A6B2F"/>
+    <text x="720" y="285" text-anchor="middle" font-size="11" fill="#1E3A5F">game over</text>
+  </g>
+
+  <!-- Main chain arrows -->
+  <line x1="121" y1="240" x2="176" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="310" y1="240" x2="341" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="475" y1="240" x2="506" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="240" x2="700" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Skip arrow (dotted) -->
+  <path d="M245 200 Q410 120 580 200" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="410" y="140" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">weak boundary → skip stage (dotted)</text>
+
+  <!-- Side loot -->
+  <g>
+    <rect x="285" y="360" width="110" height="52" rx="6" fill="#FFF8EC" stroke="#E8A24A" stroke-width="1.2"/>
+    <text x="340" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">secrets exfil</text>
+    <text x="340" y="399" text-anchor="middle" font-size="10" fill="#3D4F65">API keys, tokens</text>
+  </g>
+  <g>
+    <rect x="425" y="360" width="130" height="52" rx="6" fill="#FFF8EC" stroke="#E8A24A" stroke-width="1.2"/>
+    <text x="490" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">unbounded weapon</text>
+    <text x="490" y="399" text-anchor="middle" font-size="10" fill="#3D4F65">guardrails bypassed</text>
+  </g>
+
+  <line x1="380" y1="282" x2="350" y2="358" stroke="#4B8BDA" stroke-width="1.3" stroke-dasharray="3,3" marker-end="url(#ar)"/>
+  <line x1="445" y1="282" x2="475" y2="358" stroke="#4B8BDA" stroke-width="1.3" stroke-dasharray="3,3" marker-end="url(#ar)"/>
+
+  <text x="400" y="445" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">intermediate adversarial objectives collected along the chain</text>
+</svg>

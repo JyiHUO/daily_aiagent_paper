@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">
+    LWM as Controllable Sandbox
+  </text>
+  <text x="300" y="58" text-anchor="middle" font-size="11" fill="#3D4F65">
+    inject corner cases the real world rarely shows
+  </text>
+
+  <!-- Real env: open field -->
+  <g>
+    <rect x="50" y="90" width="200" height="170" rx="10" fill="#F4EFE6" stroke="#C9A87C" stroke-width="1.5"/>
+    <text x="150" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Real Environment</text>
+    <circle cx="150" cy="175" r="22" fill="none" stroke="#C9A87C" stroke-width="2"/>
+    <g stroke="#C9A87C" stroke-width="2" stroke-linecap="round">
+      <line x1="150" y1="140" x2="150" y2="148"/>
+      <line x1="150" y1="202" x2="150" y2="210"/>
+      <line x1="115" y1="175" x2="123" y2="175"/>
+      <line x1="177" y1="175" x2="185" y2="175"/>
+    </g>
+    <text x="150" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">authentic, but smooth</text>
+  </g>
+
+  <!-- LWM: cage with traps -->
+  <g>
+    <rect x="350" y="90" width="200" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">LWM Sandbox</text>
+
+    <g stroke="#4B8BDA" stroke-width="1.2" opacity="0.4">
+      <line x1="380" y1="140" x2="380" y2="220"/>
+      <line x1="410" y1="140" x2="410" y2="220"/>
+      <line x1="440" y1="140" x2="440" y2="220"/>
+      <line x1="470" y1="140" x2="470" y2="220"/>
+      <line x1="500" y1="140" x2="500" y2="220"/>
+      <line x1="530" y1="140" x2="530" y2="220"/>
+      <line x1="370" y1="140" x2="530" y2="140"/>
+    </g>
+
+    <g>
+      <polygon points="395,215 410,182 425,215" fill="#E07B5C"/>
+      <text x="410" y="211" text-anchor="middle" font-size="13" font-weight="700" fill="#FFF">!</text>
+    </g>
+    <g>
+      <polygon points="445,210 460,175 475,210" fill="#E07B5C"/>
+      <text x="460" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#FFF">!</text>
+    </g>
+    <g>
+      <polygon points="495,218 510,185 525,218" fill="#E07B5C"/>
+      <text x="510" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#FFF">!</text>
+    </g>
+
+    <text x="450" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">injected adversarial states</text>
+  </g>
+
+  <!-- Agent -->
+  <g>
+    <circle cx="300" cy="340" r="28" fill="#FFF6E4" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="300" y="345" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Agent</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M 282 320 Q 220 295 178 262" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M 318 320 Q 380 295 422 262" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <text x="210" y="315" font-size="10" fill="#3D4F65">trains in</text>
+  <text x="360" y="315" font-size="10" fill="#3D4F65">trains in</text>
+
+  <text x="300" y="395" text-anchor="middle" font-size="11" font-style="italic" fill="#1E3A5F">
+    Sim RL &gt; Real RL — controllable failure modes win
+  </text>
+</svg>

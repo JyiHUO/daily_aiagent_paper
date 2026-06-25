@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">One Language Model, Seven Worlds</text>
+  <text x="300" y="54" text-anchor="middle" font-size="11" fill="#3D4F65">everything becomes text — one world model fits all</text>
+
+  <!-- Seven domain bubbles (left cluster) -->
+  <g font-size="11" fill="#1E3A5F" text-anchor="middle">
+    <circle cx="70"  cy="135" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="70"  y="139">MCP</text>
+
+    <circle cx="150" cy="110" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="150" y="114">Search</text>
+
+    <circle cx="70"  cy="210" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="70"  y="214">Terminal</text>
+
+    <circle cx="150" cy="190" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="150" y="194">SWE</text>
+
+    <circle cx="70"  cy="285" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="70"  y="289">Android</text>
+
+    <circle cx="150" cy="270" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="150" y="274">Web</text>
+
+    <circle cx="110" cy="355" r="28" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="110" y="359">OS</text>
+  </g>
+
+  <!-- Funnel: translate to text -->
+  <path d="M200,150 L295,195 L295,245 L200,290 Z" fill="#FFF4E6" stroke="#D98E3F" stroke-width="1.5"/>
+  <text x="247" y="216" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">translate</text>
+  <text x="247" y="232" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">to text</text>
+
+  <!-- arrow from cluster to funnel -->
+  <line x1="185" y1="220" x2="202" y2="220" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Unified schema box -->
+  <rect x="325" y="150" width="230" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="440" y="178" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Unified Trajectory Schema</text>
+  <text x="440" y="208" text-anchor="middle" font-size="11" fill="#3D4F65">system prompt</text>
+  <text x="440" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">+ (action, observation)*</text>
+  <text x="440" y="266" text-anchor="middle" font-size="10" font-style="italic" fill="#7A5A2E">GUI → a11y tree, not pixels</text>
+
+  <!-- funnel to schema arrow -->
+  <line x1="297" y1="220" x2="323" y2="220" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Bottom: next state prediction -->
+  <rect x="200" y="355" width="340" height="60" rx="10" fill="#FFF7F2" stroke="#D98E3F" stroke-width="1.5"/>
+  <text x="370" y="380" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">predict next state</text>
+  <text x="370" y="400" text-anchor="middle" font-size="10" fill="#3D4F65">e.g. full Python traceback, not just exit code</text>
+
+  <!-- schema to next state -->
+  <line x1="440" y1="292" x2="400" y2="353" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>

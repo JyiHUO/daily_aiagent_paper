@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">任务做得漂亮 ≠ 真的记住你</text>
+
+  <!-- Left: task success -->
+  <g>
+    <circle cx="150" cy="190" r="82" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="150" y="172" text-anchor="middle" font-size="30" fill="#1E3A5F">🏆</text>
+    <text x="150" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">任务完成率</text>
+    <text x="150" y="225" text-anchor="middle" font-size="20" font-weight="700" fill="#C97B3F">99.9%</text>
+  </g>
+  <text x="150" y="298" text-anchor="middle" font-size="11" fill="#3D4F65">下游任务几乎满分</text>
+
+  <!-- Right: memory recovery -->
+  <g>
+    <circle cx="450" cy="190" r="82" fill="#FDF1E7" stroke="#C97B3F" stroke-width="2"/>
+    <text x="450" y="172" text-anchor="middle" font-size="30" fill="#1E3A5F">🧠</text>
+    <text x="450" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">隐藏状态恢复</text>
+    <text x="450" y="225" text-anchor="middle" font-size="20" font-weight="700" fill="#C97B3F">~0.5</text>
+  </g>
+  <text x="450" y="298" text-anchor="middle" font-size="11" fill="#3D4F65">用户档案其实很贫瘠</text>
+
+  <!-- gap arrow -->
+  <line x1="236" y1="190" x2="364" y2="190" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#a)"/>
+  <text x="300" y="182" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">真实差距</text>
+
+  <!-- bottom insight -->
+  <rect x="80" y="338" width="440" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="300" y="362" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">直接审计记忆产物，而非看任务分数</text>
+  <text x="300" y="383" text-anchor="middle" font-size="11" fill="#3D4F65">堆量 ≠ 可恢复 · Episodic 事件最难记牢</text>
+</svg>

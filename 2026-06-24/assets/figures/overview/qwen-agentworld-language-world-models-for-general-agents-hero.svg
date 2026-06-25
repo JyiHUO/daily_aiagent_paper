@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="450" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#1E3A5F">Qwen-AgentWorld：语言世界模型</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">让 Agent 学会预测「下一步环境会变成什么样」</text>
+  <text x="450" y="92" text-anchor="middle" font-size="11" fill="#3D5A85">CPT  →  SFT  →  RL    三段式打造</text>
+
+  <!-- 七域横幅 -->
+  <text x="450" y="200" text-anchor="middle" font-size="10" fill="#3D4F65">覆盖 7 域：MCP · Search · Terminal · SWE · Android · Web · OS</text>
+  <line x1="270" y1="210" x2="630" y2="210" stroke="#C9D4E3" stroke-width="0.8"/>
+
+  <!-- 中心：世界模型 -->
+  <g>
+    <circle cx="450" cy="330" r="105" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="450" cy="330" r="78" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="450" y="312" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">语言世界模型</text>
+    <text x="450" y="332" text-anchor="middle" font-size="11" fill="#3D4F65">(state, action)</text>
+    <text x="450" y="352" text-anchor="middle" font-size="13" font-weight="600" fill="#E89B5A">→ next state</text>
+    <text x="450" y="372" text-anchor="middle" font-size="10" fill="#3D4F65">long CoT 推理</text>
+  </g>
+
+  <!-- 左侧：Agent 动作 -->
+  <g>
+    <rect x="60" y="270" width="160" height="120" rx="10" fill="#FFF7EE" stroke="#E89B5A" stroke-width="1.8"/>
+    <text x="140" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Agent 动作</text>
+    <text x="140" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">pip install / click</text>
+    <text x="140" y="344" text-anchor="middle" font-size="11" fill="#3D4F65">search / cd / tap</text>
+    <text x="140" y="372" text-anchor="middle" font-size="10" fill="#7A6650">7 域统一文本表示</text>
+  </g>
+  <path d="M220,330 L343,330" stroke="#E89B5A" stroke-width="2" fill="none" marker-end="url(#arrW)"/>
+
+  <!-- 右侧：环境观测 -->
+  <g>
+    <rect x="680" y="270" width="160" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="760" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">环境观测</text>
+    <text x="760" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">OOM traceback</text>
+    <text x="760" y="344" text-anchor="middle" font-size="11" fill="#3D4F65">UI tree / shell out</text>
+    <text x="760" y="372" text-anchor="middle" font-size="10" fill="#3D5A85">可控扰动 / 边缘情况</text>
+  </g>
+  <path d="M557,330 L680,330" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- 闭环回到 Agent -->
+  <path d="M760,390 Q 760,490 450,495 Q 140,490 140,390" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrW)"/>
+  <rect x="345" y="475" width="210" height="46" rx="8" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="450" y="495" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">闭环：用世界模型训 Agent</text>
+  <text x="450" y="512" text-anchor="middle" font-size="10" fill="#3D4F65">超越仅靠真实环境的 RL 收益</text>
+
+  <!-- 两种应用范式 -->
+  <g>
+    <rect x="55" y="555" width="370" height="48" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="75" y="576" font-size="12" font-weight="700" fill="#1E3A5F">① 解耦：可控环境模拟器</text>
+    <text x="75" y="593" font-size="10" fill="#3D4F65">为 Agentic RL 注入对抗扰动 · corner case</text>
+
+    <rect x="475" y="555" width="370" height="48" rx="8" fill="#FFF7EE" stroke="#E89B5A" stroke-width="1.2"/>
+    <text x="495" y="576" font-size="12" font-weight="700" fill="#1E3A5F">② 统一：Agent 预训练 warm-up</text>
+    <text x="495" y="593" font-size="10" fill="#7A6650">7 个基准下游提升 +3.9 ~ +12.3</text>
+  </g>
+</svg>

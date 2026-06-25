@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Three Stages, Three Jobs</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">teach the world, then how to think, then how to speak</text>
+
+  <!-- Stage 1: CPT -->
+  <g>
+    <rect x="70" y="140" width="180" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="160" y="172" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Stage 1 · CPT</text>
+    <text x="160" y="192" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">learn the world</text>
+
+    <path d="M95 245 L160 230 L225 245 L225 305 L160 290 L95 305 Z" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <line x1="160" y1="230" x2="160" y2="290" stroke="#1E3A5F" stroke-width="1.5"/>
+    <line x1="110" y1="260" x2="148" y2="253" stroke="#9AB6D4" stroke-width="1"/>
+    <line x1="110" y1="275" x2="148" y2="268" stroke="#9AB6D4" stroke-width="1"/>
+    <line x1="172" y1="253" x2="210" y2="260" stroke="#9AB6D4" stroke-width="1"/>
+    <line x1="172" y1="268" x2="210" y2="275" stroke="#9AB6D4" stroke-width="1"/>
+
+    <text x="160" y="335" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">10M trajectories</text>
+  </g>
+
+  <!-- Stage 2: SFT -->
+  <g>
+    <rect x="310" y="140" width="180" height="220" rx="10" fill="#FFF4E6" stroke="#D89A4B" stroke-width="1.5"/>
+    <text x="400" y="172" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Stage 2 · SFT</text>
+    <text x="400" y="192" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">learn to think first</text>
+
+    <path d="M380 305 Q360 305 360 280 Q360 240 400 235 Q440 240 440 280 L440 305 Z" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <circle cx="430" cy="270" r="2.5" fill="#1E3A5F"/>
+    <circle cx="395" cy="232" r="3" fill="#FFFFFF" stroke="#D89A4B" stroke-width="1.3"/>
+    <circle cx="382" cy="220" r="5" fill="#FFFFFF" stroke="#D89A4B" stroke-width="1.3"/>
+    <circle cx="365" cy="208" r="10" fill="#FFFFFF" stroke="#D89A4B" stroke-width="1.5"/>
+    <text x="365" y="212" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1E3A5F">?</text>
+
+    <text x="400" y="335" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">long-CoT traces</text>
+  </g>
+
+  <!-- Stage 3: RL -->
+  <g>
+    <rect x="550" y="140" width="180" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="640" y="172" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Stage 3 · RL</text>
+    <text x="640" y="192" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">learn to polish</text>
+
+    <polygon points="640,235 605,265 640,305 675,265" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.8"/>
+    <line x1="605" y1="265" x2="675" y2="265" stroke="#1E3A5F" stroke-width="1.2"/>
+    <line x1="640" y1="235" x2="640" y2="265" stroke="#1E3A5F" stroke-width="1.2"/>
+
+    <path d="M695 222 l2.5 7 l7 2.5 l-7 2.5 l-2.5 7 l-2.5 -7 l-7 -2.5 l7 -2.5 z" fill="#D89A4B"/>
+
+    <text x="640" y="335" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">rubric + verifier</text>
+  </g>
+
+  <line x1="252" y1="250" x2="305" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="492" y1="250" x2="545" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="400" y="420" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-style="italic" fill="#1E3A5F">each stage cures one disease — don't cook them in one pot</text>
+  <text x="400" y="448" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">info-theoretic loss masking skips boilerplate turns</text>
+</svg>

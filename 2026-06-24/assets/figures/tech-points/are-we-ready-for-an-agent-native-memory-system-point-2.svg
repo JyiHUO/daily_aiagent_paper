@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="48" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">没有银弹架构</text>
+  <text x="360" y="74" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">任务决定记忆形态</text>
+
+  <!-- Task 1: 跨会话推理 -->
+  <g>
+    <rect x="50" y="120" width="180" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">跨会话推理</text>
+    <text x="140" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">LongMemEval</text>
+    <circle cx="115" cy="193" r="4" fill="#4B8BDA"/>
+    <circle cx="140" cy="200" r="4" fill="#4B8BDA"/>
+    <circle cx="165" cy="193" r="4" fill="#4B8BDA"/>
+    <line x1="115" y1="193" x2="140" y2="200" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="140" y1="200" x2="165" y2="193" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="115" y1="193" x2="165" y2="193" stroke="#4B8BDA" stroke-width="1.2"/>
+  </g>
+
+  <!-- Task 2: 精确事实 -->
+  <g>
+    <rect x="270" y="120" width="180" height="90" rx="10" fill="#FEF3E7" stroke="#E89B4C" stroke-width="1.5"/>
+    <text x="360" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">精确事实定位</text>
+    <text x="360" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">LoCoMo</text>
+    <rect x="335" y="186" width="14" height="14" fill="#E89B4C" opacity="0.7"/>
+    <circle cx="370" cy="193" r="6" fill="#E89B4C" opacity="0.7"/>
+  </g>
+
+  <!-- Task 3: 过程执行 -->
+  <g>
+    <rect x="490" y="120" width="180" height="90" rx="10" fill="#F0F4E8" stroke="#7BA05B" stroke-width="1.5"/>
+    <text x="580" y="150" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="15" font-weight="600" fill="#1E3A5F">过程执行</text>
+    <text x="580" y="172" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">DB-Bench</text>
+    <line x1="545" y1="193" x2="615" y2="193" stroke="#7BA05B" stroke-width="1.5"/>
+    <circle cx="550" cy="193" r="3" fill="#7BA05B"/>
+    <circle cx="572" cy="193" r="3" fill="#7BA05B"/>
+    <circle cx="594" cy="193" r="3" fill="#7BA05B"/>
+    <circle cx="612" cy="193" r="3" fill="#7BA05B"/>
+  </g>
+
+  <!-- arrows down -->
+  <line x1="140" y1="215" x2="140" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="360" y1="215" x2="360" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="580" y1="215" x2="580" y2="290" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Winner 1 -->
+  <g>
+    <rect x="50" y="295" width="180" height="110" rx="10" fill="#1E3A5F"/>
+    <text x="140" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">图结构</text>
+    <text x="140" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#A8C5E8">Zep / Cognee</text>
+    <text x="140" y="386" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#FFD78A">LLM Judge 48.0</text>
+  </g>
+
+  <!-- Winner 2 -->
+  <g>
+    <rect x="270" y="295" width="180" height="110" rx="10" fill="#1E3A5F"/>
+    <text x="360" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">混合结构</text>
+    <text x="360" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#A8C5E8">MemOS</text>
+    <text x="360" y="386" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#FFD78A">EM 11.5</text>
+  </g>
+
+  <!-- Winner 3 -->
+  <g>
+    <rect x="490" y="295" width="180" height="110" rx="10" fill="#1E3A5F"/>
+    <text x="580" y="328" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">完整轨迹</text>
+    <text x="580" y="360" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#A8C5E8">LongCtx / MemoChat</text>
+    <text x="580" y="386" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="600" fill="#FFD78A">EM 48.2</text>
+  </g>
+
+  <text x="360" y="445" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-style="italic" fill="#3D4F65">压缩有利于关系，损耗于轨迹</text>
+</svg>

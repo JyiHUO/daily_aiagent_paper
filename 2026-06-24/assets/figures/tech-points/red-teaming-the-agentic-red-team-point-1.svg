@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0504D"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">Agent Phishing</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">no prompt injection — just a tempting scene</text>
+
+  <!-- Stage: the bait scene -->
+  <rect x="50" y="90" width="470" height="340" rx="14" fill="#FFF7EC" stroke="#D9A441" stroke-width="1.5"/>
+  <text x="285" y="116" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">Honeypot — a plausible work scene</text>
+
+  <!-- Encrypted file -->
+  <g transform="translate(75,140)">
+    <rect width="110" height="120" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="55" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26">🔒</text>
+    <text x="55" y="100" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F">github.pwc</text>
+  </g>
+
+  <!-- Tool binary (the trap) -->
+  <g transform="translate(225,140)">
+    <rect width="110" height="120" rx="6" fill="#FDECEC" stroke="#C0504D" stroke-width="2"/>
+    <text x="55" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26">⚙</text>
+    <text x="55" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E3A5F">pwcrypt</text>
+    <text x="55" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#C0504D">(hidden payload)</text>
+  </g>
+
+  <!-- Leaked password note -->
+  <g transform="translate(375,140)">
+    <rect width="120" height="120" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="60" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26">📝</text>
+    <text x="60" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F">release.log</text>
+    <text x="60" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">leaks "hunter2"</text>
+  </g>
+
+  <!-- README clue -->
+  <rect x="75" y="290" width="420" height="50" rx="6" fill="#FFFFFF" stroke="#D9A441" stroke-width="1"/>
+  <text x="285" y="320" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">README: "pwcrypt is the only decryptor for these files"</text>
+
+  <text x="285" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#7A6437" font-style="italic">environmental staging — no injected text</text>
+  <text x="285" y="405" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">looks like a legitimate task</text>
+
+  <!-- Agent -->
+  <g transform="translate(600,210)">
+    <circle cx="60" cy="40" r="44" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="60" y="50" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30">🤖</text>
+    <text x="60" y="108" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Red-Team Agent</text>
+    <text x="60" y="126" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">"I should run it."</text>
+  </g>
+
+  <!-- Arrow from scene to agent -->
+  <path d="M520,250 L596,250" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Outcome arrow -->
+  <path d="M660,300 Q660,430 470,460" stroke="#C0504D" stroke-width="2.5" fill="none" marker-end="url(#ahr)"/>
+  <text x="430" y="482" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#C0504D">./pwcrypt → RCE on operator</text>
+</svg>

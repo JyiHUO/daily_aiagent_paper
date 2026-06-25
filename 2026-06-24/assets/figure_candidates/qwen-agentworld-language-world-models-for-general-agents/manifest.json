@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/downloaded_pdfs/qwen-agentworld-language-world-models-for-general-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents",
+  "candidates": [
+    {
+      "id": "page-3-block-11",
+      "page_index": 3,
+      "caption": "Figure 2: Qwen-AgentWorld unifies seven categories of interactive environment simulation within a single language world model.",
+      "clip": [
+        49.009971618652344,
+        52.911041259765625,
+        546.4197387695312,
+        389.956787109375
+      ],
+      "clip_area": 167649.8459622485,
+      "page_area": 501156.9211820215,
+      "text_density": 0.020510452519928533,
+      "kind": "image_block_with_caption",
+      "score": 63.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-8-0",
+      "page_index": 3,
+      "caption": "Figure 2: Qwen-AgentWorld unifies seven categories of interactive environment simulation within a single language world model.",
+      "clip": [
+        226.46551513671875,
+        147.58755493164062,
+        370.090087890625,
+        290.9754638671875
+      ],
+      "clip_area": 20594.027158943936,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 1679,
+      "score": 62.22882252398826,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Qwen-AgentWorld unifies seven categories of interactive environment simulation within a single language world model.",
+      "clip": [
+        59.009971618652344,
+        58.9110107421875,
+        536.5615844726562,
+        383.99462890625
+      ],
+      "clip_area": 155244.2061666632,
+      "page_area": 501156.9211820215,
+      "text_density": 0.004731097353983364,
+      "kind": "embedded_image_with_caption",
+      "xref": 1671,
+      "score": 62.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-block-7",
+      "page_index": 6,
+      "caption": "Figure 5: Three-stage training pipeline of Qwen-AgentWorld. Stage 1 CPT injects world knowledge; Stage 2 SFT instills next-state-prediction thinking patterns; Stage 3 RL sharpens output quality.",
+      "clip": [
+        48.865997314453125,
+        350.22186279296875,
+        546.3985595703125,
+        514.3830261230469
+      ],
+      "clip_area": 81675.5242145164,
+      "page_area": 501156.9211820215,
+      "text_density": 0.07595191547905972,
+      "kind": "image_block_with_caption",
+      "score": 40.907505824605735,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/04-p7-image_block_with_caption.png",
+      "filename": "04-p7-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Figure 5: Three-stage training pipeline of Qwen-AgentWorld. Stage 1 CPT injects world knowledge; Stage 2 SFT instills next-state-prediction thinking patterns; Stage 3 RL sharpens output quality.",
+      "clip": [
+        58.865997314453125,
+        356.22186279296875,
+        536.3985595703125,
+        508.383056640625
+      ],
+      "clip_area": 72661.9247739818,
+      "page_area": 501156.9211820215,
+      "text_density": 0.010239141882170143,
+      "kind": "embedded_image_with_caption",
+      "xref": 1743,
+      "score": 39.80735471971091,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/05-p7-embedded_image_with_caption.png",
+      "filename": "05-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-drawing-caption-31",
+      "page_index": 15,
+      "caption": "Figure 8: Cross-domain generalization when training Stage 3 (RL) on Terminal data alone. (a) Terminal (in-domain) improves by +14.2 points over the SFT baseline. (b) All three held-out domains improve without receiving any domain-specific training signal: MCP (+5.0), SWE (+11.5), and Search (+11.8).",
+      "clip": [
+        52.865997314453125,
+        323.55889892578125,
+        542.4281005859375,
+        525.0119934082031
+      ],
+      "clip_area": 98623.80064536352,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19616856862714177,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.1257058895422,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/06-p16-drawing_cluster_with_caption.png",
+      "filename": "06-p16-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-24/assets/figure_candidates/qwen-agentworld-language-world-models-for-general-agents/contact-sheet.svg"
+}

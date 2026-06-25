@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报 06-24：把 Agent 当系统拆开看",
+  "shownotes_html": "<p>这一期我们聊一个让人后背发凉的开场：12 款主流攻击型 Agent，有 10 款最后反过来端了操作员自己的电脑。但今天三篇论文真正想告诉你的是同一件事——Agent 不该再被当成端到端的黑盒，记忆、安全、训练环境都要拆成系统来设计和审计。</p><p><strong>本期重点</strong></p><ul><li><strong>我们准备好迎接 Agent 原生记忆系统了吗？（Are We Ready For An Agent-Native Memory System?）</strong>：把 12 个主流 Agent 记忆系统按表示/抽取/检索/维护四模块横评 11 个数据集，结论很直白——没有银弹，知识图谱在跨会话事实回忆里赢，但在过程执行类任务上甚至打不过直接喂长上下文。</li><li><strong>给攻击型 Agent 做红队（Red-Teaming the Agentic Red-Team）</strong>：首次系统审计 12 款 offensive Agent，提出无需 prompt 注入的\"agent-phishing\"，并指出主流做法把 guardrail 放在 orchestrator 决策层而 worker 层裸奔，是架构级失效。结论很狠：直接假设 LLM 一定会被攻陷，再去设计爆炸半径。</li><li><strong>Qwen-AgentWorld：通用 Agent 的语言世界模型</strong>：把 MCP、搜索、终端、SWE、安卓、网页、OS 七个域统一成文本化的状态转移建模，既能当可控 RL 模拟器制造长尾失败场景，也能作为 Agent 预训练的 warm-up，在 7 个下游基准上普涨。</li></ul><p><strong>今日趋势</strong></p><ul><li>记忆研究集体进入\"架构化评测\"阶段，开始把 memory 当作可拆解、可审计的数据管理系统，而不是黑盒 RAG。</li><li>Agent 安全的焦点从\"防 prompt 注入\"转向\"防架构滥用\"：治理要下沉到 runtime 和共享状态层，单点防御不再够用。</li></ul><p>如果你正在做能执行代码或调工具的 Agent，留一个问题带走：当你的 LLM 被攻陷的那一刻，伤害会停在哪一层？欢迎在评论区聊聊你的架构选择。本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-06-24",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-24T22:10:29Z"
+}
