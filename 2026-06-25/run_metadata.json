@@ -12,11 +12,11 @@
   "candidate_count": 359,
   "selected_count": 3,
   "focus_titles": [
-    "Forget to Improve: On-Device LLM-Agent Continual Learning via Budget-Curated Memory",
-    "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
-    "Beyond Function Calling: Benchmarking Tool-Using Agents under Tool-Environment Unreliability"
+    "Agentic evolution of physically constrained foundation models",
+    "Unlocking Model Potentials Through Adaptive Multi-Agent Scaffolding for Efficient Issue Resolution",
+    "AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents"
   ],
-  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/paper_broadcast_script.txt",
-  "broadcast_audio_path": "",
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-25/paper_broadcast_audio.mp3",
   "broadcast_audio_wav_path": ""
 }
