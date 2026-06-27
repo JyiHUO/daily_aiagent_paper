@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-25
+- **日期**：2026-06-26
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Agentic evolution of physically constrained foundation models
-  - Unlocking Model Potentials Through Adaptive Multi-Agent Scaffolding for Efficient Issue Resolution
-  - AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents
-- **日报路径**：[2026-06-25/daily_report.md](2026-06-25/daily_report.md)
+  - The Verification Horizon: No Silver Bullet for Coding Agent Rewards
+  - Life After Benchmark Saturation: A Case Study of CORE-Bench
+  - ShareLock: A Stealthy Multi-Tool Threshold Poisoning Attack Against MCP
+- **日报路径**：[2026-06-26/daily_report.md](2026-06-26/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-26 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Verification Horizon: No Silver Bullet for Coding Agent Rewards | [2026-06-26/daily_report.md](2026-06-26/daily_report.md) |
+|  |  |  | 2 | Life After Benchmark Saturation: A Case Study of CORE-Bench |  |
+|  |  |  | 3 | ShareLock: A Stealthy Multi-Tool Threshold Poisoning Attack Against MCP |  |
 | 2026-06-25 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Agentic evolution of physically constrained foundation models | [2026-06-25/daily_report.md](2026-06-25/daily_report.md) |
 |  |  |  | 2 | Unlocking Model Potentials Through Adaptive Multi-Agent Scaffolding for Efficient Issue Resolution |  |
 |  |  |  | 3 | AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents |  |
