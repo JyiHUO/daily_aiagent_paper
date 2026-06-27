@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">同一模型 · 不同脚手架</text>
+  <text x="300" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">脚手架决定模型走哪条路</text>
+
+  <!-- Single model in middle -->
+  <circle cx="300" cy="200" r="50" fill="#FEF3E2" stroke="#E0A050" stroke-width="2"/>
+  <text x="300" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GPT-5.4</text>
+  <text x="300" y="216" text-anchor="middle" font-size="11" fill="#3D4F65">同一模型</text>
+
+  <!-- Left scaffold: good -->
+  <rect x="40" y="155" width="160" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="183" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Codex CLI</text>
+  <text x="120" y="203" text-anchor="middle" font-size="11" fill="#3D4F65">直接修 bug</text>
+  <text x="120" y="235" text-anchor="middle" font-size="22" font-weight="700" fill="#2E7D5B">94.9%</text>
+
+  <!-- Right scaffold: bad -->
+  <rect x="400" y="155" width="160" height="100" rx="10" fill="#FDECEC" stroke="#D46A6A" stroke-width="2"/>
+  <text x="480" y="183" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">CORE-Agent</text>
+  <text x="480" y="203" text-anchor="middle" font-size="11" fill="#3D4F65">绕过 / 重写</text>
+  <text x="480" y="235" text-anchor="middle" font-size="22" font-weight="700" fill="#B84545">51.3%</text>
+
+  <!-- arrows from model to scaffolds -->
+  <line x1="250" y1="200" x2="202" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="350" y1="200" x2="398" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Gap callout -->
+  <text x="300" y="310" text-anchor="middle" font-size="13" fill="#3D4F65">准确率差距 Δ 44 pp</text>
+  <text x="300" y="350" text-anchor="middle" font-size="30" font-weight="700" fill="#1E3A5F">94.9% → 51.3%</text>
+
+  <text x="300" y="395" text-anchor="middle" font-size="11" fill="#6B7B8E" font-style="italic">leaderboard 只写&quot;模型 + 分数&quot;，掩盖了脚手架的真实贡献</text>
+</svg>

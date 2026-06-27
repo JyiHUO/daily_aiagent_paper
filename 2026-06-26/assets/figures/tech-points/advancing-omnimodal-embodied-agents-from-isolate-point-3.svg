@@ -1,0 +1,55 @@
+<svg width="720" height="480" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="600" fill="#1E3A5F">异步视觉抢占闭环</text>
+  <text x="360" y="60" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">高频执行 + 低频语义监工</text>
+
+  <!-- Top lane: VLM monitor -->
+  <rect x="60" y="110" width="540" height="90" rx="10" fill="#FFF4E6" stroke="#D97757" stroke-width="1.5"/>
+  <text x="100" y="140" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">VLM 监工</text>
+  <text x="100" y="160" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">低频 · 看语义</text>
+
+  <!-- camera frames -->
+  <rect x="265" y="142" width="36" height="26" rx="3" fill="#FFFFFF" stroke="#D97757" stroke-width="1.2"/>
+  <rect x="385" y="142" width="36" height="26" rx="3" fill="#FFFFFF" stroke="#D97757" stroke-width="1.2"/>
+  <rect x="505" y="142" width="36" height="26" rx="3" fill="#FFFFFF" stroke="#D97757" stroke-width="1.2"/>
+  <text x="523" y="161" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#D97757">⚠</text>
+
+  <!-- Bottom lane: VLA fast loop -->
+  <rect x="60" y="340" width="540" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="100" y="370" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="600" fill="#1E3A5F">VLA 执行</text>
+  <text x="100" y="390" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">高频 · 开环</text>
+
+  <!-- fast loop dots -->
+  <line x1="245" y1="385" x2="565" y2="385" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="2,4"/>
+  <circle cx="245" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="285" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="325" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="365" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="405" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="445" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="485" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="525" cy="385" r="5" fill="#4B8BDA"/>
+  <circle cx="565" cy="385" r="5" fill="#4B8BDA"/>
+
+  <!-- sampling arrows up -->
+  <line x1="283" y1="378" x2="283" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="403" y1="378" x2="403" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="523" y1="378" x2="523" y2="172" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <text x="343" y="278" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65">周期性采帧 → VLM 语义判定</text>
+
+  <!-- Halt + replan curve from anomaly frame back to VLA -->
+  <path d="M 560 175 Q 660 270 580 345" stroke="#D97757" stroke-width="2.2" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="665" y="255" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" font-weight="600" fill="#D97757">Halt + Replan</text>
+  <text x="665" y="272" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="10" fill="#D97757">反思入长期记忆</text>
+
+  <text x="360" y="460" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="11" fill="#3D4F65" font-style="italic">例：瓶子脱手 → 中止 VLA → 失败写入记忆 → 规划器重试 pick</text>
+</svg>

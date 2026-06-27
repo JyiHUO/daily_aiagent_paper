@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/downloaded_pdfs/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards",
+  "candidates": [
+    {
+      "id": "page-4-block-5",
+      "page_index": 4,
+      "caption": "Figure 4: RL training curves with and without the agentic quality filter.",
+      "clip": [
+        60.20500183105469,
+        263.75616455078125,
+        535.0725708007812,
+        422.13702392578125
+      ],
+      "clip_area": 75209.93366274238,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04966549583291967,
+      "kind": "image_block_with_caption",
+      "score": 14.835665929586026,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/01-p5-image_block_with_caption.png",
+      "filename": "01-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-8-block-1",
+      "page_index": 8,
+      "caption": "Figure 6: RL training curves of frontend coding score (train and test) and generation length across training steps for three judging paradigms: Visual judge, hybrid judge, and interactive judge.",
+      "clip": [
+        60.20500183105469,
+        52.86683654785156,
+        535.0725708007812,
+        211.12701416015625
+      ],
+      "clip_area": 75152.62580747227,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04489393246096496,
+      "kind": "image_block_with_caption",
+      "score": 14.835029175638581,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/02-p9-image_block_with_caption.png",
+      "filename": "02-p9-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-2-0",
+      "page_index": 4,
+      "caption": "Figure 4: RL training curves with and without the agentic quality filter.",
+      "clip": [
+        70.20500183105469,
+        269.75616455078125,
+        525.0725708007812,
+        416.13702392578125
+      ],
+      "clip_area": 66583.90564760566,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0077430048199905255,
+      "kind": "embedded_image_with_caption",
+      "xref": 940,
+      "score": 13.739821173862286,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/03-p5-embedded_image_with_caption.png",
+      "filename": "03-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 6: RL training curves of frontend coding score (train and test) and generation length across training steps for three judging paradigms: Visual judge, hybrid judge, and interactive judge.",
+      "clip": [
+        70.20500183105469,
+        58.86683654785156,
+        525.0725708007812,
+        205.12701416015625
+      ],
+      "clip_area": 66529.01142758946,
+      "page_area": 501156.9211820215,
+      "text_density": 0.009809509039728112,
+      "kind": "embedded_image_with_caption",
+      "xref": 972,
+      "score": 13.739211238084327,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/04-p9-embedded_image_with_caption.png",
+      "filename": "04-p9-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        115.55899810791016,
+        58.86473083496094,
+        479.70867919921875,
+        337.97698974609375
+      ],
+      "clip_area": 101638.64007116377,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0056041195499582025,
+      "kind": "embedded_image",
+      "xref": 935,
+      "score": 12.12931822301293,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/05-p2-embedded_image.png",
+      "filename": "05-p2-embedded_image.png"
+    },
+    {
+      "id": "page-4-block-3",
+      "page_index": 4,
+      "caption": "Figure 3: Task-quality distribution across solve- rate buckets. Pass rates are computed via multiple rollouts of an internal Qwen3-Turbo checkpoint on SWE-ReBench.",
+      "clip": [
+        284.71099853515625,
+        58.06568908691406,
+        546.40478515625,
+        228.802001953125
+      ],
+      "clip_area": 44680.63222768251,
+      "page_area": 501156.9211820215,
+      "text_density": 0.03789921492535134,
+      "kind": "image_block_with_caption",
+      "score": 10.496451469196472,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/06-p5-image_block_with_caption.png",
+      "filename": "06-p5-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/the-verification-horizon-no-silver-bullet-for-coding-agent-rewards/contact-sheet.svg"
+}

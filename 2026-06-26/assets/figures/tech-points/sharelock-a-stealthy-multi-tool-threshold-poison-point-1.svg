@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C26B3F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="600" fill="#1E3A5F">Threshold-Shared Poisoning</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">恶意指令被切片藏入多个工具，凑齐 t 份才能还原</text>
+
+  <!-- The malicious key (whole) -->
+  <g>
+    <path d="M 80 130 q 0 -20 20 -20 h 80 q 20 0 20 20 v 30 q 0 20 -20 20 h -10 v 25 h -10 v -25 h -10 v 15 h -10 v -15 h -40 q -20 0 -20 -20 z"
+          fill="#FBE4D6" stroke="#C26B3F" stroke-width="1.8"/>
+    <circle cx="105" cy="145" r="8" fill="none" stroke="#C26B3F" stroke-width="1.8"/>
+    <text x="140" y="220" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">恶意 Prompt (秘密 N-adv)</text>
+  </g>
+
+  <!-- Split arrow -->
+  <path d="M 215 155 L 312 155" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <text x="263" y="146" text-anchor="middle" font-size="11" fill="#4B8BDA">Shamir 切片</text>
+
+  <!-- Three tool shares -->
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="320" y="90" width="180" height="56" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="332" y="110" font-weight="600">weather-info</text>
+    <text x="332" y="128" font-size="10" fill="#3D4F65" font-family="monospace">tool-id=1</text>
+    <text x="332" y="141" font-size="10" fill="#3D4F65" font-family="monospace">sha384: a9f2…</text>
+
+    <rect x="320" y="160" width="180" height="56" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="332" y="180" font-weight="600">flight</text>
+    <text x="332" y="198" font-size="10" fill="#3D4F65" font-family="monospace">tool-id=2</text>
+    <text x="332" y="211" font-size="10" fill="#3D4F65" font-family="monospace">sha384: 7c1d…</text>
+
+    <rect x="320" y="230" width="180" height="56" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="332" y="250" font-weight="600">hotel</text>
+    <text x="332" y="268" font-size="10" fill="#3D4F65" font-family="monospace">tool-id=3</text>
+    <text x="332" y="281" font-size="10" fill="#3D4F65" font-family="monospace">sha384: e0b5…</text>
+  </g>
+
+  <!-- Auditor eye -->
+  <g>
+    <ellipse cx="615" cy="118" rx="22" ry="13" fill="#FFFFFF" stroke="#7A8AA0" stroke-width="1.5"/>
+    <circle cx="615" cy="118" r="6" fill="#7A8AA0"/>
+    <text x="615" y="152" text-anchor="middle" font-size="11" fill="#3D4F65">审计器：看似干净 ✓</text>
+    <path d="M 500 118 L 590 118" stroke="#7A8AA0" stroke-width="1.3" stroke-dasharray="4,3" fill="none"/>
+  </g>
+
+  <!-- Agent assembles: straight arrows to Agent box -->
+  <path d="M 502 117 L 552 200" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+  <path d="M 502 188 L 552 215" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+  <path d="M 502 258 L 552 230" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+
+  <g>
+    <rect x="555" y="190" width="130" height="62" rx="6" fill="#FFF4E6" stroke="#C26B3F" stroke-width="1.8"/>
+    <text x="620" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Agent 上下文</text>
+    <text x="620" y="229" text-anchor="middle" font-size="10" fill="#3D4F65">凑齐 ≥ t 份</text>
+    <text x="620" y="243" text-anchor="middle" font-size="10" fill="#3D4F65">拉格朗日插值</text>
+  </g>
+
+  <!-- Reconstructed key -->
+  <path d="M 620 256 L 620 305" stroke="#C26B3F" stroke-width="2" fill="none" marker-end="url(#ah2)"/>
+
+  <g>
+    <path d="M 580 320 q 0 -16 16 -16 h 60 q 16 0 16 16 v 24 q 0 16 -16 16 h -10 v 20 h -8 v -20 h -8 v 12 h -8 v -12 h -26 q -16 0 -16 -16 z"
+          fill="#C26B3F" stroke="#8E3A1A" stroke-width="1.5"/>
+    <circle cx="600" cy="330" r="6" fill="none" stroke="#FFF4E6" stroke-width="1.5"/>
+    <text x="620" y="402" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">恶意指令还原</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="240" y="412" text-anchor="middle" font-size="11" fill="#7A8AA0">单份 share 信息论安全 · 少于 t 份无法还原</text>
+</svg>

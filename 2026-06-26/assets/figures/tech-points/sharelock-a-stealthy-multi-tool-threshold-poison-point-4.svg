@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">100 Queries × 4 Scenarios</text>
+
+  <!-- Four scenario chips -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1E3A5F">
+    <rect x="70"  y="75" width="140" height="50" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="105" text-anchor="middle">Travel</text>
+
+    <rect x="230" y="75" width="140" height="50" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="300" y="105" text-anchor="middle">Coding</text>
+
+    <rect x="390" y="75" width="140" height="50" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="460" y="105" text-anchor="middle">Finance</text>
+
+    <rect x="550" y="75" width="140" height="50" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="620" y="105" text-anchor="middle">Office</text>
+  </g>
+
+  <!-- arrows down to the file -->
+  <line x1="140" y1="125" x2="340" y2="198" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="300" y1="125" x2="380" y2="198" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="460" y1="125" x2="420" y2="198" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="620" y1="125" x2="460" y2="198" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+
+  <!-- Center: the file with FLAG signal -->
+  <g>
+    <rect x="270" y="200" width="260" height="130" rx="10" fill="#FFF4E6" stroke="#E08B3C" stroke-width="2"/>
+    <text x="400" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65">api-key.txt</text>
+    <line x1="295" y1="245" x2="505" y2="245" stroke="#C9B89B"/>
+    <text x="310" y="268" font-family="monospace" font-size="13" fill="#3D4F65">sk-xxxx...</text>
+    <text x="310" y="290" font-family="monospace" font-size="13" fill="#3D4F65">sk-yyyy...</text>
+    <text x="310" y="315" font-family="monospace" font-size="14" font-weight="bold" fill="#D14A2B">+ FLAG  (attack hit)</text>
+  </g>
+
+  <!-- arrow down to metrics -->
+  <line x1="400" y1="330" x2="400" y2="380" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- Metrics row -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="120" y="385" width="170" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="205" y="412" text-anchor="middle" font-size="14" fill="#1E3A5F">ASR@3</text>
+    <text x="205" y="438" text-anchor="middle" font-size="13" fill="#3D4F65">attack success</text>
+
+    <rect x="315" y="385" width="170" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="400" y="412" text-anchor="middle" font-size="14" fill="#1E3A5F">TCR</text>
+    <text x="400" y="438" text-anchor="middle" font-size="13" fill="#3D4F65">task still completes</text>
+
+    <rect x="510" y="385" width="170" height="70" rx="8" fill="#1E3A5F"/>
+    <text x="595" y="412" text-anchor="middle" font-size="14" fill="#FFFFFF">ASE (harmonic)</text>
+    <text x="595" y="438" text-anchor="middle" font-size="13" fill="#EFF6FF">stealthy &amp; effective</text>
+  </g>
+</svg>

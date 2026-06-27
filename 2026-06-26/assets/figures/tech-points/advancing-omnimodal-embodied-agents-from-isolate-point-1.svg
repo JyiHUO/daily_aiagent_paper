@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <style>
+    .t{font-family:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;}
+  </style>
+
+  <!-- Title -->
+  <text x="360" y="40" text-anchor="middle" class="t" font-size="20" font-weight="600" fill="#1E3A5F">统一 cyber-physical 技能路由</text>
+
+  <!-- Planner -->
+  <rect x="260" y="80" width="200" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="360" y="108" text-anchor="middle" class="t" font-size="15" font-weight="600" fill="#1E3A5F">规划器</text>
+  <text x="360" y="132" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">输出结构化 JSON 技能调用列表</text>
+
+  <!-- Unified skill bar -->
+  <rect x="120" y="190" width="480" height="56" rx="28" fill="#FFF4E6" stroke="#E8A857" stroke-width="1.8"/>
+  <text x="360" y="214" text-anchor="middle" class="t" font-size="13" font-weight="600" fill="#1E3A5F">统一技能库 T</text>
+  <text x="360" y="234" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">pick-and-place · navigate-to · control-light · web-search</text>
+
+  <!-- Arrow planner -> skill bar -->
+  <line x1="360" y1="150" x2="360" y2="188" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Parallel hint -->
+  <text x="360" y="282" text-anchor="middle" class="t" font-size="11" fill="#7A8A9A" font-style="italic">一步内并行派发</text>
+
+  <!-- Cyber branch -->
+  <rect x="100" y="320" width="200" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text x="200" y="348" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#1E3A5F">Cyber 执行</text>
+  <text x="200" y="372" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">control-light · web-search</text>
+  <text x="200" y="396" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">返回码验证</text>
+
+  <!-- Physical branch -->
+  <rect x="420" y="320" width="200" height="100" rx="10" fill="#FFF4E6" stroke="#E8A857" stroke-width="1.6"/>
+  <text x="520" y="348" text-anchor="middle" class="t" font-size="14" font-weight="600" fill="#1E3A5F">Physical 执行</text>
+  <text x="520" y="372" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">navigate · pick &amp; place</text>
+  <text x="520" y="396" text-anchor="middle" class="t" font-size="10" fill="#3D4F65">底层 VLA / 导航策略</text>
+
+  <!-- Arrows from skill bar to branches -->
+  <line x1="260" y1="246" x2="215" y2="318" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="460" y1="246" x2="505" y2="318" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Bottom caption -->
+  <text x="360" y="455" text-anchor="middle" class="t" font-size="11" fill="#3D4F65">一次计划 · 两路并行 · 同一技能接口</text>
+</svg>

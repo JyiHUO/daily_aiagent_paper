@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/downloaded_pdfs/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of MCP workflow and tool poisoning at- tack mechanism.",
+      "clip": [
+        41.79800033569336,
+        71.68447875976562,
+        306.04644775390625,
+        227.15301513671875
+      ],
+      "clip_area": 41082.319359991816,
+      "page_area": 484704.0,
+      "text_density": 0.06672359374791197,
+      "kind": "embedded_image_with_caption",
+      "xref": 403,
+      "score": 70.45647021511103,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "Figure 1: Overview of MCP workflow and tool poisoning at- tack mechanism.",
+      "clip": [
+        31.79800033569336,
+        65.68447875976562,
+        316.04644775390625,
+        233.15301513671875
+      ],
+      "clip_area": 47602.67145654943,
+      "page_area": 484704.0,
+      "text_density": 0.10709151699769802,
+      "kind": "image_block_with_caption",
+      "score": 69.90342755187756,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/02-p2-image_block_with_caption.png",
+      "filename": "02-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-block-3",
+      "page_index": 4,
+      "caption": "4 ShareLock: a Multi-Tool Threshold Poisoning Attack Framework",
+      "clip": [
+        23.198000335693358,
+        166.3265869140625,
+        324.57244262695315,
+        475.1265869140625
+      ],
+      "clip_area": 93064.42777954103,
+      "page_area": 484704.0,
+      "text_density": 0.7595306404330273,
+      "kind": "captioned_figure",
+      "score": 41.03404919755046,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-11-drawing-caption-19",
+      "page_index": 11,
+      "caption": "Figure 5: Impact of temperature on ShareLock. (Left) ASR peaks at low-to-moderate temperatures, degrading as gen- eration randomness increases. (Right) TCR trends vary by model. Robust models (e.g., Claude) maintain high task com- pletion despite attack failures, whereas others experience complete workflow collapse.",
+      "clip": [
+        35.79800033569336,
+        67.6855239868164,
+        312.04010009765625,
+        198.54498291015625
+      ],
+      "clip_area": 36148.89170669773,
+      "page_area": 484704.0,
+      "text_density": 0.25414884214497613,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.95272382359807,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/04-p12-drawing_cluster_with_caption.png",
+      "filename": "04-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-block-19",
+      "page_index": 11,
+      "caption": "Figure 5: Impact of temperature on ShareLock. (Left) ASR peaks at low-to-moderate temperatures, degrading as gen- eration randomness increases. (Right) TCR trends vary by model. Robust models (e.g., Claude) maintain high task com- pletion despite attack failures, whereas others experience complete workflow collapse.",
+      "clip": [
+        23.198000335693358,
+        18.0,
+        326.2533813476563,
+        175.19308471679688
+      ],
+      "clip_area": 47638.21018129464,
+      "page_area": 484704.0,
+      "text_density": 0.1427677886621169,
+      "kind": "captioned_figure",
+      "score": 35.763246126731815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/05-p12-captioned_figure.png",
+      "filename": "05-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-caption-11",
+      "page_index": 4,
+      "caption": "4.2 Overview of ShareLock",
+      "clip": [
+        299.9549865722656,
+        526.9063110351562,
+        576.2046508789062,
+        609.1829833984375
+      ],
+      "clip_area": 22728.9031206239,
+      "page_area": 484704.0,
+      "text_density": 0.3048676750066326,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.760482867608978,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/06-p5-drawing_cluster_with_caption.png",
+      "filename": "06-p5-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/sharelock-a-stealthy-multi-tool-threshold-poisoning-attack-against-mcp/contact-sheet.svg"
+}

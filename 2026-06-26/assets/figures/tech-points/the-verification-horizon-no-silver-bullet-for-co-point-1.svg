@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">Verifier 的三难困境</text>
+  <text x="300" y="56" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">No Silver Bullet — 三维交集缺位</text>
+
+  <!-- Three circles forming a Venn diagram -->
+  <circle cx="240" cy="220" r="120" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" opacity="0.7"/>
+  <circle cx="360" cy="220" r="120" fill="#FFF1E6" stroke="#E89B5A" stroke-width="2" opacity="0.7"/>
+  <circle cx="300" cy="320" r="120" fill="#EEF2EC" stroke="#7BA37B" stroke-width="2" opacity="0.7"/>
+
+  <!-- Dimension labels -->
+  <text x="150" y="155" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Scalability</text>
+  <text x="450" y="155" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Faithfulness</text>
+  <text x="300" y="450" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Robustness</text>
+
+  <!-- Method labels inside pairwise overlaps -->
+  <text x="195" y="285" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#3D4F65">Unit Tests</text>
+  <text x="300" y="185" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#3D4F65">LLM Judge</text>
+  <text x="405" y="285" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#3D4F65">Human Review</text>
+
+  <!-- Center: missing ideal -->
+  <text x="300" y="263" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#C0392B">✕</text>
+  <text x="300" y="282" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#C0392B">Ideal verifier (empty)</text>
+
+  <!-- Co-evolution note -->
+  <text x="300" y="482" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F">verifier must co-evolve with policy</text>
+</svg>

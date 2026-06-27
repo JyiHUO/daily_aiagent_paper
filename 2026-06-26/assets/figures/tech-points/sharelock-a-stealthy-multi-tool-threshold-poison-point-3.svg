@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="17" font-weight="bold" fill="#1E3A5F">Threshold Resilience (t=2, n=5)</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1E3A5F" text-anchor="middle">
+    <circle cx="90" cy="130" r="32" fill="#FCE8E6" stroke="#D97766" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="90" y="134">share₁</text>
+    <line x1="72" y1="112" x2="108" y2="148" stroke="#D97766" stroke-width="2"/>
+    <line x1="108" y1="112" x2="72" y2="148" stroke="#D97766" stroke-width="2"/>
+
+    <circle cx="200" cy="130" r="32" fill="#FCE8E6" stroke="#D97766" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="200" y="134">share₂</text>
+    <line x1="182" y1="112" x2="218" y2="148" stroke="#D97766" stroke-width="2"/>
+    <line x1="218" y1="112" x2="182" y2="148" stroke="#D97766" stroke-width="2"/>
+
+    <circle cx="310" cy="130" r="32" fill="#FCE8E6" stroke="#D97766" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="310" y="134">share₃</text>
+    <line x1="292" y1="112" x2="328" y2="148" stroke="#D97766" stroke-width="2"/>
+    <line x1="328" y1="112" x2="292" y2="148" stroke="#D97766" stroke-width="2"/>
+
+    <circle cx="420" cy="130" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="420" y="134">share₄</text>
+
+    <circle cx="530" cy="130" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="530" y="134">share₅</text>
+  </g>
+
+  <text x="200" y="188" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#D97766">scanned out by audit</text>
+  <text x="475" y="188" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">survivors ≥ t</text>
+
+  <path d="M 410 162 Q 360 210 320 248" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 520 162 Q 430 210 340 250" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <rect x="170" y="258" width="260" height="78" rx="10" fill="#FFF4E0" stroke="#E6A23C" stroke-width="2"/>
+  <text x="300" y="287" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Malicious Prompt Reconstructed</text>
+  <text x="300" y="315" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">100% recovery from surviving shares</text>
+
+  <text x="300" y="372" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-style="italic">single-point failure → distributed resilience</text>
+</svg>

@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/downloaded_pdfs/life-after-benchmark-saturation-a-case-study-of-core-bench.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench",
+  "candidates": [
+    {
+      "id": "page-5-block-84",
+      "page_index": 5,
+      "caption": "Figure 2: Efficiency measured by accuracy vs. total token usage and estimated cost. GPT-5.3- Codex is the most efficient high-accuracy agent by both token usage and cost. The relationship between token usage and accuracy is not reflected between cost and accuracy.",
+      "clip": [
+        86.0,
+        398.2904968261719,
+        526.0089416503906,
+        593.8679809570312
+      ],
+      "clip_area": 86055.8418030655,
+      "page_area": 484704.0,
+      "text_density": 0.08340010686340521,
+      "kind": "image_block_with_caption",
+      "score": 21.75216960822975,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/01-p6-image_block_with_caption.png",
+      "filename": "01-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2: Efficiency measured by accuracy vs. total token usage and estimated cost. GPT-5.3- Codex is the most efficient high-accuracy agent by both token usage and cost. The relationship between token usage and accuracy is not reflected between cost and accuracy.",
+      "clip": [
+        96.0,
+        404.2904968261719,
+        516.0089416503906,
+        587.8679809570312
+      ],
+      "clip_area": 77104.18482064363,
+      "page_area": 484704.0,
+      "text_density": 0.03129566469185403,
+      "kind": "embedded_image_with_caption",
+      "xref": 756,
+      "score": 20.856713164673817,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/02-p6-embedded_image_with_caption.png",
+      "filename": "02-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-8",
+      "page_index": 9,
+      "caption": "Figure 3: Distribution of durations of reproduc- tion sessions in the randomized study for manual vs. human-agent collaborative sessions. Evaluators were instructed to abandon runs if no result had been produced yet after three hours, a limit that was only reached during manual sessions.",
+      "clip": [
+        90.0,
+        56.00102233886719,
+        323.99761962890625,
+        222.2230224609375
+      ],
+      "clip_area": 38895.55235852022,
+      "page_area": 484704.0,
+      "text_density": 0.17854564928058053,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.519433847148726,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/03-p10-drawing_cluster_with_caption.png",
+      "filename": "03-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-8",
+      "page_index": 9,
+      "caption": "Figure 3: Distribution of durations of reproduc- tion sessions in the randomized study for manual vs. human-agent collaborative sessions. Evaluators were instructed to abandon runs if no result had been produced yet after three hours, a limit that was only reached during manual sessions.",
+      "clip": [
+        77.04099884033204,
+        18.0,
+        338.2576538085938,
+        205.2133331298828
+      ],
+      "clip_area": 48903.240645646845,
+      "page_area": 484704.0,
+      "text_density": 0.13513861709083705,
+      "kind": "captioned_figure",
+      "score": 5.235052315056964,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/04-p10-captioned_figure.png",
+      "filename": "04-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        92.0,
+        58.00102233886719,
+        321.99761962890625,
+        220.2230224609375
+      ],
+      "clip_area": 37310.67387951631,
+      "page_area": 484704.0,
+      "text_density": 0.1754082052009061,
+      "kind": "drawing_cluster",
+      "score": 2.690070731051371,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/05-p10-drawing_cluster.png",
+      "filename": "05-p10-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        92.0,
+        57.997894287109375,
+        520.0010681152344,
+        332.0870056152344
+      ],
+      "clip_area": 117310.43240719289,
+      "page_area": 484704.0,
+      "text_density": 0.20972005068763608,
+      "kind": "drawing_cluster",
+      "score": 0.2167969587418348,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/06-p6-drawing_cluster.png",
+      "filename": "06-p6-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-26/assets/figure_candidates/life-after-benchmark-saturation-a-case-study-of-core-bench/contact-sheet.svg"
+}

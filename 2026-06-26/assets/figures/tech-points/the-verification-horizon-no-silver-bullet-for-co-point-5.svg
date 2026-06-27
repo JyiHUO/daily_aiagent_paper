@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E0A458"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="44" text-anchor="middle" font-size="18" fill="#1E3A5F" font-weight="600">Agentic Verifier for Long-Horizon Tasks</text>
+  <text x="300" y="66" text-anchor="middle" font-size="12" fill="#3D4F65">probe the code, don't just run static tests</text>
+
+  <!-- Spec scroll -->
+  <g>
+    <rect x="40" y="160" width="110" height="80" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.8"/>
+    <line x1="55" y1="182" x2="135" y2="182" stroke="#E0A458" stroke-width="1"/>
+    <line x1="55" y1="198" x2="125" y2="198" stroke="#E0A458" stroke-width="1"/>
+    <line x1="55" y1="214" x2="135" y2="214" stroke="#E0A458" stroke-width="1"/>
+    <line x1="55" y1="230" x2="115" y2="230" stroke="#E0A458" stroke-width="1"/>
+    <text x="95" y="260" text-anchor="middle" font-size="13" fill="#1E3A5F">fuzzy spec</text>
+  </g>
+
+  <!-- Codebase -->
+  <g>
+    <rect x="450" y="160" width="110" height="80" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <rect x="465" y="178" width="80" height="9" fill="#B8D4F0"/>
+    <rect x="465" y="194" width="60" height="9" fill="#B8D4F0"/>
+    <rect x="465" y="210" width="75" height="9" fill="#B8D4F0"/>
+    <rect x="465" y="226" width="50" height="9" fill="#B8D4F0"/>
+    <text x="505" y="260" text-anchor="middle" font-size="13" fill="#1E3A5F">codebase</text>
+  </g>
+
+  <!-- Agent evaluator (magnifier) -->
+  <g>
+    <circle cx="300" cy="200" r="50" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="3"/>
+    <circle cx="300" cy="200" r="38" fill="none" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="335" y1="235" x2="362" y2="262" stroke="#1E3A5F" stroke-width="6" stroke-linecap="round"/>
+    <text x="300" y="196" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">agent</text>
+    <text x="300" y="212" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">evaluator</text>
+  </g>
+
+  <!-- Arrows: spec and code into evaluator -->
+  <line x1="150" y1="200" x2="248" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="450" y1="200" x2="352" y2="200" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <!-- Co-evolution loop -->
+  <g transform="translate(300,355)">
+    <text x="0" y="-32" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">verifier co-evolves with generator</text>
+
+    <rect x="-130" y="-18" width="100" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="-80" y="7" text-anchor="middle" font-size="12" fill="#1E3A5F">generator</text>
+
+    <rect x="30" y="-18" width="100" height="40" rx="6" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+    <text x="80" y="7" text-anchor="middle" font-size="12" fill="#1E3A5F">verifier</text>
+
+    <path d="M-30,-6 C-10,-22 10,-22 30,-6" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M30,10 C10,26 -10,26 -30,10" fill="none" stroke="#E0A458" stroke-width="1.5" marker-end="url(#b)"/>
+  </g>
+</svg>

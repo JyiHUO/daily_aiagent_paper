@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="44" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">架构红利 &gt; 模型大小</text>
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#3D4F65">同一架构，换底座，开源追平闭源</text>
+
+  <!-- baseline section label -->
+  <text x="80" y="142" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#3D4F65">裸模型</text>
+
+  <!-- Qwen 30B baseline -->
+  <rect x="160" y="100" width="170" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="172" y="123" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Qwen3-VL 30B</text>
+  <text x="345" y="123" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#3D4F65">50.0%</text>
+
+  <!-- Gemini baseline -->
+  <rect x="160" y="150" width="250" height="36" rx="4" fill="#FEF3E2" stroke="#E89B4F"/>
+  <text x="172" y="173" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Gemini-3.1-Pro（闭源）</text>
+  <text x="425" y="173" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#3D4F65">76.7%</text>
+
+  <!-- arrow down -->
+  <line x1="245" y1="200" x2="245" y2="252" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="258" y="228" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#4B8BDA">+ OmniAct 架构</text>
+
+  <!-- boosted section label -->
+  <text x="80" y="287" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" font-weight="700" fill="#3D4F65">套架构</text>
+
+  <!-- Qwen 30B boosted -->
+  <rect x="160" y="265" width="260" height="42" rx="4" fill="#DCEBFB" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="172" y="291" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="13" fill="#1E3A5F">Qwen3-VL 30B</text>
+  <text x="435" y="293" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="16" font-weight="700" fill="#1E3A5F">80.0%</text>
+
+  <!-- delta callout -->
+  <text x="510" y="293" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#C9485B">+30.0  追平闭源</text>
+
+  <!-- horizontal compare line: from Gemini bar right edge down to boosted Qwen -->
+  <line x1="410" y1="186" x2="410" y2="265" stroke="#E89B4F" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- bottom takeaway -->
+  <rect x="120" y="355" width="480" height="80" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-dasharray="5 3"/>
+  <text x="360" y="385" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">规划 / 记忆 / 视觉抢占</text>
+  <text x="360" y="410" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif" font-size="12" fill="#3D4F65">把系统拆对，比换大模型更省力</text>
+</svg>
