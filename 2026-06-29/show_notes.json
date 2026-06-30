@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-06-29",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-06-29 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence</strong></li><li><strong>LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior</strong></li><li><strong>Towards Evaluation of Implicit Software World Models in Coding LLMs</strong></li></ul><p>['Agent 研究继续从模型能力转向执行链与系统边界。', '更值得追踪的是评测、约束、协议和运行时设计。']</p>",
+  "report_date": "2026-06-29",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-06-29T21:39:36Z"
+}

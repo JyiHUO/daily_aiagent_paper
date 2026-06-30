@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/downloaded_pdfs/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior",
+  "candidates": [
+    {
+      "id": "page-15-block-10",
+      "page_index": 15,
+      "caption": "Figure 4. Visualization tools. We extend the original PARTNR visualization system by adding a top-down view. In addition, for instantaneous actions such as Talk , the visualization briefly pauses, allowing clearer inspection.",
+      "clip": [
+        84.09297180175781,
+        152.3951416015625,
+        334.3358154296875,
+        356.5408630371094
+      ],
+      "clip_area": 51086.00584650645,
+      "page_area": 484704.0,
+      "text_density": 0.05778478575568943,
+      "kind": "image_block_with_caption",
+      "score": 19.567622287183404,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/01-p16-image_block_with_caption.png",
+      "filename": "01-p16-image_block_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-0-0",
+      "page_index": 15,
+      "caption": "Figure 4. Visualization tools. We extend the original PARTNR visualization system by adding a top-down view. In addition, for instantaneous actions such as Talk , the visualization briefly pauses, allowing clearer inspection.",
+      "clip": [
+        94.09297180175781,
+        158.3951416015625,
+        324.3358154296875,
+        350.5408630371094
+      ],
+      "clip_area": 44240.17729426036,
+      "page_area": 484704.0,
+      "text_density": 0.02252972644150253,
+      "kind": "embedded_image_with_caption",
+      "xref": 532,
+      "score": 18.491557525491782,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/02-p16-embedded_image_with_caption.png",
+      "filename": "02-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-15-embedded-1-0",
+      "page_index": 15,
+      "caption": "Figure 4. Visualization tools. We extend the original PARTNR visualization system by adding a top-down view. In addition, for instantaneous actions such as Talk , the visualization briefly pauses, allowing clearer inspection.",
+      "clip": [
+        305.1493835449219,
+        239.50579833984375,
+        501.697265625,
+        350.5408630371094
+      ],
+      "clip_area": 21823.70680287201,
+      "page_area": 484704.0,
+      "text_density": 0.06276161602168873,
+      "kind": "embedded_image_with_caption",
+      "xref": 533,
+      "score": 18.242485631143023,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/03-p16-embedded_image_with_caption.png",
+      "filename": "03-p16-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-8",
+      "page_index": 2,
+      "caption": "Our agents are implemented on top of the ReAct agent framework ( Yao et al. , 2022 ; Chang et al. , 2024 ). In this",
+      "clip": [
+        24.839998626708983,
+        372.28624267578124,
+        320.03704223632815,
+        681.0862426757812
+      ],
+      "clip_area": 91156.84706665041,
+      "page_area": 484704.0,
+      "text_density": 0.7070708351641067,
+      "kind": "captioned_figure",
+      "score": 15.012853856296118,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-42",
+      "page_index": 8,
+      "caption": "Figure 3. Case study on law-guided inference in TDW-MAT. During task execution, agents explicitly follow both automatically generated laws and user-defined laws to guide communication and planning, thereby achieving more efficient coordination.",
+      "clip": [
+        9.191450119018555,
+        478.93841552734375,
+        352.79449462890625,
+        684.0532836914062
+      ],
+      "clip_area": 70478.09317541611,
+      "page_area": 484704.0,
+      "text_density": 0.391179603788217,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.78308992417129,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/05-p9-drawing_cluster_with_caption.png",
+      "filename": "05-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-embedded-4-0",
+      "page_index": 16,
+      "caption": "Figure 5. Case studies on PARTNR-Dialog demonstrating law-guided planning and communication.",
+      "clip": [
+        289.35870361328125,
+        371.3067321777344,
+        549.001220703125,
+        513.1556396484375
+      ],
+      "clip_area": 36830.0073821377,
+      "page_area": 484704.0,
+      "text_density": 0.04070204008294959,
+      "kind": "embedded_image_with_caption",
+      "xref": 550,
+      "score": 6.409222304245975,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/06-p17-embedded_image_with_caption.png",
+      "filename": "06-p17-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/llawco-learning-laws-of-cooperation-for-modeling-embodied-multi-agent-behavior/contact-sheet.svg"
+}

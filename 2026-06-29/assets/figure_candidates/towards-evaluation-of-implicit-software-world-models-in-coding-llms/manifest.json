@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/downloaded_pdfs/towards-evaluation-of-implicit-software-world-models-in-coding-llms.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-152",
+      "page_index": 9,
+      "caption": "Figure 2. Wall-clock time: predicted vs. ground-truth log 10 ( ms ) for all twelve models. Layout and colour coding identical to Figure 1 . CWM is the only model whose bias is negative ( b = − 0 . 64), reflecting systematic under-prediction of execution time.",
+      "clip": [
+        52.865997314453125,
+        198.23623657226562,
+        542.4220581054688,
+        617.6370239257812
+      ],
+      "clip_area": 205320.1973494375,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14043853729257336,
+      "kind": "drawing_cluster_with_caption",
+      "score": 51.58599052261323,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-134",
+      "page_index": 8,
+      "caption": "Figure 1. Peak heap allocation: predicted vs. ground-truth log 10 ( bytes ) for all twelve models. Each panel’s legend reports MAE, fitted slope s , and bias b ; dashed diagonal is y = x (perfect calibration). Points are coloured by test outcome (green = pass, red = fail).",
+      "clip": [
+        52.865997314453125,
+        197.2613525390625,
+        542.4127197265625,
+        618.612060546875
+      ],
+      "clip_area": 206270.85809124634,
+      "page_area": 501156.9211820215,
+      "text_density": 0.13652421754475838,
+      "kind": "drawing_cluster_with_caption",
+      "score": 38.74497241622839,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/02-p9-drawing_cluster_with_caption.png",
+      "filename": "02-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        199.2613525390625,
+        540.4127197265625,
+        616.612060546875
+      ],
+      "clip_area": 202643.26836956665,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1344915453082905,
+      "kind": "drawing_cluster",
+      "score": 2.156469984632349,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/03-p9-drawing_cluster.png",
+      "filename": "03-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        54.865997314453125,
+        200.23623657226562,
+        540.4220581054688,
+        615.6370239257812
+      ],
+      "clip_area": 201700.3699568594,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1384596742532699,
+      "kind": "drawing_cluster",
+      "score": 1.9936399864066638,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/04-p10-drawing_cluster.png",
+      "filename": "04-p10-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.6942097969043319,
+      "score": -11.06269212257519,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.6768760066927902,
+      "score": -11.06269212257519,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/towards-evaluation-of-implicit-software-world-models-in-coding-llms/contact-sheet.svg"
+}

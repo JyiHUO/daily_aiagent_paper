@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/downloaded_pdfs/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-182",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        41.24399948120117,
+        40.067718505859375,
+        570.95361328125,
+        311.6135559082031
+      ],
+      "clip_area": 143840.44065940636,
+      "page_area": 484704.0,
+      "text_density": 0.2882057129653079,
+      "kind": "drawing_cluster_with_caption",
+      "score": 59.50765722208153,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-11-0",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        49.904212951660156,
+        101.19896697998047,
+        307.4962158203125,
+        207.91891479492188
+      ],
+      "clip_area": 27490.205103688815,
+      "page_area": 484704.0,
+      "text_density": 0.2748406679397095,
+      "kind": "embedded_image_with_caption",
+      "xref": 101,
+      "score": 53.615006646991745,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-block-182",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        39.904212951660156,
+        192.74009704589844,
+        317.1162109375,
+        311.2066955566406
+      ],
+      "clip_area": 32840.36246774916,
+      "page_area": 484704.0,
+      "text_density": 0.30901390566250625,
+      "kind": "image_block_with_caption",
+      "score": 52.62405857655794,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/03-p2-image_block_with_caption.png",
+      "filename": "03-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        49.904212951660156,
+        198.74009704589844,
+        307.1162109375,
+        305.2066955566406
+      ],
+      "clip_area": 27384.48652170424,
+      "page_area": 484704.0,
+      "text_density": 0.3126014473736462,
+      "kind": "embedded_image_with_caption",
+      "xref": 90,
+      "score": 51.348185230044606,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/04-p2-embedded_image_with_caption.png",
+      "filename": "04-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-22-0",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        289.4500427246094,
+        101.19895935058594,
+        560.4697875976562,
+        211.592529296875
+      ],
+      "clip_area": 29918.837162468117,
+      "page_area": 484704.0,
+      "text_density": 0.39773737036834084,
+      "kind": "embedded_image_with_caption",
+      "xref": 112,
+      "score": 47.33243152402743,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/05-p2-embedded_image_with_caption.png",
+      "filename": "05-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-33-0",
+      "page_index": 1,
+      "caption": "Fig. 1. A modular view of agentic embodied AI. Perception turns multimodal observations into structured context; memory stores spatial, object, and task information; the foundation-model brain reasons over these resources; planning/execution grounds decisions in action; and the skill/tool library provides callable embodied capabilities.",
+      "clip": [
+        289.3233642578125,
+        198.74009704589844,
+        560.4697875976562,
+        305.2066955566406
+      ],
+      "clip_area": 28868.03739134688,
+      "page_area": 484704.0,
+      "text_density": 0.3931368934437832,
+      "kind": "embedded_image_with_caption",
+      "xref": 123,
+      "score": 47.32075597101496,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/06-p2-embedded_image_with_caption.png",
+      "filename": "06-p2-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-29/assets/figure_candidates/when-multi-robot-systems-meet-agentic-ai-towards-embodied-collective-intelligenc/contact-sheet.svg"
+}
