@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-26
+- **日期**：2026-06-29
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - The Verification Horizon: No Silver Bullet for Coding Agent Rewards
-  - Life After Benchmark Saturation: A Case Study of CORE-Bench
-  - ShareLock: A Stealthy Multi-Tool Threshold Poisoning Attack Against MCP
-- **日报路径**：[2026-06-26/daily_report.md](2026-06-26/daily_report.md)
+  - When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence
+  - LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior
+  - Towards Evaluation of Implicit Software World Models in Coding LLMs
+- **日报路径**：[2026-06-29/daily_report.md](2026-06-29/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-29 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence | [2026-06-29/daily_report.md](2026-06-29/daily_report.md) |
+|  |  |  | 2 | LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior |  |
+|  |  |  | 3 | Towards Evaluation of Implicit Software World Models in Coding LLMs |  |
 | 2026-06-26 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | The Verification Horizon: No Silver Bullet for Coding Agent Rewards | [2026-06-26/daily_report.md](2026-06-26/daily_report.md) |
 |  |  |  | 2 | Life After Benchmark Saturation: A Case Study of CORE-Bench |  |
 |  |  |  | 3 | ShareLock: A Stealthy Multi-Tool Threshold Poisoning Attack Against MCP |  |
