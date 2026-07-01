@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/downloaded_pdfs/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb",
+  "candidates": [
+    {
+      "id": "page-2-block-1",
+      "page_index": 2,
+      "caption": "Fig. 2: Chunk-based Autoregressive Generation Pipeline.",
+      "clip": [
+        26.958999633789062,
+        35.99946594238281,
+        322.01611328125,
+        201.01300048828125
+      ],
+      "clip_area": 48688.41721587838,
+      "page_area": 484704.0,
+      "text_density": 0.07703593866096245,
+      "kind": "image_block_with_caption",
+      "score": 28.54098241350976,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Fig. 2: Chunk-based Autoregressive Generation Pipeline.",
+      "clip": [
+        36.95899963378906,
+        41.99946594238281,
+        312.01611328125,
+        195.01300048828125
+      ],
+      "clip_area": 42087.46116119088,
+      "page_area": 484704.0,
+      "text_density": 0.041209721158220435,
+      "kind": "embedded_image_with_caption",
+      "xref": 278,
+      "score": 27.467638457346567,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-1-0",
+      "page_index": 7,
+      "caption": "Fig. 7: Evaluation of action compliance through swapping. The action from a source sequence (top row) is transplanted into a different scene. ViPSim demonstrates precise adherence to the transplanted actions, proving that the generated motion is driven by numerical action.",
+      "clip": [
+        299.9729919433594,
+        316.5596008300781,
+        575.02392578125,
+        509.97601318359375
+      ],
+      "clip_area": 53199.364837409,
+      "page_area": 484704.0,
+      "text_density": 0.05881628489895361,
+      "kind": "embedded_image_with_caption",
+      "xref": 285,
+      "score": 13.591104053748989,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/03-p8-embedded_image_with_caption.png",
+      "filename": "03-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-block-11",
+      "page_index": 7,
+      "caption": "Fig. 7: Evaluation of action compliance through swapping. The action from a source sequence (top row) is transplanted into a different scene. ViPSim demonstrates precise adherence to the transplanted actions, proving that the generated motion is driven by numerical action.",
+      "clip": [
+        289.9729919433594,
+        310.5596008300781,
+        585.02392578125,
+        515.9760131835938
+      ],
+      "clip_area": 60608.304290534,
+      "page_area": 484704.0,
+      "text_density": 0.1128929765851746,
+      "kind": "image_block_with_caption",
+      "score": 12.699847008117679,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/04-p8-image_block_with_caption.png",
+      "filename": "04-p8-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        299.9729919433594,
+        209.37193298339844,
+        575.0328369140625,
+        416.5679931640625
+      ],
+      "clip_area": 56991.31619183393,
+      "page_area": 484704.0,
+      "text_density": 0.03287480183819778,
+      "kind": "embedded_image",
+      "xref": 69,
+      "score": 11.633236846575933,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/05-p1-embedded_image.png",
+      "filename": "05-p1-embedded_image.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        60.920997619628906,
+        42.0001220703125,
+        547.5967407226562,
+        322.3340148925781
+      ],
+      "clip_area": 136431.70560624055,
+      "page_area": 484704.0,
+      "text_density": 0.028696336297669243,
+      "kind": "embedded_image",
+      "xref": 279,
+      "score": 7.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/06-p4-embedded_image.png",
+      "filename": "06-p4-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/vipsim-collaborating-visual-and-parameter-spaces-for-consistent-long-horizon-emb/contact-sheet.svg"
+}

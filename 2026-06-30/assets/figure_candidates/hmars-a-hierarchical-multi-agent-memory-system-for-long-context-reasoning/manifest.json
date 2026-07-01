@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/downloaded_pdfs/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-18",
+      "page_index": 7,
+      "caption": "Figure 4: Granularity ablations for HMARS. Page size P controls the evidence unit returned to the base model, while sub-agent capacity C sub controls the size of each local memory region.",
+      "clip": [
+        56.959999084472656,
+        54.86724853515625,
+        300.3193359375,
+        367.6600036621094
+      ],
+      "clip_area": 76121.03746012668,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20603425883588755,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.283733774959266,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-block-18",
+      "page_index": 7,
+      "caption": "Figure 4: Granularity ablations for HMARS. Page size P controls the evidence unit returned to the base model, while sub-agent capacity C sub controls the size of each local memory region.",
+      "clip": [
+        40.74320373535156,
+        19.744146728515602,
+        320.14215698242185,
+        348.5001525878906
+      ],
+      "clip_area": 91854.08391079708,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15854343866696954,
+      "kind": "captioned_figure",
+      "score": 27.307994612324016,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/02-p8-captioned_figure.png",
+      "filename": "02-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        290.1419982910156,
+        205.90835571289062,
+        540.4093017578125,
+        361.6561279296875
+      ],
+      "clip_area": 38978.57497365866,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1612094004435159,
+      "kind": "drawing_cluster",
+      "score": 9.560531250874142,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/03-p1-drawing_cluster.png",
+      "filename": "03-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-drawing-caption-42",
+      "page_index": 7,
+      "caption": "Figure 5: Accuracy–compute trade-off on the full evalu- ation set.",
+      "clip": [
+        297.6919860839844,
+        54.866455078125,
+        530.1383666992188,
+        245.6199951171875
+      ],
+      "clip_area": 44339.96997162327,
+      "page_area": 501156.9211820215,
+      "text_density": 0.16022540122516835,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.679142259507936,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/04-p8-drawing_cluster_with_caption.png",
+      "filename": "04-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-34",
+      "page_index": 6,
+      "caption": "Figure 3: Architectural ablations for HMARS.",
+      "clip": [
+        292.2349853515625,
+        54.8653564453125,
+        535.5926513671875,
+        205.030029296875
+      ],
+      "clip_area": 36543.72430315614,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1780302363557502,
+      "kind": "drawing_cluster_with_caption",
+      "score": 7.524227199801168,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/05-p7-drawing_cluster_with_caption.png",
+      "filename": "05-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        58.03900146484375,
+        56.865509033203125,
+        534.4112548828125,
+        283.5918273925781
+      ],
+      "clip_area": 108006.12718601525,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15656522877352796,
+      "kind": "drawing_cluster",
+      "score": 6.606154353432936,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/06-p4-drawing_cluster.png",
+      "filename": "06-p4-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/hmars-a-hierarchical-multi-agent-memory-system-for-long-context-reasoning/contact-sheet.svg"
+}

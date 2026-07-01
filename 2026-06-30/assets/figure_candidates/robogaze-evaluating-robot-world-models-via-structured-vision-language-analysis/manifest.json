@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/downloaded_pdfs/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis",
+  "candidates": [
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "Figure 2: The RoboGaze Framework . A three-phase pipeline for video generation diagnosis: (1) extracting task and scene context memories; (2) routing suspicious temporal spans to six dimension-specific specialists to generate glitch hypotheses; and (3) verifying and synthesizing hypotheses into a final structured glitch report.",
+      "clip": [
+        88.71600341796875,
+        54.00386047363281,
+        520.7535095214844,
+        256.08697509765625
+      ],
+      "clip_area": 87307.48486779397,
+      "page_area": 484704.0,
+      "text_density": 0.05146311582171805,
+      "kind": "image_block_with_caption",
+      "score": 54.970083165197714,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: The RoboGaze Framework . A three-phase pipeline for video generation diagnosis: (1) extracting task and scene context memories; (2) routing suspicious temporal spans to six dimension-specific specialists to generate glitch hypotheses; and (3) verifying and synthesizing hypotheses into a final structured glitch report.",
+      "clip": [
+        98.71600341796875,
+        60.00386047363281,
+        510.7535095214844,
+        250.08697509765625
+      ],
+      "clip_area": 78321.37250207132,
+      "page_area": 484704.0,
+      "text_density": 0.027031298377616367,
+      "kind": "embedded_image_with_caption",
+      "xref": 582,
+      "score": 53.870237472245236,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-block-1",
+      "page_index": 1,
+      "caption": "Figure 1: RoboGaze vs. Monolithic VLM Judges . While standard scalar evaluators fail to detect fine-grained physical anomalies like object penetration (A, B), RoboGaze delivers highly interpretable, temporally localized failure diagnostics, approaching the human ceiling on both description F 1 and clean-clip accuracy (C).",
+      "clip": [
+        124.35400390625,
+        46.78767395019531,
+        485.16424560546875,
+        259.61199951171875
+      ],
+      "clip_area": 76789.19634532649,
+      "page_area": 484704.0,
+      "text_density": 0.0360903678790449,
+      "kind": "image_block_with_caption",
+      "score": 35.85321329272585,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/03-p2-image_block_with_caption.png",
+      "filename": "03-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: RoboGaze vs. Monolithic VLM Judges . While standard scalar evaluators fail to detect fine-grained physical anomalies like object penetration (A, B), RoboGaze delivers highly interpretable, temporally localized failure diagnostics, approaching the human ceiling on both description F 1 and clean-clip accuracy (C).",
+      "clip": [
+        134.35400390625,
+        52.78767395019531,
+        475.16424560546875,
+        253.61199951171875
+      ],
+      "clip_area": 68442.9869337054,
+      "page_area": 484704.0,
+      "text_density": 0.008370042814410181,
+      "kind": "embedded_image_with_caption",
+      "xref": 581,
+      "score": 34.760477632596725,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/04-p2-embedded_image_with_caption.png",
+      "filename": "04-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-block-1",
+      "page_index": 17,
+      "caption": "Figure 7: The annotation interface used for all 382 clips. Annotators see the generated video and the task instruction only; no model-generated proposals are shown.",
+      "clip": [
+        86.0,
+        53.995208740234375,
+        525.9931945800781,
+        345.46600341796875
+      ],
+      "clip_area": 128245.16607705038,
+      "page_area": 484704.0,
+      "text_density": 0.046481282361462754,
+      "kind": "image_block_with_caption",
+      "score": 19.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/05-p18-image_block_with_caption.png",
+      "filename": "05-p18-image_block_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-0-0",
+      "page_index": 17,
+      "caption": "Figure 7: The annotation interface used for all 382 clips. Annotators see the generated video and the task instruction only; no model-generated proposals are shown.",
+      "clip": [
+        96.0,
+        59.995208740234375,
+        515.9931945800781,
+        339.46600341796875
+      ],
+      "clip_area": 117375.83184853476,
+      "page_area": 484704.0,
+      "text_density": 0.030531510632217988,
+      "kind": "embedded_image_with_caption",
+      "xref": 594,
+      "score": 18.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/06-p18-embedded_image_with_caption.png",
+      "filename": "06-p18-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-06-30/assets/figure_candidates/robogaze-evaluating-robot-world-models-via-structured-vision-language-analysis/contact-sheet.svg"
+}
