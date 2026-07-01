@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-29
+- **日期**：2026-06-30
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence
-  - LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior
-  - Towards Evaluation of Implicit Software World Models in Coding LLMs
-- **日报路径**：[2026-06-29/daily_report.md](2026-06-29/daily_report.md)
+  - RoboGaze: Evaluating Robot World Models via Structured Vision-Language Analysis
+  - HMARS: A Hierarchical Multi-Agent Memory System for Long-Context Reasoning
+  - ViPSim: Collaborating Visual and Parameter Spaces for Consistent Long-Horizon Embodied World Models
+- **日报路径**：[2026-06-30/daily_report.md](2026-06-30/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-30 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | RoboGaze: Evaluating Robot World Models via Structured Vision-Language Analysis | [2026-06-30/daily_report.md](2026-06-30/daily_report.md) |
+|  |  |  | 2 | HMARS: A Hierarchical Multi-Agent Memory System for Long-Context Reasoning |  |
+|  |  |  | 3 | ViPSim: Collaborating Visual and Parameter Spaces for Consistent Long-Horizon Embodied World Models |  |
 | 2026-06-29 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence | [2026-06-29/daily_report.md](2026-06-29/daily_report.md) |
 |  |  |  | 2 | LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior |  |
 |  |  |  | 3 | Towards Evaluation of Implicit Software World Models in Coding LLMs |  |

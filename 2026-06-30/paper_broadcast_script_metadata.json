@@ -1,7 +1,7 @@
 {
   "date": "2026-06-30",
   "target_minutes": 11,
-  "provider": "litellm-opus",
+  "provider": "bedrock-opus-47",
   "audio_provider": "moss",
   "audio_voice_name": "Steve"
 }
