@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-30
+- **日期**：2026-07-01
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - RoboGaze: Evaluating Robot World Models via Structured Vision-Language Analysis
-  - HMARS: A Hierarchical Multi-Agent Memory System for Long-Context Reasoning
-  - ViPSim: Collaborating Visual and Parameter Spaces for Consistent Long-Horizon Embodied World Models
-- **日报路径**：[2026-06-30/daily_report.md](2026-06-30/daily_report.md)
+  - AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance
+  - MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning
+  - Investigating Multi-Agent Deliberation in Law
+- **日报路径**：[2026-07-01/daily_report.md](2026-07-01/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-01 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance | [2026-07-01/daily_report.md](2026-07-01/daily_report.md) |
+|  |  |  | 2 | MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning |  |
+|  |  |  | 3 | Investigating Multi-Agent Deliberation in Law |  |
 | 2026-06-30 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | RoboGaze: Evaluating Robot World Models via Structured Vision-Language Analysis | [2026-06-30/daily_report.md](2026-06-30/daily_report.md) |
 |  |  |  | 2 | HMARS: A Hierarchical Multi-Agent Memory System for Long-Context Reasoning |  |
 |  |  |  | 3 | ViPSim: Collaborating Visual and Parameter Spaces for Consistent Long-Horizon Embodied World Models |  |
