@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/downloaded_pdfs/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col",
+  "candidates": [
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Methodology overview. MultiUAV-Plat provides the interaction substrate, the MultiUAV-Plat Benchmark supplies standardized tasks and automatic validation, and the proposed MultiUAV-Agent Workflow, named Agent4Drone, performs closed- loop multi-UAV task planning under agent-level partial observability.",
+      "clip": [
+        63.94200134277344,
+        43.273406982421875,
+        531.3300170898438,
+        256.72100830078125
+      ],
+      "clip_area": 99762.85084615974,
+      "page_area": 472471.1505658701,
+      "text_density": 0.027849966123933218,
+      "kind": "embedded_image_with_caption",
+      "xref": 376,
+      "score": 91.10847612051289,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/01-p4-embedded_image_with_caption.png",
+      "filename": "01-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-2",
+      "page_index": 3,
+      "caption": "Figure 2: Methodology overview. MultiUAV-Plat provides the interaction substrate, the MultiUAV-Plat Benchmark supplies standardized tasks and automatic validation, and the proposed MultiUAV-Agent Workflow, named Agent4Drone, performs closed- loop multi-UAV task planning under agent-level partial observability.",
+      "clip": [
+        53.94200134277344,
+        37.273406982421875,
+        541.3300170898438,
+        262.72100830078125
+      ],
+      "clip_area": 109880.45906149177,
+      "page_area": 472471.1505658701,
+      "text_density": 0.056038609845030805,
+      "kind": "image_block_with_caption",
+      "score": 91.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/02-p4-image_block_with_caption.png",
+      "filename": "02-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-block-4",
+      "page_index": 1,
+      "caption": "Figure 1: MultiUAV-Plat platform views for UAV task planning. The 2D and 3D views represent the same underlying mission state. The 2D view is designed for quick overview, scenario inspection, and task-level spatial reasoning, while the 3D view is designed for intuitive visualization of UAV execution and environment geometry.",
+      "clip": [
+        62.22699737548828,
+        37.2760009765625,
+        307.6990051269531,
+        224.3800048828125
+      ],
+      "clip_area": 45928.79549720511,
+      "page_area": 472471.1505658701,
+      "text_density": 0.03801608577505586,
+      "kind": "image_block_with_caption",
+      "score": 87.51031994996895,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/03-p2-image_block_with_caption.png",
+      "filename": "03-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-drawing-caption-13",
+      "page_index": 10,
+      "caption": "Figure 7: Scenario-family task pass rates across completed method–backend runs. Hue denotes the backend LLM and shade intensity denotes the pass rate.",
+      "clip": [
+        33.30699920654297,
+        223.76336669921875,
+        306.6726989746094,
+        361.66497802734375
+      ],
+      "clip_area": 37697.570479856804,
+      "page_area": 472471.1505658701,
+      "text_density": 0.2792526909650897,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.46370043631525,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/04-p11-drawing_cluster_with_caption.png",
+      "filename": "04-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-1-0",
+      "page_index": 1,
+      "caption": "2D overview view 3D visualization view",
+      "clip": [
+        285.6510009765625,
+        43.274139404296875,
+        523.0490112304688,
+        218.3800048828125
+      ],
+      "clip_area": 41569.78404838778,
+      "page_area": 472471.1505658701,
+      "text_density": 0.03393390788859714,
+      "kind": "embedded_image_with_caption",
+      "xref": 373,
+      "score": 27.46188648942653,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/05-p2-embedded_image_with_caption.png",
+      "filename": "05-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "2D overview view 3D visualization view",
+      "clip": [
+        72.22699737548828,
+        43.2760009765625,
+        297.6990051269531,
+        218.3800048828125
+      ],
+      "clip_area": 39481.05132606253,
+      "page_area": 472471.1505658701,
+      "text_density": 0.03228995557273852,
+      "kind": "embedded_image_with_caption",
+      "xref": 372,
+      "score": 27.438678348067363,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/06-p2-embedded_image_with_caption.png",
+      "filename": "06-p2-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/multiuav-plat-an-llm-oriented-platform-benchmark-and-framework-for-multi-uav-col/contact-sheet.svg"
+}

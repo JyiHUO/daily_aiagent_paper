@@ -1,0 +1,7 @@
+{
+  "date": "2026-07-01",
+  "target_minutes": 11,
+  "provider": "litellm-opus",
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

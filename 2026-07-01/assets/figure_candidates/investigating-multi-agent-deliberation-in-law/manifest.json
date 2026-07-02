@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/downloaded_pdfs/investigating-multi-agent-deliberation-in-law.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law",
+  "candidates": [
+    {
+      "id": "page-1-embedded-1-0",
+      "page_index": 1,
+      "caption": "Figure 1: The pipelines of each of the frameworks we evaluate.",
+      "clip": [
+        164.53799438476562,
+        73.90530395507812,
+        304.5472717285156,
+        405.0409851074219
+      ],
+      "clip_area": 46362.067420870066,
+      "page_area": 484704.0,
+      "text_density": 0.006831377685048366,
+      "kind": "embedded_image_with_caption",
+      "xref": 345,
+      "score": 49.51513408245411,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-2-0",
+      "page_index": 1,
+      "caption": "Figure 1: The pipelines of each of the frameworks we evaluate.",
+      "clip": [
+        307.45098876953125,
+        142.09983825683594,
+        427.2876281738281,
+        405.0409851074219
+      ],
+      "clip_area": 31509.983399685938,
+      "page_area": 484704.0,
+      "text_density": 0.002880480665457824,
+      "kind": "embedded_image_with_caption",
+      "xref": 346,
+      "score": 49.35011092666318,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-8",
+      "page_index": 9,
+      "caption": "Figure 6: Prompts used in the Multi-Agend Deliberation (MAD) system.",
+      "clip": [
+        36.196998596191406,
+        68.08497619628906,
+        575.802978515625,
+        220.06201171875
+      ],
+      "clip_area": 82007.7171783481,
+      "page_area": 484704.0,
+      "text_density": 0.2611518003203881,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.042088838313916,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/03-p10-drawing_cluster_with_caption.png",
+      "filename": "03-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-4",
+      "page_index": 4,
+      "caption": "Figure 4: Number of questions in which the framework dis- agreed with the baseline.",
+      "clip": [
+        49.816001892089844,
+        301.94195556640625,
+        298.0310363769531,
+        542.156982421875
+      ],
+      "clip_area": 59624.981174712535,
+      "page_area": 484704.0,
+      "text_density": 0.028576386062529678,
+      "kind": "image_block_with_caption",
+      "score": 19.66249979083014,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/04-p5-image_block_with_caption.png",
+      "filename": "04-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-1-0",
+      "page_index": 4,
+      "caption": "Figure 4: Number of questions in which the framework dis- agreed with the baseline.",
+      "clip": [
+        59.816001892089844,
+        307.94195556640625,
+        288.0310363769531,
+        536.156982421875
+      ],
+      "clip_area": 52082.1002237848,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 349,
+      "score": 18.578690002486496,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/05-p5-embedded_image_with_caption.png",
+      "filename": "05-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-block-8",
+      "page_index": 9,
+      "caption": "Figure 6: Prompts used in the Multi-Agend Deliberation (MAD) system.",
+      "clip": [
+        131.54398193359376,
+        18.0,
+        480.45791015625,
+        225.25242614746094
+      ],
+      "clip_area": 72313.25814078657,
+      "page_area": 484704.0,
+      "text_density": 0.26337366738917156,
+      "kind": "captioned_figure",
+      "score": 16.801060602658445,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/06-p10-captioned_figure.png",
+      "filename": "06-p10-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/investigating-multi-agent-deliberation-in-law/contact-sheet.svg"
+}

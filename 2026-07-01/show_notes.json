@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-07-01",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-07-01 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance</strong></li><li><strong>MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning</strong></li><li><strong>Investigating Multi-Agent Deliberation in Law</strong></li></ul><p>['Agent 研究继续从模型能力转向执行链与系统边界。', '更值得追踪的是评测、约束、协议和运行时设计。']</p>",
+  "report_date": "2026-07-01",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-07-01T21:46:09Z"
+}

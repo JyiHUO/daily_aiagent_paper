@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/downloaded_pdfs/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-26",
+      "page_index": 1,
+      "caption": "Tool-enhanced Refactor Workflow",
+      "clip": [
+        49.792999267578125,
+        33.592254638671875,
+        298.92572021484375,
+        197.64474487304688
+      ],
+      "clip_area": 40870.843270264566,
+      "page_area": 484704.0,
+      "text_density": 0.11264537971821574,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.49539769768777,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        51.792999267578125,
+        35.592254638671875,
+        296.92572021484375,
+        195.64474487304688
+      ],
+      "clip_area": 39234.102425538,
+      "page_area": 484704.0,
+      "text_density": 0.10425028965955878,
+      "kind": "drawing_cluster",
+      "score": 12.98091709182134,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/02-p2-drawing_cluster.png",
+      "filename": "02-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        318.8059997558594,
+        37.59022521972656,
+        556.2053833007812,
+        141.614990234375
+      ],
+      "clip_area": 24695.415087882895,
+      "page_area": 484704.0,
+      "text_density": 0.01838202344101469,
+      "kind": "embedded_image",
+      "xref": 51,
+      "score": 11.274393500976476,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/03-p2-embedded_image.png",
+      "filename": "03-p2-embedded_image.png"
+    },
+    {
+      "id": "page-5-block-18",
+      "page_index": 5,
+      "caption": "Fig. 5. Performance improvement over optimized open-source designs under different extra resource budgets. Device limits are Xilinx U200 (U55C for Prometheus).",
+      "clip": [
+        307.23699951171875,
+        183.88888549804688,
+        564.6304931640625,
+        336.7659912109375
+      ],
+      "clip_area": 39349.5723388996,
+      "page_area": 484704.0,
+      "text_density": 0.07985730954858156,
+      "kind": "image_block_with_caption",
+      "score": 4.437217470432218,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/04-p6-image_block_with_caption.png",
+      "filename": "04-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Fig. 5. Performance improvement over optimized open-source designs under different extra resource budgets. Device limits are Xilinx U200 (U55C for Prometheus).",
+      "clip": [
+        317.23699951171875,
+        189.88888549804688,
+        554.6304931640625,
+        330.7659912109375
+      ],
+      "clip_area": 33443.30830081366,
+      "page_area": 484704.0,
+      "text_density": 0.04625605008035724,
+      "kind": "embedded_image_with_caption",
+      "xref": 59,
+      "score": 3.371592314453485,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/05-p6-embedded_image_with_caption.png",
+      "filename": "05-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        69.9489974975586,
+        245.0069580078125,
+        538.7282104492188,
+        466.90234375
+      ],
+      "clip_area": 104019.94428582769,
+      "page_area": 484704.0,
+      "text_density": 0.2216903547533962,
+      "kind": "drawing_cluster",
+      "score": 2.6543558735276456,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/06-p3-drawing_cluster.png",
+      "filename": "06-p3-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-01/assets/figure_candidates/agrefactor-self-evolving-agentic-workflow-for-hls-compatibility-and-performance/contact-sheet.svg"
+}
