@@ -1,0 +1,9 @@
+{
+  "title": "AI Agent 论文播报·2026-07-03",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-07-03 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents</strong></li><li><strong>Atomic Task Graph: A Unified Framework for Agentic Planning and Execution</strong></li><li><strong>Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots</strong></li></ul><p>['Agent 研究继续从模型能力转向执行链与系统边界。', '更值得追踪的是评测、约束、协议和运行时设计。']</p>",
+  "report_date": "2026-07-03",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": true,
+  "generated_at": "2026-07-03T21:44:39Z"
+}

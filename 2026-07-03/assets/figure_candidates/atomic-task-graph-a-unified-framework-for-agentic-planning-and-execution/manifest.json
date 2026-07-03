@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/downloaded_pdfs/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-18",
+      "page_index": 1,
+      "caption": "Figure 1: Comparison between the linear decision paradigm and Atomic Task Graph.",
+      "clip": [
+        90.0,
+        56.00347900390625,
+        521.9903869628906,
+        257.75897216796875
+      ],
+      "clip_area": 87156.4335638322,
+      "page_area": 484704.0,
+      "text_density": 0.10412047418389081,
+      "kind": "drawing_cluster_with_caption",
+      "score": 42.521176366342466,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-77",
+      "page_index": 2,
+      "caption": "Figure 2: Visualization of framework.",
+      "clip": [
+        90.0,
+        55.998016357421875,
+        522.0054931640625,
+        263.551025390625
+      ],
+      "clip_area": 89664.04002507403,
+      "page_area": 484704.0,
+      "text_density": 0.12636743065884742,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.21422127185887,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/02-p3-drawing_cluster_with_caption.png",
+      "filename": "02-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-39",
+      "page_index": 8,
+      "caption": "Figure 6: Effectiveness of pre-execution thought experiment across different backbone models. We report risky plans detected before execution, failure precision, repair success rate, and saved environment interactions.",
+      "clip": [
+        90.0,
+        55.999603271484375,
+        522.0050659179688,
+        193.99798583984375
+      ],
+      "clip_area": 59616.00035801716,
+      "page_area": 484704.0,
+      "text_density": 0.189575752774512,
+      "kind": "drawing_cluster_with_caption",
+      "score": 26.08785483750725,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-59",
+      "page_index": 8,
+      "caption": "Figure 7: Generalization of ATG across dif- ferent open-source backbone models.",
+      "clip": [
+        325.6210021972656,
+        336.1157531738281,
+        504.1773681640625,
+        518.5750122070312
+      ],
+      "clip_area": 32579.262229963206,
+      "page_area": 484704.0,
+      "text_density": 0.08548157757468938,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.033097148073782,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/04-p9-drawing_cluster_with_caption.png",
+      "filename": "04-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-39",
+      "page_index": 8,
+      "caption": "Figure 6: Effectiveness of pre-execution thought experiment across different backbone models. We report risky plans detected before execution, failure precision, repair success rate, and saved environment interactions.",
+      "clip": [
+        76.93199768066407,
+        18.0,
+        536.3451477050781,
+        180.25027465820312
+      ],
+      "clip_area": 74539.90977305146,
+      "page_area": 484704.0,
+      "text_density": 0.12091420552622512,
+      "kind": "captioned_figure",
+      "score": 18.373368888127068,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        92.0,
+        58.00347900390625,
+        519.9903869628906,
+        255.75897216796875
+      ],
+      "clip_area": 84637.45004332438,
+      "page_area": 484704.0,
+      "text_density": 0.09919484586204756,
+      "kind": "drawing_cluster",
+      "score": 13.78872535986964,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/06-p2-drawing_cluster.png",
+      "filename": "06-p2-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/atomic-task-graph-a-unified-framework-for-agentic-planning-and-execution/contact-sheet.svg"
+}

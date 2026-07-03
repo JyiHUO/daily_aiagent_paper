@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/downloaded_pdfs/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-35",
+      "page_index": 2,
+      "caption": "Figure 1 | Architectural taxonomy of embodied models. We first separate VLA models (a-d) from WAMs (e-h), and then organize each family by internal inference structure.",
+      "clip": [
+        22.1185302734375,
+        68.55905151367188,
+        588.2373657226562,
+        398.5180969238281
+      ],
+      "clip_area": 186796.03053353354,
+      "page_area": 484704.0,
+      "text_density": 0.23003869624447798,
+      "kind": "drawing_cluster_with_caption",
+      "score": 57.18241195696684,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-35",
+      "page_index": 2,
+      "caption": "Figure 1 | Architectural taxonomy of embodied models. We first separate VLA models (a-d) from WAMs (e-h), and then organize each family by internal inference structure.",
+      "clip": [
+        30.857000732421874,
+        43.75773925781249,
+        580.2416625976563,
+        352.5577392578125
+      ],
+      "clip_area": 169649.9835839844,
+      "page_area": 484704.0,
+      "text_density": 0.18297032999496468,
+      "kind": "captioned_figure",
+      "score": 49.42148446649473,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/02-p3-captioned_figure.png",
+      "filename": "02-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-3",
+      "page_index": 5,
+      "caption": "3.2. Design Principles and Runtime Architecture",
+      "clip": [
+        31.76199951171875,
+        264.5580322265625,
+        338.0240112304688,
+        573.3580322265625
+      ],
+      "clip_area": 94573.70921875002,
+      "page_area": 484704.0,
+      "text_density": 0.7717202562174791,
+      "kind": "captioned_figure",
+      "score": 6.050818991319446,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/03-p6-captioned_figure.png",
+      "filename": "03-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        24.1185302734375,
+        70.55905151367188,
+        586.2373657226562,
+        396.5180969238281
+      ],
+      "clip_area": 183227.71901009604,
+      "page_area": 484704.0,
+      "text_density": 0.23451863920878724,
+      "kind": "drawing_cluster",
+      "score": -0.7919111671189061,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/04-p3-drawing_cluster.png",
+      "filename": "04-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        10.479927062988281,
+        88.62353515625,
+        575.40673828125,
+        416.16082763671875
+      ],
+      "clip_area": 185034.59819605434,
+      "page_area": 484704.0,
+      "text_density": 0.20607384404712265,
+      "kind": "drawing_cluster",
+      "score": -1.2343354256271137,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/05-p7-drawing_cluster.png",
+      "filename": "05-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-embedded-4-0",
+      "page_index": 6,
+      "caption": "第 7 页内嵌图片候选",
+      "clip": [
+        454.4878234863281,
+        286.9670104980469,
+        576.6051025390625,
+        409.0841979980469
+      ],
+      "clip_area": 14912.618663072586,
+      "page_area": 484704.0,
+      "text_density": 0.20694320639409244,
+      "kind": "embedded_image",
+      "xref": 416,
+      "score": -2.450896620722518,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/06-p7-embedded_image.png",
+      "filename": "06-p7-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/embodied-cpp-a-portable-inference-runtime-of-embodied-ai-models-on-heterogeneous/contact-sheet.svg"
+}

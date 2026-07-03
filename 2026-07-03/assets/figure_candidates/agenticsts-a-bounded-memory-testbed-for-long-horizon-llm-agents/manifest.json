@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/downloaded_pdfs/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents",
+  "candidates": [
+    {
+      "id": "page-5-drawing-caption-30",
+      "page_index": 5,
+      "caption": "Figure 3 Token audit of the bounded-memory contract on ten fixed- A 0 runs (two per cell); dashed line is a transcript- appending counterfactual at 1",
+      "clip": [
+        41.55127716064453,
+        8.0,
+        549.7413330078125,
+        252.57501220703125
+      ],
+      "clip_area": 124290.589112313,
+      "page_area": 484704.0,
+      "text_density": 0.16636850191460587,
+      "kind": "drawing_cluster_with_caption",
+      "score": 31.81788988512365,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/01-p6-drawing_cluster_with_caption.png",
+      "filename": "01-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-30",
+      "page_index": 5,
+      "caption": "Figure 3 Token audit of the bounded-memory contract on ten fixed- A 0 runs (two per cell); dashed line is a transcript- appending counterfactual at 1",
+      "clip": [
+        40.265997314453124,
+        18.0,
+        573.2268310546875,
+        230.65728759765625
+      ],
+      "clip_area": 113338.00529898368,
+      "page_area": 484704.0,
+      "text_density": 0.10430507018976216,
+      "kind": "captioned_figure",
+      "score": 23.54169578861427,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/02-p6-captioned_figure.png",
+      "filename": "02-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-12-drawing-caption-12",
+      "page_index": 12,
+      "caption": "Figure 8 Cost–effect frontier: run score vs. fresh LLM tokens per run (log). Hollow diamonds: our cells (tokens estimated, 5k/call convention); circles/squares: measured competitor usage. The empty band between the clusters spans more than an order of magnitude.",
+      "clip": [
+        52.865997314453125,
+        47.778472900390625,
+        559.1360473632812,
+        366.49200439453125
+      ],
+      "clip_area": 161355.11554077733,
+      "page_area": 484704.0,
+      "text_density": 0.14222515688875317,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.26649058667481,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/03-p13-drawing_cluster_with_caption.png",
+      "filename": "03-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-32",
+      "page_index": 5,
+      "caption": "4 Architecture: Per-Decision Typed Retrieval",
+      "clip": [
+        40.265997314453124,
+        18.0,
+        389.00859985351565,
+        293.2865905761719
+      ],
+      "clip_area": 96004.16204163955,
+      "page_area": 484704.0,
+      "text_density": 0.27777474701760463,
+      "kind": "captioned_figure",
+      "score": 12.200228090517497,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/04-p6-captioned_figure.png",
+      "filename": "04-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-15-block-11",
+      "page_index": 15,
+      "caption": "[42] Z. Z. Wang, J. Mao, D. Fried, and G. Neubig. Agent Workflow Memory, 2024.",
+      "clip": [
+        40.265997314453124,
+        150.2953369140625,
+        468.0497985839844,
+        459.0953369140625
+      ],
+      "clip_area": 132099.63783203127,
+      "page_area": 484704.0,
+      "text_density": 0.7376186463882209,
+      "kind": "captioned_figure",
+      "score": 12.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/05-p16-captioned_figure.png",
+      "filename": "05-p16-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-caption-33",
+      "page_index": 9,
+      "caption": "Figure 5 Auto-mode ascension ladder: per-stream highest attempted ascension (endpoint, not win-rate).",
+      "clip": [
+        165.72900390625,
+        47.779945373535156,
+        446.264892578125,
+        193.14599609375
+      ],
+      "clip_area": 40780.394221516326,
+      "page_area": 484704.0,
+      "text_density": 0.13064836135292518,
+      "kind": "drawing_cluster_with_caption",
+      "score": 10.414213810174672,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/06-p10-drawing_cluster_with_caption.png",
+      "filename": "06-p10-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/assets/figure_candidates/agenticsts-a-bounded-memory-testbed-for-long-horizon-llm-agents/contact-sheet.svg"
+}

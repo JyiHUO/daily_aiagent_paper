@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-03",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 397,
+  "selected_count": 3,
+  "focus_titles": [
+    "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+    "Atomic Task Graph: A Unified Framework for Agentic Planning and Execution",
+    "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-03/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}
