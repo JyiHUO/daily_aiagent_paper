@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-01
+- **日期**：2026-07-02
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance
-  - MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning
-  - Investigating Multi-Agent Deliberation in Law
-- **日报路径**：[2026-07-01/daily_report.md](2026-07-01/daily_report.md)
+  - ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis
+  - Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization
+  - PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents
+- **日报路径**：[2026-07-02/daily_report.md](2026-07-02/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-02 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis | [2026-07-02/daily_report.md](2026-07-02/daily_report.md) |
+|  |  |  | 2 | Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization |  |
+|  |  |  | 3 | PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents |  |
 | 2026-07-01 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance | [2026-07-01/daily_report.md](2026-07-01/daily_report.md) |
 |  |  |  | 2 | MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning |  |
 |  |  |  | 3 | Investigating Multi-Agent Deliberation in Law |  |
