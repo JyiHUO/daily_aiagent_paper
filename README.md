@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-02
+- **日期**：2026-07-03
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis
-  - Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization
-  - PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents
-- **日报路径**：[2026-07-02/daily_report.md](2026-07-02/daily_report.md)
+  - AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents
+  - Atomic Task Graph: A Unified Framework for Agentic Planning and Execution
+  - Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots
+- **日报路径**：[2026-07-03/daily_report.md](2026-07-03/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-03 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents | [2026-07-03/daily_report.md](2026-07-03/daily_report.md) |
+|  |  |  | 2 | Atomic Task Graph: A Unified Framework for Agentic Planning and Execution |  |
+|  |  |  | 3 | Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots |  |
 | 2026-07-02 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis | [2026-07-02/daily_report.md](2026-07-02/daily_report.md) |
 |  |  |  | 2 | Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization |  |
 |  |  |  | 3 | PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents |  |
