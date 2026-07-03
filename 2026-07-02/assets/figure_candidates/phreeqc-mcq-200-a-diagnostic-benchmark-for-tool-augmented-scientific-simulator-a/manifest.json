@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/downloaded_pdfs/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-21",
+      "page_index": 3,
+      "caption": "Figure 1: PHREEQC-MCQ-200 agent harness under the Agent-TOC protocol.",
+      "clip": [
+        119.69900512695312,
+        55.99993896484375,
+        492.30157470703125,
+        241.56201171875
+      ],
+      "clip_area": 69140.90512471087,
+      "page_area": 484704.0,
+      "text_density": 0.11312903938866085,
+      "kind": "drawing_cluster_with_caption",
+      "score": 47.7804899158438,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-1",
+      "page_index": 3,
+      "caption": "Figure 1: PHREEQC-MCQ-200 agent harness under the Agent-TOC protocol.",
+      "clip": [
+        155.09800720214844,
+        8.0,
+        582.8521728515625,
+        216.73959350585938
+      ],
+      "clip_area": 89289.23065809673,
+      "page_area": 484704.0,
+      "text_density": 0.0676926360329617,
+      "kind": "embedded_image_with_caption",
+      "xref": 731,
+      "score": 42.99210256286774,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-1-0",
+      "page_index": 3,
+      "caption": "Figure 1: PHREEQC-MCQ-200 agent harness under the Agent-TOC protocol.",
+      "clip": [
+        238.42889404296875,
+        37.097381591796875,
+        604.0,
+        259.1540069580078
+      ],
+      "clip_area": 81177.48612021189,
+      "page_area": 484704.0,
+      "text_density": 0.061260061947087316,
+      "kind": "embedded_image_with_caption",
+      "xref": 734,
+      "score": 42.90197206800235,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-2-0",
+      "page_index": 3,
+      "caption": "Figure 1: PHREEQC-MCQ-200 agent harness under the Agent-TOC protocol.",
+      "clip": [
+        22.89202880859375,
+        8.0,
+        604.0,
+        257.92877197265625
+      ],
+      "clip_area": 145235.60162338987,
+      "page_area": 484704.0,
+      "text_density": 0.06311288751032502,
+      "kind": "embedded_image_with_caption",
+      "xref": 744,
+      "score": 42.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        121.69900512695312,
+        57.99993896484375,
+        490.30157470703125,
+        239.56201171875
+      ],
+      "clip_area": 66924.24655537494,
+      "page_area": 484704.0,
+      "text_density": 0.10751106813022503,
+      "kind": "drawing_cluster",
+      "score": 9.092938651690664,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        92.0,
+        57.99798583984375,
+        520.0024719238281,
+        287.30499267578125
+      ],
+      "clip_area": 98143.9657552354,
+      "page_area": 484704.0,
+      "text_density": 0.1337157797847728,
+      "kind": "drawing_cluster",
+      "score": 5.8675417213051375,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/06-p7-drawing_cluster.png",
+      "filename": "06-p7-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/phreeqc-mcq-200-a-diagnostic-benchmark-for-tool-augmented-scientific-simulator-a/contact-sheet.svg"
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-02",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 358,
+  "selected_count": 3,
+  "focus_titles": [
+    "ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis",
+    "Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization",
+    "PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/downloaded_pdfs/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-52",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of QPipe .",
+      "clip": [
+        103.35627746582031,
+        50.169891357421875,
+        495.4467468261719,
+        333.540771484375
+      ],
+      "clip_area": 111107.02139203297,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20104460887787898,
+      "kind": "drawing_cluster_with_caption",
+      "score": 32.73732346732726,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-19",
+      "page_index": 9,
+      "caption": "Figure 2: Relation between lengths of 20 requirements and RQ1 metrics.",
+      "clip": [
+        123.02499389648438,
+        100.73019409179688,
+        472.2568359375,
+        457.88800048828125
+      ],
+      "clip_area": 124730.87862717267,
+      "page_area": 501156.9211820215,
+      "text_density": 0.15214957900073933,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.671025259955641,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/02-p10-drawing_cluster_with_caption.png",
+      "filename": "02-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-13-block-10",
+      "page_index": 13,
+      "caption": "[4] Anthropic. Claude models overview. https://platform.claude.com/docs/en/about-claude/models/o verview , 2026. Accessed: 2026-06-22.",
+      "clip": [
+        31.909200286865232,
+        428.5159057617187,
+        568.4066833496094,
+        757.2719116210938
+      ],
+      "clip_area": 176376.76968531546,
+      "page_area": 501156.9211820215,
+      "text_density": 0.5288867555194566,
+      "kind": "captioned_figure",
+      "score": 9.522431699092113,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/03-p14-captioned_figure.png",
+      "filename": "03-p14-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-caption-25",
+      "page_index": 9,
+      "caption": "Figure 3: Distribution of QRR across successful generations of 10 TCS and 10 TCM requirements",
+      "clip": [
+        135.06900024414062,
+        575.8494873046875,
+        460.2269592285156,
+        719.2420043945312
+      ],
+      "clip_area": 46625.218190565705,
+      "page_area": 501156.9211820215,
+      "text_density": 0.22130360224191267,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.039841845380414,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/04-p10-drawing_cluster_with_caption.png",
+      "filename": "04-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-drawing-caption-37",
+      "page_index": 10,
+      "caption": "Figure 4: Pie charts for six patterns observed in 58 successful runs of QPipe",
+      "clip": [
+        86.88099670410156,
+        275.072998046875,
+        508.43511962890625,
+        529.5660400390625
+      ],
+      "clip_area": 107282.59110748209,
+      "page_area": 501156.9211820215,
+      "text_density": 0.22267107904972588,
+      "kind": "drawing_cluster_with_caption",
+      "score": 5.631764047099582,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/05-p11-drawing_cluster_with_caption.png",
+      "filename": "05-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-11-drawing-cluster-1",
+      "page_index": 11,
+      "caption": "第 12 页矢量图主图候选",
+      "clip": [
+        88.88099670410156,
+        348.8034973144531,
+        506.4112548828125,
+        539.0560302734375
+      ],
+      "clip_area": 79436.18920551846,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1450690102365226,
+      "kind": "drawing_cluster",
+      "score": 4.978483710314404,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/06-p12-drawing_cluster.png",
+      "filename": "06-p12-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/leveraging-llm-based-agentic-systems-to-generate-quantum-applications-for-test-o/contact-sheet.svg"
+}

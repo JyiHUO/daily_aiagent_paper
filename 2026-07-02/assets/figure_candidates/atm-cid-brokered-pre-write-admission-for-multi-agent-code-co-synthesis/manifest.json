@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/downloaded_pdfs/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis",
+  "candidates": [
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        44.7503662109375,
+        83.70765686035156,
+        567.150146484375,
+        327.22601318359375
+      ],
+      "clip_area": 127213.93583581038,
+      "page_area": 484704.0,
+      "text_density": 0.13602858975479257,
+      "kind": "drawing_cluster",
+      "score": 4.638284614712446,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/01-p7-drawing_cluster.png",
+      "filename": "01-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-11-drawing-cluster-1",
+      "page_index": 11,
+      "caption": "第 12 页矢量图主图候选",
+      "clip": [
+        40.15999984741211,
+        122.34347534179688,
+        576.0418701171875,
+        634.021240234375
+      ],
+      "clip_area": 274198.8376260932,
+      "page_area": 484704.0,
+      "text_density": 0.08957548733401112,
+      "kind": "drawing_cluster",
+      "score": -1.602676532086385,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/02-p12-drawing_cluster.png",
+      "filename": "02-p12-drawing_cluster.png"
+    },
+    {
+      "id": "page-14-drawing-cluster-0",
+      "page_index": 14,
+      "caption": "第 15 页矢量图主图候选",
+      "clip": [
+        53.30406188964844,
+        181.16893005371094,
+        558.696044921875,
+        328.2255554199219
+      ],
+      "clip_area": 74321.23951185658,
+      "page_area": 484704.0,
+      "text_density": 0.26724377206130334,
+      "kind": "drawing_cluster",
+      "score": -2.4088347735464595,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/03-p15-drawing_cluster.png",
+      "filename": "03-p15-drawing_cluster.png"
+    },
+    {
+      "id": "page-14-block-1",
+      "page_index": 14,
+      "caption": "Figure 3 — Write Intent Escalation and Broker Activation Policy. The figure separates the four stages of a write—local edit, declared write intent, broker-governed transaction, and steward apply—and clarifies when a modification may remain a local edit and when it must be escalated into a governed shared write.",
+      "clip": [
+        25.559999847412108,
+        18.0,
+        586.4375244140625,
+        149.8937225341797
+      ],
+      "clip_area": 73976.22460085135,
+      "page_area": 484704.0,
+      "text_density": 0.5848541968406552,
+      "kind": "captioned_figure",
+      "score": -6.178041948879429,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/04-p15-captioned_figure.png",
+      "filename": "04-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7377765894893183,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8417482362339836,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-02/assets/figure_candidates/atm-cid-brokered-pre-write-admission-for-multi-agent-code-co-synthesis/contact-sheet.svg"
+}
