@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/downloaded_pdfs/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati",
+  "candidates": [
+    {
+      "id": "page-10-block-4",
+      "page_index": 10,
+      "caption": "[1] S. Macenski, T. Foote, B. Gerkey, C. Lalancette, and W. Woodall. Robot operating system 2: Design, architecture, and uses in the wild. Science robotics , 7(66):eabm6074, 2022.",
+      "clip": [
+        82.3810028076172,
+        18.0,
+        535.9836364746094,
+        274.93853759765625
+      ],
+      "clip_area": 116547.99734484238,
+      "page_area": 484704.0,
+      "text_density": 0.48951466108416913,
+      "kind": "captioned_figure",
+      "score": 10.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/01-p11-captioned_figure.png",
+      "filename": "01-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-9-embedded-0-0",
+      "page_index": 9,
+      "caption": "Figure 3: Seven-ports cable insertion setup.",
+      "clip": [
+        105.50499725341797,
+        61.953643798828125,
+        300.5643615722656,
+        214.7540283203125
+      ],
+      "clip_area": 29805.14587243623,
+      "page_area": 484704.0,
+      "text_density": 0.025408171645092792,
+      "kind": "embedded_image_with_caption",
+      "xref": 843,
+      "score": 9.331168287471513,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/02-p10-embedded_image_with_caption.png",
+      "filename": "02-p10-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-8-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        147.32972717285156,
+        267.9324645996094,
+        438.4583740234375,
+        399.7370910644531
+      ],
+      "clip_area": 38372.10255135689,
+      "page_area": 484704.0,
+      "text_density": 0.12783797972579108,
+      "kind": "embedded_image",
+      "xref": 306,
+      "score": 8.55607791146761,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/03-p1-embedded_image.png",
+      "filename": "03-p1-embedded_image.png"
+    },
+    {
+      "id": "page-17-drawing-cluster-0",
+      "page_index": 17,
+      "caption": "第 18 页矢量图主图候选",
+      "clip": [
+        94.71600341796875,
+        296.8633117675781,
+        514.8104858398438,
+        502.2510070800781
+      ],
+      "clip_area": 86282.23755812645,
+      "page_area": 484704.0,
+      "text_density": 0.11938524728467069,
+      "kind": "drawing_cluster",
+      "score": 6.5955766913433855,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/04-p18-drawing_cluster.png",
+      "filename": "04-p18-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-embedded-0-0",
+      "page_index": 16,
+      "caption": "第 17 页内嵌图片候选",
+      "clip": [
+        96.0,
+        551.2679443359375,
+        515.9797973632812,
+        685.176025390625
+      ],
+      "clip_area": 56238.6887466535,
+      "page_area": 484704.0,
+      "text_density": 0.0347865294618611,
+      "kind": "embedded_image",
+      "xref": 844,
+      "score": 5.624874319407261,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/05-p17-embedded_image.png",
+      "filename": "05-p17-embedded_image.png"
+    },
+    {
+      "id": "page-9-embedded-1-0",
+      "page_index": 9,
+      "caption": "第 10 页内嵌图片候选",
+      "clip": [
+        96.0,
+        234.34494018554688,
+        515.9797973632812,
+        368.25299072265625
+      ],
+      "clip_area": 56238.67592988722,
+      "page_area": 484704.0,
+      "text_density": 0.03383847155749421,
+      "kind": "embedded_image",
+      "xref": 844,
+      "score": 5.6248741769987465,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/06-p10-embedded_image.png",
+      "filename": "06-p10-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/gap-a-graph-as-policy-multi-agent-self-learning-harness-for-variational-automati/contact-sheet.svg"
+}

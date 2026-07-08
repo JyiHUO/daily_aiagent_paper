@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/downloaded_pdfs/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap",
+  "candidates": [
+    {
+      "id": "page-16-block-1",
+      "page_index": 16,
+      "caption": "Figure 3: Permutation-based feature importance for the behavioural agent, measured as the drop in AUC after permuting each feature independently. Variance- and entropy-driven memory access statistics dominate, indicating that behavioural discrimination relies on irregularity patterns rather than raw activity volume.",
+      "clip": [
+        77.47899627685547,
+        93.10502624511719,
+        517.8030090332031,
+        327.26702880859375
+      ],
+      "clip_area": 103107.15260381217,
+      "page_area": 501156.9211820215,
+      "text_density": 0.032588600538731784,
+      "kind": "image_block_with_caption",
+      "score": 18.145635028931245,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/01-p17-image_block_with_caption.png",
+      "filename": "01-p17-image_block_with_caption.png"
+    },
+    {
+      "id": "page-16-embedded-0-0",
+      "page_index": 16,
+      "caption": "Figure 3: Permutation-based feature importance for the behavioural agent, measured as the drop in AUC after permuting each feature independently. Variance- and entropy-driven memory access statistics dominate, indicating that behavioural discrimination relies on irregularity patterns rather than raw activity volume.",
+      "clip": [
+        87.47899627685547,
+        99.10502624511719,
+        507.8030090332031,
+        321.26702880859375
+      ],
+      "clip_area": 93380.02439946646,
+      "page_area": 501156.9211820215,
+      "text_density": 0.007341543306554455,
+      "kind": "embedded_image_with_caption",
+      "xref": 150,
+      "score": 17.03755582666074,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/02-p17-embedded_image_with_caption.png",
+      "filename": "02-p17-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-block-1",
+      "page_index": 17,
+      "caption": "Figure 4: Reliability diagram for the fused risk score ˆ p . The close alignment between predicted probabilities and empirical positive rates indicates strong calibration, validating the use of ˆ p as a meaningful risk estimate for downstream triage decisions.",
+      "clip": [
+        124.10699462890625,
+        93.10574340820312,
+        471.17230224609375,
+        388.8760070800781
+      ],
+      "clip_area": 102651.59754529595,
+      "page_area": 501156.9211820215,
+      "text_density": 0.02583379764336862,
+      "kind": "image_block_with_caption",
+      "score": 8.140573306058844,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/03-p18-image_block_with_caption.png",
+      "filename": "03-p18-image_block_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-0-0",
+      "page_index": 17,
+      "caption": "Figure 4: Reliability diagram for the fused risk score ˆ p . The close alignment between predicted probabilities and empirical positive rates indicates strong calibration, validating the use of ˆ p as a meaningful risk estimate for downstream triage decisions.",
+      "clip": [
+        134.10699462890625,
+        99.10574340820312,
+        461.17230224609375,
+        382.8760070800781
+      ],
+      "clip_area": 92811.4085804522,
+      "page_area": 501156.9211820215,
+      "text_density": 0.005782385791212942,
+      "kind": "embedded_image_with_caption",
+      "xref": 151,
+      "score": 7.031237873116136,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/04-p18-embedded_image_with_caption.png",
+      "filename": "04-p18-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "第 7 页内嵌图片候选",
+      "clip": [
+        52.512001037597656,
+        99.10601806640625,
+        539.480712890625,
+        251.20501708984375
+      ],
+      "clip_area": 74067.45362857822,
+      "page_area": 501156.9211820215,
+      "text_density": 0.010267074204978867,
+      "kind": "embedded_image",
+      "xref": 144,
+      "score": 5.822971706984203,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/05-p7-embedded_image.png",
+      "filename": "05-p7-embedded_image.png"
+    },
+    {
+      "id": "page-14-block-16",
+      "page_index": 14,
+      "caption": "Figure 2: Mean AUROC with 95% confidence intervals across 6 seeds for each evaluation split. The family-holdout split shows a clear generalisation gap, while temporal and hardware holdouts remain near random-stratified performance.",
+      "clip": [
+        34.748200988769526,
+        38.33798828124998,
+        560.4788269042969,
+        367.093994140625
+      ],
+      "clip_area": 172837.100733938,
+      "page_area": 501156.9211820215,
+      "text_density": 0.17879480395211816,
+      "kind": "captioned_figure",
+      "score": -8.122736728229388,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/06-p15-captioned_figure.png",
+      "filename": "06-p15-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/agentic-sabre-an-uncertainty-aware-neuro-symbolic-multi-agent-framework-for-adap/contact-sheet.svg"
+}

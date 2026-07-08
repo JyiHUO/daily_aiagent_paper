@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/downloaded_pdfs/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-63",
+      "page_index": 6,
+      "caption": "Figure 3 | Overview structure of this survey.",
+      "clip": [
+        161.48419189453125,
+        641.0276489257812,
+        260.05006408691406,
+        764.6126098632812
+      ],
+      "clip_area": 12181.259464666247,
+      "page_area": 501156.9211820215,
+      "text_density": 0.11631096215839609,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.956689597881414,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-caption-41",
+      "page_index": 17,
+      "caption": "Figure 6 | Three paradigms of workflows of single-agent recommenders.",
+      "clip": [
+        35.440250396728516,
+        261.9060974121094,
+        550.8403930664062,
+        398.806396484375
+      ],
+      "clip_area": 70558.43367336725,
+      "page_area": 501156.9211820215,
+      "text_density": 0.21864383800400378,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.46535231613052,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/02-p18-drawing_cluster_with_caption.png",
+      "filename": "02-p18-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-63",
+      "page_index": 6,
+      "caption": "Figure 3 | Overview structure of this survey.",
+      "clip": [
+        32.59819946289062,
+        430.5157836914062,
+        304.3324951171875,
+        759.2717895507812
+      ],
+      "clip_area": 89334.28169431715,
+      "page_area": 501156.9211820215,
+      "text_density": 0.09119903119476333,
+      "kind": "captioned_figure",
+      "score": 16.320661258251057,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/03-p7-captioned_figure.png",
+      "filename": "03-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-1",
+      "page_index": 5,
+      "caption": "Figure 2 | Statistics of the reviewed literature from 2024 to March 2026. Left: distribution over different levels of autonomy. Right: distribution over different roles of agents.",
+      "clip": [
+        32.59819946289062,
+        18.0,
+        562.8966735839844,
+        242.28482055664062
+      ],
+      "clip_area": 118937.89810970983,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01966434439148589,
+      "kind": "captioned_figure",
+      "score": 15.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/04-p6-captioned_figure.png",
+      "filename": "04-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-17-drawing-cluster-0",
+      "page_index": 17,
+      "caption": "第 18 页矢量图主图候选",
+      "clip": [
+        37.440250396728516,
+        263.9060974121094,
+        548.8403930664062,
+        396.806396484375
+      ],
+      "clip_area": 67965.23190639948,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2209530483772503,
+      "kind": "drawing_cluster",
+      "score": 0.29798634076941966,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/05-p18-drawing_cluster.png",
+      "filename": "05-p18-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-block-11",
+      "page_index": 4,
+      "caption": "Jointly covers search and RS; lacks an RS- tailored autonomy framework and level- wise mapping.",
+      "clip": [
+        323.1632019042969,
+        18.0,
+        564.3314880371094,
+        304.06396484375
+      ],
+      "clip_area": 68989.55612572431,
+      "page_area": 501156.9211820215,
+      "text_density": 0.5995182507638913,
+      "kind": "captioned_figure",
+      "score": -1.2334493763808396,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/06-p5-captioned_figure.png",
+      "filename": "06-p5-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/autonomous-information-seeking-a-roadmap-for-agentic-recommender-systems/contact-sheet.svg"
+}

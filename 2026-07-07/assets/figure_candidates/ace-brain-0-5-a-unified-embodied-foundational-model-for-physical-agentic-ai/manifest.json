@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/downloaded_pdfs/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai",
+  "candidates": [
+    {
+      "id": "page-3-embedded-2-0",
+      "page_index": 3,
+      "caption": "Unified architecture across all capabilities",
+      "clip": [
+        132.4991455078125,
+        157.50567626953125,
+        410.8928527832031,
+        314.76324462890625
+      ],
+      "clip_area": 43779.517452679574,
+      "page_area": 484704.0,
+      "text_density": 0.08526970741539816,
+      "kind": "embedded_image_with_caption",
+      "xref": 1201,
+      "score": 30.17025663788366,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/01-p4-embedded_image_with_caption.png",
+      "filename": "01-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-17-0",
+      "page_index": 3,
+      "caption": "Unified architecture across all capabilities",
+      "clip": [
+        58.362892150878906,
+        150.07638549804688,
+        163.14639282226562,
+        314.8414306640625
+      ],
+      "clip_area": 17264.65822077426,
+      "page_area": 484704.0,
+      "text_density": 0.1307312652483009,
+      "kind": "embedded_image_with_caption",
+      "xref": 1216,
+      "score": 27.147953620888327,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-26-0",
+      "page_index": 3,
+      "caption": "Modular Pipeline",
+      "clip": [
+        61.178199768066406,
+        67.02501678466797,
+        200.91835021972656,
+        172.4341278076172
+      ],
+      "clip_area": 14729.885033322673,
+      "page_area": 484704.0,
+      "text_density": 0.09501888829129071,
+      "kind": "embedded_image_with_caption",
+      "xref": 1225,
+      "score": 22.262532091781697,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-block-5",
+      "page_index": 17,
+      "caption": "Figure 4 Visualization of navigation self improvement. The self-improved model corrects an intermediate navigation error and follows the instruction to the target.",
+      "clip": [
+        60.623748779296875,
+        186.44102478027344,
+        551.3921508789062,
+        462.3787536621094
+      ],
+      "clip_area": 135421.51828233385,
+      "page_area": 484704.0,
+      "text_density": 0.025849525664127862,
+      "kind": "image_block_with_caption",
+      "score": 19.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/04-p18-image_block_with_caption.png",
+      "filename": "04-p18-image_block_with_caption.png"
+    },
+    {
+      "id": "page-17-embedded-0-0",
+      "page_index": 17,
+      "caption": "Figure 4 Visualization of navigation self improvement. The self-improved model corrects an intermediate navigation error and follows the instruction to the target.",
+      "clip": [
+        50.63141632080078,
+        176.73074340820312,
+        560.5680541992188,
+        466.3761291503906
+      ],
+      "clip_area": 147700.79418236855,
+      "page_area": 484704.0,
+      "text_density": 0.04638187430801496,
+      "kind": "embedded_image_with_caption",
+      "xref": 1444,
+      "score": 18.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/05-p18-embedded_image_with_caption.png",
+      "filename": "05-p18-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-23-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        425.91607666015625,
+        166.02976989746094,
+        558.070556640625,
+        298.1842346191406
+      ],
+      "clip_area": 17464.804562390782,
+      "page_area": 484704.0,
+      "text_density": 0.004822765328494596,
+      "kind": "embedded_image",
+      "xref": 1222,
+      "score": 7.194053384026565,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/06-p4-embedded_image.png",
+      "filename": "06-p4-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/ace-brain-0-5-a-unified-embodied-foundational-model-for-physical-agentic-ai/contact-sheet.svg"
+}

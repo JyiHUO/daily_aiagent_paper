@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/downloaded_pdfs/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason",
+  "candidates": [
+    {
+      "id": "page-9-drawing-caption-77",
+      "page_index": 9,
+      "caption": "Figure 3: Failure attribution by LLM-as-judge on M3- Bench-robot and M3-Bench-web.",
+      "clip": [
+        57.000999450683594,
+        283.2373962402344,
+        302.5391540527344,
+        465.4690246582031
+      ],
+      "clip_area": 44744.81775187468,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19926594943920511,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.34120767533519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/01-p10-drawing_cluster_with_caption.png",
+      "filename": "01-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-58",
+      "page_index": 9,
+      "caption": "Figure 2: Self-evolution behaviour of H OMER on M3-Bench-robot, processed in batches of 64 questions. (a) Cumulative accuracy with and without self-evolution; (b) per-skill usage and downstream success rate, where green skills remain active and grey ones are automatically banned once their success rate falls below the running baseline.",
+      "clip": [
+        54.0,
+        46.22967529296875,
+        543.5467529296875,
+        253.7030029296875
+      ],
+      "clip_area": 101567.89386407286,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1812174687618651,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.055484028333346,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/02-p10-drawing_cluster_with_caption.png",
+      "filename": "02-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-block-58",
+      "page_index": 9,
+      "caption": "Figure 2: Self-evolution behaviour of H OMER on M3-Bench-robot, processed in batches of 64 questions. (a) Cumulative accuracy with and without self-evolution; (b) per-skill usage and downstream success rate, where green skills remain active and grey ones are automatically banned once their success rate falls below the running baseline.",
+      "clip": [
+        42.23619995117187,
+        18.0,
+        555.3117126464844,
+        237.4589080810547
+      ],
+      "clip_area": 112598.99177924059,
+      "page_area": 501156.9211820215,
+      "text_density": 0.13025680240922552,
+      "kind": "captioned_figure",
+      "score": 4.984591855446469,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/03-p10-captioned_figure.png",
+      "filename": "03-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-0",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        56.0,
+        48.22967529296875,
+        541.5467529296875,
+        251.7030029296875
+      ],
+      "clip_area": 98795.81354180723,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1771206712207579,
+      "kind": "drawing_cluster",
+      "score": 3.2704909883301623,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/04-p10-drawing_cluster.png",
+      "filename": "04-p10-drawing_cluster.png"
+    },
+    {
+      "id": "page-9-block-77",
+      "page_index": 9,
+      "caption": "Figure 3: Failure attribution by LLM-as-judge on M3- Bench-robot and M3-Bench-web.",
+      "clip": [
+        42.23619995117187,
+        112.09281005859373,
+        320.03363647460935,
+        440.84881591796875
+      ],
+      "clip_area": 91327.57566941857,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2486919441732773,
+      "kind": "captioned_figure",
+      "score": 1.8932341903746774,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/05-p10-captioned_figure.png",
+      "filename": "05-p10-captioned_figure.png"
+    },
+    {
+      "id": "page-9-drawing-cluster-1",
+      "page_index": 9,
+      "caption": "第 10 页矢量图主图候选",
+      "clip": [
+        59.000999450683594,
+        285.2373962402344,
+        300.5391540527344,
+        463.4690246582031
+      ],
+      "clip_area": 43049.7386197946,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19697167023125592,
+      "kind": "drawing_cluster",
+      "score": 1.4600302152334734,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/06-p10-drawing_cluster.png",
+      "filename": "06-p10-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-07/assets/figure_candidates/homer-understanding-long-form-videos-with-hierarchical-memory-and-agentic-reason/contact-sheet.svg"
+}
