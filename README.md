@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-03
+- **日期**：2026-07-07
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents
-  - Atomic Task Graph: A Unified Framework for Agentic Planning and Execution
-  - Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots
-- **日报路径**：[2026-07-03/daily_report.md](2026-07-03/daily_report.md)
+  - PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems
+  - Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning
+  - Agentic SABRE: An Uncertainty-Aware Neuro-Symbolic Multi-Agent Framework for Adaptive Ransomware Detection
+- **日报路径**：[2026-07-07/daily_report.md](2026-07-07/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-07 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems | [2026-07-07/daily_report.md](2026-07-07/daily_report.md) |
+|  |  |  | 2 | Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning |  |
+|  |  |  | 3 | Agentic SABRE: An Uncertainty-Aware Neuro-Symbolic Multi-Agent Framework for Adaptive Ransomware Detection |  |
 | 2026-07-03 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents | [2026-07-03/daily_report.md](2026-07-03/daily_report.md) |
 |  |  |  | 2 | Atomic Task Graph: A Unified Framework for Agentic Planning and Execution |  |
 |  |  |  | 3 | Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots |  |
