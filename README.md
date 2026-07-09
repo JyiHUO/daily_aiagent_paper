@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-07
+- **日期**：2026-07-08
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems
-  - Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning
-  - Agentic SABRE: An Uncertainty-Aware Neuro-Symbolic Multi-Agent Framework for Adaptive Ransomware Detection
-- **日报路径**：[2026-07-07/daily_report.md](2026-07-07/daily_report.md)
+  - Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents
+  - GEM-Occ: From Visual Geometry Evidence to Embodied Semantic Occupancy Memory
+  - KAT-Coder-V2.5 Technical Report
+- **日报路径**：[2026-07-08/daily_report.md](2026-07-08/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-08 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents | [2026-07-08/daily_report.md](2026-07-08/daily_report.md) |
+|  |  |  | 2 | GEM-Occ: From Visual Geometry Evidence to Embodied Semantic Occupancy Memory |  |
+|  |  |  | 3 | KAT-Coder-V2.5 Technical Report |  |
 | 2026-07-07 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems | [2026-07-07/daily_report.md](2026-07-07/daily_report.md) |
 |  |  |  | 2 | Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning |  |
 |  |  |  | 3 | Agentic SABRE: An Uncertainty-Aware Neuro-Symbolic Multi-Agent Framework for Adaptive Ransomware Detection |  |

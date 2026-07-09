@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-08",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 322,
+  "selected_count": 3,
+  "focus_titles": [
+    "Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents",
+    "GEM-Occ: From Visual Geometry Evidence to Embodied Semantic Occupancy Memory",
+    "KAT-Coder-V2.5 Technical Report"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-08/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-08/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}
