@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/downloaded_pdfs/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-16",
+      "page_index": 7,
+      "caption": "Fig. 5: Error Breakdown in System Deployment. We analyzed the total 48 failure cases encountered by the Full Model across all tasks reported in Tab. V.",
+      "clip": [
+        306.5270080566406,
+        178.23587036132812,
+        568.4765014648438,
+        365.3590087890625
+      ],
+      "clip_area": 49016.81131609809,
+      "page_area": 484704.0,
+      "text_density": 0.12798145564406818,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.66574389820144,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-49",
+      "page_index": 5,
+      "caption": "C. Robustness to External Disturbances To evaluate the robustness of our framework against real- world uncertainties, we designed three distinct disturbances",
+      "clip": [
+        281.3730224609375,
+        372.20390625,
+        593.6309448242188,
+        681.00390625
+      ],
+      "clip_area": 96425.24642578127,
+      "page_area": 484704.0,
+      "text_density": 0.6697489026825781,
+      "kind": "captioned_figure",
+      "score": 13.071391626953126,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/02-p6-captioned_figure.png",
+      "filename": "02-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        66.21070098876953,
+        204.27401733398438,
+        330.98040771484375,
+        419.1360168457031
+      ],
+      "clip_area": 56888.948597295675,
+      "page_area": 484704.0,
+      "text_density": 0.11492301525737651,
+      "kind": "drawing_cluster",
+      "score": 12.53671851341625,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/03-p1-drawing_cluster.png",
+      "filename": "03-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-embedded-12-0",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        225.82742309570312,
+        217.11666870117188,
+        564.6801147460938,
+        397.34552001953125
+      ],
+      "clip_area": 61071.03138228413,
+      "page_area": 484704.0,
+      "text_density": 0.061279319792276944,
+      "kind": "embedded_image",
+      "xref": 1135,
+      "score": 11.678567015358713,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/04-p1-embedded_image.png",
+      "filename": "04-p1-embedded_image.png"
+    },
+    {
+      "id": "page-7-block-16",
+      "page_index": 7,
+      "caption": "Fig. 5: Error Breakdown in System Deployment. We analyzed the total 48 failure cases encountered by the Full Model across all tasks reported in Tab. V.",
+      "clip": [
+        281.37299194335935,
+        38.62810058593749,
+        593.6322875976563,
+        347.4281005859375
+      ],
+      "clip_area": 96425.6704980469,
+      "page_area": 484704.0,
+      "text_density": 0.33722888612723856,
+      "kind": "captioned_figure",
+      "score": 10.637663171232877,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/05-p8-captioned_figure.png",
+      "filename": "05-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-7",
+      "page_index": 7,
+      "caption": "To identify the limitations of our current framework, we record the failure distribution across individual modules based",
+      "clip": [
+        18.35899963378906,
+        387.178271484375,
+        330.6169372558594,
+        695.978271484375
+      ],
+      "clip_area": 96425.25113769533,
+      "page_area": 484704.0,
+      "text_density": 0.8153802199443302,
+      "kind": "captioned_figure",
+      "score": 6.071391679307727,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/06-p8-captioned_figure.png",
+      "filename": "06-p8-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/a-closed-loop-multi-agent-framework-for-robust-multi-robot-manipulation/contact-sheet.svg"
+}

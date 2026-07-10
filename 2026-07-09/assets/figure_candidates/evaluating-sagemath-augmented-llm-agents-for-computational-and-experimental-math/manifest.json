@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/downloaded_pdfs/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math",
+  "candidates": [
+    {
+      "id": "page-3-block-2",
+      "page_index": 3,
+      "caption": "Figure 1. Overview of the proposed evaluation framework for executable mathematical reasoning. A ReAct-style LLM agent interacts with SageMath and Context7 through iterative tool use, receives verifiable feedback from symbolic computation, and produces a final answer validated through symbolic equivalence checking and an auxiliary LLM-as-a-Judge stage.",
+      "clip": [
+        45.59100341796875,
+        49.058624267578125,
+        551.267822265625,
+        327.9150085449219
+      ],
+      "clip_area": 141011.20931672677,
+      "page_area": 484704.0,
+      "text_density": 0.05645246373629498,
+      "kind": "image_block_with_caption",
+      "score": 50.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 1. Overview of the proposed evaluation framework for executable mathematical reasoning. A ReAct-style LLM agent interacts with SageMath and Context7 through iterative tool use, receives verifiable feedback from symbolic computation, and produces a final answer validated through symbolic equivalence checking and an auxiliary LLM-as-a-Judge stage.",
+      "clip": [
+        55.59100341796875,
+        55.058624267578125,
+        541.267822265625,
+        321.9150085449219
+      ],
+      "clip_area": 129605.95980500802,
+      "page_area": 484704.0,
+      "text_density": 0.02137298441716747,
+      "kind": "embedded_image_with_caption",
+      "xref": 1083,
+      "score": 49.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2. Solve rate across models and evaluation setups. Solve rates for each model without tools and with the tool.",
+      "clip": [
+        43.439998626708984,
+        55.06013488769531,
+        553.4512329101562,
+        259.01702880859375
+      ],
+      "clip_area": 104020.30720921553,
+      "page_area": 484704.0,
+      "text_density": 0.023331460980397158,
+      "kind": "embedded_image_with_caption",
+      "xref": 1014,
+      "score": 26.155781191213507,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/03-p6-embedded_image_with_caption.png",
+      "filename": "03-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-block-2",
+      "page_index": 5,
+      "caption": "Figure 2. Solve rate across models and evaluation setups. Solve rates for each model without tools and with the tool.",
+      "clip": [
+        33.439998626708984,
+        49.06013488769531,
+        563.4512329101562,
+        265.01702880859375
+      ],
+      "clip_area": 114459.57989903487,
+      "page_area": 484704.0,
+      "text_density": 0.05686327589254519,
+      "kind": "image_block_with_caption",
+      "score": 26.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/04-p6-image_block_with_caption.png",
+      "filename": "04-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-block-2",
+      "page_index": 10,
+      "caption": "Figure 8. Mean SageMath sandbox runtime per problem in the tool-augmented setting, with the sandbox share of total solve time.",
+      "clip": [
+        33.439998626708984,
+        49.062225341796875,
+        311.4376525878906,
+        218.72802734375
+      ],
+      "clip_area": 47166.694913985324,
+      "page_area": 484704.0,
+      "text_density": 0.09740220742101255,
+      "kind": "image_block_with_caption",
+      "score": 20.479941942672415,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/05-p11-image_block_with_caption.png",
+      "filename": "05-p11-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "Figure 8. Mean SageMath sandbox runtime per problem in the tool-augmented setting, with the sandbox share of total solve time.",
+      "clip": [
+        43.439998626708984,
+        55.062225341796875,
+        301.4376525878906,
+        212.72802734375
+      ],
+      "clip_area": 40677.40702641208,
+      "page_area": 484704.0,
+      "text_density": 0.03331299161322016,
+      "kind": "embedded_image_with_caption",
+      "xref": 973,
+      "score": 20.451971189182355,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/06-p11-embedded_image_with_caption.png",
+      "filename": "06-p11-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-09/assets/figure_candidates/evaluating-sagemath-augmented-llm-agents-for-computational-and-experimental-math/contact-sheet.svg"
+}
