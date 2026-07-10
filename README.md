@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-08
+- **日期**：2026-07-09
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents
-  - GEM-Occ: From Visual Geometry Evidence to Embodied Semantic Occupancy Memory
-  - KAT-Coder-V2.5 Technical Report
-- **日报路径**：[2026-07-08/daily_report.md](2026-07-08/daily_report.md)
+  - A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation
+  - Reliable and Developer-Aligned Evaluation of Agents for Software Engineering
+  - Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics
+- **日报路径**：[2026-07-09/daily_report.md](2026-07-09/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-09 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation | [2026-07-09/daily_report.md](2026-07-09/daily_report.md) |
+|  |  |  | 2 | Reliable and Developer-Aligned Evaluation of Agents for Software Engineering |  |
+|  |  |  | 3 | Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics |  |
 | 2026-07-08 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents | [2026-07-08/daily_report.md](2026-07-08/daily_report.md) |
 |  |  |  | 2 | GEM-Occ: From Visual Geometry Evidence to Embodied Semantic Occupancy Memory |  |
 |  |  |  | 3 | KAT-Coder-V2.5 Technical Report |  |
