@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-10",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 255,
+  "selected_count": 3,
+  "focus_titles": [
+    "Out of Sight: Compression-Aware Content Protection against Agentic Crawlers",
+    "CausalDS: Benchmarking Causal Reasoning in Data-Science Agents",
+    "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents"
+  ],
+  "broadcast_script_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-10/paper_broadcast_script.txt",
+  "broadcast_audio_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-10/paper_broadcast_audio.mp3",
+  "broadcast_audio_wav_path": ""
+}

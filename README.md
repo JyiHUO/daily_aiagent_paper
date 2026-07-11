@@ -4,19 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-07-09
+- **日期**：2026-07-10
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation
-  - Reliable and Developer-Aligned Evaluation of Agents for Software Engineering
-  - Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics
-- **日报路径**：[2026-07-09/daily_report.md](2026-07-09/daily_report.md)
+  - Out of Sight: Compression-Aware Content Protection against Agentic Crawlers
+  - CausalDS: Benchmarking Causal Reasoning in Data-Science Agents
+  - Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents
+- **日报路径**：[2026-07-10/daily_report.md](2026-07-10/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-10 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Out of Sight: Compression-Aware Content Protection against Agentic Crawlers | [2026-07-10/daily_report.md](2026-07-10/daily_report.md) |
+|  |  |  | 2 | CausalDS: Benchmarking Causal Reasoning in Data-Science Agents |  |
+|  |  |  | 3 | Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents |  |
 | 2026-07-09 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation | [2026-07-09/daily_report.md](2026-07-09/daily_report.md) |
 |  |  |  | 2 | Reliable and Developer-Aligned Evaluation of Agents for Software Engineering |  |
 |  |  |  | 3 | Evaluating SageMath-Augmented LLM Agents for Computational and Experimental Mathematics |  |
