@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/downloaded_pdfs/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-82",
+      "page_index": 2,
+      "caption": "Fig. 1: Data processing pipeline for LongMedBench",
+      "clip": [
+        116.76499938964844,
+        306.26568603515625,
+        498.582763671875,
+        423.0623474121094
+      ],
+      "clip_area": 44595.04012257652,
+      "page_area": 484704.0,
+      "text_density": 0.25978236736332494,
+      "kind": "drawing_cluster_with_caption",
+      "score": 43.70855840400691,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-133",
+      "page_index": 4,
+      "caption": "Fig. 2: Example of the three evaluation tasks in LongMedBench.",
+      "clip": [
+        116.76469421386719,
+        99.83755493164062,
+        498.58447265625,
+        277.8595275878906
+      ],
+      "clip_area": 67972.3101574853,
+      "page_area": 484704.0,
+      "text_density": 0.2951978092560295,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.843379335276957,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/02-p5-drawing_cluster_with_caption.png",
+      "filename": "02-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        118.76473999023438,
+        385.4539794921875,
+        496.583251953125,
+        530.8185424804688
+      ],
+      "clip_area": 54921.42288036831,
+      "page_area": 484704.0,
+      "text_density": 0.062028426868208385,
+      "kind": "drawing_cluster",
+      "score": 8.610238032004093,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/03-p7-drawing_cluster.png",
+      "filename": "03-p7-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-caption-10",
+      "page_index": 6,
+      "caption": "Fig. 3: Temporal reasoning analysis.",
+      "clip": [
+        116.76473999023438,
+        383.4539794921875,
+        498.583251953125,
+        532.8185424804688
+      ],
+      "clip_area": 57030.155180172995,
+      "page_area": 484704.0,
+      "text_density": 0.08368156859616928,
+      "kind": "drawing_cluster_with_caption",
+      "score": 6.412774275120655,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        118.76499938964844,
+        308.26568603515625,
+        496.582763671875,
+        421.0623474121094
+      ],
+      "clip_area": 42616.582419939805,
+      "page_area": 484704.0,
+      "text_density": 0.2451624411924085,
+      "kind": "drawing_cluster",
+      "score": 0.5637711108992676,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Fig. 3: Temporal reasoning analysis.",
+      "clip": [
+        122.76473999023438,
+        396.326171875,
+        312.8226013183594,
+        519.9608764648438
+      ],
+      "clip_area": 23497.747540280223,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 2637,
+      "score": -0.7389139162191086,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/06-p7-embedded_image_with_caption.png",
+      "filename": "06-p7-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/longmedbench-benchmarking-medical-agents-for-long-horizon-clinical-decision-maki/contact-sheet.svg"
+}

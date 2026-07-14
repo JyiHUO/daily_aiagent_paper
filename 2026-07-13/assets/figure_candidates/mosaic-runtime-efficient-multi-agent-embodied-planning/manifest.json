@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/downloaded_pdfs/mosaic-runtime-efficient-multi-agent-embodied-planning.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning",
+  "candidates": [
+    {
+      "id": "page-1-block-31",
+      "page_index": 1,
+      "caption": "Figure 1. Multi-agent task execution showing failures driven by spatial and coordination inefficiencies. These inefficiencies also induce agent underutilization during stalled periods.",
+      "clip": [
+        24.293001556396483,
+        18.0,
+        320.3553405761719,
+        222.58029174804688
+      ],
+      "clip_area": 60568.51969227482,
+      "page_area": 484704.0,
+      "text_density": 0.20581963620441857,
+      "kind": "captioned_figure",
+      "score": 34.12380537987127,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/01-p2-captioned_figure.png",
+      "filename": "01-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-10-block-22",
+      "page_index": 10,
+      "caption": "Li, X., Wang, S., Zeng, S., Wu, Y., and Yang, Y. A survey on llm-based multi-agent systems: workflow, infrastructure, and challenges. Vicinagearth , 2024. 3 , 14",
+      "clip": [
+        276.8400024414062,
+        366.87041015625,
+        573.28701171875,
+        675.67041015625
+      ],
+      "clip_area": 91542.83646484377,
+      "page_area": 484704.0,
+      "text_density": 0.7237306519225605,
+      "kind": "captioned_figure",
+      "score": 32.01714262738715,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/02-p11-captioned_figure.png",
+      "filename": "02-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-14-block-4",
+      "page_index": 14,
+      "caption": "Algorithm 1 General Architecture Multi-Agent Embodied Planning",
+      "clip": [
+        24.482000732421874,
+        18.0,
+        357.4019409179688,
+        287.7865295410156
+      ],
+      "clip_area": 89817.31527766121,
+      "page_area": 484704.0,
+      "text_density": 0.633534041859011,
+      "kind": "captioned_figure",
+      "score": 26.997970169751788,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/03-p15-captioned_figure.png",
+      "filename": "03-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-7",
+      "page_index": 2,
+      "caption": "We first formulate the problem setting and introduce a gen- eral multi-agent planning architecture to contextualize M O - SAIC , and then elaborate on M OSAIC ’s two key designs.",
+      "clip": [
+        276.3719848632812,
+        18.0,
+        573.6990600585938,
+        252.85989379882812
+      ],
+      "clip_area": 69830.20530388728,
+      "page_area": 484704.0,
+      "text_density": 0.5832174359242958,
+      "kind": "captioned_figure",
+      "score": 21.775891170043195,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-17-block-16",
+      "page_index": 17,
+      "caption": "Figure 6 reports success rate and runtime across three foundation models (GPT-4o, Claude Sonnet 4.5, and Gemini 3 Flash) under different planning methods. We analyze whether M OSAIC yields consistent improvements across models with varying success and inference cost.",
+      "clip": [
+        24.839998626708983,
+        181.5387451171875,
+        572.7088256835938,
+        490.3387451171875
+      ],
+      "clip_area": 169181.89379516605,
+      "page_area": 484704.0,
+      "text_density": 0.40526250166258626,
+      "kind": "captioned_figure",
+      "score": 20.63833318518799,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/05-p18-captioned_figure.png",
+      "filename": "05-p18-captioned_figure.png"
+    },
+    {
+      "id": "page-14-block-3",
+      "page_index": 14,
+      "caption": "B. Multi-Agent Planning Architecture",
+      "clip": [
+        24.839998626708983,
+        18.0,
+        279.5349060058594,
+        261.76214599609375
+      ],
+      "clip_area": 62084.97719701804,
+      "page_area": 484704.0,
+      "text_density": 0.6478664318043875,
+      "kind": "captioned_figure",
+      "score": 19.689833079966867,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/06-p15-captioned_figure.png",
+      "filename": "06-p15-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/mosaic-runtime-efficient-multi-agent-embodied-planning/contact-sheet.svg"
+}

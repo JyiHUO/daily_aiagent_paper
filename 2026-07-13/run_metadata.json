@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-13",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.MA",
+    "cs.RO",
+    "cs.SE",
+    "cs.HC"
+  ],
+  "candidate_count": 224,
+  "selected_count": 3,
+  "focus_titles": [
+    "Eluna: An Agentic LLM System for Automating Warehouse Operations with Reasoning and Task Execution",
+    "Mosaic: Runtime-Efficient Multi-Agent Embodied Planning",
+    "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making"
+  ],
+  "broadcast_script_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/paper_broadcast_script.txt",
+  "broadcast_audio_path": "",
+  "broadcast_audio_wav_path": ""
+}

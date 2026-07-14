@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/downloaded_pdfs/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a",
+  "candidates": [
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        57.13300323486328,
+        56.861419677734375,
+        538.1347045898438,
+        350.4783020019531
+      ],
+      "clip_area": 141230.2199444943,
+      "page_area": 501156.9211820215,
+      "text_density": 0.22043732547239547,
+      "kind": "drawing_cluster",
+      "score": 1.5737604716562732,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/01-p3-drawing_cluster.png",
+      "filename": "01-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-embedded-29-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        65.09178924560547,
+        61.151275634765625,
+        232.57827758789062,
+        346.5862121582031
+      ],
+      "clip_area": 47806.49516851362,
+      "page_area": 501156.9211820215,
+      "text_density": 0.18382360549799678,
+      "kind": "embedded_image",
+      "xref": 483,
+      "score": 1.3017669497703448,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/02-p3-embedded_image.png",
+      "filename": "02-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-45-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        68.77888488769531,
+        196.5261688232422,
+        228.9299774169922,
+        342.0452880859375
+      ],
+      "clip_area": 23305.045933821704,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1827423732457896,
+      "kind": "embedded_image",
+      "xref": 499,
+      "score": 1.094402560072865,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/03-p3-embedded_image.png",
+      "filename": "03-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-block-114",
+      "page_index": 2,
+      "caption": "3.2 Hierarchical Multi-Agent Architecture",
+      "clip": [
+        41.102197265624994,
+        216.03409423828123,
+        305.7536376953125,
+        544.7901000976562
+      ],
+      "clip_area": 87005.75050059437,
+      "page_area": 501156.9211820215,
+      "text_density": 0.5126965816085952,
+      "kind": "captioned_figure",
+      "score": 0.9667305611177142,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-2-embedded-27-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        210.32479858398438,
+        61.151275634765625,
+        531.77685546875,
+        343.01556396484375
+      ],
+      "clip_area": 90605.85524606425,
+      "page_area": 501156.9211820215,
+      "text_density": 0.23095388468361855,
+      "kind": "embedded_image",
+      "xref": 481,
+      "score": -1.0505013560608418,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/05-p3-embedded_image.png",
+      "filename": "05-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-14-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        68.58483123779297,
+        76.8699951171875,
+        229.35690307617188,
+        219.16775512695312
+      ],
+      "clip_area": 22877.50569473044,
+      "page_area": 501156.9211820215,
+      "text_density": 0.22397163736866627,
+      "kind": "embedded_image",
+      "xref": 468,
+      "score": -1.3841037344007479,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/06-p3-embedded_image.png",
+      "filename": "06-p3-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-13/assets/figure_candidates/eluna-an-agentic-llm-system-for-automating-warehouse-operations-with-reasoning-a/contact-sheet.svg"
+}
