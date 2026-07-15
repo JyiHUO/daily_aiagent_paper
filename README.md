@@ -4,19 +4,25 @@
 
 ## 最新日报
 
-- **日期**：2026-07-10
+- **日期**：2026-07-14
 - **分类**：cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC
 - **入选论文数**：3
 - **入选论文**：
-  - Out of Sight: Compression-Aware Content Protection against Agentic Crawlers
-  - CausalDS: Benchmarking Causal Reasoning in Data-Science Agents
-  - Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents
-- **日报路径**：[2026-07-10/daily_report.md](2026-07-10/daily_report.md)
+  - BatteryLake: Agentic, Physics-Grounded Curation of Heterogeneous Battery Aging Data and Benchmarking
+  - NetInjectBench: Benchmarking Indirect Prompt Injection in Tool-Using Large Language Model Agents for Network Operations
+  - A Multi-Agent Framework for Zero-Dimensional Reduced-Order Model Planning
+- **日报路径**：[2026-07-14/daily_report.md](2026-07-14/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 入选数 | 论文序号 | 论文标题 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-14 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | BatteryLake: Agentic, Physics-Grounded Curation of Heterogeneous Battery Aging Data and Benchmarking | [2026-07-14/daily_report.md](2026-07-14/daily_report.md) |
+|  |  |  | 2 | NetInjectBench: Benchmarking Indirect Prompt Injection in Tool-Using Large Language Model Agents for Network Operations |  |
+|  |  |  | 3 | A Multi-Agent Framework for Zero-Dimensional Reduced-Order Model Planning |  |
+| 2026-07-13 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Eluna: An Agentic LLM System for Automating Warehouse Operations with Reasoning and Task Execution | [2026-07-13/daily_report.md](2026-07-13/daily_report.md) |
+|  |  |  | 2 | Mosaic: Runtime-Efficient Multi-Agent Embodied Planning |  |
+|  |  |  | 3 | LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making |  |
 | 2026-07-10 | cs.AI + cs.CL + cs.LG + cs.MA + cs.RO + cs.SE + cs.HC | 3 | 1 | Out of Sight: Compression-Aware Content Protection against Agentic Crawlers | [2026-07-10/daily_report.md](2026-07-10/daily_report.md) |
 |  |  |  | 2 | CausalDS: Benchmarking Causal Reasoning in Data-Science Agents |  |
 |  |  |  | 3 | Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents |  |
