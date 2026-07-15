@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/downloaded_pdfs/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-25",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of the N EXT F UND framework. The system integrates point-in-time data processing, multi-agent decision making, performance evaluation, and traceable inspection. The database module uses PostgreSQL for persistent backend data storage and SQLite for rapid I/O with the frontend.",
+      "clip": [
+        53.247283935546875,
+        62.87127685546875,
+        542.2947387695312,
+        241.33119201660156
+      ],
+      "clip_area": 87275.36729944078,
+      "page_area": 501156.9211820215,
+      "text_density": 0.026657513533508037,
+      "kind": "drawing_cluster_with_caption",
+      "score": 61.96972630332712,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-6-0",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of the N EXT F UND framework. The system integrates point-in-time data processing, multi-agent decision making, performance evaluation, and traceable inspection. The database module uses PostgreSQL for persistent backend data storage and SQLite for rapid I/O with the frontend.",
+      "clip": [
+        346.1527404785156,
+        67.57414245605469,
+        534.1409301757812,
+        182.11474609375
+      ],
+      "clip_area": 21532.28072468238,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 512,
+      "score": 54.239247563607584,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-block-1",
+      "page_index": 5,
+      "caption": "Figure 2: The interface of N EXT F UND demo. This interface enables users to select different LLM backbones, evaluation periods and markets. Users can also select a specific model to view detailed information and analyze the decision trajectory.",
+      "clip": [
+        48.865997314453125,
+        52.882415771484375,
+        546.3863525390625,
+        414.2459716796875
+      ],
+      "clip_area": 179785.7247006772,
+      "page_area": 501156.9211820215,
+      "text_density": 0.018462888666290634,
+      "kind": "image_block_with_caption",
+      "score": 25.25034486390912,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/03-p6-image_block_with_caption.png",
+      "filename": "03-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2: The interface of N EXT F UND demo. This interface enables users to select different LLM backbones, evaluation periods and markets. Users can also select a specific model to view detailed information and analyze the decision trajectory.",
+      "clip": [
+        58.865997314453125,
+        58.882415771484375,
+        536.3863525390625,
+        408.2459716796875
+      ],
+      "clip_area": 166828.20931981783,
+      "page_area": 501156.9211820215,
+      "text_density": 0.003540315528754906,
+      "kind": "embedded_image_with_caption",
+      "xref": 523,
+      "score": 25.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/04-p6-embedded_image_with_caption.png",
+      "filename": "04-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        55.247283935546875,
+        64.87127685546875,
+        540.2947387695312,
+        239.33119201660156
+      ],
+      "clip_area": 84621.33781946031,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01677013045232008,
+      "kind": "drawing_cluster",
+      "score": 10.940237086882892,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-block-29",
+      "page_index": 2,
+      "caption": "Time-aligned observations from the data layer are consumed by a multi-agent decision pipeline that",
+      "clip": [
+        40.76419982910156,
+        414.2308715820312,
+        318.8997863769531,
+        742.9868774414062
+      ],
+      "clip_area": 91438.74452082618,
+      "page_area": 501156.9211820215,
+      "text_density": 0.7967037985915395,
+      "kind": "captioned_figure",
+      "score": 8.015986050231401,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/06-p3-captioned_figure.png",
+      "filename": "06-p3-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/nextfund-a-unified-performance-tracking-platform-for-agentic-portfolio-managemen/contact-sheet.svg"
+}

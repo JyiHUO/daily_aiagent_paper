@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/downloaded_pdfs/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning",
+  "candidates": [
+    {
+      "id": "page-0-block-0",
+      "page_index": 0,
+      "caption": "A Multi-Agent Framework for Zero-Dimensional Reduced-Order Model Planning",
+      "clip": [
+        90.94120178222656,
+        18.0,
+        479.8609375,
+        127.04495239257812
+      ],
+      "clip_area": 42409.73406587866,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "captioned_figure",
+      "score": 90.47121926739865,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-4",
+      "page_index": 5,
+      "caption": "Fig. 2 Architecture of the proposed Z-COPA framework. The three primary agents (Supervi- sor, Representation, Design) are coordinated by a meta-level harness. Solid lines indicate the forward design data flow; dashed lines indicate the inverse design loop. The SAGE module supplies domain knowledge to all agents.",
+      "clip": [
+        102.59500122070312,
+        212.49380493164062,
+        517.2084655761719,
+        455.58502197265625
+      ],
+      "clip_area": 100788.89165176265,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0019224992273216225,
+      "kind": "image_block_with_caption",
+      "score": 53.11987657390847,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/02-p6-image_block_with_caption.png",
+      "filename": "02-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Fig. 2 Architecture of the proposed Z-COPA framework. The three primary agents (Supervi- sor, Representation, Design) are coordinated by a meta-level harness. Solid lines indicate the forward design data flow; dashed lines indicate the inverse design loop. The SAGE module supplies domain knowledge to all agents.",
+      "clip": [
+        112.59500122070312,
+        218.49380493164062,
+        507.2084655761719,
+        449.58502197265625
+      ],
+      "clip_area": 91191.70573867671,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 747,
+      "score": 52.01324117487419,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/03-p6-embedded_image_with_caption.png",
+      "filename": "03-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-1",
+      "page_index": 4,
+      "caption": "Fig. 1 The Z-COPA workflow illustrating the dual-mode operation: (a) forward design path, where topology and parameters are given and performance is evaluated; (b) inverse design path, where performance targets are specified and the system searches for feasible topology–parameter configurations.",
+      "clip": [
+        78.07099914550781,
+        55.70262145996094,
+        492.67529296875,
+        296.59100341796875
+      ],
+      "clip_area": 99873.35749192326,
+      "page_area": 501156.9211820215,
+      "text_density": 0.001940415471225238,
+      "kind": "image_block_with_caption",
+      "score": 35.10970397213248,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/04-p5-image_block_with_caption.png",
+      "filename": "04-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Fig. 1 The Z-COPA workflow illustrating the dual-mode operation: (a) forward design path, where topology and parameters are given and performance is evaluated; (b) inverse design path, where performance targets are specified and the system searches for feasible topology–parameter configurations.",
+      "clip": [
+        88.07099914550781,
+        61.70262145996094,
+        482.67529296875,
+        290.59100341796875
+      ],
+      "clip_area": 90320.3383268842,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 745,
+      "score": 34.00355931474316,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/05-p5-embedded_image_with_caption.png",
+      "filename": "05-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-17-block-2",
+      "page_index": 17,
+      "caption": "4.1 Z-COPA Multi-Agent Architecture",
+      "clip": [
+        94.831201171875,
+        18.0,
+        385.83881225585935,
+        129.20664978027344
+      ],
+      "clip_area": 32361.981489210662,
+      "page_area": 501156.9211820215,
+      "text_density": 0.21019312420108727,
+      "kind": "captioned_figure",
+      "score": 22.547990120037106,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/06-p18-captioned_figure.png",
+      "filename": "06-p18-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/a-multi-agent-framework-for-zero-dimensional-reduced-order-model-planning/contact-sheet.svg"
+}

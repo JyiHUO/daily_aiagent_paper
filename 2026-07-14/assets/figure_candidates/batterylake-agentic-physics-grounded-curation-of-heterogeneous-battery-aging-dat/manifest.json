@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/downloaded_pdfs/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-2",
+      "page_index": 4,
+      "caption": "Fig. 2: Capability overview of the BatteryLake platform. Eight functional pillars span curated data access, data reliability, and AI-enabled applications, and together deliver reproducible, reliable, and openly shareable battery data for downstream research.",
+      "clip": [
+        117.718994140625,
+        27.697021484375,
+        494.2928161621094,
+        320.3269958496094
+      ],
+      "clip_area": 110196.7878847653,
+      "page_area": 484704.0,
+      "text_density": 0.0446978323580215,
+      "kind": "drawing_cluster_with_caption",
+      "score": 53.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-12",
+      "page_index": 2,
+      "caption": "Fig. 1 shows the architecture of our BatteryLake. Raw sources enter through two coupled agentic workflows, in- cluding metadata extraction (§4.1) and data conversion (§4.2), whose outputs pass the selective human gate (§4.4) and the validation gate (§4.3) before admission into the governed lake that feeds the benchmark (Section 5).",
+      "clip": [
+        281.3999389648437,
+        18.0,
+        594.0,
+        280.3565368652344
+      ],
+      "clip_area": 82012.66943704449,
+      "page_area": 484704.0,
+      "text_density": 0.6463947129040877,
+      "kind": "captioned_figure",
+      "score": 47.911251882633834,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/02-p3-captioned_figure.png",
+      "filename": "02-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "Fig. 2: Capability overview of the BatteryLake platform. Eight functional pillars span curated data access, data reliability, and AI-enabled applications, and together deliver reproducible, reliable, and openly shareable battery data for downstream research.",
+      "clip": [
+        89.97006225585938,
+        8.0,
+        520.0687866210938,
+        327.2042541503906
+      ],
+      "clip_area": 137289.34252203908,
+      "page_area": 484704.0,
+      "text_density": 0.06252167249778555,
+      "kind": "image_block_with_caption",
+      "score": 47.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/03-p5-image_block_with_caption.png",
+      "filename": "03-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Fig. 2: Capability overview of the BatteryLake platform. Eight functional pillars span curated data access, data reliability, and AI-enabled applications, and together deliver reproducible, reliable, and openly shareable battery data for downstream research.",
+      "clip": [
+        99.97006225585938,
+        8.0,
+        510.06878662109375,
+        321.2042541503906
+      ],
+      "clip_area": 128444.66509283986,
+      "page_area": 484704.0,
+      "text_density": 0.044562561500805266,
+      "kind": "embedded_image_with_caption",
+      "xref": 352,
+      "score": 46.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        37.1609992980957,
+        29.69793701171875,
+        574.82666015625,
+        289.36602783203125
+      ],
+      "clip_area": 139614.61565467855,
+      "page_area": 484704.0,
+      "text_density": 0.03532130286849277,
+      "kind": "drawing_cluster",
+      "score": 10.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        119.718994140625,
+        29.697021484375,
+        492.2928161621094,
+        318.3269958496094
+      ],
+      "clip_area": 107535.97269921843,
+      "page_area": 484704.0,
+      "text_density": 0.0331143189656567,
+      "kind": "drawing_cluster",
+      "score": 8.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/06-p5-drawing_cluster.png",
+      "filename": "06-p5-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_aiagent_paper/2026-07-14/assets/figure_candidates/batterylake-agentic-physics-grounded-curation-of-heterogeneous-battery-aging-dat/contact-sheet.svg"
+}

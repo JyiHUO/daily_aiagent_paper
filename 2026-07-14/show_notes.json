@@ -1,9 +1,9 @@
 {
   "title": "AI Agent 论文播报·2026-07-14",
-  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-07-14 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory</strong></li><li><strong>A Formal Hierarchical Architecture for Agentic Orchestration with Stack-Based Execution and Lazy Discovery</strong></li><li><strong>NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management</strong></li></ul><p>['Agent 研究继续从模型能力转向执行链与系统边界。', '更值得追踪的是评测、约束、协议和运行时设计。']</p>",
+  "shownotes_html": "<p>这是 AI Agent 论文播报 在 2026-07-14 的论文播报。本期内容由 AI 自动生成，欢迎留言交流。</p><p><strong>本期重点</strong></p><ul><li><strong>BatteryLake: Agentic, Physics-Grounded Curation of Heterogeneous Battery Aging Data and Benchmarking</strong></li><li><strong>NetInjectBench: Benchmarking Indirect Prompt Injection in Tool-Using Large Language Model Agents for Network Operations</strong></li><li><strong>A Multi-Agent Framework for Zero-Dimensional Reduced-Order Model Planning</strong></li></ul><p>['Agent 研究继续从模型能力转向执行链与系统边界。', '更值得追踪的是评测、约束、协议和运行时设计。']</p>",
   "report_date": "2026-07-14",
-  "provider": "litellm-opus",
-  "archive_url": "",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_aiagent_paper/blob/main/2026-07-14/daily_report.md",
   "fallback": true,
-  "generated_at": "2026-07-14T21:49:58Z"
+  "generated_at": "2026-07-15T03:02:03Z"
 }
